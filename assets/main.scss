@@ -1,0 +1,15 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minima";
+
+.site-header {
+  border-top: 0;
+  background-color: rgb(96, 200, 243);
+  height: 60px;
+}
+
+.site-title, .site-title:visited {
+  color: #ffffff;
+}
