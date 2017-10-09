@@ -195,7 +195,6 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-feed (~> 0.6)
-  jekyll-swiss
   minima (~> 2.0)
   tzinfo-data
 
@@ -203,4 +202,4 @@ RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.15.0
+   1.15.4
