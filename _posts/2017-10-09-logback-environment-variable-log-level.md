@@ -7,7 +7,7 @@ categories: java
 
 If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.
 
-It's simple as declaring a new variable inside your `logback.xml` file and provide a default value.
+It's simple as declaring a new variable inside your `logback.xml` file and provide a default value as in the Bash shell, using the ":-" operator.
 
 ```xml
 <variable name="CLOUDESIRE_LOG_LEVEL" value="${CLOUDESIRE_LOG_LEVEL:-DEBUG}" />
