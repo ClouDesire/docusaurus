@@ -1,0 +1,13 @@
+{
+  "docs": {
+    "Documentation": [
+      "onboarding",
+      "deployed",
+      "languages",
+      "syndication",
+      "platform",
+      "channel"
+    ],
+    "API": ["api"]
+  }
+}
