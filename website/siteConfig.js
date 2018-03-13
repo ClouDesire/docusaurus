@@ -54,7 +54,7 @@ const siteConfig = {
     new Date().getFullYear() +
     ' Cloudesire.com',
   organizationName: 'cloudesire', // or set an env variable ORGANIZATION_NAME
-  projectName: 'developers', // or set an env variable PROJECT_NAME
+  projectName: 'cloudesire.github.io', // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
