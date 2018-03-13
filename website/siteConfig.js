@@ -19,8 +19,8 @@ const siteConfig = {
   title: 'cloudesire' /* title for your website */,
   tagline: 'your cloud bla bla',
   url: 'https://cloudesire.github.io' /* your website url */,
-  baseUrl: '/test-site/' /* base url for your project */,
-  projectName: 'test-site',
+  baseUrl: '/' /* base url for your project */,
+  projectName: 'cloudesire.github.io',
   headerLinks: [
     {doc: 'syndication', label: 'Docs'},
     {doc: 'api', label: 'API'},
