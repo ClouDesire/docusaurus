@@ -56,19 +56,19 @@ class Footer extends React.Component {
               Stack Overflow
             </a>
             <a href="https://discordapp.com/">Project Chat</a>
-            <a href="https://twitter.com/" target="_blank">
+            <a href="https://twitter.com/gionn" target="_blank">
               Twitter
             </a>
           </div>
           <div>
             <h5>More</h5>
             <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
+            <a href="https://github.com/cloudesire">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
-              data-count-href="/facebook/docusaurus/stargazers"
+              data-count-href="/cloudesire/cloudesire.github.io/stargazers"
               data-show-count={true}
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
@@ -77,17 +77,6 @@ class Footer extends React.Component {
           </div>
         </section>
 
-        <a
-          href="https://code.facebook.com/projects/"
-          target="_blank"
-          className="fbOpenSource">
-          <img
-            src={this.props.config.baseUrl + 'img/oss_logo.png'}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
         <section className="copyright">
           Copyright &copy; {currentYear} Facebook Inc.
         </section>
