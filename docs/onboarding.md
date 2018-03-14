@@ -8,19 +8,11 @@ In this section you will learn how to start the onboarding process of your appli
 
 > In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
 
-## Requirements for onboarding
-
-Software vendors can expose applications into the Cloudesire Applications Catalog. This process is what we call **Application Onboarding.**
-
-To upload a product you will need to choose one of the following methods:
-
-* [ZIP Application Package](deployed.md#zip-packaging): a simple archive containing both the source code and the _SQL scripts_ of the application;
-* [Docker image](deployed.md#docker-packaging): a self-contained archive of your application meeting the [Docker](https://www.docker.com/) standards.
-* [Syndication](syndication.md): integration via API for multi-tenant applications hosted elsewhere.
-
 ## Start the onboarding process
 
-To start the onboarding process, go to the marketplace  select “log-in” at the top right corner of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. Select “_Catalog_” from the left menu, then select “_Products_” and click on the “_Create New Product_” button at the upper right hand corner.
+To start the onboarding process, go to the marketplace and login to access your personal Control Panel. 
+
+Select “_Catalog_” from the left menu, then select “_Products_” and click on the “_Create New Product_” button at the upper right hand corner.
 
 ![Vendors Control Panel - new product onboarding](/wp-content/uploads/2017/02/control_panel_new_product.png "Vendors Control Panel - new product")
 
@@ -35,9 +27,7 @@ In this section you will understand how to add your application to your own cata
 
 ### Understand the Catalog
 
-The _Catalog_ contains all the applications owned by the vendor. In this section you can see both applications that are available on the Cloudesire Marketplace and applications that are still not published.
-
-To access the catalog, go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left.
+The _Catalog_ contains all the applications owned by the vendor. In this section you can see both applications that are already published on the marketplace and applications that are still in configuration phase.
 
 ![Vendors Control Panel: Edit Product page](/wp-content/uploads/2017/02/control_panel_edit_product.png)
 
@@ -85,64 +75,11 @@ Plus, you will find some extra fields:
 
 ### Custom metrics
 
-* Application Metric (AKA _Custom Metrics_) represents _facts _of a specific application offered in the Cloudesire Marketplace that are relevants for software vendors. To better understand custom metrics and how to add custom metrics to your application, please read [this section](/applications-onboarding-instructions/#application-metrics-2).
+* Application Metric (AKA _Custom Metrics_) represents _facts _of a specific application offered in the Cloudesire Marketplace that are relevants for software vendors. To better understand custom metrics and how to add custom metrics to your application, please read [this section](onboarding.md#application-metrics).
 
 ### Configuration Parameters
 
-* a list of parameters that have to be filled by customers before using the application for the first time, either for the application to work properly or to provide better initial customization (more details [here](onboarding.md#configuration-parameters)). Examples are: zip code, company name, VAT number, street address, etc.
-
-Configuration Parameters are similar to [Environment variables](deployed.md#environment-variables), but their value is chosen by customers before placing an order.
-
-Each parameter is created and bound to a specific Product, but can be linked or not to one or more “_Plan”_ (Product Version).Each parameter can be marked as required, and its value can be _validated_ by providing a regular expression. In order to support customers to fully understand the meaning, each parameter has a _description_ and a _hint_.
-
-To specify a Configuration Parameter, enter the Product editing page, then select the “_Conf. Parameters_” tab. For each parameter you need to specify:
-
-* _Code_: a unique identifier of the parameter. It is not shown to the customer
-* _Name_: a name for the parameter. It will be shown to the customer so it has to be clear.
-* _Description_: a short explanation provided to the end-users
-* _Validation_ (optional): a regular expression to validate the text provided byend-users
-* _Hint_: text inside the placeholder that helps end-users to complete the field
-* _Required_ (yes/no): sets if the customer needs to specify a value for the parameter before purchasing the product
-
-[![control_panel_configuration_parameters_editing](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_configuration_parameters_editing-1-1024x369.png)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_configuration_parameters_editing-1.png)
-
-Once Configuration Parameters are specified for a product, they need to be attached to one (or more) “_Plans”_ orproduct versions. To do that, click on the “_Plans_” tab, select a specific Plan and click on the “_Edit_” button. You will see a pop-up similar to the one shown in the following picture: go to the “_Features_” tab and select one or more Configuration Parameters to activate for the specific Plan.
-
-[![control panel configuration parameters linking](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_configuration_parameters_linking-1-1024x525.png)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_configuration_parameters_linking-1.png)  
-The [Cloudesire API](/rest-api-guide/) gives the vendor the possibility to retrieve both a specific Configuration Parameter definition and the related parameters “value” (namely the valued specified by the customer during the order placement).
-
-Configuration Parameters values can be retrieved via API fetching the _Subscription_ object:
-
-    GET /api/subscription/2388 HTTP/1.1
-
-Partial example body:
-
-    {
-             ....
-             "configurationParameters": {
-                "configurationParameter/2095": "param1 value", 
-                "configurationParameter/2096": "param2 value"
-             } ....
-    }
-
-To fetch the definition of a specific parameters you can invoke:
-
-    GET /api/configurationParameter/2095 HTTP/1.1
-
-Partial example body:
-
-    {
-        "code": "PAR01",
-        "description": "Your blog domain",
-        "hint": "Specify the domain from which your blog will be reachable",
-        "id": 2095,
-        "name": "domain",
-        "required": true,
-        "self": "configurationParameter/2095",
-        "validation": "^(?:[-A-Za-z0-9]+.)+[A-Za-z]{2,6}$"
-    }
-
-If your application provisioning type is _[Deployed](deployed.md)_, the Configuration Parameters are automatically injected in the VM for deployed applications as an environment variable with the same name of the `code` parameter: in case you have created a Configuration Parameter with _COLOR_ as `code`, your application will have a `$COLOR` environment variable with the value chosen by the customer.
+* a list of parameters that have to be filled by customers before using the application for the first time, either for the application to work properly or to provide better initial customization (more details [here](onboarding.md#configuration-parameters-detailed)). Examples are: zip code, company name, VAT number, street address, etc.
 
 ### Plans
 
@@ -151,10 +88,6 @@ If your application provisioning type is _[Deployed](deployed.md)_, the Configur
 ### SSL (only for “Deployed” Applications)
 
 * The vendor’s SSL certificate and SSL certificate private key (to be used to access the VM containing the running instance of the application)
-
-### Advanced Settings (only for admins)
-
-* some additional parameters
 
 ## Billing Information (Plans)
 
@@ -168,7 +101,7 @@ In short, plans are the product versions that will be available for your product
 
 ### How to add Plans to your product
 
-To add plans you need to go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then you need to select the product you want to edit, click on it, select “Edit” and go to the “Plans” section.
+To add plans you need to go to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then you need to select the product you want to edit, click on it, select “Edit” and go to the “Plans” section.
 
 Then, click on the “Create New Plan” button at the top right of the screen. You can now create your product plan.
 
@@ -187,10 +120,10 @@ For each _Plan_ the vendor has to specify the following information:
 
 #### Features
 
-* _Configuration Parameters_: a selection of the previously specified (at the product level) parameters. More details [here](/applications-onboarding-instructions/#configuration-parameters-2).
+* _Configuration Parameters_: a selection of the previously specified (at the product level) parameters. More details [here](onboarding.md#configuration-parameters).
 * _Trials Allowed_ (yes/no):  you can allow a trial for your product version. We suggest to enable trials of product.
 * _Trial length_ (in days): the duration of the “trial mode”, if offered to the customers for the specific Plan.
-* _Auto-renewal_ (yes/no): if “yes”, the plan will auto-renew when the subscription is about to expire. For example, a monthly subscription could renew automatically each month. More details [here](/platform-modules-documentation/#orders-renewal).
+* _Auto-renewal_ (yes/no): if “yes”, the plan will auto-renew when the subscription is about to expire. For example, a monthly subscription could renew automatically each month. More details [here](platform.md#orders-renewal).
 
 #### Pricing
 
@@ -198,12 +131,12 @@ For each _Plan_ the vendor has to specify the following information:
 * _Activation Fee_: one-off price that the customer will pay only once, when the order is placed in the marketplace. It is a setup fee.
 * _Revenue Sharing Quota_: only for admins
 * _Deployment fee_ (optional, only for admins)
-* _Billing frequency_ (in months): how often the customer will be billed for this product version. For example, it could be monthly, bimonthly, yearly, etc. (for further information see [this section](/platform-modules-documentation/#billing-module)).
+* _Billing frequency_ (in months): how often the customer will be billed for this product version. For example, it could be monthly, bimonthly, yearly, etc. (for further information see [this section](platform.md#billing-module)).
 * _Short Living Subscription_ (yes/no): it’s also possible to specify a _short-time_ billing frequency; that means that the subscription duration will be less than a day, and needs to be specified in hours.
 
 #### Extra-Resources
 
-* _Extra-resources_: they are goods or services which can be sold together with the application. Examples are a 10-days pack of Technical Support, some hardware components, extra credits, etc. For further information see [this section](/applications-onboarding-instructions/#extra-resources).
+* _Extra-resources_: they are goods or services which can be sold together with the application. Examples are a 10-days pack of Technical Support, some hardware components, extra credits, etc. For further information see [this section](#extra-resources).
 
 #### Advanced Settings
 
@@ -217,7 +150,7 @@ You can deeply customize the pricing model for your product in Cloudesire (for e
 
 ### Available pricing models
 
-There are many different basic pricing models that you can implement in Cloudesire. To define a pricing model, you need at least one product into your catalog. To access the catalog, go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then select the product, then “_Edit_” and go to the “_Plans_” tab.You can edit or add new plans to your product.
+There are many different basic pricing models that you can implement in Cloudesire. To define a pricing model, you need at least one product into your catalog. Select the product, then “_Edit_” and go to the “_Plans_” tab.You can edit or add new plans to your product.
 
 #### Freemium Model
 
@@ -267,11 +200,11 @@ In this section you will learn what extra resources are and how you can add them
 
 ### Understand Extra Resources
 
-Extra Resources refer to _goods_ or _services_ which can be sold together with the application (for example, a 10-days pack of Technical Support, hardware components, extra credits, etc.).  A detailed explanation of this concept is available on [this section](/platform-modules-documentation/#extra-resources).
+Extra Resources refer to _goods_ or _services_ which can be sold together with the application (for example, a 10-days pack of Technical Support, hardware components, extra credits, etc.).  A detailed explanation of this concept is available on [this section](platform.md#extra-resources).
 
 ### How to add extra resources to your product
 
-To insert a new Extra Resource, you need to have at least one product in your catalog (draft or published). If you have at least one product in your catalog, go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then you need to select the product you want to edit, click on it, select “Edit” and go to the “_Plans_” section. Then, select the plan you want to add extra resources to, select “Edit” and then go to the “_Extra Resources_” section
+To insert a new Extra Resource, you need to have at least one product in your catalog (draft or published). If you have at least one product in your catalog, you need to select the product you want to edit, click on it, select “Edit” and go to the “_Plans_” section. Then, select the plan you want to add extra resources to, select “Edit” and then go to the “_Extra Resources_” section
 
 You will be required to add:
 
@@ -307,7 +240,7 @@ The response will contain the information explained in [this section](syndicatio
 
     HTTP/1.1 200 OK
     Content-Type: application/json
-    
+
     {
         ...
         "billingItems": {
@@ -316,7 +249,7 @@ The response will contain the information explained in [this section](syndicatio
         },
         ...
     }
-    
+
 ## Technical Onboarding
 
 This section focuses on the technical aspects of the onboarding. We made the technical onboarding as smooth as possible, anyway we strongly recommend you to read this section before onboarding your product and during the onboarding process.
@@ -354,9 +287,9 @@ The steps to follow to a add one (or more) Custom Metric to a Product – or Pro
 
 ##### Adding Custom Metrics to a Syndicated Application
 
-For [Syndicated Applications](syndication.md#syndicated-applications-6), you need to access to the product editing page and go to the “_Metric_” tab.
+For [Syndicated Applications](syndication.md), you need to access to the product editing page and go to the “_Metric_” tab.
 
-To find the “_Metric_” tab go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then you need to select the product you want to add custom metrics to, click on it, select “Edit” and go to the “_Metrics_” section.
+To find the “_Metric_” tab go to your personal Control Panel. You will be able to access the “_Catalog_” from the menu on the left. Then you need to select the product you want to add custom metrics to, click on it, select “Edit” and go to the “_Metrics_” section.
 
 In the following picture you can see an example of a “_Metrics_” section.
 
@@ -379,7 +312,7 @@ Fields are:
 
 For [Deployed Applications](deployed.md), you need to access to the “_Modules_” section (more details [here](deployed.md#modules).)
 
-To access the “Modules” section go to [marketplace.cloudesire.com](https://marketplace.cloudesire.com), select “log-in” at the top right corner  of the screen, enter your username and password (or follow the instructions to create a new vendor account) and click on your username at the top right corner to access your personal Control Panel. You will be able to access the “_Modules_” from the menu on the left.
+To access the “Modules” section access your personal Control Panel. You will be able to access the “_Modules_” from the menu on the left.
 
 Once you are in the “_Modules_” section, , select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)), click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Application Metrics_” tab it’s possible to fill all the required fields and click on the “_Add_” button to finish.
 
@@ -396,11 +329,11 @@ The format of the metric data should be in JSON format:
         "value": 3.0
     }
 
-## Configuration Parameters
+## Configuration Parameters (detailed)
 
-Applications may require a list of parameters that have to be filled by customers before using the application for the first time, either for the application to work properly or to provide better initial customization (more details [here](/applications-onboarding-instructions/#configuration-parameters-2)). Examples are: zip code, company name, VAT number, street address, etc.
+Applications may require a list of parameters that have to be filled by customers before using the application for the first time, either for the application to work properly or to provide better initial customization. Examples are: zip code, company name, VAT number, street address, etc.
 
-Configuration Parameters are similar to [Environment variables](https://cloudesire.comdeployed.md#environment-variables-5), but their value is chosen by customers before placing an order.
+Configuration Parameters are similar to [Environment variables](deployed.md#environment-variables), but their value is chosen by customers before placing an order.
 
 Each parameter is created and bound to a specific Product, but can be linked or not to one or more “_Plan”_ (Product Version).Each parameter can be marked as required, and its value can be _validated_ by providing a regular expression. In order to support customers to fully understand the meaning, each parameter has a _description_ and a _hint_.
 
@@ -455,9 +388,6 @@ Partial example body:
 If your application provisioning type is _[Deployed](deployed.md)_, the Configuration Parameters are automatically injected in the VM for deployed applications as an environment variable with the same name of the `code` parameter: in case you have created a Configuration Parameter with _COLOR_ as `code`, your application will have a `$COLOR` environment variable with the value chosen by the customer.
 
 ## Auto-login
-
-
-### Understand auto-login
 
 If you enable auto-login, your customers will be able to access your application without providing any specific credential (typically username and password).
 
