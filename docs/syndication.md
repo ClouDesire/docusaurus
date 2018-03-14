@@ -1,7 +1,7 @@
 ---
 id: syndication
 title: Onboarding of syndicated applications
-sidebar_label: Syndication help
+sidebar_label: Syndicated applications
 ---
 
 A **syndicated application** is an application that is directly managed by the software vendor, and not hosted on the Cloudesire platform itself.

@@ -9,7 +9,7 @@
 const users = [
   {
     caption: 'User1',
-    image: '/test-site/img/docusaurus.svg',
+    image: '/img/docusaurus.svg',
     infoLink: 'https://www.facebook.com',
     pinned: true,
   },
@@ -22,7 +22,7 @@ const siteConfig = {
   baseUrl: '/' /* base url for your project */,
   projectName: 'cloudesire.github.io',
   headerLinks: [
-    {doc: 'syndication', label: 'Docs'},
+    {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},

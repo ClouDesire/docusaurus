@@ -1,7 +1,7 @@
 ---
-id: languages
+id: stacks
 title: Supported languages, databases and cloud providers
-sidebar_label: Supported application stacks and providers
+sidebar_label: Application stacks and providers
 ---
 
 ## Supported Languages

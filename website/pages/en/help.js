@@ -18,17 +18,13 @@ class Help extends React.Component {
     const supportLinks = [
       {
         content:
-          'Learn more using the [documentation on this site.](/test-site/docs/en/doc1.html)',
+          'Learn more using the [documentation on this site.](/docs/en/index.html)',
         title: 'Browse Docs',
       },
       {
-        content: 'Ask questions about the documentation and project',
-        title: 'Join the community',
-      },
-      {
-        content: "Find out what's new with this project",
-        title: 'Stay up to date',
-      },
+        content: 'Send an email to [support@cloudesire.com](mailto:support@cloudesire.com)',
+        title: 'Write us',
+      }
     ];
 
     return (
@@ -38,7 +34,7 @@ class Help extends React.Component {
             <header className="postHeader">
               <h2>Need help?</h2>
             </header>
-            <p>This project is maintained by a dedicated group of people.</p>
+            <p>Here you have a few options:</p>
             <GridBlock contents={supportLinks} layout="threeColumn" />
           </div>
         </Container>
