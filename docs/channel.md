@@ -4,68 +4,66 @@ title: Distribution and Channel Management
 sidebar_label: Channel management
 ---
 
-## Introduction
+Distribution and channel logics are available in the cloudesire platform:
+
+* **Parent** (the MSP usually) deals with Vendors, and decides the catalog composition for Distris together with Wholesale Prices
+* **Distributors** sell-in to Resellers (VAS, VAR, business partners, dealers, agents, etc.)
+* **Resellers** sell-out to End-Customers (applying a Recommended Retail Price imposed by the MSP, or building up their own price strategy)
+* Each Reseller can bill/invoice autonomously, or on behalf of the Distributors (useful for **Agents**/**Dealers**)
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/parent-child-schema.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/parent-child-schema.png)
-
-Distribution and channel logics are available out of the box:
-
-*   **Parent** (the MSP usually) deals with Vendors, and decides the catalog composition for Distris together with Wholesale Prices
-*   **Distributors** sell-in to Resellers (VAS, VAR, business partners, dealers, agents, etc.)
-*   **Resellers** sell-out to End-Customers (applying a Recommended Retail Price imposed by the MSP, or building up their own price strategy)
-*   Each Reseller can bill/invoice autonomously, or on behalf of the Distributors (useful for **Agents**/**Dealers**)
 
 ### 1.1.Product/service assignment rules and pricing logics, along the chain
 
 **Main Product / Pricing logics:**
 
-*   The Parent (the Service Provider, usually) deals with Vendors, acquiring Services at the “Vendor Price” negotiated with the Vendor
-*   The Parent decides the catalog composition for each Distributor,  as well as the “Wholesale Price” for each Service Plan
-*   Each Distributor decides the Service Plans that he wants to assign to each Reseller, together with the respective “Sell-in Price” applying a markup to the “Wholesale Price”
-*   Each Reseller decides the “Sell-out Price” to publish to its End-Customers for each Service Plan. Sell-out Prices can alternatively be imposed by each of the actors up the chain (typically, Vendors that impose a Recommended Retail Price)
+* The Parent (the Service Provider, usually) deals with Vendors, acquiring Services at the “Vendor Price” negotiated with the Vendor
+* The Parent decides the catalog composition for each Distributor,as well as the “Wholesale Price” for each Service Plan
+* Each Distributor decides the Service Plans that he wants to assign to each Reseller, together with the respective “Sell-in Price” applying a markup to the “Wholesale Price”
+* Each Reseller decides the “Sell-out Price” to publish to its End-Customers for each Service Plan. Sell-out Prices can alternatively be imposed by each of the actors up the chain (typically, Vendors that impose a Recommended Retail Price)
 
 **Each actor down the chain (from ISV to Reseller) can also:**
 
-*   Add **VAS** (Value Added Services, AKA [extra-resources](https://www.cloudesire.com/platform-modules-documentation/#extra-resources)) to empower its own offer (like setup, training, support, devices, etc.). All pricing models available in Cloudesire can be applied also to VAS (typically: one-off, subscription, consumption)
-*   Build up its own [**coupons**](https://www.cloudesire.com/platform-modules-documentation/#coupons) (% discount, price override, trial extension | reusable or not | with/without time limit)
-*   Build up its own [**bundles**](https://www.cloudesire.com/platform-modules-documentation/#bundles), hence configure the (discounted) price of each bundled product
+* Add **VAS** (Value Added Services, AKA [extra-resources](platform.md#extra-resources)) to empower its own offer (like setup, training, support, devices, etc.). All pricing models available in Cloudesire can be applied also to VAS (typically: one-off, subscription, consumption)
+* Build up its own [**coupons**](platform.md#coupons) (% discount, price override, trial extension | reusable or not | with/without time limit)
+* Build up its own [**bundles**](platform.md#bundles), hence configure the (discounted) price of each bundled product
 
 ### 1.2.Available Billing/Payment scenarios
 
-**Scenario 1 – Self-Billing**
+#### Scenario 1 – Self-Billing
 
-*   Cloudesire provides to the Reseller the _billing instructions_ (namely: who is consuming what, and respective duration)
-*   The Reseller invoices to its End-Customer, and collects the payment through its own properties (online or offline)
+* Cloudesire provides to the Reseller the _billing instructions_ (namely: who is consuming what, and respective duration)
+* The Reseller invoices to its End-Customer, and collects the payment through its own properties (online or offline)
 
-**Scenario 2 – Billing on behalf**
+#### Scenario 2 – Billing on behalf
 
-*   Cloudesire invoices the End Customer with Parent or Distributor or Reseller administrative data (VAT, etc.) – can be set for each Reseller
-*   Cloudesire collects payments through its own payment gateways
-*   Cloudesire pays back each due amount up the chain to ISVs, Parent, Distributors, Resellers, Cloud Providers
+* Cloudesire invoices the End Customer with Parent or Distributor or Reseller administrative data (VAT, etc.) – can be set for each Reseller
+* Cloudesire collects payments through its own payment gateways
+* Cloudesire pays back each due amount up the chain to ISVs, Parent, Distributors, Resellers, Cloud Providers
 
-**Scenario 3 – Billing**
+#### Scenario 3 – Billing
 
-*   Cloudesire invoices the End Customer with Parent or Distributor or Reseller administrative data (VAT, etc.) – can be set for each Reseller
-*   Cloudesire collects payments, through the payment gateways of the Parent or Reseller
-*   Cloudesire calculates each due amount, to be paid by who has collected the payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud Providers
+* Cloudesire invoices the End Customer with Parent or Distributor or Reseller administrative data (VAT, etc.) – can be set for each Reseller
+* Cloudesire collects payments, through the payment gateways of the Parent or Reseller
+* Cloudesire calculates each due amount, to be paid by who has collected the payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud Providers
 
 For each Scenario, the Reseller has both the “**push**” and “**pull**” selling modalities available:
 
-*   push → the Reseller insert the order on behalf of its Customer
-*   pull → the Customer buys directly from the Reseller store
+* push → the Reseller insert the order on behalf of its Customer
+* pull → the Customer buys directly from the Reseller store
 
 ### 1.3.Other relevant features
 
-*   an actor cannot visualize any data relating to its peers (example: a reseller cannot see the sell-in prices applied by its distributor to another reseller)
-*   actors down the chain cannot visualize any data that relies to an actor up the chain (example: reseller cannot see the price at which its distributor is buying a given product)
-*   prices can be decided by each actor relating to its adjacent down the chain, or RRP can be forced by Parent
-*   prices for each service can be set different between peers by the actor up the chain
-*   Parent can deactivate one or more distribution tiers (up to Parent selling directly to End Customers)
-*   each Store can be set as:
-    *   _standard_ → all listing and transaction features enabled
-    *   _listing_ → products and prices are visible, but transactions are disabled
-    *   _showcase_ → products are visible, prices are masked and transactions disabled
-*   each store can be **customized**:
+* an actor cannot visualize any data relating to its peers (example: a reseller cannot see the sell-in prices applied by its distributor to another reseller)
+* actors down the chain cannot visualize any data that relies to an actor up the chain (example: reseller cannot see the price at which its distributor is buying a given product)
+* prices can be decided by each actor relating to its adjacent down the chain, or RRP can be forced by Parent
+* prices for each service can be set different between peers by the actor up the chain
+* Parent can deactivate one or more distribution tiers (up to Parent selling directly to End Customers)
+* each Store can be set as:
+* _standard_ → all listing and transaction features enabled
+* _listing_ → products and prices are visible, but transactions are disabled
+* _showcase_ → products are visible, prices are masked and transactions disabled
+* each store can be **customized**:
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/11/reseller-marketplace-custom-300x193.jpg)](https://www.cloudesire.com/wp-content/uploads/2017/11/reseller-marketplace-custom.jpg)
 
@@ -105,17 +103,17 @@ The “assign” button can be used if no sell-in prices was assigned for the sp
 
 The “delete” button will unset the sell-in prices for the selected product-Reseller assignment: this is obviously possible only if no subscriptions was created on that specific channel.
 
-The  “edit” button can be used to change the current sell-in price configurations for the selected product-Reseller assignment: of course the new sell-in prices will become effective only for the successive subscriptions.
+The“edit” button can be used to change the current sell-in price configurations for the selected product-Reseller assignment: of course the new sell-in prices will become effective only for the successive subscriptions.
 
 If no row is selected the “assign” button is shown on the top-right: by clicking on it, the Distributor can create a new sell-in configuration from the scratch on this interface, where is possible to configure the sell-in markups both for the one-off costs and the subscription cost:
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/4-distributor-sell-in-config-edit-licenses-1024x407.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/4-distributor-sell-in-config-edit-licenses.png)
 
-By clicking on the “Extra-Resources” tab, the Distributor can also set the sell-in markups also for the [extra-resources](https://www.cloudesire.com/platform-modules-documentation/#extra-resources) to be sold together with the product.
+By clicking on the “Extra-Resources” tab, the Distributor can also set the sell-in markups also for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/5-distributor-sell-in-config-edit-extra-resources-1024x305.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/5-distributor-sell-in-config-edit-extra-resources.png)
 
-If the product to be sold is a [deployed application](https://www.cloudesire.comdeployed.md) then the “cloud-pricing” tab is also provided. In this section, the Distributor can set the sell-in markups for all the cloud resources unit prices, given a selected [cloud provider](https://www.cloudesire.com/supported-languages-databases-and-clouds/#supported-cloud-providers-4) (among the all supported by the platform).
+If the product to be sold is a [deployed application](deployed.md) then the “cloud-pricing” tab is also provided. In this section, the Distributor can set the sell-in markups for all the cloud resources unit prices, given a selected [cloud provider](stacks.md#supported-cloud-providers) (among the all supported by the platform).
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/6-distributor-sell-in-config-edit-cloud-resources-1024x461.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/6-distributor-sell-in-config-edit-cloud-resources.png)
 
@@ -133,11 +131,11 @@ By clicking on a specific row, a dialog will be provided, where the Reseller can
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/9-reseller-sell-out-config-edit-licenses-1024x211.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/9-reseller-sell-out-config-edit-licenses.png)
 
-The “Extra Resources” tab will provide the possibility to set-up the sell-out prices for the [extra-resources](https://www.cloudesire.com/platform-modules-documentation/#extra-resources) to be sold together with the product.
+The “Extra Resources” tab will provide the possibility to set-up the sell-out prices for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
 
 [![](https://www.cloudesire.com/wp-content/uploads/2017/10/10-reseller-sell-out-config-edit-extra-resources-1024x327.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/10-reseller-sell-out-config-edit-extra-resources.png)
 
-If the product to be sold is a [deployed application](https://www.cloudesire.comdeployed.md) then the “cloud-pricing” tab is also provided. In this section, the Reseller can set the sell-out prices for all the cloud resources units, given a selected [cloud provider](https://www.cloudesire.com/supported-languages-databases-and-clouds/#supported-cloud-providers-4) (among the all supported by the platform).
+If the product to be sold is a [deployed application](deployed.md) then the “cloud-pricing” tab is also provided. In this section, the Reseller can set the sell-out prices for all the cloud resources units, given a selected [cloud provider](stacks.md#supported-cloud-providers) (among the all supported by the platform).
 
 The Reseller can change the sell-out configurations for a product anytime: of course the new prices will be applied only in the successive subscriptions.
 
@@ -153,8 +151,8 @@ The platform automatically creates **dedicated** **domain names** for each distr
 
 By default, the platform creates URLs following this pattern:
 
-*   reseller marketplaces: https://_reseller\_unique\_username_.**resellers**.parent\_domain\_name.com
-*   distributor marketplaces: https://_distributor\_unique\_username_.**distributors**.parent\_domain\_name.com
+* reseller marketplaces: https://_reseller\_unique\_username_.**resellers**.parent\_domain\_name.com
+* distributor marketplaces: https://_distributor\_unique\_username_.**distributors**.parent\_domain\_name.com
 
 In order to be able to activate the above mechanism, the platform should be able to dynamically create DNS records for the _parent\_domain\_name_ (a wildcard SSL certificates is required).
 
