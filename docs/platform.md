@@ -115,7 +115,7 @@ Each Cloudesire invoice contains the following items:
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/invoice_syndicated-300x265.png)](https://www.cloudesire.com/wp-content/uploads/2017/11/invoice_syndicated.png) [![](https://www.cloudesire.com/wp-content/uploads/2017/11/invoice_cloud-300x185.png)](https://www.cloudesire.com/wp-content/uploads/2017/11/invoice_cloud.png)
+[![](/img/docs/invoice_syndicated-300x265.png)](/img/docs/invoice_syndicated.png) [![](/img/docs/invoice_cloud-300x185.png)](/img/docs/invoice_cloud.png)
 
 #### Billing Rules
 
@@ -181,7 +181,7 @@ Quantity bought 15 users, total amount: € 100,00
 
 The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](platform.md#product-plan)
 
-![Vendors Control Panel - Extra Resources](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
+![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
 Detailed instructions, explaining how to specify and manage Extra Resources during the onboading process, are provided in [this section](onboarding.md#extra-resources).
 
@@ -226,11 +226,11 @@ A bundle has the same “marketing & legal” attributes of a _normal_ product (
 
 Each _bundle plan_ is defined as a composition of _products plans. _Using a simple interface it’s possible to specify – for each of them – a **discount percentage**; in this way, the total price of a _bundle plan_ is calculated as the sum of all the discounted prices of all the _products plans _“attached” to it.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/bundles-4-300x143.png)](https://www.cloudesire.com/wp-content/uploads/2017/11/bundles-4.png)
+[![](/img/docs/bundles-4-300x143.png)](/img/docs/bundles-4.png)
 
 On the Marketplace, a bundle is shown as a normal product, highlighting the discounts, while in the ordering page the customer can have a detailed view of all the prices and the savings.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/bundles-6-251x300.jpg)](https://www.cloudesire.com/wp-content/uploads/2017/11/bundles-6.jpg)
+[![](/img/docs/bundles-6-251x300.jpg)](/img/docs/bundles-6.jpg)
 
 ### Prepaid Bandwidth Management
 

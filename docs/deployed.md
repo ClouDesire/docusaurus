@@ -25,11 +25,11 @@ For example, an application can be described specifying a _Module_ (with specifi
 
 To access the list of the available Packages, click on the “_Catalog_” \> “_Packages_” menu item on the left.
 
-![Vendors Control Panel: Packages](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_packages.png "Vendors Control Panel: Packages")
+![Vendors Control Panel: Packages](/img/docs/control_panel_packages.png "Vendors Control Panel: Packages")
 
 To create a new Package using the [ZIP Packaging](deployed.md#zip-packaging) methodology click on the “_New_” button.
 
-![Vendors Control Panel: ZIP](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_packages_ZIP.png "Vendors Control Panel: ZIP")
+![Vendors Control Panel: ZIP](/img/docs/control_panel_packages_ZIP.png "Vendors Control Panel: ZIP")
 
 For each Package, vendors must provide the following information:
 
@@ -41,11 +41,11 @@ For each Package, vendors must provide the following information:
 
 When a Package is created, it can be linked to a specific _Product Plan_, simply selecting it from the list and clicking on the “_Attach Package to Module_” button. In this way a new **Module** will be created (if not existent) or the Package will be added to an already existent Module.
 
-![Vendors Control Panel: Packages-Modules Links](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_packages_modules_links.png "Vendors Control Panel: Packages-Modules Links")
+![Vendors Control Panel: Packages-Modules Links](/img/docs/control_panel_packages_modules_links.png "Vendors Control Panel: Packages-Modules Links")
 
 To simultaneously create one or more Package, corresponding to a **composition of Docker images**, click on the “_New Docker Compose_” button. More details on the Docker Packaging are available in [this section](deployed.md#docker-packaging).
 
-![Vendors Control Panel: Packages - Docker](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_packages_Docker.png "Vendors Control Panel: Packages - Docker")
+![Vendors Control Panel: Packages - Docker](/img/docs/control_panel_packages_Docker.png "Vendors Control Panel: Packages - Docker")
 
 In this case, a _Docker Compose_ string must be provided, and the vendor can also directly link the Packages to a specific Product Plan (crating in this way a new Module, or adding all the Packages to an already existent Module).
 
@@ -53,11 +53,11 @@ In this case, a _Docker Compose_ string must be provided, and the vendor can als
 
 The list of all available modules is provided in the “_Catalog_” \> “_Modules_” section.
 
-![Vendors Control Panel: Modules](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_modules.png "Vendors Control Panel: Modules")
+![Vendors Control Panel: Modules](/img/docs/control_panel_modules.png "Vendors Control Panel: Modules")
 
 By selecting a specific Module and clicking on the “_Edit_” button on the top-right of the page, software vendors can specify some parameters.
 
-![Vendors Control Panel: Modules - VM Sizing](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_modules_VM.png "Vendors Control Panel: Modules - VM Sizing")
+![Vendors Control Panel: Modules - VM Sizing](/img/docs/control_panel_modules_VM.png "Vendors Control Panel: Modules - VM Sizing")
 
 * CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the preferred configuration (e.g. 1 core + 1Gb, 2 cores + 4Gb, etc.)
 * Disk Space (in GB): a slider allows the vendor to select the quantity of space available for user data
@@ -70,7 +70,7 @@ By clicking on a specific Package name attached to a certain Module, three butto
 * “_Show Advanced_“: to open the Advanced Settings pop-up (see below)
 * “_Unlink_“: to unlink the Package from the Module
 
-![Vendors Control Panel: Modules - advanced setttings](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_modules_advanced.png "Vendors Control Panel: Modules - advanced setttings")
+![Vendors Control Panel: Modules - advanced setttings](/img/docs/control_panel_modules_advanced.png "Vendors Control Panel: Modules - advanced setttings")
 
 The Advanced Settings pop-up provides the following sections:
 
@@ -94,7 +94,7 @@ Furthermore, vendors can specify one or more **custom** access URLs that will be
 
 To add a new Endpoint, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Endpoint Patterns_” tab it’s possible to fill all the required fields (a Description, a Category and a Value) and click on the “_Add_” button to finish.
 
-![Vendors Control Panel - Endpoints](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_endpoints.png "Vendors Control Panel - Endpoints")
+![Vendors Control Panel - Endpoints](/img/docs/control_panel_endpoints.png "Vendors Control Panel - Endpoints")
 
 ## Environment Variables
 
@@ -104,7 +104,7 @@ You can even choose to permit the _end-user_ to the **edit** some of those varia
 
 To add a new Environment Variable, vendors need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. By accessing to the “_Environment Variables_” tab vendors can fill all the required fields (the _Name_ and the _Value_) and click on the “_Add_” button to finish.
 
-![Vendors Control Panel - Environment Variables](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_environment_variables.png "Vendors Control Panel - Environment Variables")
+![Vendors Control Panel - Environment Variables](/img/docs/control_panel_environment_variables.png "Vendors Control Panel - Environment Variables")
 
 There are predefined environment variables set at runtime by the platform and that you could use:
 
@@ -256,7 +256,7 @@ Before going forward in this documentation, please take a look to the [data pers
 
 Once a Docker image is created, the only think you need to do to [onboard](onboarding.md) your application in Cloudesire is to create a _Package_ (linked to your application), then select “_Docker_” in the “_Stacks_” input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in [this section](deployed.md/#packages).
 
-![Vendors Control Panel - Docker Image](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_docker_image.png "Vendors Control Panel - Docker Image")
+![Vendors Control Panel - Docker Image](/img/docs/control_panel_docker_image.png "Vendors Control Panel - Docker Image")
 
 ### Writing a Dockerfile to build an image
 
@@ -397,7 +397,7 @@ When defining a [Docker](deployed.md#docker-packaging) or [ZIP](deployed.md#zip-
 
 To add a new Stack Parameter, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Stack Parameters Values_” tab it’s possible to select a specific parameter specifying a value for it.  When you’re done, click on the “_Add_” button to finish.
 
-![Vendors Control Panel - Stack Parameters](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_stack_parameters.png "Vendors Control Panel - Stack Parameters")
+![Vendors Control Panel - Stack Parameters](/img/docs/control_panel_stack_parameters.png "Vendors Control Panel - Stack Parameters")
 
 ## Sandboxing
 
@@ -405,13 +405,13 @@ Once finished the technical onboarding of your deployed app, it’s time to test
 
 Let’s start by selecting a plan, and by clicking on the corresponding “Sandbox” button in the “Actions” column; then select one of the supported cloud providers on which you want to start the testing deploy of your app.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/vendors-sandboxing-1024x406.png)](https://www.cloudesire.com/wp-content/uploads/2017/11/vendors-sandboxing.png)
+[![](/img/docs/vendors-sandboxing-1024x406.png)](/img/docs/vendors-sandboxing.png)
 
 The provisioning process will start immediately; it will require few minutes, depending on the cloud provider performances, the “weight” of your app, and other factors.
 
 You’ll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/vendors-running-instance-570x1024.jpg)](https://www.cloudesire.com/wp-content/uploads/2017/11/vendors-running-instance.jpg)
+[![](/img/docs/vendors-running-instance-570x1024.jpg)](/img/docs/vendors-running-instance.jpg)
 
 The following elements are available:
 

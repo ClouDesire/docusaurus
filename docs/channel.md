@@ -1,4 +1,4 @@
----
+--
 id: channel
 title: Distribution and Channel Management
 sidebar_label: Channel management
@@ -11,7 +11,7 @@ Distribution and channel logics are available in the cloudesire platform:
 * **Resellers** sell-out to End-Customers (applying a Recommended Retail Price imposed by the MSP, or building up their own price strategy)
 * Each Reseller can bill/invoice autonomously, or on behalf of the Distributors (useful for **Agents**/**Dealers**)
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/parent-child-schema.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/parent-child-schema.png)
+[![](/img/docs/parent-child-schema.png)](/img/docs/parent-child-schema.png)
 
 ### 1.1.Product/service assignment rules and pricing logics, along the chain
 
@@ -65,7 +65,7 @@ For each Scenario, the Reseller has both the “**push**” and “**pull**” s
 * _showcase_ → products are visible, prices are masked and transactions disabled
 * each store can be **customized**:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/11/reseller-marketplace-custom-300x193.jpg)](https://www.cloudesire.com/wp-content/uploads/2017/11/reseller-marketplace-custom.jpg)
+[![](/img/docs/reseller-marketplace-custom-300x193.jpg)](/img/docs/reseller-marketplace-custom.jpg)
 
 ### 2.Parent functionalities
 
@@ -75,27 +75,27 @@ To do this, once logged as Parent, click on the _Catalog_ menu item and then on 
 
 Each Distributor-product assignment can be deleted (but only if no subscription was activated before for the corresponding product, through that specific Distributor channel).
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/2-admin-distributor-products-1024x379.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/2-admin-distributor-products.png)
+[![](/img/docs/2-admin-distributor-products-1024x379.png)](/img/docs/2-admin-distributor-products.png)
 
 The _Distributor-Catalogs_ view provides a list of all the associations created with the previous tool, together with all the product assignments made by each Distributors to his Resellers.
 
 It’s possible to filer the list by searching for Distributor name, Reseller name and product name.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/1-admin-distributor-catalogs-1024x969.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/1-admin-distributor-catalogs.png)
+[![](/img/docs/1-admin-distributor-catalogs-1024x969.png)](/img/docs/1-admin-distributor-catalogs.png)
 
 ### 3.Distributor functionalities
 
 The Distributor can access to his catalog by clicking on the namesake menu item.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/3.1-distributor-catalog-1024x565.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/3.1-distributor-catalog.png)
+[![](/img/docs/3.1-distributor-catalog-1024x565.png)](/img/docs/3.1-distributor-catalog.png)
 
 By clicking on the “assign” button is possible to assign the specific product to a Reseller: a dialog is proposed, where the Distributor can search a Reseller (by filtering for his name) and then set the **sell-in markups** for the one-off / subscription / extra resources / cloud resources costs.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/3.2-distributor-sell-in-config-product-preselected-1024x437.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/3.2-distributor-sell-in-config-product-preselected.png)
+[![](/img/docs/3.2-distributor-sell-in-config-product-preselected-1024x437.png)](/img/docs/3.2-distributor-sell-in-config-product-preselected.png)
 
 All the already created sell-in configurations are listed in the _Sell-In Config_ view:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/3-distributor-sell-in-config-list-1024x799.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/3-distributor-sell-in-config-list.png)
+[![](/img/docs/3-distributor-sell-in-config-list-1024x799.png)](/img/docs/3-distributor-sell-in-config-list.png)
 
 By clicking on each row in the list, 3 new buttons should be proposed on the top-right: “assign”, “edit” and “delete”.
 
@@ -107,43 +107,43 @@ The“edit” button can be used to change the current sell-in price configurati
 
 If no row is selected the “assign” button is shown on the top-right: by clicking on it, the Distributor can create a new sell-in configuration from the scratch on this interface, where is possible to configure the sell-in markups both for the one-off costs and the subscription cost:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/4-distributor-sell-in-config-edit-licenses-1024x407.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/4-distributor-sell-in-config-edit-licenses.png)
+[![](/img/docs/4-distributor-sell-in-config-edit-licenses-1024x407.png)](/img/docs/4-distributor-sell-in-config-edit-licenses.png)
 
 By clicking on the “Extra-Resources” tab, the Distributor can also set the sell-in markups also for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/5-distributor-sell-in-config-edit-extra-resources-1024x305.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/5-distributor-sell-in-config-edit-extra-resources.png)
+[![](/img/docs/5-distributor-sell-in-config-edit-extra-resources-1024x305.png)](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)
 
 If the product to be sold is a [deployed application](deployed.md) then the “cloud-pricing” tab is also provided. In this section, the Distributor can set the sell-in markups for all the cloud resources unit prices, given a selected [cloud provider](stacks.md#supported-cloud-providers) (among the all supported by the platform).
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/6-distributor-sell-in-config-edit-cloud-resources-1024x461.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/6-distributor-sell-in-config-edit-cloud-resources.png)
+[![](/img/docs/6-distributor-sell-in-config-edit-cloud-resources-1024x461.png)](/img/docs/6-distributor-sell-in-config-edit-cloud-resources.png)
 
 The Distributor can also easily access to a real-time **sales reports** through his Resellers’ channels. This functionality is provided by the _Proceeds_ view, where is possible to filter by date-interval (also having the partial totals in the last records pagination) and by Reseller name.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/7-distributor-proceeds-1024x558.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/7-distributor-proceeds.png)
+[![](/img/docs/7-distributor-proceeds-1024x558.png)](/img/docs/7-distributor-proceeds.png)
 
 ### 4.Reseller functionalities
 
 The Reseller can access the _Sell-Out Config_ section to browse the **sell-out prices** related to all the products listed in his catalog. This view is filterable by product name.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/8-reseller-sell-out-config-list-1024x605.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/8-reseller-sell-out-config-list.png)
+[![](/img/docs/8-reseller-sell-out-config-list-1024x605.png)](/img/docs/8-reseller-sell-out-config-list.png)
 
 By clicking on a specific row, a dialog will be provided, where the Reseller can configure the sell-out prices both for the on-off and the subscription pricing components:
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/9-reseller-sell-out-config-edit-licenses-1024x211.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/9-reseller-sell-out-config-edit-licenses.png)
+[![](/img/docs/9-reseller-sell-out-config-edit-licenses-1024x211.png)](/img/docs/9-reseller-sell-out-config-edit-licenses.png)
 
 The “Extra Resources” tab will provide the possibility to set-up the sell-out prices for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/10-reseller-sell-out-config-edit-extra-resources-1024x327.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/10-reseller-sell-out-config-edit-extra-resources.png)
+[![](/img/docs/10-reseller-sell-out-config-edit-extra-resources-1024x327.png)](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)
 
 If the product to be sold is a [deployed application](deployed.md) then the “cloud-pricing” tab is also provided. In this section, the Reseller can set the sell-out prices for all the cloud resources units, given a selected [cloud provider](stacks.md#supported-cloud-providers) (among the all supported by the platform).
 
 The Reseller can change the sell-out configurations for a product anytime: of course the new prices will be applied only in the successive subscriptions.
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/11-reseller-sell-out-config-edit-cloud-resources.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/11-reseller-sell-out-config-edit-cloud-resources.png)
+[![](/img/docs/11-reseller-sell-out-config-edit-cloud-resources.png)](/img/docs/11-reseller-sell-out-config-edit-cloud-resources.png)
 
 The Reseller can also easily access to a real-time **sales reports**. This functionality is provided by the _Proceeds_ view, where is possible to filter by date-interval (also having the partial totals in the last records pagination).
 
-[![](https://www.cloudesire.com/wp-content/uploads/2017/10/12-reseller-proceeds-1024x502.png)](https://www.cloudesire.com/wp-content/uploads/2017/10/12-reseller-proceeds.png)
+[![](/img/docs/12-reseller-proceeds-1024x502.png)](/img/docs/12-reseller-proceeds.png)
 
 ### 5.Self-creation of distributor/reseller marketplace URLs
 

@@ -33,7 +33,7 @@ A simple example follows, expaining the workflow of a new tenant order and provi
 
 In other words, you should provision your tenant only when the `paid` flag is `true` (unless you’re offering **trials** for your application).
 
-![](https://www.cloudesire.com/wp-content/uploads/2017/05/Syndication-Worklow-Provisioning-1.png)
+![](/img/docs/Syndication-Worklow-Provisioning-1.png)
 
 [Here](https://github.com/ClouDesire/php-syndication-example) you can find a simple PHP example, implementing the tenant provisioning/unprovisioning for a demo application.
 
@@ -45,7 +45,7 @@ We strongly recommend to onboard and test your application on the staging market
 
 Let’s start things off: during the [application onboarding](syndication.md#applications-onboarding) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
 
-![Vendors Control Panel - Syndication](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndication.png "Vendors Control Panel - Syndication")
+![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png "Vendors Control Panel - Syndication")
 
 If you want to secure your syndication endpoint, please read [this section](syndication.md#security).
 
@@ -112,7 +112,7 @@ We strongly recommend to onboard and test your application on the staging market
 
 Trigger a _SANDBOX_ order from the _Plans_ section inside the application edit page.
 
-![Vendors Control Panel: Syndication - Sandboxing](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
+![Vendors Control Panel: Syndication - Sandboxing](/img/docs/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
 
 The first event you will receive, is a `Subscription CREATED` event.
 
@@ -309,7 +309,7 @@ In this moment you should unprovision or block tenant access to your application
     }
     
 
-![](https://www.cloudesire.com/wp-content/uploads/2017/05/Syndication-Worklow-Unprovisioning.png)
+![](/img/docs/Syndication-Worklow-Unprovisioning.png)
 
 You have now completed the standard workflow for a syndicated application, congratulations!
 
