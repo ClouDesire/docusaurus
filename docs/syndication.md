@@ -549,6 +549,16 @@ Given a subscription with ID `{id}`, you can generate a cashed invoice with:
 
 These invoices will be used only while generating balance reports at the end of the month.
 
+## Auto-Login
+
+It is great to enable your customers to **auto-login** to your application without providing any credentials.
+
+For instance, it means that your customers will not need to remember credentails for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to your customers to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.
+
+To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize customers and enable automatical log-in to your application.
+
+If you follow this flow, you do not need to specify user credentials into end-user instructions.
+
 ## Recap for Publishing
 
 Before publishing your application into the marketplace, please make sure that these requirements are satisfied:
@@ -563,16 +573,6 @@ During a purchasing process, a crystal-clear communication is a crucial point. F
 
 If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](syndication.md#providing-end-user-instructions)._
 
-****TIPS:  
+### TIPS:  
 
 In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
-
-### Auto-Login
-
-It is great to enable your customers to **auto-login** to your application without providing any credentials.
-
-For instance, it means that your customers will not need to remember credentails for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to your customers to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.
-
-To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize customers and enable automatical log-in to your application.
-
-If you follow this flow, you do not need to specify user credentials into end-user instructions.
