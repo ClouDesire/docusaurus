@@ -14,3 +14,16 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.fixedHeaderContainer {
+  min-height: 60px;
+}
+
+h2.headerTitle {
+  font-size: 36px;
+  padding-top: 6px;
+}
+
+.navigationSlider {
+  margin-top: 5px;
+}
