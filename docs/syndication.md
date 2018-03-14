@@ -355,9 +355,7 @@ YMMV, of course. **Notice** though that the hash signature starts with `sha1=`, 
 
 ## Managing Provisioning Exceptions
 
-If something goes wrong during the provisioning of a new tenant in your application, please be sure to:
-
-*   set the subscription status to `FAILED` invoking our API, for example:
+If something goes wrong during the provisioning of a new tenant in your application, please be sure to set the subscription status to `FAILED` by invoking our API, for example:
 
     PATCH /api/subscription/{id} HTTP/1.1
     Content-Type: application/json; charset=utf-8
@@ -366,8 +364,7 @@ If something goes wrong during the provisioning of a new tenant in your applicat
       "deploymentStatus": "FAILED"
     }
     
-
-*   provide the customer appropriate _end-user instructions_, in order to explain what happened (e.g. _sorry, our system went down. Please retry later._)
+and then to provide the customer appropriate _end-user instructions_, in order to explain what happened (e.g. _sorry, our system went down. Please retry later._)
 
 ## Advanced Billing Features
 
