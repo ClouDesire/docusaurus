@@ -275,7 +275,7 @@ Languages depend on the marketplace, for example in a marketplace with English a
 
 ### Tips
 
-It would be great to give the customer the possibility to **auto-login** to your application without providing any credentials. To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize the customer and enable automatical log-in into your application. If you follow this flow, you do not need to specify the user credentials into the end-user instructions.
+It would be great to give the customer the possibility to [auto-login](syndication.md#auto-login) to your application without providing any credentials. To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize the customer and enable automatical log-in into your application. If you follow this flow, you do not need to specify the user credentials into the end-user instructions.
 
 ### Set provisiong status to DEPLOYED
 
