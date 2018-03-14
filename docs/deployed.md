@@ -77,7 +77,7 @@ The Advanced Settings pop-up provides the following sections:
 * **Endpoints Patterns**: one or more (custom) access URLs to the module of the product (e.g. _/backend_, or _/stats_, etc.); more info at [this section](deployed.md#endpoints)
 * **Application Metrics**: specific application _aspects_ that the vendor intends to monitor or bill to the customer leveraging the **pay-per-use** paradigm; more info in [this section](onboarding.md#application-metrics)
 * **Environment Variables**:  environment variables to be injected in the deployed VM and accessed at runtime by the application. More info in [this section](deployed.md#environment-variables).
-* **Stack Parameters**: some language-specific parameters to provide to the [Deployer Module](/platform-modules-documentation/#application-provisioning-module) (e.g. fine tuning of interpreters or application server). More info in [this section](deployed.md#stack-parameters).
+* **Stack Parameters**: some language-specific parameters to provide to the [Deployer Module](platform.md#application-provisioning-module) (e.g. fine tuning of interpreters or application server). More info in [this section](deployed.md#stack-parameters).
 
 ## Data Persistence
 

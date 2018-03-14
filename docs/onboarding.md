@@ -83,7 +83,7 @@ Plus, you will find some extra fields:
 
 ### Plans
 
-* plans show one or more available _product versions_ (e.g. silver, gold, platinum, etc.): each version (or “plan”) can have a specific **recurrent license** and/or a one-off **setup price** or can be offered for free. There are so many options that we wrote a section entirely dedicated to plans and pricing models. We strongly recommend you to read it before you define plans for your product. You can find more information about pricing models [here](/applications-catalogue-2/#pricing-models).
+* plans show one or more available _product versions_ (e.g. silver, gold, platinum, etc.): each version (or “plan”) can have a specific **recurrent license** and/or a one-off **setup price** or can be offered for free. There are so many options that we wrote a section entirely dedicated to plans and pricing models. We strongly recommend you to read it before you define plans for your product. You can find more information about pricing models [here](platform.md#pricing-models).
 
 ### SSL (only for “Deployed” Applications)
 

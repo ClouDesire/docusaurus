@@ -136,7 +136,7 @@ In this section you will find the list of the **databases that Cloudesire curren
 
 ### ODBC Support
 
-In order to provide connections to [mySQL](/supported-languages-databases-and-clouds/#mysql-5-x) and [PostgreSQL](/supported-languages-databases-and-clouds/#postgresql-9-x) databases, a **[unixODBC](http://www.unixodbc.org/)** support is available on each running VM.  
+In order to provide connections to [mySQL](stacks.md#mysql) and [PostgreSQL](stacks.md#postgresql) databases, a **[unixODBC](http://www.unixodbc.org/)** support is available on each running VM.
 If you are interested to use it, you need to specify the [application module name](deployed.md#modules) as **DSN**.
 
 ### MongoDB
@@ -149,7 +149,7 @@ A database dump should be gathered with _mongodump_ utility. At the first run, i
 
 The script should be in the standard .sql format, e.g.: generated via _mysqldump_ tool. It should not contains any administrative command, like CREATE DATABASE or GRANT PRIVILEGES.
 
-**ODBC support** is provided to connect to MySQL databases. More info in [this section](/supported-languages-databases-and-clouds/#odbc-support).
+**ODBC support** is provided to connect to MySQL databases. More info in [this section](stacks.md#odbc-support).
 
 ### PostgreSQL
 
@@ -159,7 +159,7 @@ For example, if you use pg_dump, you would run:
 
     pg_dump -O --inserts --column-inserts my_database_name > V1__init.sql
 
-**ODBC support** is provided to connect to PostgreSQL databases. More info in [this section](/supported-languages-databases-and-clouds/#odbc-support).
+**ODBC support** is provided to connect to PostgreSQL databases. More info in [this section](stacks.md#odbc-support).
 
 ### MSSQL Server
 

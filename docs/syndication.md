@@ -39,15 +39,15 @@ In other words, you should provision your tenant only when the `paid` flag is `t
 
 ### How to setup the syndication endpoint
 
-While developing your integration with the Cloudesire platform, you may find useful to test your source code in our [staging marketplace](/applications-onboarding-instructions/#staging-marketplace), where _fake payments_ are possible and where you can test the whole customer journey, end-to-end.
+While developing your integration with the Cloudesire platform, you may find useful to test your source code in our [staging marketplace](syndication.md#staging-marketplace), where _fake payments_ are possible and where you can test the whole customer journey, end-to-end.
 
 We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
 
-Let’s start things off: during the [application onboarding](/applications-onboarding-instructions/#applications-onboarding) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
+Let’s start things off: during the [application onboarding](syndication.md#applications-onboarding) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
 
 ![Vendors Control Panel - Syndication](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndication.png "Vendors Control Panel - Syndication")
 
-If you want to secure your syndication endpoint, please read [this section](/onboarding-of-syndicated-applications/#security).
+If you want to secure your syndication endpoint, please read [this section](syndication.md#security).
 
 ### Anatomy of an event request
 
@@ -80,7 +80,7 @@ Where:
 *   The **id** attribute is an unique identifier for the current **entity**.
 *   The **entityUrl** attribute contains the relative URL from which the involved resource can be fetched.
 *   The **date** attribute contains when the event has been generated.
-*   The **CMW-Event-Signature** is an HTTP header related to the optional [validation for incoming event notifications](/onboarding-of-syndicated-applications/#security).
+*   The **CMW-Event-Signature** is an HTTP header related to the optional [validation for incoming event notifications](syndication.md#security).
 
 ### Replying to events
 
@@ -106,7 +106,7 @@ Please make sure that you understand the basics of the [Cloudesire API](api.md) 
 
 ### First steps
 
-Before you start, take a look to our [integration facilities](/applications-onboarding-instructions/#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
+Before you start, take a look to our [integration facilities](syndication.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
 
 We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
 
@@ -293,7 +293,7 @@ Starting from now, the customer can use your application!
 
 ### Any problem during provisioning of your tenant?
 
-If something goes wrong during the provisioning of a new tenant in your application, please follow [these instructions](/onboarding-of-syndicated-applications/#managing-provisioning-exceptions).
+If something goes wrong during the provisioning of a new tenant in your application, please follow [these instructions](syndication.md#managing-provisioning-exceptions).
 
 ### Update subscription information (when the subscription expires)
 
@@ -375,7 +375,7 @@ There a few features that can be used alongside the basic integration.
 
 ### Application Metrics
 
-Even for syndicated applications, you can define and bills [application metrics](/applications-onboarding-instructions/#application-metrics).
+Even for syndicated applications, you can define and bills [application metrics](syndication.md#application-metrics).
 
 Besides the general usage and information provided, you should only take care of an additional **HTTP header**, sent to your metric endpoint: **CD-Subscription-Id**.
 
@@ -556,15 +556,15 @@ These invoices will be used only while generating balance reports at the end of 
 
 Before publishing your application into the marketplace, please make sure that these requirements are satisfied:
 
-*   appropriate **translations** are provided for the [**end-user-instructions**](/onboarding-of-syndicated-applications/#providing-end-user-instructions), for each marketplace languages (e.g. English, Italian, etc.)
+*   appropriate **translations** are provided for the [**end-user-instructions**](syndication.md#providing-end-user-instructions), for each marketplace languages (e.g. English, Italian, etc.)
 *   **no HTML links** are present into the end-user instructions text (if you need to provide the end-users a link, please create a specific _endpoint_ for it; e.g. “reset password”)
-*   at least one [**application endpoint**](/onboarding-of-syndicated-applications/#providing-endpoints) is provided
+*   at least one [**application endpoint**](syndication.md#providing-endpoints) is provided
 *   all the endpoints must have an appropriate **category**
 *   all the endpoints must be **accessible via HTTPS** due to the nature of data that business applications contains
 
 During a purchasing process, a crystal-clear communication is a crucial point. For this reason, please **don’t send email** to the customer after the provisioning of his _tenant_ in your application: Cloudesire will notify him for you.
 
-If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](/onboarding-of-syndicated-applications/#providing-end-user-instructions)._
+If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](syndication.md#providing-end-user-instructions)._
 
 ****TIPS:  
 ****In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
