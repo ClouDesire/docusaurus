@@ -11,6 +11,7 @@ const siteConfig = {
   url: 'https://cloudesire.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   cname: 'docs.cloudesire.com',
+  gaTrackingId: 'UA-107718815-1',
   headerLinks: [
     {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
