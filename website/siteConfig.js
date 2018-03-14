@@ -19,7 +19,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/logo-cloudesire.png',
   footerIcon: 'img/logo-cloudesire.png',
-  favicon: 'img/favicon.png',
+  favicon: 'img/favicon/favicon.ico',
   /* colors for website */
   colors: {
     primaryColor: '#1DACE2',
