@@ -567,7 +567,8 @@ During a purchasing process, a crystal-clear communication is a crucial point. F
 If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](syndication.md#providing-end-user-instructions)._
 
 ****TIPS:  
-****In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
+
+In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
 
 ### Auto-Login
 
