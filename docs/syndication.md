@@ -372,7 +372,7 @@ There a few features that can be used alongside the basic integration.
 
 ### Application Metrics
 
-Even for syndicated applications, you can define and bills [application metrics](syndication.md#application-metrics).
+Even for syndicated applications, you can define and bills [application metrics](onboarding.md#application-metrics).
 
 Besides the general usage and information provided, you should only take care of an additional **HTTP header**, sent to your metric endpoint: **CD-Subscription-Id**.
 
@@ -573,6 +573,6 @@ During a purchasing process, a crystal-clear communication is a crucial point. F
 
 If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](syndication.md#providing-end-user-instructions)._
 
-### TIPS:  
+**TIPS:**  
 
 In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
