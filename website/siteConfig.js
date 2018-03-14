@@ -10,7 +10,7 @@ const siteConfig = {
   tagline: 'knowledge base of the cloudesire platform maintained by the cloudesire development team',
   url: 'https://docs.cloudesire.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
-  editUrl: 'https://github.com/ClouDesire/docusaurus/tree/source/docs/',
+  editUrl: 'https://github.com/ClouDesire/docusaurus/edit/source/docs/',
   cname: 'docs.cloudesire.com',
   gaTrackingId: 'UA-107718815-1',
   headerLinks: [
