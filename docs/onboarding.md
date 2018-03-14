@@ -14,7 +14,7 @@ To start the onboarding process, go to the marketplace and login to access your 
 
 Select “_Catalog_” from the left menu, then select “_Products_” and click on the “_Create New Product_” button at the upper right hand corner.
 
-![Vendors Control Panel - new product onboarding](/wp-content/uploads/2017/02/control_panel_new_product.png "Vendors Control Panel - new product")
+![Vendors Control Panel - new product onboarding](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_new_product.png "Vendors Control Panel - new product")
 
 You will see a pop-up in which you can  insert your product name and choose between two onboarding options:
 
@@ -29,7 +29,7 @@ In this section you will understand how to add your application to your own cata
 
 The _Catalog_ contains all the applications owned by the vendor. In this section you can see both applications that are already published on the marketplace and applications that are still in configuration phase.
 
-![Vendors Control Panel: Edit Product page](/wp-content/uploads/2017/02/control_panel_edit_product.png)
+![Vendors Control Panel: Edit Product page](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_edit_product.png)
 
 ### Catalog Elements & Instructions for Completing the Product Description
 
@@ -97,7 +97,7 @@ For each application, vendors can define one or more **Plans **(or “Versions�
 
 In short, plans are the product versions that will be available for your product. In the following picture, you can see an example of the two product versions created for a product: one is the monthly plan and one is the annual plan.
 
-![Vendors Control Panel: Edit Product page - Plans](/wp-content/uploads/2017/02/control_panel_edit_product_plans.png "Vendors Control Panel: Edit Product page - Plans")
+![Vendors Control Panel: Edit Product page - Plans](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_edit_product_plans.png "Vendors Control Panel: Edit Product page - Plans")
 
 ### How to add Plans to your product
 
@@ -107,7 +107,7 @@ Then, click on the “Create New Plan” button at the top right of the screen. 
 
 If you have already created a plan and you want to edit you can do it by selecting a specific Plan, and clicking on the “Edit” button. A popup will show up, similar to the one in the following picture:
 
-![Vendors Control Panel: Edit Product page - Plans - details](/wp-content/uploads/2017/02/control_panel_edit_product_plans_details.png "Vendors Control Panel: Edit Product page - Plans - details")
+![Vendors Control Panel: Edit Product page - Plans - details](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_edit_product_plans_details.png "Vendors Control Panel: Edit Product page - Plans - details")
 
 For each _Plan_ the vendor has to specify the following information:
 
@@ -217,18 +217,18 @@ You will be required to add:
 
 then, click on the “Add” button on the right.
 
-![Vendors Control Panel - Extra Resources (editing)](/wp-content/uploads/2017/02/control_panel_extra_resources_editing.png "Vendors Control Panel - Extra Resources (editing)")
+![Vendors Control Panel - Extra Resources (editing)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_extra_resources_editing.png "Vendors Control Panel - Extra Resources (editing)")
 
 The next step is to specify the quantity usages rules and the pricing model.  
 Go to the “_Extra Resources Values_” section and select from the combo-box on the left a previously inserted _Resource Name._ Then_,_ specify the minimum and maximum quantities, the _Unit Price_ and the optional _Activation Fe_e (setup fee) .
 
-![Vendors Control Panel - Extra Resources (editing values)](/wp-content/uploads/2017/02/control_panel_extra_resources_editing_values.png "Vendors Control Panel - Extra Resources (editing values)")
+![Vendors Control Panel - Extra Resources (editing values)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_extra_resources_editing_values.png "Vendors Control Panel - Extra Resources (editing values)")
 
 In this way, you can add multiple Extra Resources, when you’re done click on the “_Save_” button.
 
 The following screenshot shows an example of Extra Resources linked to a specific Product Plan.
 
-![Vendors Control Panel - Extra Resources](/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
+![Vendors Control Panel - Extra Resources](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
 ### How to retrieve the actual extra-resources values
 
@@ -293,7 +293,7 @@ To find the “_Metric_” tab go to your personal Control Panel. You will be ab
 
 In the following picture you can see an example of a “_Metrics_” section.
 
-![Vendors Control Panel - Custom Metrics (Syndicated apps, list)](/wp-content/uploads/2017/02/control_panel_custom_metrics_syndication_list.png "Vendors Control Panel - Custom Metrics (Syndicated apps, list)")
+![Vendors Control Panel - Custom Metrics (Syndicated apps, list)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_custom_metrics_syndication_list.png "Vendors Control Panel - Custom Metrics (Syndicated apps, list)")
 
 By clicking on “_Add New Metric_“, you will see a pop-up where you can set up a new metric.
 
@@ -306,7 +306,7 @@ Fields are:
 * _Unit Price_ (optional): the price charged for each application metric value received
 * _Type_: select Counter or Gauge from the dropdown menu. A _counter_ is a cumulative metric that represents a single numerical value that only ever goes up, while a _gauge_ is a metric that represents a single numerical value that can arbitrarily go up and down.
 
-![Vendors Control Panel - Custom Metrics (Syndicated apps, insertion)](/wp-content/uploads/2017/02/control_panel_custom_metrics_syndication_insertion.png)
+![Vendors Control Panel - Custom Metrics (Syndicated apps, insertion)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_custom_metrics_syndication_insertion.png)
 
 ##### Adding Custom Metrics to a Deployed Application
 
@@ -316,7 +316,7 @@ To access the “Modules” section access your personal Control Panel. You will
 
 Once you are in the “_Modules_” section, , select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)), click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Application Metrics_” tab it’s possible to fill all the required fields and click on the “_Add_” button to finish.
 
-![Vendors Control Panel - Custom Metrics (Deployed apps, insertion)](/wp-content/uploads/2017/02/control_panel_custom_metrics_deployed.png "Vendors Control Panel - Custom Metrics (Deployed apps, insertion)")
+![Vendors Control Panel - Custom Metrics (Deployed apps, insertion)](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_custom_metrics_deployed.png "Vendors Control Panel - Custom Metrics (Deployed apps, insertion)")
 
 #### How to provide “actual values” for a Custom Metric
 
@@ -453,7 +453,7 @@ In order to fully test your integration source code, once you have finished the 
 
 Once the application is ready (the entire process shouldn’t require more than a few minutes) you will see in your dashboard an interface similar to the following screenshot (which refers to a running _trial) _
 
-![Customer Dashboard - My Apps](/wp-content/uploads/2017/02/customers-dashboard-running-trial.png "Customer Dashboard - My Apps")
+![Customer Dashboard - My Apps](https://www.cloudesire.com/wp-content/uploads/2017/02/customers-dashboard-running-trial.png "Customer Dashboard - My Apps")
 
 By clicking on the “_Launch \[application_name\]_” button the customer will be redirected to a view where:
 
@@ -461,7 +461,7 @@ By clicking on the “_Launch \[application_name\]_” button the customer will 
 * the **header** of the page contains the running application name and version and provides some tools (bookmark, end-user instructions, customer profile details, etc.). This header will be also used to provide useful notifications (subscription about to expire, private messages, etc.).Also, from this section customers will be able to go back to Cloudesire.
 * a **customer support** tool is available (to give the customer the possibility to send direct messages both to the platform admins and vendors). Those messages will be managed by an integrated **trouble-ticketing system**
 
-![Customer Dashboard - running app](/wp-content/uploads/2017/02/customer_dashboard_app_ifra.jpg "Customer Dashboard - running app")
+![Customer Dashboard - running app](https://www.cloudesire.com/wp-content/uploads/2017/02/customer_dashboard_app_ifra.jpg "Customer Dashboard - running app")
 
 ### Sandbox orders
 
@@ -475,4 +475,4 @@ To launch a **sandbox**, you need to have at least one product in your catalog: 
 
 In the following picture you can see an example of the page from which you can launch a sandbox order. If you do not know how to configure a plan for your product, click here.
 
-![Vendors Control Panel: Syndication - Sandboxing](/wp-content/uploads/2017/02/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
+![Vendors Control Panel: Syndication - Sandboxing](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")

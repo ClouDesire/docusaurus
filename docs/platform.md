@@ -181,7 +181,7 @@ Quantity bought 15 users, total amount: € 100,00
 
 The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](platform.md#glossary-product-version)
 
-![Vendors Control Panel - Extra Resources](/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
+![Vendors Control Panel - Extra Resources](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
 Detailed instructions, explaining how to specify and manage Extra Resources during the onboading process, are provided in [this section](onboarding.md#extra-resources).
 

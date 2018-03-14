@@ -45,7 +45,7 @@ We strongly recommend to onboard and test your application on the staging market
 
 Let’s start things off: during the [application onboarding](/applications-onboarding-instructions/#applications-onboarding) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
 
-![Vendors Control Panel - Syndication](/wp-content/uploads/2017/02/control_panel_syndication.png "Vendors Control Panel - Syndication")
+![Vendors Control Panel - Syndication](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndication.png "Vendors Control Panel - Syndication")
 
 If you want to secure your syndication endpoint, please read [this section](/onboarding-of-syndicated-applications/#security).
 
@@ -112,7 +112,7 @@ We strongly recommend to onboard and test your application on the staging market
 
 Trigger a _SANDBOX_ order from the _Plans_ section inside the application edit page.
 
-![Vendors Control Panel: Syndication - Sandboxing](/wp-content/uploads/2017/02/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
+![Vendors Control Panel: Syndication - Sandboxing](https://www.cloudesire.com/wp-content/uploads/2017/02/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
 
 The first event you will receive, is a `Subscription CREATED` event.
 
