@@ -89,10 +89,10 @@ For this reason, vendors need to specify the file-system path containing the app
 
 ## Endpoints
 
-For each installed application, Cloudesire provides a default Endpoint to allow end-users ( customers) to access the application.  
+For each installed application, Cloudesire provides a default Endpoint to allow end-users ( customers) to access the application.
 Furthermore, vendors can specify one or more **custom** access URLs that will be linked to each specific [Module](deployed.md#modules) of a given Product (e.g. _/backend_, or _/stats_, etc.).
 
-To add a new Endpoint, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](/deployed.md/#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Endpoint Patterns_” tab it’s possible to fill all the required fields (a Description, a Category and a Value) and click on the “_Add_” button to finish.
+To add a new Endpoint, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Endpoint Patterns_” tab it’s possible to fill all the required fields (a Description, a Category and a Value) and click on the “_Add_” button to finish.
 
 ![Vendors Control Panel - Endpoints](/wp-content/uploads/2017/02/control_panel_endpoints.png "Vendors Control Panel - Endpoints")
 
@@ -102,7 +102,7 @@ To add a new Endpoint, you need to access to the “_Modules_” section (more d
 
 You can even choose to permit the _end-user_ to the **edit** some of those variables.
 
-To add a new Environment Variable, vendors need to access to the “_Modules_” section (more details [here](/deployed.md/#modules)), select a specific _Module_ and _Package_ (more details [here](/deployed.md/#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. By accessing to the “_Environment Variables_” tab vendors can fill all the required fields (the _Name_ and the _Value_) and click on the “_Add_” button to finish.
+To add a new Environment Variable, vendors need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. By accessing to the “_Environment Variables_” tab vendors can fill all the required fields (the _Name_ and the _Value_) and click on the “_Add_” button to finish.
 
 ![Vendors Control Panel - Environment Variables](/wp-content/uploads/2017/02/control_panel_environment_variables.png "Vendors Control Panel - Environment Variables")
 
@@ -138,8 +138,8 @@ It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced in _http://e
 
 For stacks-specific environment variables, look in their specific sections:
 
-* [onboarding of ZIP packaged applications](/deployed.md/#zip-packaging-4)
-* [onboarding of Docker applications](/deployed.md/#docker-packaging-4)
+* [onboarding of ZIP packaged applications](deployed.md#zip-packaging-4)
+* [onboarding of Docker applications](deployed.md#docker-packaging-4)
 
 ## Filesystem Browsing
 
@@ -147,7 +147,7 @@ Cloudesire allows  vendors to enable a file-system browsing module for each depl
 
 In this way, customers (and vendors) can **browse** the file-system of the VM containing a running application, **upload** new files on it, and perform **live-editing** for textual files (e.g. in order to modify some configuration files).
 
-To enable this feature, it is necessary to specify the **common_directories** [Stack Parameter](/deployed.md/#stack-parameters) with a valid file-system path (e.g. _files/upload_)
+To enable this feature, it is necessary to specify the **common_directories** [Stack Parameter](deployed.md#stack-parameters) with a valid file-system path (e.g. _files/upload_)
 
 ## SSH Access
 
@@ -163,9 +163,9 @@ For Docker applications, access to D_ocker API is restricted_ for security reaso
 
 ## ZIP Packaging
 
-Before you start onboarding  an application to the marketplace, please take a look to our [integration facilities.](onboarding.md#integration-facilities-7) We provide a **staging marketplace** where you can register your company, log-in and on-board your application via ZIP package without any worry (also simulating the purchase of your product using demo credit cards). We strongly recommend to upload and test applications on the staging marketplace before publishing them on the public marketplace.
+Before you start onboarding  an application to the marketplace, please take a look to our [integration facilities.](onboarding.md#integration-facilities) We provide a **staging marketplace** where you can register your company, log-in and on-board your application via ZIP package without any worry (also simulating the purchase of your product using demo credit cards). We strongly recommend to upload and test applications on the staging marketplace before publishing them on the public marketplace.
 
-In order to deploy automatically an Application, a ZIP [package](/deployed.md/#packages) is required, containing:
+In order to deploy automatically an Application, a ZIP [package](deployed.md#packages) is required, containing:
 
 * the web application’s source code or the packaged artifacts;
 * the database data that the application needs to be fully functional (end-users should not do any installation wizard requiring technical skills).
@@ -176,7 +176,7 @@ The ZIP package structure must meet the following general criteria:
 * a _mongodb_ folder if using MongoDB;
 * a folder with the web application’s code, depending on the language and/or stack used (follow the links below for your application stack).
 
-Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence-5) section in order to **avoid data loss** in your application.
+Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section in order to **avoid data loss** in your application.
 
 ### Application Stacks-specific requirements
 
@@ -216,10 +216,6 @@ Just put in the application folder a file named cloudesire.build, starting with 
 
 This script will run at the end of the deploy process. Keep in mind that if the script return a non-zero value, a failure is returned, and the deploy will be marked as failed.
 
-### Environment Variables
-
-For a complete list of environment variables take a look in the [available environment variables](deployed.md/#environment-variables-5) section.
-
 ### Example Applications
 
 Here you can find a selection of ready-to-use **demo apps**, written in several application stacks:
@@ -246,19 +242,19 @@ And this is a collection of the most famous open-source applications, already av
 
 Before getting hands dirty, take a look at the [understanding Docker](https://docs.docker.com/introduction/understanding-docker/) page.
 
-When you’re ready, take a look to our [integration facilities](onboarding.md#integration-facilities-7): we provide a **staging marketplace** where you can register your company, log-in and on-board your application via Docker Image(s) without any worry (also simulating the purchase of your product using demo credit cards).
+When you’re ready, take a look to our [integration facilities](onboarding.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and on-board your application via Docker Image(s) without any worry (also simulating the purchase of your product using demo credit cards).
 
 The first step is to install the _Docker_ command-line tool on your development machine:
 
-*   [Linux](https://docs.docker.com/linux/started)
-*   [Mac](https://docs.docker.com/mac/started/)
-*   [Windows](https://docs.docker.com/windows/started)
+* [Linux](https://docs.docker.com/linux/started)
+* [Mac](https://docs.docker.com/mac/started/)
+* [Windows](https://docs.docker.com/windows/started)
 
 You can find a lot of easy to read documentation on the official [Docker User Guide](https://docs.docker.com/userguide/).
 
-Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence-5) section to **avoid data loss** in your application.
+Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section to **avoid data loss** in your application.
 
-Once a Docker image is created, the only think you need to do to [on-board](onboarding.md) your application in Cloudesire is to create a _Package_ (linked to your application), then select “_Docker_” in the “_Stacks_” input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in [this section](deployed.md/#packages).
+Once a Docker image is created, the only think you need to do to [onboard](onboarding.md) your application in Cloudesire is to create a _Package_ (linked to your application), then select “_Docker_” in the “_Stacks_” input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in [this section](deployed.md/#packages).
 
 ![Vendors Control Panel - Docker Image](/wp-content/uploads/2017/02/control_panel_docker_image.png "Vendors Control Panel - Docker Image")
 
@@ -336,11 +332,11 @@ Cloudesire runs containers **in the same network**, meaning that all the running
 
 #### Environment variables
 
-For a complete list of environment variables take a look in the [available environment variables](deployed.md#environment-variables-5) section.
+For a complete list of environment variables take a look in the [available environment variables](deployed.md#environment-variables) section.
 
 #### SSL support
 
-Cloudesire manages automatically a **reverse proxy** in front of your application, so you **don’t need to include HTTPS support** in the container, and we also support the great [CloudFlare](https://cloudflare.com/).
+Cloudesire manages automatically a **reverse proxy** in front of your application, so you **don’t need to include HTTPS support** in the container.
 
 ### Private Repository
 
@@ -383,52 +379,19 @@ At this point, an application can be configured using
 
     docker.//:
 
-in the Cloudesire [onboarding interfaces](onboarding.md), simply creating a [Package](deployed.md#packages) (linked to your application) and selecting “_Docker_” in the “_Stacks_” input-box, as described in [this section](deployed.md#technical-onboarding-2).
+in the Cloudesire [onboarding interfaces](onboarding.md), simply creating a [Package](deployed.md#packages) (linked to your application) and selecting “_Docker_” in the “_Stacks_” input-box, as described in [this section](deployed.md#technical-onboarding).
 
 ## Stack Parameters
 
-When defining a [Docker](deployed.md#docker-packaging-4) or [ZIP](deployed.md#zip-packaging-4) _module_ in Cloudesire, you can specify some parameters:
+When defining a [Docker](deployed.md#docker-packaging) or [ZIP](deployed.md#zip-packaging) _module_ in Cloudesire, you can specify some parameters:
 
-|Name|Usage|Cardinality|Type|Example|Description|
-|----|-----|-----------|----|-------|-----------|
-|expose|Docker|N|int|8080|Generates env vars as if it is linked|
-|privileged|Docker|1|bool|true|If container requires high privileges|
-
-common_directories
-
-Docker / ZIP
-
-N
-
-string
-
-files/upload
-
-A path to data, relative to /
-
-open_ports
-
-Docker
-
-N
-
-int
-
-9000
-
-A port that should be open on the firewall
-
-web_port
-
-Docker
-
-1
-
-int
-
-8000
-
-The port of the webapp that should be proxied
+|Name              |Usage     |Cardinality|Type  |Example     |Description                                  |
+|------------------|----------|-----------|------|------------|---------------------------------------------|
+|expose            |Docker    |N          |int   |8080        |Generates env vars as if it is linked        |
+|privileged        |Docker    |1          |bool  |true        |If container requires high privileges        |
+|common_directories|Docker/ZIP|N          |string|files/upload|A path to data, relative to /                |
+|open_ports        |Docker    |N          |int   |9000        |A port that should be open on the firewall   |
+|web_port          |Docker    |1          |int   |8000        |The port of the webapp that should be proxied|
 
 ### How to add Stack Parameters
 
@@ -456,7 +419,7 @@ The following elements are available:
 * **Subscription Details:** the subscription type (which is _Sandbox_ in this case, but will be _Normal_ for the real purchased instances of the application), the creation / expiration date, the customer name (which is “dummy” for Sandbox orders)  and 2 separate sections for allowing to access the related invoices and/or orders
 * **VM Details:** the sizing (CPU, RAM) and the public IP address of the virtual instance hosting the running application
 * **Resource usage:** 2 gauges for highlighting the current Disk Space and Bandwidth usage
-* **Application Endpoints:** the actual values of the [application endpoints](https://www.cloudesire.comdeployed.md#endpoints) previously defined by the vendor
-* **Deployment Log:** shows the [deployment steps](https://www.cloudesire.com/platform-modules-documentation/#application-provisioning-module), updated in real-time
+* **Application Endpoints:** the actual values of the [application endpoints](deployed.md#endpoints) previously defined by the vendor
+* **Deployment Log:** shows the [deployment steps](platform.md#application-provisioning-module), updated in real-time
 * **Debug:** provides the real-time application and/or system logs, collected from the virtual machines
 * **Charts:** a series of real-time monitoring charts, grouped into _Disk_ / _Network_ / _System_ sections
