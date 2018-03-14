@@ -110,7 +110,7 @@ Each Cloudesire invoice contains the following items:
 * _setup costs_: optional application one-off setup cost
 * _total_: application recurrent licensing cost
 * [_pay-per-use application metrics_](onboarding.md#application-metrics) costs: specifying a unit-price for a custom metric allows Cloudesire to calculate the related incomes in a certain period of time (billing period) and issue an invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous billing period
-* [_extra-__resources_](platform.md#extra-resources) _costs_: Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
+* [_extra-resources_](platform.md#extra-resources) _costs_: Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
 * _IaaS_ _costs_: VM instance, bandwidth, disk space
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
