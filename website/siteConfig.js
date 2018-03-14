@@ -5,29 +5,17 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/* List of projects/orgs using your project for the users page */
-const users = [
-  {
-    caption: 'User1',
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
-];
-
 const siteConfig = {
   title: 'documentation' /* title for your website */,
-  tagline: 'documentation of the cloudesire platform',
+  tagline: 'knowledge base of the cloudesire platform maintained by the cloudesire development team',
   url: 'https://cloudesire.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
-  projectName: 'cloudesire.github.io',
   headerLinks: [
     {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
   ],
-  users,
   /* path to images for header/footer */
   headerIcon: 'img/logo-cloudesire.png',
   footerIcon: 'img/logo-cloudesire.png',
@@ -37,18 +25,6 @@ const siteConfig = {
     primaryColor: '#1DACE2',
     secondaryColor: '#C1E8F7',
   },
-  /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
-  },*/
-  // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
