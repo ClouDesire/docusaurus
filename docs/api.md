@@ -23,6 +23,17 @@ Every marketplace has a different API endpoint, depending on its environment:
 * **production environment**: _backend.cloudesire.com_
 * **staging-vendors**: _staging-vendors.cloudesire.com_
 
+### Versioning
+
+API versioning is implemented using the request parameter `apiVersion` to
+differentiate versions. The value is the date in yyyymmdd format of the release
+of a new feature or the introduction of breaking changes.
+
+Latest version is `20180312`.
+
+    GET /api/productVersion?apiVersion=20180312 HTTP/1.1
+
+
 ### Authentication
 
 The API support two different authentication methods:
