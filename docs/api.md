@@ -8,7 +8,7 @@ The Cloudesire API is based on **REST** principles and uses **JSON** as data exc
 
 ## Client
 
-At this time we don’t have official API client library, but you can take a look at [these suggestions](/rest-api-guide/#rest-api-clients-3).
+At this time we don’t have official API client library, but you can take a look at [these suggestions](api.md#rest-api-clients).
 
 ### URI format
 
@@ -20,15 +20,15 @@ To access resources, you need to use an URI with the format:
 
 Every marketplace has a different API endpoint, depending on its environment:
 
-*   **production environment**: _backend.cloudesire.com_
-*   **staging-vendors**: _staging-vendors.cloudesire.com_
+* **production environment**: _backend.cloudesire.com_
+* **staging-vendors**: _staging-vendors.cloudesire.com_
 
 ### Authentication
 
 The API support two different authentication methods:
 
-*   Via username/email and password supplied as standard [Basic Auth](http://en.wikipedia.org/wiki/Basic_access_authentication);
-*   Via an authentication token, short-lived or immortal, that can be requested via API.
+* Via username/email and password supplied as standard [Basic Auth](http://en.wikipedia.org/wiki/Basic_access_authentication);
+* Via an authentication token, short-lived or immortal, that can be requested via API.
 
 ### Login token retrieving and usage
 
@@ -60,71 +60,18 @@ If you need a token that doesn’t expire, set the `expire` parameter, but be aw
 
 ### Typical Server Responses
 
-Code
-
-Status
-
-Description
-
-200
-
-OK
-
-The request was successful
-
-201
-
-Created
-
-The request was successful and a resource was created
-
-204
-
-No Content
-
-The request was successful but there is no representation to return (the response is empty)
-
-400
-
-Bad Request
-
-The request could not be understood or was missing required parameters
-
-401
-
-Unauthorized
-
-Authentication failed or authentication token is expired
-
-403
-
-Forbidden
-
-Access denied, you can’t do that.
-
-404
-
-Not Found
-
-Resource was not found, or was deleted recently
-
-405
-
-Method Not Allowed
-
-Requested method is not supported for the specified resource
-
-500
-
-Internal Server Error
-
-You have just found a bug and we have been already alerted
-
-503
-
-Service Unavailable
-
-The service is temporary unavailable (e.g. server maintenance). Try again later
+|Code|Status|Description|
+|----|------|-----------|
+|200 |OK|The request was successful|
+|201|Created|The request was successful and a resource was created|
+|204|No Content|The request was successful but there is no representation to return (the response is empty)|
+|400|Bad Request|The request could not be understood or was missing required parameters|
+|401|Unauthorized|Authentication failed or authentication token is expired|
+|403|Forbidden|Access denied, you can’t do that.|
+|404|Not Found|Resource was not found, or was deleted recently|
+|405|Method Not Allowed|Requested method is not supported for the specified resource|
+|500|Internal Server Error|You have just found a bug and we have been already alerted|
+|503|Service Unavailable|The service is temporary unavailable (e.g. server maintenance). Try again later|
 
 ### Error response
 
@@ -206,9 +153,9 @@ Sometimes the method `PATCH` is used either for partial modification or for cust
 
 Here you can find the detailed documentation of the Cloudesire APIs:
 
-*   [Catalog API](http://api.cloudesire.com/catalog.html)
-*   [Marketplace API](http://api.cloudesire.com/marketplace.html)
-*   [Subscription API](http://api.cloudesire.com/subscription.html)
+* [Catalog API](http://api.cloudesire.com/catalog.html)
+* [Marketplace API](http://api.cloudesire.com/marketplace.html)
+* [Subscription API](http://api.cloudesire.com/subscription.html)
 
 2.REST API Clients
 
@@ -226,11 +173,3 @@ We suggest to use the great [Guzzle](http://guzzle.readthedocs.org/) to build a 
 #### CLI tool
 
 We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) to call our API via a command-line tool to experiment.
-
-Suggest Edit
-
-Captcha : 
-
-   Submit 
-
-jQuery(document).ready(function(){ jQuery("#documentor-5").documentor({ documentid : 5, docid : "documentor-5", animation : "", indexformat : "1", pformat : "decimal", cformat : "decimal", secstyle : "", actnavbg\_default: "1", actnavbg\_color : "#0093bf", enable_ajax : "0", load : "0", scrolling : "1", fixmenu : "1", skin : "default", scrollBarSize : "3", scrollBarColor : "#F45349", scrollBarOpacity: "0.4", windowprint : "0", menuTop: "0", socialshare : 0, sharecount : 1, fbshare : 1, twittershare : 1, gplusshare : 1, pinshare : 1, togglechild : 0, noResultsStr: "No results found!", }); });
