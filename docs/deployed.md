@@ -138,8 +138,8 @@ It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced in _http://e
 
 For stacks-specific environment variables, look in their specific sections:
 
-* [onboarding of ZIP packaged applications](deployed.md#zip-packaging-4)
-* [onboarding of Docker applications](deployed.md#docker-packaging-4)
+* [onboarding of ZIP packaged applications](deployed.md#zip-packaging)
+* [onboarding of Docker applications](deployed.md#docker-packaging)
 
 ## Filesystem Browsing
 

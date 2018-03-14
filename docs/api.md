@@ -91,44 +91,45 @@ Every time a non-successful response in generated, a JSON payload returns with a
 
 Now that you know where and how to make an authenticated request, start fetching your own account details by issuing a `GET /user/me` request:
 
-    GET /api/user/me HTTP/1.1
-    CMW-Auth-Token: hrNSv0ZPZVVeDkf8Pta2RLmkyVqEcKMfzTdCUi8voLQMOUcHUMaqSyylhVAVZ8rZSkl4lsNiWemC6l6WSnqnILhXYQcrPIZm
-    CMW-Auth-User: vendor
-    
+```http
+GET /api/user/me HTTP/1.1
+CMW-Auth-Token: hrNSv0ZPZVVeDkf8Pta2RLmkyVqEcKMfzTdCUi8voLQMOUcHUMaqSyylhVAVZ8rZSkl4lsNiWemC6l6WSnqnILhXYQcrPIZm
+CMW-Auth-User: vendor
 
-    HTTP/1.1 200 OK
-    CMW-Deprecated-By-Version: 2
-    Content-Type: application/json
-    Date: Tue, 13 Jan 2015 15:05:52 GMT
-    
-    {
-      "acceptedTerms": true,
-      "activated": true,
-      "activationDate": "2014-01-01T00:00:00Z",
-      "address": {
-        "address": "Via Pisana",
-        "city": "Pisa",
-        "country": "ITALY",
-        "countryCode": "IT",
-        "id": 4,
-        "zipCode": "12345"
+
+HTTP/1.1 200 OK
+CMW-Deprecated-By-Version: 2
+Content-Type: application/json
+Date: Tue, 13 Jan 2015 15:05:52 GMT
+
+{
+    "acceptedTerms": true,
+    "activated": true,
+    "activationDate": "2014-01-01T00:00:00Z",
+    "address": {
+    "address": "Via Pisana",
+    "city": "Pisa",
+    "country": "ITALY",
+    "countryCode": "IT",
+    "id": 4,
+    "zipCode": "12345"
+    },
+    "company": {
+        "url": "company/1"
         },
-        "company": {
-          "url": "company/1"
-          },
-        "creationDate": "2014-07-02T08:20:01Z",
-        "email": "dev@cloudesire.com",
-        "enabled": true,
-        "environment": "cloudesire",
-        "id": 3,
-        "name": "Demo Vendor",
-        "newbie": false,
-        "phoneNumber": "0123456789",
-        "self": "user/3",
-        "userName": "vendor",
-        "userRole": "ROLE_VENDOR"
-    }
-    
+    "creationDate": "2014-07-02T08:20:01Z",
+    "email": "dev@cloudesire.com",
+    "enabled": true,
+    "environment": "cloudesire",
+    "id": 3,
+    "name": "Demo Vendor",
+    "newbie": false,
+    "phoneNumber": "0123456789",
+    "self": "user/3",
+    "userName": "vendor",
+    "userRole": "ROLE_VENDOR"
+}
+```
 
 ### Common Fields
 
@@ -157,19 +158,16 @@ Here you can find the detailed documentation of the Cloudesire APIs:
 * [Marketplace API](http://api.cloudesire.com/marketplace.html)
 * [Subscription API](http://api.cloudesire.com/subscription.html)
 
-2.REST API Clients
+## REST API Clients
 
-
-====================
-
-#### Java
+### Java
 
 We suggest to use our [Tisana4j REST client library](https://github.com/ClouDesire/tisana4j) to build a client to call our API. We are planning to relase an official Java API client in the future.
 
-#### PHP
+### PHP
 
 We suggest to use the great [Guzzle](http://guzzle.readthedocs.org/) to build a client to call our API.
 
-#### CLI tool
+### CLI tool
 
 We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) to call our API via a command-line tool to experiment.

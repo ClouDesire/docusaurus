@@ -43,11 +43,11 @@ While developing your integration with the Cloudesire platform, you may find use
 
 We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
 
-Let’s start things off: during the [application onboarding](/applications-onboarding-instructions/#applications-onboarding-2) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
+Let’s start things off: during the [application onboarding](/applications-onboarding-instructions/#applications-onboarding) process, when creating a **new product**, choose “_Syndicated Product_“, and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
 
 ![Vendors Control Panel - Syndication](/wp-content/uploads/2017/02/control_panel_syndication.png "Vendors Control Panel - Syndication")
 
-If you want to secure your syndication endpoint, please read [this section](/onboarding-of-syndicated-applications/#security-6).
+If you want to secure your syndication endpoint, please read [this section](/onboarding-of-syndicated-applications/#security).
 
 ### Anatomy of an event request
 
@@ -80,7 +80,7 @@ Where:
 *   The **id** attribute is an unique identifier for the current **entity**.
 *   The **entityUrl** attribute contains the relative URL from which the involved resource can be fetched.
 *   The **date** attribute contains when the event has been generated.
-*   The **CMW-Event-Signature** is an HTTP header related to the optional [validation for incoming event notifications](/onboarding-of-syndicated-applications/#security-6).
+*   The **CMW-Event-Signature** is an HTTP header related to the optional [validation for incoming event notifications](/onboarding-of-syndicated-applications/#security).
 
 ### Replying to events
 
@@ -106,7 +106,7 @@ Please make sure that you understand the basics of the [Cloudesire API](api.md) 
 
 ### First steps
 
-Before you start, take a look to our [integration facilities](/applications-onboarding-instructions/#integration-facilities-7): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
+Before you start, take a look to our [integration facilities](/applications-onboarding-instructions/#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
 
 We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
 
@@ -293,7 +293,7 @@ Starting from now, the customer can use your application!
 
 ### Any problem during provisioning of your tenant?
 
-If something goes wrong during the provisioning of a new tenant in your application, please follow [these instructions](/onboarding-of-syndicated-applications/#managing-provisioning-exceptions-6).
+If something goes wrong during the provisioning of a new tenant in your application, please follow [these instructions](/onboarding-of-syndicated-applications/#managing-provisioning-exceptions).
 
 ### Update subscription information (when the subscription expires)
 
@@ -375,7 +375,7 @@ There a few features that can be used alongside the basic integration.
 
 ### Application Metrics
 
-Even for syndicated applications, you can define and bills [application metrics](/applications-onboarding-instructions/#application-metrics-2).
+Even for syndicated applications, you can define and bills [application metrics](/applications-onboarding-instructions/#application-metrics).
 
 Besides the general usage and information provided, you should only take care of an additional **HTTP header**, sent to your metric endpoint: **CD-Subscription-Id**.
 

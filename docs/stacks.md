@@ -111,7 +111,7 @@ Follows a snippet:
     $site_url = 'http://' . getenv('CLOUDESIRE_VHOST');
     $app_absolute_path = getenv('CLOUDESIRE_APPLICATION_PATH');
 
-More available Environment Variables are described [in this section](deployed.md#environment-variables-5).
+More available Environment Variables are described [in this section](deployed.md#environment-variables).
 
 ### NodeJS
 
@@ -132,11 +132,11 @@ While it is a common practice to make use of the _Rails_ framework when choosing
 
 ## Supported Databases
 
-In this section you will find the list of the **databases that Cloudesire currently supports on the marketplace.** Vendors can use these databases during the [onboarding of ZIP packaged applications](deployed.md#zip-packaging-4).
+In this section you will find the list of the **databases that Cloudesire currently supports on the marketplace.** Vendors can use these databases during the [onboarding of ZIP packaged applications](deployed.md#zip-packaging).
 
 ### ODBC Support
 
-In order to provide connections to [mySQL](/supported-languages-databases-and-clouds/#mysql-5-x-3) and [PostgreSQL](/supported-languages-databases-and-clouds/#postgresql-9-x-3) databases, a **[unixODBC](http://www.unixodbc.org/)** support is available on each running VM.  
+In order to provide connections to [mySQL](/supported-languages-databases-and-clouds/#mysql-5-x) and [PostgreSQL](/supported-languages-databases-and-clouds/#postgresql-9-x) databases, a **[unixODBC](http://www.unixodbc.org/)** support is available on each running VM.  
 If you are interested to use it, you need to specify the [application module name](deployed.md#modules) as **DSN**.
 
 ### MongoDB

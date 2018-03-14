@@ -18,7 +18,7 @@ a user that offers his applications in the Cloudesire Marketplace
 
 _Application Version (or Product Version, or Plan)_
 
-for each application, the vendor can define one or more _versions_ (e.g. silver, gold, platinum, etc.). Each version can have a specific **recurrent license** and/or a one-off **setup price** or can be offered for free. In addition, the vendor can specify **[custom metrics](/applications-onboarding-instructions/#application-metrics-2)** for his applications (eg. number of users, number of documents, etc.) specifying the related unit price; in this way, **pay-per-use** pricing models can be defined (eg. 10 USD per active user, 20 USD per document, etc.). Finally, the vendor can sell [**extra-resources**](/platform-modules-documentation/#extra-resources) together with the application version (eg. a 10-days pack of Technical Support, some hardware components, etc.)
+for each application, the vendor can define one or more _versions_ (e.g. silver, gold, platinum, etc.). Each version can have a specific **recurrent license** and/or a one-off **setup price** or can be offered for free. In addition, the vendor can specify **[custom metrics](onboarding.md#application-metrics)** for his applications (eg. number of users, number of documents, etc.) specifying the related unit price; in this way, **pay-per-use** pricing models can be defined (eg. 10 USD per active user, 20 USD per document, etc.). Finally, the vendor can sell [**extra-resources**](platform.md#extra-resources) together with the application version (eg. a 10-days pack of Technical Support, some hardware components, etc.)
 
 _Customer_
 
@@ -88,11 +88,11 @@ The main components can be summarized as follows:
 
 Cloudesire Engine contains:
 
-* **Cloud Abstraction Layer**: a set of connection drivers, used to interact with private or public cloud providers APIs. It provides both heterogeneous hypervisors support (KVM, Xen, vmware) and public cloud connectors (see the list [here](/supported-languages-databases-and-clouds/#supported-cloud-providers-4)).
-* **Cloudesire Deployer**: it is used to create a new cloud instance for each purchased application, to instantiate the required virtual resources and to monitor step-by-step the deployment status: if something goes wrong, it will retry until success. The deployment process is described [here](/platform-modules-documentation/#application-provisioning-module).
+* **Cloud Abstraction Layer**: a set of connection drivers, used to interact with private or public cloud providers APIs. It provides both heterogeneous hypervisors support (KVM, Xen, vmware) and public cloud connectors (see the list [here](stacks.md#supported-cloud-providers)).
+* **Cloudesire Deployer**: it is used to create a new cloud instance for each purchased application, to instantiate the required virtual resources and to monitor step-by-step the deployment status: if something goes wrong, it will retry until success. The deployment process is described [here](platform.md#application-provisioning-module).
 * **Cloudesire Monitoring**: it consists in a scalable repository of system and application metrics that also provides aggregated real-time statistics and graphs.
 * **Cloudesire Backupper**: it allows to backup and restore applications data using the cloud provider _snapshots & restore APIs_.
-* **Cloudesire Agent**: a software component that is running inside every virtual environment created by the _Cloudesire Deployer_. It collects both the IaaS metrics (i.e. CPU, Network, RAM, SSD usage) and [application custom-defined metrics](/applications-onboarding-instructions/#application-metrics-2) (i.e. number of active users, numbers of created documents, etc.). If the ISVs application exposes them, custom metrics can be used to monitor application usage and enable pay-per use pricing models.
+* **Cloudesire Agent**: a software component that is running inside every virtual environment created by the _Cloudesire Deployer_. It collects both the IaaS metrics (i.e. CPU, Network, RAM, SSD usage) and [application custom-defined metrics](onboarding.md#application-metrics) (i.e. number of active users, numbers of created documents, etc.). If the ISVs application exposes them, custom metrics can be used to monitor application usage and enable pay-per use pricing models.
 * **Cloudesire DNS**: provides the remote access of the applications and a custom [application endpoint](deployed.md#endpoints) for each deployed instance.
 
 #### Billing Module
@@ -109,8 +109,8 @@ Each Cloudesire invoice contains the following items:
 * _description:_ purchased application name
 * _setup costs_: optional application one-off setup cost
 * _total_: application recurrent licensing cost
-* [_pay-per-use application metrics_](/applications-onboarding-instructions/#application-metrics-2) costs: specifying a unit-price for a custom metric allows Cloudesire to calculate the related incomes in a certain period of time (billing period) and issue an invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous billing period
-* [_extra-__resources_](/platform-modules-documentation/#extra-resources) _costs_: Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
+* [_pay-per-use application metrics_](onboarding.md#application-metrics) costs: specifying a unit-price for a custom metric allows Cloudesire to calculate the related incomes in a certain period of time (billing period) and issue an invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous billing period
+* [_extra-__resources_](platform.md#extra-resources) _costs_: Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
 * _IaaS_ _costs_: VM instance, bandwidth, disk space
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
@@ -122,15 +122,15 @@ In the following screenshots, you can see some examples of invoices issued by Cl
 These are the main billing rules followed by the platform:
 
 * _application licensing costs_: at the beginning of each billing period (eg. the first day of each month) all the invoices containing the application licensing costs and the IaaS costs are issued in advance to customers at the beginning of each billing period (eg. the first day of each month). The one-off application _setup cost_ is charged only in the first billing period;
-* _pay-per-use and extra resources costs:_ invoices containing the [_pay-per-use application metrics_](/applications-onboarding-instructions/#application-metrics-2) and _extra-resources_ costs are issued to customers at the end of the billing period (eg. the last day of every month) ;
-* _trial orders_: if an application is offered in **trial mode**, when customers use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS costs. These costs are subtracted from the vendors’ revenues in the [_Balance Report_](/platform-modules-documentation/#glossary-balance-report);
-* _sandbox orders_: when the vendor executes a **deployment test** before offering his application in the Marketplace (_sandbox_), Cloudesire issues an invoice for the related IaaS costs. Again, these costs are subtracted from the vendor’s revenues in the [_Balance Report_](/platform-modules-documentation/#glossary-balance-report).
+* _pay-per-use and extra resources costs:_ invoices containing the [_pay-per-use application metrics_](onboarding.md#application-metrics) and _extra-resources_ costs are issued to customers at the end of the billing period (eg. the last day of every month) ;
+* _trial orders_: if an application is offered in **trial mode**, when customers use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS costs. These costs are subtracted from the vendors’ revenues in the [_Balance Report_](platform.md#glossary-balance-report);
+* _sandbox orders_: when the vendor executes a **deployment test** before offering his application in the Marketplace (_sandbox_), Cloudesire issues an invoice for the related IaaS costs. Again, these costs are subtracted from the vendor’s revenues in the [_Balance Report_](platform.md#glossary-balance-report).
 
 #### Level of Configurability
 
 * _billing frequency_: vendors can decide the preferred billing frequency (in months), for a every specific _application version_ The _billing frequency_ can also be _short-living_: in this case, the duration needs to be expressed in hours instead of months.
 * _minimum order duration_: vendors can decide the **minimum order duration** for each application version. The minimum order duration is a multiple of the _billing frequency._
-* _order duration_: before purchasing an application, customers can choose the preferred order duration (which is a multiple of the _minimum order duration_). If the platform is configured to run using [**automatic renewals**](/platform-modules-documentation/#orders-renewal) of orders, customers are not asked to choose the order duration.
+* _order duration_: before purchasing an application, customers can choose the preferred order duration (which is a multiple of the _minimum order duration_). If the platform is configured to run using [**automatic renewals**](platform.md#orders-renewal) of orders, customers are not asked to choose the order duration.
 
 ### Extra-Resources pricing models
 
@@ -179,11 +179,11 @@ Example:
 
 Quantity bought 15 users, total amount: € 100,00
 
-The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](/platform-modules-documentation/#glossary-product-version)
+The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](platform.md#glossary-product-version)
 
 ![Vendors Control Panel - Extra Resources](/wp-content/uploads/2017/02/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
-Detailed instructions, explaining how to specify and manage Extra Resources during the onboading process, are provided in [this section](/applications-onboarding-instructions/#extra-resources).
+Detailed instructions, explaining how to specify and manage Extra Resources during the onboading process, are provided in [this section](onboarding.md#extra-resources).
 
 ### Orders Renewal
 
@@ -282,7 +282,7 @@ The deployment process on a specific cloud provider follows this workflow:
 
 * Cloudesire calls a cloud provider chosen by the vendor asking for a **VM instantiation** (through the cloud provider APIs), having a specific “size” defined by the vendor (i.e. 2 cores, 1GB RAM)
 * Cloudesire attaches a **data disk** to the previously created VM, having the size defined by the vendor
-* Cloudesire installs all the **application stack** (databases, application servers, interpreters, libraries, etc.) needed by the vendor’s application for the correct execution (the application stack is declared by the vendor in the [onboarding process](/applications-onboarding-instructions/))
+* Cloudesire installs all the **application stack** (databases, application servers, interpreters, libraries, etc.) needed by the vendor’s application for the correct execution (the application stack is declared by the vendor in the [onboarding process](onboarding.md))
 * Cloudesire installs the **vendor’s application** and initializes the related databases into the VM deployed during the steps above mentioned
 * Cloudesire creates a specific **DNS entry** in order to make the application reachable by the customer (e.g. https://application\_name-order\_id.apps.cloudesire.com)
 * the end user (customer of the given application) receives a notification (via email and in its own control panel interface) with all the instructions needed to access its own instance of the application he paid for (URL, default login and password)
@@ -295,7 +295,7 @@ _Cloudesire Backupper Module_ allows customers and/or vendors to execute or sche
 
 #### How the Backupper Module works
 
-During the [deployment process](/documentation/#application-provisioning-module), Cloudesire attaches a _data-disk_ to the previously created VM in which application source code and data (i.e. databases and uploads) are stored.
+During the [deployment process](platform.md#application-provisioning-module), Cloudesire attaches a _data-disk_ to the previously created VM in which application source code and data (i.e. databases and uploads) are stored.
 
 The backup process follows the following workflow:
 
