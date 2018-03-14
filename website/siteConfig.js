@@ -15,7 +15,6 @@ const siteConfig = {
     {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
     {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
   ],
   /* path to images for header/footer */
   headerIcon: 'img/logo-cloudesire.png',
