@@ -33,7 +33,7 @@ A simple example follows, expaining the workflow of a new tenant order and provi
 
 In other words, you should provision your tenant only when the `paid` flag is `true` (unless you’re offering **trials** for your application).
 
-![](/img/docs/Syndication-Worklow-Provisioning-1.png)
+![](/img/docs/Syndication-Worklow-Provisioning.png)
 
 [Here](https://github.com/ClouDesire/php-syndication-example) you can find a simple PHP example, implementing the tenant provisioning/unprovisioning for a demo application.
 
@@ -578,11 +578,3 @@ For instance, it means that your customers will not need to remember credentails
 To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize customers and enable automatical log-in to your application.
 
 If you follow this flow, you do not need to specify user credentials into end-user instructions.
-
-Suggest Edit
-
-Captcha : 
-
-   Submit 
-
-jQuery(document).ready(function(){ jQuery("#documentor-3").documentor({ documentid : 3, docid : "documentor-3", animation : "", indexformat : "1", pformat : "decimal", cformat : "decimal", secstyle : "", actnavbg\_default: "1", actnavbg\_color : "#0093bf", enable_ajax : "0", load : "0", scrolling : "1", fixmenu : "1", skin : "default", scrollBarSize : "3", scrollBarColor : "#f45349", scrollBarOpacity: "0.4", windowprint : "0", menuTop: "0", socialshare : 0, sharecount : 1, fbshare : 1, twittershare : 1, gplusshare : 1, pinshare : 1, togglechild : 1, noResultsStr: "No results found!", }); });
