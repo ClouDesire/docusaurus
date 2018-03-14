@@ -8,7 +8,7 @@
 const siteConfig = {
   title: 'documentation' /* title for your website */,
   tagline: 'knowledge base of the cloudesire platform maintained by the cloudesire development team',
-  url: 'https://cloudesire.github.io' /* your website url */,
+  url: 'https://docs.cloudesire.com' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   editUrl: 'https://github.com/ClouDesire/docusaurus/tree/source/docs/',
   cname: 'docs.cloudesire.com',
@@ -32,7 +32,7 @@ const siteConfig = {
     new Date().getFullYear() +
     ' Cloudesire.com',
   organizationName: 'cloudesire', // or set an env variable ORGANIZATION_NAME
-  projectName: 'cloudesire.github.io', // or set an env variable PROJECT_NAME
+  projectName: 'docusaurus', // or set an env variable PROJECT_NAME
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
