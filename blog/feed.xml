@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>documentation Blog</title>
+        <link>https://docs.cloudesire.com/blog</link>
+        <description>The best place to stay up-to-date with the latest documentation news and events.</description>
+        <lastBuildDate>Wed, 14 Mar 2018 06:00:00 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>Feed for Node.js</generator>
+        <image>
+            <title>documentation Blog</title>
+            <url>https://docs.cloudesire.com/img/logo-cloudesire.png</url>
+            <link>https://docs.cloudesire.com/blog</link>
+        </image>
+        <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Configure logback log level via environment variables]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/03/14/logback.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/03/14/logback.html</guid>
+            <pubDate>Wed, 14 Mar 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.</p>
+<p>It's simple as declaring a new variable inside your <code>logback.xml</code> file and provide a default value as in the Bash shell, using the &quot;:-&quot; operator.</p>
+<pre><code class="hljs css xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.cloudesire"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL}"</span>/&gt;</span>
+</code></pre>
+<p>Then you can simply run your docker container tuning the log level by passing an appropriate value, e.g.: <code>CLOUDESIRE_LOG_LEVEL=WARN</code>.</p>
+]]></description>
+        </item>
+    </channel>
+</rss>

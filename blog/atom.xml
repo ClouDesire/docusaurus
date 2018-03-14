@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://docs.cloudesire.com/blog</id>
+    <title>documentation Blog</title>
+    <updated>2018-03-14T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
+    <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
+    <rights>Copyright © 2018 Cloudesire.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Configure logback log level via environment variables]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/03/14/logback.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/03/14/logback.html">
+        </link>
+        <updated>2018-03-14T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.</p>
+<p>It's simple as declaring a new variable inside your <code>logback.xml</code> file and provide a default value as in the Bash shell, using the &quot;:-&quot; operator.</p>
+<pre><code class="hljs css xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.cloudesire"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL}"</span>/&gt;</span>
+</code></pre>
+<p>Then you can simply run your docker container tuning the log level by passing an appropriate value, e.g.: <code>CLOUDESIRE_LOG_LEVEL=WARN</code>.</p>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>http://twitter.com/gionn</uri>
+        </author>
+    </entry>
+</feed>
