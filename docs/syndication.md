@@ -6,7 +6,7 @@ sidebar_label: Syndicated applications
 
 A **syndicated application** is an application that is directly managed by the software vendor, and not hosted on the Cloudesire platform itself.
 
-This feature enables software vendors to sell applications that are already hosted somewhere and that has native support for **multi-tenancy**. The provisioning of a new tenant should be almost instantaneous, and the integration has to be done directly via [Cloudesire REST API](/rest-api-guide/).
+This feature enables software vendors to sell applications that are already hosted somewhere and that has native support for **multi-tenancy**. The provisioning of a new tenant should be almost instantaneous, and the integration has to be done directly via [Cloudesire REST API](api.md).
 
 Please note that the Cloudesire platform, in this case, is used only for the marketplace and billing features, and not for the self-deploy on public cloud providers.
 
@@ -102,7 +102,7 @@ We strongly recommend to use this feature and make sure the integration is worki
 
 ### API Authentication requirements
 
-Please make sure that you understand the basics of the [Cloudesire API](/rest-api-guide/) before interacting with the platform: most endpoints require _basic authentication_.
+Please make sure that you understand the basics of the [Cloudesire API](api.md) before interacting with the platform: most endpoints require _basic authentication_.
 
 ### First steps
 
