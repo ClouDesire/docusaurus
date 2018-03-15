@@ -43,6 +43,10 @@ const siteConfig = {
   repoUrl: 'https://github.com/cloudesire/cloudesire.github.io',
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
+  algolia: {
+    apiKey: "06aaa65659156b0fd43caf8c5d9997e9",
+    indexName: "cloudesire"
+  },
 };
 
 module.exports = siteConfig;
