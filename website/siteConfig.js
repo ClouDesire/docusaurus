@@ -37,7 +37,11 @@ const siteConfig = {
     // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cloudesire.github.io/feedback-widget/build/bundle.js',
+    '/js/feedback.js',
+  ],
   // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/cloudesire/cloudesire.github.io',
   /* On page navigation for the current documentation page */

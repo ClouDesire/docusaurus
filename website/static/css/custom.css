@@ -31,3 +31,28 @@ h2.headerTitle {
 code {
   color: blue;
 }
+
+input::placeholder {
+  color: #777;
+}
+#feedback-launcher {
+  position: fixed;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  background-color: orange;
+  border-radius: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  bottom: 30px;
+  z-index: 9000;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+}

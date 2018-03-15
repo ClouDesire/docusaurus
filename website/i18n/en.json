@@ -6,7 +6,8 @@
     "tagline": "knowledge base of the cloudesire platform maintained by the cloudesire development team",
     "api": "REST API Introduction",
     "Introduction": "Introduction",
-    "channel": "channel",
+    "channel": "Distribution and Channel Management",
+    "Channel management": "Channel management",
     "deployed": "Deployed applications onboarding",
     "Deployed applications": "Deployed applications",
     "index": "Cloudesire documentation",
@@ -20,7 +21,6 @@
     "Syndicated applications": "Syndicated applications",
     "Docs": "Docs",
     "API": "API",
-    "Ask support": "Ask support",
     "Back to cloudesire.com": "Back to cloudesire.com",
     "Onboarding": "Onboarding",
     "Platform": "Platform"
