@@ -257,7 +257,7 @@ Content-Type: application/json; charset=utf-8
     "category": "DOCUMENTATION"
     },
     {
-    "endpoint": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "endpoint": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     "description": "Video tutorial",
     "category": "VIDEO"
     },
