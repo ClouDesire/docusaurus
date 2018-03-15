@@ -1,75 +1,102 @@
 ---
 id: api
-title: REST API
-sidebar_label: API
+title: REST API Introduction
+sidebar_label: Introduction
 ---
 
-The Cloudesire API is based on **REST** principles and uses **JSON** as data exchange format.
+The Cloudesire platform expose a REST API and uses **JSON** as data exchange
+format.
 
-## Client
+## API Clients
 
-At this time we don’t have official API client library, but you can take a look at [these suggestions](api.md#rest-api-clients).
+When building your custom integration, you may want to start building using one
+of the following resources.
 
-### URI format
+### Java
+
+We are maintaining a [Java client](https://github.com/ClouDesire/java-api-client)
+based on retrofit to consume our API.
+
+### PHP
+
+We suggest to use the great [Guzzle HTTP Library](http://guzzle.readthedocs.org/)
+to build a client to call our API, but we have a [php-curl example project](https://github.com/ClouDesire/examples/tree/master/php-syndication).
+
+### CLI
+
+We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) to call our
+API via a command-line tool to experiment.
+
+## URI format
 
 To access resources, you need to use an URI with the format:
 
     https://{domain}/api/{resource}/{resourceId}
 
-### Endpoints (SSL required)
+## Endpoints (HTTPS-only)
 
 Every marketplace has a different API endpoint, depending on its environment:
 
 * **production environment**: _backend.cloudesire.com_
 * **staging-vendors**: _staging-vendors.cloudesire.com_
+* **italia-startup**: _prod-its.cloudesire.com_
 
-### Versioning
+## Versioning
 
-API versioning is implemented using the request parameter `apiVersion` to
-differentiate versions. The value is the date in yyyymmdd format of the release
-of a new feature or the introduction of breaking changes.
+Client should set the request parameter `apiVersion` globally on every request
+to avoid failures while the API evolves.
+This value is a string representation in `yyyymmdd` format of the date when a
+breaking changes is introduced to support new features.
 
 Latest version is `20180312`.
 
-    GET /api/productVersion?apiVersion=20180312 HTTP/1.1
+```http
+GET /api/productVersion?apiVersion=20180312 HTTP/1.1
+```
 
+> Make sure to always set apiVersion query parameter to avoid future breakage of
+your integration
 
-### Authentication
+## Authentication
 
 The API support two different authentication methods:
 
-* Via username/email and password supplied as standard [Basic Auth](http://en.wikipedia.org/wiki/Basic_access_authentication);
+* Via username/email and password supplied as standard [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication);
 * Via an authentication token, short-lived or immortal, that can be requested via API.
 
-### Login token retrieving and usage
+### Login token (temporary and permanent)
 
-To request an authentication token you need to send an authenticated `GET /login` request using your credentials supplied as Basic Auth:
+To request an authentication token you need to send an authenticated `GET /login` request using your credentials supplied as Basic Authentication:
 
-    GET /api/login HTTP/1.1
-    Authorization: Basic YWRtaW46YWRtaW4=
-    
+```http
+GET /api/login HTTP/1.1
+Authorization: Basic YWRtaW46YWRtaW4=
 
-    HTTP/1.1 200 OK
-    Content-Type: application/json
-    
-    "hrNSv0ZPZVVeDkf8Pta2RLmkyVqEcKMfzTdCUi8voLQMOUcHUMaqSyylhVAVZ8rZSkl4lsNiWemC6l6WSnqnILhXYQcrPIZm"
-    
 
-Then, just stop using Basic Auth and start setting two additional headers for every request, one for the token and one for your username:
+HTTP/1.1 200 OK
+Content-Type: application/json
 
-    GET /api/login HTTP/1.1
-    CMW-Auth-Token: hrNSv0ZPZVVeDkf8Pta2RLmkyVqEcKMfzTdCUi8voLQMOUcHUMaqSyylhVAVZ8rZSkl4lsNiWemC6l6WSnqnILhXYQcrPIZm
-    CMW-Auth-User: vendor
-    
+"long-string-token"
+```
 
-When the token will expire you will get a `401` error respose and you should request a new one.
+Then, just stop using Basic Authentication and start setting two additional headers for every request, one for the token and one for your username:
 
-If you need a token that doesn’t expire, set the `expire` parameter, but be aware that requesting a new permanent token will invalid the previous token:
+```http
+GET /api/login HTTP/1.1
+CMW-Auth-Token: long-string-token
+CMW-Auth-User: vendor
+```
 
-    GET /api/login?expire=false HTTP/1.1
-    
+When the token will expire you will get a `401` error response and you should
+request a new one.
 
-### Typical Server Responses
+If you need a token that doesn't expire, set the `expire` parameter, but be aware that **requesting a new permanent token will invalid the previous token**:
+
+```http
+GET /api/login?expire=false HTTP/1.1
+```
+
+## Response codes
 
 |Code|Status|Description|
 |----|------|-----------|
@@ -78,33 +105,43 @@ If you need a token that doesn’t expire, set the `expire` parameter, but be aw
 |204|No Content|The request was successful but there is no representation to return (the response is empty)|
 |400|Bad Request|The request could not be understood or was missing required parameters|
 |401|Unauthorized|Authentication failed or authentication token is expired|
-|403|Forbidden|Access denied, you can’t do that.|
+|403|Forbidden|Access denied, you can't do that.|
 |404|Not Found|Resource was not found, or was deleted recently|
 |405|Method Not Allowed|Requested method is not supported for the specified resource|
 |500|Internal Server Error|You have just found a bug and we have been already alerted|
 |503|Service Unavailable|The service is temporary unavailable (e.g. server maintenance). Try again later|
 
-### Error response
+## Error response
 
-Every time a non-successful response in generated, a JSON payload returns with a list of human-readable error messages:
+Every time a non-successful response in generated, a JSON payload returns with a
+list of error messages in `errorHolders` field, with a human-readable message in
+the `error` field plus an error message in `key` field with
+`%placeholder%` that can be substitued in `extraFields` field:
 
-    HTTP/1.1 400 Bad Request
-    Content-Type: application/json
-    
-    {
-        "errors": [
-            "You can't bill for an undeployed, expired or trial subscription."
-        ]
+```http
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{
+  "errorHolders": [{
+    "key": "unsupported-file-type-%detected%-%supported%",
+    "error": "Unsupported file type: image/jpeg",
+    "extraFields": {
+        "detected": "image/jpeg",
+        "supported": "image/png"
     }
-    
+  }]
+}
+```
 
-### First Request Example
+## First Request Example
 
-Now that you know where and how to make an authenticated request, start fetching your own account details by issuing a `GET /user/me` request:
+Now that you know where and how to make an authenticated request, start fetching
+your own account details by issuing a `GET /user/me` request:
 
 ```http
 GET /api/user/me HTTP/1.1
-CMW-Auth-Token: hrNSv0ZPZVVeDkf8Pta2RLmkyVqEcKMfzTdCUi8voLQMOUcHUMaqSyylhVAVZ8rZSkl4lsNiWemC6l6WSnqnILhXYQcrPIZm
+CMW-Auth-Token: long-string-token
 CMW-Auth-User: vendor
 
 
@@ -142,43 +179,31 @@ Date: Tue, 13 Jan 2015 15:05:52 GMT
 }
 ```
 
-### Common Fields
+## Common Fields
 
-Now that you see the first full response from the API, you may have noticed the following peculiarities:
+Now that you see the first full response from the API, you may have noticed the
+following characteristics:
 
-*   Each resource contains a `self` attribute that represent its unique URL;
-*   Linked resources (e.g.: company), are referenced by an object containing an `url` field.
-*   Date field are in _ISO 8601_ format containing both time and timezone information (UTC as default).
+* Every resource contains a `self` field that represent its unique URL (e.g.: `user/3`);
+* Referenced resources (e.g.: product.company), are referenced by an object containing an `url` field with the resource endpoint (e.g.: `company/123`)
+* Date field are in _ISO 8601_ format containing both time and timezone information (UTC as default).
 
-### Common Operations
+## Common Operations
 
 Usually each resource support the basic CRUD operations mapped on the four HTTP verbs:
 
-*   `GET` for retrieving;
-*   `POST` for creation;
-*   `PUT` for modification;
-*   `DELETE` for deletion.
+* `GET` for retrieving
+* `POST` for creation
+* `PUT` for modification
+* `DELETE` for deletion
+* `PATCH` for partial updates
 
 Sometimes the method `PATCH` is used either for partial modification or for custom actions.
 
-### API documentation
+## API Reference
 
-Here you can find the detailed documentation of the Cloudesire APIs:
+Here you can find the automatically generated API documentation, grouped in macro-areas:
 
 * [Catalog API](http://api.cloudesire.com/catalog.html)
 * [Marketplace API](http://api.cloudesire.com/marketplace.html)
 * [Subscription API](http://api.cloudesire.com/subscription.html)
-
-## REST API Clients
-
-### Java
-
-We suggest to use our [Tisana4j REST client library](https://github.com/ClouDesire/tisana4j) to build a client to call our API. We are planning to relase an official Java API client in the future.
-
-### PHP
-
-We suggest to use the great [Guzzle](http://guzzle.readthedocs.org/) to build a client to call our API.
-
-### CLI tool
-
-We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) to call our API via a command-line tool to experiment.
