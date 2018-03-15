@@ -35,7 +35,7 @@ The _Catalog_ contains all the applications owned by the vendor. In this section
 
 The following picture shows the structure of a product in the Catalog section.
 
-[![Vendor Dashboard - Catalog](/img/docs/screenshot-cloudesire.com-2017-04-20-12-26-26-1024x494.png)](/img/docs/screenshot-cloudesire.com-2017-04-20-12-26-26.png)
+![Vendor Dashboard - Catalog](/img/docs/screenshot-cloudesire.com-2017-04-20-12-26-26.png)
 
 Please note that you can save your project by clicking on “_Save Product_” on the top right at any time: this means that you can exit the platform and edit your product later. Please remember that if you edit an application that is already published on the marketplace and select “_Save Product_” changes will be live. This is one of the reasons why we recommend to upload and test changes on our Staging Marketplace (more info on the Staging Marketplace, [click here](onboarding.md#staging-marketplace).)
 
@@ -44,7 +44,7 @@ The following information are required for each product in the catalog:
 ### General Information
 
 * _Product Logo_: high-resolution logo with fully transparent background.
-* _Product Name_: your application name. It’s the name that will be associated with your product on the marketplace.
+* _Product Name_: your application name. It's the name that will be associated with your product on the marketplace.
 * _Category_ (e.g. CMS, CRM, etc.): this will help customers to understand your product category and will be shown on your product page on the marketplace.
 * _Destination_ (B2B or B2C):  this will help customers to better understand your product and will be shown on your product page on the marketplace.
 * _Tags_ (keyword list): these tags will help customers to quickly understand your product. Please, try to add only relevant tags to avoid too many tags on the product page.
@@ -168,13 +168,14 @@ Pay as you go model means that your users pay only for what they use, so it’s 
 
 iStock is an example of Pay as you go pricing model
 
-[![Pricing Models: pay as you go](/img/docs/pay-as-you-go-model.png)](/img/docs/pay-as-you-go-model.png)
+![Pricing Models: pay as you go](/img/docs/pay-as-you-go-model.png)(/img/docs/pay-as-you-go-model.png)
 
 #### Pay-per-user Model
 
 Pay per user Model means that your customers move up and down the tier automatically, so the cost scales according to how they use the product. For example, you pay 30$/month up to 10 users and 50$/month up to 15 users. The challenging aspect of this model is that you do not have a constant flow of revenues, they can move up and down and it’s not predictable.
 
-Slack is an example of a SaaS business that follows this model.[![Pricing Models: pay per user model](/img/docs/pay-per-user-model.png)](/img/docs/pay-per-user-model.png)
+Slack is an example of a SaaS business that follows this model.
+![Pricing Models: pay per user model](/img/docs/pay-per-user-model.png)
 
 #### Fixed Pricing Model
 
@@ -184,7 +185,7 @@ For example, you could create a silver version for freelance professionals, a go
 
 Hubspot is a successful example of business that offers a fixed pricing model.
 
-[![Pricing Models: fixed price model](/img/docs/fixed-price-model-1024x481.png)](/img/docs/fixed-price-model.png)
+![Pricing Models: fixed price model](/img/docs/fixed-price-model.png)
 
 #### Feature Based Model
 
@@ -192,7 +193,7 @@ Feature Based model means that you create different pricing tiers based on featu
 
 Salesforce is an example of a business that offers a feature based model.
 
-[![Pricing models: Feature Based model](/img/docs/feature-based-model.png)](/img/docs/feature-based-model.png)
+![Pricing models: Feature Based model](/img/docs/feature-based-model.png)
 
 ## Extra Resources
 
