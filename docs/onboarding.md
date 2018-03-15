@@ -14,7 +14,7 @@ To start the onboarding process, go to the marketplace and login to access your 
 
 Select “_Catalog_” from the left menu, then select “_Products_” and click on the “_Create New Product_” button at the upper right hand corner.
 
-![Vendors Control Panel - new product onboarding](/img/docs/control_panel_new_product.png "Vendors Control Panel - new product")
+![Vendors Control Panel - new product onboarding](/img/docs/control_panel_new_product.png)
 
 You will see a pop-up in which you can  insert your product name and choose between two onboarding options:
 
