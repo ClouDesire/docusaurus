@@ -65,7 +65,7 @@ For each Scenario, the Reseller has both the “**push**” and “**pull**” s
 * _showcase_ → products are visible, prices are masked and transactions disabled
 * each store can be **customized**:
 
-[![](/img/docs/reseller-marketplace-custom-300x193.jpg)](/img/docs/reseller-marketplace-custom.jpg)
+[![](/img/docs/reseller-marketplace-custom.jpg)](/img/docs/reseller-marketplace-custom.jpg)
 
 ### 2.Parent functionalities
 
@@ -87,7 +87,7 @@ It’s possible to filer the list by searching for Distributor name, Reseller na
 
 The Distributor can access to his catalog by clicking on the namesake menu item.
 
-[![](/img/docs/3.1-distributor-catalog-1024x565.png)](/img/docs/3.1-distributor-catalog.png)
+[![](/img/docs/3.1-distributor-catalog.png)](/img/docs/3.1-distributor-catalog.png)
 
 By clicking on the “assign” button is possible to assign the specific product to a Reseller: a dialog is proposed, where the Distributor can search a Reseller (by filtering for his name) and then set the **sell-in markups** for the one-off / subscription / extra resources / cloud resources costs.
 
