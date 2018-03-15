@@ -347,11 +347,11 @@ To specify a Configuration Parameter, enter the Product editing page, then selec
 * _Hint_: text inside the placeholder that helps end-users to complete the field
 * _Required_ (yes/no): sets if the customer needs to specify a value for the parameter before purchasing the product
 
-[![control_panel_configuration_parameters_editing](/img/docs/control_panel_configuration_parameters_editing-1-1024x369.png)](/img/docs/control_panel_configuration_parameters_editing-1.png)
+[![control_panel_configuration_parameters_editing](/img/docs/control_panel_configuration_parameters_editing-1.png)](/img/docs/control_panel_configuration_parameters_editing-1.png)
 
 Once Configuration Parameters are specified for a product, they need to be attached to one (or more) "_Plans"_ orproduct versions. To do that, click on the "_Plans_" tab, select a specific Plan and click on the "_Edit_" button. You will see a pop-up similar to the one shown in the following picture: go to the "_Features_" tab and select one or more Configuration Parameters to activate for the specific Plan.
 
-[![control panel configuration parameters linking](/img/docs/control_panel_configuration_parameters_linking-1-1024x525.png)](/img/docs/control_panel_configuration_parameters_linking-1.png)
+[![control panel configuration parameters linking](/img/docs/control_panel_configuration_parameters_linking-1.png)](/img/docs/control_panel_configuration_parameters_linking-1.png)
 
 The [Cloudesire API](api.md) gives the vendor the possibility to retrieve both a specific Configuration Parameter definition and the related parameters "value" (namely the valued specified by the customer during the order placement).
 
