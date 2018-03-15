@@ -1,4 +1,4 @@
---
+---
 id: channel
 title: Distribution and Channel Management
 sidebar_label: Channel management
