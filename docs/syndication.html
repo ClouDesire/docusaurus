@@ -18,65 +18,63 @@
 <ul>
 <li>the customer orders a new tenant of your application in the marketplace</li>
 <li>Cloudesire sends a notification to your endpoint, containing the following information: entity = <code>subscription</code>, id = {subscription_id}, status = <code>created</code></li>
-<li>once you’ve received this notification, you need to call our API in order to retrieve the subscripion details (given its identifier) which includes:
+<li>once you've received this notification, you need to call our API in order to retrieve the subscripion details (given its identifier) which includes:
 <ul>
 <li>the customer data (name, email, etc.) to be stored in your database</li>
-<li>a <code>paid</code> flag, which can be <code>true</code> (if the customer already paid the subscription for your application, for example if the platform previously stored his credit card data) or <code>false</code>(if the customer hasn’t paid yet the subscription)</li>
+<li>a <code>paid</code> flag, which can be <code>true</code> (if the customer already paid the subscription for your application, for example if the platform previously stored his credit card data) or <code>false</code>(if the customer hasn't paid yet the subscription)</li>
 </ul></li>
 <li>if the <code>paid</code> flag is <code>true</code> you can provision your tenant in your platform</li>
-<li>if the <code>paid</code> flag is <code>false</code> you need to wait for the next notification, which will contain the following information: entity = <code>subscription</code>, id = {subscription_id}, status = <code>modified</code>. Once you’ve received this notification, you need to call our API again, retrieve the subscription data, and check if the <code>paid</code> flag is <code>true</code>.</li>
-<li>once you’ve executed the provisioning of the tenant in your platform, you need to call our API for the last time, setting the subscription status to <code>deployed</code></li>
+<li>if the <code>paid</code> flag is <code>false</code> you need to wait for the next notification, which will contain the following information: entity = <code>subscription</code>, id = {subscription_id}, status = <code>modified</code>. Once you've received this notification, you need to call our API again, retrieve the subscription data, and check if the <code>paid</code> flag is <code>true</code>.</li>
+<li>once you've executed the provisioning of the tenant in your platform, you need to call our API for the last time, setting the subscription status to <code>deployed</code></li>
 <li>when the subscription status changes to <code>deployed</code>, Cloudesire notifies the customer, providing him the instructions to access your application</li>
 </ul>
-<p>In other words, you should provision your tenant only when the <code>paid</code> flag is <code>true</code> (unless you’re offering <strong>trials</strong> for your application).</p>
+<p>In other words, you should provision your tenant only when the <code>paid</code> flag is <code>true</code> (unless you're offering <strong>trials</strong> for your application).</p>
 <p><img src="/img/docs/Syndication-Worklow-Provisioning.png" alt=""></p>
 <p><a href="https://github.com/ClouDesire/php-syndication-example">Here</a> you can find a simple PHP example, implementing the tenant provisioning/unprovisioning for a demo application.</p>
 <h3><a class="anchor" aria-hidden="true" id="how-to-setup-the-syndication-endpoint"></a><a href="#how-to-setup-the-syndication-endpoint" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to setup the syndication endpoint</h3>
 <p>While developing your integration with the Cloudesire platform, you may find useful to test your source code in our <a href="/docs/syndication.html#staging-marketplace">staging marketplace</a>, where <em>fake payments</em> are possible and where you can test the whole customer journey, end-to-end.</p>
 <p>We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.</p>
-<p>Let’s start things off: during the <a href="/docs/syndication.html#applications-onboarding">application onboarding</a> process, when creating a <strong>new product</strong>, choose “<em>Syndicated Product</em>“, and then configure the HTTP(S) URL of your <strong>Syndication Endpoint</strong> where the events will be delivered, almost instantly.</p>
+<p>Let's start things off: during the <a href="/docs/syndication.html#applications-onboarding">application onboarding</a> process, when creating a <strong>new product</strong>, choose &quot;<em>Syndicated Product</em>&quot;, and then configure the HTTP(S) URL of your <strong>Syndication Endpoint</strong> where the events will be delivered, almost instantly.</p>
 <p><img src="/img/docs/control_panel_syndication.png" alt="Vendors Control Panel - Syndication" title="Vendors Control Panel - Syndication"></p>
 <p>If you want to secure your syndication endpoint, please read <a href="/docs/syndication.html#security">this section</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="anatomy-of-an-event-request"></a><a href="#anatomy-of-an-event-request" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anatomy of an event request</h3>
 <p>Every request sent to your endpoint will be a POST request with a JSON payload:</p>
-<pre><code class="hljs">POST /endpoint HTTP/1.1
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Host: vendor.example.org
-CMW-Event-Signature: sha1=bd637c3b084f7c5039aaf2808c3bc6bd7b6c283d
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/endpoint</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
+<span class="hljs-attribute">Host</span>: vendor.example.org
+<span class="hljs-attribute">CMW-Event-Signature</span>: sha1=bd637c3b084f7c5039aaf2808c3bc6bd7b6c283d
 
-{
-  &quot;date&quot;: &quot;2015-01-12T11:19:30Z&quot;,
-  &quot;entity&quot;: &quot;Subscription&quot;,
-  &quot;entityUrl&quot;: &quot;subscription/2388&quot;,
-  &quot;id&quot;: &quot;2388&quot;,
-  &quot;type&quot;: &quot;CREATED&quot;
+<span class="json">{
+    <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2015-01-12T11:19:30Z"</span>,
+    <span class="hljs-attr">"entity"</span>: <span class="hljs-string">"Subscription"</span>,
+    <span class="hljs-attr">"entityUrl"</span>: <span class="hljs-string">"subscription/2388"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"2388"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"CREATED"</span>
 }
-</code></pre>
+</span></code></pre>
 <p>Where:</p>
-<ul>
-<li>The <strong>type</strong> attribute can be:
+<p>The <strong>type</strong> attribute can be:</p>
 <ul>
 <li><code>CREATED</code></li>
 <li><code>MODIFIED</code></li>
 <li><code>DELETED</code></li>
-</ul></li>
-<li>The <strong>entity</strong> attribute can be:
+</ul>
+<p>The <strong>entity</strong> attribute can be:</p>
 <ul>
 <li><code>Subscription</code></li>
 <li><code>Invoice</code></li>
-</ul></li>
-<li>The <strong>id</strong> attribute is an unique identifier for the current <strong>entity</strong>.</li>
-<li>The <strong>entityUrl</strong> attribute contains the relative URL from which the involved resource can be fetched.</li>
-<li>The <strong>date</strong> attribute contains when the event has been generated.</li>
-<li>The <strong>CMW-Event-Signature</strong> is an HTTP header related to the optional <a href="/docs/syndication.html#security">validation for incoming event notifications</a>.</li>
 </ul>
+<p>The <strong>id</strong> attribute is an unique identifier for the current <strong>entity</strong>.
+The <strong>entityUrl</strong> attribute contains the relative URL from which the involved resource can be fetched.
+The <strong>date</strong> attribute contains when the event has been generated.
+The <strong>CMW-Event-Signature</strong> is an HTTP header related to the optional <a href="/docs/syndication.html#security">validation for incoming event notifications</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="replying-to-events"></a><a href="#replying-to-events" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Replying to events</h3>
 <p>The platform expects that you reply with a <code>204 - No content</code> response, so with an empty response body.</p>
 <p>If you return a <code>200 - OK</code> reply with body message, it will be accepted but the content will be discarded.</p>
 <p>If the response contains a non-2xx status code (4xx &amp; 5xx), the notification will be retried at the next loop, until the endpoint will return a 2xx status code.</p>
-<h3><a class="anchor" aria-hidden="true" id="the-test-events-feature"></a><a href="#the-test-events-feature" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The “Test Events” feature</h3>
-<p>If you are prototyping the integration with Cloudesire, you may find useful the “<strong>Test Events”</strong> functionality, available in the G_eneral_ tab into Product editing page.</p>
+<h3><a class="anchor" aria-hidden="true" id="the-test-events-feature"></a><a href="#the-test-events-feature" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The &quot;Test Events&quot; feature</h3>
+<p>If you are prototyping the integration with Cloudesire, you may find useful the &quot;<strong>Test Events&quot;</strong> functionality, available in the <em>General</em> tab into Product editing page.</p>
 <p>This button will trigger a chosen notification to your endpoint, without kicking any kind of workflow on the Cloudesire side. This test notification contains some stubbed data.</p>
 <p>We strongly recommend to use this feature and make sure the integration is working properly.</p>
 <h2><a class="anchor" aria-hidden="true" id="workflow-of-a-subscription"></a><a href="#workflow-of-a-subscription" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workflow of a Subscription</h2>
@@ -86,50 +84,50 @@ CMW-Event-Signature: sha1=bd637c3b084f7c5039aaf2808c3bc6bd7b6c283d
 <p>Before you start, take a look to our <a href="/docs/syndication.html#integration-facilities">integration facilities</a>: we provide a <strong>staging marketplace</strong> where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.</p>
 <p>We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.</p>
 <p>Trigger a <em>SANDBOX</em> order from the <em>Plans</em> section inside the application edit page.</p>
-<p><img src="/img/docs/control_panel_syndicated_sandbox.png" alt="Vendors Control Panel: Syndication - Sandboxing" title="Vendors Control Panel: Syndication - Sandboxing"></p>
+<p><img src="/img/docs/control_panel_syndicated_sandbox.png" alt="Vendors Control Panel: Syndication - Sandboxing"></p>
 <p>The first event you will receive, is a <code>Subscription CREATED</code> event.</p>
 <h3><a class="anchor" aria-hidden="true" id="retrieve-the-subscription-resource-after-a-subscription-created"></a><a href="#retrieve-the-subscription-resource-after-a-subscription-created" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve the subscription resource after a Subscription CREATED</h3>
 <p>You can start by fetching the <em>Subscription</em> resource, that should exist after having received a <code>Subscription CREATED</code> event, by using the address contained in the <em>entityUrl</em> attribute:</p>
-<pre><code class="hljs">GET /api/subscription/2388 HTTP/1.1
+<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/subscription/2388</span> HTTP/1.1
 </code></pre>
 <p>An example response would be:</p>
-<pre><code class="hljs">HTTP/1.1 200 OK
-Content-Type: application/json
+<pre><code class="hljs css http">HTTP/1.1 <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-{
-    &quot;billingPeriod&quot;: 1,
-    &quot;buyer&quot;: {
-        &quot;url&quot;: &quot;user/2240&quot;
+<span class="json">{
+    <span class="hljs-attr">"billingPeriod"</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-attr">"buyer"</span>: {
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"user/2240"</span>
     },
-    &quot;company&quot;: {
-        &quot;url&quot;: &quot;company/433&quot;
+    <span class="hljs-attr">"company"</span>: {
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"company/433"</span>
     },
-    &quot;createdAt&quot;: &quot;2015-01-05T13:59:00Z&quot;,
-    &quot;deploymentStatus&quot;: &quot;WAITING_PAYMENT&quot;,
-    &quot;id&quot;: 2388,
-    &quot;invoices&quot;: [
+    <span class="hljs-attr">"createdAt"</span>: <span class="hljs-string">"2015-01-05T13:59:00Z"</span>,
+    <span class="hljs-attr">"deploymentStatus"</span>: <span class="hljs-string">"WAITING_PAYMENT"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2388</span>,
+    <span class="hljs-attr">"invoices"</span>: [
         {
-            &quot;url&quot;: &quot;invoice/2390&quot;
+            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"invoice/2390"</span>
         }
     ],
-    &quot;lastInvoice&quot;: &quot;2015-01-05T13:59:00Z&quot;,
-    &quot;name&quot;: &quot;Application syndicated - Base version&quot;,
-    &quot;nextInvoice&quot;: &quot;2015-02-05T13:59:00Z&quot;,
-    &quot;orders&quot;: [
+    <span class="hljs-attr">"lastInvoice"</span>: <span class="hljs-string">"2015-01-05T13:59:00Z"</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Application syndicated - Base version"</span>,
+    <span class="hljs-attr">"nextInvoice"</span>: <span class="hljs-string">"2015-02-05T13:59:00Z"</span>,
+    <span class="hljs-attr">"orders"</span>: [
         {
-            &quot;url&quot;: &quot;order/2389&quot;
+            <span class="hljs-attr">"url"</span>: <span class="hljs-string">"order/2389"</span>
         }
     ],
-    &quot;paid&quot;: false,
-    &quot;product&quot;: {
-        &quot;url&quot;: &quot;product/126&quot;
+    <span class="hljs-attr">"paid"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"product"</span>: {
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"product/126"</span>
     },
-    &quot;self&quot;: &quot;subscription/2388&quot;,
-    &quot;syndicatedEndpoints&quot;: [],
-    &quot;type&quot;: &quot;NORMAL&quot;,
-    &quot;updatedAt&quot;: &quot;2015-01-05T13:59:00Z&quot;
+    <span class="hljs-attr">"self"</span>: <span class="hljs-string">"subscription/2388"</span>,
+    <span class="hljs-attr">"syndicatedEndpoints"</span>: [],
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"NORMAL"</span>,
+    <span class="hljs-attr">"updatedAt"</span>: <span class="hljs-string">"2015-01-05T13:59:00Z"</span>
 }
-</code></pre>
+</span></code></pre>
 <p>The <code>type</code> attribute contains which kind of order the customer has issued, and can be:</p>
 <ul>
 <li><code>NORMAL</code>: standard order for which the customer is going to pay an invoice before using the application;</li>
@@ -139,110 +137,111 @@ Content-Type: application/json
 <p>For <code>NORMAL</code> and <code>SANDBOX</code> subscriptions, you may notice that the <code>deploymentStatus</code> attribute is <code>WAITING_PAYMENT</code>, meaning that the customer has not paid the first invoice yet.</p>
 <p>Before provisioning the tenant, you should wait for another <code>Subscription MODIFIED</code> event, checking that the <code>deploymentStatus</code> attribute contains <code>PENDING</code>, and the <code>paid</code> field is true.</p>
 <p>The <code>paid</code> field is true when all the generated invoices for a certain subscription has been paid by the customer, otherwise it is false.</p>
-<p>Please note that if the customer credit card information is stored on the platform, each subscription will be created as “already paid”  (namely in the first <code>Subscription CREATED</code> event, the <code>deploymentStatus</code> will be <code>PENDING</code>, and the <code>paid</code> field will be true.)</p>
+<p>Please note that if the customer credit card information is stored on the platform, each subscription will be created as &quot;already paid&quot;  (namely in the first <code>Subscription CREATED</code> event, the <code>deploymentStatus</code> will be <code>PENDING</code>, and the <code>paid</code> field will be true.)</p>
 <p>For <code>TRIAL subscriptions</code>, you should provision the new tenant immediately, and the initial <code>deploymentStatus</code> will be <code>PENDING</code> (and not <code>WAITING_PAYMENT</code>).</p>
 <p>As you can see, the <em>Subscription</em> resource contains references to other resources (e.g. <em>Orders</em>, <em>Invoice</em>, <em>User</em>, <em>Product</em>). You may want to fetch those object to retrieve additional information beside the data contained in the <em>Subscription</em> resource.</p>
 <p>For example the next step may be to fetch the associated resource <code>user/2240</code>, to retrieve information about the user who requested your application.</p>
 <h3><a class="anchor" aria-hidden="true" id="retrieve-customer-information"></a><a href="#retrieve-customer-information" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve customer information</h3>
 <p>Once we got the customer reference, you can fetch it to obtain information about the customer:</p>
-<pre><code class="hljs">GET /api/user/2240 HTTP/1.1
+<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/user/2240</span> HTTP/1.1
 
+<span class="http">
+HTTP/1.1 <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  &quot;acceptedTerms&quot;: true,
-  &quot;activated&quot;: true,
-  &quot;activationDate&quot;: &quot;2014-01-01T00:00:00Z&quot;,
-  &quot;address&quot;: {
-    &quot;address&quot;: &quot;Via Napoli&quot;,
-    &quot;city&quot;: &quot;Pisa&quot;,
-    &quot;country&quot;: &quot;IT&quot;,
-    &quot;id&quot;: 2241,
-    &quot;zipCode&quot;: &quot;12345&quot;
-  },
-  &quot;creationDate&quot;: &quot;2014-07-02T08:20:01Z&quot;,
-  &quot;email&quot;: &quot;customer@example.org&quot;,
-  &quot;enabled&quot;: true,
-  &quot;environment&quot;: &quot;cloudesire&quot;,
-  &quot;id&quot;: 2240,
-  &quot;name&quot;: &quot;Demo Customer&quot;,
-  &quot;phoneNumber&quot;: &quot;123891237912&quot;,
-  &quot;self&quot;: &quot;user/2240&quot;,
-  &quot;userName&quot;: &quot;customer&quot;,
-  &quot;userRole&quot;: &quot;ROLE_USER&quot;
+<span class="json">{
+    <span class="hljs-attr">"acceptedTerms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"activated"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"activationDate"</span>: <span class="hljs-string">"2014-01-01T00:00:00Z"</span>,
+    <span class="hljs-attr">"address"</span>: {
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Via Napoli"</span>,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Pisa"</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"IT"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2241</span>,
+    <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"12345"</span>
+    },
+    <span class="hljs-attr">"creationDate"</span>: <span class="hljs-string">"2014-07-02T08:20:01Z"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"customer@example.org"</span>,
+    <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"environment"</span>: <span class="hljs-string">"cloudesire"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">2240</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Demo Customer"</span>,
+    <span class="hljs-attr">"phoneNumber"</span>: <span class="hljs-string">"123891237912"</span>,
+    <span class="hljs-attr">"self"</span>: <span class="hljs-string">"user/2240"</span>,
+    <span class="hljs-attr">"userName"</span>: <span class="hljs-string">"customer"</span>,
+    <span class="hljs-attr">"userRole"</span>: <span class="hljs-string">"ROLE_USER"</span>
 }
-</code></pre>
+</span></span></code></pre>
 <p>At this point you may have everything you need to create a new tenant in your platform, but feel free to explore all the related resources.</p>
 <h3><a class="anchor" aria-hidden="true" id="update-subscription-information-after-a-new-tenant-provisioning"></a><a href="#update-subscription-information-after-a-new-tenant-provisioning" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update subscription information (after a new tenant provisioning)</h3>
 <p>Once the tenant provisioning is complete, you just need to notify the platform that the customer may use the application, activating the subscription and entering information on how to reach the application.  This means that you need to provide endpoints and end-user instructions.</p>
 <h4><a class="anchor" aria-hidden="true" id="providing-endpoints"></a><a href="#providing-endpoints" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing endpoints</h4>
 <p>Send a <code>POST</code> request to <code>subscription/2388/endpoints</code> to set the end-user application endpoints:</p>
-<pre><code class="hljs">POST /api/subscription/2388/endpoints HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/subscription/2388/endpoints</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-[
-  {
-    &quot;endpoint&quot;: &quot;https://application.example.org/login&quot;,
-    &quot;description&quot;: &quot;Login page&quot;,
-    &quot;category&quot;: &quot;APP&quot;
-  },
-  {
-    &quot;endpoint&quot;: &quot;https://application.example.org/reset_password&quot;,
-    &quot;description&quot;: &quot;Password reset&quot;,
-    &quot;category&quot;: &quot;PASSWORD_RESET&quot;
-  },
-  {
-    &quot;endpoint&quot;: &quot;https://docs.example.org/&quot;,
-    &quot;description&quot;: &quot;Online Documentation&quot;,
-    &quot;category&quot;: &quot;DOCUMENTATION&quot;
-  },
+<span class="json">[
     {
-    &quot;endpoint&quot;: &quot;https://www.youtube.com/embed/dQw4w9WgXcQ&quot;,
-    &quot;description&quot;: &quot;Video tutorial&quot;,
-    &quot;category&quot;: &quot;VIDEO&quot;
-  },
+    <span class="hljs-attr">"endpoint"</span>: <span class="hljs-string">"https://application.example.org/login"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Login page"</span>,
+    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"APP"</span>
+    },
+    {
+    <span class="hljs-attr">"endpoint"</span>: <span class="hljs-string">"https://application.example.org/reset_password"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Password reset"</span>,
+    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"PASSWORD_RESET"</span>
+    },
+    {
+    <span class="hljs-attr">"endpoint"</span>: <span class="hljs-string">"https://docs.example.org/"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Online Documentation"</span>,
+    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"DOCUMENTATION"</span>
+    },
+    {
+    <span class="hljs-attr">"endpoint"</span>: <span class="hljs-string">"https://www.youtube.com/embed/dQw4w9WgXcQ"</span>,
+    <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Video tutorial"</span>,
+    <span class="hljs-attr">"category"</span>: <span class="hljs-string">"VIDEO"</span>
+    },
 ]
-</code></pre>
+</span></code></pre>
 <p>Possible values for the <em>category</em> field are: <code>APP</code>, <code>PASSWORD_RESET</code>, <code>DOCUMENTATION</code>, <code>VIDEO</code>. Please note that an endpoint with the category <code>APP</code> is required, while the others are optional.</p>
 <p>Security note: applications endpoints must be accessible via HTTPS.</p>
 <h4><a class="anchor" aria-hidden="true" id="providing-end-user-instructions"></a><a href="#providing-end-user-instructions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing End User Instructions</h4>
 <p>Vendors can submit localized messages to customers, for example to provide login instructions.</p>
 <p>Languages depend on the marketplace, for example in a marketplace with English and Italian languages available:</p>
-<pre><code class="hljs">POST /api/subscription/2388/instructions HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/subscription/2388/instructions</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;en&quot;: &quot;Use your email as login and the password jei9je9y to login&quot;,
-  &quot;it&quot;: &quot;Utilizza la tua email come login e come password: jei9je9y&quot;
+<span class="json">{
+    <span class="hljs-attr">"en"</span>: <span class="hljs-string">"Use your email as login and the password jei9je9y to login"</span>,
+    <span class="hljs-attr">"it"</span>: <span class="hljs-string">"Utilizza la tua email come login e come password: jei9je9y"</span>
 }
-</code></pre>
-<p><strong>TIPS:</strong></p>
-<p>It would be great to give the customer the possibility to <a href="/docs/syndication.html#auto-login">auto-login</a> to your application without providing any credentials. To achieve this goal, we strongly suggest to add an <strong>authorization token</strong> to the endpoint to access the application. In this way, you can recognize the customer and enable automatical log-in into your application. If you follow this flow, you do not need to specify the user credentials into the end-user instructions.</p>
-<h3><a class="anchor" aria-hidden="true" id="set-provisiong-status-to-deployed"></a><a href="#set-provisiong-status-to-deployed" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set provisiong status to DEPLOYED</h3>
+</span></code></pre>
+<blockquote>
+<p>It would be great to give the customer the possibility to <a href="/docs/syndication.html#auto-login">auto-login</a> to your application without providing any credentials. To achieve this goal, we strongly suggest to add an <strong>authorization token</strong> to the endpoint to access the application. In this way, you can recognize the customer and enable automatic log-in into your application. If you follow this flow, you do not need to specify the user credentials into the end-user instructions.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="set-provisioning-status-to-deployed"></a><a href="#set-provisioning-status-to-deployed" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set provisioning status to DEPLOYED</h3>
 <p>As the final step, send a <code>PATCH</code> request on the <code>subscription/2388</code> endpoint to alter the subscription status:</p>
-<pre><code class="hljs">PATCH /api/subscription/2388 HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/api/subscription/2388</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;deploymentStatus&quot;: &quot;DEPLOYED&quot;
+<span class="json">{
+    <span class="hljs-attr">"deploymentStatus"</span>: <span class="hljs-string">"DEPLOYED"</span>
 }
-</code></pre>
+</span></code></pre>
 <p>Starting from now, the customer can use your application!</p>
-<h3><a class="anchor" aria-hidden="true" id="any-problem-during-provisioning-of-your-tenant"></a><a href="#any-problem-during-provisioning-of-your-tenant" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Any problem during provisioning of your tenant?</h3>
+<h3><a class="anchor" aria-hidden="true" id="problems-during-provisioning-of-your-tenant"></a><a href="#problems-during-provisioning-of-your-tenant" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Problems during provisioning of your tenant</h3>
 <p>If something goes wrong during the provisioning of a new tenant in your application, please follow <a href="/docs/syndication.html#managing-provisioning-exceptions">these instructions</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="update-subscription-information-when-the-subscription-expires"></a><a href="#update-subscription-information-when-the-subscription-expires" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update subscription information (when the subscription expires)</h3>
 <p>When the subscription period expires, the platform will send another <code>Subscription MODIFIED</code> event. Fetch again the <em>Subscription</em> and look at the <strong>status</strong> attribute that should be set to <code>UNDEPLOY_SENT</code> for the current subscription.</p>
 <p>In this moment you should unprovision or block tenant access to your application, and confirm the operation via a <code>PATCH</code> request on the <code>subscription/2388</code> endpoint to finally terminate the subscription:</p>
-<pre><code class="hljs">PATCH /api/subscription/2388 HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/api/subscription/2388</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;deploymentStatus&quot;: &quot;UNDEPLOYED&quot;
+<span class="json">{
+    <span class="hljs-attr">"deploymentStatus"</span>: <span class="hljs-string">"UNDEPLOYED"</span>
 }
-</code></pre>
-<p><img src="/img/docs/Syndication-Worklow-Unprovisioning.png" alt=""></p>
+</span></code></pre>
+<p><img src="/img/docs/Syndication-Worklow-Unprovisioning.png" alt="syndication unprovisioning"></p>
 <p>You have now completed the standard workflow for a syndicated application, congratulations!</p>
 <h3><a class="anchor" aria-hidden="true" id="billing-events-notifications"></a><a href="#billing-events-notifications" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Billing events notifications</h3>
 <p>When the customer ask for a subscription renewal, version upgrade or trial-to-paid upgrade, the platform will send a <code>Subscription MODIFIED</code> event.</p>
@@ -259,29 +258,29 @@ Content-Type: application/json; charset=utf-8
 <h3><a class="anchor" aria-hidden="true" id="validating-payload-signature"></a><a href="#validating-payload-signature" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validating payload signature</h3>
 <p>Once you have configured a secret token in your application configuration, a hash signature for each payload will be in the <code>CMW-Event-Signature</code> HTTP header. The goal is to compute a hash using your secret token, and ensure that the hashes match.</p>
 <p>e.g. in Java, using <strong><a href="https://commons.apache.org/proper/commons-codec/">Apache Commons Codec</a></strong>:</p>
-<pre><code class="hljs">import org.apache.commons.codec.digest.HmacUtils;
+<pre><code class="hljs css java"><span class="hljs-keyword">import</span> org.apache.commons.codec.digest.HmacUtils;
 
-// do whatever to get the request
+<span class="hljs-comment">// do whatever to get the request</span>
 RecordedRequest request = server.takeRequest();
 
-String expected = &quot;sha1=&quot; + HmacUtils.hmacSha1Hex( &quot;MY_SECRET_TOKEN&quot;, request.getBody().readUtf8() );
-String actual = request.getHeader( &quot;CMW-Event-Signature&quot; );
+String expected = <span class="hljs-string">"sha1="</span> + HmacUtils.hmacSha1Hex( <span class="hljs-string">"MY_SECRET_TOKEN"</span>, request.getBody().readUtf8() );
+String actual = request.getHeader( <span class="hljs-string">"CMW-Event-Signature"</span> );
 
-if ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
+<span class="hljs-keyword">if</span> ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
 {
-    // continue evaluating request...
+    <span class="hljs-comment">// continue evaluating request...</span>
 }
 </code></pre>
 <p>YMMV, of course. <strong>Notice</strong> though that the hash signature starts with <code>sha1=</code>, no matter which implementation you use.</p>
 <h2><a class="anchor" aria-hidden="true" id="managing-provisioning-exceptions"></a><a href="#managing-provisioning-exceptions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Managing Provisioning Exceptions</h2>
 <p>If something goes wrong during the provisioning of a new tenant in your application, please be sure to set the subscription status to <code>FAILED</code> by invoking our API, for example:</p>
-<pre><code class="hljs">PATCH /api/subscription/{id} HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/api/subscription/{id}</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;deploymentStatus&quot;: &quot;FAILED&quot;
+<span class="json">{
+    <span class="hljs-attr">"deploymentStatus"</span>: <span class="hljs-string">"FAILED"</span>
 }
-</code></pre>
+</span></code></pre>
 <p>and then to provide the customer appropriate <em>end-user instructions</em>, in order to explain what happened (e.g. <em>sorry, our system went down. Please retry later.</em>)</p>
 <h2><a class="anchor" aria-hidden="true" id="advanced-billing-features"></a><a href="#advanced-billing-features" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Billing Features</h2>
 <p>There a few features that can be used alongside the basic integration.</p>
@@ -289,166 +288,166 @@ Content-Type: application/json; charset=utf-8
 <p>Even for syndicated applications, you can define and bills <a href="/docs/onboarding.html#application-metrics">application metrics</a>.</p>
 <p>Besides the general usage and information provided, you should only take care of an additional <strong>HTTP header</strong>, sent to your metric endpoint: <strong>CD-Subscription-Id</strong>.</p>
 <p>An example request:</p>
-<pre><code class="hljs">GET /custom_metric_endpoint HTTP/1.1
-Content-Type: application/json; charset=utf-8
-CD-Subscription-Id: 28
+<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/custom_metric_endpoint</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
+<span class="hljs-attribute">CD-Subscription-Id</span>: 28
 </code></pre>
 <p>An expected response from your metric endpoint:</p>
-<pre><code class="hljs">HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http">HTTP/1.1 <span class="hljs-number">200</span> OK
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;metricsName&quot;: &quot;custom_metric&quot;,
-  &quot;value&quot;: 3.0
+<span class="json">{
+    <span class="hljs-attr">"metricsName"</span>: <span class="hljs-string">"custom_metric"</span>,
+    <span class="hljs-attr">"value"</span>: <span class="hljs-number">3.0</span>
 }
-</code></pre>
+</span></code></pre>
 <p>This HTTP header will let you to identify the subscription from which a metric is requested, so you can return the proper value.</p>
 <h3><a class="anchor" aria-hidden="true" id="plan-upgrade"></a><a href="#plan-upgrade" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plan Upgrade</h3>
 <p>You can even upsell to your customers a new subscription plan. Please note that only upgrades and no downgrades are supported at this time.</p>
-<pre><code class="hljs">PATCH /api/subscription/{id} HTTP/1.1
-Content-Type: application/json; charset=utf-8
+<pre><code class="hljs css http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/api/subscription/{id}</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
-{
-  &quot;action&quot;: &quot;SYNDICATED_UPGRADE&quot;,
-  &quot;productVersion&quot;: {
-    &quot;url&quot;: &quot;productVersion/123&quot;
-  }
+<span class="json">{
+    <span class="hljs-attr">"action"</span>: <span class="hljs-string">"SYNDICATED_UPGRADE"</span>,
+    <span class="hljs-attr">"productVersion"</span>: {
+    <span class="hljs-attr">"url"</span>: <span class="hljs-string">"productVersion/123"</span>
+    }
 }
-</code></pre>
+</span></code></pre>
 <p>The subscription should be an existing and deployed subscription of one of your customers, and the configuration should be the new product version you want to upgrade to.</p>
 <p>Once requested, you will receive a Subscription MODIFIED event since the configuration attribute in the subscription resource will be modified accordingly to your request.</p>
 <p>The customer will receive a new invoice, that needs to be payed, with prices scaled depending on how many days are remaining for the current billing period of the existing subscription.</p>
 <h3><a class="anchor" aria-hidden="true" id="trial-to-paid-subscription-upgrade"></a><a href="#trial-to-paid-subscription-upgrade" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Trial to paid subscription upgrade</h3>
-<p>It’s possible to upgrade a trial subscription to a paid one. The subscription must be in <code>DEPLOYED</code> state and cannot have a lifespan set.</p>
+<p>It's possible to upgrade a trial subscription to a paid one. The subscription must be in <code>DEPLOYED</code> state and cannot have a lifespan set.</p>
 <p>You can upgrade a trial subscription by renewing it for the desired number of months.</p>
 <p>Once renewed, a trial subscription becomes a proper paid subscription.</p>
 <p>Given a trial subscription you are a vendor for with ID <code>{id}</code>, you can order a renewal for e.g. 1 month with a <code>PATCH</code> request:</p>
-<pre><code class="hljs">PATCH /subscription/{id} HTTP/1.1
-Accept: application/json
-Content-Type: application/json
+<pre><code class="hljs css http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/subscription/{id}</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-{
-    &quot;action&quot;: &quot;renew&quot;
+<span class="gams">{
+    <span class="hljs-string">"action"</span>: <span class="hljs-string">"renew"</span>
 }
 
 
-HTTP/1.1 204 No Content
-</code></pre>
+HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">204</span> <span class="hljs-keyword">No</span> Content
+</span></code></pre>
 <h3><a class="anchor" aria-hidden="true" id="custom-billing"></a><a href="#custom-billing" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Custom billing</h3>
 <p>As a vendor, you can generate a custom invoice for a deployed, unexpired subscription. The generated invoice will be issued immediately.</p>
 <p>Given a subscription you are a vendor for with ID <code>{id}</code> you can generate a custom invoice with a <code>POST /subscription/{id}/invoice</code> request:</p>
-<pre><code class="hljs">POST /subscription/{id}/invoice HTTP/1.1
-Accept: application/json
-Content-Type: application/json
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/subscription/{id}/invoice</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-[
+<span class="xquery">[
     {
-        &quot;description&quot;: &quot;First row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;100.0000&quot;
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"First row"</span>,
+        <span class="hljs-string">"price"</span>: {
+            <span class="hljs-string">"price"</span>: <span class="hljs-string">"100.0000"</span>
         },
-        &quot;quantity&quot;: 2.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-string">"quantity"</span>: <span class="hljs-number">2.0</span>,
+        <span class="hljs-string">"unit"</span>: <span class="hljs-string">"un"</span>
     },
     {
-        &quot;description&quot;: &quot;Second row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;23.4567&quot;
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Second row"</span>,
+        <span class="hljs-string">"price"</span>: {
+            <span class="hljs-string">"price"</span>: <span class="hljs-string">"23.4567"</span>
         },
-        &quot;quantity&quot;: 1.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-string">"quantity"</span>: <span class="hljs-number">1.0</span>,
+        <span class="hljs-string">"unit"</span>: <span class="hljs-string">"un"</span>
     }
 ]
 
 
-HTTP/1.1 201 Created
-Location: https://marketplace.cloudesire.com/api/invoice/10000
-</code></pre>
+HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">201</span> Created
+Location: https://backend.cloudesire.com/api/invoice/<span class="hljs-number">10000</span>
+</span></code></pre>
 <h3><a class="anchor" aria-hidden="true" id="recurring-costs"></a><a href="#recurring-costs" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recurring Costs</h3>
 <p>You can add recurring costs to a syndicated subscription.</p>
 <p>Given a subscription you are a vendor for with ID <code>{id}</code> you can add recurring costs to it with a <code>POST /subscription/{id}/invoice/recurring</code> request:</p>
-<pre><code class="hljs">POST /subscription/{id}/invoice/recurring HTTP/1.1
-Accept: application/json
-Content-Type: application/json
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/subscription/{id}/invoice/recurring</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-[
+<span class="xquery">[
     {
-        &quot;description&quot;: &quot;First row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;100.0000&quot;
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"First row"</span>,
+        <span class="hljs-string">"price"</span>: {
+            <span class="hljs-string">"price"</span>: <span class="hljs-string">"100.0000"</span>
         },
-        &quot;quantity&quot;: 2.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-string">"quantity"</span>: <span class="hljs-number">2.0</span>,
+        <span class="hljs-string">"unit"</span>: <span class="hljs-string">"un"</span>
     },
     {
-        &quot;description&quot;: &quot;Second row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;23.4567&quot;
+        <span class="hljs-string">"description"</span>: <span class="hljs-string">"Second row"</span>,
+        <span class="hljs-string">"price"</span>: {
+            <span class="hljs-string">"price"</span>: <span class="hljs-string">"23.4567"</span>
         },
-        &quot;quantity&quot;: 1.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-string">"quantity"</span>: <span class="hljs-number">1.0</span>,
+        <span class="hljs-string">"unit"</span>: <span class="hljs-string">"un"</span>
     }
 ]
 
 
-HTTP/1.1 200 OK
-
-... subscription content ...
-</code></pre>
+HTTP/<span class="hljs-number">1.1</span> <span class="hljs-number">200</span> OK
+{}
+</span></code></pre>
 <p>Every invoice generated for a subscription with recurring costs will contain these lines.</p>
 <p>To remove recurring costs from a subscription just post an empty list:</p>
-<pre><code class="hljs">POST /subscription/{id}/invoice/recurring HTTP/1.1
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/subscription/{id}/invoice/recurring</span> HTTP/1.1
 
-[]
-</code></pre>
+<span class="json">[]
+</span></code></pre>
 <h3><a class="anchor" aria-hidden="true" id="proceeds-declaration"></a><a href="#proceeds-declaration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Proceeds declaration</h3>
 <p>As a vendor you can declare proceeds for one of your products active subscriptions.</p>
 <p>Given a subscription with ID <code>{id}</code>, you can generate a cashed invoice with:</p>
-<pre><code class="hljs">POST /subscription/{id}/invoice?cashed=true HTTP/1.1
-Accept: application/json
-Content-Type: application/json
+<pre><code class="hljs css http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/subscription/{id}/invoice?cashed=true</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json
 
-[
+<span class="json">[
     {
-        &quot;description&quot;: &quot;First row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;100.0000&quot;,
-            &quot;vat&quot;: 22.0
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"First row"</span>,
+        <span class="hljs-attr">"price"</span>: {
+            <span class="hljs-attr">"price"</span>: <span class="hljs-string">"100.0000"</span>,
+            <span class="hljs-attr">"vat"</span>: <span class="hljs-number">22.0</span>
         },
-        &quot;quantity&quot;: 2.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">2.0</span>,
+        <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"un"</span>
     },
     {
-        &quot;description&quot;: &quot;Second row&quot;,
-        &quot;price&quot;: {
-            &quot;price&quot;: &quot;23.4567&quot;,
-            &quot;vat&quot;: 22.0
+        <span class="hljs-attr">"description"</span>: <span class="hljs-string">"Second row"</span>,
+        <span class="hljs-attr">"price"</span>: {
+            <span class="hljs-attr">"price"</span>: <span class="hljs-string">"23.4567"</span>,
+            <span class="hljs-attr">"vat"</span>: <span class="hljs-number">22.0</span>
         },
-        &quot;quantity&quot;: 1.0,
-        &quot;unit&quot;: &quot;un&quot;
+        <span class="hljs-attr">"quantity"</span>: <span class="hljs-number">1.0</span>,
+        <span class="hljs-attr">"unit"</span>: <span class="hljs-string">"un"</span>
     }
 ]
-</code></pre>
+</span></code></pre>
 <p>These invoices will be used only while generating balance reports at the end of the month.</p>
 <h2><a class="anchor" aria-hidden="true" id="recap-for-publishing"></a><a href="#recap-for-publishing" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Recap for Publishing</h2>
 <p>Before publishing your application into the marketplace, please make sure that these requirements are satisfied:</p>
 <ul>
 <li>appropriate <strong>translations</strong> are provided for the <a href="/docs/syndication.html#providing-end-user-instructions"><strong>end-user-instructions</strong></a>, for each marketplace languages (e.g. English, Italian, etc.)</li>
-<li><strong>no HTML links</strong> are present into the end-user instructions text (if you need to provide the end-users a link, please create a specific <em>endpoint</em> for it; e.g. “reset password”)</li>
+<li><strong>no HTML links</strong> are present into the end-user instructions text (if you need to provide the end-users a link, please create a specific <em>endpoint</em> for it; e.g. &quot;reset password&quot;)</li>
 <li>at least one <a href="/docs/syndication.html#providing-endpoints"><strong>application endpoint</strong></a> is provided</li>
 <li>all the endpoints must have an appropriate <strong>category</strong></li>
 <li>all the endpoints must be <strong>accessible via HTTPS</strong> due to the nature of data that business applications contains</li>
 </ul>
-<p>During a purchasing process, a crystal-clear communication is a crucial point. For this reason, please <strong>don’t send email</strong> to the customer after the provisioning of his <em>tenant</em> in your application: Cloudesire will notify him for you.</p>
+<p>During a purchasing process, a crystal-clear communication is a crucial point. For this reason, please <strong>don't send email</strong> to the customer after the provisioning of his <em>tenant</em> in your application: Cloudesire will notify him for you.</p>
 <p>If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific <em><a href="/docs/syndication.html#providing-end-user-instructions">end-user instructions</a>.</em></p>
 <h3><a class="anchor" aria-hidden="true" id="auto-login"></a><a href="#auto-login" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Auto-Login</h3>
 <p>It is great to enable your customers to <strong>auto-login</strong> to your application without providing any credentials.</p>
-<p>For instance, it means that your customers will not need to remember credentails for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to your customers to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.</p>
-<p>To achieve this goal, we strongly suggest to add an <strong>authorization token</strong> to the endpoint to access the application. In this way, you can recognize customers and enable automatical log-in to your application.</p>
+<p>For instance, it means that your customers will not need to remember credentials for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to your customers to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.</p>
+<p>To achieve this goal, we strongly suggest to add an <strong>authorization token</strong> to the endpoint to access the application. In this way, you can recognize customers and enable automatic log-in to your application.</p>
 <p>If you follow this flow, you do not need to specify user credentials into end-user instructions.</p>
-<p><strong>TIPS:</strong></p>
+<blockquote>
 <p>In order to see your product visible on the marketplace, it should at least have one <strong>Plan</strong> set to <em>published</em>.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="deployed.html">← Deployed applications onboarding</a><a class="docs-next button" href="stacks.html">Supported languages, databases and cloud providers →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#syndicated-applications-workflow-of-new-orders-and-provisioning">Syndicated Applications: workflow of new orders and provisioning</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li><li><a href="#the-test-events-feature">The “Test Events” feature</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#api-authentication-requirements">API Authentication requirements</a></li><li><a href="#first-steps">First steps</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisiong-status-to-deployed">Set provisiong status to DEPLOYED</a></li><li><a href="#any-problem-during-provisioning-of-your-tenant">Any problem during provisioning of your tenant?</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint">Securing your endpoint</a></li><li><a href="#validating-payload-signature">Validating payload signature</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade">Plan Upgrade</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-for-publishing">Recap for Publishing</a><ul class="toc-headings"><li><a href="#auto-login">Auto-Login</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/en/index.html">Documentation Index</a><a href="/docs/en/api.html">API Reference</a><a href="/docs/en/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</blockquote>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="deployed.html">← Deployed applications onboarding</a><a class="docs-next button" href="stacks.html">Supported languages, databases and cloud providers →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#syndicated-applications-workflow-of-new-orders-and-provisioning">Syndicated Applications: workflow of new orders and provisioning</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li><li><a href="#the-test-events-feature">The &quot;Test Events&quot; feature</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#api-authentication-requirements">API Authentication requirements</a></li><li><a href="#first-steps">First steps</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisioning-status-to-deployed">Set provisioning status to DEPLOYED</a></li><li><a href="#problems-during-provisioning-of-your-tenant">Problems during provisioning of your tenant</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint">Securing your endpoint</a></li><li><a href="#validating-payload-signature">Validating payload signature</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade">Plan Upgrade</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-for-publishing">Recap for Publishing</a><ul class="toc-headings"><li><a href="#auto-login">Auto-Login</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/en/index.html">Documentation Index</a><a href="/docs/en/api.html">API Reference</a><a href="/docs/en/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
