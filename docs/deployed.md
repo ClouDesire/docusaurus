@@ -6,7 +6,7 @@ sidebar_label: Deployed applications
 
 In this section you will understand how to onboard deployed applications. Please make sure you read this section before you onboard your deployed application. Please note that onboarding of deployed and syndicated applications is not the same.
 
-The onboarding process starts after creating a new “Product” in the Marketplace Catalog, as described [here](onboarding.md#applications-catalogue).
+The onboarding process starts after creating a new "Product" in the Marketplace Catalog, as described [here](onboarding.md#applications-catalogue).
 
 Cloudesire supports [custom ZIP files](deployed.md#zip-packaging) to provide applications as a package, but we strongly recommend [Docker](deployed.md#docker-packaging) to onboard a new deployed  application.
 
@@ -16,18 +16,18 @@ Cloudesire will provision on the cloud a new VM containing a running instance of
 
 Software vendors can specify for each product:
 
-* one or more “**Packages**” (namely Docker Images or ZIP Packages, containing the application source code)
-* one or more “**Modules**” (namely a composition of **one or more Packages**, which will be installed in a VM on the cloud)
+* one or more "**Packages**" (namely Docker Images or ZIP Packages, containing the application source code)
+* one or more "**Modules**" (namely a composition of **one or more Packages**, which will be installed in a VM on the cloud)
 
-For example, an application can be described specifying a _Module_ (with specific **cloud resources requirements**) which is a _composition_ of a _back-end Package_ (e.g. a Java module exposing REST API plus a PostgreSQL database) and a _front-end Package_ (e.g. a simple and “light” NodeJs application).
+For example, an application can be described specifying a _Module_ (with specific **cloud resources requirements**) which is a _composition_ of a _back-end Package_ (e.g. a Java module exposing REST API plus a PostgreSQL database) and a _front-end Package_ (e.g. a simple and "light" NodeJs application).
 
 ### Packages
 
-To access the list of the available Packages, click on the “_Catalog_” \> “_Packages_” menu item on the left.
+To access the list of the available Packages, click on the "_Catalog_" \> "_Packages_" menu item on the left.
 
 ![Vendors Control Panel: Packages](/img/docs/control_panel_packages.png "Vendors Control Panel: Packages")
 
-To create a new Package using the [ZIP Packaging](deployed.md#zip-packaging) methodology click on the “_New_” button.
+To create a new Package using the [ZIP Packaging](deployed.md#zip-packaging) methodology click on the "_New_" button.
 
 ![Vendors Control Panel: ZIP](/img/docs/control_panel_packages_ZIP.png "Vendors Control Panel: ZIP")
 
@@ -39,11 +39,11 @@ For each Package, vendors must provide the following information:
 * **ZIP package**: a ZIP package following the specifications provided in [this section](deployed.md#zip-packaging).
 * **Version**: whenever the vendor provides a new Package, Cloudesire assigns to it a new _version number_ and stores the previous one. The older Application Packages versions can be used by the vendor in order to execute automatic **downgrades** of running applications.
 
-When a Package is created, it can be linked to a specific _Product Plan_, simply selecting it from the list and clicking on the “_Attach Package to Module_” button. In this way a new **Module** will be created (if not existent) or the Package will be added to an already existent Module.
+When a Package is created, it can be linked to a specific _Product Plan_, simply selecting it from the list and clicking on the "_Attach Package to Module_" button. In this way a new **Module** will be created (if not existent) or the Package will be added to an already existent Module.
 
 ![Vendors Control Panel: Packages-Modules Links](/img/docs/control_panel_packages_modules_links.png "Vendors Control Panel: Packages-Modules Links")
 
-To simultaneously create one or more Package, corresponding to a **composition of Docker images**, click on the “_New Docker Compose_” button. More details on the Docker Packaging are available in [this section](deployed.md#docker-packaging).
+To simultaneously create one or more Package, corresponding to a **composition of Docker images**, click on the "_New Docker Compose_" button. More details on the Docker Packaging are available in [this section](deployed.md#docker-packaging).
 
 ![Vendors Control Panel: Packages - Docker](/img/docs/control_panel_packages_Docker.png "Vendors Control Panel: Packages - Docker")
 
@@ -51,11 +51,11 @@ In this case, a _Docker Compose_ string must be provided, and the vendor can als
 
 ### Modules
 
-The list of all available modules is provided in the “_Catalog_” \> “_Modules_” section.
+The list of all available modules is provided in the "_Catalog_" \> "_Modules_" section.
 
 ![Vendors Control Panel: Modules](/img/docs/control_panel_modules.png "Vendors Control Panel: Modules")
 
-By selecting a specific Module and clicking on the “_Edit_” button on the top-right of the page, software vendors can specify some parameters.
+By selecting a specific Module and clicking on the "_Edit_" button on the top-right of the page, software vendors can specify some parameters.
 
 ![Vendors Control Panel: Modules - VM Sizing](/img/docs/control_panel_modules_VM.png "Vendors Control Panel: Modules - VM Sizing")
 
@@ -66,9 +66,9 @@ By selecting a specific Module and clicking on the “_Edit_” button on the to
 
 By clicking on a specific Package name attached to a certain Module, three buttons are shown on the top-right of the interface:
 
-* “_Promote to Stable_“: to be used to declare the current Package as “stable” in the Module
-* “_Show Advanced_“: to open the Advanced Settings pop-up (see below)
-* “_Unlink_“: to unlink the Package from the Module
+* "_Promote to Stable_": to be used to declare the current Package as "stable" in the Module
+* "_Show Advanced_": to open the Advanced Settings pop-up (see below)
+* "_Unlink_": to unlink the Package from the Module
 
 ![Vendors Control Panel: Modules - advanced setttings](/img/docs/control_panel_modules_advanced.png "Vendors Control Panel: Modules - advanced setttings")
 
@@ -92,7 +92,7 @@ For this reason, vendors need to specify the file-system path containing the app
 For each installed application, Cloudesire provides a default Endpoint to allow end-users ( customers) to access the application.
 Furthermore, vendors can specify one or more **custom** access URLs that will be linked to each specific [Module](deployed.md#modules) of a given Product (e.g. _/backend_, or _/stats_, etc.).
 
-To add a new Endpoint, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Endpoint Patterns_” tab it’s possible to fill all the required fields (a Description, a Category and a Value) and click on the “_Add_” button to finish.
+To add a new Endpoint, you need to access to the "_Modules_" section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the "_Show Advanced_" button on the top-right of the page. Furthermore, by accessing to the "_Endpoint Patterns_" tab it's possible to fill all the required fields (a Description, a Category and a Value) and click on the "_Add_" button to finish.
 
 ![Vendors Control Panel - Endpoints](/img/docs/control_panel_endpoints.png "Vendors Control Panel - Endpoints")
 
@@ -102,7 +102,7 @@ To add a new Endpoint, you need to access to the “_Modules_” section (more d
 
 You can even choose to permit the _end-user_ to the **edit** some of those variables.
 
-To add a new Environment Variable, vendors need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. By accessing to the “_Environment Variables_” tab vendors can fill all the required fields (the _Name_ and the _Value_) and click on the “_Add_” button to finish.
+To add a new Environment Variable, vendors need to access to the "_Modules_" section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the "_Show Advanced_" button on the top-right of the page. By accessing to the "_Environment Variables_" tab vendors can fill all the required fields (the _Name_ and the _Value_) and click on the "_Add_" button to finish.
 
 ![Vendors Control Panel - Environment Variables](/img/docs/control_panel_environment_variables.png "Vendors Control Panel - Environment Variables")
 
@@ -167,14 +167,14 @@ Before you start onboarding  an application to the marketplace, please take a lo
 
 In order to deploy automatically an Application, a ZIP [package](deployed.md#packages) is required, containing:
 
-* the web application’s source code or the packaged artifacts;
+* the web application's source code or the packaged artifacts;
 * the database data that the application needs to be fully functional (end-users should not do any installation wizard requiring technical skills).
 
 The ZIP package structure must meet the following general criteria:
 
 * a _sql_ folder if using MySQL, Postgres or ASPNET;
 * a _mongodb_ folder if using MongoDB;
-* a folder with the web application’s code, depending on the language and/or stack used (follow the links below for your application stack).
+* a folder with the web application's code, depending on the language and/or stack used (follow the links below for your application stack).
 
 Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section in order to **avoid data loss** in your application.
 
@@ -192,7 +192,7 @@ We support several application stack, but each application stack has specific as
 
 ### Database-specific requirements
 
-An application could automatically initialize the database schema at the first run, otherwise it’s possible to insert a database dump into the zip. We adopted the [flyway](http://flywaydb.org/) database migration tool, that supports schema versioning by simply creating multiple .sql file starting with the version number. For example:
+An application could automatically initialize the database schema at the first run, otherwise it's possible to insert a database dump into the zip. We adopted the [flyway](http://flywaydb.org/) database migration tool, that supports schema versioning by simply creating multiple .sql file starting with the version number. For example:
 
     V1__initial_schema.sql
     V2__added_field.sql
@@ -207,7 +207,7 @@ For more information, refer directly to the [flyway documentation](http://flyway
 
 ### Post-deploy script
 
-It’s possible to automatically execute custom commands on the last stage of the deploy, just in case you need some special hook before the application is ready.
+It's possible to automatically execute custom commands on the last stage of the deploy, just in case you need some special hook before the application is ready.
 
 Just put in the application folder a file named cloudesire.build, starting with a standard [shebang](http://en.wikipedia.org/wiki/Shebang_(Unix)), e.g.:
 
@@ -242,7 +242,7 @@ And this is a collection of the most famous open-source applications, already av
 
 Before getting hands dirty, take a look at the [understanding Docker](https://docs.docker.com/introduction/understanding-docker/) page.
 
-When you’re ready, take a look to our [integration facilities](onboarding.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and on-board your application via Docker Image(s) without any worry (also simulating the purchase of your product using demo credit cards).
+When you're ready, take a look to our [integration facilities](onboarding.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and on-board your application via Docker Image(s) without any worry (also simulating the purchase of your product using demo credit cards).
 
 The first step is to install the _Docker_ command-line tool on your development machine:
 
@@ -254,7 +254,7 @@ You can find a lot of easy to read documentation on the official [Docker User Gu
 
 Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section to **avoid data loss** in your application.
 
-Once a Docker image is created, the only think you need to do to [onboard](onboarding.md) your application in Cloudesire is to create a _Package_ (linked to your application), then select “_Docker_” in the “_Stacks_” input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in [this section](deployed.md/#packages).
+Once a Docker image is created, the only think you need to do to [onboard](onboarding.md) your application in Cloudesire is to create a _Package_ (linked to your application), then select "_Docker_" in the "_Stacks_" input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in [this section](deployed.md/#packages).
 
 ![Vendors Control Panel - Docker Image](/img/docs/control_panel_docker_image.png "Vendors Control Panel - Docker Image")
 
@@ -266,20 +266,22 @@ A lot of useful information about writing a `Dockerfile` is available at [Best p
 
 A simple example of a `Dockerfile` follows:
 
-    FROM    centos:centos6
-    
-    # Enable EPEL for Node.js
-    RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-    # Install Node.js and npm
-    RUN     yum install -y npm
-    
-    # Bundle app source
-    COPY . /src
-    # Install app dependencies
-    RUN cd /src; npm install
-    
-    EXPOSE  8080
-    CMD ["node", "/src/index.js"]
+```dockerfile
+FROM    centos:centos6
+
+# Enable EPEL for Node.js
+RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
+# Install Node.js and npm
+RUN     yum install -y npm
+
+# Bundle app source
+COPY . /src
+# Install app dependencies
+RUN cd /src; npm install
+
+EXPOSE  8080
+CMD ["node", "/src/index.js"]
+```
 
 You need to choose a good base image to start from (`FROM` keyword) on [Docker Hub](https://hub.docker.com/).
 
@@ -336,7 +338,7 @@ For a complete list of environment variables take a look in the [available envir
 
 #### SSL support
 
-Cloudesire manages automatically a **reverse proxy** in front of your application, so you **don’t need to include HTTPS support** in the container.
+Cloudesire manages automatically a **reverse proxy** in front of your application, so you **don't need to include HTTPS support** in the container.
 
 ### Private Repository
 
@@ -344,42 +346,32 @@ ClouDesire offers a private repository where vendors can privately push their im
 
 First, login with your user credentials on the Docker cli:
 
-    docker login docker.
-    
+```bash
+docker login docker.domain.tld
+```
 
 Images should be tagged with a pattern like:
 
-    docker.//:
-    
+```docker
+docker.domain.tld/identifier/image-name:tag
+```
 
-_Note_: check your company-indentifier in the edit profile section of the control panel.
+> Find your company identifier in the edit profile section of the control panel
 
-Tag could be assigned to an existing image with:
+Example of commands to push an image to the appshop.cloud marketplace:
 
-    docker tag : docker.//:
-    
+```bash
+docker login docker.appshop.cloud
+docker build -t myimage:1.0 .
+docker tag myimage:1.0 docker.appshop.cloud/mycompany/myimage:1.0
+docker push docker.appshop.cloud/mycompany/myimage:1.0
+```
 
-or a new image can be built with:
-
-    docker build -t docker.//: .
-
-If successful, the image can be pushed to the private repository:
-
-    docker push docker.//:
-    
-
-Example of commands to push an image to the _appshop.cloud_ marketplace
-
-    docker login docker.appshop.cloud
-    docker build -t myimage:1.0 .
-    docker tag myimage:1.0 docker.appshop.cloud/mycompany/myimage:1.0
-    docker push docker.appshop.cloud/mycompany/myimage:1.0
-
-At this point, an application can be configured using
-
-    docker.//:
-
-in the Cloudesire [onboarding interfaces](onboarding.md), simply creating a [Package](deployed.md#packages) (linked to your application) and selecting “_Docker_” in the “_Stacks_” input-box, as described in [this section](deployed.md#technical-onboarding).
+At this point, an application can be configured in the Cloudesire
+[onboarding interfaces](onboarding.md), simply creating a
+[Package](deployed.md#packages) (linked to your application) and
+selecting "_Docker_" in the "_Stacks_" input-box, as described in
+[this section](deployed.md#technical-onboarding).
 
 ## Stack Parameters
 
@@ -395,28 +387,28 @@ When defining a [Docker](deployed.md#docker-packaging) or [ZIP](deployed.md#zip-
 
 ### How to add Stack Parameters
 
-To add a new Stack Parameter, you need to access to the “_Modules_” section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the “_Show Advanced_” button on the top-right of the page. Furthermore, by accessing to the “_Stack Parameters Values_” tab it’s possible to select a specific parameter specifying a value for it.  When you’re done, click on the “_Add_” button to finish.
+To add a new Stack Parameter, you need to access to the "_Modules_" section (more details [here](deployed.md#modules)), select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)) and then click on the "_Show Advanced_" button on the top-right of the page. Furthermore, by accessing to the "_Stack Parameters Values_" tab it's possible to select a specific parameter specifying a value for it.  When you're done, click on the "_Add_" button to finish.
 
 ![Vendors Control Panel - Stack Parameters](/img/docs/control_panel_stack_parameters.png "Vendors Control Panel - Stack Parameters")
 
 ## Sandboxing
 
-Once finished the technical onboarding of your deployed app, it’s time to test its self-provisioning on the cloud!
+Once finished the technical onboarding of your deployed app, it's time to test its self-provisioning on the cloud!
 
-Let’s start by selecting a plan, and by clicking on the corresponding “Sandbox” button in the “Actions” column; then select one of the supported cloud providers on which you want to start the testing deploy of your app.
+Let's start by selecting a plan, and by clicking on the corresponding "Sandbox" button in the "Actions" column; then select one of the supported cloud providers on which you want to start the testing deploy of your app.
 
-[![](/img/docs/vendors-sandboxing-1024x406.png)](/img/docs/vendors-sandboxing.png)
+![Launch sandbox](/img/docs/vendors-sandboxing.png)
 
-The provisioning process will start immediately; it will require few minutes, depending on the cloud provider performances, the “weight” of your app, and other factors.
+The provisioning process will start immediately; it will require few minutes, depending on the cloud provider performances, the "weight" of your app, and other factors.
 
-You’ll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:
+You'll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:
 
 [![](/img/docs/vendors-running-instance-570x1024.jpg)](/img/docs/vendors-running-instance.jpg)
 
 The following elements are available:
 
 * **General Info:** the name of the product, its logo, the name of the vendor, the current deployment status
-* **Subscription Details:** the subscription type (which is _Sandbox_ in this case, but will be _Normal_ for the real purchased instances of the application), the creation / expiration date, the customer name (which is “dummy” for Sandbox orders)  and 2 separate sections for allowing to access the related invoices and/or orders
+* **Subscription Details:** the subscription type (which is _Sandbox_ in this case, but will be _Normal_ for the real purchased instances of the application), the creation / expiration date, the customer name (which is "dummy" for Sandbox orders)  and 2 separate sections for allowing to access the related invoices and/or orders
 * **VM Details:** the sizing (CPU, RAM) and the public IP address of the virtual instance hosting the running application
 * **Resource usage:** 2 gauges for highlighting the current Disk Space and Bandwidth usage
 * **Application Endpoints:** the actual values of the [application endpoints](deployed.md#endpoints) previously defined by the vendor

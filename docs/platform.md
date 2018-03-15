@@ -30,7 +30,7 @@ When a customer buys an application, Cloudesire creates an _order_ that contains
 
 ### Subscription
 
-Each order, Cloudesire creates a _subscription_ that has a specific lifetime, depending on the order duration. In the case of renewal of a subscription, a new order is created (“renewal order”).
+Each order, Cloudesire creates a _subscription_ that has a specific lifetime, depending on the order duration. In the case of renewal of a subscription, a new order is created ("renewal order").
 
 ### Invoice
 
@@ -80,7 +80,7 @@ In this section you can find a short description of the main Cloudesire modules.
 
 The main components can be summarized as follows:
 
-* **Cloudesire Engine**: it represents the “core” of the platform and consists in a set of multithread modules that uses messaging queues to enable asynchronous, distributed and redundant messaging among components, allowing enterprise integration patterns. Each modules expose a **RESTful API layer** that is used by the others and by the front-end interfaces (_Marketplace_ and _Back-Office_).
+* **Cloudesire Engine**: it represents the "core" of the platform and consists in a set of multithread modules that uses messaging queues to enable asynchronous, distributed and redundant messaging among components, allowing enterprise integration patterns. Each modules expose a **RESTful API layer** that is used by the others and by the front-end interfaces (_Marketplace_ and _Back-Office_).
 * **Cloudesire Back-Office**: a responsive web application that allows users to manage different entities, according to their role: customers can see their orders status and check availability of their instances; vendors can manage their application catalogue, active customers, orders and running instances of their applications; administrator can manage the entire platform and receive updates from the monitoring and alerting systems.
 * **Cloudesire Marketplace**: a responsive web application where a software vendor can publish its own applications, along with others vendors apps. Customers can browse the catalogue, compare products, rate and comment them, place orders or try an application (if the vendor allows it).
 
@@ -110,7 +110,7 @@ Each Cloudesire invoice contains the following items:
 * _setup costs_: optional application one-off setup cost
 * _total_: application recurrent licensing cost
 * [_pay-per-use application metrics_](onboarding.md#application-metrics) costs: specifying a unit-price for a custom metric allows Cloudesire to calculate the related incomes in a certain period of time (billing period) and issue an invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous billing period
-* [_extra-resources_](platform.md#extra-resources) _costs_: Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
+* [_extra-resources_](platform.md#extra-resources) _costs_: Cloudesire supports 3 different pricing models for "extra-resources", based on quantity usages. eg. 10 days of Technical Support, 5 hardware components to be used together with the application, etc.
 * _IaaS_ _costs_: VM instance, bandwidth, disk space
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
@@ -123,8 +123,8 @@ These are the main billing rules followed by the platform:
 
 * _application licensing costs_: at the beginning of each billing period (eg. the first day of each month) all the invoices containing the application licensing costs and the IaaS costs are issued in advance to customers at the beginning of each billing period (eg. the first day of each month). The one-off application _setup cost_ is charged only in the first billing period;
 * _pay-per-use and extra resources costs:_ invoices containing the [_pay-per-use application metrics_](onboarding.md#application-metrics) and _extra-resources_ costs are issued to customers at the end of the billing period (eg. the last day of every month) ;
-* _trial orders_: if an application is offered in **trial mode**, when customers use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS costs. These costs are subtracted from the vendors’ revenues in the [_Balance Report_](platform.md#glossary-balance-report);
-* _sandbox orders_: when the vendor executes a **deployment test** before offering his application in the Marketplace (_sandbox_), Cloudesire issues an invoice for the related IaaS costs. Again, these costs are subtracted from the vendor’s revenues in the [_Balance Report_](platform.md#glossary-balance-report).
+* _trial orders_: if an application is offered in **trial mode**, when customers use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS costs. These costs are subtracted from the vendors' revenues in the [_Balance Report_](platform.md#glossary-balance-report);
+* _sandbox orders_: when the vendor executes a **deployment test** before offering his application in the Marketplace (_sandbox_), Cloudesire issues an invoice for the related IaaS costs. Again, these costs are subtracted from the vendor's revenues in the [_Balance Report_](platform.md#glossary-balance-report).
 
 #### Level of Configurability
 
@@ -134,13 +134,13 @@ These are the main billing rules followed by the platform:
 
 ### Extra-Resources pricing models
 
-Cloudesire supports 3 different pricing models for “extra-resources”, based on quantity usages: tiered scheme, volume scheme and stairstep scheme..
+Cloudesire supports 3 different pricing models for "extra-resources", based on quantity usages: tiered scheme, volume scheme and stairstep scheme..
 
 #### Tiered scheme
 
 Tiered scheme means that every unit charge is calculated with its own tier price.
 
-With tiered pricing, once you fill up a ‘tier’ you move to the next tier and start charging a different price.
+With tiered pricing, once you fill up a ‘tier' you move to the next tier and start charging a different price.
 
 Tiered pricing is different from volume pricing because tiered pricing defines a price per unit withing a range, while volume pricing defines a price for all units within a range.
 
@@ -179,7 +179,7 @@ Example:
 
 Quantity bought 15 users, total amount: € 100,00
 
-The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](platform.md#product-plan)
+The following screenshot shows an example of _Extra Resources_ linked to a specific [Product Plan.](platform.md#productplan)
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
@@ -192,7 +192,7 @@ Cloudesire can manage orders with **automatic renewal.** In this case, when a su
 If _automatic renewal_ is disabled:
 
 * a few days before the subscription expiration, Cloudesire notifies the customer to remind the expiration and creates an invoice that the customer needs to pay to use the application after the subscription expiration
-* if the customer doesn’t renew his subscription (i.e. doesn’t pay the related invoice), Cloudesire stops (or better _suspends_) the related application’s instance and waits some days (the precise number is configurable in the platform) for the payment. If after this period the customer doesn’t pay the invoice, Cloudesire destroys the application instance and the customer will no longer be able to access the application.
+* if the customer doesn't renew his subscription (i.e. doesn't pay the related invoice), Cloudesire stops (or better _suspends_) the related application's instance and waits some days (the precise number is configurable in the platform) for the payment. If after this period the customer doesn't pay the invoice, Cloudesire destroys the application instance and the customer will no longer be able to access the application.
 
 ### Coupons
 
@@ -200,21 +200,21 @@ System Administrators, Vendors and Resellers can generate a number of coupons fo
 
 Each coupon will have a unique _hashcode_ and a _period of validity_. The hashcode is what customers need to enter in the coupon field to redeem the coupon when purchasing an application. 
 
-It’s possible to specify the e-mail address of a specific user and send the coupon only to him. If the coupon is created for a specific user, the platform sends him a communication containing the coupon. It’s also possible to distribute coupons outside the platform: users only need to know the hashcode to redeem the coupon.
+It's possible to specify the e-mail address of a specific user and send the coupon only to him. If the coupon is created for a specific user, the platform sends him a communication containing the coupon. It's also possible to distribute coupons outside the platform: users only need to know the hashcode to redeem the coupon.
 
 Cloudesire allows to generate 2 types of coupons:
 
 * **discount**: when the customer uses this kind of coupon, a discount is applied to the application price;
-* **fixed price**: when the customer uses this kind of coupon, a fixed price (usually lower) overrides the original one for the given application version (plan). A typical use case is: the vendor doesn’t want to publish a public price for the application and wants to choose a different price for each customer.
+* **fixed price**: when the customer uses this kind of coupon, a fixed price (usually lower) overrides the original one for the given application version (plan). A typical use case is: the vendor doesn't want to publish a public price for the application and wants to choose a different price for each customer.
 
 Coupons can be:
 
-* “**one-time only**”, meaning that each coupon can only be used one time and is not reusable (even if it is transferable from one customer to another)
-* “**reusable**“, meaning that each coupon can be used more times (until its expiration date)
+* "**one-time only**", meaning that each coupon can only be used one time and is not reusable (even if it is transferable from one customer to another)
+* "**reusable**", meaning that each coupon can be used more times (until its expiration date)
 
 Furthermore, Cloudesire supports an additional type of coupon:
 
-* **extended trials**: when the customer uses this kind of coupon, the default _trial period length_ (e.g. 10 days) will be replaced with the one specified in the coupon (e.g. 30 days). A coupon of this type remains valid for all the customers receiving this coupon code. This rule does not override the general rule “only one trial for each product for each customer”. For each _extended trials_ coupon, the system administrator can allocate a budget (or _plafond_) which will be decreased – by a certain amount – every time it will be used by a customer.
+* **extended trials**: when the customer uses this kind of coupon, the default _trial period length_ (e.g. 10 days) will be replaced with the one specified in the coupon (e.g. 30 days). A coupon of this type remains valid for all the customers receiving this coupon code. This rule does not override the general rule "only one trial for each product for each customer". For each _extended trials_ coupon, the system administrator can allocate a budget (or _plafond_) which will be decreased – by a certain amount – every time it will be used by a customer.
 
 ### Bundles
 
@@ -222,9 +222,9 @@ Cloudesire allows System Administrators, Vendors, Distributors and Resellers to 
 
 Of course a Vendor can only create bundles containing products belonging to his own catalog (the same for the Distributors and Resellers).
 
-A bundle has the same “marketing & legal” attributes of a _normal_ product (icon, descriptions, feature list, FAQ, screenshots, video, ToS, Privacy Policy, etc.). On top the platform allows to create several **plans** for the same bundle (e.g. _silver_, _gold_, _platinum_, etc.).
+A bundle has the same "marketing & legal" attributes of a _normal_ product (icon, descriptions, feature list, FAQ, screenshots, video, ToS, Privacy Policy, etc.). On top the platform allows to create several **plans** for the same bundle (e.g. _silver_, _gold_, _platinum_, etc.).
 
-Each _bundle plan_ is defined as a composition of _products plans. _Using a simple interface it’s possible to specify – for each of them – a **discount percentage**; in this way, the total price of a _bundle plan_ is calculated as the sum of all the discounted prices of all the _products plans _“attached” to it.
+Each _bundle plan_ is defined as a composition of _products plans. _Using a simple interface it's possible to specify – for each of them – a **discount percentage**; in this way, the total price of a _bundle plan_ is calculated as the sum of all the discounted prices of all the _products plans _"attached" to it.
 
 [![](/img/docs/bundles-4-300x143.png)](/img/docs/bundles-4.png)
 
@@ -236,8 +236,8 @@ On the Marketplace, a bundle is shown as a normal product, highlighting the disc
 
 * vendors can specify a certain amount of prepaid bandwidth for each application they sell in the Cloudesire Marketplace
 * Cloudesire manages the bandwidth price for each supported cloud provider
-* if the vendor doesn’t set a specific prepaid bandwidth amount to his application, Cloudesire associates a default prepaid bandwidth package (eg. 10GB)
-* during the deployed application lifetime, if the bandwidth usage exceeds the 90% of the established limit, Cloudesire sends an e-mail notification to the customer, asking for a **bandwidth upgrade order**. If the customer doesn’t execute the upgrade, Cloudesire prevents access to the application.
+* if the vendor doesn't set a specific prepaid bandwidth amount to his application, Cloudesire associates a default prepaid bandwidth package (eg. 10GB)
+* during the deployed application lifetime, if the bandwidth usage exceeds the 90% of the established limit, Cloudesire sends an e-mail notification to the customer, asking for a **bandwidth upgrade order**. If the customer doesn't execute the upgrade, Cloudesire prevents access to the application.
 
 ### Disk Space Management
 
@@ -256,23 +256,23 @@ On the Marketplace, a bundle is shown as a normal product, highlighting the disc
 
 * to date, the supported payment gateway are **PayPal** and **Stripe**
 * after the sale of an application, when the customer pays the related invoice, Cloudesire automatically starts the application deployment process on the selected cloud provider
-* if a problem occurs during the interaction with the payment gateway, Cloudesire allows the platform administrator to manually set an invoice as “paid” (in order to start the deployment process). This feature can be also useful to manage **bank transfer** payments (in this case, when the administrator sets an invoice as “paid” he can provide the _deposit slip_ data using a specific input field)
+* if a problem occurs during the interaction with the payment gateway, Cloudesire allows the platform administrator to manually set an invoice as "paid" (in order to start the deployment process). This feature can be also useful to manage **bank transfer** payments (in this case, when the administrator sets an invoice as "paid" he can provide the _deposit slip_ data using a specific input field)
 
 ### Self-Billing
 
 In some particular business scenarios it should be useful to to let some vendors to issue invoices from themselves, without using the Cloudesire billing engine.
 
-The platform allows the admins to mark a specific product / plan as “self-billed”.
+The platform allows the admins to mark a specific product / plan as "self-billed".
 
-In this case, when the user purchases a product, the platform “begins” the provisioning and doesn’t ask the customer to pay anything.
+In this case, when the user purchases a product, the platform "begins" the provisioning and doesn't ask the customer to pay anything.
 
-The real provisioning starts only when the vendor clicks on a specific button on the control panel for “declaring” (and taking the responsibility) that the “invoice is paid” and the application can really be provisioned to the end-user.
+The real provisioning starts only when the vendor clicks on a specific button on the control panel for "declaring" (and taking the responsibility) that the "invoice is paid" and the application can really be provisioned to the end-user.
 
 The platform logs that the vendor should pay the fee back to the platform owner.
 
 The same functionality is also available for the resellers.
 
-A reseller can can mark a _sell-out price_ as “self-billed” for exposing the related product into his _reseller-marketplace_ without enabling the payment functionalities on it.
+A reseller can can mark a _sell-out price_ as "self-billed" for exposing the related product into his _reseller-marketplace_ without enabling the payment functionalities on it.
 
 ### Application Provisioning Module
 
@@ -280,14 +280,14 @@ A reseller can can mark a _sell-out price_ as “self-billed” for exposing the
 
 The deployment process on a specific cloud provider follows this workflow:
 
-* Cloudesire calls a cloud provider chosen by the vendor asking for a **VM instantiation** (through the cloud provider APIs), having a specific “size” defined by the vendor (i.e. 2 cores, 1GB RAM)
+* Cloudesire calls a cloud provider chosen by the vendor asking for a **VM instantiation** (through the cloud provider APIs), having a specific "size" defined by the vendor (i.e. 2 cores, 1GB RAM)
 * Cloudesire attaches a **data disk** to the previously created VM, having the size defined by the vendor
-* Cloudesire installs all the **application stack** (databases, application servers, interpreters, libraries, etc.) needed by the vendor’s application for the correct execution (the application stack is declared by the vendor in the [onboarding process](onboarding.md))
-* Cloudesire installs the **vendor’s application** and initializes the related databases into the VM deployed during the steps above mentioned
+* Cloudesire installs all the **application stack** (databases, application servers, interpreters, libraries, etc.) needed by the vendor's application for the correct execution (the application stack is declared by the vendor in the [onboarding process](onboarding.md))
+* Cloudesire installs the **vendor's application** and initializes the related databases into the VM deployed during the steps above mentioned
 * Cloudesire creates a specific **DNS entry** in order to make the application reachable by the customer (e.g. https://application\_name-order\_id.apps.cloudesire.com)
 * the end user (customer of the given application) receives a notification (via email and in its own control panel interface) with all the instructions needed to access its own instance of the application he paid for (URL, default login and password)
 
-The deployment process of **legacy applications** (i.e. MS Windows desktop executables) that doesn’t have an automatic and _unattended_ setup follows a different workflow: in this scenario, a pre-configured windows VM template is cloned by Cloudesire for each order. On the opposite, if the Windows desktop application provides an unattended setup, Cloudesire can follow all the previously described workflow, but the URL provided to the customer refers to a **remote desktop connection** (i.e. VNC, rdesktop)
+The deployment process of **legacy applications** (i.e. MS Windows desktop executables) that doesn't have an automatic and _unattended_ setup follows a different workflow: in this scenario, a pre-configured windows VM template is cloned by Cloudesire for each order. On the opposite, if the Windows desktop application provides an unattended setup, Cloudesire can follow all the previously described workflow, but the URL provided to the customer refers to a **remote desktop connection** (i.e. VNC, rdesktop)
 
 #### Backupper Module
 
