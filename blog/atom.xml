@@ -2,12 +2,48 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>documentation Blog</title>
-    <updated>2018-03-14T06:00:00Z</updated>
+    <updated>2018-03-15T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2018 Cloudesire.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Continuous Delivery, 5 years later @ Incontro DevOps Italia 2018]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html">
+        </link>
+        <updated>2018-03-15T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This is a <a href="http://www.incontrodevops.it/sessions/continuous-delivery-5-anni-dopo/">presentation</a> I held at the six edition of &quot;<a href="http://www.incontrodevops.it/">Incontro DevOps Italia</a>&quot; conference.</p>
+<blockquote>
+<p>How it evolved, and how it continues to evolve the development of the Cloudesire platform, from code to continuous integration, static code analysis, code review processes, automated production provisioning.</p>
+</blockquote>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="355a760e1c934032bacb7948a111026f" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>http://twitter.com/gionn</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Managing GCP Projects with Terraform @ GDG DevFest Pisa 0.1]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/03/15/devfest-2018.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/03/15/devfest-2018.html">
+        </link>
+        <updated>2018-03-15T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This is a <a href="https://devfest.gdgpisa.it/schedule/day1?sessionId=158">presentation</a> I held at the first alpha edition of &quot;<a href="https://devfest.gdgpisa.it/">GDG DevFest Pisa</a>&quot; conference.</p>
+<blockquote>
+<p>Create and evolve simple and complex Google Cloud architectures with your text editor and Terraform.</p>
+</blockquote>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="bbde8adde10340dbbcad08b94d6b76f8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>http://twitter.com/gionn</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Configure logback log level via environment variables]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/14/logback.html</id>
