@@ -27,3 +27,7 @@ h2.headerTitle {
 .navigationSlider {
   margin-top: 5px;
 }
+
+code {
+  color: blue;
+}
