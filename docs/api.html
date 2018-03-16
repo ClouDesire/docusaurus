@@ -7,27 +7,27 @@
         </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/api.md" target="_blank">Edit</a><h1>REST API Introduction</h1></header><article><div><span><p>The Cloudesire platform expose a REST API and uses <strong>JSON</strong> as data exchange
 format.</p>
 <h2><a class="anchor" aria-hidden="true" id="api-clients"></a><a href="#api-clients" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API Clients</h2>
-<p>When building your custom integration, you may want to start building using one
-of the following resources.</p>
+<p>When developing your custom integration, you may want to start building using one
+of the following resources, depending on your programming language.</p>
 <h3><a class="anchor" aria-hidden="true" id="java"></a><a href="#java" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Java</h3>
-<p>We are maintaining a <a href="https://github.com/ClouDesire/java-api-client">Java client</a>
-based on retrofit to consume our API.</p>
+<p>We are maintaining a an official <a href="https://github.com/ClouDesire/java-api-client">Java client</a>
+based on <a href="http://square.github.io/retrofit/">Retrofit</a> to consume our API.</p>
 <h3><a class="anchor" aria-hidden="true" id="php"></a><a href="#php" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PHP</h3>
 <p>We suggest to use the great <a href="http://guzzle.readthedocs.org/">Guzzle HTTP Library</a>
-to build a client to call our API, but we have a <a href="https://github.com/ClouDesire/examples/tree/master/php-syndication">php-curl example project</a>.</p>
+to build a client to call our API, but we have also a <a href="https://github.com/ClouDesire/examples/tree/master/php-syndication">php-curl example project</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="cli"></a><a href="#cli" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CLI</h3>
-<p>We suggest to use <a href="https://github.com/jakubroztocil/httpie">HTTPie</a> to call our
-API via a command-line tool to experiment.</p>
+<p>We suggest to use <a href="https://github.com/jakubroztocil/httpie">HTTPie</a> via
+command-line to debug and experiment with our API.</p>
 <h2><a class="anchor" aria-hidden="true" id="uri-format"></a><a href="#uri-format" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>URI format</h2>
-<p>To access resources, you need to use an URI with the format:</p>
+<p>To interact with API resources, you need to use an URL with the format:</p>
 <pre><code class="hljs">https://{domain}/api/{resource}/{resourceId}
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="endpoints-https-only"></a><a href="#endpoints-https-only" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoints (HTTPS-only)</h2>
-<p>Every marketplace has a different API endpoint, depending on its environment:</p>
+<h2><a class="anchor" aria-hidden="true" id="domains"></a><a href="#domains" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Domains</h2>
+<p>Every marketplace has a different API <code>domain</code>, depending on its environment:</p>
 <ul>
-<li><strong>production environment</strong>: <em>backend.cloudesire.com</em></li>
-<li><strong>staging-vendors</strong>: <em>staging-vendors.cloudesire.com</em></li>
-<li><strong>italia-startup</strong>: <em>prod-its.cloudesire.com</em></li>
+<li><strong>marketplace.cloudesire.com</strong>: <em>backend.cloudesire.com</em></li>
+<li><strong>staging-vendors.cloudesire.com</strong>: <em>staging-vendors.cloudesire.com</em></li>
+<li><strong>marketplace.italiastartup.it</strong>: <em>prod-its.cloudesire.com</em></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="versioning"></a><a href="#versioning" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Versioning</h2>
 <p>Client should set the request parameter <code>apiVersion</code> globally on every request
@@ -45,29 +45,61 @@ your integration</p>
 <p>The API support two different authentication methods:</p>
 <ul>
 <li>Via username/email and password supplied as standard <a href="http://en.wikipedia.org/wiki/Basic_access_authentication">Basic Authentication</a>;</li>
-<li>Via an authentication token, short-lived or immortal, that can be requested via API.</li>
+<li>Via an authentication token, short-lived or permanent, that can also be requested via API.</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="login-token-temporary-and-permanent"></a><a href="#login-token-temporary-and-permanent" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Login token (temporary and permanent)</h3>
-<p>To request an authentication token you need to send an authenticated <code>GET /login</code> request using your credentials supplied as Basic Authentication:</p>
-<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/login</span> HTTP/1.1
-<span class="hljs-attribute">Authorization</span>: Basic YWRtaW46YWRtaW4=
+<h3><a class="anchor" aria-hidden="true" id="permanent-authentication-token"></a><a href="#permanent-authentication-token" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permanent authentication token</h3>
+<p>You can request a permanent login token in the <em>profile</em> section once logged into
+the marketplace control panel, and this should be the preferred authentication
+method when developing an integration with the Cloudesire API.</p>
+<blockquote>
+<p><strong>Security</strong>: you can have only one permanent login token at time, requesting
+a new one will invalidate the previous one.</p>
+</blockquote>
+<p>Once obtained the token, set on every HTTP request two additional headers:</p>
+<ul>
+<li><code>CMW-Auth-Token</code>: the token you got from your profile</li>
+<li><code>CMW-Auth-User</code>: your current username, as displayed in your profile</li>
+</ul>
+<p>A good test would be to retrieve your user profile:</p>
+<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/user/me</span> HTTP/1.1
+<span class="hljs-attribute">CMW-Auth-Token</span>: my_token
+<span class="hljs-attribute">CMW-Auth-User</span>: my_username
 
 <span class="http">
 HTTP/1.1 <span class="hljs-number">200</span> OK
 <span class="hljs-attribute">Content-Type</span>: application/json
+<span class="hljs-attribute">Date</span>: Tue, 13 Jan 2015 15:05:52 GMT
 
-<span class="1c"><span class="hljs-string">"long-string-token"</span>
+<span class="json">{
+    <span class="hljs-attr">"acceptedTerms"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"activated"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"activationDate"</span>: <span class="hljs-string">"2014-01-01T00:00:00Z"</span>,
+    <span class="hljs-attr">"address"</span>: {
+    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Via Pisana"</span>,
+    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Pisa"</span>,
+    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"ITALY"</span>,
+    <span class="hljs-attr">"countryCode"</span>: <span class="hljs-string">"IT"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"12345"</span>
+    },
+    <span class="hljs-attr">"company"</span>: {
+        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"company/1"</span>
+        },
+    <span class="hljs-attr">"creationDate"</span>: <span class="hljs-string">"2014-07-02T08:20:01Z"</span>,
+    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"dev@cloudesire.com"</span>,
+    <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"environment"</span>: <span class="hljs-string">"cloudesire"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Demo Vendor"</span>,
+    <span class="hljs-attr">"newbie"</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">"phoneNumber"</span>: <span class="hljs-string">"0123456789"</span>,
+    <span class="hljs-attr">"self"</span>: <span class="hljs-string">"user/3"</span>,
+    <span class="hljs-attr">"userName"</span>: <span class="hljs-string">"vendor"</span>,
+    <span class="hljs-attr">"userRole"</span>: <span class="hljs-string">"ROLE_VENDOR"</span>
+}
 </span></span></code></pre>
-<p>Then, just stop using Basic Authentication and start setting two additional headers for every request, one for the token and one for your username:</p>
-<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/login</span> HTTP/1.1
-<span class="hljs-attribute">CMW-Auth-Token</span>: long-string-token
-<span class="hljs-attribute">CMW-Auth-User</span>: vendor
-</code></pre>
-<p>When the token will expire you will get a <code>401</code> error response and you should
-request a new one.</p>
-<p>If you need a token that doesn't expire, set the <code>expire</code> parameter, but be aware that <strong>requesting a new permanent token will invalid the previous token</strong>:</p>
-<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/login?expire=false</span> HTTP/1.1
-</code></pre>
+<p>A 200 response with a json body representing your user profile means that you
+successfully authenticated and you can start developing the integration.</p>
 <h2><a class="anchor" aria-hidden="true" id="response-codes"></a><a href="#response-codes" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Response codes</h2>
 <table>
 <thead>
@@ -105,57 +137,15 @@ the <code>error</code> field plus an error message in <code>key</code> field wit
   }]
 }
 </span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="first-request-example"></a><a href="#first-request-example" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First Request Example</h2>
-<p>Now that you know where and how to make an authenticated request, start fetching
-your own account details by issuing a <code>GET /user/me</code> request:</p>
-<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/user/me</span> HTTP/1.1
-<span class="hljs-attribute">CMW-Auth-Token</span>: long-string-token
-<span class="hljs-attribute">CMW-Auth-User</span>: vendor
-
-<span class="http">
-HTTP/1.1 <span class="hljs-number">200</span> OK
-<span class="hljs-attribute">CMW-Deprecated-By-Version</span>: 2
-<span class="hljs-attribute">Content-Type</span>: application/json
-<span class="hljs-attribute">Date</span>: Tue, 13 Jan 2015 15:05:52 GMT
-
-<span class="json">{
-    <span class="hljs-attr">"acceptedTerms"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"activated"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"activationDate"</span>: <span class="hljs-string">"2014-01-01T00:00:00Z"</span>,
-    <span class="hljs-attr">"address"</span>: {
-    <span class="hljs-attr">"address"</span>: <span class="hljs-string">"Via Pisana"</span>,
-    <span class="hljs-attr">"city"</span>: <span class="hljs-string">"Pisa"</span>,
-    <span class="hljs-attr">"country"</span>: <span class="hljs-string">"ITALY"</span>,
-    <span class="hljs-attr">"countryCode"</span>: <span class="hljs-string">"IT"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">4</span>,
-    <span class="hljs-attr">"zipCode"</span>: <span class="hljs-string">"12345"</span>
-    },
-    <span class="hljs-attr">"company"</span>: {
-        <span class="hljs-attr">"url"</span>: <span class="hljs-string">"company/1"</span>
-        },
-    <span class="hljs-attr">"creationDate"</span>: <span class="hljs-string">"2014-07-02T08:20:01Z"</span>,
-    <span class="hljs-attr">"email"</span>: <span class="hljs-string">"dev@cloudesire.com"</span>,
-    <span class="hljs-attr">"enabled"</span>: <span class="hljs-literal">true</span>,
-    <span class="hljs-attr">"environment"</span>: <span class="hljs-string">"cloudesire"</span>,
-    <span class="hljs-attr">"id"</span>: <span class="hljs-number">3</span>,
-    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Demo Vendor"</span>,
-    <span class="hljs-attr">"newbie"</span>: <span class="hljs-literal">false</span>,
-    <span class="hljs-attr">"phoneNumber"</span>: <span class="hljs-string">"0123456789"</span>,
-    <span class="hljs-attr">"self"</span>: <span class="hljs-string">"user/3"</span>,
-    <span class="hljs-attr">"userName"</span>: <span class="hljs-string">"vendor"</span>,
-    <span class="hljs-attr">"userRole"</span>: <span class="hljs-string">"ROLE_VENDOR"</span>
-}
-</span></span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="common-fields"></a><a href="#common-fields" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Fields</h2>
-<p>Now that you see the first full response from the API, you may have noticed the
-following characteristics:</p>
+<h2><a class="anchor" aria-hidden="true" id="common-characteristics"></a><a href="#common-characteristics" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Characteristics</h2>
+<p>There a few common traits that needs to be know:</p>
 <ul>
-<li>Every resource contains a <code>self</code> field that represent its unique URL (e.g.: <code>user/3</code>);</li>
-<li>Referenced resources (e.g.: product.company), are referenced by an object containing an <code>url</code> field with the resource endpoint (e.g.: <code>company/123</code>)</li>
+<li>there is always a <code>self</code> field that represent its unique URL (e.g.: <code>user/3</code>), use GET on it to fetch the resource;</li>
+<li>referenced resources (e.g.: user.company), are referenced by an object containing an <code>url</code> field with the resource endpoint (e.g.: <code>company/123</code>)</li>
 <li>Date field are in <em>ISO 8601</em> format containing both time and timezone information (UTC as default).</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="common-operations"></a><a href="#common-operations" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Operations</h2>
-<p>Usually each resource support the basic CRUD operations mapped on the four HTTP verbs:</p>
+<h2><a class="anchor" aria-hidden="true" id="http-methods"></a><a href="#http-methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>HTTP Methods</h2>
+<p>Usually each resource support the basic CRUD operations mapped on five HTTP verbs:</p>
 <ul>
 <li><code>GET</code> for retrieving</li>
 <li><code>POST</code> for creation</li>
@@ -171,7 +161,7 @@ following characteristics:</p>
 <li><a href="http://api.cloudesire.com/marketplace.html">Marketplace API</a></li>
 <li><a href="http://api.cloudesire.com/subscription.html">Subscription API</a></li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="channel.html">← Distribution and Channel Management</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-clients">API Clients</a><ul class="toc-headings"><li><a href="#java">Java</a></li><li><a href="#php">PHP</a></li><li><a href="#cli">CLI</a></li></ul></li><li><a href="#uri-format">URI format</a></li><li><a href="#endpoints-https-only">Endpoints (HTTPS-only)</a></li><li><a href="#versioning">Versioning</a></li><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#login-token-temporary-and-permanent">Login token (temporary and permanent)</a></li></ul></li><li><a href="#response-codes">Response codes</a></li><li><a href="#error-response">Error response</a></li><li><a href="#first-request-example">First Request Example</a></li><li><a href="#common-fields">Common Fields</a></li><li><a href="#common-operations">Common Operations</a></li><li><a href="#api-reference">API Reference</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/en/index.html">Documentation Index</a><a href="/docs/en/api.html">API Reference</a><a href="/docs/en/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="channel.html">← Distribution and Channel Management</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api-clients">API Clients</a><ul class="toc-headings"><li><a href="#java">Java</a></li><li><a href="#php">PHP</a></li><li><a href="#cli">CLI</a></li></ul></li><li><a href="#uri-format">URI format</a></li><li><a href="#domains">Domains</a></li><li><a href="#versioning">Versioning</a></li><li><a href="#authentication">Authentication</a><ul class="toc-headings"><li><a href="#permanent-authentication-token">Permanent authentication token</a></li></ul></li><li><a href="#response-codes">Response codes</a></li><li><a href="#error-response">Error response</a></li><li><a href="#common-characteristics">Common Characteristics</a></li><li><a href="#http-methods">HTTP Methods</a></li><li><a href="#api-reference">API Reference</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/en/index.html">Documentation Index</a><a href="/docs/en/api.html">API Reference</a><a href="/docs/en/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
