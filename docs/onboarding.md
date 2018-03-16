@@ -45,14 +45,14 @@ The following information are required for each product in the catalog:
 
 * _Product Logo_: high-resolution logo with fully transparent background.
 * _Product Name_: your application name. It's the name that will be associated with your product on the marketplace.
-* _Category_ (e.g. CMS, CRM, etc.): this will help customers to understand your product category and will be shown on your product page on the marketplace.
+* _Category_ (e.g. CMS, CRM): this will help customers to understand your product category and will be shown on your product page on the marketplace.
 * _Destination_ (B2B or B2C):  this will help customers to better understand your product and will be shown on your product page on the marketplace.
 * _Tags_ (keyword list): these tags will help customers to quickly understand your product. Please, try to add only relevant tags to avoid too many tags on the product page.
 * _Long and Short Description_ (text): they will describe your product to customers. Please try to be as relevant as possible: we suggest to keep the short description really short and explain the product in depth in the long description. You will have extra sections to add benefits, features, details of the product versions, terms and conditions and privacy policy, so please try to focus only on your product and your ideal target. We recommend to add the reasons why a customer should choose your product and the value proposition of your solution. We suggest to avoid extra-long descriptions: bullets can be very useful to avoid long paragraphs. This is the first thing customers will read about your product, so please make sure it is clear, catchy and without typos. Also, if your application is available in Italian and English, don't forget to add the long and short description in both languages. You can switch language with the flag on the right of "_Short description_" and "_Long description_".
 
 Plus, you will find some extra fields:
 
-* _SKU_: your product ID. It is already pre-filled and you cannot change it.
+* _SKU_: your product ID. You cannot change it once the product has been created.
 * _Type_: this field will be different according to your previous choice. If you chose "_Deployed Product_" the field will be "Managed" and you will have to upload your product ZIP application package or Docker image in the following field. If you chose "Syndicated Product" you will need to enter the syndication endpoint in the following field.
 
 ### End-User Information
@@ -65,7 +65,7 @@ Plus, you will find some extra fields:
 
 * _External Video URL_: your YouTube video will be shown on the product page, so avoid videos that are only tutorials or videos that are really long. A short and effective video on your product is a good choice.
 * _Cover: _this picture will be used in the Marketplace slider, if the product is marked as "featured". Please add a high-resolution image.
-* _Screenshots_ (list of images): these images will be shown to customers, so please upload high-resolution pictures. Remember that is the first time that potential customer will see your application: we suggest to upload the main sections of your application or a demo of the product and avoid every single screen, if that's not useful.
+* _Screen-shots_ (list of images): these images will be shown to customers, so please upload high-resolution pictures. Remember that is the first time that potential customer will see your application: we suggest to upload the main sections of your application or a demo of the product and avoid every single screen, if that's not useful.
 
 ### T&C
 
@@ -75,7 +75,7 @@ Plus, you will find some extra fields:
 
 ### Custom metrics
 
-* Application Metric (AKA _Custom Metrics_) represents _facts _of a specific application offered in the Cloudesire Marketplace that are relevants for software vendors. To better understand custom metrics and how to add custom metrics to your application, please read [this section](onboarding.md#application-metrics).
+* Application Metric (AKA _Custom Metrics_) represents _facts _of a specific application offered in the Cloudesire Marketplace that are relevant for software vendors. To better understand custom metrics and how to add custom metrics to your application, please read [this section](onboarding.md#application-metrics).
 
 ### Configuration Parameters
 
@@ -87,7 +87,7 @@ Plus, you will find some extra fields:
 
 ### SSL (only for "Deployed" Applications)
 
-* The vendor's SSL certificate and SSL certificate private key (to be used to access the VM containing the running instance of the application)
+* The vendor's SSL certificate and SSL certificate private key (to be used to access the virtual-machine containing the running instance of the application)
 
 ## Billing Information (Plans)
 
@@ -105,7 +105,7 @@ To add plans you need to go to access your personal Control Panel. You will be a
 
 Then, click on the "Create New Plan" button at the top right of the screen. You can now create your product plan.
 
-If you have already created a plan and you want to edit you can do it by selecting a specific Plan, and clicking on the "Edit" button. A popup will show up, similar to the one in the following picture:
+If you have already created a plan and you want to edit you can do it by selecting a specific Plan, and clicking on the "Edit" button. A pop-up will show up, similar to the one in the following picture:
 
 ![Vendors Control Panel: Edit Product page - Plans - details](/img/docs/control_panel_edit_product_plans_details.png "Vendors Control Panel: Edit Product page - Plans - details")
 
@@ -116,7 +116,7 @@ For each _Plan_ the vendor has to specify the following information:
 * _Plan Name_ (text): this is the name of the plan and will be shown to customers, so try to keep it easy to understand. For example, you product could have a gold/silver/platinum versioning, a basic/pro/enterprise versioning, a monthly/annual versioning and so on.
 * _Plan Description_ (text): in this field you need to describe the features of that specific plan. If your application is available in Italian and English, do not forget to add the long and short description in both languages. You can switch language with the flag on the right.
 * _Published_ (yes/no): if set to "yes" customer will see this version and will be able to activate it.
-* _External ID:_ this ID is useful to refer a custom "external" identifier for the specific plan
+* _External ID_: this ID is useful to refer a custom "external" identifier for the specific plan
 
 #### Features
 
@@ -140,7 +140,7 @@ For each _Plan_ the vendor has to specify the following information:
 
 #### Advanced Settings
 
-* _Self-billing_ (yes/no): for admin only. If this flag is enabled, Cloudesire will not issue any invoice to the customers (this task will be in carche of the vendor) and the application deployment process will start automatically when the customer clicks on the "buy now" button, without redirecting him to the payment gateway.
+* _Self-billing_ (yes/no): for admin only. If this flag is enabled, Cloudesire will not issue any invoice to the customers (this task will be in charge of the vendor) and the application deployment process will start automatically when the customer clicks on the "buy now" button, without redirecting him to the payment gateway.
 
 ## Pricing Models
 
@@ -160,7 +160,7 @@ The challenging aspect is that you need to find ways to push customers to switch
 
 Examples of SaaS business using this model are Hootsuite and Dropbox.
 
-[![Pricing Models: freemium](/img/docs/freemium-model.png)](/img/docs/freemium-model.png)
+![Pricing Models: freemium](/img/docs/freemium-model.png)]
 
 #### Pay-as-you-go Model
 
@@ -209,25 +209,25 @@ To insert a new Extra Resource, you need to have at least one product in your ca
 
 You will be required to add:
 
-* _Resource Name:_ the name of the extra resource. It will be shown to the customer in the marketplace.
-* _Identifier_ for the resource: please make sure this is a unique indentifier for the extra resource.
-* _Measuring_ __Unit:__ the measuring unit of the extra resource, for example hours, credits etc. You can select the measuring unit from the drop-down menu
-* _Type:_ you will be able to chose from a drop-down menu among "Tiered", "Volume" and "Stairstep". Basically, they are the pricing models for "extra-resources", based on quantity usages. Tiered scheme means that every unit charge is calculated with its own tier price (for example, from 1 to 9 users: €5/user and from 10 users: €3/user. Quantity bought= 15 users, total amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00). Volume scheme means that all units charge is calculated based on total count in the related tier (for example, from 1 to 9 users: €5/user and from 10 users: €3/user Quantity bought= 15 users, total amount: 15 units * € 3,00 = € 45,00) Stairstep scheme means that total cost is calculated based on price tier; charge is not per unit (for example from 1 to 9 users: €30 and from 10 users: €100. Quantity bought= 15 users, total amount: € 100,00).  You can find more details about it [here](modules.md#extra-resources).
+* _Resource Name_: the name of the extra resource. It will be shown to the customer in the marketplace.
+* _Identifier_: please make sure this is a unique identifier for the extra resource.
+* _Measuring Unit_: the measuring unit of the extra resource, for example hours, credits etc. You can select the measuring unit from the drop-down menu
+* _Type_: you will be able to chose from a drop-down menu among "Tiered", "Volume" and "Stairstep". Basically, they are the pricing models for "extra-resources", based on quantity usages. Tiered scheme means that every unit charge is calculated with its own tier price (for example, from 1 to 9 users: €5/user and from 10 users: €3/user. Quantity bought= 15 users, total amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00). Volume scheme means that all units charge is calculated based on total count in the related tier (for example, from 1 to 9 users: €5/user and from 10 users: €3/user Quantity bought= 15 users, total amount: 15 units * € 3,00 = € 45,00) Stairstep scheme means that total cost is calculated based on price tier; charge is not per unit (for example from 1 to 9 users: €30 and from 10 users: € 100. Quantity bought= 15 users, total amount: € 100,00).  You can find more details about it [here](modules.md#extra-resources).
 * __Description: __a short description of the extra resource. Please try to be clear and brief.
-* _Required_ (yes/no)_: _ if the customer has to buy this resource to complete the product activation.
+* _Required_ (yes/no): if the customer has to buy this resource to complete the product activation.
 
 then, click on the "Add" button on the right.
 
 ![Vendors Control Panel - Extra Resources (editing)](/img/docs/control_panel_extra_resources_editing.png "Vendors Control Panel - Extra Resources (editing)")
 
-The next step is to specify the quantity usages rules and the pricing model.  
-Go to the "_Extra Resources Values_" section and select from the combo-box on the left a previously inserted _Resource Name._ Then_,_ specify the minimum and maximum quantities, the _Unit Price_ and the optional _Activation Fe_e (setup fee) .
+The next step is to specify the quantity usages rules and the pricing model.
+Go to the "_Extra Resources Values_" section and select from the combo-box on the left a previously inserted _Resource Name_. Then, specify the minimum and maximum quantities, the _Unit Price_ and the optional _Activation Fee_ (setup fee) .
 
 ![Vendors Control Panel - Extra Resources (editing values)](/img/docs/control_panel_extra_resources_editing_values.png "Vendors Control Panel - Extra Resources (editing values)")
 
 In this way, you can add multiple Extra Resources, when you're done click on the "_Save_" button.
 
-The following screenshot shows an example of Extra Resources linked to a specific Product Plan.
+The following screen-shot shows an example of Extra Resources linked to a specific Product Plan.
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
@@ -237,7 +237,7 @@ To retrieve the _Extra Resources Values_ specified by the customer during the or
 
     GET /api/subscription/{id} HTTP/1.1
 
-The response will contain the information explained in [this section](syndication.md#retrieve-the-subscription-resource-after-a-subscription-created), plus the `billingItems` property, which contains – for each Extra Resource entity – the chosen value.
+The response will contain the information explained in [this section](syndication.md#retrieve-the-subscription-resource-after-a-subscription-created), plus the `billingItems` property, which contains the chosen value for the extra resource.
 
     HTTP/1.1 200 OK
     Content-Type: application/json
@@ -260,7 +260,7 @@ This section focuses on the technical aspects of the onboarding. We made the tec
 The technical part of the onboarding process depends on the application _provisioning type_:
 
 * for **Syndicated Applications** (namely directly managed by the software vendor, and not hosted on the Cloudesire platform itself) the software vendor has to provide a "_syndication endpoint_" and proceed with the integrations via API, as described in [this section](syndication.md#syndicated-applications)
-* for **Deployed Applications** (where Cloudesire will provision on the cloud a new VM containing a running instance of the app for each customer) the software vendor has 2 possibilities: [ZIP Application Package](deployed.md#zip-packaging) (a simple archive containing both the source code and the _SQL scripts_ of the application) and [Docker Packaging](deployed.md#docker-packaging) (a self-contained archive of your application meeting the [Docker](https://www.docker.com/) standards). More detailed instruction for the onboarding of Deployed Applications can be found in [this section](deployed.md).
+* for **Deployed Applications** (where Cloudesire will provision on the cloud a new virtual-machine containing a running instance of the application for each customer) the software vendor has 2 possibilities: [ZIP Application Package](deployed.md#zip-packaging) (a simple archive containing both the source code and the _SQL scripts_ of the application) and [Docker Packaging](deployed.md#docker-packaging) (a self-contained archive of your application meeting the [Docker](https://www.docker.com/) standards). More detailed instruction for the onboarding of Deployed Applications can be found in [this section](deployed.md).
 
 The following sections refer to other additional functionalities, which can be used both in the Syndication and Self-Deploy scenarios.
 
@@ -272,19 +272,19 @@ Application Metric (AKA _Custom Metrics_) represents _facts_ of a specific appli
 
 For example, a software vendor could be interested to know how many _documents_ a certain application instance produced in the last month, or how many _active users_ an application has at a given time.
 
-This kind of information are useful for **monitoring** purposes (i.e. to see a dynamic real-time graph in the Cloudesire Dashboard), but also allows software vendors to implement **pay-per-use** pricing models. In fact, specifying a **unit-price** for a custom metric (eg. 10 USD per active user) allows Cloudesire to calculate the related incomes in a certain period of time (_billing period_) and issue an invoice to the customer. For further details, take a look at the [Billing Module Section](platform.md#billing-module).
+This kind of information are useful for **monitoring** purposes (i.e. to see a dynamic real-time graph in the Cloudesire Dashboard), but also allows software vendors to implement **pay-per-use** pricing models. In fact, specifying a **unit-price** for a custom metric (e.g. 10 USD per active user) allows Cloudesire to calculate the related incomes in a certain period of time (_billing period_) and issue an invoice to the customer. For further details, take a look at the [Billing Module Section](platform.md#billing-module).
 
 For each metric you can define from the application metric editing section, the following information:
 
 * _Name_: a metric unique identifier;
-* _Endpoint_: must be defined in the form of a relative URL (e.g.: _/metric/users_);
+* _Endpoint_: must be defined in the form of a relative URL (e.g.: `/metric/users`);
 * _Polling frequency_: the platform will poll your endpoint with this frequency;
 * _Measuring unit_: the drop-down menu includes units like _Item, Users, Hours, MB, GB, Invoice,…_;
 * _Unit-price_ (optional): price charged for each application metric value received.
 
 #### How to add Custom Metrics
 
-The steps to follow to a add one (or more) Custom Metric to a Product – or Product version(s) – are slightly different depending on your application _provisioning type_:
+The steps to follow to a add one (or more) Custom Metric to a Product are slightly different depending on your application _provisioning type_:
 
 ##### Adding Custom Metrics to a Syndicated Application
 
@@ -294,7 +294,7 @@ To find the "_Metric_" tab go to your personal Control Panel. You will be able t
 
 In the following picture you can see an example of a "_Metrics_" section.
 
-![Vendors Control Panel - Custom Metrics (Syndicated apps, list)](/img/docs/control_panel_custom_metrics_syndication_list.png "Vendors Control Panel - Custom Metrics (Syndicated apps, list)")
+![Vendors Control Panel - Custom Metrics (Syndicated applications, list)](/img/docs/control_panel_custom_metrics_syndication_list.png "Vendors Control Panel - Custom Metrics (Syndicated applications, list)")
 
 By clicking on "_Add New Metric_", you will see a pop-up where you can set up a new metric.
 
@@ -303,11 +303,11 @@ Fields are:
 * _Name_: the name of the metric you want to monitor
 * _Polling frequency_: the frequency you want the platform to poll your endpoint
 * _Measuring unit_: select the right measuring unit from the drop-down menu, according to the metric you want to monitor
-* _Custom Endpoint_: the URL you want the platform to poll your endpoint. It must be defined in the form of a relative URL (e.g.: _/metric/users_)
+* _Custom Endpoint_: the URL you want the platform to poll your endpoint. It must be defined in the form of a relative URL (e.g. `/metric/users`)
 * _Unit Price_ (optional): the price charged for each application metric value received
-* _Type_: select Counter or Gauge from the dropdown menu. A _counter_ is a cumulative metric that represents a single numerical value that only ever goes up, while a _gauge_ is a metric that represents a single numerical value that can arbitrarily go up and down.
+* _Type_: select Counter or Gauge from the drop-down menu. A _counter_ is a cumulative metric that represents a single numerical value that only ever goes up, while a _gauge_ is a metric that represents a single numerical value that can arbitrarily go up and down.
 
-![Vendors Control Panel - Custom Metrics (Syndicated apps, insertion)](/img/docs/control_panel_custom_metrics_syndication_insertion.png)
+![Vendors Control Panel - Custom Metrics (Syndicated applications, insertion)](/img/docs/control_panel_custom_metrics_syndication_insertion.png)
 
 ##### Adding Custom Metrics to a Deployed Application
 
@@ -317,7 +317,7 @@ To access the "Modules" section access your personal Control Panel. You will be 
 
 Once you are in the "_Modules_" section, , select a specific _Module_ and _Package_ (more details [here](deployed.md#packages)), click on the "_Show Advanced_" button on the top-right of the page. Furthermore, by accessing to the "_Application Metrics_" tab it's possible to fill all the required fields and click on the "_Add_" button to finish.
 
-![Vendors Control Panel - Custom Metrics (Deployed apps, insertion)](/img/docs/control_panel_custom_metrics_deployed.png "Vendors Control Panel - Custom Metrics (Deployed apps, insertion)")
+![Vendors Control Panel - Custom Metrics (Deployed applications, insertion)](/img/docs/control_panel_custom_metrics_deployed.png "Vendors Control Panel - Custom Metrics (Deployed applications, insertion)")
 
 #### How to provide "actual values" for a Custom Metric
 
@@ -332,26 +332,37 @@ The format of the metric data should be in JSON format:
 
 ## Configuration Parameters (detailed)
 
-Applications may require a list of parameters that have to be filled by customers before using the application for the first time, either for the application to work properly or to provide better initial customization. Examples are: zip code, company name, VAT number, street address, etc.
+Applications may require a list of parameters that have to be filled by
+customers before using the application for the first time, either for the
+application to work properly or to provide better initial customization.
+Examples are: zip code, company name, VAT number, street address, etc.
 
-Configuration Parameters are similar to [Environment variables](deployed.md#environment-variables), but their value is chosen by customers before placing an order.
+Configuration Parameters are similar to
+[Environment variables](deployed.md#environment-variables), but their value is
+chosen by customers before placing an order.
 
-Each parameter is created and bound to a specific Product, but can be linked or not to one or more "_Plan"_ (Product Version).Each parameter can be marked as required, and its value can be _validated_ by providing a regular expression. In order to support customers to fully understand the meaning, each parameter has a _description_ and a _hint_.
+Each parameter is created and bound to a specific Product, but can be linked or
+not to one or more _Plans_. Each parameter can be marked as required, and its
+value can be _validated_ by providing a regular expression. In order to support
+customers to fully understand the meaning, each parameter has a _description_
+and a _hint_.
 
-To specify a Configuration Parameter, enter the Product editing page, then select the "_Conf. Parameters_" tab. For each parameter you need to specify:
+To specify a Configuration Parameter, enter the Product editing page, then
+select the "_Configuration Parameters_" tab.
+For each parameter you need to specify:
 
 * _Code_: a unique identifier of the parameter. It is not shown to the customer
 * _Name_: a name for the parameter. It will be shown to the customer so it has to be clear.
 * _Description_: a short explanation provided to the end-users
-* _Validation_ (optional): a regular expression to validate the text provided byend-users
+* _Validation_ (optional): a regular expression to validate the text provided by end-users
 * _Hint_: text inside the placeholder that helps end-users to complete the field
 * _Required_ (yes/no): sets if the customer needs to specify a value for the parameter before purchasing the product
 
-[![control_panel_configuration_parameters_editing](/img/docs/control_panel_configuration_parameters_editing-1.png)](/img/docs/control_panel_configuration_parameters_editing-1.png)
+[control_panel_configuration_parameters_editing](/img/docs/control_panel_configuration_parameters_editing-1.png)
 
-Once Configuration Parameters are specified for a product, they need to be attached to one (or more) "_Plans"_ orproduct versions. To do that, click on the "_Plans_" tab, select a specific Plan and click on the "_Edit_" button. You will see a pop-up similar to the one shown in the following picture: go to the "_Features_" tab and select one or more Configuration Parameters to activate for the specific Plan.
+Once Configuration Parameters are specified for a product, they need to be attached to one (or more) "_Plans". To do that, click on the "_Plans_" tab, select a specific Plan and click on the "_Edit_" button. You will see a pop-up similar to the one shown in the following picture: go to the "_Features_" tab and select one or more Configuration Parameters to activate for the specific Plan.
 
-[![control panel configuration parameters linking](/img/docs/control_panel_configuration_parameters_linking-1.png)](/img/docs/control_panel_configuration_parameters_linking-1.png)
+[control panel configuration parameters linking](/img/docs/control_panel_configuration_parameters_linking-1.png)
 
 The [Cloudesire API](api.md) gives the vendor the possibility to retrieve both a specific Configuration Parameter definition and the related parameters "value" (namely the valued specified by the customer during the order placement).
 
@@ -387,7 +398,7 @@ GET /api/configurationParameter/2095 HTTP/1.1
 }
 ```
 
-If your application provisioning type is _[Deployed](deployed.md)_, the Configuration Parameters are automatically injected in the VM for deployed applications as an environment variable with the same name of the `code` parameter: in case you have created a Configuration Parameter with _COLOR_ as `code`, your application will have a `$COLOR` environment variable with the value chosen by the customer.
+If your application provisioning type is [Deployed](deployed.md), the Configuration Parameters are automatically injected in the virtual-machine for deployed applications as an environment variable with the same name of the `code` parameter: in case you have created a Configuration Parameter with _COLOR_ as `code`, your application will have a `$COLOR` environment variable with the value chosen by the customer.
 
 ## Auto-login
 
@@ -395,11 +406,11 @@ If you enable auto-login, your customers will be able to access your application
 
 ### Why you should use auto-login
 
-It would be great to give the customer the possibility to auto-login to your application without providing any credentials, especially in a marketplace. For instance, it means that your customer will not need to remember credentails for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to the customer to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.
+It would be great to give the customer the possibility to auto-login to your application without providing any credentials, especially in a marketplace. For instance, it means that your customer will not need to remember credentials for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to the customer to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.
 
 ### How to enable auto-login
 
-To achieve this goal, we strongly suggest to add an **authorization token** to the **endpoint** to access the application. In this way, you can recognize the customer and enable automatical log-in into your application.
+To achieve this goal, we strongly suggest to add an **authorization token** to the **endpoint** to access the application. In this way, you can recognize the customer and enable automatic log-in into your application.
 
 If you follow this flow, you don't need to specify the user credentials into the _end-user instructions_ anymore.
 
@@ -418,9 +429,13 @@ In this section you will find an overview of the integration facilities provided
 
 #### Why you should use the Staging Marketplace
 
-While developing the integration with the Cloudesire platform, it's useful to run some tests on our S_taging Marketplace._ On the staging marketplacewhere _fake payments_ with demo credit cards are possible and where you can test the whole customer journey, end-to-end.
+While developing the integration with the Cloudesire platform, it's useful to
+run some tests on our _Staging Marketplace_, where payments can be done with
+demo credit card numbers and where you can test the whole customer journey,
+end-to-end.
 
-We strongly recommend to test applications on the staging marketplace to discover integration issues before the application is published on the marketplace.
+> We strongly recommend to test applications on the staging marketplace to
+discover integration issues before the application is published on the marketplace.
 
 #### Staging Marketplace URL and API endpoint
 
@@ -428,42 +443,42 @@ The Staging Marketplace for software vendors is available at the following URL:
 
 [https://frontend-staging-vendors.cloudesire.com/](https://frontend-staging-vendors.cloudesire.com/)
 
-The API endpoint for the staging marketplace is:
-
-_https://staging-vendors.cloudesire.com/api/_
+The API endpoint is described in [API documentation](api.md#domains)
 
 On this marketplace you can freely create as many accounts as you wish, both vendor and customers, and you can use the [testing credit cards of Stripe](https://stripe.com/docs/testing) or [Paypal](https://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm).
 
-#### TIPS
-
-* Please remember to change the API endpoint to the production URL (_https://backend.cloudesire.com/api/_) in your source code before you publish your application in the product marketplace, otherwise subscriptions will not run correctly.
-* To give you the best customer experience preview, you can create vendor and customer profiles. To create a staging profile go to [https://frontend-staging-vendors.cloudesire.com/cp/register/as](https://frontend-staging-vendors.cloudesire.com/cp/register/as), select "_Register as Vendor?_" to create a vendor account or "_Register as Customer?_" to create a customer account . Then, create your own vendor or customer account following the instructions on the screen.
+> Manage API endpoints as configuration parameters in your source code since
+they need to be changed when publishing your application in a different
+marketplace.
 
 #### How to test the customer experience on the Staging Marketplace
 
-In order to fully test your integration source code, once you have finished the application onboarding process we strongly suggest you to:
+In order to fully test your integration source code, once you have finished the
+application onboarding process we strongly suggest you to:
 
 * register to the staging marketplace as a new _customer_
-* go to [https://frontend-staging-vendors.cloudesire.com/cp/register/as](https://frontend-staging-vendors.cloudesire.com/cp/register/as), and create your own customer account following the instructions on the screen.
+* go to [registration page](https://frontend-staging-vendors.cloudesire.com/cp/register/as), and create your own customer account following the instructions on the screen.
 * login to the marketplace with the previously created customer credentials
-* go to [https://frontend-staging-vendors.cloudesire.com/](https://frontend-staging-vendors.cloudesire.com/),  select "log-in" at the top right corner of the screen, enter username and password and click login
+* go to [homepage](https://frontend-staging-vendors.cloudesire.com/),  select "log-in" at the top right corner of the screen, enter username and password and click login
 * go to your application page
 * you can browse applications or look for your application using your application name
 * buy your application (providing a testing credit card number)
 * use the [testing credit cards of Stripe](https://stripe.com/docs/testing) or [Paypal](https://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm).
 * wait while the provisioning process ends
 
-Once the application is ready (the entire process shouldn't require more than a few minutes) you will see in your dashboard an interface similar to the following screenshot (which refers to a running _trial) _
+Once the application is ready (the entire process shouldn't require more than a
+few minutes) you will see in your dashboard an interface similar to the
+following screenshot (which refers to a running _trial):
 
-![Customer Dashboard - My Apps](/img/docs/customers-dashboard-running-trial.png "Customer Dashboard - My Apps")
+![Customer Dashboard - My applications](/img/docs/customers-dashboard-running-trial.png "Customer Dashboard - My applications")
 
-By clicking on the "_Launch \[application_name\]_" button the customer will be redirected to a view where:
+By clicking on the "_Launch application-name_" button the customer will be redirected to a view where:
 
 * the application runs in the **body** of the page
 * the **header** of the page contains the running application name and version and provides some tools (bookmark, end-user instructions, customer profile details, etc.). This header will be also used to provide useful notifications (subscription about to expire, private messages, etc.).Also, from this section customers will be able to go back to Cloudesire.
-* a **customer support** tool is available (to give the customer the possibility to send direct messages both to the platform admins and vendors). Those messages will be managed by an integrated **trouble-ticketing system**
+* a **customer support** tool is available (to give the customer the possibility to send direct messages both to the platform administrators and vendors). Those messages will be managed by an integrated **trouble-ticketing system**
 
-![Customer Dashboard - running app](/img/docs/customer_dashboard_app_ifra.jpg "Customer Dashboard - running app")
+![Customer Dashboard - running application](/img/docs/customer_dashboard_app_ifra.jpg "Customer Dashboard - running application")
 
 ### Sandbox orders
 
@@ -473,8 +488,8 @@ Sandbox orders are fake orders in which vendors can test the deployment workflow
 
 #### How to launch a sandbox order
 
-To launch a **sandbox**, you need to have at least one product in your catalog: this means that you have already uploaded at least one application on the staging marketplace  (if you do not know how to onboard an application on Cloudesire platform, click [here]()) If you already have at least one application in your catalog go to [https://frontend-staging-vendors.cloudesire.com/](https://frontend-staging-vendors.cloudesire.com/), select "log-in" at the top right corner of the screen, enter your staging vendor username and password and click login. Then click on your username at the top right to access your personal Control Panel. Click "Catalog" from the menu at the top left of the screen to see your applications. Once you know which application you want to test, go to "_Plans_" and select "SANDBOX".
+To launch a **sandbox**, you need to have at least one product in your catalog: this means that you have already uploaded at least one product and a plan on the staging marketplace. If you already have at least one application in your catalog go to [staging marketplace homepage](https://frontend-staging-vendors.cloudesire.com/), select "log-in" at the top right corner of the screen, enter your staging vendor username and password and click login. Then click on your username at the top right to access your personal Control Panel. Click "Catalog" from the menu at the top left of the screen to see your applications. Once you know which application you want to test, go to "_Plans_" and select "SANDBOX".
 
 In the following picture you can see an example of the page from which you can launch a sandbox order. If you do not know how to configure a plan for your product, click here.
 
-![Vendors Control Panel: Syndication - Sandboxing](/img/docs/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
+![Vendors Control Panel: Syndication - Sandbox](/img/docs/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")
