@@ -9,37 +9,37 @@ format.
 
 ## API Clients
 
-When building your custom integration, you may want to start building using one
-of the following resources.
+When developing your custom integration, you may want to start building using one
+of the following resources, depending on your programming language.
 
 ### Java
 
-We are maintaining a [Java client](https://github.com/ClouDesire/java-api-client)
-based on retrofit to consume our API.
+We are maintaining a an official [Java client](https://github.com/ClouDesire/java-api-client)
+based on [Retrofit](http://square.github.io/retrofit/) to consume our API.
 
 ### PHP
 
 We suggest to use the great [Guzzle HTTP Library](http://guzzle.readthedocs.org/)
-to build a client to call our API, but we have a [php-curl example project](https://github.com/ClouDesire/examples/tree/master/php-syndication).
+to build a client to call our API, but we have also a [php-curl example project](https://github.com/ClouDesire/examples/tree/master/php-syndication).
 
 ### CLI
 
-We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) to call our
-API via a command-line tool to experiment.
+We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) via
+command-line to debug and experiment with our API.
 
 ## URI format
 
-To access resources, you need to use an URI with the format:
+To interact with API resources, you need to use an URL with the format:
 
     https://{domain}/api/{resource}/{resourceId}
 
-## Endpoints (HTTPS-only)
+## Domains
 
-Every marketplace has a different API endpoint, depending on its environment:
+Every marketplace has a different API `domain`, depending on its environment:
 
-* **production environment**: _backend.cloudesire.com_
-* **staging-vendors**: _staging-vendors.cloudesire.com_
-* **italia-startup**: _prod-its.cloudesire.com_
+* **marketplace.cloudesire.com**: _backend.cloudesire.com_
+* **staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
+* **marketplace.italiastartup.it**: _prod-its.cloudesire.com_
 
 ## Versioning
 
@@ -62,39 +62,65 @@ your integration
 The API support two different authentication methods:
 
 * Via username/email and password supplied as standard [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication);
-* Via an authentication token, short-lived or immortal, that can be requested via API.
+* Via an authentication token, short-lived or permanent, that can also be requested via API.
 
-### Login token (temporary and permanent)
+### Permanent authentication token
 
-To request an authentication token you need to send an authenticated `GET /login` request using your credentials supplied as Basic Authentication:
+You can request a permanent login token in the *profile* section once logged into
+the marketplace control panel, and this should be the preferred authentication
+method when developing an integration with the Cloudesire API.
+
+> **Security**: you can have only one permanent login token at time, requesting
+a new one will invalidate the previous one.
+
+Once obtained the token, set on every HTTP request two additional headers:
+
+* `CMW-Auth-Token`: the token you got from your profile
+* `CMW-Auth-User`: your current username, as displayed in your profile
+
+A good test would be to retrieve your user profile:
 
 ```http
-GET /api/login HTTP/1.1
-Authorization: Basic YWRtaW46YWRtaW4=
+GET /api/user/me HTTP/1.1
+CMW-Auth-Token: my_token
+CMW-Auth-User: my_username
 
 
 HTTP/1.1 200 OK
 Content-Type: application/json
+Date: Tue, 13 Jan 2015 15:05:52 GMT
 
-"long-string-token"
+{
+    "acceptedTerms": true,
+    "activated": true,
+    "activationDate": "2014-01-01T00:00:00Z",
+    "address": {
+    "address": "Via Pisana",
+    "city": "Pisa",
+    "country": "ITALY",
+    "countryCode": "IT",
+    "id": 4,
+    "zipCode": "12345"
+    },
+    "company": {
+        "url": "company/1"
+        },
+    "creationDate": "2014-07-02T08:20:01Z",
+    "email": "dev@cloudesire.com",
+    "enabled": true,
+    "environment": "cloudesire",
+    "id": 3,
+    "name": "Demo Vendor",
+    "newbie": false,
+    "phoneNumber": "0123456789",
+    "self": "user/3",
+    "userName": "vendor",
+    "userRole": "ROLE_VENDOR"
+}
 ```
 
-Then, just stop using Basic Authentication and start setting two additional headers for every request, one for the token and one for your username:
-
-```http
-GET /api/login HTTP/1.1
-CMW-Auth-Token: long-string-token
-CMW-Auth-User: vendor
-```
-
-When the token will expire you will get a `401` error response and you should
-request a new one.
-
-If you need a token that doesn't expire, set the `expire` parameter, but be aware that **requesting a new permanent token will invalid the previous token**:
-
-```http
-GET /api/login?expire=false HTTP/1.1
-```
+A 200 response with a json body representing your user profile means that you
+successfully authenticated and you can start developing the integration.
 
 ## Response codes
 
@@ -134,63 +160,17 @@ Content-Type: application/json
 }
 ```
 
-## First Request Example
+## Common Characteristics
 
-Now that you know where and how to make an authenticated request, start fetching
-your own account details by issuing a `GET /user/me` request:
+There a few common traits that needs to be know:
 
-```http
-GET /api/user/me HTTP/1.1
-CMW-Auth-Token: long-string-token
-CMW-Auth-User: vendor
-
-
-HTTP/1.1 200 OK
-CMW-Deprecated-By-Version: 2
-Content-Type: application/json
-Date: Tue, 13 Jan 2015 15:05:52 GMT
-
-{
-    "acceptedTerms": true,
-    "activated": true,
-    "activationDate": "2014-01-01T00:00:00Z",
-    "address": {
-    "address": "Via Pisana",
-    "city": "Pisa",
-    "country": "ITALY",
-    "countryCode": "IT",
-    "id": 4,
-    "zipCode": "12345"
-    },
-    "company": {
-        "url": "company/1"
-        },
-    "creationDate": "2014-07-02T08:20:01Z",
-    "email": "dev@cloudesire.com",
-    "enabled": true,
-    "environment": "cloudesire",
-    "id": 3,
-    "name": "Demo Vendor",
-    "newbie": false,
-    "phoneNumber": "0123456789",
-    "self": "user/3",
-    "userName": "vendor",
-    "userRole": "ROLE_VENDOR"
-}
-```
-
-## Common Fields
-
-Now that you see the first full response from the API, you may have noticed the
-following characteristics:
-
-* Every resource contains a `self` field that represent its unique URL (e.g.: `user/3`);
-* Referenced resources (e.g.: product.company), are referenced by an object containing an `url` field with the resource endpoint (e.g.: `company/123`)
+* there is always a `self` field that represent its unique URL (e.g.: `user/3`), use GET on it to fetch the resource;
+* referenced resources (e.g.: user.company), are referenced by an object containing an `url` field with the resource endpoint (e.g.: `company/123`)
 * Date field are in _ISO 8601_ format containing both time and timezone information (UTC as default).
 
-## Common Operations
+## HTTP Methods
 
-Usually each resource support the basic CRUD operations mapped on the four HTTP verbs:
+Usually each resource support the basic CRUD operations mapped on five HTTP verbs:
 
 * `GET` for retrieving
 * `POST` for creation
