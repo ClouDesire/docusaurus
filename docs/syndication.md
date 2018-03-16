@@ -111,7 +111,7 @@ Please make sure that you understand the basics of the [Cloudesire API](api.md) 
 
 ### First steps
 
-Before you start, take a look to our [integration facilities](syndication.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
+Before you start, take a look to our [integration facilities](onboarding.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
 
 We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
 
