@@ -38,7 +38,7 @@ To interact with API resources, you need to use an URL with the format:
 Every marketplace has a different API `domain`, depending on its environment:
 
 * **marketplace.cloudesire.com**: _backend.cloudesire.com_
-* **staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
+* **frontend-staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
 * **marketplace.italiastartup.it**: _prod-its.cloudesire.com_
 
 ## Versioning
