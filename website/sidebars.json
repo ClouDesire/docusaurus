@@ -9,7 +9,8 @@
     ],
     "Platform": [
       "platform",
-      "channel"
+      "channel",
+      "emails"
     ],
     "API": ["api"]
   }
