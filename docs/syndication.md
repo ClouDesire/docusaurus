@@ -4,50 +4,85 @@ title: Onboarding of syndicated applications
 sidebar_label: Syndicated applications
 ---
 
-A **syndicated application** is an application that is directly managed by the software vendor, and not hosted on the Cloudesire platform itself.
+A **syndicated application** is an application that is directly managed by the
+software vendor, and not hosted on the Cloudesire managed cloud service.
 
-This feature enables software vendors to sell applications that are already hosted somewhere and that has native support for **multi-tenancy**. The provisioning of a new tenant should be almost instantaneous, and the integration has to be done directly via [Cloudesire REST API](api.md).
-
-Please note that the Cloudesire platform, in this case, is used only for the marketplace and billing features, and not for the self-deploy on public cloud providers.
+This feature enables software vendors to sell applications that are already
+hosted somewhere and that has native support for **multi-tenancy**. The
+provisioning of a new tenant should be almost instantaneous, and the integration
+has to be done directly via [Cloudesire API](api.md).
 
 ## Introduction to Syndication
 
 The basics follows:
 
-* Platform will send notifications (HTTP POST requests) to an endpoint every time an interesting **event** occurs on the marketplace (new subscription created, invoice payment and so on).
-* the endpoint should handle these notifications, e.g. fetch the needed information, provision a new user in its system and update the subscription status via Cloudesire API.
+* Platform will send notifications (HTTP POST requests with a [JSON
+  payload](syndication.md#anatomy-of-an-event-request)) to a your endpoint every
+  time an interesting **event** occurs on the marketplace (new subscription
+  created, invoice payment and so on).
+* your endpoint should handle these notifications, e.g. fetch the needed
+  information, provision a new user in its system and update the subscription
+  status via [Cloudesire API](api.md).
 
-### Syndicated Applications: workflow of new orders and provisioning
+### Prime approach to the provisioning workflow
 
-A simple example follows, expaining the workflow of a new tenant order and provisioning:
+A simple example follows, explaining the workflow of a new tenant order and
+provisioning:
 
-* the customer orders a new tenant of your application in the marketplace
-* Cloudesire sends a notification to your endpoint, containing the following information: entity = `subscription`, id = {subscription_id}, status = `created`
-* once you've received this notification, you need to call our API in order to retrieve the subscripion details (given its identifier) which includes:
-    * the customer data (name, email, etc.) to be stored in your database
-    * a `paid` flag, which can be `true` (if the customer already paid the subscription for your application, for example if the platform previously stored his credit card data) or `false`(if the customer hasn't paid yet the subscription)
-* if the `paid` flag is `true` you can provision your tenant in your platform
-* if the `paid` flag is `false` you need to wait for the next notification, which will contain the following information: entity = `subscription`, id = {subscription_id}, status = `modified`. Once you've received this notification, you need to call our API again, retrieve the subscription data, and check if the `paid` flag is `true`.
-* once you've executed the provisioning of the tenant in your platform, you need to call our API for the last time, setting the subscription status to `deployed`
-* when the subscription status changes to `deployed`, Cloudesire notifies the customer, providing him the instructions to access your application
-
-In other words, you should provision your tenant only when the `paid` flag is `true` (unless you're offering **trials** for your application).
+* a customer make an order for one of your products
+* Cloudesire sends a notification to your endpoint, containing a
+  `Subscription CREATED` event
+* once you've received this notification, you need to call our API in order to
+  retrieve the subscription details (given its identifier) which includes the
+  customer data (name, email, etc.) that you need, and `paid`
+  field, which can be `true` if the customer already paid the subscription for
+  your product or `false`if the customer hasn't paid yet the subscription
+* if the `paid` field is `true` you can provision your tenant in your platform
+* if the `paid` field is `false` you need to wait for the next notification
+  which will contain a `Subscription MODIFIED`. Once you've received this
+  notification, you need to call our API again, retrieve the subscription data,
+  and check if the `paid` field is `true`.
+* once you've executed the provisioning of the tenant in your platform, you need
+  to call our API for the last time, setting the subscription `deploymentStatus`
+  status to `DEPLOYED`
+* when the subscription status changes to `deployed`, Cloudesire notifies the
+  customer, providing him the instructions to access your application
+* when the subscription is renewed (by the customer or by autorenew), Cloudesire
+  sends a notification `Subscription MODIFIED`.
+* when the subscription expires, Cloudesire sends a notification
+  `Subscription DELETED`, then you need to unprovision the tenant.
 
 ![](/img/docs/Syndication-Worklow-Provisioning.png)
 
-[Here](https://github.com/ClouDesire/php-syndication-example) you can find a simple PHP example, implementing the tenant provisioning/unprovisioning for a demo application.
-
 ### How to setup the syndication endpoint
 
-While developing your integration with the Cloudesire platform, you may find useful to test your source code in our [staging marketplace](syndication.md#staging-marketplace), where _fake payments_ are possible and where you can test the whole customer journey, end-to-end.
+> Test your source code in our [staging marketplace](onboarding.md#staging-marketplace)
+where _fake payments_ are possible and where you can test the whole customer 
+journey, end-to-end.
 
-We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
+Let's start things off: after having created a _Syndicated Product_ in your
+catalog (see [application onboarding](syndication.md#applications-onboarding)),
+configure the HTTP(S) URL of your **Syndication Endpoint** where the events will
+be delivered.
 
-Let's start things off: during the [application onboarding](syndication.md#applications-onboarding) process, when creating a **new product**, choose "_Syndicated Product_", and then configure the HTTP(S) URL of your **Syndication Endpoint** where the events will be delivered, almost instantly.
+![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png)
 
-![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png "Vendors Control Panel - Syndication")
+If you want to secure your syndication endpoint, please read the [security
+section](syndication.md#security).
 
-If you want to secure your syndication endpoint, please read [this section](syndication.md#security).
+### The "Test Events" feature
+
+If you are prototyping the integration with Cloudesire, you may find useful the
+"**Test Events"** functionality, available in the _General_ tab into Product
+editing page.
+
+This button will trigger a chosen notification to your endpoint, without kicking
+any kind of workflow on the Cloudesire side. This test notification contains
+some stubbed data.
+
+We strongly recommend to use this feature immediately after having configured
+your endpoint for the first time to be sure that is correctly reachable from
+Cloudesire platform.
 
 ### Anatomy of an event request
 
@@ -82,40 +117,38 @@ The **entity** attribute can be:
 * `Subscription`
 * `Invoice`
 
-The **id** attribute is an unique identifier for the current **entity**.
-The **entityUrl** attribute contains the relative URL from which the involved resource can be fetched.
+The **id** attribute is an unique identifier for the current **entity**, it will
+never change.
+
+The **entityUrl** attribute contains the relative URL from which the involved
+resource can be fetched.
+
 The **date** attribute contains when the event has been generated.
-The **CMW-Event-Signature** is an HTTP header related to the optional [validation for incoming event notifications](syndication.md#security).
+
+The **CMW-Event-Signature** is an HTTP header related to the optional
+[validation for incoming event notifications](syndication.md#security).
 
 ### Replying to events
 
-The platform expects that you reply with a `204  -  No content` response, so with an empty response body.
+The platform expects that you reply with a `204  -  No content` response( with
+an empty response body).
 
-If you return a `200  - OK` reply with body message, it will be accepted but the content will be discarded.
+If you return a `200  - OK` reply with body message, it will be accepted but the
+content will be discarded.
 
-If the response contains a non-2xx status code (4xx & 5xx), the notification will be retried at the next loop, until the endpoint will return a 2xx status code.
-
-### The "Test Events" feature
-
-If you are prototyping the integration with Cloudesire, you may find useful the "**Test Events"** functionality, available in the _General_ tab into Product editing page.
-
-This button will trigger a chosen notification to your endpoint, without kicking any kind of workflow on the Cloudesire side. This test notification contains some stubbed data.
-
-We strongly recommend to use this feature and make sure the integration is working properly.
+If the response contains a non-2xx status code (4xx & 5xx), the notification
+will be retried at the next loop, until the endpoint will return a 2xx status
+code.
 
 ## Workflow of a Subscription
 
-### API Authentication requirements
+### First Sandbox creation
 
-Please make sure that you understand the basics of the [Cloudesire API](api.md) before interacting with the platform: most endpoints require _basic authentication_.
+A `SANDBOX` is a special order that can be issued by vendors to trigger a buy
+workflow - a simulation of an user that buy your product.
 
-### First steps
-
-Before you start, take a look to our [integration facilities](onboarding.md#integration-facilities): we provide a **staging marketplace** where you can register your company, log-in and develop your integration. You can also simulate the purchase of your product using demo credit cards.
-
-We strongly recommend to onboard and test your application on the staging marketplace before onboarding it on the public marketplace.
-
-Trigger a _SANDBOX_ order from the _Plans_ section inside the application edit page.
+You can trigger a _SANDBOX_ order from the _Plans_ section inside your product
+edit page.
 
 ![Vendors Control Panel: Syndication - Sandboxing](/img/docs/control_panel_syndicated_sandbox.png)
 
@@ -123,12 +156,16 @@ The first event you will receive, is a `Subscription CREATED` event.
 
 ### Retrieve the subscription resource after a Subscription CREATED
 
-You can start by fetching the _Subscription_ resource, that should exist after having received a `Subscription CREATED` event, by using the address contained in the _entityUrl_ attribute:
+> Please make sure that you understand the basics of the [Cloudesire API](api.md)
+> before interacting with the platform: most endpoints require authentication.
+
+You can start by fetching the _Subscription_ resource, that should exist after
+having received a `Subscription CREATED` event, by using the address contained
+in the `entityUrl` attribute:
 
 ```http
 GET /api/subscription/2388 HTTP/1.1
 ```
-    
 
 An example response would be:
 
@@ -145,7 +182,7 @@ Content-Type: application/json
         "url": "company/433"
     },
     "createdAt": "2015-01-05T13:59:00Z",
-    "deploymentStatus": "WAITING_PAYMENT",
+    "deploymentStatus": "WAITING_FOR_PAYMENT",
     "id": 2388,
     "invoices": [
         {
@@ -171,29 +208,46 @@ Content-Type: application/json
 }
 ```
 
-The `type` attribute contains which kind of order the customer has issued, and can be:
+The `type` attribute contains which kind of order the customer has issued, and
+can be:
 
-* `NORMAL`: standard order for which the customer is going to pay an invoice before using the application;
-* `SANDBOX`: a test order issued by the vendor, that mimic the NORMAL order behavior.
+* `NORMAL`: standard order for which the customer is going to pay an invoice
+  before using the application;
+* `SANDBOX`: a test order issued by the vendor, that mimic the NORMAL order
+  behavior.
 * `TRIAL`: a request for a free trial of the application;
 
-For `NORMAL` and `SANDBOX` subscriptions, you may notice that the `deploymentStatus` attribute is `WAITING_PAYMENT`, meaning that the customer has not paid the first invoice yet.
+For `NORMAL` and `SANDBOX` subscriptions, you may notice that the
+`deploymentStatus` attribute is `WAITING_PAYMENT`, meaning that the customer has
+not paid the first invoice yet.
 
-Before provisioning the tenant, you should wait for another `Subscription MODIFIED` event, checking that the `deploymentStatus` attribute contains `PENDING`, and the `paid` field is true.
+Before provisioning the tenant, you should wait for another `Subscription MODIFIED`
+event, checking that the `deploymentStatus` attribute contains `PENDING`, and
+the `paid` field is true.
 
-The `paid` field is true when all the generated invoices for a certain subscription has been paid by the customer, otherwise it is false.
+The `paid` field is true when all the generated invoices for a certain
+subscription has been paid by the customer, otherwise it is false.
 
-Please note that if the customer credit card information is stored on the platform, each subscription will be created as "already paid"  (namely in the first `Subscription CREATED` event, the `deploymentStatus` will be `PENDING`, and the `paid` field will be true.)
+Please note that if the customer credit card information is stored on the
+platform, each subscription will be created as "already paid"  (namely in the
+first `Subscription CREATED` event, the `deploymentStatus` will be `PENDING`,
+and the `paid` field will be true.)
 
-For `TRIAL subscriptions`, you should provision the new tenant immediately, and the initial `deploymentStatus` will be `PENDING` (and not `WAITING_PAYMENT`).
+For `TRIAL subscriptions`, you should provision the new tenant immediately, and
+the initial `deploymentStatus` will be `PENDING` (and not `WAITING_PAYMENT`).
 
-As you can see, the _Subscription_ resource contains references to other resources (e.g. _Orders_, _Invoice_, _User_, _Product_). You may want to fetch those object to retrieve additional information beside the data contained in the _Subscription_ resource.
+As you can see, the _Subscription_ resource contains references to other
+resources (e.g. _Orders_, _Invoice_, _User_, _Product_). You may want to fetch
+those object to retrieve additional information beside the data contained in the
+_Subscription_ resource.
 
-For example the next step may be to fetch the associated resource `user/2240`, to retrieve information about the user who requested your application.
+For example the next step may be to fetch the associated resource `user/2240`,
+to retrieve information about the user who requested your application.
 
 ### Retrieve customer information
 
-Once we got the customer reference, you can fetch it to obtain information about the customer:
+Once we got the customer reference, you can fetch it to obtain information about
+the customer:
 
 ```http
 GET /api/user/2240 HTTP/1.1
@@ -226,13 +280,17 @@ Content-Type: application/json
 }
 ```
 
-At this point you may have everything you need to create a new tenant in your platform, but feel free to explore all the related resources.
+At this point you may have everything you need to create a new tenant in your
+platform, but feel free to explore all the related resources.
 
 ### Update subscription information (after a new tenant provisioning)
 
-Once the tenant provisioning is complete, you just need to notify the platform that the customer may use the application, activating the subscription and entering information on how to reach the application.  This means that you need to provide endpoints and end-user instructions.
+Once the tenant provisioning is complete, you just need to notify the platform
+that the customer may use the application, activating the subscription and
+entering information on how to reach the application.  This means that you need
+to provide endpoints and end-user instructions.
 
-#### Providing endpoints
+#### Providing endpoints (end-user links to access application)
 
 Send a `POST` request to `subscription/2388/endpoints` to set the end-user application endpoints:
 
@@ -264,15 +322,19 @@ Content-Type: application/json; charset=utf-8
 ]
 ```    
 
-Possible values for the _category_ field are: `APP`, `PASSWORD_RESET`, `DOCUMENTATION`, `VIDEO`. Please note that an endpoint with the category `APP` is required, while the others are optional.
+Possible values for the _category_ field are: `APP`, `PASSWORD_RESET`,
+`DOCUMENTATION`, `VIDEO`. Please note that an endpoint with the category `APP`
+is required, while the others are optional.
 
-Security note: applications endpoints must be accessible via HTTPS.
+> Applications endpoints must be accessible via HTTPS.
 
 #### Providing End User Instructions
 
-Vendors can submit localized messages to customers, for example to provide login instructions.
+Vendors can submit localized messages to customers, for example to provide login
+instructions.
 
-Languages depend on the marketplace, for example in a marketplace with English and Italian languages available:
+Languages depend on the marketplace, for example in a marketplace with English
+and Italian languages available:
 
 ```http
 POST /api/subscription/2388/instructions HTTP/1.1
@@ -284,11 +346,13 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-> It would be great to give the customer the possibility to [auto-login](syndication.md#auto-login) to your application without providing any credentials. To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize the customer and enable automatic log-in into your application. If you follow this flow, you do not need to specify the user credentials into the end-user instructions.
+> Consider using [auto-login](syndication.md#auto-login) to improve the customer
+> experience.
 
 ### Set provisioning status to DEPLOYED
 
-As the final step, send a `PATCH` request on the `subscription/2388` endpoint to alter the subscription status:
+As the final step, send a `PATCH` request on the `subscription/2388` endpoint to
+alter the subscription status:
 
 ```http
 PATCH /api/subscription/2388 HTTP/1.1
@@ -301,15 +365,19 @@ Content-Type: application/json; charset=utf-8
 
 Starting from now, the customer can use your application!
 
-### Problems during provisioning of your tenant
-
-If something goes wrong during the provisioning of a new tenant in your application, please follow [these instructions](syndication.md#managing-provisioning-exceptions).
+> If something could go wrong during the provisioning of a new tenant in your
+application, discover a strategy to [handle exceptions](syndication.md#managing-provisioning-exceptions).
 
 ### Update subscription information (when the subscription expires)
 
-When the subscription period expires, the platform will send another `Subscription MODIFIED` event. Fetch again the _Subscription_ and look at the **status** attribute that should be set to `UNDEPLOY_SENT` for the current subscription.
+When the subscription period expires, the platform will send another
+`Subscription MODIFIED` event. Fetch again the _Subscription_ and look at the
+**status** attribute that should be set to `UNDEPLOY_SENT` for the current
+subscription.
 
-In this moment you should unprovision or block tenant access to your application, and confirm the operation via a `PATCH` request on the `subscription/2388` endpoint to finally terminate the subscription:
+In this moment you must suspend tenant access to your
+application, and confirm the operation via a `PATCH` request on the
+`subscription/2388` endpoint to finally terminate the subscription:
 
 ```http
 PATCH /api/subscription/2388 HTTP/1.1
@@ -322,13 +390,16 @@ Content-Type: application/json; charset=utf-8
 
 ![syndication unprovisioning](/img/docs/Syndication-Worklow-Unprovisioning.png)
 
-You have now completed the standard workflow for a syndicated application, congratulations!
+You have now completed the standard workflow for a syndicated application,
+congratulations!
 
 ### Billing events notifications
 
-When the customer ask for a subscription renewal, version upgrade or trial-to-paid upgrade, the platform will send a `Subscription MODIFIED` event.
+When the customer ask for a subscription renewal, version upgrade or
+trial-to-paid upgrade, the platform will send a `Subscription MODIFIED` event.
 
-After receiving the event, you have to fetch the _Subscription_ resource, and make sure that your database is aligned with ours.
+After receiving the event, you have to fetch the _Subscription_ resource, and
+make sure that your subscription status is aligned with ours.
 
 For example:
 
@@ -338,13 +409,15 @@ For example:
 
 ## Security
 
-### Securing your endpoint
+### Securing your endpoint via HMAC signature validation
 
-For security reasons, you probably want to limit requests on the specified endpoint(s) to those coming from us. If you set a **secret token** in the **application configuration** every event notification **payload will be signed** with and **HMAC hexdigest**.
+For security reasons, you probably want to limit requests on the specified
+endpoint(s) to those coming from us.
 
-### Validating payload signature
-
-Once you have configured a secret token in your application configuration, a hash signature for each payload will be in the `CMW-Event-Signature` HTTP header. The goal is to compute a hash using your secret token, and ensure that the hashes match.
+Once you have configured a secret token in your product edit page, a hash
+signature for each payload will be in the `CMW-Event-Signature` HTTP header. The
+goal is to compute a hash using your secret token, and ensure that the hashes
+match.
 
 e.g. in Java, using **[Apache Commons Codec](https://commons.apache.org/proper/commons-codec/)**:
 
@@ -361,13 +434,15 @@ if ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
 {
     // continue evaluating request...
 }
-``` 
+```
 
-YMMV, of course. **Notice** though that the hash signature starts with `sha1=`, no matter which implementation you use.
+> the hash signature starts with `sha1=`, no matter which implementation you use.
 
 ## Managing Provisioning Exceptions
 
-If something goes wrong during the provisioning of a new tenant in your application, please be sure to set the subscription status to `FAILED` by invoking our API, for example:
+If something goes wrong during the provisioning of a new tenant in your
+application, please be sure to set the subscription status to `FAILED` by
+invoking our API, for example:
 
 ```http
 PATCH /api/subscription/{id} HTTP/1.1
@@ -378,7 +453,8 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-and then to provide the customer appropriate _end-user instructions_, in order to explain what happened (e.g. _sorry, our system went down. Please retry later._)
+and then to provide the customer appropriate _end-user instructions_, in order
+to explain what happened (e.g. sorry, email address is already in use)
 
 ## Advanced Billing Features
 
@@ -386,9 +462,12 @@ There a few features that can be used alongside the basic integration.
 
 ### Application Metrics
 
-Even for syndicated applications, you can define and bills [application metrics](onboarding.md#application-metrics).
+Even for syndicated applications, you can define and bills
+[application metrics](onboarding.md#application-metrics).
 
-Besides the general usage and information provided, you should only take care of an additional **HTTP header**, sent to your metric endpoint: **CD-Subscription-Id**.
+Besides the general usage and information provided, you should only take care of
+an additional **HTTP header**, sent to your metric endpoint:
+**CD-Subscription-Id**.
 
 An example request:
 
@@ -410,11 +489,13 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-This HTTP header will let you to identify the subscription from which a metric is requested, so you can return the proper value.
+This HTTP header will let you to identify the subscription from which a metric
+is requested, so you can return the proper value.
 
 ### Plan Upgrade
 
-You can even upsell to your customers a new subscription plan. Please note that only upgrades and no downgrades are supported at this time.
+You can even upsell to your customers a new subscription plan. Please note that
+only upgrades and no downgrades are supported at this time.
 
 ```http
 PATCH /api/subscription/{id} HTTP/1.1
@@ -428,21 +509,30 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-The subscription should be an existing and deployed subscription of one of your customers, and the configuration should be the new product version you want to upgrade to.
+The subscription should be an existing and deployed subscription of one of your
+customers, and the configuration should be the new product version you want to
+upgrade to.
 
-Once requested, you will receive a Subscription MODIFIED event since the configuration attribute in the subscription resource will be modified accordingly to your request.
+Once requested, you will receive a Subscription MODIFIED event since the
+configuration attribute in the subscription resource will be modified
+accordingly to your request.
 
-The customer will receive a new invoice, that needs to be payed, with prices scaled depending on how many days are remaining for the current billing period of the existing subscription.
+The customer will receive a new invoice, that needs to be payed, with prices
+scaled depending on how many days are remaining for the current billing period
+of the existing subscription.
 
 ### Trial to paid subscription upgrade
 
-It's possible to upgrade a trial subscription to a paid one. The subscription must be in `DEPLOYED` state and cannot have a lifespan set.
+It's possible to upgrade a trial subscription to a paid one. The subscription
+must be in `DEPLOYED` state and cannot have a lifespan set.
 
-You can upgrade a trial subscription by renewing it for the desired number of months.
+You can upgrade a trial subscription by renewing it for the desired number of
+months.
 
 Once renewed, a trial subscription becomes a proper paid subscription.
 
-Given a trial subscription you are a vendor for with ID `{id}`, you can order a renewal for e.g. 1 month with a `PATCH` request:
+Given a trial subscription you are a vendor for with ID `{id}`, you can order a
+renewal for e.g. 1 month with a `PATCH` request:
 
 ```http
 PATCH /subscription/{id} HTTP/1.1
@@ -459,9 +549,11 @@ HTTP/1.1 204 No Content
 
 ### Custom billing
 
-As a vendor, you can generate a custom invoice for a deployed, unexpired subscription. The generated invoice will be issued immediately.
+As a vendor, you can generate a custom invoice for a deployed, unexpired
+subscription. The generated invoice will be issued immediately.
 
-Given a subscription you are a vendor for with ID `{id}` you can generate a custom invoice with a `POST /subscription/{id}/invoice` request:
+Given a subscription you are a vendor for with ID `{id}` you can generate a
+custom invoice with a `POST /subscription/{id}/invoice` request:
 
 ```http
 POST /subscription/{id}/invoice HTTP/1.1
@@ -491,13 +583,13 @@ Content-Type: application/json
 HTTP/1.1 201 Created
 Location: https://backend.cloudesire.com/api/invoice/10000
 ```
-    
 
 ### Recurring Costs
 
 You can add recurring costs to a syndicated subscription.
 
-Given a subscription you are a vendor for with ID `{id}` you can add recurring costs to it with a `POST /subscription/{id}/invoice/recurring` request:
+Given a subscription you are a vendor for with ID `{id}` you can add recurring
+costs to it with a `POST /subscription/{id}/invoice/recurring` request:
 
 ```http
 POST /subscription/{id}/invoice/recurring HTTP/1.1
@@ -528,7 +620,8 @@ HTTP/1.1 200 OK
 {}
 ```
 
-Every invoice generated for a subscription with recurring costs will contain these lines.
+Every invoice generated for a subscription with recurring costs will contain
+these lines.
 
 To remove recurring costs from a subscription just post an empty list:
 
@@ -540,7 +633,8 @@ POST /subscription/{id}/invoice/recurring HTTP/1.1
 
 ### Proceeds declaration
 
-As a vendor you can declare proceeds for one of your products active subscriptions.
+As a vendor you can declare proceeds for one of your products active
+subscriptions.
 
 Given a subscription with ID `{id}`, you can generate a cashed invoice with:
 
@@ -573,28 +667,46 @@ Content-Type: application/json
 
 These invoices will be used only while generating balance reports at the end of the month.
 
-## Recap for Publishing
+## Recap before publishing
 
 Before publishing your application into the marketplace, please make sure that these requirements are satisfied:
 
-* appropriate **translations** are provided for the [**end-user-instructions**](syndication.md#providing-end-user-instructions), for each marketplace languages (e.g. English, Italian, etc.)
-* **no HTML links** are present into the end-user instructions text (if you need to provide the end-users a link, please create a specific _endpoint_ for it; e.g. "reset password")
-* at least one [**application endpoint**](syndication.md#providing-endpoints) is provided
+* appropriate **translations** are provided for the
+  [**end-user-instructions**](syndication.md#providing-end-user-instructions),
+  for each marketplace languages (e.g. English, Italian, etc.)
+* **no HTML links** are present into the end-user instructions text (if you need
+  to provide the end-users a link, please create a specific _endpoint_ for it;
+  e.g. "reset password")
+* at least one [**application endpoint**](syndication.md#providing-endpoints) is
+  provided
 * all the endpoints must have an appropriate **category**
-* all the endpoints must be **accessible via HTTPS** due to the nature of data that business applications contains
+* all the endpoints must be **accessible via HTTPS** due to the nature of data
+  that business applications contains
 
-During a purchasing process, a crystal-clear communication is a crucial point. For this reason, please **don't send email** to the customer after the provisioning of his _tenant_ in your application: Cloudesire will notify him for you.
+During a purchasing process, a crystal-clear communication is a crucial point.
+For this reason, please **don't send email** to the customer after the
+provisioning of his _tenant_ in your application: Cloudesire will notify him for
+you.
 
-If you need to provide the customer some information after the provisioning (e.g. the credentials to access your application, or a short guide to start using your application) you can provide specific _[end-user instructions](syndication.md#providing-end-user-instructions)._
+If you need to provide the customer some information after the provisioning
+(e.g. the credentials to access your application, or a short guide to start
+using your application) you can provide specific [end-user
+instructions](syndication.md#providing-end-user-instructions).
 
-### Auto-Login
+## Auto-Login
 
-It is great to enable your customers to **auto-login** to your application without providing any credentials.
+It is great to enable your customers to **auto-login** to your application
+without providing any credentials.
 
-For instance, it means that your customers will not need to remember credentials for Cloudesire platform AND your product. Also, you will not need to provide end-user instructions to your customers to login for the first time to your application. Long story short, you can provide your customer a smooth and simple user experience.
+For instance, it means that your customers will not need to remember credentials
+for Cloudesire platform AND your product. Also, you will not need to provide
+end-user instructions to your customers to login for the first time to your
+application. Long story short, you can provide your customer a smooth and simple
+user experience.
 
-To achieve this goal, we strongly suggest to add an **authorization token** to the endpoint to access the application. In this way, you can recognize customers and enable automatic log-in to your application.
+To achieve this goal, we strongly suggest to add an **authorization token** to
+the endpoint to access the application. In this way, you can recognize customers
+and enable automatic log-in to your application.
 
-If you follow this flow, you do not need to specify user credentials into end-user instructions.
-
-> In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
+If you follow this flow, you do not need to specify user credentials into
+end-user instructions.
