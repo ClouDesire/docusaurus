@@ -159,13 +159,13 @@ loss</strong> in your application.</p>
 <h3><a class="anchor" aria-hidden="true" id="application-stacks-specific-requirements"></a><a href="#application-stacks-specific-requirements" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Application Stacks-specific requirements</h3>
 <p>We support several application stack, but each application stack has specific aspects that should be kept in consideration.</p>
 <ul>
-<li><a href="languages.md#net">How-to package .NET applications</a></li>
-<li><a href="languages.md#cgi">How-to package CGI applications</a></li>
-<li><a href="languages.md#django">How-to package Django applications</a></li>
-<li><a href="languages.md#java">How-to package Java applications</a></li>
-<li><a href="languages.md#nodejs">How-to package NodeJS applications</a></li>
-<li><a href="languages.md#php">How-to package PHP applications</a></li>
-<li><a href="languages.md#ruby">How-to package Ruby applications</a></li>
+<li><a href="/docs/stacks.html#net">How-to package .NET applications</a></li>
+<li><a href="/docs/stacks.html#cgi">How-to package CGI applications</a></li>
+<li><a href="/docs/stacks.html#django">How-to package Django applications</a></li>
+<li><a href="/docs/stacks.html#java">How-to package Java applications</a></li>
+<li><a href="/docs/stacks.html#nodejs">How-to package NodeJS applications</a></li>
+<li><a href="/docs/stacks.html#php">How-to package PHP applications</a></li>
+<li><a href="/docs/stacks.html#ruby">How-to package Ruby applications</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="database-specific-requirements"></a><a href="#database-specific-requirements" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Database-specific requirements</h3>
 <p>An application could automatically initialize the database schema at the first
@@ -180,10 +180,10 @@ V3__added_index.sql
 <p>For more information, refer directly to the <a href="https://flywaydb.org/documentation/migrations#sql-based-migrations">flyway
 documentation</a>.</p>
 <ul>
-<li><a href="languages.md#mongodb">How-to package applications using MongoDB</a></li>
-<li><a href="languages.md#mysql">How-to package applications using MySQL</a></li>
-<li><a href="languages.md#postgresql">How-to package applications using PostgreSQL</a></li>
-<li><a href="languages.md#mssql-server">How-to package applications using MSSQL Server</a></li>
+<li><a href="/docs/stacks.html#mongodb">How-to package applications using MongoDB</a></li>
+<li><a href="/docs/stacks.html#mysql">How-to package applications using MySQL</a></li>
+<li><a href="/docs/stacks.html#postgresql">How-to package applications using PostgreSQL</a></li>
+<li><a href="/docs/stacks.html#mssql-server">How-to package applications using MSSQL Server</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="post-deploy-script"></a><a href="#post-deploy-script" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-deploy script</h3>
 <p>It's possible to automatically execute custom commands on the last stage of the deploy, just in case you need some special hook before the application is ready.</p>
@@ -209,7 +209,6 @@ echo 'Build completed' &gt; log.txt
 <li><a href="https://cdn.cloudesire.com/demo_apps/drupal.zip">Drupal</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/dokuwiki.zip">Dokuwiki</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/owncloud.zip">OwnCloud</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/piwik.zip">Piwik</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/redmine.zip">Redmine</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/wordpress.zip">WordPress</a></li>
 </ul>
@@ -222,7 +221,8 @@ echo 'Build completed' &gt; log.txt
 <li><a href="https://docs.docker.com/mac/started/">Mac</a></li>
 <li><a href="https://docs.docker.com/windows/started">Windows</a></li>
 </ul>
-<p>You can find a lot of easy to read documentation on the official <a href="https://docs.docker.com/userguide/">Docker User Guide</a>.</p>
+<p>You can find a lot of easy to read documentation on the official
+<a href="https://docs.docker.com/get-started/">Docker User Guide</a>.</p>
 <p>Before going forward in this documentation, please take a look to the <a href="/docs/deployed.html/#data-persistence">data persistence</a> section to <strong>avoid data loss</strong> in your application.</p>
 <p>Once a Docker image is created, the only think you need to do to <a href="/docs/onboarding.html">onboard</a> your application in Cloudesire is to create a <em>Package</em> (linked to your application), then select &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot; input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in <a href="/docs/deployed.html/#packages">this section</a>.</p>
 <p><img src="/img/docs/control_panel_docker_image.png" alt="Vendors Control Panel - Docker Image" title="Vendors Control Panel - Docker Image"></p>
@@ -331,7 +331,7 @@ selecting &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot; input-b
 <p><img src="/img/docs/vendors-sandboxing.png" alt="Launch sandbox"></p>
 <p>The provisioning process will start immediately; it will require few minutes, depending on the cloud provider performances, the &quot;weight&quot; of your app, and other factors.</p>
 <p>You'll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:</p>
-<p><a href="/img/docs/vendors-running-instance.jpg"><img src="/img/docs/vendors-running-instance-570x1024.jpg" alt=""></a></p>
+<p><img src="/img/docs/vendors-running-instance.jpg" alt="vendor running instance"></p>
 <p>The following elements are available:</p>
 <ul>
 <li><strong>General Info:</strong> the name of the product, its logo, the name of the vendor, the current deployment status</li>
