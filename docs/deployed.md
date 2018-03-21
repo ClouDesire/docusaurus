@@ -216,13 +216,13 @@ loss** in your application.
 
 We support several application stack, but each application stack has specific aspects that should be kept in consideration.
 
-* [How-to package .NET applications](languages.md#net)
-* [How-to package CGI applications](languages.md#cgi)
-* [How-to package Django applications](languages.md#django)
-* [How-to package Java applications](languages.md#java)
-* [How-to package NodeJS applications](languages.md#nodejs)
-* [How-to package PHP applications](languages.md#php)
-* [How-to package Ruby applications](languages.md#ruby)
+* [How-to package .NET applications](stacks.md#net)
+* [How-to package CGI applications](stacks.md#cgi)
+* [How-to package Django applications](stacks.md#django)
+* [How-to package Java applications](stacks.md#java)
+* [How-to package NodeJS applications](stacks.md#nodejs)
+* [How-to package PHP applications](stacks.md#php)
+* [How-to package Ruby applications](stacks.md#ruby)
 
 ### Database-specific requirements
 
@@ -241,10 +241,10 @@ V3__added_index.sql
 For more information, refer directly to the [flyway
 documentation](https://flywaydb.org/documentation/migrations#sql-based-migrations).
 
-* [How-to package applications using MongoDB](languages.md#mongodb)
-* [How-to package applications using MySQL](languages.md#mysql)
-* [How-to package applications using PostgreSQL](languages.md#postgresql)
-* [How-to package applications using MSSQL Server](languages.md#mssql-server)
+* [How-to package applications using MongoDB](stacks.md#mongodb)
+* [How-to package applications using MySQL](stacks.md#mysql)
+* [How-to package applications using PostgreSQL](stacks.md#postgresql)
+* [How-to package applications using MSSQL Server](stacks.md#mssql-server)
 
 ### Post-deploy script
 
@@ -275,7 +275,6 @@ And this is a collection of the most famous open-source applications, already av
 * [Drupal](https://cdn.cloudesire.com/demo_apps/drupal.zip)
 * [Dokuwiki](https://cdn.cloudesire.com/demo_apps/dokuwiki.zip)
 * [OwnCloud](https://cdn.cloudesire.com/demo_apps/owncloud.zip)
-* [Piwik](https://cdn.cloudesire.com/demo_apps/piwik.zip)
 * [Redmine](https://cdn.cloudesire.com/demo_apps/redmine.zip)
 * [WordPress](https://cdn.cloudesire.com/demo_apps/wordpress.zip)
 
@@ -291,7 +290,8 @@ The first step is to install the _Docker_ command-line tool on your development 
 * [Mac](https://docs.docker.com/mac/started/)
 * [Windows](https://docs.docker.com/windows/started)
 
-You can find a lot of easy to read documentation on the official [Docker User Guide](https://docs.docker.com/userguide/).
+You can find a lot of easy to read documentation on the official
+[Docker User Guide](https://docs.docker.com/get-started/).
 
 Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section to **avoid data loss** in your application.
 
