@@ -134,9 +134,12 @@ For each _Plan_ the vendor has to specify the following information:
 * _Billing frequency_ (in months): how often the customer will be billed for this product version. For example, it could be monthly, bimonthly, yearly, etc. (for further information see [this section](platform.md#billing-module)).
 * _Short Living Subscription_ (yes/no): it's also possible to specify a _short-time_ billing frequency; that means that the subscription duration will be less than a day, and needs to be specified in hours.
 
-#### Extra-Resources
+#### Extra-Resources tab
 
-* _Extra-resources_: they are goods or services which can be sold together with the application. Examples are a 10-days pack of Technical Support, some hardware components, extra credits, etc. For further information see [this section](#extra-resources).
+* _Extra-resources_: they are goods or services which can be sold together with
+  the application. Examples are a 10-days pack of Technical Support, some
+  hardware components, extra credits, etc. For further information see [this
+  section](onboarding.md#extra-resources).
 
 #### Advanced Settings
 

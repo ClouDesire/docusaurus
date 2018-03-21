@@ -25,13 +25,13 @@ class Footer extends React.Component {
         <section className="sitemap">
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('index.html', this.props.language)}>
+            <a href={this.docUrl('index.html', false)}>
               Documentation Index
             </a>
-            <a href={this.docUrl('api.html', this.props.language)}>
+            <a href={this.docUrl('api.html', false)}>
               API Reference
             </a>
-            <a href={this.docUrl('platform.html', this.props.language)}>
+            <a href={this.docUrl('platform.html', false)}>
               Platform modules
             </a>
             <a href="https://www.cloudesire.com">

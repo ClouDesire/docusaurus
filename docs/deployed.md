@@ -186,20 +186,31 @@ For Docker applications, access to D_ocker API is restricted_ for security reaso
 
 ## ZIP Packaging
 
-Before you start onboarding  an application to the marketplace, please take a look to our [integration facilities.](onboarding.md#integration-facilities) We provide a **staging marketplace** where you can register your company, log-in and on-board your application via ZIP package without any worry (also simulating the purchase of your product using demo credit cards). We strongly recommend to upload and test applications on the staging marketplace before publishing them on the public marketplace.
+Before you start onboarding  an application to the marketplace, please take a
+look to our [integration facilities.](onboarding.md#integration-facilities) We
+provide a **staging marketplace** where you can register your company, log-in
+and on-board your application via ZIP package without any worry (also simulating
+the purchase of your product using demo credit cards). We strongly recommend to
+upload and test applications on the staging marketplace before publishing them
+on the public marketplace.
 
-In order to deploy automatically an Application, a ZIP [package](deployed.md#packages) is required, containing:
+In order to deploy automatically an Application, a ZIP
+[package](deployed.md#packages) is required, containing:
 
 * the web application's source code or the packaged artifacts;
-* the database data that the application needs to be fully functional (end-users should not do any installation wizard requiring technical skills).
+* the database data that the application needs to be fully functional (end-users
+  should not do any installation wizard requiring technical skills).
 
 The ZIP package structure must meet the following general criteria:
 
 * a _sql_ folder if using MySQL, Postgres or ASPNET;
 * a _mongodb_ folder if using MongoDB;
-* a folder with the web application's code, depending on the language and/or stack used (follow the links below for your application stack).
+* a folder with the web application's code, depending on the language and/or
+  stack used (follow the links below for your application stack).
 
-Before going forward in this documentation, please take a look to the [data persistence](deployed.md/#data-persistence) section in order to **avoid data loss** in your application.
+Before going forward in this documentation, please take a look to the
+[data persistence](deployed.md#data-persistence) section in order to **avoid data
+loss** in your application.
 
 ### Application Stacks-specific requirements
 
@@ -215,13 +226,20 @@ We support several application stack, but each application stack has specific as
 
 ### Database-specific requirements
 
-An application could automatically initialize the database schema at the first run, otherwise it's possible to insert a database dump into the zip. We adopted the [flyway](http://flywaydb.org/) database migration tool, that supports schema versioning by simply creating multiple .sql file starting with the version number. For example:
+An application could automatically initialize the database schema at the first
+run, otherwise it's possible to insert a database dump into the zip. We adopted
+the [flyway](http://flywaydb.org/) database migration tool, that supports schema
+versioning by simply creating multiple .sql file starting with the version
+number. For example:
 
-    V1__initial_schema.sql
-    V2__added_field.sql
-    V3__added_index.sql
+```bash
+V1__initial_schema.sql
+V2__added_field.sql
+V3__added_index.sql
+```
 
-For more information, refer directly to the [flyway documentation](http://flywaydb.org/documentation/migration/sql.html).
+For more information, refer directly to the [flyway
+documentation](https://flywaydb.org/documentation/migrations#sql-based-migrations).
 
 * [How-to package applications using MongoDB](languages.md#mongodb)
 * [How-to package applications using MySQL](languages.md#mysql)
