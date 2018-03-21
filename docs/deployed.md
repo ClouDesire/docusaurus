@@ -444,7 +444,7 @@ The provisioning process will start immediately; it will require few minutes, de
 
 You'll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:
 
-[![](/img/docs/vendors-running-instance-570x1024.jpg)](/img/docs/vendors-running-instance.jpg)
+![vendor running instance](/img/docs/vendors-running-instance.jpg)
 
 The following elements are available:
 
