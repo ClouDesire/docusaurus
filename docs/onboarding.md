@@ -435,7 +435,8 @@ demo credit card numbers and where you can test the whole customer journey,
 end-to-end.
 
 > We strongly recommend to test applications on the staging marketplace to
-discover integration issues before the application is published on the marketplace.
+> discover integration issues before the application is published on the
+> marketplace.
 
 #### Staging Marketplace URL and API endpoint
 
@@ -445,7 +446,8 @@ The Staging Marketplace for software vendors is available at the following URL:
 
 The API endpoint is described in [API documentation](api.md#domains)
 
-On this marketplace you can freely create as many accounts as you wish, both vendor and customers, and you can use the [testing credit cards of Stripe](https://stripe.com/docs/testing) or [Paypal](https://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm).
+On this marketplace you can freely create as many accounts as you wish, both
+vendor and customers, and you can use the [fake credit cards](https://stripe.com/docs/testing) numbers to simulate payments.
 
 > Manage API endpoints as configuration parameters in your source code since
 they need to be changed when publishing your application in a different
@@ -463,33 +465,20 @@ application onboarding process we strongly suggest you to:
 * go to your application page
 * you can browse applications or look for your application using your application name
 * buy your application (providing a testing credit card number)
-* use the [testing credit cards of Stripe](https://stripe.com/docs/testing) or [Paypal](https://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm).
+* use a [test credit card](https://stripe.com/docs/testing)
 * wait while the provisioning process ends
 
 Once the application is ready (the entire process shouldn't require more than a
 few minutes) you will see in your dashboard an interface similar to the
 following screenshot (which refers to a running _trial):
 
-![Customer Dashboard - My applications](/img/docs/customers-dashboard-running-trial.png "Customer Dashboard - My applications")
+![Customer Dashboard - My applications](/img/docs/customers-dashboard-running-trial.png)
 
-By clicking on the "_Launch application-name_" button the customer will be redirected to a view where:
+By clicking on the "_Launch application-name_" button the customer will be
+redirected to a view where:
 
 * the application runs in the **body** of the page
 * the **header** of the page contains the running application name and version and provides some tools (bookmark, end-user instructions, customer profile details, etc.). This header will be also used to provide useful notifications (subscription about to expire, private messages, etc.).Also, from this section customers will be able to go back to Cloudesire.
 * a **customer support** tool is available (to give the customer the possibility to send direct messages both to the platform administrators and vendors). Those messages will be managed by an integrated **trouble-ticketing system**
 
 ![Customer Dashboard - running application](/img/docs/customer_dashboard_app_ifra.jpg "Customer Dashboard - running application")
-
-### Sandbox orders
-
-#### What are sandbox orders and why you should use them
-
-Sandbox orders are fake orders in which vendors can test the deployment workflow of their applications. Even if they are not real orders, they simulate a real purchase scenario, so that vendors can identify integration issues in their workflow before applications are available to the public.
-
-#### How to launch a sandbox order
-
-To launch a **sandbox**, you need to have at least one product in your catalog: this means that you have already uploaded at least one product and a plan on the staging marketplace. If you already have at least one application in your catalog go to [staging marketplace homepage](https://frontend-staging-vendors.cloudesire.com/), select "log-in" at the top right corner of the screen, enter your staging vendor username and password and click login. Then click on your username at the top right to access your personal Control Panel. Click "Catalog" from the menu at the top left of the screen to see your applications. Once you know which application you want to test, go to "_Plans_" and select "SANDBOX".
-
-In the following picture you can see an example of the page from which you can launch a sandbox order. If you do not know how to configure a plan for your product, click here.
-
-![Vendors Control Panel: Syndication - Sandbox](/img/docs/control_panel_syndicated_sandbox.png "Vendors Control Panel: Syndication - Sandboxing")

@@ -254,9 +254,18 @@ On the Marketplace, a bundle is shown as a normal product, highlighting the disc
 
 ### Payments
 
-* to date, the supported payment gateway are **PayPal** and **Stripe**
-* after the sale of an application, when the customer pays the related invoice, Cloudesire automatically starts the application deployment process on the selected cloud provider
-* if a problem occurs during the interaction with the payment gateway, Cloudesire allows the platform administrator to manually set an invoice as "paid" (in order to start the deployment process). This feature can be also useful to manage **bank transfer** payments (in this case, when the administrator sets an invoice as "paid" he can provide the _deposit slip_ data using a specific input field)
+* to date, the supported payment gateways for credit cards are **Stripe** and
+  ***PayPal**.
+* SEPA payments are supported via **Stripe**.
+* after the sale of an application, when the customer pays the related invoice,
+  Cloudesire automatically starts the application deployment process on the
+  selected cloud provider
+* if a problem occurs during the interaction with the payment gateway,
+  Cloudesire allows the platform administrator to manually set an invoice as
+  "paid" (in order to start the deployment process). This feature can be also
+  useful to manage **bank transfer** payments (in this case, when the
+  administrator sets an invoice as "paid" he can provide the _deposit slip_ data
+  using a specific input field)
 
 ### Self-Billing
 

@@ -12,17 +12,23 @@ hosted somewhere and that has native support for **multi-tenancy**. The
 provisioning of a new tenant should be almost instantaneous, and the integration
 has to be done directly via [Cloudesire API](api.md).
 
+This documentation is a must for a vendor looking to integrate with the
+cloudesire platform.
+
 ## Introduction to Syndication
 
 The basics follows:
 
-* Platform will send notifications (HTTP POST requests with a [JSON
+* the platform will send notifications (HTTP POST requests with a [JSON
   payload](syndication.md#anatomy-of-an-event-request)) to a your endpoint every
   time an interesting **event** occurs on the marketplace (new subscription
   created, invoice payment and so on).
 * your endpoint should handle these notifications, e.g. fetch the needed
   information, provision a new user in its system and update the subscription
-  status via [Cloudesire API](api.md).
+  status via [Cloudesire API](api.md)
+* integration development should be done on our
+  [staging-marketplace](onboarding.md#staging-marketplace) and after everything
+  looks fine, move to the production marketplace.
 
 ### Prime approach to the provisioning workflow
 
@@ -30,13 +36,13 @@ A simple example follows, explaining the workflow of a new tenant order and
 provisioning:
 
 * a customer make an order for one of your products
-* Cloudesire sends a notification to your endpoint, containing a
+* the platform sends a notification to your endpoint, containing a
   `Subscription CREATED` event
-* once you've received this notification, you need to call our API in order to
-  retrieve the subscription details (given its identifier) which includes the
-  customer data (name, email, etc.) that you need, and `paid`
-  field, which can be `true` if the customer already paid the subscription for
-  your product or `false`if the customer hasn't paid yet the subscription
+* once you've received this notification, you need to call platform API in order
+  to retrieve the subscription details (given its identifier) which includes the
+  customer data (name, email, etc.) that you need, and `paid` field, which can
+  be `true` if the customer already paid the subscription for your product or
+  `false`if the customer hasn't paid yet the subscription
 * if the `paid` field is `true` you can provision your tenant in your platform
 * if the `paid` field is `false` you need to wait for the next notification
   which will contain a `Subscription MODIFIED`. Once you've received this
@@ -45,19 +51,19 @@ provisioning:
 * once you've executed the provisioning of the tenant in your platform, you need
   to call our API for the last time, setting the subscription `deploymentStatus`
   status to `DEPLOYED`
-* when the subscription status changes to `deployed`, Cloudesire notifies the
+* when the subscription status changes to `DEPLOYED`, the platform notifies the
   customer, providing him the instructions to access your application
-* when the subscription is renewed (by the customer or by autorenew), Cloudesire
+* when the subscription is renewed (by the customer or by autorenew), the platform
   sends a notification `Subscription MODIFIED`.
-* when the subscription expires, Cloudesire sends a notification
+* when the subscription expires, the platform sends a notification
   `Subscription DELETED`, then you need to unprovision the tenant.
 
-![](/img/docs/Syndication-Worklow-Provisioning.png)
+![provisioning workflow](/img/docs/Syndication-Worklow-Provisioning.png)
 
 ### How to setup the syndication endpoint
 
 > Test your source code in our [staging marketplace](onboarding.md#staging-marketplace)
-where _fake payments_ are possible and where you can test the whole customer 
+where _fake payments_ are possible and where you can test the whole customer
 journey, end-to-end.
 
 Let's start things off: after having created a _Syndicated Product_ in your
@@ -67,22 +73,22 @@ be delivered.
 
 ![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png)
 
-If you want to secure your syndication endpoint, please read the [security
+To increase the security of your endpoint, please read the [security
 section](syndication.md#security).
 
 ### The "Test Events" feature
 
-If you are prototyping the integration with Cloudesire, you may find useful the
-"**Test Events"** functionality, available in the _General_ tab into Product
+If you are at the first step of developing an integration, you may find useful
+the "**Test Events"** functionality, available in the _General_ tab into Product
 editing page.
 
-This button will trigger a chosen notification to your endpoint, without kicking
+This button will send a test notification to your endpoint, without kicking
 any kind of workflow on the Cloudesire side. This test notification contains
-some stubbed data.
+some stubbed data that you can configure within the interface.
 
-We strongly recommend to use this feature immediately after having configured
-your endpoint for the first time to be sure that is correctly reachable from
-Cloudesire platform.
+> We recommend to use this feature immediately after having configured your
+endpoint for the first time, to be sure that is correctly reachable from
+Cloudesire platform, and SSL certificates are valid.
 
 ### Anatomy of an event request
 
@@ -142,15 +148,11 @@ code.
 
 ## Workflow of a Subscription
 
-### First Sandbox creation
+### First order creation
 
-A `SANDBOX` is a special order that can be issued by vendors to trigger a buy
-workflow - a simulation of an user that buy your product.
-
-You can trigger a _SANDBOX_ order from the _Plans_ section inside your product
-edit page.
-
-![Vendors Control Panel: Syndication - Sandboxing](/img/docs/control_panel_syndicated_sandbox.png)
+With your test customer account you created on the
+[staging-marketplace](onboarding.md#staging-marketplace), submit an order for
+your product (buy or try, depending on your plan configuration).
 
 The first event you will receive, is a `Subscription CREATED` event.
 
@@ -213,28 +215,26 @@ can be:
 
 * `NORMAL`: standard order for which the customer is going to pay an invoice
   before using the application;
-* `SANDBOX`: a test order issued by the vendor, that mimic the NORMAL order
-  behavior.
 * `TRIAL`: a request for a free trial of the application;
 
-For `NORMAL` and `SANDBOX` subscriptions, you may notice that the
-`deploymentStatus` attribute is `WAITING_PAYMENT`, meaning that the customer has
-not paid the first invoice yet.
+For `NORMAL` subscriptions, you may notice that the `deploymentStatus` attribute
+may be `WAITING_PAYMENT`, meaning that the customer has not paid the first invoice
+yet, or `PENDING`, meaning that the platform is waiting for your provisioning
+process to complete.
 
-Before provisioning the tenant, you should wait for another `Subscription MODIFIED`
-event, checking that the `deploymentStatus` attribute contains `PENDING`, and
-the `paid` field is true.
-
+This status is reflected also on the `paid` field, that can be `true` or `false`.
 The `paid` field is true when all the generated invoices for a certain
 subscription has been paid by the customer, otherwise it is false.
 
-Please note that if the customer credit card information is stored on the
-platform, each subscription will be created as "already paid"  (namely in the
-first `Subscription CREATED` event, the `deploymentStatus` will be `PENDING`,
-and the `paid` field will be true.)
+Before provisioning the tenant, the `paid` field should be `true`.
 
-For `TRIAL subscriptions`, you should provision the new tenant immediately, and
-the initial `deploymentStatus` will be `PENDING` (and not `WAITING_PAYMENT`).
+If not, you should wait for another `Subscription MODIFIED` event, checking that
+the `deploymentStatus` attribute contains `PENDING`, and the `paid` field is
+true.
+
+> For `TRIAL` subscriptions, you should provision the new tenant immediately,
+> and the initial `deploymentStatus` will be `PENDING` (and never
+> `WAITING_PAYMENT`).
 
 As you can see, the _Subscription_ resource contains references to other
 resources (e.g. _Orders_, _Invoice_, _User_, _Product_). You may want to fetch

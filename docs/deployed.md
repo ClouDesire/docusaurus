@@ -21,6 +21,29 @@ Software vendors can specify for each product:
 
 For example, an application can be described specifying a _Module_ (with specific **cloud resources requirements**) which is a _composition_ of a _back-end Package_ (e.g. a Java module exposing REST API plus a PostgreSQL database) and a _front-end Package_ (e.g. a simple and "light" NodeJs application).
 
+### Sandbox orders
+
+#### What are sandbox orders and why you should use them
+
+Sandbox orders are fake orders in which vendors can test the deployment workflow
+of their applications. Even if they are not real orders, they simulate a real
+purchase scenario, so that vendors can identify integration issues in their
+workflow before applications are available to the public.
+
+#### How to launch a sandbox order
+
+To launch a **sandbox**, you need to have at least one product in your catalog:
+this means that you have already uploaded at least one product and a plan on the marketplace.
+
+Click "Catalog" from the menu at the top left of the screen to see your
+applications. Once you know which application you want to test, go to "_Plans_"
+and select "SANDBOX".
+
+In the following picture you can see an example of the page from which you can
+launch a sandbox order.
+
+![Vendors Control Panel: Syndication - Sandbox](/img/docs/control_panel_syndicated_sandbox.png)
+
 ### Packages
 
 To access the list of the available Packages, click on the "_Catalog_" \> "_Packages_" menu item on the left.
