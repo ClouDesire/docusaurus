@@ -4,7 +4,7 @@ title: Onboarding a new application
 sidebar_label: Onboarding a new application
 ---
 
-In this section you will learn how to start the onboarding process of your application on the Cloudesire marketplace. Please note that the process is different for [Deployed](deployed.md) and [Syndicated](syndicated.md) applications, therefore you need to know how your application works to upload it successfully.
+In this section you will learn how to start the onboarding process of your application on the Cloudesire marketplace. Please note that the process is different for [Deployed](deployed.md) and [Syndicated](syndication.md) applications, therefore you need to know how your application works to upload it successfully.
 
 > In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
 
