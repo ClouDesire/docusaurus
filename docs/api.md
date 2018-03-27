@@ -19,8 +19,7 @@ based on [Retrofit](http://square.github.io/retrofit/) to consume our API.
 
 ### PHP
 
-We suggest to use the great [Guzzle HTTP Library](http://guzzle.readthedocs.org/)
-to build a client to call our API, but we have also a [php-curl example project](https://github.com/ClouDesire/examples/tree/master/php-syndication).
+Please go ahead to the [PHP client](api-php.md) page.
 
 ### CLI
 
@@ -40,6 +39,10 @@ Every marketplace has a different API `domain`, depending on its environment:
 * **marketplace.cloudesire.com**: _backend.cloudesire.com_
 * **frontend-staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
 * **marketplace.italiastartup.it**: _prod-its.cloudesire.com_
+
+As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
+
+```https://backend.cloudesire.com/api/```
 
 ## Versioning
 
