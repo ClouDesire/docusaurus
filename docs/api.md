@@ -51,11 +51,10 @@ to avoid failures while the API evolves.
 This value is a string representation in `yyyymmdd` format of the date when a
 breaking changes is introduced to support new features.
 
-Latest version is `20180312`.
+    GET /api/productVersion?apiVersion=20180312 HTTP/1.1
 
-```http
-GET /api/productVersion?apiVersion=20180312 HTTP/1.1
-```
+To discover the latest available version check the source of
+[ApiVersion.java](https://github.com/ClouDesire/java-api-client/blob/master/cmw-dto/src/main/java/com/liberologico/cloudesire/cmw/ApiVersion.java).
 
 > Make sure to always set apiVersion query parameter to avoid future breakage of
 your integration
