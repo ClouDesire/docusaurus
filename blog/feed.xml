@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Thu, 15 Mar 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 27 Mar 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,22 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Selling and automated provisioning of Microsoft/Azure products in a SaaS marketplace @ DevOps@Work 2018]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html</guid>
+            <pubDate>Tue, 27 Mar 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>This is a presentation I held at the of <a href="https://www.eventbrite.it/e/biglietti-devopswork-2018-41708545382">DevOps@Work
+2018</a>
+conference.</p>
+<blockquote>
+<p>Office 365, Azure marketplace and Azure Resource Manager templates selling on
+a SaaS marketplace.</p>
+</blockquote>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="1f3862137822424d8d24e02847f742e4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Continuous Delivery, 5 years later @ Incontro DevOps Italia 2018]]></title>
             <link>https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html</link>

@@ -2,12 +2,33 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>documentation Blog</title>
-    <updated>2018-03-15T06:00:00Z</updated>
+    <updated>2018-03-27T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2018 Cloudesire.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Selling and automated provisioning of Microsoft/Azure products in a SaaS marketplace @ DevOps@Work 2018]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html">
+        </link>
+        <updated>2018-03-27T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>This is a presentation I held at the of <a href="https://www.eventbrite.it/e/biglietti-devopswork-2018-41708545382">DevOps@Work
+2018</a>
+conference.</p>
+<blockquote>
+<p>Office 365, Azure marketplace and Azure Resource Manager templates selling on
+a SaaS marketplace.</p>
+</blockquote>
+<p><br/></p>
+<script async class="speakerdeck-embed" data-id="1f3862137822424d8d24e02847f742e4" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>http://twitter.com/gionn</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Continuous Delivery, 5 years later @ Incontro DevOps Italia 2018]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html</id>
