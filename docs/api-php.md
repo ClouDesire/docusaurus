@@ -10,7 +10,8 @@ or just call the Cloudesire API from PHP, this page is for you.
 The simplest way to interact with a REST API in PHP is leveraging the
 [sendgrid/php-http-client](https://github.com/sendgrid/php-http-client).
 
-Please take a look at the following upstream documentation:
+To install the library, please take a look at the following upstream
+documentation:
 
 * [Requirements](https://github.com/sendgrid/php-http-client#prerequisites)
 * [Install with Composer](https://github.com/sendgrid/php-http-client#install-with-composer)
