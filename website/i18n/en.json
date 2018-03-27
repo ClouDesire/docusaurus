@@ -4,6 +4,8 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "knowledge base of the cloudesire platform maintained by the cloudesire development team",
+    "api-php": "PHP Client for Cloudesire API",
+    "PHP Client": "PHP Client",
     "api": "REST API Introduction",
     "Introduction": "Introduction",
     "channel": "Distribution and Channel Management",

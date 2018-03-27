@@ -12,6 +12,9 @@
       "channel",
       "emails"
     ],
-    "API": ["api"]
+    "API": [
+      "api",
+      "api-php"
+    ]
   }
 }
