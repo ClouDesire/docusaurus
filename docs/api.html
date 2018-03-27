@@ -35,9 +35,10 @@ command-line to debug and experiment with our API.</p>
 to avoid failures while the API evolves.
 This value is a string representation in <code>yyyymmdd</code> format of the date when a
 breaking changes is introduced to support new features.</p>
-<p>Latest version is <code>20180312</code>.</p>
-<pre><code class="hljs css http"><span class="hljs-keyword">GET</span> <span class="hljs-string">/api/productVersion?apiVersion=20180312</span> HTTP/1.1
+<pre><code class="hljs">GET /api/productVersion?apiVersion=20180312 HTTP/1.1
 </code></pre>
+<p>To discover the latest available version check the source of
+<a href="https://github.com/ClouDesire/java-api-client/blob/master/cmw-dto/src/main/java/com/liberologico/cloudesire/cmw/ApiVersion.java">ApiVersion.java</a>.</p>
 <blockquote>
 <p>Make sure to always set apiVersion query parameter to avoid future breakage of
 your integration</p>
