@@ -4,7 +4,11 @@ title: Onboarding a new application
 sidebar_label: Onboarding a new application
 ---
 
-In this section you will learn how to start the onboarding process of your application on the Cloudesire marketplace. Please note that the process is different for [Deployed](deployed.md) and [Syndicated](syndication.md) applications, therefore you need to know how your application works to upload it successfully.
+In this section you will learn how to start the onboarding process of your
+application on the Cloudesire marketplace. Please note that the process is
+different for [Deployed](deployed.md) applications, [Syndicated](syndication.md)
+applications and [Services](service.md), therefore you need to clearly
+understand the differences in order to onboard your product successfully.
 
 > In order to see your product visible on the marketplace, it should at least have one **Plan** set to _published_.
 
@@ -18,8 +22,13 @@ Select "_Catalog_" from the left menu, then select "_Products_" and click on the
 
 You will see a pop-up in which you can  insert your product name and choose between two onboarding options:
 
-* "_Syndicated Product_" to start onboarding a new product in [Syndication](syndication.md) mode
-* "_Deployed Product_" to start onboarding a new product in [Self-Deployment mode](deployed.md) (using the [Docker Packaging](deployed.md#docker-packaging) or [ZIP Packaging](deployed.md#zip-packaging) methodologies)
+* "_Syndicated Product_" to start onboarding a new product in
+  [Syndication](syndication.md) mode
+* "_Deployed Product_" to start onboarding a new product in [Self-Deployment
+  mode](deployed.md) (using the [Docker Packaging](deployed.md#docker-packaging)
+  or [ZIP Packaging](deployed.md#zip-packaging) methodologies)
+* "_Service Product_" to start [onboarding a new service](service.md), that is
+  not tied to the distribution of an application to the end-user.
 
 ## Applications Catalog (Marketing & Sales Onboarding)
 
