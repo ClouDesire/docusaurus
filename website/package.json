@@ -1,4 +1,7 @@
 {
+  "name": "cloudesire-documentation",
+  "version": "1.0.0",
+  "license": "CC-BY-4.0",
   "scripts": {
     "examples": "docusaurus-examples",
     "start": "docusaurus-start",
