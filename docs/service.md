@@ -7,13 +7,13 @@ sidebar_label: Services
 In this section you will understand how to onboard services into the marketplace
 catalog.
 
-## What is a service
+## What is a Service product
 
-A service is a product that is not tied to the usage of a web application but to
+A *Service* is a product that is not tied to the usage of a web application but to
 the provisioning of a service to the end-user after paying a certain amount
 (e.g.: a consultancy service, formation, support).
 
-## Requirements
+## Features
 
 A service can be marked as provisioned:
 
