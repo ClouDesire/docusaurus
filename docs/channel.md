@@ -24,7 +24,7 @@ Distribution and channel logics are available in the cloudesire platform:
 
 **Each actor down the chain (from ISV to Reseller) can also:**
 
-* Add **VAS** (Value Added Services, AKA [extra-resources](platform.md#extra-resources)) to empower its own offer (like setup, training, support, devices, etc.). All pricing models available in Cloudesire can be applied also to VAS (typically: one-off, subscription, consumption)
+* Add **VAS** (Value Added Services, AKA [extra-resources](glossary.md#extra-resources)) to empower its own offer (like setup, training, support, devices, etc.). All pricing models available in Cloudesire can be applied also to VAS (typically: one-off, subscription, consumption)
 * Build up its own [**coupons**](platform.md#coupons) (% discount, price override, trial extension | reusable or not | with/without time limit)
 * Build up its own [**bundles**](platform.md#bundles), hence configure the (discounted) price of each bundled product
 
@@ -109,7 +109,7 @@ If no row is selected the "assign" button is shown on the top-right: by clicking
 
 [![](/img/docs/4-distributor-sell-in-config-edit-licenses.png)](/img/docs/4-distributor-sell-in-config-edit-licenses.png)
 
-By clicking on the "Extra-Resources" tab, the Distributor can also set the sell-in markups also for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
+By clicking on the "Extra-Resources" tab, the Distributor can also set the sell-in markups also for the [extra-resources](glossary.md#extra-resources) to be sold together with the product.
 
 [![](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)
 
@@ -131,7 +131,7 @@ By clicking on a specific row, a dialog will be provided, where the Reseller can
 
 [![](/img/docs/9-reseller-sell-out-config-edit-licenses.png)](/img/docs/9-reseller-sell-out-config-edit-licenses.png)
 
-The "Extra Resources" tab will provide the possibility to set-up the sell-out prices for the [extra-resources](platform.md#extra-resources) to be sold together with the product.
+The "Extra Resources" tab will provide the possibility to set-up the sell-out prices for the [extra-resources](glossary.md#extra-resources) to be sold together with the product.
 
 [![](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)
 

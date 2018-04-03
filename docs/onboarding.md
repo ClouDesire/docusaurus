@@ -363,8 +363,7 @@ to your product
 
 Extra Resources refer to _goods_ or _services_ which can be sold together with
 the application (for example, a 10-days pack of Technical Support, hardware
-components, extra credits, etc.).  A detailed explanation of this concept is
-available on [this section](platform.md#extra-resources).
+components, extra credits, etc.).
 
 ### How to add extra resources to your product
 
