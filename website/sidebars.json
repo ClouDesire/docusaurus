@@ -16,7 +16,8 @@
     ],
     "API": [
       "api",
-      "api-php"
+      "api-php",
+      "api-reference"
     ]
   }
 }
