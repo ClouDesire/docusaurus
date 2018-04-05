@@ -169,7 +169,7 @@ Plus, you will find some extra fields:
   are so many options that we wrote a section entirely dedicated to plans and
   pricing models. We strongly recommend you to read it before you define plans
   for your product. You can find more information about pricing models
-  [here](platform.md#pricing-models).
+  [here](billing.md).
 
 ### SSL (only for "Deployed" Applications)
 
@@ -248,7 +248,7 @@ For each _Plan_ the vendor has to specify the following information:
 * _Deployment fee_ (optional, only for admins)
 * _Billing frequency_ (in months): how often the customer will be billed for
   this product version. For example, it could be monthly, bimonthly, yearly,
-  etc. (for further information see [this section](platform.md#billing-module)).
+  etc. (for further information see [this section](billing.md)).
 * _Short Living Subscription_ (yes/no): it's also possible to specify a
   _short-time_ billing frequency; that means that the subscription duration will
   be less than a day, and needs to be specified in hours.
@@ -492,7 +492,7 @@ vendors to implement **pay-per-use** pricing models. In fact, specifying a
 **unit-price** for a custom metric (e.g. 10 USD per active user) allows
 Cloudesire to calculate the related incomes in a certain period of time
 (_billing period_) and issue an invoice to the customer. For further details,
-take a look at the [Billing Module Section](platform.md#billing-module).
+take a look at the [Billing Module Section](billing.md).
 
 For each metric you can define from the application metric editing section, the
 following information:
