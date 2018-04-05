@@ -48,7 +48,7 @@ These are the main billing principles:
   mode**, cloud costs will be debited to the vendor, in the same report where
   earnings are calculated.
 
-## Plans pricing
+## Pricing models
 
 When choosing a pricing model for a plan of a product, you start selecting one
 of the following choices:
