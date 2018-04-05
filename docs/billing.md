@@ -4,9 +4,9 @@ title: Billing Features
 sidebar_label: Billing
 ---
 
-Cloudesire provides a complete billing, invoicing and payments engine. This
-means that the marketplace can manage the entire selling process without
-external dependencies.
+The Cloudesire platform provides a complete billing, invoicing and payments
+engine. This means that the marketplace can manage the entire selling process
+without external dependencies.
 
 Before you read this section, please take a look to the
 [glossary](glossary.md)to make sure you fully understand the terms that will be
@@ -14,22 +14,17 @@ used in this section.
 
 ## Overview
 
-Each Cloudesire invoice contains the following items:
+Each generated invoice contains the following elements:
 
 * _nominee_: the customer name
 * _description_: purchased application name
-* _setup costs_: optional application one-off setup cost
-* _total_: application recurrent licensing cost
-* [_pay-per-use application metrics_](onboarding.md#application-metrics) costs:
-  specifying a unit-price for a custom metric allows Cloudesire to calculate the
-  related incomes in a certain period of time (billing period) and issue an
-  invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous
-  billing period
-* [_extra-resources_](glossary.md#extra-resources) _costs_: Cloudesire supports
-  3 different pricing models for "extra-resources", based on quantity usages.
-  e.g. 10 days of Technical Support, 5 hardware components to be used together
-  with the application, etc.
-* _IaaS costs_: VM instance, bandwidth, disk space
+* _one-off cost_: product one-off setup cost if any
+* _license cost_: application recurrent licensing cost
+* [_pay-per-use application metrics_](onboarding.md#application-metrics): costs
+  that vary depending on real usage of the application
+* [_extra-resources_](glossary.md#extra-resources): costs for prepaid resources
+* [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
+  cloud infrastructure used for managed products
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
@@ -37,43 +32,53 @@ In the following screenshots, you can see some examples of invoices issued by Cl
 
 ![managed product invoice](/img/docs/invoice_cloud.png)]
 
-## Pricing Rules
+## Billing principles
 
-These are the main billing rules followed by the platform:
+These are the main billing principles:
 
-* _application licensing costs_: at the beginning of each billing period (eg.
-  the first day of each month) all the invoices containing the application
-  licensing costs and the IaaS costs are issued in advance to customers at the
-  beginning of each billing period (eg. the first day of each month). The
-  one-off application _setup cost_ is charged only in the first billing period;
-* _pay-per-use and extra resources costs:_ invoices containing the [_pay-per-use
-  application metrics_](onboarding.md#application-metrics) and _extra-resources_
-  costs are issued to customers at the end of the billing period (eg. the last
-  day of every month) ;
-* _trial orders_: if an application is offered in **trial mode**, when customers
-  use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS
-  costs. These costs are subtracted from the vendors' revenues in the [_Balance
-  Report_](platform.md#glossary-balance-report);
-* _sandbox orders_: when the vendor executes a **deployment test** before
-  offering his application in the Marketplace (_sandbox_), Cloudesire issues an
-  invoice for the related IaaS costs. Again, these costs are subtracted from the
-  vendor's revenues in the [Balance
-  Report](platform.md#glossary-balance-report).
+* _application licensing costs_: at the beginning of each billing period (every
+  30 days) an invoice containing the application licensing costs and the IaaS
+  costs is issued in advance to the customer. The one-off cost is charged only
+  in the first billing period
+* _extra resources_: if prepaid extra resources are defined, they are added into
+  the same invoice of the licensing costs. If pay-as-you-go, at the end of the
+  billing period, an invoice containing the pay-per-use costs is issued to the
+  customer
+* _trial and sandbox orders_: if an cloud application is offered in **trial
+  mode**, cloud costs will be debited to the vendor, in the same report where
+  earnings are calculated.
 
-## Plans configuration
+## Plans pricing
 
-* **billing frequency**: vendors can decide the preferred billing frequency (in
-  months), for a every specific _application version_ The _billing frequency_
-  can also be _short-living_: in this case, the duration needs to be expressed
-  in hours instead of months.
-* **minimum order duration**: vendors can decide the minimum order duration for
-  each product plan. The minimum order duration is a multiple of the _billing
-  frequency._
+When choosing a pricing model for a plan of a product, you start selecting one
+of the following choices:
+
+* **contact form-only**: selling features are disabled and customer can only
+  send you a contact request (no pricing is exposed)
+* **renewable on a monthly-basis**: this is the most common choice and enables
+  the vendor to fine tune the monthly pricing with additional parameters
+* **short duration not renewable**: for short-living subscriptions (e.g. webinar
+  service bought for two hours)
+* **everlasting**: a subscription has not an end-date and can't be renewed (e.g.
+  perpetual licenses)
+
+### Pricing models parameters
+
+When selecting a pricing model, you can set the following parameters (depending
+on the pricing model chosen):
+
+* **billing frequency** (in months): the rate at which the invoices are
+  generated (the price refers to this period)
+* **minimum order duration**: the time that the customer is bound to order. It
+  must be a multiple of the *billing frequency*
+* **recurring cost**: the amount to be paid on each billing cycle (tax excluded)
+* **one-off cost**: additional amount to be paid only at the first billing cycle
+* **duration**: in hours - only for *short duration not renewable* pricing
 
 ## Extra-Resources pricing models
 
-Cloudesire supports 3 different pricing models for "extra-resources", based on
-quantity usages: tiered scheme, volume scheme and stairstep scheme..
+The platform supports 3 different pricing models for "extra-resources", based on
+quantity usages: tiered scheme, volume scheme and stairstep scheme.
 
 ### Tiered scheme
 
