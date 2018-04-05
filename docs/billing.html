@@ -1,71 +1,74 @@
-<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Billing Features · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Billing Features · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="Cloudesire provides a complete billing, invoicing and payments engine. This"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cloudesire.github.io/feedback-widget/build/bundle.js"></script><script type="text/javascript" src="/js/feedback.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-cloudesire.png"/><h2 class="headerTitle">documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/index.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api.html" target="_self">API</a></li><li class=""><a href="https://www.cloudesire.com" target="_self">Back to cloudesire.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Platform</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Onboarding</h3><ul><li class="navListItem"><a class="navItem" href="/docs/index.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/onboarding.html">Onboarding a new application</a></li><li class="navListItem"><a class="navItem" href="/docs/syndication.html">Syndicated applications</a></li><li class="navListItem"><a class="navItem" href="/docs/service.html">Services</a></li><li class="navListItem"><a class="navItem" href="/docs/deployed.html">Deployed applications</a></li><li class="navListItem"><a class="navItem" href="/docs/stacks.html">Application stacks and providers</a></li></ul></div><div class="navGroup navGroupActive"><h3>Platform</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/platform.html">Platform modules</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/billing.html">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/channel.html">Channel management</a></li><li class="navListItem"><a class="navItem" href="/docs/emails.html">Email Automation</a></li></ul></div><div class="navGroup navGroupActive"><h3>API</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api.html">REST API Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/api-php.html">PHP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-reference.html">API Reference</a></li></ul></div></div></section></div><script>
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Billing Features · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Billing Features · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="The Cloudesire platform provides a complete billing, invoicing and payments"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cloudesire.github.io/feedback-widget/build/bundle.js"></script><script type="text/javascript" src="/js/feedback.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-cloudesire.png"/><h2 class="headerTitle">documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/index.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api.html" target="_self">API</a></li><li class=""><a href="https://www.cloudesire.com" target="_self">Back to cloudesire.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Platform</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Onboarding</h3><ul><li class="navListItem"><a class="navItem" href="/docs/index.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/onboarding.html">Onboarding a new application</a></li><li class="navListItem"><a class="navItem" href="/docs/syndication.html">Syndicated applications</a></li><li class="navListItem"><a class="navItem" href="/docs/service.html">Services</a></li><li class="navListItem"><a class="navItem" href="/docs/deployed.html">Deployed applications</a></li><li class="navListItem"><a class="navItem" href="/docs/stacks.html">Application stacks and providers</a></li></ul></div><div class="navGroup navGroupActive"><h3>Platform</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/platform.html">Platform modules</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/billing.html">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/channel.html">Channel management</a></li><li class="navListItem"><a class="navItem" href="/docs/emails.html">Email Automation</a></li></ul></div><div class="navGroup navGroupActive"><h3>API</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api.html">REST API Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/api-php.html">PHP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-reference.html">API Reference</a></li></ul></div></div></section></div><script>
           var toggler = document.getElementById('navToggler');
           var nav = document.getElementById('docsNav');
           toggler.onclick = function() {
             nav.classList.toggle('docsSliderActive');
           };
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/billing.md" target="_blank">Edit</a><h1>Billing Features</h1></header><article><div><span><p>Cloudesire provides a complete billing, invoicing and payments engine. This
-means that the marketplace can manage the entire selling process without
-external dependencies.</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/billing.md" target="_blank">Edit</a><h1>Billing Features</h1></header><article><div><span><p>The Cloudesire platform provides a complete billing, invoicing and payments
+engine. This means that the marketplace can manage the entire selling process
+without external dependencies.</p>
 <p>Before you read this section, please take a look to the
 <a href="/docs/glossary.html">glossary</a>to make sure you fully understand the terms that will be
 used in this section.</p>
 <h2><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h2>
-<p>Each Cloudesire invoice contains the following items:</p>
+<p>Each generated invoice contains the following elements:</p>
 <ul>
 <li><em>nominee</em>: the customer name</li>
 <li><em>description</em>: purchased application name</li>
-<li><em>setup costs</em>: optional application one-off setup cost</li>
-<li><em>total</em>: application recurrent licensing cost</li>
-<li><a href="/docs/onboarding.html#application-metrics"><em>pay-per-use application metrics</em></a> costs:
-specifying a unit-price for a custom metric allows Cloudesire to calculate the
-related incomes in a certain period of time (billing period) and issue an
-invoice to the customer.eg. 1.000,00 USD for 10 active users in the previous
-billing period</li>
-<li><a href="/docs/glossary.html#extra-resources"><em>extra-resources</em></a> <em>costs</em>: Cloudesire supports
-3 different pricing models for &quot;extra-resources&quot;, based on quantity usages.
-e.g. 10 days of Technical Support, 5 hardware components to be used together
-with the application, etc.</li>
-<li><em>IaaS costs</em>: VM instance, bandwidth, disk space</li>
+<li><em>one-off cost</em>: product one-off setup cost if any</li>
+<li><em>license cost</em>: application recurrent licensing cost</li>
+<li><a href="/docs/onboarding.html#application-metrics"><em>pay-per-use application metrics</em></a>: costs
+that vary depending on real usage of the application</li>
+<li><a href="/docs/glossary.html#extra-resources"><em>extra-resources</em></a>: costs for prepaid resources</li>
+<li><a href="/docs/billing.html#cloud-resources-pricing"><em>cloud resources costs</em></a>: costs for the
+cloud infrastructure used for managed products</li>
 </ul>
 <p>In the following screenshots, you can see some examples of invoices issued by Cloudesire:</p>
 <p><img src="/img/docs/invoice_syndicated.png" alt="syndicated product invoice">]</p>
 <p><img src="/img/docs/invoice_cloud.png" alt="managed product invoice">]</p>
-<h2><a class="anchor" aria-hidden="true" id="pricing-rules"></a><a href="#pricing-rules" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pricing Rules</h2>
-<p>These are the main billing rules followed by the platform:</p>
+<h2><a class="anchor" aria-hidden="true" id="billing-principles"></a><a href="#billing-principles" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Billing principles</h2>
+<p>These are the main billing principles:</p>
 <ul>
-<li><em>application licensing costs</em>: at the beginning of each billing period (eg.
-the first day of each month) all the invoices containing the application
-licensing costs and the IaaS costs are issued in advance to customers at the
-beginning of each billing period (eg. the first day of each month). The
-one-off application <em>setup cost</em> is charged only in the first billing period;</li>
-<li><em>pay-per-use and extra resources costs:</em> invoices containing the <a href="/docs/onboarding.html#application-metrics"><em>pay-per-use
-application metrics</em></a> and <em>extra-resources</em>
-costs are issued to customers at the end of the billing period (eg. the last
-day of every month) ;</li>
-<li><em>trial orders</em>: if an application is offered in <strong>trial mode</strong>, when customers
-use (try) it, Cloudesire issues an invoice to the vendor for the related IaaS
-costs. These costs are subtracted from the vendors' revenues in the <a href="/docs/platform.html#glossary-balance-report"><em>Balance
-Report</em></a>;</li>
-<li><em>sandbox orders</em>: when the vendor executes a <strong>deployment test</strong> before
-offering his application in the Marketplace (<em>sandbox</em>), Cloudesire issues an
-invoice for the related IaaS costs. Again, these costs are subtracted from the
-vendor's revenues in the <a href="/docs/platform.html#glossary-balance-report">Balance
-Report</a>.</li>
+<li><em>application licensing costs</em>: at the beginning of each billing period (every
+30 days) an invoice containing the application licensing costs and the IaaS
+costs is issued in advance to the customer. The one-off cost is charged only
+in the first billing period</li>
+<li><em>extra resources</em>: if prepaid extra resources are defined, they are added into
+the same invoice of the licensing costs. If pay-as-you-go, at the end of the
+billing period, an invoice containing the pay-per-use costs is issued to the
+customer</li>
+<li><em>trial and sandbox orders</em>: if an cloud application is offered in <strong>trial
+mode</strong>, cloud costs will be debited to the vendor, in the same report where
+earnings are calculated.</li>
 </ul>
-<h2><a class="anchor" aria-hidden="true" id="plans-configuration"></a><a href="#plans-configuration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plans configuration</h2>
+<h2><a class="anchor" aria-hidden="true" id="plans-pricing"></a><a href="#plans-pricing" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plans pricing</h2>
+<p>When choosing a pricing model for a plan of a product, you start selecting one
+of the following choices:</p>
 <ul>
-<li><strong>billing frequency</strong>: vendors can decide the preferred billing frequency (in
-months), for a every specific <em>application version</em> The <em>billing frequency</em>
-can also be <em>short-living</em>: in this case, the duration needs to be expressed
-in hours instead of months.</li>
-<li><strong>minimum order duration</strong>: vendors can decide the minimum order duration for
-each product plan. The minimum order duration is a multiple of the <em>billing
-frequency.</em></li>
+<li><strong>contact form-only</strong>: selling features are disabled and customer can only
+send you a contact request (no pricing is exposed)</li>
+<li><strong>renewable on a monthly-basis</strong>: this is the most common choice and enables
+the vendor to fine tune the monthly pricing with additional parameters</li>
+<li><strong>short duration not renewable</strong>: for short-living subscriptions (e.g. webinar
+service bought for two hours)</li>
+<li><strong>everlasting</strong>: a subscription has not an end-date and can't be renewed (e.g.
+perpetual licenses)</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="pricing-models-parameters"></a><a href="#pricing-models-parameters" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pricing models parameters</h3>
+<p>When selecting a pricing model, you can set the following parameters (depending
+on the pricing model chosen):</p>
+<ul>
+<li><strong>billing frequency</strong> (in months): the rate at which the invoices are
+generated (the price refers to this period)</li>
+<li><strong>minimum order duration</strong>: the time that the customer is bound to order. It
+must be a multiple of the <em>billing frequency</em></li>
+<li><strong>recurring cost</strong>: the amount to be paid on each billing cycle (tax excluded)</li>
+<li><strong>one-off cost</strong>: additional amount to be paid only at the first billing cycle</li>
+<li><strong>duration</strong>: in hours - only for <em>short duration not renewable</em> pricing</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="extra-resources-pricing-models"></a><a href="#extra-resources-pricing-models" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extra-Resources pricing models</h2>
-<p>Cloudesire supports 3 different pricing models for &quot;extra-resources&quot;, based on
-quantity usages: tiered scheme, volume scheme and stairstep scheme..</p>
+<p>The platform supports 3 different pricing models for &quot;extra-resources&quot;, based on
+quantity usages: tiered scheme, volume scheme and stairstep scheme.</p>
 <h3><a class="anchor" aria-hidden="true" id="tiered-scheme"></a><a href="#tiered-scheme" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tiered scheme</h3>
 <p>Tiered scheme means that every unit charge is calculated with its own tier price.</p>
 <p>With tiered pricing, once you fill up a <em>tier</em> you move to the next tier and
@@ -246,7 +249,7 @@ the control panel for &quot;declaring&quot; (and taking the responsibility) that
 <p>A reseller can can mark a <em>sell-out price</em> as &quot;self-billed&quot; for exposing the
 related product into his <em>reseller-marketplace</em> without enabling the payment
 functionalities on it.</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="platform.html">← Platform modules</a><a class="docs-next button" href="channel.html">Distribution and Channel Management →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#pricing-rules">Pricing Rules</a></li><li><a href="#plans-configuration">Plans configuration</a></li><li><a href="#extra-resources-pricing-models">Extra-Resources pricing models</a><ul class="toc-headings"><li><a href="#tiered-scheme">Tiered scheme</a></li><li><a href="#volume-scheme">Volume scheme</a></li><li><a href="#stairstep-scheme">Stairstep scheme</a></li></ul></li><li><a href="#orders-renewal">Orders Renewal</a></li><li><a href="#coupons">Coupons</a></li><li><a href="#bundles">Bundles</a></li><li><a href="#cloud-resources-pricing">Cloud resources pricing</a><ul class="toc-headings"><li><a href="#prepaid-bandwidth">Prepaid Bandwidth</a></li><li><a href="#disk-space">Disk Space</a></li><li><a href="#backup">Backup</a></li></ul></li><li><a href="#payments">Payments</a></li><li><a href="#self-billing">Self-Billing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="platform.html">← Platform modules</a><a class="docs-next button" href="channel.html">Distribution and Channel Management →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#overview">Overview</a></li><li><a href="#billing-principles">Billing principles</a></li><li><a href="#plans-pricing">Plans pricing</a><ul class="toc-headings"><li><a href="#pricing-models-parameters">Pricing models parameters</a></li></ul></li><li><a href="#extra-resources-pricing-models">Extra-Resources pricing models</a><ul class="toc-headings"><li><a href="#tiered-scheme">Tiered scheme</a></li><li><a href="#volume-scheme">Volume scheme</a></li><li><a href="#stairstep-scheme">Stairstep scheme</a></li></ul></li><li><a href="#orders-renewal">Orders Renewal</a></li><li><a href="#coupons">Coupons</a></li><li><a href="#bundles">Bundles</a></li><li><a href="#cloud-resources-pricing">Cloud resources pricing</a><ul class="toc-headings"><li><a href="#prepaid-bandwidth">Prepaid Bandwidth</a></li><li><a href="#disk-space">Disk Space</a></li><li><a href="#backup">Backup</a></li></ul></li><li><a href="#payments">Payments</a></li><li><a href="#self-billing">Self-Billing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
