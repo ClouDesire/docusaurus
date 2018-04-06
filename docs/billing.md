@@ -165,7 +165,7 @@ If _automatic renewal_ is disabled:
 
 ## Coupons
 
-System Administrators, Vendors and Resellers can generate a coupons for each
+Platform Administrators, Vendors and Resellers can generate a coupons for each
 product or product plan
 
 Each coupon will have a unique _code_ and a _period of validity_. The
@@ -202,13 +202,13 @@ Furthermore, Cloudesire supports an additional type of coupon:
   in the coupon (e.g. 30 days). A coupon of this type remains valid for all the
   customers receiving this coupon code. This rule does not override the general
   rule "only one trial for each product for each customer". For each _extended
-  trials_ coupon, the system administrator can allocate a budget (or _plafond_)
+  trials_ coupon, the platform administrator can allocate a budget (or _plafond_)
   which will be decreased by a certain amount every time it will be used by
   a customer.
 
 ## Bundles
 
-Cloudesire allows System Administrators, and Resellers to create _bundles_ as a
+Cloudesire allows Platform Administrators, and Resellers to create _bundles_ as a
 composition of 2 or more products.
 
 A bundle has the same "marketing & legal" attributes of a _normal_ product
