@@ -55,8 +55,9 @@ of the following choices:
 
 * **contact form-only**: selling features are disabled and customer can only
   send you a contact request (no pricing is exposed)
-* **renewable on a monthly-basis**: this is the most common choice and enables
-  the vendor to fine tune the monthly pricing with additional parameters
+* **renewable every N months**: this is the most common choice and enables the
+  selling of a product for one or more months, with a configurable billing
+  frequency and a minimum order duration.
 * **short duration not renewable**: for short-living subscriptions (e.g. webinar
   service bought for two hours)
 * **everlasting**: a subscription has not an end-date and can't be renewed (e.g.
@@ -67,10 +68,10 @@ of the following choices:
 When selecting a pricing model, you can set the following parameters (depending
 on the pricing model chosen):
 
-* **billing frequency** (in months): the rate at which the invoices are
-  generated (the price refers to this period)
-* **minimum order duration**: the time that the customer is bound to order. It
-  must be a multiple of the *billing frequency*
+* **billing frequency** (one or more months): the rate at which the invoices are
+  generated (the recurring and one-off costs refers to this period)
+* **minimum order duration** (one or more months): the time that the customer is
+  bound to order. It must be a multiple of the *billing frequency*
 * **recurring cost**: the amount to be paid on each billing cycle (tax excluded)
 * **one-off cost**: additional amount to be paid only at the first billing cycle
 * **duration**: in hours - only for *short duration not renewable* pricing
@@ -82,7 +83,8 @@ quantity usages: tiered scheme, volume scheme and stairstep scheme.
 
 ### Tiered scheme
 
-Tiered scheme means that every unit charge is calculated with its own tier price.
+Tiered scheme means that every unit charge is calculated with its own tier
+price.
 
 With tiered pricing, once you fill up a *tier* you move to the next tier and
 start charging a different price.
@@ -264,38 +266,31 @@ the platform and vendors should not worry about it.
 
 ## Payments
 
-* to date, the supported payment gateways for credit cards are **Stripe** and
-  ***PayPal**.
-* SEPA payments are supported via **Stripe**.
-* after the sale of an application, when the customer pays the related invoice,
-  Cloudesire automatically starts the application deployment process on the
-  selected cloud provider
-* if a problem occurs during the interaction with the payment gateway,
-  Cloudesire allows the platform administrator to manually set an invoice as
-  "paid" (in order to start the deployment process). This feature can be also
-  useful to manage **bank transfer** payments (in this case, when the
-  administrator sets an invoice as "paid" he can provide the _deposit slip_ data
-  using a specific input field)
+The Cloudesire platform has first-class support for **Stripe** payment gateway.
+
+* Credit Cards are handled by Stripe (card details are sent only to Stripe
+  servers and *never* to our backend)
+* SEPA debit are supported via Stripe.
+* **Paypal** is a fallback payment method when not using Stripe
+* Bank transfer or any other manual payment method can be handled directly by
+  Platform Administrators
 
 ## Self-Billing
 
 In some particular business scenarios it should be useful to to let some vendors
-to issue invoices from themselves, without using the Cloudesire billing engine.
+to issue invoices from themselves, without using the Cloudesire invoicing
+engine.
 
-The platform allows the admins to mark a specific product / plan as
-"self-billed".
+The platform allows the admins to mark a specific product plan as *self-billed*.
 
-In this case, when the user purchases a product, the platform "begins" the
-provisioning and doesn't ask the customer to pay anything.
-
-The real provisioning starts only when the vendor clicks on a specific button on
-the control panel for "declaring" (and taking the responsibility) that the
-"invoice is paid" and the application can really be provisioned to the end-user.
+In this case, when the user purchases a product, only a pro-forma invoice is
+generated to help the vendor to emit their own, and the vendor is responsible to
+set the payment status for every invoice emitted as self-billed.
 
 The platform logs that the vendor should pay the fee back to the platform owner.
 
-The same functionality is also available for the resellers.
+### Self-Billing for resellers
 
-A reseller can can mark a _sell-out price_ as "self-billed" for exposing the
-related product into his _reseller-marketplace_ without enabling the payment
-functionalities on it.
+This functionality is also available for the resellers: a reseller can can mark
+a _sell-out price_ as *self-billed* for exposing the related product into his
+_reseller-marketplace_ overriding the invoice generation on it.
