@@ -418,13 +418,13 @@ selecting "_Docker_" in the "_Stacks_" input-box, as described in
 
 When defining a [Docker](deployed.md#docker-packaging) or [ZIP](deployed.md#zip-packaging) _module_ in Cloudesire, you can specify some parameters:
 
-|Name              |Usage     |Cardinality|Type  |Example     |Description                                  |
-|------------------|----------|-----------|------|------------|---------------------------------------------|
-|expose            |Docker    |N          |int   |8080        |Generates env vars as if it is linked        |
-|privileged        |Docker    |1          |bool  |true        |If container requires high privileges        |
-|common_directories|Docker/ZIP|N          |string|files/upload|A path to data, relative to /                |
-|open_ports        |Docker    |N          |int   |9000        |A port that should be open on the firewall   |
-|web_port          |Docker    |1          |int   |8000        |The port of the webapp that should be proxied|
+| Name               | Usage      | Cardinality | Type   | Example      | Description                                   |
+|--------------------|------------|-------------|--------|--------------|-----------------------------------------------|
+| expose             | Docker     | N           | int    | 8080         | Generates env vars as if it is linked         |
+| privileged         | Docker     | 1           | bool   | true         | If container requires high privileges         |
+| common_directories | Docker/ZIP | N           | string | files/upload | A path to data, relative to /                 |
+| open_ports         | Docker     | N           | int    | 9000         | A port that should be open on the firewall    |
+| web_port           | Docker     | 1           | int    | 8000         | The port of the webapp that should be proxied |
 
 ### How to add Stack Parameters
 

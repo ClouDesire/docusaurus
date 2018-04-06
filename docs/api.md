@@ -126,18 +126,18 @@ successfully authenticated and you can start developing the integration.
 
 ## Response codes
 
-|Code|Status|Description|
-|----|------|-----------|
-|200 |OK|The request was successful|
-|201|Created|The request was successful and a resource was created|
-|204|No Content|The request was successful but there is no representation to return (the response is empty)|
-|400|Bad Request|The request could not be understood or was missing required parameters|
-|401|Unauthorized|Authentication failed or authentication token is expired|
-|403|Forbidden|Access denied, you can't do that.|
-|404|Not Found|Resource was not found, or was deleted recently|
-|405|Method Not Allowed|Requested method is not supported for the specified resource|
-|500|Internal Server Error|You have just found a bug and we have been already alerted|
-|503|Service Unavailable|The service is temporary unavailable (e.g. server maintenance). Try again later|
+| Code | Status                | Description                                                                                 |
+|------|-----------------------|---------------------------------------------------------------------------------------------|
+| 200  | OK                    | The request was successful                                                                  |
+| 201  | Created               | The request was successful and a resource was created                                       |
+| 204  | No Content            | The request was successful but there is no representation to return (the response is empty) |
+| 400  | Bad Request           | The request could not be understood or was missing required parameters                      |
+| 401  | Unauthorized          | Authentication failed or authentication token is expired                                    |
+| 403  | Forbidden             | Access denied, you can't do that.                                                           |
+| 404  | Not Found             | Resource was not found, or was deleted recently                                             |
+| 405  | Method Not Allowed    | Requested method is not supported for the specified resource                                |
+| 500  | Internal Server Error | You have just found a bug and we have been already alerted                                  |
+| 503  | Service Unavailable   | The service is temporary unavailable (e.g. server maintenance). Try again later             |
 
 ## Error response
 
