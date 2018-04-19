@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Tue, 27 Mar 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 18 Apr 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,44 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Quickly get a logger with IntelliJ live templates]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html</guid>
+            <pubDate>Wed, 18 Apr 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>IntelliJ IDEA is every Java developer's favourite IDE here at Cloudesire, and amongst its powerful features there are <a href="https://www.jetbrains.com/help/idea/creating-and-editing-live-templates.html">Live templates</a>. Let me show you how they work with a simple example.</p>
+<p>Getting a <a href="https://www.slf4j.org/">SLF4J</a> instance for the current class is a matter of typing</p>
+<pre><code class="hljs css java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
+</code></pre>
+<p>waiting for the import popup to appear, looking for <code>org.slf4j.Logger</code> and selecting it, continue typing</p>
+<pre><code class="hljs css java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory
+</code></pre>
+<p>... another import...</p>
+<pre><code class="hljs css java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
+</code></pre>
+<p>wait, where am I? Oh, <code>MyObject</code>, sure</p>
+<pre><code class="hljs css java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
+</code></pre>
+<p>done!</p>
+<p>I find it a bit slow, don't you? Let's speed it up:</p>
+<ul>
+<li><p>Open IDEA settings with <code>Ctrl+Alt+S</code> and browse to <code>Editor -&gt; Live Templates</code></p></li>
+<li><p>Add a new <strong>Template Group</strong> with <code>Alt+Ins</code>, choose a nice name</p></li>
+<li><p>Add a <strong>Live Template</strong> in your newly created group</p></li>
+<li><p>Write <code>log</code> in <em>Abbreviation</em></p></li>
+<li><p>Paste in <em>Template text</em></p>
+<pre><code class="hljs">private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger( $CLASS$.class );
+</code></pre></li>
+<li><p>Open <strong>Edit variables</strong> and write in the field <em>Expression</em> at the <code>CLASS</code> row</p>
+<pre><code class="hljs">className()
+</code></pre>
+<p>and press OK</p></li>
+<li><p>Set the applicable context by clicking on <code>Java</code> in the <strong>No applicable contexts yet. Define</strong> popup</p></li>
+</ul>
+<p>Exit the settings by pressing OK.</p>
+<p>Now you can get a logger for a class just by writing <code>log</code> and pressing <code>Tab</code>! Just 3 keystrokes, isn't it better?</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Selling and automated provisioning of Microsoft/Azure products in a SaaS marketplace @ DevOps@Work 2018]]></title>
             <link>https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html</link>
