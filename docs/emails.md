@@ -4,7 +4,7 @@ title: Automatic emails sent by the platform
 sidebar_label: Email Automation
 ---
 
-The Cloudesire platform automatically deliver email notifications under certain
+The Cloudesire platform automatically delivers email notifications under certain
 circumstances to the end-user.
 
 ## Deployment complete
@@ -128,10 +128,10 @@ When an invoice is still pending, an alert is sent to the end-user once a day:
 
 ## Invoice payment overdue
 
-When the payment period expire, the subscription is put into a sleeping state:
+When the payment period expires, the subscription is put into a sleeping state:
 the end-user cannot use the application but data is still preserved.
 
-The email sent when the subscription is put to sleep is:
+The email sent when the subscription is put to sleeping state is:
 
 ```twig
   Hi {{ fullName }},
