@@ -50,3 +50,24 @@ For every HTTP endpoint that needs to be billed, create a resource with:
   endpoint
 * `method`: the HTTP method of the endpoint (e.g. POST)
 * `path`: the HTTP path of the endpoint (e.g. /invoice)
+
+#### Rate limiter
+
+For every prepaid endpoint, a rate limiter is automatically configured
+accordingly to the pricing defined.
+
+When rate limiter is enabled, some additional headers are automatically sent
+back to the client telling how many requests are available and what are the
+limits allowed, for example:
+
+```http
+X-RateLimit-Limit-Month: 1000
+X-RateLimit-Remaining-Minute: 992
+```
+
+If any of the limits configured is being reached, an `HTTP/1.1 429` status code
+will be returned to the client with the following JSON body:
+
+```json
+{"message":"API rate limit exceeded"}
+```
