@@ -4,7 +4,7 @@ title: API products onboarding
 sidebar_label: API products
 ---
 
-In this section it is presented how to onboard and start selling an API-based
+This section describes how to onboard and start selling an API-based
 product with metered billing based on the actual usage, i.e. HTTP calls
 executed.
 
@@ -18,7 +18,7 @@ product.
 
 ## Authentication
 
-Secure access to the API is managed by the platform, generating an **unique
+Secure access to the API is managed by the platform, generating a **unique
 token** during the provisioning process for each consumer, that expires when the
 subscription is terminated.
 
@@ -30,8 +30,8 @@ When a consumer sends a request to the API, an additional set of HTTP headers is
 added to the request arriving at the API backend:
 
 * `X-Consumer-ID`: an auto-generated ID of the Consumer
-* `X-Consumer-Custom-ID`: the id of the user which bought the subscription
-* `X-Consumer-Username`: the username of the user that bought the subscription
+* `X-Consumer-Custom-ID`: the id of the buyer of the subscription
+* `X-Consumer-Username`: the username of the buyer of the subscription
 
 ## Pricing models
 
