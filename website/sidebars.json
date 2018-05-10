@@ -13,7 +13,8 @@
       "platform",
       "billing",
       "channel",
-      "emails"
+      "emails",
+      "gdpr"
     ],
     "API": [
       "api",
