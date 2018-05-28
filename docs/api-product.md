@@ -30,8 +30,7 @@ When a consumer sends a request to the API, an additional set of HTTP headers is
 added to the request arriving at the API backend:
 
 * `X-Consumer-ID`: an auto-generated ID of the Consumer
-* `X-Consumer-Custom-ID`: the id of the buyer of the subscription
-* `X-Consumer-Username`: the username of the buyer of the subscription
+* `X-Consumer-Username`: the unique subscription id of the platform
 
 ## Pricing models
 
@@ -54,15 +53,15 @@ For every HTTP endpoint that needs to be billed, create a resource with:
 #### Rate limiter
 
 For every prepaid endpoint, a rate limiter is automatically configured
-accordingly to the pricing defined.
+accordingly to the defined pricing.
 
 When rate limiter is enabled, some additional headers are automatically sent
 back to the client telling how many requests are available and what are the
 limits allowed, for example:
 
 ```http
-X-RateLimit-Limit-Month: 1000
-X-RateLimit-Remaining-Minute: 992
+X-RateLimit-Limit-month: 1000
+X-RateLimit-Remaining-month: 992
 ```
 
 If any of the limits configured is being reached, an `HTTP/1.1 429` status code
