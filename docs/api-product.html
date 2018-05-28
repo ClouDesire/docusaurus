@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>API products onboarding · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="API products onboarding · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="This section describes how to onboard and start selling an API-based"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-107718815-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cloudesire.github.io/feedback-widget/build/bundle.js"></script><script type="text/javascript" src="/js/feedback.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible doc separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-cloudesire.png" alt="documentation"/><h2 class="headerTitleWithLogo">documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/index.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api.html" target="_self">API</a></li><li class=""><a href="https://www.cloudesire.com" target="_self">Back to cloudesire.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Onboarding</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>Onboarding</h3><ul><li class="navListItem"><a class="navItem" href="/docs/index.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/onboarding.html">Onboarding a new application</a></li><li class="navListItem"><a class="navItem" href="/docs/syndication.html">Syndicated applications</a></li><li class="navListItem"><a class="navItem" href="/docs/service.html">Services</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/docs/api-product.html">API products</a></li><li class="navListItem"><a class="navItem" href="/docs/deployed.html">Deployed applications</a></li><li class="navListItem"><a class="navItem" href="/docs/stacks.html">Application stacks and providers</a></li></ul></div><div class="navGroup navGroupActive"><h3>Platform</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/platform.html">Platform modules</a></li><li class="navListItem"><a class="navItem" href="/docs/billing.html">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/channel.html">Channel management</a></li><li class="navListItem"><a class="navItem" href="/docs/emails.html">Email Automation</a></li><li class="navListItem"><a class="navItem" href="/docs/gdpr.html">GDPR-compliance</a></li></ul></div><div class="navGroup navGroupActive"><h3>API</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api.html">REST API Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/api-php.html">PHP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-reference.html">API Reference</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/api-product.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>API products onboarding</h1></header><article><div><span><p>This section describes how to onboard and start selling an API-based
+product with metered billing based on the actual usage, i.e. HTTP calls
+executed.</p>
+<p>The onboarding process starts after creating a new &quot;Product&quot; in the Marketplace
+Catalog, as described <a href="/docs/onboarding.html#applications-catalogue">here</a>.</p>
+<p>For extended integration purposes, it's possible to define a syndication
+endpoint like in <a href="/docs/syndication.html">syndicated products</a> to receive events about
+the creation and termination of the related subscriptions for a specific
+product.</p>
+<h2><a class="anchor" aria-hidden="true" id="authentication"></a><a href="#authentication" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authentication</h2>
+<p>Secure access to the API is managed by the platform, generating a <strong>unique
+token</strong> during the provisioning process for each consumer, that expires when the
+subscription is terminated.</p>
+<p>For this reason, the API URL is never directly exposed to the consumer. Instead,
+an intermediate endpoint is automatically managed by the platform to let the
+consumer reach the API backend is a secure and controlled way.</p>
+<p>When a consumer sends a request to the API, an additional set of HTTP headers is
+added to the request arriving at the API backend:</p>
+<ul>
+<li><code>X-Consumer-ID</code>: an auto-generated ID of the Consumer</li>
+<li><code>X-Consumer-Username</code>: the unique subscription id of the platform</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="pricing-models"></a><a href="#pricing-models" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pricing models</h2>
+<p>In addition to the <a href="/docs/onboarding.html#available-pricing-models">standard pricing
+options</a> available on every plan, it's
+possible to define a prepaid pricing model based on the consumer access count
+to an HTTP endpoint.</p>
+<h3><a class="anchor" aria-hidden="true" id="prepaid-http-endpoints-pricing"></a><a href="#prepaid-http-endpoints-pricing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepaid HTTP endpoints pricing</h3>
+<p>For every HTTP endpoint that needs to be billed, create a resource with:</p>
+<ul>
+<li><code>name</code>: a short name that describe the http endpoint</li>
+<li><code>description</code>: an extended description of what the HTTP endpoint will do</li>
+<li><code>identifier</code>: an unique, not-updatable identifier for this specific HTTP
+endpoint</li>
+<li><code>method</code>: the HTTP method of the endpoint (e.g. POST)</li>
+<li><code>path</code>: the HTTP path of the endpoint (e.g. /invoice)</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="rate-limiter"></a><a href="#rate-limiter" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Rate limiter</h4>
+<p>For every prepaid endpoint, a rate limiter is automatically configured
+accordingly to the defined pricing.</p>
+<p>When rate limiter is enabled, some additional headers are automatically sent
+back to the client telling how many requests are available and what are the
+limits allowed, for example:</p>
+<pre><code class="hljs css http"><span class="hljs-attribute">X-RateLimit-Limit-month</span>: 1000
+<span class="hljs-attribute">X-RateLimit-Remaining-month</span>: 992
+</code></pre>
+<p>If any of the limits configured is being reached, an <code>HTTP/1.1 429</code> status code
+will be returned to the client with the following JSON body:</p>
+<pre><code class="hljs css json">{<span class="hljs-attr">"message"</span>:<span class="hljs-string">"API rate limit exceeded"</span>}
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="service.html">← Service onboarding</a><a class="docs-next button" href="deployed.html">Deployed applications onboarding →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a></li><li><a href="#pricing-models">Pricing models</a><ul class="toc-headings"><li><a href="#prepaid-http-endpoints-pricing">Prepaid HTTP endpoints pricing</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              var search = docsearch({
+                
+                apiKey: '06aaa65659156b0fd43caf8c5d9997e9',
+                indexName: 'cloudesire',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
