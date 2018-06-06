@@ -18,9 +18,9 @@ product.
 
 ## Authentication
 
-Secure access to the API is managed by the platform, generating a **unique
-token** during the provisioning process for each consumer, that expires when the
-subscription is terminated.
+Secure access to the upstream API is managed by the platform, generating a
+**unique token** during the provisioning process for each consumer, that expires
+when the subscription is terminated.
 
 For this reason, the API URL is never directly exposed to the consumer. Instead,
 an intermediate endpoint is automatically managed by the platform to let the
@@ -31,6 +31,13 @@ added to the request arriving at the API backend:
 
 * `X-Consumer-ID`: an auto-generated ID of the Consumer
 * `X-Consumer-Username`: the unique subscription id of the platform
+
+### Authentication header
+
+To secure your upstream API, and avoid clients circumventing our rate-limited
+endpoint, you are encouraged to setup an **authentication header** while
+configuring an API product, and check that every request proxied by the platform
+contains such header with the correct secret.
 
 ## Pricing models
 
