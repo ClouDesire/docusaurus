@@ -23,18 +23,21 @@ the [channel management](channel.md) feature.
 * CSP production/sandbox account credentials
 * Cloudesire white-label platform
 
-## Import CSP products into the marketplace catalog
+## Import CSP products
 
 As a platform admin, access the *Catalog* section into the *Control Panel*.
 
-Click on the *Import Microsoft product* button to start the wizard to import a
-new product into the catalog.
+Click on the *Import Microsoft product* button to start the two-steps wizard to
+**import a new CSP product into the marketplace catalog**.
 
 The first step of the wizard involves the following things:
 
-* Deciding a *name* for the new product
-* Selecting a product type between *license*, *azure marketplace* and *azure quickstart template*
-* Assigning a vendor to the current product
+* Select a product type between *license*, *azure marketplace* and *azure quickstart template*
+* **Search** a CSP product by name
+* Decide a *name* for the new product that will be exposed on the marketplace catalog
+* Assign a company that will be responsible of managing the product
+
+![Import microsoft product](/docs/assets/csp-product/import-microsoft-product.png)
 
 The platform supports 3 type of products that can be sold:
 
@@ -44,11 +47,12 @@ The platform supports 3 type of products that can be sold:
 * **Azure marketplace** type is for VM-based products available on the [Azure
   marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps) by
   third-party vendors.
-* **Azure quickstart template** type is for products based on an [ARM JSON
-  template](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates)
-  available on the [Azure quickstart
-  templates](https://azure.microsoft.com/en-us/resources/templates/).
 
-Once the product has been selected, it's possible to decide an initial
-pricing as a final step of the wizard, that can be customized later using the
-full *Product Edit* features of the *Control Panel*.
+On the second step of the wizard, the selected CSP product offer id or azure
+metadata is showed to confirm that the selected product is correct, and it's
+possible to decide an **initial pricing**.
+
+![Import microsoft product](/docs/assets/csp-product/import-microsoft-product-create.png)
+
+Once the product is imported in catalog, in can be customized as with any other
+product present in the catalog (logo, description, and so on).
