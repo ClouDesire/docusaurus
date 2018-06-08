@@ -29,7 +29,7 @@ between two onboarding options:
 * "_Syndicated Product_" to start onboarding a new product in
   [Syndication](syndication.md) mode
 * "_Deployed Product_" to start onboarding a new product in [Self-Deployment
-  mode](deployed.md) (using the [Docker Packaging](deployed.md#docker-packaging)
+  mode](deployed.md) (using the [Docker Packaging](docker.md)
   or [ZIP Packaging](deployed.md#zip-packaging) methodologies)
 * "_Service Product_" to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user.
@@ -466,7 +466,7 @@ _provisioning type_:
   customer) the software vendor has 2 possibilities: [ZIP Application
   Package](deployed.md#zip-packaging) (a simple archive containing both the
   source code and the _SQL scripts_ of the application) and [Docker
-  Packaging](deployed.md#docker-packaging) (a self-contained archive of your
+  Packaging](docker.md) (a self-contained archive of your
   application meeting the [Docker](https://www.docker.com/) standards). More
   detailed instruction for the onboarding of Deployed Applications can be found
   in [this section](deployed.md).

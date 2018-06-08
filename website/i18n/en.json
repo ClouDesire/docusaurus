@@ -20,6 +20,8 @@
     "CSP products": "CSP products",
     "deployed": "Deployed applications onboarding",
     "Deployed applications": "Deployed applications",
+    "docker": "Docker applications onboarding",
+    "Docker applications": "Docker applications",
     "emails": "Automatic emails sent by the platform",
     "Email Automation": "Email Automation",
     "gdpr": "General Data Protection Regulation (GDPR) Marketplace Compliance",
@@ -42,6 +44,7 @@
     "API": "API",
     "Back to cloudesire.com": "Back to cloudesire.com",
     "Onboarding": "Onboarding",
+    "Applications": "Applications",
     "Platform": "Platform"
   },
   "pages-strings": {

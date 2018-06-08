@@ -6,8 +6,11 @@
       "syndication",
       "service",
       "api-product",
-      "csp-product",
+      "csp-product"
+    ],
+    "Applications": [
       "deployed",
+      "docker",
       "stacks"
     ],
     "Platform": [

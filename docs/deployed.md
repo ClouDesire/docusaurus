@@ -14,7 +14,7 @@ Catalog, as described [here](onboarding.md#applications-catalogue).
 
 Cloudesire supports [custom ZIP files](deployed.md#zip-packaging) to provide
 applications as a package, but we strongly recommend
-[Docker](deployed.md#docker-packaging) to onboard a new deployed  application.
+[Docker](docker.md) to onboard a new deployed  application.
 
 Cloudesire will provision on the cloud a new VM containing a running instance of
 the app for each customer.
@@ -48,28 +48,25 @@ this means that you have already uploaded at least one product and a plan on the
 marketplace.
 
 Click "Catalog" from the menu at the top left of the screen to see your
-applications. Once you know which application you want to test, go to "_Plans_"
+applications. Once you know which application you want to test, go to _Plans_
 and select "SANDBOX".
 
 In the following picture you can see an example of the page from which you can
 launch a sandbox order.
 
-![Vendors Control Panel: Syndication -
-Sandbox](/img/docs/control_panel_syndicated_sandbox.png)
+![Vendors Control Panel: Syndication -Sandbox](/img/docs/control_panel_syndicated_sandbox.png)
 
 ### Packages
 
-To access the list of the available Packages, click on the "_Catalog_" \>
-"_Packages_" menu item on the left.
+To access the list of the available Packages, click on the _Catalog_ \>
+_Packages_ menu item on the left.
 
-![Vendors Control Panel: Packages](/img/docs/control_panel_packages.png "Vendors
-Control Panel: Packages")
+![Vendors Control Panel: Packages](/img/docs/control_panel_packages.png)
 
 To create a new Package using the [ZIP Packaging](deployed.md#zip-packaging)
-methodology click on the "_New_" button.
+methodology click on the _New_ button.
 
-![Vendors Control Panel: ZIP](/img/docs/control_panel_packages_ZIP.png "Vendors
-Control Panel: ZIP")
+![Vendors Control Panel: ZIP](/img/docs/control_panel_packages_ZIP.png)
 
 For each Package, vendors must provide the following information:
 
@@ -84,22 +81,18 @@ For each Package, vendors must provide the following information:
   **downgrades** of running applications.
 
 When a Package is created, it can be linked to a specific _Product Plan_, simply
-selecting it from the list and clicking on the "_Attach Package to Module_"
+selecting it from the list and clicking on the _Attach Package to Module_
 button. In this way a new **Module** will be created (if not existent) or the
 Package will be added to an already existent Module.
 
-![Vendors Control Panel: Packages-Modules
-Links](/img/docs/control_panel_packages_modules_links.png "Vendors Control
-Panel: Packages-Modules Links")
+![Vendors Control Panel: Packages-Modules Link](/img/docs/control_panel_packages_modules_links.png)
 
 To simultaneously create one or more Package, corresponding to a **composition
-of Docker images**, click on the "_New Docker Compose_" button. More details on
+of Docker images**, click on the _New Docker Compose_ button. More details on
 the Docker Packaging are available in [this
-section](deployed.md#docker-packaging).
+section](docker.md).
 
-![Vendors Control Panel: Packages -
-Docker](/img/docs/control_panel_packages_Docker.png "Vendors Control Panel:
-Packages - Docker")
+![Vendors Control Panel: Packages - Docker](/img/docs/control_panel_packages_Docker.png)
 
 In this case, a _Docker Compose_ string must be provided, and the vendor can
 also directly link the Packages to a specific Product Plan (crating in this way
@@ -107,18 +100,15 @@ a new Module, or adding all the Packages to an already existent Module).
 
 ### Modules
 
-The list of all available modules is provided in the "_Catalog_" \> "_Modules_"
+The list of all available modules is provided in the _Catalog_ \> _Modules_
 section.
 
-![Vendors Control Panel: Modules](/img/docs/control_panel_modules.png "Vendors
-Control Panel: Modules")
+![Vendors Control Panel: Modules](/img/docs/control_panel_modules.png)
 
-By selecting a specific Module and clicking on the "_Edit_" button on the
+By selecting a specific Module and clicking on the _Edit_ button on the
 top-right of the page, software vendors can specify some parameters.
 
-![Vendors Control Panel: Modules - VM
-Sizing](/img/docs/control_panel_modules_VM.png "Vendors Control Panel: Modules -
-VM Sizing")
+![Vendors Control Panel: Modules - VM Sizing](/img/docs/control_panel_modules_VM.png)
 
 * CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the
   preferred configuration (e.g. 1 core + 1Gb, 2 cores + 4Gb, etc.)
@@ -130,14 +120,12 @@ VM Sizing")
 By clicking on a specific Package name attached to a certain Module, three
 buttons are shown on the top-right of the interface:
 
-* "_Promote to Stable_": to be used to declare the current Package as "stable"
+* _Promote to Stable_: to be used to declare the current Package as "stable"
   in the Module
-* "_Show Advanced_": to open the Advanced Settings pop-up (see below)
-* "_Unlink_": to unlink the Package from the Module
+* _Show Advanced_: to open the Advanced Settings pop-up (see below)
+* _Unlink_: to unlink the Package from the Module
 
-![Vendors Control Panel: Modules - advanced
-setttings](/img/docs/control_panel_modules_advanced.png "Vendors Control Panel:
-Modules - advanced setttings")
+![Vendors Control Panel: Modules - advanced setttings](/img/docs/control_panel_modules_advanced.png)
 
 The Advanced Settings pop-up provides the following sections:
 
@@ -175,15 +163,14 @@ specify one or more **custom** access URLs that will be linked to each specific
 [Module](deployed.md#modules) of a given Product (e.g. _/backend_, or _/stats_,
 etc.).
 
-To add a new Endpoint, you need to access to the "_Modules_" section (more
+To add a new Endpoint, you need to access to the _Modules_ section (more
 details [here](deployed.md#modules)), select a specific _Module_ and _Package_
-(more details [here](deployed.md#packages)) and then click on the "_Show
-Advanced_" button on the top-right of the page. Furthermore, by accessing to the
-"_Endpoint Patterns_" tab it's possible to fill all the required fields (a
-Description, a Category and a Value) and click on the "_Add_" button to finish.
+(more details [here](deployed.md#packages)) and then click on the _Show
+Advanced_ button on the top-right of the page. Furthermore, by accessing to the
+_Endpoint Patterns_ tab it's possible to fill all the required fields (a
+Description, a Category and a Value) and click on the _Add_ button to finish.
 
-![Vendors Control Panel - Endpoints](/img/docs/control_panel_endpoints.png
-"Vendors Control Panel - Endpoints")
+![Vendors Control Panel - Endpoints](/img/docs/control_panel_endpoints.png)
 
 ## Environment Variables
 
@@ -194,16 +181,14 @@ applications.
 You can even choose to permit the _end-user_ to the **edit** some of those
 variables.
 
-To add a new Environment Variable, vendors need to access to the "_Modules_"
+To add a new Environment Variable, vendors need to access to the _Modules_
 section (more details [here](deployed.md#modules)), select a specific _Module_
 and _Package_ (more details [here](deployed.md#packages)) and then click on the
-"_Show Advanced_" button on the top-right of the page. By accessing to the
-"_Environment Variables_" tab vendors can fill all the required fields (the
-_Name_ and the _Value_) and click on the "_Add_" button to finish.
+_Show Advanced_ button on the top-right of the page. By accessing to the
+_Environment Variables_ tab vendors can fill all the required fields (the _Name_
+and the _Value_) and click on the _Add_ button to finish.
 
-![Vendors Control Panel - Environment
-Variables](/img/docs/control_panel_environment_variables.png "Vendors Control
-Panel - Environment Variables")
+![Vendors Control Panel - Environment Variables](/img/docs/control_panel_environment_variables.png)
 
 There are predefined environment variables set at runtime by the platform and
 that you could use:
@@ -243,7 +228,7 @@ _http://example-123.apps.cloudesire.com/_
 For stacks-specific environment variables, look in their specific sections:
 
 * [onboarding of ZIP packaged applications](deployed.md#zip-packaging)
-* [onboarding of Docker applications](deployed.md#docker-packaging)
+* [onboarding of Docker applications](docker.md)
 
 ## Filesystem Browsing
 
@@ -382,194 +367,27 @@ available on the marketplace:
 * [Redmine](https://cdn.cloudesire.com/demo_apps/redmine.zip)
 * [WordPress](https://cdn.cloudesire.com/demo_apps/wordpress.zip)
 
-## Docker Packaging
-
-Before getting hands dirty, take a look at the [understanding
-Docker](https://docs.docker.com/introduction/understanding-docker/) page.
-
-When you're ready, take a look to our [integration
-facilities](onboarding.md#integration-facilities): we provide a **staging
-marketplace** where you can register your company, log-in and on-board your
-application via Docker Image(s) without any worry (also simulating the purchase
-of your product using demo credit cards).
-
-The first step is to install the _Docker_ command-line tool on your development
-machine:
-
-* [Linux](https://docs.docker.com/linux/started)
-* [Mac](https://docs.docker.com/mac/started/)
-* [Windows](https://docs.docker.com/windows/started)
-
-You can find a lot of easy to read documentation on the official [Docker User
-Guide](https://docs.docker.com/get-started/).
-
-Before going forward in this documentation, please take a look to the [data
-persistence](deployed.md/#data-persistence) section to **avoid data loss** in
-your application.
-
-Once a Docker image is created, the only think you need to do to
-[onboard](onboarding.md) your application in Cloudesire is to create a _Package_
-(linked to your application), then select "_Docker_" in the "_Stacks_"
-input-box, and finally type the Docker image URL in the related input-box, as
-shown in the following screenshot and more detailed described in [this
-section](deployed.md/#packages).
-
-![Vendors Control Panel - Docker Image](/img/docs/control_panel_docker_image.png
-"Vendors Control Panel - Docker Image")
-
-### Writing a Dockerfile to build an image
-
-A `Dockerfile` is required to generate a _Docker_ image for your application.
-
-A lot of useful information about writing a `Dockerfile` is available at [Best
-practices for writing
-Dockerfiles](https://docs.docker.com/articles/dockerfile_best-practices/).
-
-A simple example of a `Dockerfile` follows:
-
-```dockerfile
-FROM    centos:centos6
-
-# Enable EPEL for Node.js
-RUN     rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
-# Install Node.js and npm
-RUN     yum install -y npm
-
-# Bundle app source
-COPY . /src
-# Install app dependencies
-RUN cd /src; npm install
-
-EXPOSE  8080
-CMD ["node", "/src/index.js"]
-```
-
-You need to choose a good base image to start from (`FROM` keyword) on [Docker
-Hub](https://hub.docker.com/).
-
-There are base images of the most common GNU/Linux distributions:
-
-* [Debian](https://hub.docker.com/_/debian/)
-* [Ubuntu](https://hub.docker.com/_/ubuntu/)
-* [Centos](https://hub.docker.com/_/centos/)
-
-There are also base images with application stacks preinstalled, along with a
-`onbuild` variant, that will ease the packaging of new applications:
-
-* [Node](https://hub.docker.com/_/node/)
-* [Python](https://hub.docker.com/_/python/)
-* [PHP](https://hub.docker.com/_/php/)
-* [Ruby](https://hub.docker.com/_/ruby/)
-* [Tomcat](https://hub.docker.com/_/tomcat/)
-
-A lot of widely used Open-Source software are available too:
-
-* [MySQL](https://hub.docker.com/_/mysql/)
-* [Postgres](https://hub.docker.com/_/postgres/)
-* [MongoDB](https://hub.docker.com/_/mongo/)
-* [Redis](https://hub.docker.com/_/redis/)
-
-To build an image from a Dockerfile in the current directory, use:
-
-    docker build -t yourapp:latest .
-
-Then, you can run a container from this image with:
-
-    docker run --rm -ti yourapp:latest
-
-### Requirements and Suggestions
-
-There are some things to keep in mind to use Docker efficiently with Cloudesire.
-
-#### Data volumes
-
-Remember to define volumes in your container to persist data across launches.
-
-#### Container composition
-
-It is highly recommended to use multiple images for each component of your
-application, instead of a single container running everything.
-
-A tool named [Composer](https://docs.docker.com/compose/) assists you in running
-multiple containers together within your machine, to test that everything is
-working.
-
-#### Network
-
-Cloudesire runs containers **in the same network**, meaning that all the running
-containers can directly talk to each other. A container on the network can be
-reached through its name.
-
-#### Environment variables
-
-For a complete list of environment variables take a look in the [available
-environment variables](deployed.md#environment-variables) section.
-
-#### SSL support
-
-Cloudesire manages automatically a **reverse proxy** in front of your
-application, so you **don't need to include HTTPS support** in the container.
-
-### Private Repository
-
-ClouDesire offers a private repository where vendors can privately push their
-images. This service is free while in BETA.
-
-First, login with your user credentials on the Docker cli:
-
-```bash
-docker login docker.domain.tld
-```
-
-Images should be tagged with a pattern like:
-
-```docker
-docker.domain.tld/identifier/image-name:tag
-```
-
-> Find your company identifier in the edit profile section of the control panel
-
-Example of commands to push an image to the appshop.cloud marketplace:
-
-```bash
-docker login docker.appshop.cloud
-docker build -t myimage:1.0 .
-docker tag myimage:1.0 docker.appshop.cloud/mycompany/myimage:1.0
-docker push docker.appshop.cloud/mycompany/myimage:1.0
-```
-
-At this point, an application can be configured in the Cloudesire [onboarding
-interfaces](onboarding.md), simply creating a [Package](deployed.md#packages)
-(linked to your application) and selecting "_Docker_" in the "_Stacks_"
-input-box, as described in [this section](deployed.md#technical-onboarding).
-
 ## Stack Parameters
 
-When defining a [Docker](deployed.md#docker-packaging) or
-[ZIP](deployed.md#zip-packaging) _module_ in Cloudesire, you can specify some
-parameters:
+When defining a Docker application, you can configure some parameters:
 
-| Name               | Usage      | Cardinality | Type   | Example      | Description                                   |
-|--------------------|------------|-------------|--------|--------------|-----------------------------------------------|
-| expose             | Docker     | N           | int    | 8080         | Generates env vars as if it is linked         |
-| privileged         | Docker     | 1           | bool   | true         | If container requires high privileges         |
-| common_directories | Docker/ZIP | N           | string | files/upload | A path to data, relative to /                 |
-| open_ports         | Docker     | N           | int    | 9000         | A port that should be open on the firewall    |
-| web_port           | Docker     | 1           | int    | 8000         | The port of the webapp that should be proxied |
+| Name               | Cardinality | Type   | Example      | Description                                   |
+|--------------------|-------------|--------|--------------|-----------------------------------------------|
+| common_directories | N           | string | files/upload | A path to a data directory, relative to /     |
+| open_ports         | N           | int    | 9000         | A port that should be open on the firewall    |
+| web_port           | 1           | int    | 8000         | The port of the webapp that should be proxied |
 
-### How to add Stack Parameters
+## Configure Stack Parameters
 
-To add a new Stack Parameter, you need to access to the "_Modules_" section
+To add a new Stack Parameter, you need to access to the _Modules_ section
 (more details [here](deployed.md#modules)), select a specific _Module_ and
 _Package_ (more details [here](deployed.md#packages)) and then click on the
-"_Show Advanced_" button on the top-right of the page. Furthermore, by accessing
-to the "_Stack Parameters Values_" tab it's possible to select a specific
-parameter specifying a value for it.  When you're done, click on the "_Add_"
+_Show Advanced_ button on the top-right of the page. Furthermore, by accessing
+to the _Stack Parameters Values_ tab it's possible to select a specific
+parameter specifying a value for it.  When you're done, click on the _Add_
 button to finish.
 
-![Vendors Control Panel - Stack
-Parameters](/img/docs/control_panel_stack_parameters.png "Vendors Control Panel
-- Stack Parameters")
+![Vendors Control Panel - Stack Parameters](/img/docs/control_panel_stack_parameters.png)
 
 ## Sandboxing
 
