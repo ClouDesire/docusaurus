@@ -16,7 +16,10 @@ const siteConfig = {
   headerLinks: [
     {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
-    { href: "https://www.cloudesire.com", label: "Back to cloudesire.com" },
+    {
+      href: 'https://www.cloudesire.com',
+      label: 'Back to cloudesire.com'
+    },
   ],
   /* path to images for header/footer */
   headerIcon: 'img/logo-cloudesire.png',
