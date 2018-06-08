@@ -28,7 +28,7 @@ class Footer extends React.Component {
             <a href={this.docUrl('index.html', false)}>
               Documentation Index
             </a>
-            <a href={this.docUrl('api.html', false)}>
+            <a href={this.docUrl('api-reference.html', false)}>
               API Reference
             </a>
             <a href={this.docUrl('platform.html', false)}>

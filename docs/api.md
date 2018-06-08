@@ -184,8 +184,4 @@ Sometimes the method `PATCH` is used either for partial modification or for cust
 
 ## API Reference
 
-Here you can find the automatically generated API documentation, grouped in macro-areas:
-
-* [Catalog API](http://api.cloudesire.com/catalog.html)
-* [Marketplace API](http://api.cloudesire.com/marketplace.html)
-* [Subscription API](http://api.cloudesire.com/subscription.html)
+Look at the dedicated [API Reference](api-reference.md) page.
