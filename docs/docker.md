@@ -63,7 +63,7 @@ x-cloudesire:
       - pattern: http://{nodename}/website
       - pattern: http://{nodename}/backend
     metrics:
-      - identifier: application metric
+      - identifier: application-metric
         endpoint: /metric
         frequence: 86400
 
