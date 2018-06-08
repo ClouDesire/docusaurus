@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Deployed applications onboarding · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Deployed applications onboarding · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="In this section you will understand how to onboard deployed applications. Please make sure you read this section before you onboard your deployed application. Please note that onboarding of deployed and syndicated applications is not the same."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Deployed applications onboarding · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Deployed applications onboarding · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="In this section you will understand how to onboard deployed applications. Please"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -12,96 +12,174 @@
           toggler.onclick = function() {
             nav.classList.toggle('docsSliderActive');
           };
-        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/deployed.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Deployed applications onboarding</h1></header><article><div><span><p>In this section you will understand how to onboard deployed applications. Please make sure you read this section before you onboard your deployed application. Please note that onboarding of deployed and syndicated applications is not the same.</p>
-<p>The onboarding process starts after creating a new &quot;Product&quot; in the Marketplace Catalog, as described <a href="/docs/onboarding.html#applications-catalogue">here</a>.</p>
-<p>Cloudesire supports <a href="/docs/deployed.html#zip-packaging">custom ZIP files</a> to provide applications as a package, but we strongly recommend <a href="/docs/deployed.html#docker-packaging">Docker</a> to onboard a new deployed  application.</p>
-<p>Cloudesire will provision on the cloud a new VM containing a running instance of the app for each customer.</p>
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/deployed.md" target="_blank" rel="noreferrer noopener">Edit</a><h1>Deployed applications onboarding</h1></header><article><div><span><p>In this section you will understand how to onboard deployed applications. Please
+make sure you read this section before you onboard your deployed application.
+Please note that onboarding of deployed and syndicated applications is not the
+same.</p>
+<p>The onboarding process starts after creating a new &quot;Product&quot; in the Marketplace
+Catalog, as described <a href="/docs/onboarding.html#applications-catalogue">here</a>.</p>
+<p>Cloudesire supports <a href="/docs/deployed.html#zip-packaging">custom ZIP files</a> to provide
+applications as a package, but we strongly recommend
+<a href="/docs/deployed.html#docker-packaging">Docker</a> to onboard a new deployed  application.</p>
+<p>Cloudesire will provision on the cloud a new VM containing a running instance of
+the app for each customer.</p>
 <h2><a class="anchor" aria-hidden="true" id="technical-onboarding"></a><a href="#technical-onboarding" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Technical Onboarding</h2>
 <p>Software vendors can specify for each product:</p>
 <ul>
-<li>one or more &quot;<strong>Packages</strong>&quot; (namely Docker Images or ZIP Packages, containing the application source code)</li>
-<li>one or more &quot;<strong>Modules</strong>&quot; (namely a composition of <strong>one or more Packages</strong>, which will be installed in a VM on the cloud)</li>
+<li>one or more &quot;<strong>Packages</strong>&quot; (namely Docker Images or ZIP Packages, containing
+the application source code)</li>
+<li>one or more &quot;<strong>Modules</strong>&quot; (namely a composition of <strong>one or more Packages</strong>,
+which will be installed in a VM on the cloud)</li>
 </ul>
-<p>For example, an application can be described specifying a <em>Module</em> (with specific <strong>cloud resources requirements</strong>) which is a <em>composition</em> of a <em>back-end Package</em> (e.g. a Java module exposing REST API plus a PostgreSQL database) and a <em>front-end Package</em> (e.g. a simple and &quot;light&quot; NodeJs application).</p>
+<p>For example, an application can be described specifying a <em>Module</em> (with
+specific <strong>cloud resources requirements</strong>) which is a <em>composition</em> of a
+<em>back-end Package</em> (e.g. a Java module exposing REST API plus a PostgreSQL
+database) and a <em>front-end Package</em> (e.g. a simple and &quot;light&quot; NodeJs
+application).</p>
 <h3><a class="anchor" aria-hidden="true" id="sandbox-orders"></a><a href="#sandbox-orders" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sandbox orders</h3>
-<h4><a class="anchor" aria-hidden="true" id="what-are-sandbox-orders-and-why-you-should-use-them"></a><a href="#what-are-sandbox-orders-and-why-you-should-use-them" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What are sandbox orders and why you should use them</h4>
 <p>Sandbox orders are fake orders in which vendors can test the deployment workflow
 of their applications. Even if they are not real orders, they simulate a real
 purchase scenario, so that vendors can identify integration issues in their
 workflow before applications are available to the public.</p>
 <h4><a class="anchor" aria-hidden="true" id="how-to-launch-a-sandbox-order"></a><a href="#how-to-launch-a-sandbox-order" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to launch a sandbox order</h4>
 <p>To launch a <strong>sandbox</strong>, you need to have at least one product in your catalog:
-this means that you have already uploaded at least one product and a plan on the marketplace.</p>
+this means that you have already uploaded at least one product and a plan on the
+marketplace.</p>
 <p>Click &quot;Catalog&quot; from the menu at the top left of the screen to see your
 applications. Once you know which application you want to test, go to &quot;<em>Plans</em>&quot;
 and select &quot;SANDBOX&quot;.</p>
 <p>In the following picture you can see an example of the page from which you can
 launch a sandbox order.</p>
-<p><img src="/img/docs/control_panel_syndicated_sandbox.png" alt="Vendors Control Panel: Syndication - Sandbox"></p>
+<p><img src="/img/docs/control_panel_syndicated_sandbox.png" alt="Vendors Control Panel: Syndication -
+Sandbox"></p>
 <h3><a class="anchor" aria-hidden="true" id="packages"></a><a href="#packages" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Packages</h3>
-<p>To access the list of the available Packages, click on the &quot;<em>Catalog</em>&quot; &gt; &quot;<em>Packages</em>&quot; menu item on the left.</p>
-<p><img src="/img/docs/control_panel_packages.png" alt="Vendors Control Panel: Packages" title="Vendors Control Panel: Packages"></p>
-<p>To create a new Package using the <a href="/docs/deployed.html#zip-packaging">ZIP Packaging</a> methodology click on the &quot;<em>New</em>&quot; button.</p>
-<p><img src="/img/docs/control_panel_packages_ZIP.png" alt="Vendors Control Panel: ZIP" title="Vendors Control Panel: ZIP"></p>
+<p>To access the list of the available Packages, click on the &quot;<em>Catalog</em>&quot; &gt;
+&quot;<em>Packages</em>&quot; menu item on the left.</p>
+<p><img src="/img/docs/control_panel_packages.png" alt="Vendors Control Panel: Packages" title="Vendors
+Control Panel: Packages"></p>
+<p>To create a new Package using the <a href="/docs/deployed.html#zip-packaging">ZIP Packaging</a>
+methodology click on the &quot;<em>New</em>&quot; button.</p>
+<p><img src="/img/docs/control_panel_packages_ZIP.png" alt="Vendors Control Panel: ZIP" title="Vendors
+Control Panel: ZIP"></p>
 <p>For each Package, vendors must provide the following information:</p>
 <ul>
 <li><strong>Name</strong>: e.g. <em>back-end</em></li>
 <li><strong>Stacks</strong>: PHP, Java, Ruby, etc. (also <strong>Docker</strong>…)</li>
 <li><strong>Database</strong> (optional): MySQL, PostgreSQL, MongoDB.</li>
-<li><strong>ZIP package</strong>: a ZIP package following the specifications provided in <a href="/docs/deployed.html#zip-packaging">this section</a>.</li>
-<li><strong>Version</strong>: whenever the vendor provides a new Package, Cloudesire assigns to it a new <em>version number</em> and stores the previous one. The older Application Packages versions can be used by the vendor in order to execute automatic <strong>downgrades</strong> of running applications.</li>
+<li><strong>ZIP package</strong>: a ZIP package following the specifications provided in <a href="/docs/deployed.html#zip-packaging">this
+section</a>.</li>
+<li><strong>Version</strong>: whenever the vendor provides a new Package, Cloudesire assigns to
+it a new <em>version number</em> and stores the previous one. The older Application
+Packages versions can be used by the vendor in order to execute automatic
+<strong>downgrades</strong> of running applications.</li>
 </ul>
-<p>When a Package is created, it can be linked to a specific <em>Product Plan</em>, simply selecting it from the list and clicking on the &quot;<em>Attach Package to Module</em>&quot; button. In this way a new <strong>Module</strong> will be created (if not existent) or the Package will be added to an already existent Module.</p>
-<p><img src="/img/docs/control_panel_packages_modules_links.png" alt="Vendors Control Panel: Packages-Modules Links" title="Vendors Control Panel: Packages-Modules Links"></p>
-<p>To simultaneously create one or more Package, corresponding to a <strong>composition of Docker images</strong>, click on the &quot;<em>New Docker Compose</em>&quot; button. More details on the Docker Packaging are available in <a href="/docs/deployed.html#docker-packaging">this section</a>.</p>
-<p><img src="/img/docs/control_panel_packages_Docker.png" alt="Vendors Control Panel: Packages - Docker" title="Vendors Control Panel: Packages - Docker"></p>
-<p>In this case, a <em>Docker Compose</em> string must be provided, and the vendor can also directly link the Packages to a specific Product Plan (crating in this way a new Module, or adding all the Packages to an already existent Module).</p>
+<p>When a Package is created, it can be linked to a specific <em>Product Plan</em>, simply
+selecting it from the list and clicking on the &quot;<em>Attach Package to Module</em>&quot;
+button. In this way a new <strong>Module</strong> will be created (if not existent) or the
+Package will be added to an already existent Module.</p>
+<p><img src="/img/docs/control_panel_packages_modules_links.png" alt="Vendors Control Panel: Packages-Modules
+Links" title="Vendors Control
+Panel: Packages-Modules Links"></p>
+<p>To simultaneously create one or more Package, corresponding to a <strong>composition
+of Docker images</strong>, click on the &quot;<em>New Docker Compose</em>&quot; button. More details on
+the Docker Packaging are available in <a href="/docs/deployed.html#docker-packaging">this
+section</a>.</p>
+<p><img src="/img/docs/control_panel_packages_Docker.png" alt="Vendors Control Panel: Packages -
+Docker" title="Vendors Control Panel:
+Packages - Docker"></p>
+<p>In this case, a <em>Docker Compose</em> string must be provided, and the vendor can
+also directly link the Packages to a specific Product Plan (crating in this way
+a new Module, or adding all the Packages to an already existent Module).</p>
 <h3><a class="anchor" aria-hidden="true" id="modules"></a><a href="#modules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modules</h3>
-<p>The list of all available modules is provided in the &quot;<em>Catalog</em>&quot; &gt; &quot;<em>Modules</em>&quot; section.</p>
-<p><img src="/img/docs/control_panel_modules.png" alt="Vendors Control Panel: Modules" title="Vendors Control Panel: Modules"></p>
-<p>By selecting a specific Module and clicking on the &quot;<em>Edit</em>&quot; button on the top-right of the page, software vendors can specify some parameters.</p>
-<p><img src="/img/docs/control_panel_modules_VM.png" alt="Vendors Control Panel: Modules - VM Sizing" title="Vendors Control Panel: Modules - VM Sizing"></p>
+<p>The list of all available modules is provided in the &quot;<em>Catalog</em>&quot; &gt; &quot;<em>Modules</em>&quot;
+section.</p>
+<p><img src="/img/docs/control_panel_modules.png" alt="Vendors Control Panel: Modules" title="Vendors
+Control Panel: Modules"></p>
+<p>By selecting a specific Module and clicking on the &quot;<em>Edit</em>&quot; button on the
+top-right of the page, software vendors can specify some parameters.</p>
+<p><img src="/img/docs/control_panel_modules_VM.png" alt="Vendors Control Panel: Modules - VM
+Sizing" title="Vendors Control Panel: Modules -
+VM Sizing"></p>
 <ul>
-<li>CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the preferred configuration (e.g. 1 core + 1Gb, 2 cores + 4Gb, etc.)</li>
-<li>Disk Space (in GB): a slider allows the vendor to select the quantity of space available for user data</li>
+<li>CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the
+preferred configuration (e.g. 1 core + 1Gb, 2 cores + 4Gb, etc.)</li>
+<li>Disk Space (in GB): a slider allows the vendor to select the quantity of space
+available for user data</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="advanced-setting-for-modules"></a><a href="#advanced-setting-for-modules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Setting for Modules</h3>
-<p>By clicking on a specific Package name attached to a certain Module, three buttons are shown on the top-right of the interface:</p>
+<p>By clicking on a specific Package name attached to a certain Module, three
+buttons are shown on the top-right of the interface:</p>
 <ul>
-<li>&quot;<em>Promote to Stable</em>&quot;: to be used to declare the current Package as &quot;stable&quot; in the Module</li>
+<li>&quot;<em>Promote to Stable</em>&quot;: to be used to declare the current Package as &quot;stable&quot;
+in the Module</li>
 <li>&quot;<em>Show Advanced</em>&quot;: to open the Advanced Settings pop-up (see below)</li>
 <li>&quot;<em>Unlink</em>&quot;: to unlink the Package from the Module</li>
 </ul>
-<p><img src="/img/docs/control_panel_modules_advanced.png" alt="Vendors Control Panel: Modules - advanced setttings" title="Vendors Control Panel: Modules - advanced setttings"></p>
+<p><img src="/img/docs/control_panel_modules_advanced.png" alt="Vendors Control Panel: Modules - advanced
+setttings" title="Vendors Control Panel:
+Modules - advanced setttings"></p>
 <p>The Advanced Settings pop-up provides the following sections:</p>
 <ul>
-<li><strong>Endpoints Patterns</strong>: one or more (custom) access URLs to the module of the product (e.g. <em>/backend</em>, or <em>/stats</em>, etc.); more info at <a href="/docs/deployed.html#endpoints">this section</a></li>
-<li><strong>Application Metrics</strong>: specific application <em>aspects</em> that the vendor intends to monitor or bill to the customer leveraging the <strong>pay-per-use</strong> paradigm; more info in <a href="/docs/onboarding.html#application-metrics">this section</a></li>
-<li><strong>Environment Variables</strong>:  environment variables to be injected in the deployed VM and accessed at runtime by the application. More info in <a href="/docs/deployed.html#environment-variables">this section</a>.</li>
-<li><strong>Stack Parameters</strong>: some language-specific parameters to provide to the <a href="/docs/platform.html#application-provisioning-module">Deployer Module</a> (e.g. fine tuning of interpreters or application server). More info in <a href="/docs/deployed.html#stack-parameters">this section</a>.</li>
+<li><strong>Endpoints Patterns</strong>: one or more (custom) access URLs to the module of the
+product (e.g. <em>/backend</em>, or <em>/stats</em>, etc.); more info at <a href="/docs/deployed.html#endpoints">this
+section</a></li>
+<li><strong>Application Metrics</strong>: specific application <em>aspects</em> that the vendor
+intends to monitor or bill to the customer leveraging the <strong>pay-per-use</strong>
+paradigm; more info in <a href="/docs/onboarding.html#application-metrics">this section</a></li>
+<li><strong>Environment Variables</strong>:  environment variables to be injected in the
+deployed VM and accessed at runtime by the application. More info in <a href="/docs/deployed.html#environment-variables">this
+section</a>.</li>
+<li><strong>Stack Parameters</strong>: some language-specific parameters to provide to the
+<a href="/docs/platform.html#application-provisioning-module">Deployer Module</a> (e.g. fine
+tuning of interpreters or application server). More info in <a href="/docs/deployed.html#stack-parameters">this
+section</a>.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="data-persistence"></a><a href="#data-persistence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data Persistence</h2>
-<p>Cloudesire allows vendors and customers to perform <strong>upgrades</strong> and <strong>downgades</strong> tasks on running applications instances.</p>
-<p>To avoid data loss, Cloudesire needs to know where the application data are before performing these tasks.</p>
-<p>For this reason, vendors need to specify the file-system path containing the application data (e.g. <em>files/upload</em>) using the <strong>common_directories</strong> <a href="/docs/deployed.html#stack-parameters">Stack Parameter</a></p>
+<p>Cloudesire allows vendors and customers to perform <strong>upgrades</strong> and
+<strong>downgades</strong> tasks on running applications instances.</p>
+<p>To avoid data loss, Cloudesire needs to know where the application data are
+before performing these tasks.</p>
+<p>For this reason, vendors need to specify the file-system path containing the
+application data (e.g. <em>files/upload</em>) using the <strong>common_directories</strong> <a href="/docs/deployed.html#stack-parameters">Stack
+Parameter</a></p>
 <h2><a class="anchor" aria-hidden="true" id="endpoints"></a><a href="#endpoints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Endpoints</h2>
-<p>For each installed application, Cloudesire provides a default Endpoint to allow end-users ( customers) to access the application.
-Furthermore, vendors can specify one or more <strong>custom</strong> access URLs that will be linked to each specific <a href="/docs/deployed.html#modules">Module</a> of a given Product (e.g. <em>/backend</em>, or <em>/stats</em>, etc.).</p>
-<p>To add a new Endpoint, you need to access to the &quot;<em>Modules</em>&quot; section (more details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em> and <em>Package</em> (more details <a href="/docs/deployed.html#packages">here</a>) and then click on the &quot;<em>Show Advanced</em>&quot; button on the top-right of the page. Furthermore, by accessing to the &quot;<em>Endpoint Patterns</em>&quot; tab it's possible to fill all the required fields (a Description, a Category and a Value) and click on the &quot;<em>Add</em>&quot; button to finish.</p>
+<p>For each installed application, Cloudesire provides a default Endpoint to allow
+end-users ( customers) to access the application. Furthermore, vendors can
+specify one or more <strong>custom</strong> access URLs that will be linked to each specific
+<a href="/docs/deployed.html#modules">Module</a> of a given Product (e.g. <em>/backend</em>, or <em>/stats</em>,
+etc.).</p>
+<p>To add a new Endpoint, you need to access to the &quot;<em>Modules</em>&quot; section (more
+details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em> and <em>Package</em>
+(more details <a href="/docs/deployed.html#packages">here</a>) and then click on the &quot;<em>Show
+Advanced</em>&quot; button on the top-right of the page. Furthermore, by accessing to the
+&quot;<em>Endpoint Patterns</em>&quot; tab it's possible to fill all the required fields (a
+Description, a Category and a Value) and click on the &quot;<em>Add</em>&quot; button to finish.</p>
 <p><img src="/img/docs/control_panel_endpoints.png" alt="Vendors Control Panel - Endpoints" title="Vendors Control Panel - Endpoints"></p>
 <h2><a class="anchor" aria-hidden="true" id="environment-variables"></a><a href="#environment-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Environment Variables</h2>
-<p><strong>Vendors can inject Environment Variables</strong> for each application, so feel free to use them to define variables that could be accessed at runtime from your applications.</p>
-<p>You can even choose to permit the <em>end-user</em> to the <strong>edit</strong> some of those variables.</p>
-<p>To add a new Environment Variable, vendors need to access to the &quot;<em>Modules</em>&quot; section (more details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em> and <em>Package</em> (more details <a href="/docs/deployed.html#packages">here</a>) and then click on the &quot;<em>Show Advanced</em>&quot; button on the top-right of the page. By accessing to the &quot;<em>Environment Variables</em>&quot; tab vendors can fill all the required fields (the <em>Name</em> and the <em>Value</em>) and click on the &quot;<em>Add</em>&quot; button to finish.</p>
-<p><img src="/img/docs/control_panel_environment_variables.png" alt="Vendors Control Panel - Environment Variables" title="Vendors Control Panel - Environment Variables"></p>
-<p>There are predefined environment variables set at runtime by the platform and that you could use:</p>
+<p><strong>Vendors can inject Environment Variables</strong> for each application, so feel free
+to use them to define variables that could be accessed at runtime from your
+applications.</p>
+<p>You can even choose to permit the <em>end-user</em> to the <strong>edit</strong> some of those
+variables.</p>
+<p>To add a new Environment Variable, vendors need to access to the &quot;<em>Modules</em>&quot;
+section (more details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em>
+and <em>Package</em> (more details <a href="/docs/deployed.html#packages">here</a>) and then click on the
+&quot;<em>Show Advanced</em>&quot; button on the top-right of the page. By accessing to the
+&quot;<em>Environment Variables</em>&quot; tab vendors can fill all the required fields (the
+<em>Name</em> and the <em>Value</em>) and click on the &quot;<em>Add</em>&quot; button to finish.</p>
+<p><img src="/img/docs/control_panel_environment_variables.png" alt="Vendors Control Panel - Environment
+Variables" title="Vendors Control
+Panel - Environment Variables"></p>
+<p>There are predefined environment variables set at runtime by the platform and
+that you could use:</p>
 <h3><a class="anchor" aria-hidden="true" id="database-access-environment-variables"></a><a href="#database-access-environment-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Database access environment variables</h3>
 <ul>
 <li><code>CLOUDESIRE_DB_USER</code> username to connect to the database;</li>
 <li><code>CLOUDESIRE_DB_PASS</code> password to connect to the database;</li>
 <li><code>CLOUDESIRE_DB_NAME</code> name of the available database;</li>
 <li><code>CLOUDESIRE_DB_HOST</code> hostname of the database;</li>
-<li><code>CLOUDESIRE_VHOST</code> the hostname automatically generated for a running application instance (e.g.: <em>example-123.apps.cloudesire.com</em>)</li>
+<li><code>CLOUDESIRE_VHOST</code> the hostname automatically generated for a running
+application instance (e.g.: <em>example-123.apps.cloudesire.com</em>)</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="customer-information-environment-variables"></a><a href="#customer-information-environment-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customer information environment variables</h3>
 <ul>
@@ -116,29 +194,43 @@ Furthermore, vendors can specify one or more <strong>custom</strong> access URLs
 <li><code>CD_USER_USER_NAME</code> username of the customer;</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="virtualhost-placeholder-in-environment-variables"></a><a href="#virtualhost-placeholder-in-environment-variables" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>VirtualHost placeholder in environment variables</h3>
-<p>It is possible to declare a variable with a placeholder vavlue that will be replaced with the VirtualHost at runtime.</p>
+<p>It is possible to declare a variable with a placeholder vavlue that will be
+replaced with the VirtualHost at runtime.</p>
 <ul>
-<li><code>%VIRTUAL_HOST%</code> will be replaced with the virtual host (e.g.: <em>example-123.apps.cloudesire.com</em>)</li>
+<li><code>%VIRTUAL_HOST%</code> will be replaced with the virtual host (e.g.:
+<em>example-123.apps.cloudesire.com</em>)</li>
 </ul>
-<p>It is also accepted: <code>http://%VIRTUAL_HOST%/</code> that will be replaced in <em><a href="http://example-123.apps.cloudesire.com/">http://example-123.apps.cloudesire.com/</a></em></p>
+<p>It is also accepted: <code>http://%VIRTUAL_HOST%/</code> that will be replaced in
+<em><a href="http://example-123.apps.cloudesire.com/">http://example-123.apps.cloudesire.com/</a></em></p>
 <p>For stacks-specific environment variables, look in their specific sections:</p>
 <ul>
 <li><a href="/docs/deployed.html#zip-packaging">onboarding of ZIP packaged applications</a></li>
 <li><a href="/docs/deployed.html#docker-packaging">onboarding of Docker applications</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="filesystem-browsing"></a><a href="#filesystem-browsing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Filesystem Browsing</h2>
-<p>Cloudesire allows  vendors to enable a file-system browsing module for each deployed applications instances.</p>
-<p>In this way, customers (and vendors) can <strong>browse</strong> the file-system of the VM containing a running application, <strong>upload</strong> new files on it, and perform <strong>live-editing</strong> for textual files (e.g. in order to modify some configuration files).</p>
-<p>To enable this feature, it is necessary to specify the <strong>common_directories</strong> <a href="/docs/deployed.html#stack-parameters">Stack Parameter</a> with a valid file-system path (e.g. <em>files/upload</em>)</p>
+<p>Cloudesire allows  vendors to enable a file-system browsing module for each
+deployed applications instances.</p>
+<p>In this way, customers (and vendors) can <strong>browse</strong> the file-system of the VM
+containing a running application, <strong>upload</strong> new files on it, and perform
+<strong>live-editing</strong> for textual files (e.g. in order to modify some configuration
+files).</p>
+<p>To enable this feature, it is necessary to specify the <strong>common_directories</strong>
+<a href="/docs/deployed.html#stack-parameters">Stack Parameter</a> with a valid file-system path
+(e.g. <em>files/upload</em>)</p>
 <h2><a class="anchor" aria-hidden="true" id="ssh-access"></a><a href="#ssh-access" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSH Access</h2>
-<p>Basic SSH access is <em>enabled by default</em> for all vendors, with the unique prerequisite that at least one <em>SSH public key</em> is provided within the vendor profile, before launching a new instance.</p>
-<p>Access is available via a default user named <strong>app</strong>, that is an <em>unprivileged user</em> that can only:</p>
+<p>Basic SSH access is <em>enabled by default</em> for all vendors, with the unique
+prerequisite that at least one <em>SSH public key</em> is provided within the vendor
+profile, before launching a new instance.</p>
+<p>Access is available via a default user named <strong>app</strong>, that is an <em>unprivileged
+user</em> that can only:</p>
 <ul>
 <li>access applications data under <code>/srv</code></li>
 <li>restart application servers using <code>sudo service</code> command</li>
 <li>inspect application logs in <code>/var/log</code></li>
 </ul>
-<p>For Docker applications, access to D_ocker API is restricted_ for security reasons, but access can be granted if asked for vendors in good standing that have been in activity for at least 6 months.</p>
+<p>For Docker applications, access to D_ocker API is restricted_ for security
+reasons, but access can be granted if asked for vendors in good standing that
+have been in activity for at least 6 months.</p>
 <h2><a class="anchor" aria-hidden="true" id="zip-packaging"></a><a href="#zip-packaging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ZIP Packaging</h2>
 <p>Before you start onboarding  an application to the marketplace, please take a
 look to our <a href="/docs/onboarding.html#integration-facilities">integration facilities.</a> We
@@ -161,11 +253,12 @@ should not do any installation wizard requiring technical skills).</li>
 <li>a folder with the web application's code, depending on the language and/or
 stack used (follow the links below for your application stack).</li>
 </ul>
-<p>Before going forward in this documentation, please take a look to the
-<a href="/docs/deployed.html#data-persistence">data persistence</a> section in order to <strong>avoid data
+<p>Before going forward in this documentation, please take a look to the <a href="/docs/deployed.html#data-persistence">data
+persistence</a> section in order to <strong>avoid data
 loss</strong> in your application.</p>
 <h3><a class="anchor" aria-hidden="true" id="application-stacks-specific-requirements"></a><a href="#application-stacks-specific-requirements" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Application Stacks-specific requirements</h3>
-<p>We support several application stack, but each application stack has specific aspects that should be kept in consideration.</p>
+<p>We support several application stack, but each application stack has specific
+aspects that should be kept in consideration.</p>
 <ul>
 <li><a href="/docs/stacks.html#net">How-to package .NET applications</a></li>
 <li><a href="/docs/stacks.html#cgi">How-to package CGI applications</a></li>
@@ -194,25 +287,36 @@ documentation</a>.</p>
 <li><a href="/docs/stacks.html#mssql-server">How-to package applications using MSSQL Server</a></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="post-deploy-script"></a><a href="#post-deploy-script" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post-deploy script</h3>
-<p>It's possible to automatically execute custom commands on the last stage of the deploy, just in case you need some special hook before the application is ready.</p>
-<p>Just put in the application folder a file named cloudesire.build, starting with a standard <a href="http://en.wikipedia.org/wiki/Shebang_(Unix)">shebang</a>, e.g.:</p>
+<p>It's possible to automatically execute custom commands on the last stage of the
+deploy, just in case you need some special hook before the application is ready.</p>
+<p>Just put in the application folder a file named cloudesire.build, starting with
+a standard <a href="http://en.wikipedia.org/wiki/Shebang_(Unix)">shebang</a>, e.g.:</p>
 <pre><code class="hljs">#!/bin/bash
 echo 'Build completed' &gt; log.txt
 </code></pre>
-<p>This script will run at the end of the deploy process. Keep in mind that if the script return a non-zero value, a failure is returned, and the deploy will be marked as failed.</p>
+<p>This script will run at the end of the deploy process. Keep in mind that if the
+script return a non-zero value, a failure is returned, and the deploy will be
+marked as failed.</p>
 <h3><a class="anchor" aria-hidden="true" id="example-applications"></a><a href="#example-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example Applications</h3>
-<p>Here you can find a selection of ready-to-use <strong>demo apps</strong>, written in several application stacks:</p>
+<p>Here you can find a selection of ready-to-use <strong>demo apps</strong>, written in several
+application stacks:</p>
 <ul>
 <li><a href="https://cdn.cloudesire.com/demo_apps/php-mysql-app.zip">PHP5 + MySQL</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/php-mongodb-app.zip">PHP5 + MongoDB</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/rails-postgresql-app.zip">Ruby on Rails + PostgreSQL</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/django-postgresql-app.zip">Django + PostgreSQL</a></li>
+<li><a href="https://cdn.cloudesire.com/demo_apps/rails-postgresql-app.zip">Ruby on Rails +
+PostgreSQL</a></li>
+<li><a href="https://cdn.cloudesire.com/demo_apps/django-postgresql-app.zip">Django +
+PostgreSQL</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/java-mysql-app.zip">Java6 + MySQL</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/nodejs-mongodb-app.zip">NodeJS + MongoDB</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/aspnet-sql-app.zip">ASP.NET + SQL Server Express</a></li>
-<li><a href="https://cdn.cloudesire.com/demo_apps/cgibin-postgresql-app.zip">CGI-BIN + PostgreSQL</a></li>
+<li><a href="https://cdn.cloudesire.com/demo_apps/nodejs-mongodb-app.zip">NodeJS +
+MongoDB</a></li>
+<li><a href="https://cdn.cloudesire.com/demo_apps/aspnet-sql-app.zip">ASP.NET + SQL Server
+Express</a></li>
+<li><a href="https://cdn.cloudesire.com/demo_apps/cgibin-postgresql-app.zip">CGI-BIN +
+PostgreSQL</a></li>
 </ul>
-<p>And this is a collection of the most famous open-source applications, already available on the marketplace:</p>
+<p>And this is a collection of the most famous open-source applications, already
+available on the marketplace:</p>
 <ul>
 <li><a href="https://cdn.cloudesire.com/demo_apps/drupal.zip">Drupal</a></li>
 <li><a href="https://cdn.cloudesire.com/demo_apps/dokuwiki.zip">Dokuwiki</a></li>
@@ -221,22 +325,37 @@ echo 'Build completed' &gt; log.txt
 <li><a href="https://cdn.cloudesire.com/demo_apps/wordpress.zip">WordPress</a></li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="docker-packaging"></a><a href="#docker-packaging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Packaging</h2>
-<p>Before getting hands dirty, take a look at the <a href="https://docs.docker.com/introduction/understanding-docker/">understanding Docker</a> page.</p>
-<p>When you're ready, take a look to our <a href="/docs/onboarding.html#integration-facilities">integration facilities</a>: we provide a <strong>staging marketplace</strong> where you can register your company, log-in and on-board your application via Docker Image(s) without any worry (also simulating the purchase of your product using demo credit cards).</p>
-<p>The first step is to install the <em>Docker</em> command-line tool on your development machine:</p>
+<p>Before getting hands dirty, take a look at the <a href="https://docs.docker.com/introduction/understanding-docker/">understanding
+Docker</a> page.</p>
+<p>When you're ready, take a look to our <a href="/docs/onboarding.html#integration-facilities">integration
+facilities</a>: we provide a <strong>staging
+marketplace</strong> where you can register your company, log-in and on-board your
+application via Docker Image(s) without any worry (also simulating the purchase
+of your product using demo credit cards).</p>
+<p>The first step is to install the <em>Docker</em> command-line tool on your development
+machine:</p>
 <ul>
 <li><a href="https://docs.docker.com/linux/started">Linux</a></li>
 <li><a href="https://docs.docker.com/mac/started/">Mac</a></li>
 <li><a href="https://docs.docker.com/windows/started">Windows</a></li>
 </ul>
-<p>You can find a lot of easy to read documentation on the official
-<a href="https://docs.docker.com/get-started/">Docker User Guide</a>.</p>
-<p>Before going forward in this documentation, please take a look to the <a href="/docs/deployed.html/#data-persistence">data persistence</a> section to <strong>avoid data loss</strong> in your application.</p>
-<p>Once a Docker image is created, the only think you need to do to <a href="/docs/onboarding.html">onboard</a> your application in Cloudesire is to create a <em>Package</em> (linked to your application), then select &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot; input-box, and finally type the Docker image URL in the related input-box, as shown in the following screenshot and more detailed described in <a href="/docs/deployed.html/#packages">this section</a>.</p>
+<p>You can find a lot of easy to read documentation on the official <a href="https://docs.docker.com/get-started/">Docker User
+Guide</a>.</p>
+<p>Before going forward in this documentation, please take a look to the <a href="/docs/deployed.html/#data-persistence">data
+persistence</a> section to <strong>avoid data loss</strong> in
+your application.</p>
+<p>Once a Docker image is created, the only think you need to do to
+<a href="/docs/onboarding.html">onboard</a> your application in Cloudesire is to create a <em>Package</em>
+(linked to your application), then select &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot;
+input-box, and finally type the Docker image URL in the related input-box, as
+shown in the following screenshot and more detailed described in <a href="/docs/deployed.html/#packages">this
+section</a>.</p>
 <p><img src="/img/docs/control_panel_docker_image.png" alt="Vendors Control Panel - Docker Image" title="Vendors Control Panel - Docker Image"></p>
 <h3><a class="anchor" aria-hidden="true" id="writing-a-dockerfile-to-build-an-image"></a><a href="#writing-a-dockerfile-to-build-an-image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Writing a Dockerfile to build an image</h3>
 <p>A <code>Dockerfile</code> is required to generate a <em>Docker</em> image for your application.</p>
-<p>A lot of useful information about writing a <code>Dockerfile</code> is available at <a href="https://docs.docker.com/articles/dockerfile_best-practices/">Best practices for writing Dockerfiles</a>.</p>
+<p>A lot of useful information about writing a <code>Dockerfile</code> is available at <a href="https://docs.docker.com/articles/dockerfile_best-practices/">Best
+practices for writing
+Dockerfiles</a>.</p>
 <p>A simple example of a <code>Dockerfile</code> follows:</p>
 <pre><code class="hljs css dockerfile"><span class="hljs-keyword">FROM</span>    centos:centos6
 
@@ -253,14 +372,16 @@ echo 'Build completed' &gt; log.txt
 <span class="hljs-keyword">EXPOSE</span>  <span class="hljs-number">8080</span>
 <span class="hljs-keyword">CMD</span><span class="bash"> [<span class="hljs-string">"node"</span>, <span class="hljs-string">"/src/index.js"</span>]
 </span></code></pre>
-<p>You need to choose a good base image to start from (<code>FROM</code> keyword) on <a href="https://hub.docker.com/">Docker Hub</a>.</p>
+<p>You need to choose a good base image to start from (<code>FROM</code> keyword) on <a href="https://hub.docker.com/">Docker
+Hub</a>.</p>
 <p>There are base images of the most common GNU/Linux distributions:</p>
 <ul>
 <li><a href="https://hub.docker.com/_/debian/">Debian</a></li>
 <li><a href="https://hub.docker.com/_/ubuntu/">Ubuntu</a></li>
 <li><a href="https://hub.docker.com/_/centos/">Centos</a></li>
 </ul>
-<p>There are also base images with application stacks preinstalled, along with a <code>onbuild</code> variant, that will ease the packaging of new applications:</p>
+<p>There are also base images with application stacks preinstalled, along with a
+<code>onbuild</code> variant, that will ease the packaging of new applications:</p>
 <ul>
 <li><a href="https://hub.docker.com/_/node/">Node</a></li>
 <li><a href="https://hub.docker.com/_/python/">Python</a></li>
@@ -286,16 +407,24 @@ echo 'Build completed' &gt; log.txt
 <h4><a class="anchor" aria-hidden="true" id="data-volumes"></a><a href="#data-volumes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Data volumes</h4>
 <p>Remember to define volumes in your container to persist data across launches.</p>
 <h4><a class="anchor" aria-hidden="true" id="container-composition"></a><a href="#container-composition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Container composition</h4>
-<p>It is highly recommended to use multiple images for each component of your application, instead of a single container running everything.</p>
-<p>A tool named <a href="https://docs.docker.com/compose/">Composer</a> assists you in running multiple containers together within your machine, to test that everything is working.</p>
+<p>It is highly recommended to use multiple images for each component of your
+application, instead of a single container running everything.</p>
+<p>A tool named <a href="https://docs.docker.com/compose/">Composer</a> assists you in running
+multiple containers together within your machine, to test that everything is
+working.</p>
 <h4><a class="anchor" aria-hidden="true" id="network"></a><a href="#network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Network</h4>
-<p>Cloudesire runs containers <strong>in the same network</strong>, meaning that all the running containers can directly talk to each other. A container on the network can be reached through its name.</p>
+<p>Cloudesire runs containers <strong>in the same network</strong>, meaning that all the running
+containers can directly talk to each other. A container on the network can be
+reached through its name.</p>
 <h4><a class="anchor" aria-hidden="true" id="environment-variables-1"></a><a href="#environment-variables-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Environment variables</h4>
-<p>For a complete list of environment variables take a look in the <a href="/docs/deployed.html#environment-variables">available environment variables</a> section.</p>
+<p>For a complete list of environment variables take a look in the <a href="/docs/deployed.html#environment-variables">available
+environment variables</a> section.</p>
 <h4><a class="anchor" aria-hidden="true" id="ssl-support"></a><a href="#ssl-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSL support</h4>
-<p>Cloudesire manages automatically a <strong>reverse proxy</strong> in front of your application, so you <strong>don't need to include HTTPS support</strong> in the container.</p>
+<p>Cloudesire manages automatically a <strong>reverse proxy</strong> in front of your
+application, so you <strong>don't need to include HTTPS support</strong> in the container.</p>
 <h3><a class="anchor" aria-hidden="true" id="private-repository"></a><a href="#private-repository" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Private Repository</h3>
-<p>ClouDesire offers a private repository where vendors can privately push their images. This service is free while in BETA.</p>
+<p>ClouDesire offers a private repository where vendors can privately push their
+images. This service is free while in BETA.</p>
 <p>First, login with your user credentials on the Docker cli:</p>
 <pre><code class="hljs css bash">docker login docker.domain.tld
 </code></pre>
@@ -311,13 +440,14 @@ docker build -t myimage:1.0 .
 docker tag myimage:1.0 docker.appshop.cloud/mycompany/myimage:1.0
 docker push docker.appshop.cloud/mycompany/myimage:1.0
 </code></pre>
-<p>At this point, an application can be configured in the Cloudesire
-<a href="/docs/onboarding.html">onboarding interfaces</a>, simply creating a
-<a href="/docs/deployed.html#packages">Package</a> (linked to your application) and
-selecting &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot; input-box, as described in
-<a href="/docs/deployed.html#technical-onboarding">this section</a>.</p>
+<p>At this point, an application can be configured in the Cloudesire <a href="/docs/onboarding.html">onboarding
+interfaces</a>, simply creating a <a href="/docs/deployed.html#packages">Package</a>
+(linked to your application) and selecting &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot;
+input-box, as described in <a href="/docs/deployed.html#technical-onboarding">this section</a>.</p>
 <h2><a class="anchor" aria-hidden="true" id="stack-parameters"></a><a href="#stack-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stack Parameters</h2>
-<p>When defining a <a href="/docs/deployed.html#docker-packaging">Docker</a> or <a href="/docs/deployed.html#zip-packaging">ZIP</a> <em>module</em> in Cloudesire, you can specify some parameters:</p>
+<p>When defining a <a href="/docs/deployed.html#docker-packaging">Docker</a> or
+<a href="/docs/deployed.html#zip-packaging">ZIP</a> <em>module</em> in Cloudesire, you can specify some
+parameters:</p>
 <table>
 <thead>
 <tr><th>Name</th><th>Usage</th><th>Cardinality</th><th>Type</th><th>Example</th><th>Description</th></tr>
@@ -331,25 +461,53 @@ selecting &quot;<em>Docker</em>&quot; in the &quot;<em>Stacks</em>&quot; input-b
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="how-to-add-stack-parameters"></a><a href="#how-to-add-stack-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to add Stack Parameters</h3>
-<p>To add a new Stack Parameter, you need to access to the &quot;<em>Modules</em>&quot; section (more details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em> and <em>Package</em> (more details <a href="/docs/deployed.html#packages">here</a>) and then click on the &quot;<em>Show Advanced</em>&quot; button on the top-right of the page. Furthermore, by accessing to the &quot;<em>Stack Parameters Values</em>&quot; tab it's possible to select a specific parameter specifying a value for it.  When you're done, click on the &quot;<em>Add</em>&quot; button to finish.</p>
-<p><img src="/img/docs/control_panel_stack_parameters.png" alt="Vendors Control Panel - Stack Parameters" title="Vendors Control Panel - Stack Parameters"></p>
+<p>To add a new Stack Parameter, you need to access to the &quot;<em>Modules</em>&quot; section
+(more details <a href="/docs/deployed.html#modules">here</a>), select a specific <em>Module</em> and
+<em>Package</em> (more details <a href="/docs/deployed.html#packages">here</a>) and then click on the
+&quot;<em>Show Advanced</em>&quot; button on the top-right of the page. Furthermore, by accessing
+to the &quot;<em>Stack Parameters Values</em>&quot; tab it's possible to select a specific
+parameter specifying a value for it.  When you're done, click on the &quot;<em>Add</em>&quot;
+button to finish.</p>
+<p>![Vendors Control Panel - Stack
+Parameters](/img/docs/control_panel_stack_parameters.png &quot;Vendors Control Panel</p>
+<ul>
+<li>Stack Parameters&quot;)</li>
+</ul>
 <h2><a class="anchor" aria-hidden="true" id="sandboxing"></a><a href="#sandboxing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sandboxing</h2>
-<p>Once finished the technical onboarding of your deployed app, it's time to test its self-provisioning on the cloud!</p>
-<p>Let's start by selecting a plan, and by clicking on the corresponding &quot;Sandbox&quot; button in the &quot;Actions&quot; column; then select one of the supported cloud providers on which you want to start the testing deploy of your app.</p>
+<p>Once finished the technical onboarding of your deployed app, it's time to test
+its self-provisioning on the cloud!</p>
+<p>Let's start by selecting a plan, and by clicking on the corresponding &quot;Sandbox&quot;
+button in the &quot;Actions&quot; column; then select one of the supported cloud providers
+on which you want to start the testing deploy of your app.</p>
 <p><img src="/img/docs/vendors-sandboxing.png" alt="Launch sandbox"></p>
-<p>The provisioning process will start immediately; it will require few minutes, depending on the cloud provider performances, the &quot;weight&quot; of your app, and other factors.</p>
-<p>You'll be redirected on another view, where you can follow the provisioning steps; at the end of the deployment, the platform will provide the following interface:</p>
+<p>The provisioning process will start immediately; it will require few minutes,
+depending on the cloud provider performances, the &quot;weight&quot; of your app, and
+other factors.</p>
+<p>You'll be redirected on another view, where you can follow the provisioning
+steps; at the end of the deployment, the platform will provide the following
+interface:</p>
 <p><img src="/img/docs/vendors-running-instance.jpg" alt="vendor running instance"></p>
 <p>The following elements are available:</p>
 <ul>
-<li><strong>General Info:</strong> the name of the product, its logo, the name of the vendor, the current deployment status</li>
-<li><strong>Subscription Details:</strong> the subscription type (which is <em>Sandbox</em> in this case, but will be <em>Normal</em> for the real purchased instances of the application), the creation / expiration date, the customer name (which is &quot;dummy&quot; for Sandbox orders)  and 2 separate sections for allowing to access the related invoices and/or orders</li>
-<li><strong>VM Details:</strong> the sizing (CPU, RAM) and the public IP address of the virtual instance hosting the running application</li>
-<li><strong>Resource usage:</strong> 2 gauges for highlighting the current Disk Space and Bandwidth usage</li>
-<li><strong>Application Endpoints:</strong> the actual values of the <a href="/docs/deployed.html#endpoints">application endpoints</a> previously defined by the vendor</li>
-<li><strong>Deployment Log:</strong> shows the <a href="/docs/platform.html#application-provisioning-module">deployment steps</a>, updated in real-time</li>
-<li><strong>Debug:</strong> provides the real-time application and/or system logs, collected from the virtual machines</li>
-<li><strong>Charts:</strong> a series of real-time monitoring charts, grouped into <em>Disk</em> / <em>Network</em> / <em>System</em> sections</li>
+<li><strong>General Info:</strong> the name of the product, its logo, the name of the vendor,
+the current deployment status</li>
+<li><strong>Subscription Details:</strong> the subscription type (which is <em>Sandbox</em> in this
+case, but will be <em>Normal</em> for the real purchased instances of the
+application), the creation / expiration date, the customer name (which is
+&quot;dummy&quot; for Sandbox orders)  and 2 separate sections for allowing to access
+the related invoices and/or orders</li>
+<li><strong>VM Details:</strong> the sizing (CPU, RAM) and the public IP address of the virtual
+instance hosting the running application</li>
+<li><strong>Resource usage:</strong> 2 gauges for highlighting the current Disk Space and
+Bandwidth usage</li>
+<li><strong>Application Endpoints:</strong> the actual values of the <a href="/docs/deployed.html#endpoints">application
+endpoints</a> previously defined by the vendor</li>
+<li><strong>Deployment Log:</strong> shows the <a href="/docs/platform.html#application-provisioning-module">deployment
+steps</a>, updated in real-time</li>
+<li><strong>Debug:</strong> provides the real-time application and/or system logs, collected
+from the virtual machines</li>
+<li><strong>Charts:</strong> a series of real-time monitoring charts, grouped into <em>Disk</em> /
+<em>Network</em> / <em>System</em> sections</li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="csp-product.html">← CSP products onboarding</a><a class="docs-next button" href="stacks.html">Supported languages, databases and cloud providers →</a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#technical-onboarding">Technical Onboarding</a><ul class="toc-headings"><li><a href="#sandbox-orders">Sandbox orders</a></li><li><a href="#packages">Packages</a></li><li><a href="#modules">Modules</a></li><li><a href="#advanced-setting-for-modules">Advanced Setting for Modules</a></li></ul></li><li><a href="#data-persistence">Data Persistence</a></li><li><a href="#endpoints">Endpoints</a></li><li><a href="#environment-variables">Environment Variables</a><ul class="toc-headings"><li><a href="#database-access-environment-variables">Database access environment variables</a></li><li><a href="#customer-information-environment-variables">Customer information environment variables</a></li><li><a href="#virtualhost-placeholder-in-environment-variables">VirtualHost placeholder in environment variables</a></li></ul></li><li><a href="#filesystem-browsing">Filesystem Browsing</a></li><li><a href="#ssh-access">SSH Access</a></li><li><a href="#zip-packaging">ZIP Packaging</a><ul class="toc-headings"><li><a href="#application-stacks-specific-requirements">Application Stacks-specific requirements</a></li><li><a href="#database-specific-requirements">Database-specific requirements</a></li><li><a href="#post-deploy-script">Post-deploy script</a></li><li><a href="#example-applications">Example Applications</a></li></ul></li><li><a href="#docker-packaging">Docker Packaging</a><ul class="toc-headings"><li><a href="#writing-a-dockerfile-to-build-an-image">Writing a Dockerfile to build an image</a></li><li><a href="#requirements-and-suggestions">Requirements and Suggestions</a></li><li><a href="#private-repository">Private Repository</a></li></ul></li><li><a href="#stack-parameters">Stack Parameters</a><ul class="toc-headings"><li><a href="#how-to-add-stack-parameters">How to add Stack Parameters</a></li></ul></li><li><a href="#sandboxing">Sandboxing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
