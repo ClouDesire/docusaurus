@@ -32,10 +32,10 @@ Click on the *Import Microsoft product* button to start the two-steps wizard to
 
 The first step of the wizard involves the following things:
 
-* Select a product type between *license*, *azure marketplace* and *azure quickstart template*
+* Select a product type between **licence** and **azure marketplace**
 * **Search** a CSP product by name
-* Decide a *name* for the new product that will be exposed on the marketplace catalog
-* Assign a company that will be responsible of managing the product
+* Decide a **name** for the new product that will be exposed on the marketplace catalog
+* **Assign a company** that will be responsible of managing the product
 
 ![Import microsoft product](/docs/assets/csp-product/import-microsoft-product.png)
 
