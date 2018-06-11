@@ -50,22 +50,18 @@ marketplace from the _Modules_ section.
 
 ### Example docker-compose.yml
 
-Here follows a `docker-compose.yml` example, containing also metadata to define
-multiple [endpoint patterns](deployed.md#endpoints) and [application
-metrics](onboarding.md#application-metrics).
+Here follows a `docker-compose.yml` example
+
+The `x-cloudesire` section contains optional metadatas ignored by Compose but
+handled by the platform to define multiple [endpoint
+patterns](deployed.md#endpoints) and [application
+metrics](onboarding.md#application-metrics) for each defined service.
+
+The name of each object inside this section must be equal to a service defined
+below (i.e. `test`).
 
 ```yaml
 version: '3.4'
-
-x-cloudesire:
-  test:
-    endpoints:
-      - pattern: http://{nodename}/website
-      - pattern: http://{nodename}/backend
-    metrics:
-      - identifier: application-metric
-        endpoint: /metric
-        frequence: 86400
 
 services:
   test:
@@ -79,6 +75,16 @@ services:
 
     environment:
       ENV_NAME: production
+
+x-cloudesire:
+  test:
+    endpoints:
+      - pattern: http://{nodename}/website
+      - pattern: http://{nodename}/backend
+    metrics:
+      - identifier: application-metric
+        endpoint: /metric
+        frequence: 86400
 ```
 
 ## Private Repository
