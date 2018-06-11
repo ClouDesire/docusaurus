@@ -222,13 +222,13 @@ percentage**; in this way, the total price of a _bundle plan_ is calculated as
 the sum of all the discounted prices of all the _products plans attached to
 it.
 
-![bundle on the control panel](/img/docs/bundles-4.png)]
+![bundle on the control panel](/img/docs/bundles-4.png)
 
 On the Marketplace, a bundle is shown as a normal product, highlighting the
 discounts, while in the ordering page the customer can have a detailed view of
 all the prices and the savings.
 
-![bundle on the marketplace](/img/docs/bundles-6.jpg)]
+![bundle on the marketplace](/img/docs/bundles-6.jpg)
 
 ## Cloud resources pricing
 
