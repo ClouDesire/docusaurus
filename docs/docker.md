@@ -50,15 +50,21 @@ marketplace from the _Modules_ section.
 
 ### Example docker-compose.yml
 
-Here follows a `docker-compose.yml` example
+Here follows a `docker-compose.yml` example.
 
-The `x-cloudesire` section contains optional metadatas ignored by Compose but
+The `services` section is the standard Compose section to define containers and
+their configuration.
+
+The `x-cloudesire` section contains optional metadata ignored by Compose but
 handled by the platform to define multiple [endpoint
 patterns](deployed.md#endpoints) and [application
 metrics](onboarding.md#application-metrics) for each defined service.
 
 The name of each object inside this section must be equal to a service defined
 below (i.e. `test`).
+
+> To add the `x-cloudesire` in your *docker-compose.yml* you need to use at
+> least 3.4 format or Compose will throw an error.
 
 ```yaml
 version: '3.4'
