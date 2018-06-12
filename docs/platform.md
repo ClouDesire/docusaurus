@@ -4,53 +4,13 @@ title: Platform modules
 sidebar_label: Platform modules
 ---
 
-## Users, Functionalities & Permissions
-
-In the following table are listed the all user levels supported by the platform,
-together with the correspondent (main) functionalities available for each of
-them.
-
-* Superadmin is the platform administrator
-* Admin is the marketplace administrator
-* Supervisor is in charge of reviewing contents on the marketplace.
-* Vendor is who sell products on the marketplace
-* Distributor is who maintain catalogs of vendors products from where Resellers pick products
-* Reseller is who resell products on their own marketplace
-* Customer is who buy products
-
-| Feature                   | Superadmin | Admin | Supervisor | Vendor | Distributor | Reseller | Customer |
-|---------------------------|------------|-------|------------|--------|-------------|----------|----------|
-| Platform Configuration    | V          | X     | X          | X      | X           | X        | X        |
-| Platform Debug            | V          | X     | X          | X      | X           | X        | X        |
-| Marketplace Customization | V          | V     | X          | X      | V           | V        | X        |
-| User Management           | V          | V     | X          | X      | X           | X        | X        |
-| User Impersonation        | V          | V     | V          | X      | X           | X        | V        |
-| Customer Management       | V          | V     | V          | V      | V           | V        | V        |
-| Providers configuration   | V          | X     | X          | X      | X           | X        | X        |
-| Providers pricing         | V          | V     | X          | X      | X           | X        | X        |
-| Product Onboarding        | X          | X     | X          | V      | X           | X        | X        |
-| Sandboxing                | V          | V     | X          | V      | X           | X        | X        |
-| Vendor Accout Approval    | V          | V     | V          | X      | X           | X        | X        |
-| Product Approval          | V          | V     | V          | X      | X           | X        | X        |
-| Wholesale Pricing Conf.   | V          | V     | X          | X      | X           | X        | X        |
-| Sell-in Pricing Conf.     | V          | V     | X          | X      | V           | X        | X        |
-| Sell-out Pricing Conf.    | V          | V     | X          | X      | X           | V        | X        |
-| VAS Management            | V          | V     | X          | V      | X           | V        | X        |
-| Coupon Management         | V          | V     | X          | V      | X           | V        | X        |
-| Bundle Management         | V          | V     | X          | V      | X           | V        | X        |
-| Financial Reports         | V          | V     | X          | V      | V           | V        | X        |
-| Messaging System          | V          | V     | V          | V      | V           | V        | V        |
-| Order Placement           | X          | X     | X          | X      | X           | V        | V        |
-
-## Platform Modules
-
 The main components of the Cloudesire platform can be summarized as follows:
 
 * **Backend**: it represents the "core" of the platform and consists in a set of
-  multi-thread modules that uses messaging queues to enable asynchronous,
-  distributed and redundant messaging among components, allowing enterprise
-  integration patterns. Each module exposes a **REST API** that is used
-  consumed by the other modules and by the web interfaces.
+  independent multi-thread modules that uses messaging queues to enable
+  asynchronous, distributed and redundant messaging among components, allowing
+  enterprise integration patterns. Each module exposes a **REST API** that is
+  used consumed by the other modules and by the web interfaces.
 * **Control panel**: a responsive web application that allows users to manage
   different entities, according to their role: customers can see their orders
   status and check availability of their instances; vendors can manage their
@@ -62,7 +22,7 @@ The main components of the Cloudesire platform can be summarized as follows:
   browse the catalog, compare products, rate and comment them, place orders or
   try an application (if the vendor allows it).
 
-### Backend
+## Backend
 
 Cloudesire Backend modules contains:
 
@@ -89,8 +49,11 @@ Cloudesire Backend modules contains:
   Hubspot CRM
 * **Microsoft-connector**: allow the integration of Cloudesire with Microsoft
   CSP to enable the selling of Microsoft licenses and Azure resources
+* **Kong-connector**: allow the integration of Cloudesire with Kong API
+  management solution to enable selling of API products into the marketplace
+* **Keycloak**: enables SSO capabilities for marketplace users
 
-#### Understand the VM deployment process
+### Understand the VM deployment process
 
 The deployment process on a specific cloud provider follows this workflow:
 
@@ -121,7 +84,7 @@ application provides an unattended setup, Cloudesire can follow all the
 previously described workflow, but the URL provided to the customer refers to a
 **remote desktop connection** (i.e. VNC, rdesktop)
 
-#### How the snapshot backups works
+### How the snapshot backups works
 
 During the [deployment process](platform.md#application-provisioning-module),
 Cloudesire attaches a _data-disk_ to the previously created VM in which
@@ -150,6 +113,6 @@ application will be accessible during the snapshot creation and no shutdown of
 the VM will be required.
 
 In the same way, the snapshot restore operation will be executed on this new
-disk, and onceit is ready the two disks will be switched. In this way, the
+disk, and once it is ready the two disks will be switched. In this way, the
 application will be accessible during the snapshot restoring and no shutdown of
 the VM will be required.

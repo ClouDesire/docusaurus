@@ -4,27 +4,8 @@ title: Cloudesire REST API Guide
 sidebar_label: REST API Guide
 ---
 
-The Cloudesire platform expose a REST API and uses **JSON** as data exchange
+The Cloudesire platform exposes REST API and uses **JSON** as data exchange
 format.
-
-## API Clients
-
-When developing your custom integration, you may want to start building using one
-of the following resources, depending on your programming language.
-
-### Java
-
-We are maintaining a an official [Java client](https://github.com/ClouDesire/java-api-client)
-based on [Retrofit](http://square.github.io/retrofit/) to consume our API.
-
-### PHP
-
-Please go ahead to the [PHP client](api-php.md) page.
-
-### CLI
-
-We suggest to use [HTTPie](https://github.com/jakubroztocil/httpie) via
-command-line to debug and experiment with our API.
 
 ## URI format
 

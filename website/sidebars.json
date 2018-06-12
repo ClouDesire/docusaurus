@@ -16,6 +16,7 @@
     "Platform": [
       "glossary",
       "platform",
+      "platform-users",
       "billing",
       "channel",
       "emails",
@@ -23,6 +24,7 @@
     ],
     "API": [
       "api",
+      "api-java",
       "api-php",
       "api-reference"
     ]
