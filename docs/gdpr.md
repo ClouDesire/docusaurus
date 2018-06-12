@@ -1,7 +1,7 @@
 ---
 id: gdpr
-title: General Data Protection Regulation (GDPR) Marketplace Compliance
-sidebar_label: GDPR-compliance
+title: GDPR Marketplace Compliance
+sidebar_label: GDPR Compliance
 ---
 
 The most significant piece of European data protection legislation to be
