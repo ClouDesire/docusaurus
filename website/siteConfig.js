@@ -16,6 +16,8 @@ const siteConfig = {
   headerLinks: [
     {doc: 'index', label: 'Docs'},
     {doc: 'api', label: 'API'},
+    {doc: 'syndication', label: 'Syndication'},
+    {doc: 'glossary', label: 'Glossary'},
     {
       href: 'https://www.cloudesire.com',
       label: 'Back to cloudesire.com'
