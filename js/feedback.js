@@ -7,7 +7,7 @@ setTimeout( function () {
   window.feedbackWidget.default(document.getElementById('feedback-launcher'), {
     "language": "en",
     "position": "top",
-    "feedbackEndpoint" :"https://backend.cloudesire.com/feedback/ticket",
+    "feedbackEndpoint" :"https://demo-backend.cloudesire.com/feedback/ticket",
     "categories": [
       "Generic tech support", "API"
     ]
