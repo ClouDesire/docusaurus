@@ -31,7 +31,10 @@ jobs:
       - run:
           name: Deploying to GitHub Pages if on branch source
           command: |
+            cd website
             if [ "$CIRCLE_BRANCH" == "source" ]; then
-              cd website && GIT_USER=gionn yarn run publish-gh-pages
+              GIT_USER=gionn yarn run publish-gh-pages
+            else
+              yarn build
             fi
 
