@@ -29,7 +29,7 @@ jobs:
             - website/node_modules/
 
       - run:
-          name: Deploying to GitHub Pages if on branch source
+          name: Build or deploy
           command: |
             cd website
             if [ "$CIRCLE_BRANCH" == "source" ]; then
