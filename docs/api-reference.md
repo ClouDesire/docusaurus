@@ -7,13 +7,14 @@ sidebar_label: API Reference
 We use [Springfox](https://github.com/springfox/springfox) to autogenerate
 [Swagger](https://swagger.io/) definitions for the Cloudesire API.
 
-API are grouped in three different areas for your convenience.
+API are grouped into different areas:
 
-* [Billing](/redoc/billing.html)
-* [Cloud apps](/redoc/cloud-apps.html)
-* [Cloud providers](/redoc/cloud-providers.html)
-* [Users](/redoc/users.html)
-* [Environment](/redoc/environment.html)
+* [Billing API](/redoc/billing.html)
+* [Catalog API](/redoc/catalog.html)
+* [Cloud Apps API](/redoc/cloud-apps.html)
+* [Cloud providers API](/redoc/cloud-providers.html)
+* [Users API](/redoc/users.html)
+* [Environment API](/redoc/environment.html)
 
 Swagger endpoints are reachable at (concatenate to [API
 domain](api.md#domains)):
