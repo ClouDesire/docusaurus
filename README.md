@@ -6,7 +6,7 @@ Cloudesire documentation website and engineering blog, based on [facebook/docusa
 
 ```
 $ cd website
-$ yarn start
+$ yarn install && yarn start
 ```
 
 Browse `http://localhost:3000`
