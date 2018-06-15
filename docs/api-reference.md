@@ -20,6 +20,7 @@ Swagger endpoints are reachable at (concatenate to [API
 domain](api.md#domains)):
 
 * /v2/api-docs?group=billing
+* /v2/api-docs?group=catalog
 * /v2/api-docs?group=cloudApps
 * /v2/api-docs?group=cloudProviders
 * /v2/api-docs?group=users
