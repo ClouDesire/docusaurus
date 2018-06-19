@@ -14,11 +14,13 @@ API are grouped into different areas:
 * [Cloud Apps API](/redoc/cloud-apps.html)
 * [Cloud providers API](/redoc/cloud-providers.html)
 * [Users API](/redoc/users.html)
+* [Admin API](/redoc/admin.html)
 * [Environment API](/redoc/environment.html)
 
 Swagger endpoints are reachable at (concatenate to [API
 domain](api.md#domains)):
 
+* /v2/api-docs?group=admin
 * /v2/api-docs?group=billing
 * /v2/api-docs?group=catalog
 * /v2/api-docs?group=cloudApps
