@@ -22,8 +22,8 @@ them.
 | Platform Debug            | V          |       |            |        |             |          |          |
 | Marketplace Customization | V          | V     |            |        | V           | V        |          |
 | User Management           | V          | V     |            |        |             |          |          |
-| User Impersonation        | V          | V     | V          |        |             |          | V        |
-| Customer Management       | V          | V     | V          | V      | V           | V        | V        |
+| User Impersonation        | V          | V     | V          |        |             |          |          |
+| Customer Management       | V          | V     | V          | V      | V           | V        |          |
 | Providers configuration   | V          |       |            |        |             |          |          |
 | Providers pricing         | V          | V     |            |        |             |          |          |
 | Product Onboarding        |            |       |            | V      |             |          |          |
