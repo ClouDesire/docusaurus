@@ -18,24 +18,24 @@ them.
 
 | Feature                   | Superadmin | Admin | Supervisor | Vendor | Distributor | Reseller | Customer |
 |---------------------------|------------|-------|------------|--------|-------------|----------|----------|
-| Platform Configuration    | V          | X     | X          | X      | X           | X        | X        |
-| Platform Debug            | V          | X     | X          | X      | X           | X        | X        |
-| Marketplace Customization | V          | V     | X          | X      | V           | V        | X        |
-| User Management           | V          | V     | X          | X      | X           | X        | X        |
-| User Impersonation        | V          | V     | V          | X      | X           | X        | V        |
+| Platform Configuration    | V          |       |            |        |             |          |          |
+| Platform Debug            | V          |       |            |        |             |          |          |
+| Marketplace Customization | V          | V     |            |        | V           | V        |          |
+| User Management           | V          | V     |            |        |             |          |          |
+| User Impersonation        | V          | V     | V          |        |             |          | V        |
 | Customer Management       | V          | V     | V          | V      | V           | V        | V        |
-| Providers configuration   | V          | X     | X          | X      | X           | X        | X        |
-| Providers pricing         | V          | V     | X          | X      | X           | X        | X        |
-| Product Onboarding        | X          | X     | X          | V      | X           | X        | X        |
-| Sandboxing                | V          | V     | X          | V      | X           | X        | X        |
-| Vendor Accout Approval    | V          | V     | V          | X      | X           | X        | X        |
-| Product Approval          | V          | V     | V          | X      | X           | X        | X        |
-| Wholesale Pricing Conf.   | V          | V     | X          | X      | X           | X        | X        |
-| Sell-in Pricing Conf.     | V          | V     | X          | X      | V           | X        | X        |
-| Sell-out Pricing Conf.    | V          | V     | X          | X      | X           | V        | X        |
-| VAS Management            | V          | V     | X          | V      | X           | V        | X        |
-| Coupon Management         | V          | V     | X          | V      | X           | V        | X        |
-| Bundle Management         | V          | V     | X          | V      | X           | V        | X        |
-| Financial Reports         | V          | V     | X          | V      | V           | V        | X        |
+| Providers configuration   | V          |       |            |        |             |          |          |
+| Providers pricing         | V          | V     |            |        |             |          |          |
+| Product Onboarding        |            |       |            | V      |             |          |          |
+| Sandboxing                | V          | V     |            | V      |             |          |          |
+| Vendor Accout Approval    | V          | V     | V          |        |             |          |          |
+| Product Approval          | V          | V     | V          |        |             |          |          |
+| Wholesale Pricing Conf.   | V          | V     |            |        |             |          |          |
+| Sell-in Pricing Conf.     | V          | V     |            |        | V           |          |          |
+| Sell-out Pricing Conf.    | V          | V     |            |        |             | V        |          |
+| VAS Management            | V          | V     |            | V      |             | V        |          |
+| Coupon Management         | V          | V     |            | V      |             | V        |          |
+| Bundle Management         | V          | V     |            | V      |             | V        |          |
+| Financial Reports         | V          | V     |            | V      | V           | V        |          |
 | Messaging System          | V          | V     | V          | V      | V           | V        | V        |
-| Order Placement           | X          | X     | X          | X      | X           | V        | V        |
+| Order Placement           |            |       |            |        |             | V        | V        |
