@@ -262,11 +262,8 @@ For each _Plan_ the vendor has to specify the following information:
 
 #### Advanced Settings
 
-* _Self-billing_ (yes/no): for admin only. If this flag is enabled, Cloudesire
-  will not issue any invoice to the customers (this task will be in charge of
-  the vendor) and the application deployment process will start automatically
-  when the customer clicks on the "buy now" button, without redirecting him to
-  the payment gateway.
+* _Self-billing_ (yes/no): for admin only. More info on [Self-billing
+  section](billing.md#self-billing).
 
 ## Pricing Models
 
