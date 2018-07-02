@@ -52,7 +52,9 @@ Distribution and channel logics are available in the cloudesire platform.
 * Cloudesire provides to the Reseller the _billing instructions_ (namely: who is
   consuming what, and respective duration)
 * The Reseller invoices to its End-Customer, and collects the payment through
-  its own properties (online or offline)
+  its own properties (online or offline).
+
+More info on [Self-billing section](billing.md#self-billing).
 
 ### Scenario 2: Billing on behalf
 
