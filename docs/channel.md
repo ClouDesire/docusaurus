@@ -15,7 +15,7 @@ Distribution and channel logics are available in the cloudesire platform.
 * Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
   (useful for **Agents**/**Dealers**)
 
-![parent-child summary schema](/img/docs/parent-child-schema.png)]
+![parent-child summary schema](/img/docs/parent-child-schema.png)
 
 ## Product/service assignment rules and pricing logics, along the chain
 
@@ -128,7 +128,7 @@ Distributors to his Resellers.
 It's possible to filer the list by searching for Distributor name, Reseller name
 and product name.
 
-![admin distributor catalogs](/img/docs/1-admin-distributor-catalogs.png)]
+![admin distributor catalogs](/img/docs/1-admin-distributor-catalogs.png)
 
 ## Distributor functionalities
 
