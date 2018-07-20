@@ -4,7 +4,7 @@ title: Users, functionalities and permissions
 sidebar_label: Users and permissions
 ---
 
-In the following table are listed the all user levels supported by the platform,
+The following table lists the user levels supported by the platform,
 together with the correspondent (main) functionalities available for each of
 them.
 
