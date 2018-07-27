@@ -7,13 +7,6 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .fixedHeaderContainer header h2 {
-    display: none;
-  }
-  img.logo {
-    max-width: 10em;
-    height: auto !important;
-  }
 }
 
 @media only screen and (min-width: 1400px) {
@@ -22,21 +15,8 @@
 @media only screen and (min-width: 1500px) {
 }
 
-.fixedHeaderContainer {
-  min-height: 60px;
-}
-
-header h2 {
-  font-size: 36px;
-  padding-top: 6px;
-}
-
-.navigationSlider {
-  margin-top: 5px;
-}
-
-code {
-  color: blue;
+.fixedHeaderContainer header .headerTitleWithLogo {
+  display: none;
 }
 
 input::placeholder {
