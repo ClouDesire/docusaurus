@@ -10,8 +10,7 @@
     ],
     "Applications": [
       "deployed",
-      "docker",
-      "stacks"
+      "docker"
     ],
     "Platform": [
       "glossary",

@@ -4,35 +4,29 @@ title: Deployed applications onboarding
 sidebar_label: Deployed applications
 ---
 
-In this section you will understand how to onboard deployed applications. Please
-make sure you read this section before you onboard your deployed application.
-Please note that onboarding of deployed and syndicated applications is not the
-same.
+In this section you will understand how to onboard Docker applications.
 
 The onboarding process starts after creating a new "Product" in the Marketplace
 Catalog, as described [here](onboarding.md#applications-catalogue).
 
-Cloudesire supports [custom ZIP files](deployed.md#zip-packaging) to provide
-applications as a package, but we strongly recommend
-[Docker](docker.md) to onboard a new deployed  application.
+Cloudesire supports automated [Docker](docker.md) applications deployment.
 
 Cloudesire will provision on the cloud a new VM containing a running instance of
-the app for each customer.
+your containers for each customer.
 
 ## Technical Onboarding
 
 Software vendors can specify for each product:
 
-* one or more "**Packages**" (namely Docker Images or ZIP Packages, containing
-  the application source code)
+* one or more "**Packages**" (namely Docker Images, containing your software and
+  dependencies required to function properly)
 * one or more "**Modules**" (namely a composition of **one or more Packages**,
-  which will be installed in a VM on the cloud)
+  which will be installed in a VM on the cloud provider)
 
-For example, an application can be described specifying a _Module_ (with
-specific **cloud resources requirements**) which is a _composition_ of a
-_back-end Package_ (e.g. a Java module exposing REST API plus a PostgreSQL
-database) and a _front-end Package_ (e.g. a simple and "light" NodeJs
-application).
+For example, an application can be described creating a _Module_ (with specific
+**cloud resources requirements**) which is a _composition_ of a _backend
+container_ (e.g. a Java module exposing REST API), a _database container_ (e.g.
+Postgres), and a _frontend container_ (e.g. AngularJS Single page application).
 
 ### Sandbox orders
 
@@ -63,22 +57,12 @@ _Packages_ menu item on the left.
 
 ![Vendors Control Panel: Packages](/img/docs/control_panel_packages.png)
 
-To create a new Package using the [ZIP Packaging](deployed.md#zip-packaging)
-methodology click on the _New_ button.
-
-![Vendors Control Panel: ZIP](/img/docs/control_panel_packages_ZIP.png)
-
 For each Package, vendors must provide the following information:
 
 * **Name**: e.g. _back-end_
-* **Stacks**: PHP, Java, Ruby, etc. (also **Docker**…)
-* **Database** (optional): MySQL, PostgreSQL, MongoDB.
-* **ZIP package**: a ZIP package following the specifications provided in [this
-  section](deployed.md#zip-packaging).
+* **Docker Image**: the name of the image, as available on a repository
 * **Version**: whenever the vendor provides a new Package, Cloudesire assigns to
-  it a new _version number_ and stores the previous one. The older Application
-  Packages versions can be used by the vendor in order to execute automatic
-  **downgrades** of running applications.
+  it a new _version number_ and stores the previous one.
 
 When a Package is created, it can be linked to a specific _Product Plan_, simply
 selecting it from the list and clicking on the _Attach Package to Module_
@@ -111,7 +95,7 @@ top-right of the page, software vendors can specify some parameters.
 ![Vendors Control Panel: Modules - VM Sizing](/img/docs/control_panel_modules_VM.png)
 
 * CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the
-  preferred configuration (e.g. 1 core + 1Gb, 2 cores + 4Gb, etc.)
+  preferred configuration (e.g. 1 core + 1GB, 2 cores + 4GB, etc.)
 * Disk Space (in GB): a slider allows the vendor to select the quantity of space
   available for user data
 
@@ -146,7 +130,7 @@ The Advanced Settings pop-up provides the following sections:
 ## Data Persistence
 
 Cloudesire allows vendors and customers to perform **upgrades** and
-**downgades** tasks on running applications instances.
+**downgrades** tasks on running applications instances.
 
 To avoid data loss, Cloudesire needs to know where the application data are
 before performing these tasks.
@@ -193,12 +177,8 @@ and the _Value_) and click on the _Add_ button to finish.
 There are predefined environment variables set at runtime by the platform and
 that you could use:
 
-### Database access environment variables
+### Default environment variables
 
-* `CLOUDESIRE_DB_USER` username to connect to the database;
-* `CLOUDESIRE_DB_PASS` password to connect to the database;
-* `CLOUDESIRE_DB_NAME` name of the available database;
-* `CLOUDESIRE_DB_HOST` hostname of the database;
 * `CLOUDESIRE_VHOST` the hostname automatically generated for a running
   application instance (e.g.: _example-123.apps.cloudesire.com_)
 
@@ -216,7 +196,7 @@ that you could use:
 
 ### VirtualHost placeholder in environment variables
 
-It is possible to declare a variable with a placeholder vavlue that will be
+It is possible to declare a variable with a placeholder value that will be
 replaced with the VirtualHost at runtime.
 
 * `%VIRTUAL_HOST%` will be replaced with the virtual host (e.g.:
@@ -225,24 +205,7 @@ replaced with the VirtualHost at runtime.
 It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced in
 _http://example-123.apps.cloudesire.com/_
 
-For stacks-specific environment variables, look in their specific sections:
-
-* [onboarding of ZIP packaged applications](deployed.md#zip-packaging)
-* [onboarding of Docker applications](docker.md)
-
-## Filesystem Browsing
-
-Cloudesire allows  vendors to enable a file-system browsing module for each
-deployed applications instances.
-
-In this way, customers (and vendors) can **browse** the file-system of the VM
-containing a running application, **upload** new files on it, and perform
-**live-editing** for textual files (e.g. in order to modify some configuration
-files).
-
-To enable this feature, it is necessary to specify the **common_directories**
-[Stack Parameter](deployed.md#stack-parameters) with a valid file-system path
-(e.g. _files/upload_)
+Additional information is available into the [Docker section](docker.md).
 
 ## SSH Access
 
@@ -254,118 +217,11 @@ Access is available via a default user named **app**, that is an _unprivileged
 user_ that can only:
 
 * access applications data under `/srv`
-* restart application servers using `sudo service` command
 * inspect application logs in `/var/log`
 
-For Docker applications, access to D_ocker API is restricted_ for security
-reasons, but access can be granted if asked for vendors in good standing that
-have been in activity for at least 6 months.
-
-## ZIP Packaging
-
-Before you start onboarding  an application to the marketplace, please take a
-look to our [integration facilities.](onboarding.md#integration-facilities) We
-provide a **staging marketplace** where you can register your company, log-in
-and on-board your application via ZIP package without any worry (also simulating
-the purchase of your product using demo credit cards). We strongly recommend to
-upload and test applications on the staging marketplace before publishing them
-on the public marketplace.
-
-In order to deploy automatically an Application, a ZIP
-[package](deployed.md#packages) is required, containing:
-
-* the web application's source code or the packaged artifacts;
-* the database data that the application needs to be fully functional (end-users
-  should not do any installation wizard requiring technical skills).
-
-The ZIP package structure must meet the following general criteria:
-
-* a _sql_ folder if using MySQL, Postgres or ASPNET;
-* a _mongodb_ folder if using MongoDB;
-* a folder with the web application's code, depending on the language and/or
-  stack used (follow the links below for your application stack).
-
-Before going forward in this documentation, please take a look to the [data
-persistence](deployed.md#data-persistence) section in order to **avoid data
-loss** in your application.
-
-### Application Stacks-specific requirements
-
-We support several application stack, but each application stack has specific
-aspects that should be kept in consideration.
-
-* [How-to package .NET applications](stacks.md#net)
-* [How-to package CGI applications](stacks.md#cgi)
-* [How-to package Django applications](stacks.md#django)
-* [How-to package Java applications](stacks.md#java)
-* [How-to package NodeJS applications](stacks.md#nodejs)
-* [How-to package PHP applications](stacks.md#php)
-* [How-to package Ruby applications](stacks.md#ruby)
-
-### Database-specific requirements
-
-An application could automatically initialize the database schema at the first
-run, otherwise it's possible to insert a database dump into the zip. We adopted
-the [flyway](http://flywaydb.org/) database migration tool, that supports schema
-versioning by simply creating multiple .sql file starting with the version
-number. For example:
-
-```bash
-V1__initial_schema.sql
-V2__added_field.sql
-V3__added_index.sql
-```
-
-For more information, refer directly to the [flyway
-documentation](https://flywaydb.org/documentation/migrations#sql-based-migrations).
-
-* [How-to package applications using MongoDB](stacks.md#mongodb)
-* [How-to package applications using MySQL](stacks.md#mysql)
-* [How-to package applications using PostgreSQL](stacks.md#postgresql)
-* [How-to package applications using MSSQL Server](stacks.md#mssql-server)
-
-### Post-deploy script
-
-It's possible to automatically execute custom commands on the last stage of the
-deploy, just in case you need some special hook before the application is ready.
-
-Just put in the application folder a file named cloudesire.build, starting with
-a standard [shebang](http://en.wikipedia.org/wiki/Shebang_(Unix)), e.g.:
-
-    #!/bin/bash
-    echo 'Build completed' > log.txt
-
-This script will run at the end of the deploy process. Keep in mind that if the
-script return a non-zero value, a failure is returned, and the deploy will be
-marked as failed.
-
-### Example Applications
-
-Here you can find a selection of ready-to-use **demo apps**, written in several
-application stacks:
-
-* [PHP5 + MySQL](https://cdn.cloudesire.com/demo_apps/php-mysql-app.zip)
-* [PHP5 + MongoDB](https://cdn.cloudesire.com/demo_apps/php-mongodb-app.zip)
-* [Ruby on Rails +
-  PostgreSQL](https://cdn.cloudesire.com/demo_apps/rails-postgresql-app.zip)
-* [Django +
-  PostgreSQL](https://cdn.cloudesire.com/demo_apps/django-postgresql-app.zip)
-* [Java6 + MySQL](https://cdn.cloudesire.com/demo_apps/java-mysql-app.zip)
-* [NodeJS +
-  MongoDB](https://cdn.cloudesire.com/demo_apps/nodejs-mongodb-app.zip)
-* [ASP.NET + SQL Server
-  Express](https://cdn.cloudesire.com/demo_apps/aspnet-sql-app.zip)
-* [CGI-BIN +
-  PostgreSQL](https://cdn.cloudesire.com/demo_apps/cgibin-postgresql-app.zip)
-
-And this is a collection of the most famous open-source applications, already
-available on the marketplace:
-
-* [Drupal](https://cdn.cloudesire.com/demo_apps/drupal.zip)
-* [Dokuwiki](https://cdn.cloudesire.com/demo_apps/dokuwiki.zip)
-* [OwnCloud](https://cdn.cloudesire.com/demo_apps/owncloud.zip)
-* [Redmine](https://cdn.cloudesire.com/demo_apps/redmine.zip)
-* [WordPress](https://cdn.cloudesire.com/demo_apps/wordpress.zip)
+Access to _Docker API_ is restricted for security reasons, but access can be
+granted if asked if account in good standing that have been in activity for at
+least 6 months.
 
 ## Stack Parameters
 
