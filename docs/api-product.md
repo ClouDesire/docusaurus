@@ -43,10 +43,10 @@ contains such header with the correct secret.
 
 In addition to the [standard pricing
 options](onboarding.md#available-pricing-models) available on every plan, it's
-possible to define a prepaid pricing model based on the consumer access count
-to an HTTP endpoint.
+possible to define a prepaid or pay-per-use pricing model based on the consumer
+access count to an HTTP endpoint.
 
-### Prepaid HTTP endpoints pricing
+### API endpoints definition
 
 For every HTTP endpoint that needs to be billed, create a resource with:
 
@@ -57,7 +57,7 @@ For every HTTP endpoint that needs to be billed, create a resource with:
 * `method`: the HTTP method of the endpoint (e.g. POST)
 * `path`: the HTTP path of the endpoint (e.g. /invoice)
 
-#### Rate limiter
+### Prepaid HTTP endpoints pricing (Rate limiter)
 
 For every prepaid endpoint, a rate limiter is automatically configured
 accordingly to the defined pricing.
@@ -77,3 +77,11 @@ will be returned to the client with the following JSON body:
 ```json
 {"message":"API rate limit exceeded"}
 ```
+
+### Pay-per-use HTTP endpoints pricing
+
+For every pay-per-use endpoint, request counters are automatically defined and
+tracked by the platform.
+
+At the end of the billing period, the customer will receive an invoice for the
+requests made by the customer during the current period.
