@@ -6,7 +6,8 @@
       "syndication",
       "service",
       "api-product",
-      "csp-product"
+      "csp-product",
+      "vm"
     ],
     "Applications": [
       "deployed",
