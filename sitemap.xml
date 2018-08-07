@@ -26,4 +26,5 @@
 <url> <loc>https://docs.cloudesire.com/docs/platform.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/platform.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/service.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/service.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/syndication.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/syndication.html" /> </url>
+<url> <loc>https://docs.cloudesire.com/docs/vm.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/vm.html" /> </url>
 </urlset>
