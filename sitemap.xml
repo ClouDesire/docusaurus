@@ -13,6 +13,7 @@
 <url> <loc>https://docs.cloudesire.com/docs/api.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/api.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/billing.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/billing.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/channel.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/channel.html" /> </url>
+<url> <loc>https://docs.cloudesire.com/docs/clouds.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/clouds.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/csp-product.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/csp-product.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/deployed.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/deployed.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/docker.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/docker.html" /> </url>
@@ -24,6 +25,5 @@
 <url> <loc>https://docs.cloudesire.com/docs/platform-users.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/platform-users.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/platform.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/platform.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/service.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/service.html" /> </url>
-<url> <loc>https://docs.cloudesire.com/docs/stacks.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/stacks.html" /> </url>
 <url> <loc>https://docs.cloudesire.com/docs/syndication.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://docs.cloudesire.com/docs/syndication.html" /> </url>
 </urlset>
