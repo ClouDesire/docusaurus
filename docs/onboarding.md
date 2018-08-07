@@ -19,31 +19,37 @@ successfully.
 To start the onboarding process, go to the marketplace and login to access your
 personal Control Panel.
 
-Select "_Catalog_" from the left menu, then select "_Products_" and click on the
-"_Create New Product_" button at the upper right hand corner.
-
-![Vendors Control Panel - new product onboarding](/img/docs/control_panel_new_product.png)
+Select _"Catalog"_ from the left menu, then select _"Products"_ and click on the
+**Create New Product** button at the upper right hand corner.
 
 You will see a pop-up in which you can  insert your product name and choose
-between two onboarding options:
+between different onboarding options:
 
-* "_Syndicated Product_" to start onboarding a new product in
-  [Syndication](syndication.md) mode
-* "_Deployed Product_" to start onboarding a new product in [Self-Deployment
-  mode](deployed.md) (using the [Docker Packaging](docker.md)
-* "_Service Product_" to start [onboarding a new service](service.md), that is
-  not tied to the distribution of an application to the end-user.
-* "_API_" to onboard a new [API-based service](api-product.md).
+* **Syndicated Product** to start onboarding a new product in
+  [Syndication](syndication.md) mode;
+* **Deployed Product** to start onboarding a new product in [Self-Deployment
+  mode](deployed.md) (using the [Docker Packaging](docker.md);
+* **Service Product** to start [onboarding a new service](service.md), that is
+  not tied to the distribution of an application to the end-user;
+* **API Product** to onboard a new [API-based service](api-product.md).
+
+Additional product types exists, but can be created and assigned to a vendor
+only by an administrator:
+
+* **CSP Product** to onboard a new Microsoft/Azure product, see the [CSP
+  Product](csp-product.md) section;
+* **VM Product** to onboard a new bare Virtual-Machine with customer SSH access,
+  see the [VM product page](vm.md).
 
 ## Applications Catalog (Marketing & Sales Onboarding)
 
 In this section you will understand how to add your application to your own
-catalog, complete the product description, select the right pricing model and,
-of course, upload it to the Cloudesire marketplace.
+catalog, fill the product description, select the right pricing model and
+publish it into the Cloudesire marketplace catalog.
 
 ### Understand the Catalog
 
-The _Catalog_ contains all the applications owned by the vendor. In this section
+The **Catalog** contains all the applications owned by the vendor. In this section
 you can see both applications that are already published on the marketplace and
 applications that are still in configuration phase.
 
