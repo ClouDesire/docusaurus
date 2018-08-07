@@ -5,10 +5,11 @@ sidebar_label: Onboarding a new application
 ---
 
 In this section you will learn how to start the onboarding process of your
-application on the Cloudesire marketplace. Please note that the process is
-different for [Deployed](deployed.md) applications, [Syndicated](syndication.md)
-applications and [Services](service.md), therefore you need to clearly
-understand the differences in order to onboard your product successfully.
+application on the Cloudesire marketplace.
+
+Please note that the process is different depending on the chosen product type:
+you need to clearly understand the differences in order to onboard your product
+successfully.
 
 > In order to see your product visible on the marketplace, it should at least
 > have one **Plan** set to _published_.
@@ -32,6 +33,7 @@ between two onboarding options:
   mode](deployed.md) (using the [Docker Packaging](docker.md)
 * "_Service Product_" to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user.
+* "_API_" to onboard a new [API-based service](api-product.md).
 
 ## Applications Catalog (Marketing & Sales Onboarding)
 
@@ -451,8 +453,7 @@ process.
 The technical part of the onboarding process depends on the application
 _provisioning type_:
 
-* for **Syndicated Applications** (namely directly managed by the software
-  vendor, and not hosted on the Cloudesire platform itself) the software vendor
+* for **Syndicated Applications**,  the software vendor
   has to provide a "_syndication endpoint_" and proceed with the integrations
   via API, as described in [this
   section](syndication.md#syndicated-applications)
@@ -463,6 +464,9 @@ _provisioning type_:
   [Docker](https://www.docker.com/) standards). More detailed instruction for
   the onboarding of Deployed Applications can be found in [this
   section](deployed.md).
+* for **Service**, the same rules of syndicated applications applies, but the
+  integration is optional;
+* for **API** products, please refer to the [API section](api-product.md).
 
 The following sections refer to other additional functionalities, which can be
 used both in the Syndication and Self-Deploy scenarios.
