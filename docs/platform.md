@@ -36,7 +36,7 @@ Cloudesire Backend modules contains:
   Abstraction Layer*, a set of connection drivers, used to interact with private
   or public cloud providers APIs. It provides both heterogeneous hypervisors
   support (KVM, Xen, vmware) and public cloud connectors (see the list
-  [here](stacks.md#supported-cloud-providers)).
+  [here](clouds.md)).
   It is capable of taking and restoring disk snapshot for backup purposes.
 * **Monitor**: it consists in a scalable repository of system and application
   metrics that also provides aggregated real-time statistics and graphs.

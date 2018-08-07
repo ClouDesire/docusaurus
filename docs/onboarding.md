@@ -30,7 +30,6 @@ between two onboarding options:
   [Syndication](syndication.md) mode
 * "_Deployed Product_" to start onboarding a new product in [Self-Deployment
   mode](deployed.md) (using the [Docker Packaging](docker.md)
-  or [ZIP Packaging](deployed.md#zip-packaging) methodologies)
 * "_Service Product_" to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user.
 
@@ -97,9 +96,8 @@ Plus, you will find some extra fields:
   created.
 * _Type_: this field will be different according to your previous choice. If you
   chose "_Deployed Product_" the field will be "Managed" and you will have to
-  upload your product ZIP application package or Docker image in the following
-  field. If you chose "Syndicated Product" you will need to enter the
-  syndication endpoint in the following field.
+  upload Docker image in the following field. If you chose "Syndicated Product"
+  you will need to enter the syndication endpoint in the following field.
 
 ### End-User Information
 
@@ -460,13 +458,11 @@ _provisioning type_:
   section](syndication.md#syndicated-applications)
 * for **Deployed Applications** (where Cloudesire will provision on the cloud a
   new virtual-machine containing a running instance of the application for each
-  customer) the software vendor has 2 possibilities: [ZIP Application
-  Package](deployed.md#zip-packaging) (a simple archive containing both the
-  source code and the _SQL scripts_ of the application) and [Docker
-  Packaging](docker.md) (a self-contained archive of your
-  application meeting the [Docker](https://www.docker.com/) standards). More
-  detailed instruction for the onboarding of Deployed Applications can be found
-  in [this section](deployed.md).
+  customer) the software vendor should use [Docker Packaging](docker.md) (a
+  self-contained archive of your application meeting the
+  [Docker](https://www.docker.com/) standards). More detailed instruction for
+  the onboarding of Deployed Applications can be found in [this
+  section](deployed.md).
 
 The following sections refer to other additional functionalities, which can be
 used both in the Syndication and Self-Deploy scenarios.

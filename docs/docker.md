@@ -18,7 +18,7 @@ Once a Docker image is available, you need to [onboard](onboarding.md) your
 application into the Catalog: create a _Package_ (linked to your application),
 then select _Docker_ in the _Stacks_ input-box, and finally type the _Docker
 image URL_ in the related input-box, as shown in the following screenshot and
-more detailed described in [this section](deployed.md/#packages).
+more detailed described in [this section](deployed.md#packages).
 
 ![Vendors Control Panel - Docker Image](/img/docs/control_panel_docker_image.png
 "Vendors Control Panel - Docker Image")
