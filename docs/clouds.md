@@ -15,4 +15,5 @@ Cloud Providers:
 | Enter the Cloud |                                    |
 | Google Compute  |                                    |
 | Microsoft Azure |                                    |
+| Openstack       |                                    |
 | Rackspace       | Data disk minimum size 100 GB      |
