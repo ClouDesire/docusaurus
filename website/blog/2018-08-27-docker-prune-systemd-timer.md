@@ -1,5 +1,5 @@
 ---
-title:     "Automatically remove unused Docker data"
+title:     "Automatically remove unused Docker data with systemd"
 author:    Matteo Giordano
 authorURL: http://twitter.com/malteo
 ---
@@ -22,13 +22,13 @@ You can try it on a terminal with
 
 Not bad!
 
-I'd like to automate this though...  Let's configure a systemd timer to remove unused Docker data!
+I'd like to automate this though...  Let's configure a systemd timer to schedule pruning on a weekly basis.
 
-systemd will look for user services inside `~/.config/systemd/user/`, let's create it
+systemd will look for user services inside `~/.config/systemd/user/`, so let's create it
 
     mkdir -p ~/.config/systemd/user
 
-Enter the newly created directory and create two files, `docker-prune.service`
+Enter the new directory and create two files, `docker-prune.service`
 
 ```
 [Unit]
