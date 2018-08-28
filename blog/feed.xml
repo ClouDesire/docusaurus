@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Wed, 18 Apr 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 27 Aug 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,62 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Automatically remove unused Docker data with systemd]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html</guid>
+            <pubDate>Mon, 27 Aug 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We use Docker <em>A LOT</em> at Cloudesire, and working intensely with it can leave some cruft in <code>/var/lib/docker</code>.</p>
+<p>Fortunately, the Docker CLI supports <a href="https://docs.docker.com/engine/reference/commandline/system_prune/">pruning</a>, which works as a garbage collector for unused objects such as images, containers, volumes, and networks.</p>
+<p>You can try it on a terminal with</p>
+<pre><code class="hljs">$ docker system prune
+
+WARNING! This will remove:
+    - all stopped containers
+    - all networks not used by at least one container
+    - all dangling images
+    - all build cache
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 3.145GB
+</code></pre>
+<p>Not bad!</p>
+<p>I'd like to automate this though...  Let's configure a systemd timer to schedule pruning on a weekly basis.</p>
+<p>systemd will look for user services inside <code>~/.config/systemd/user/</code>, so let's create it</p>
+<pre><code class="hljs">mkdir -p ~/.config/systemd/user
+</code></pre>
+<p>Enter the new directory and create two files, <code>docker-prune.service</code></p>
+<pre><code class="hljs">[Unit]
+<span class="hljs-attribute">Description</span>=Prune unused Docker images
+
+[Service]
+<span class="hljs-attribute">Type</span>=simple
+<span class="hljs-attribute">ExecStart</span>=/usr/bin/docker<span class="hljs-built_in"> system </span>prune --force
+
+[Install]
+<span class="hljs-attribute">WantedBy</span>=default.target
+</code></pre>
+<p>and <code>docker-prune.timer</code></p>
+<pre><code class="hljs"><span class="hljs-section">[Unit]</span>
+<span class="hljs-attr">Description</span>=Prune unused Docker images weekly
+<span class="hljs-attr">RefuseManualStart</span>=<span class="hljs-literal">no</span>
+<span class="hljs-attr">RefuseManualStop</span>=<span class="hljs-literal">no</span>
+<span class="hljs-section">
+[Timer]</span>
+<span class="hljs-attr">Persistent</span>=<span class="hljs-literal">false</span>
+<span class="hljs-attr">OnBootSec</span>=<span class="hljs-number">80</span>
+<span class="hljs-attr">OnCalendar</span>=weekly
+<span class="hljs-attr">Unit</span>=docker-prune.service
+<span class="hljs-section">
+[Install]</span>
+<span class="hljs-attr">WantedBy</span>=timers.target
+</code></pre>
+<p>start and enable our new timer</p>
+<pre><code class="hljs">systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">start</span> docker-prune.timer
+systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enable</span> docker-prune.timer
+</code></pre>
+<p>systemd will cleanup Docker leftovers every week!</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Quickly get a logger with IntelliJ live templates]]></title>
             <link>https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html</link>
