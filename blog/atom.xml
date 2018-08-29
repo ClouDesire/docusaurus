@@ -2,12 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>documentation Blog</title>
-    <updated>2018-08-27T06:00:00Z</updated>
+    <updated>2018-08-29T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2018 Cloudesire.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Selling and provisioning OpenStack tenants]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html">
+        </link>
+        <updated>2018-08-29T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>We're delighted to announce that we started the development of a new marketplace
+component to allow the selling of tenants of <a href="https://www.openstack.org/">OpenStack
+powered</a> datacenters.</p>
+<p>The goal is to give our marketplace customers the opportunity</p>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>http://twitter.com/gionn</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Automatically remove unused Docker data with systemd]]></title>
         <id>https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html</id>

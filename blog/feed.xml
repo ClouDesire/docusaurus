@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Mon, 27 Aug 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 29 Aug 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,17 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Selling and provisioning OpenStack tenants]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html</guid>
+            <pubDate>Wed, 29 Aug 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>We're delighted to announce that we started the development of a new marketplace
+component to allow the selling of tenants of <a href="https://www.openstack.org/">OpenStack
+powered</a> datacenters.</p>
+<p>The goal is to give our marketplace customers the opportunity</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Automatically remove unused Docker data with systemd]]></title>
             <link>https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html</link>
