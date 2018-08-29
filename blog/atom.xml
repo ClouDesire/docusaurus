@@ -17,7 +17,34 @@
         <summary type="html"><![CDATA[<p>We're delighted to announce that we started the development of a new marketplace
 component to allow the selling of tenants of <a href="https://www.openstack.org/">OpenStack
 powered</a> datacenters.</p>
-<p>The goal is to give our marketplace customers the opportunity</p>
+<p>The goal is to give our marketplace customers the opportunity to purchase - and
+immediately start to use - cloud resources on the OpenStack instances of our
+platform clients.</p>
+<p>To achieve this goal, we leveraged the <a href="https://docs.cloudesire.com/docs/syndication.html">syndication
+workflow</a> by developing an
+integration with the OpenStack API layer. We are currently supporting the latest
+Queens release of the 2018 February 28th but we took care to avoid
+recently-introduced APIs in order to easily support older OpenStack versions.</p>
+<p>To easily install OpenStack on our test environment, we leveraged the
+<a href="https://conjure-up.io/">conjure-up</a> tool maintained by Canonical, which allows
+to automatically install and configure the most common OpenStack components on
+multiple LXC containers on a single node (physical or VM).</p>
+<p>At the end of the first development phase, we'll support the self-provisioning
+of the OpenStack tenants as a consequence of each purchase of a special
+product-type (VDC) which will be available on our marketplace catalog: the
+workflow will automatically create a new OpenStack user (tenant), then associate
+a new <strong>Project</strong> to him, and finally allocate specific <strong>Resources Quotas</strong>.</p>
+<p>In this way, for each <strong>VDC product plan</strong>, the marketplace administrator can
+set the minimum and maximum provisionable resources for each tenant, eventually
+specifying a <em>prepaid pricing model</em> (e.g. monthly payments plus one-off costs,
+plus professional services to be offered bundled with the VDC access).</p>
+<p>The next development wave will also support the <strong>pay-per-use</strong> scenario: we’ll
+integrate the OpenStack metering APIs in order to collect the actual cloud
+resources usage; those metrics will be managed by our billing engine which will
+generate (for each customer, at the end of the billing period) the related
+invoices listing the consumption costs.</p>
+<p>As usual, at the end of each development wave, we’ll publish the state-of-art of
+the module on our <a href="https://demo.cloudesire.com">demo marketplace</a>.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
