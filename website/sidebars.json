@@ -13,6 +13,12 @@
       "deployed",
       "docker"
     ],
+    "API": [
+      "api",
+      "api-java",
+      "api-php",
+      "api-reference"
+    ],
     "Platform": [
       "glossary",
       "platform",
@@ -23,12 +29,6 @@
       "emails",
       "opensource",
       "gdpr"
-    ],
-    "API": [
-      "api",
-      "api-java",
-      "api-php",
-      "api-reference"
     ]
   }
 }

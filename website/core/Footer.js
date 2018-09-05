@@ -24,7 +24,7 @@ class Footer extends React.Component {
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
           <div>
-            <h5>Docs</h5>
+            <h5>Pages</h5>
             <a href={this.docUrl('index.html', false)}>
               Documentation Index
             </a>
@@ -34,12 +34,15 @@ class Footer extends React.Component {
             <a href={this.docUrl('platform.html', false)}>
               Platform modules
             </a>
+            <a href={this.docUrl('opensource.html', false)}>
+              Open Source
+            </a>
             <a href="https://www.cloudesire.com">
               Corporate website
             </a>
           </div>
           <div>
-            <h5>Community</h5>
+            <h5>Social</h5>
             <a href="https://twitter.com/cloudesire" target="_blank">
               Twitter
             </a>
@@ -48,16 +51,6 @@ class Footer extends React.Component {
             </a>
             <a href="https://github.com/cloudesire" target="_blank">
               GitHub
-            </a>
-            <a
-              className="github-button"
-              href={this.props.config.repoUrl}
-              data-icon="octicon-star"
-              data-count-href="/cloudesire/cloudesire.github.io/stargazers"
-              data-show-count={true}
-              data-count-aria-label="# stargazers on GitHub"
-              aria-label="Star this project on GitHub">
-              Star
             </a>
           </div>
         </section>
