@@ -10,7 +10,7 @@ world-wide collaboration and further technology development.
 We publish most of the non-core technologies of the Cloudesire platform.
 
 * [angular-browser-cache-manager](https://github.com/ClouDesire/angular-browser-cache-manager):
-  AngularJS module to manage the browser caching of XHR requests
+  AngularJS module to manage browser caching of XHR requests
 * [capri](https://github.com/ClouDesire/capri): REST API for italian CAP
   database lookup
 * [flyway-cli-cookbook](https://github.com/ClouDesire/flyway-cli-cookbook): Chef
