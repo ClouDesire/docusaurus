@@ -120,16 +120,16 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
         <updated>2018-04-18T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>IntelliJ IDEA is every Java developer's favourite IDE here at Cloudesire, and amongst its powerful features there are <a href="https://www.jetbrains.com/help/idea/creating-and-editing-live-templates.html">Live templates</a>. Let me show you how they work with a simple example.</p>
 <p>Getting a <a href="https://www.slf4j.org/">SLF4J</a> instance for the current class is a matter of typing</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
 </code></pre>
 <p>waiting for the import popup to appear, looking for <code>org.slf4j.Logger</code> and selecting it, continue typing</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory
 </code></pre>
 <p>... another import...</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
 </code></pre>
 <p>wait, where am I? Oh, <code>MyObject</code>, sure</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
 </code></pre>
 <p>done!</p>
 <p>I find it a bit slow, don't you? Let's speed it up:</p>
@@ -220,7 +220,7 @@ a SaaS marketplace.</p>
         <updated>2018-03-14T06:00:00Z</updated>
         <summary type="html"><![CDATA[<p>If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.</p>
 <p>It's simple as declaring a new variable inside your <code>logback.xml</code> file and provide a default value as in the Bash shell, using the &quot;:-&quot; operator.</p>
-<pre><code class="hljs css languages- xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.cloudesire"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL}"</span>/&gt;</span>
 </code></pre>
 <p>Then you can simply run your docker container tuning the log level by passing an appropriate value, e.g.: <code>CLOUDESIRE_LOG_LEVEL=WARN</code>.</p>

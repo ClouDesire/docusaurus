@@ -22,6 +22,10 @@
                 var toggler = document.querySelector(togglerSelector);
                 var target = document.querySelector(targetSelector);
 
+                if (!toggler) {
+                  return;
+                }
+
                 toggler.onclick = function(event) {
                   event.preventDefault();
 
@@ -111,16 +115,16 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 <p>systemd will cleanup Docker leftovers every week!</p>
 </span></div><div class="read-more"><a class="button" href="/blog/2018/08/27/docker-prune-systemd-timer.html">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/04/18/intellij-logger-live-template.html">Quickly get a logger with IntelliJ live templates</a></h1><p class="post-meta">April 18, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://twitter.com/malteo" target="_blank" rel="noreferrer noopener">Matteo Giordano</a></p></div></header><article class="post-content"><div><span><p>IntelliJ IDEA is every Java developer's favourite IDE here at Cloudesire, and amongst its powerful features there are <a href="https://www.jetbrains.com/help/idea/creating-and-editing-live-templates.html">Live templates</a>. Let me show you how they work with a simple example.</p>
 <p>Getting a <a href="https://www.slf4j.org/">SLF4J</a> instance for the current class is a matter of typing</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
 </code></pre>
 <p>waiting for the import popup to appear, looking for <code>org.slf4j.Logger</code> and selecting it, continue typing</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory
 </code></pre>
 <p>... another import...</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
 </code></pre>
 <p>wait, where am I? Oh, <code>MyObject</code>, sure</p>
-<pre><code class="hljs css languages- java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
 </code></pre>
 <p>done!</p>
 <p>I find it a bit slow, don't you? Let's speed it up:</p>
@@ -163,11 +167,11 @@ a SaaS marketplace.</p>
 <script async class="speakerdeck-embed" data-id="bbde8adde10340dbbcad08b94d6b76f8" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
 </span></div><div class="read-more"><a class="button" href="/blog/2018/03/15/devfest-2018.html">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/03/14/logback.html">Configure logback log level via environment variables</a></h1><p class="post-meta">March 14, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="http://twitter.com/gionn" target="_blank" rel="noreferrer noopener">Giovanni Toraldo</a></p></div></header><article class="post-content"><div><span><p>If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.</p>
 <p>It's simple as declaring a new variable inside your <code>logback.xml</code> file and provide a default value as in the Bash shell, using the &quot;:-&quot; operator.</p>
-<pre><code class="hljs css languages- xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">logger</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"com.cloudesire"</span> <span class="hljs-attr">level</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL}"</span>/&gt;</span>
 </code></pre>
 <p>Then you can simply run your docker container tuning the log level by passing an appropriate value, e.g.: <code>CLOUDESIRE_LOG_LEVEL=WARN</code>.</p>
-</span></div><div class="read-more"><a class="button" href="/blog/2018/03/14/logback.html">Read More</a></div></article></div><div class="docs-prevnext"></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Docs</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Community</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a><a class="github-button" href="https://github.com/cloudesire/cloudesire.github.io" data-icon="octicon-star" data-count-href="/cloudesire/cloudesire.github.io/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div><div class="read-more"><a class="button" href="/blog/2018/03/14/logback.html">Read More</a></div></article></div><div class="docs-prevnext"></div></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
               var search = docsearch({
                 
                 apiKey: '06aaa65659156b0fd43caf8c5d9997e9',
