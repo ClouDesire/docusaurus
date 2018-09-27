@@ -33,7 +33,8 @@ Create or edit the file `~/.docker/config.json` and change it according to the f
 }
 ```
 
-and test it by running the following twice `docker run --rm alpine/httpie --print=hH GET unpkg.com/react@16/umd/react.development.js`, the first response will contains `X-Cached: MISS` and the next responses should contain `X-Cached: HIT`, Eὕρηκα!
+and test it by running the following twice `docker run --rm alpine/httpie --print=hH GET unpkg.com/react@16/umd/react.development.js Cache-Control:no-cache`, the first response will contains `X-Cached: MISS` and the next responses should contain `X-Cached: HIT`, Eὕρηκα!  
+But wait, why the file has been cached even if `Cache-Control:nocache` is present? Our `nginx-cache` container ignore all the caching headers because some build tools, like maven, add the `Cache-Control:nocache` header to the requests it made -.-'
 
 That's it! Remember that only `http` requests will be cached, so if you want maven artifacts to be cached you could add an http mirror to your `$MAVEN_HOME/conf/settings.xml`
 
