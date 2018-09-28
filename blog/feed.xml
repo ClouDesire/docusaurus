@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Wed, 29 Aug 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Sep 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,53 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Dependencies caching on local CircleCI builds]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html</guid>
+            <pubDate>Wed, 26 Sep 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>At Cloudesire a couple of years ago we decided to switch from Jenkins to CircleCI. First of all, because we are lazy to self-maintain a server and secondly because it offers affordable prices.</p>
+<p>A great tool CircleCI provides is the <a href="https://circleci.com/docs/2.0/local-cli/">local CLI</a>.<br>
+The <code>circleci</code> commands enable you to reproduce the CircleCI environment locally and run jobs as if they were running on the hosted application for more efficient debugging and configuration in the initial setup phase.<br>
+The bad news about the local CLI is that the <code>restore_cache</code> key is <a href="https://circleci.com/docs/2.0/local-cli/#caching">ignored</a>.
+While building you'll receive the message <code>Error: Skipping cache - error checking storage: not supported in the local builds</code> and dependencies are downloaded each time, shame 🕭 shame 🕭 shame 🕭.</p>
+<p>A fast setup solution I currently use is to proxy <a href="https://www.docker.com/">docker</a> to a local <a href="https://www.nginx.com/">nginx</a> container that acts as cache layer.</p>
+<h3><a class="anchor" aria-hidden="true" id="start-the-proxy-container"></a><a href="#start-the-proxy-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start the proxy container</h3>
+<p>Start the <a href="https://github.com/manuelmazzuola/nginx-cache/blob/master/Dockerfile">nginx-cache</a> container</p>
+<pre><code class="hljs">docker run --name nginx-cache -d manuelmazzuola/nginx-cache
+</code></pre>
+<p>and get the internal IP by inspecting it with</p>
+<pre><code class="hljs">docker inspect nginx-cache | grep IPAddress
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="proxy-docker-requests"></a><a href="#proxy-docker-requests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Proxy docker requests</h3>
+<p>Create or edit the file <code>~/.docker/config.json</code> and change it according to the following configuration where <code>{IP}</code> is the internal IP of the cache container:</p>
+<pre><code class="hljs css language-json">{
+ <span class="hljs-attr">"proxies"</span>:
+ {
+   <span class="hljs-attr">"default"</span>:
+   {
+     <span class="hljs-attr">"httpProxy"</span>: <span class="hljs-string">"http://{IP}:8080"</span>,
+     <span class="hljs-attr">"noProxy"</span>: <span class="hljs-string">"127.0.0.1,localhost,{IP}"</span>
+   }
+ }
+}
+</code></pre>
+<p>and test it by running the following twice</p>
+<pre><code class="hljs">docker run --rm alpine/httpie --print=hH GET unpkg.com/react@16/umd/react.development.js Cache-Control:no-cache
+</code></pre>
+<p>the first response will contains <code>X-Cached: MISS</code> and the next responses should contain <code>X-Cached: HIT</code>, Eὕρηκα!<br>
+But wait, why was the file cached even if <code>Cache-Control:nocache</code> is present? Our <code>nginx-cache</code> container ignores all the caching headers because some build tools, like maven, add the <code>Cache-Control:nocache</code> header to the requests it made ☹</p>
+<p>That's it! Remember that only <code>http</code> requests will be cached, so if you want maven artifacts to be cached you could add an http mirror to your <code>$MAVEN_HOME/conf/settings.xml</code></p>
+<pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">mirror</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>central-secure<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">url</span>&gt;</span>http://repo.maven.apache.org/maven2<span class="hljs-tag">&lt;/<span class="hljs-name">url</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">mirrorOf</span>&gt;</span>central<span class="hljs-tag">&lt;/<span class="hljs-name">mirrorOf</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">mirror</span>&gt;</span>
+</code></pre>
+<p>or if you use npm/yarn run the following <code>npm config set registry http://registry.npmjs.org/</code>.</p>
+<p>If you want to download your dependencies over <code>HTTP</code> only on your computer you could use a different config file by using <code>circle build -c my-custom-config</code> or inject an env. variable <code>circle build -e LOCAL_BUILD=1</code> that your build scripts will read and change the repositories according to the value.</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Selling and provisioning OpenStack tenants]]></title>
             <link>https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html</link>
