@@ -4,7 +4,7 @@ author:    Manuel Mazzuola
 authorURL: https://keybase.io/originof
 ---
 
-At Cloudesire a couple of years ago we decided to switch from Jenkins to CircleCI. First of all, because we are lazy to self-maintain a server and secondly because CircleCI seemed like a great build service and they were very generous with their limits.
+At Cloudesire a couple of years ago we decided to switch from Jenkins to CircleCI. First of all, because we are lazy to self-maintain a server and secondly because CircleCI seemed like a great build service and and their pricing affordable.
 
 A great tool CircleCI provides is the [local CLI](https://circleci.com/docs/2.0/local-cli/).  
 The `circleci` commands enable you to reproduce the CircleCI environment locally and run jobs as if they were running on the hosted application for more efficient debugging and configuration in the initial setup phase.  
