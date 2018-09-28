@@ -8,7 +8,8 @@ At Cloudesire a couple of years ago we decided to switch from Jenkins to CircleC
 
 A great tool CircleCI provides is the [local CLI](https://circleci.com/docs/2.0/local-cli/).  
 The `circleci` commands enable you to reproduce the CircleCI environment locally and run jobs as if they were running on the hosted application for more efficient debugging and configuration in the initial setup phase.  
-The bad news about the local CLI is that the `save_cache` and `restore_cache` keys are [ignored](https://circleci.com/docs/2.0/local-cli/#caching) in the local builds and dependencies are downloaded each time, shame 🕭 shame 🕭 shame 🕭.
+The bad news about the local CLI is that the `restore_cache` key is [ignored](https://circleci.com/docs/2.0/local-cli/#caching).
+While building you'll receive the message `Error: Skipping cache - error checking storage: not supported in the local builds` and dependencies are downloaded each time, shame 🕭 shame 🕭 shame 🕭.
 
 A fast setup solution I currently use is to proxy [docker](https://www.docker.com/) to a local [nginx](https://www.nginx.com/) container that acts as cache layer.
 
