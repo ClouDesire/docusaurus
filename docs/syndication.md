@@ -492,6 +492,10 @@ Content-Type: application/json; charset=utf-8
 This HTTP header will let you to identify the subscription from which a metric
 is requested, so you can return the proper value.
 
+> When **Try before Buy** is offered to customers, make sure to reset metric
+> values when customers pay for the first time otherwise they will be billed for
+> trial resources too.
+
 ### Plan Upgrade
 
 You can even upsell to your customers a new subscription plan. Please note that
