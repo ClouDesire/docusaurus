@@ -4,14 +4,19 @@ title: Bare Virtual-Machines products onboarding
 sidebar_label: VM products
 ---
 
-This section describe how to onboard new products on the marketplace that are
-**bare Virtual-Machines** without any software installed on it.
+This section describes how **Bare Virtual-Machines** marketplace products
+works.
 
-Customers get SSH root access to a dedicated VM and they are responsible for the
-management and maintenance of them. For SSH root access **public key
-authentication is mandatory** and the customer needs to provide its own public
-key before buying a VM product. A new keypair can be automatically generated
-during the marketplace checkout process.
+A *bare VM* is a Virtual-Machine running on any of the supported cloud
+providers, with an operating system selected by the end-user during the order
+phase, without any software installed on it.
 
-ISVs cannot independently create new VM product, but an administrator should
-create and assign a product that can be managed by a particular software vendor.
+End-users get SSH root access to the VM and they are responsible for the
+management and maintenance of it. For the SSH connection,  **public key
+authentication is mandatory** and end-users need to provide their own public key
+before buying a VM product.
+
+> A new SSH keypair can be automatically generated during the marketplace checkout process.
+
+ISVs cannot create by themselves a new VM product, but an administrator should
+create and assign it in order to be manageable by a particular ISV.
