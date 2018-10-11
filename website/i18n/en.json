@@ -73,6 +73,10 @@
         "title": "Open Source projects",
         "sidebar_label": "Open Source"
       },
+      "openstack": {
+        "title": "Selling and provisioning of OpenStack tenants",
+        "sidebar_label": "OpenStack integration"
+      },
       "platform-users": {
         "title": "Users, functionalities and permissions",
         "sidebar_label": "Users and permissions"
