@@ -4,57 +4,109 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "knowledge base of the cloudesire platform maintained by the cloudesire development team",
-    "api-java": "Java Client for Cloudesire API",
-    "Java Client": "Java Client",
-    "api-php": "PHP Client for Cloudesire API",
-    "PHP Client": "PHP Client",
-    "api-product": "API products onboarding",
-    "API products": "API products",
-    "api-reference": "Cloudesire REST API Reference",
-    "API Reference": "API Reference",
-    "api": "Cloudesire REST API Guide",
-    "REST API Guide": "REST API Guide",
-    "billing": "Billing Features",
-    "Billing": "Billing",
-    "channel": "Distribution and Channel Management",
-    "Channel management": "Channel management",
-    "clouds": "Supported Cloud Providers",
-    "Cloud providers": "Cloud providers",
-    "csp-product": "CSP products onboarding",
-    "CSP products": "CSP products",
-    "deployed": "Deployed applications onboarding",
-    "Deployed applications": "Deployed applications",
-    "docker": "Docker applications onboarding",
-    "Docker applications": "Docker applications",
-    "emails": "Automatic emails sent by the platform",
-    "Email Automation": "Email Automation",
-    "gdpr": "GDPR Marketplace Compliance",
-    "GDPR Compliance": "GDPR Compliance",
-    "glossary": "Glossary",
-    "Glossary": "Glossary",
-    "index": "Cloudesire documentation",
-    "Introduction": "Introduction",
-    "onboarding": "Onboarding a new application",
-    "Onboarding a new application": "Onboarding a new application",
-    "opensource": "Open Source projects",
-    "Open Source": "Open Source",
-    "platform-users": "Users, functionalities and permissions",
-    "Users and permissions": "Users and permissions",
-    "platform": "Platform modules",
-    "Platform modules": "Platform modules",
-    "service": "Service onboarding",
-    "Services": "Services",
-    "syndication": "Onboarding of syndicated applications",
-    "Syndicated applications": "Syndicated applications",
-    "vm": "Bare Virtual-Machines products onboarding",
-    "VM products": "VM products",
-    "Docs": "Docs",
-    "API": "API",
-    "Syndication": "Syndication",
-    "Back to cloudesire.com": "Back to cloudesire.com",
-    "Onboarding": "Onboarding",
-    "Applications": "Applications",
-    "Platform": "Platform"
+    "docs": {
+      "api-java": {
+        "title": "Java Client for Cloudesire API",
+        "sidebar_label": "Java Client"
+      },
+      "api-php": {
+        "title": "PHP Client for Cloudesire API",
+        "sidebar_label": "PHP Client"
+      },
+      "api-product": {
+        "title": "API products onboarding",
+        "sidebar_label": "API products"
+      },
+      "api-reference": {
+        "title": "Cloudesire REST API Reference",
+        "sidebar_label": "API Reference"
+      },
+      "api": {
+        "title": "Cloudesire REST API Guide",
+        "sidebar_label": "REST API Guide"
+      },
+      "billing": {
+        "title": "Billing Features",
+        "sidebar_label": "Billing"
+      },
+      "channel": {
+        "title": "Distribution and Channel Management",
+        "sidebar_label": "Channel management"
+      },
+      "clouds": {
+        "title": "Supported Cloud Providers",
+        "sidebar_label": "Cloud providers"
+      },
+      "csp-product": {
+        "title": "CSP products onboarding",
+        "sidebar_label": "CSP products"
+      },
+      "deployed": {
+        "title": "Deployed applications onboarding",
+        "sidebar_label": "Deployed applications"
+      },
+      "docker": {
+        "title": "Docker applications onboarding",
+        "sidebar_label": "Docker applications"
+      },
+      "emails": {
+        "title": "Automatic emails sent by the platform",
+        "sidebar_label": "Email Automation"
+      },
+      "gdpr": {
+        "title": "GDPR Marketplace Compliance",
+        "sidebar_label": "GDPR Compliance"
+      },
+      "glossary": {
+        "title": "Glossary",
+        "sidebar_label": "Glossary"
+      },
+      "index": {
+        "title": "Cloudesire documentation",
+        "sidebar_label": "Introduction"
+      },
+      "onboarding": {
+        "title": "Onboarding a new application",
+        "sidebar_label": "Onboarding a new application"
+      },
+      "opensource": {
+        "title": "Open Source projects",
+        "sidebar_label": "Open Source"
+      },
+      "platform-users": {
+        "title": "Users, functionalities and permissions",
+        "sidebar_label": "Users and permissions"
+      },
+      "platform": {
+        "title": "Platform modules",
+        "sidebar_label": "Platform modules"
+      },
+      "service": {
+        "title": "Service onboarding",
+        "sidebar_label": "Services"
+      },
+      "syndication": {
+        "title": "Onboarding of syndicated applications",
+        "sidebar_label": "Syndicated applications"
+      },
+      "vm": {
+        "title": "Bare Virtual-Machines products onboarding",
+        "sidebar_label": "VM products"
+      }
+    },
+    "links": {
+      "Docs": "Docs",
+      "API": "API",
+      "Syndication": "Syndication",
+      "Glossary": "Glossary",
+      "Back to cloudesire.com": "Back to cloudesire.com"
+    },
+    "categories": {
+      "Onboarding": "Onboarding",
+      "Applications": "Applications",
+      "API": "API",
+      "Platform": "Platform"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",
