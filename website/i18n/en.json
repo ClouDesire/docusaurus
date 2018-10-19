@@ -75,7 +75,7 @@
       },
       "openstack": {
         "title": "Selling and provisioning of OpenStack tenants",
-        "sidebar_label": "OpenStack integration"
+        "sidebar_label": "OpenStack tenants"
       },
       "platform-users": {
         "title": "Users, functionalities and permissions",
