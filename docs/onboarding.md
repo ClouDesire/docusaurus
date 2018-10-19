@@ -362,7 +362,7 @@ Salesforce is an example of a business that offers a feature based model.
 In this section you will learn what extra resources are and how you can add them
 to your product plans.
 
-### What is an Extra Resource
+### Understand an Extra Resource
 
 Extra Resources refer to _goods_ or _services_ which can be sold together with
 the application (for example, a 10-days pack of Technical Support, hardware
@@ -398,9 +398,12 @@ Then, click on the "Add" button on the right.
 The next step is to define the quantity ranges and their pricing. Go to the
 "_Extra Resources Values_" section and fill:
 
-* _Resource Name_: select from the combo-box on the left a previously created Extra Resource
-* _Min_: Start quantity for the current interval (should not overlap the previous one)
-* _Max_: End quantity for the current interval (may be empty for infinite)
+* _Resource Name_: select from the combo-box on the left a previously created
+  Extra Resource
+* _Min_: Start quantity for the current interval (should not overlap the
+  previous one)
+* _Max_: End quantity for the current interval (may be empty for infinite in the
+  last range, for infinity)
 * _Step_: should be greater than 1. Decide which are the effective quantities
   inside the specified interval that are selectable by customers (e.g. with an
   interval from 0 to 100 and a step of 5, customer can buy a quantity of 0 or 5
