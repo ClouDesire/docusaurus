@@ -76,10 +76,10 @@ on the pricing model chosen):
 * **one-off cost**: additional amount to be paid only at the first billing cycle
 * **duration**: in hours - only for *short duration not renewable* pricing
 
-## Extra-Resources pricing models
+## Extra Resources pricing schemes
 
-The platform supports 3 different pricing models for "extra-resources", based on
-quantity usages: tiered scheme, volume scheme and stairstep scheme.
+The platform supports 3 different pricing schemes for Extra Resources, based on
+quantity usages: *tiered*, *volume* and *stairstep*.
 
 ### Tiered scheme
 

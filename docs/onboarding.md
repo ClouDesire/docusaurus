@@ -360,21 +360,20 @@ Salesforce is an example of a business that offers a feature based model.
 ## Extra Resources
 
 In this section you will learn what extra resources are and how you can add them
-to your product
+to your product plans.
 
-### Understand Extra Resources
+### What is an Extra Resource
 
 Extra Resources refer to _goods_ or _services_ which can be sold together with
 the application (for example, a 10-days pack of Technical Support, hardware
-components, extra credits, etc.).
+components, extra credits, etc.) for which the customer will pay a recurring
+price on each billing period.
 
-### How to add extra resources to your product
+### Create and add an Extra Resources to your Product Plans
 
-To insert a new Extra Resource, you need to have at least one product in your
-catalog (draft or published). If you have at least one product in your catalog,
-you need to select the product you want to edit, click on it, select "Edit" and
-go to the "_Plans_" section. Then, select the plan you want to add extra
-resources to, select "Edit" and then go to the "_Extra Resources_" section
+To define a new Extra Resource, you need to have already created a product in
+your catalog with at least one plan. Over to the plan where you want to define
+Extra Resources and select "_Extra Resources_" action.
 
 You will be required to add:
 
@@ -384,45 +383,42 @@ You will be required to add:
   resource.
 * _Measuring Unit_: the measuring unit of the extra resource, for example hours,
   credits etc. You can select the measuring unit from the drop-down menu
-* _Type_: you will be able to chose from a drop-down menu among "Tiered",
-  "Volume" and "Stairstep". Basically, they are the pricing models for
-  "extra-resources", based on quantity usages. Tiered scheme means that every
-  unit charge is calculated with its own tier price (for example, from 1 to 9
-  users: €5/user and from 10 users: €3/user. Quantity bought= 15 users, total
-  amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00). Volume scheme means that all units
-  charge is calculated based on total count in the related tier (for example,
-  from 1 to 9 users: €5/user and from 10 users: €3/user Quantity bought= 15
-  users, total amount: 15 units * € 3,00 = € 45,00) Stairstep scheme means that
-  total cost is calculated based on price tier; charge is not per unit (for
-  example from 1 to 9 users: €30 and from 10 users: € 100. Quantity bought= 15
-  users, total amount: € 100,00).  You can find more details about it
-  [here](modules.md#extra-resources).
-* __Description: __a short description of the extra resource. Please try to be
+* _Type_: *Tiered*, *Volume* and *Stairstep* pricing scheme. Learn more about
+  the difference in the [dedicated
+  section](billing.md#extra-resources-pricing-schemes).
+* _Description_: a short description of the extra resource. Please try to be
   clear and brief.
 * _Required_ (yes/no): if the customer has to buy this resource to complete the
   product activation.
 
 Then, click on the "Add" button on the right.
 
-![Vendors Control Panel - Extra Resources (editing)](/img/docs/control_panel_extra_resources_editing.png "Vendors Control Panel - Extra Resources (editing)")
+![Vendors Control Panel - Extra Resources (editing)](/img/docs/control_panel_extra_resources_editing.png)
 
-The next step is to specify the quantity usages rules and the pricing model. Go
-to the "_Extra Resources Values_" section and select from the combo-box on the
-left a previously inserted _Resource Name_. Then, specify the minimum and
-maximum quantities, the _Unit Price_ and the optional _Activation Fee_ (setup
-fee) .
+The next step is to define the quantity ranges and their pricing. Go to the
+"_Extra Resources Values_" section and fill:
 
-![Vendors Control Panel - Extra Resources (editing values)](/img/docs/control_panel_extra_resources_editing_values.png "Vendors Control Panel - Extra Resources (editing values)")
+* _Resource Name_: select from the combo-box on the left a previously created Extra Resource
+* _Min_: Start quantity for the current interval (should not overlap the previous one)
+* _Max_: End quantity for the current interval (may be empty for infinite)
+* _Step_: should be greater than 1. Decide which are the effective quantities
+  inside the specified interval that are selectable by customers (e.g. with an
+  interval from 0 to 100 and a step of 5, customer can buy a quantity of 0 or 5
+  or 10 or 15 and so on)
+* _Unit Price_: cost per quantity
+* _One-off cost_ (optional): a setup price added one-time only
 
-In this way, you can add multiple Extra Resources, when you're done click on the
-"_Save_" button.
+![Vendors Control Panel - Extra Resources (editing values)](assets/control_panel_extra_resources_editing_values.png)
 
-The following screen-shot shows an example of Extra Resources linked to a
+Repeat these steps to add multiple Extra Resources, when you're done click on
+the *Save* button.
+
+The following screenshot shows an example of Extra Resources linked to a
 specific Product Plan.
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
-### How to retrieve the actual extra-resources values
+### Retrieve Extra Resources quantities for an active subscription via API
 
 To retrieve the _Extra Resources Values_ specified by the customer during the
 order placement, you can fetch the _Subscription_ resource using the [Cloudesire
