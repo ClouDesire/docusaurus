@@ -402,8 +402,7 @@ The next step is to define the quantity ranges and their pricing. Go to the
   Extra Resource
 * _Min_: Start quantity for the current interval (should not overlap the
   previous one)
-* _Max_: End quantity for the current interval (may be empty for infinite in the
-  last range, for infinity)
+* _Max_: End quantity for the current interval (may be empty in the last range to avoid defining an upper bound)
 * _Step_: should be greater than 1. Decide which are the effective quantities
   inside the specified interval that are selectable by customers (e.g. with an
   interval from 0 to 100 and a step of 5, customer can buy a quantity of 0 or 5
