@@ -16,7 +16,7 @@ be able to dynamically create new users and projects.
 Both *prepaid* and *pay-as-you-go* pricing models are supported.
 
 > At this time, is not possible to switch between different pricing models on
-> an active subscription
+> Switching between different pricing models on an active subscription is not yet supported.
 
 ## Prepaid pricing model
 
