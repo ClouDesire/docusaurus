@@ -15,11 +15,22 @@ be able to dynamically create new users and projects.
 
 Both *prepaid* and *pay-as-you-go* pricing models are supported.
 
+> At this time, is not possible to switch between different pricing models on
+> an active subscription
+
+## Prepaid pricing model
+
 In *prepaid* plans, end-users are asked for how many CPU cores, GB of memory, GB
 of disk space and IP addresses want to buy. In this case, project quotas are
 automatically setup to ensure that the end-user will not request too many
 resources.
 
-In *pay-per-use* plans, end-users are billed at the end of the billing period by
-using the automatically gathered metrics for each of the billed resources (CPU,
-ram, disk space, IP addresses).
+## Pay-as-you-go pricing model
+
+In *pay-as-you-go* plans, end-users are billed at the end of the billing period
+by using the automatically gathered metrics for each of the billed resources
+(CPU cores, GB of memory, GB of disk space, IP addresses).
+
+## Example
+
+An example OpenStack VDC product is available on our [demo marketplace](https://demo.cloudesire.com/2410/iaas/openstack-vdc).
