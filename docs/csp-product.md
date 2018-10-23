@@ -39,14 +39,16 @@ The first step of the wizard involves the following things:
 
 ![Import microsoft product](/docs/assets/csp-product/import-microsoft-product.png)
 
+### CSP product types
+
 The platform supports 3 type of products that can be sold:
 
-* **License** type is for license-based products (e.g. Office 365 Business),
-  published as a [XLS price list every month by
-  Microsoft](https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing).
+* **License** type is for license-based products on the [XLS price
+  list] published every month by Microsoft (e.g. [Office 365 Business]).
 * **Azure marketplace** type is for VM-based products available on the [Azure
-  marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps) by
-  third-party vendors.
+  marketplace] by third-party vendors (e.g. [Cassandra]).
+* **ARM template** type is a deployment of one or more VM provisioned from a
+  [JSON descriptor] (e.g. [Wordpress]).
 
 On the second step of the wizard, the selected CSP product offer id or azure
 metadata is showed to confirm that the selected product is correct, and it's
@@ -54,5 +56,15 @@ possible to decide an **initial pricing**.
 
 ![Import microsoft product](/docs/assets/csp-product/import-microsoft-product-create.png)
 
-Once the product is imported in catalog, in can be customized as with any other
-product present in the catalog (logo, description, and so on).
+### Product details customization
+
+Once the product is imported in catalog, it can be customized as with any other
+product present in the catalog (logo, description, and so on), and additional
+[Extra Resources](onboarding.md#extra-resources) can be added at your choice.
+
+[Office 365 Business]: https://demo.cloudesire.com/1280/office-automation/office-365
+[Cassandra]: https://demo.cloudesire.com/1727/office-automation/cassandra-on-azure
+[Wordpress]: https://demo.cloudesire.com/1248/cms/wordpress-on-azure-arm-template
+[XLS price list]: https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing
+[Azure marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps
+[JSON descriptor]: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates

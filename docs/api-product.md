@@ -8,6 +8,8 @@ This section describes how to onboard and start selling an API-based
 product with metered billing based on the actual usage, i.e. HTTP calls
 executed.
 
+An example API product is available on our [demo marketplace](https://demo.cloudesire.com/281/api/api-demo)
+
 The onboarding process starts after creating a new "Product" in the Marketplace
 Catalog, as described [here](onboarding.md#applications-catalogue).
 
