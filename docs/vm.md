@@ -18,8 +18,9 @@ before buying a VM product.
 
 > A new SSH keypair can be automatically generated during the marketplace checkout process.
 
-ISVs cannot create by themselves a new VM product, but an administrator must
-create a new product and assign it in order to be manageable by a particular ISV.
+ISVs cannot create a new VM product by themselves, but an administrator must
+create a new product and assign it in order to be manageable by a particular
+ISV.
 
 ### Example
 

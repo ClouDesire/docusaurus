@@ -58,7 +58,7 @@ possible to decide an **initial pricing**.
 
 ### Product details customization
 
-Once the product is imported in catalog, it can be customized as with any other
+Once the product is imported, it can be customized as with any other
 product present in the catalog (logo, description, and so on), and additional
 [Extra Resources](onboarding.md#extra-resources) can be added at your choice.
 
