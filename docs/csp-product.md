@@ -41,7 +41,7 @@ The first step of the wizard involves the following things:
 
 ### CSP product types
 
-The platform supports 3 type of products that can be sold:
+The platform supports selling three different type of products:
 
 * **License** type is for license-based products on the [XLS price
   list] published every month by Microsoft (e.g. [Office 365 Business]).
