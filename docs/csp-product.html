@@ -61,22 +61,25 @@ the <a href="/docs/channel.html">channel management</a> feature.</p>
 <li><strong>Assign a company</strong> that will be responsible of managing the product</li>
 </ul>
 <p><img src="/docs/assets/csp-product/import-microsoft-product.png" alt="Import microsoft product"></p>
-<p>The platform supports 3 type of products that can be sold:</p>
+<h3><a class="anchor" aria-hidden="true" id="csp-product-types"></a><a href="#csp-product-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CSP product types</h3>
+<p>The platform supports selling three different type of products:</p>
 <ul>
-<li><strong>License</strong> type is for license-based products (e.g. Office 365 Business),
-published as a <a href="https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing">XLS price list every month by
-Microsoft</a>.</li>
+<li><strong>License</strong> type is for license-based products on the <a href="https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing">XLS price
+list</a> published every month by Microsoft (e.g. <a href="https://demo.cloudesire.com/1280/office-automation/office-365">Office 365 Business</a>).</li>
 <li><strong>Azure marketplace</strong> type is for VM-based products available on the <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps">Azure
-marketplace</a> by
-third-party vendors.</li>
+marketplace</a> by third-party vendors (e.g. <a href="https://demo.cloudesire.com/1727/office-automation/cassandra-on-azure">Cassandra</a>).</li>
+<li><strong>ARM template</strong> type is a deployment of one or more VM provisioned from a
+<a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">JSON descriptor</a> (e.g. <a href="https://demo.cloudesire.com/1248/cms/wordpress-on-azure-arm-template">Wordpress</a>).</li>
 </ul>
 <p>On the second step of the wizard, the selected CSP product offer id or azure
 metadata is showed to confirm that the selected product is correct, and it's
 possible to decide an <strong>initial pricing</strong>.</p>
 <p><img src="/docs/assets/csp-product/import-microsoft-product-create.png" alt="Import microsoft product"></p>
-<p>Once the product is imported in catalog, in can be customized as with any other
-product present in the catalog (logo, description, and so on).</p>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-product.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/vm.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#import-csp-products">Import CSP products</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<h3><a class="anchor" aria-hidden="true" id="product-details-customization"></a><a href="#product-details-customization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product details customization</h3>
+<p>Once the product is imported, it can be customized as with any other
+product present in the catalog (logo, description, and so on), and additional
+<a href="/docs/onboarding.html#extra-resources">Extra Resources</a> can be added at your choice.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-product.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/vm.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#import-csp-products">Import CSP products</a><ul class="toc-headings"><li><a href="#csp-product-types">CSP product types</a></li><li><a href="#product-details-customization">Product details customization</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
