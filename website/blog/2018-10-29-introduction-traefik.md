@@ -4,9 +4,9 @@ author:    Giovanni Toraldo
 authorURL: https://keybase.io/gionn
 ---
 
-I had the possibility to speech at the Container Day 2018 in Verona, presenting
-the open source Traefik project, a load balancer that helps in exposing web services
-on container-based infrastructures.
+I had the opportunity to speak at the Container Day 2018 in Verona, presenting
+the open source Traefik project, a load balancer that helps in exposing web
+services on container-based infrastructures.
 
 Traefik is going to replace the nginx-based frontends of the current Cloudesire
 infrastructure to decrease burden of deploying new services.
