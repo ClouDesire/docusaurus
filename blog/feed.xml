@@ -4,7 +4,7 @@
         <title>documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
         <description>The best place to stay up-to-date with the latest documentation news and events.</description>
-        <lastBuildDate>Wed, 26 Sep 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 29 Oct 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,19 @@
             <link>https://docs.cloudesire.com/blog</link>
         </image>
         <copyright>Copyright © 2018 Cloudesire.com</copyright>
+        <item>
+            <title><![CDATA[Introduction to Traefik reverse proxy @ Container Day 2018, Verona]]></title>
+            <link>https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html</link>
+            <guid>https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html</guid>
+            <pubDate>Mon, 29 Oct 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<p>I had the opportunity to speak at the Container Day 2018 in Verona, presenting
+the open source Traefik project, a load balancer that helps in exposing web
+services on container-based infrastructures.</p>
+<p>Traefik is going to replace the nginx-based frontends of the current Cloudesire
+infrastructure to decrease burden of deploying new services.</p>
+<script async class="speakerdeck-embed" data-id="77a3d30e091e425294424009c3e69801" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Dependencies caching on local CircleCI builds]]></title>
             <link>https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html</link>

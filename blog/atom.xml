@@ -2,12 +2,30 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>documentation Blog</title>
-    <updated>2018-09-26T06:00:00Z</updated>
+    <updated>2018-10-29T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2018 Cloudesire.com</rights>
+    <entry>
+        <title type="html"><![CDATA[Introduction to Traefik reverse proxy @ Container Day 2018, Verona]]></title>
+        <id>https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html</id>
+        <link href="https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html">
+        </link>
+        <updated>2018-10-29T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>I had the opportunity to speak at the Container Day 2018 in Verona, presenting
+the open source Traefik project, a load balancer that helps in exposing web
+services on container-based infrastructures.</p>
+<p>Traefik is going to replace the nginx-based frontends of the current Cloudesire
+infrastructure to decrease burden of deploying new services.</p>
+<script async class="speakerdeck-embed" data-id="77a3d30e091e425294424009c3e69801" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+]]></summary>
+        <author>
+            <name>Giovanni Toraldo</name>
+            <uri>https://keybase.io/gionn</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Dependencies caching on local CircleCI builds]]></title>
         <id>https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html</id>
