@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Marketplace customization · documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The marketplace provides a customization functionality which is"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Marketplace customization · documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="The marketplace provides a customization functionality which is"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-107718815-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cloudesire.github.io/feedback-widget/build/bundle.js"></script><script type="text/javascript" src="/js/feedback.js"></script><link rel="stylesheet" href="/css/main.css"/></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-cloudesire.png" alt="documentation"/><h2 class="headerTitleWithLogo">documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/index.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api.html" target="_self">API</a></li><li class="siteNavGroupActive"><a href="/docs/syndication.html" target="_self">Syndication</a></li><li class="siteNavGroupActive"><a href="/docs/glossary.html" target="_self">Glossary</a></li><li class=""><a href="https://www.cloudesire.com" target="_self">Back to cloudesire.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Platform</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Onboarding</h3><ul><li class="navListItem"><a class="navItem" href="/docs/index.html">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/onboarding.html">Onboarding a new application</a></li><li class="navListItem"><a class="navItem" href="/docs/syndication.html">Syndicated applications</a></li><li class="navListItem"><a class="navItem" href="/docs/service.html">Services</a></li><li class="navListItem"><a class="navItem" href="/docs/api-product.html">API products</a></li><li class="navListItem"><a class="navItem" href="/docs/csp-product.html">CSP products</a></li><li class="navListItem"><a class="navItem" href="/docs/vm.html">VM products</a></li><li class="navListItem"><a class="navItem" href="/docs/openstack.html">OpenStack tenants</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Applications</h3><ul><li class="navListItem"><a class="navItem" href="/docs/deployed.html">Deployed applications</a></li><li class="navListItem"><a class="navItem" href="/docs/docker.html">Docker applications</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API</h3><ul><li class="navListItem"><a class="navItem" href="/docs/api.html">REST API Guide</a></li><li class="navListItem"><a class="navItem" href="/docs/api-java.html">Java Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-php.html">PHP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-reference.html">API Reference</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Platform</h3><ul><li class="navListItem"><a class="navItem" href="/docs/glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/platform.html">Platform modules</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-users.html">Users and permissions</a></li><li class="navListItem"><a class="navItem" href="/docs/billing.html">Billing</a></li><li class="navListItem"><a class="navItem" href="/docs/channel.html">Channel management</a></li><li class="navListItem"><a class="navItem" href="/docs/clouds.html">Cloud providers</a></li><li class="navListItem"><a class="navItem" href="/docs/emails.html">Email Automation</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/marketplace.html">Marketplace customization</a></li><li class="navListItem"><a class="navItem" href="/docs/opensource.html">Open Source</a></li><li class="navListItem"><a class="navItem" href="/docs/gdpr.html">GDPR Compliance</a></li></ul></div></div></section></div><script>
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              const headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                if (event.target.tagName === 'A') {
+                  document.body.classList.remove('tocActive');
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docMainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/marketplace.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Marketplace customization</h1></header><article><div><span><p>The marketplace provides a customization functionality which is
+available only for <em>administrators</em>, and for <em>resellers</em> and
+<em>distributors</em> if the &quot;cloud4channel&quot; module is available.</p>
+<p>By clicking on the &quot;customize&quot; widget (upper-left border of the interface) a
+sidebar will appear on the left side.</p>
+<p><img src="/docs/assets/marketplace/image_0.png" alt="image alt text"></p>
+<p>The sidebar options are grouped in different sections:</p>
+<ul>
+<li><p><strong>General information</strong>: to configure logo, favicon, titles, descriptions...</p></li>
+<li><p><strong>Social links</strong>: to add social accounts (e.g. Facebook, Twitter, YouTube,
+LinkedIn) URLs, plus 2 additional main menu items</p></li>
+<li><p><strong>Footer links</strong>: to configure up to 4 groups of footer menu items</p></li>
+<li><p><strong>Partners banner configuration</strong>: to configure a large banner positioned in
+the middle of the home page, immediately after the product list</p></li>
+<li><p><strong>Banner configuration</strong>: to configure a different - and more flexible -
+banner section including an image plus 2 buttons enabling 2 CTAs</p></li>
+<li><p><strong>Integrations configuration</strong>: to connect Google Analytics, Google TAG
+Manager, Re-Captcha, inject custom CSS rules.</p></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="general-information"></a><a href="#general-information" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General Information</h2>
+<p>In the first part of the configuration section it’s  possible to setup:</p>
+<ul>
+<li><strong>marketplace logo</strong>: to be positioned in the top-left of each interface
+favicon</li>
+<li><strong>theme</strong>: it’s possible to select among one of the available color-schema</li>
+<li><strong>available languages</strong>: it’s possible to decide which language to be provided
+into the &quot;language switcher&quot; (top-right of each interface)</li>
+<li><strong>marketplace name</strong>: the label to be printed under the logo</li>
+<li><strong>marketplace title (SEO)</strong>: the HTML title TAG for the marketplace home page marketplace</li>
+<li><strong>description (SEO)</strong>: the HTML description TAG for the marketplace home page</li>
+<li><strong>claim text</strong>:  the text to be printed on the center of the page, under the main
+slider, before the product category filter</li>
+<li><strong>above claim text</strong>: a smaller text to be printed before the“claim text”</li>
+</ul>
+<p><img src="/docs/assets/marketplace/image_1.png" alt="image alt text"></p>
+<p>The same of above, for the bottom-side part of the interface.</p>
+<p><img src="/docs/assets/marketplace/image_2.png" alt="image alt text"></p>
+<p>In the second part of the configuration section it’s possible to setup:</p>
+<ul>
+<li><strong>address</strong>: organized as 2 lines (to be printed on the marketplace footer,
+bottom-left)</li>
+<li><strong>VAT</strong>: the marketplace owner’s VAT number (to be positioned on the footer, under
+the address)</li>
+<li><strong>ToS &amp; Privacy acceptance text</strong>: a HTML text to be provided to the end-user
+during the order-placement; this text needs to be read and accepted before
+placing an order</li>
+<li><strong>homepage products count</strong>: number of products to be listed on the home page (a
+&quot;load more&quot; button is always visible when more products are available)</li>
+<li><strong>hide help tooltip</strong>: the possibility to disable the “help tooltips” from the
+Customer Dashboard and Vendor Control Panel</li>
+<li><strong>catalog mode</strong>: customize catalog appearance
+<ul>
+<li><em>Standard</em>: this is the default option; the marketplace shows prices  and
+allows the end-users to place orders</li>
+<li><em>Price list</em>: the marketplace shows prices but the end-users are not allowed
+to place orders</li>
+<li><em>Showcase</em>: the marketplace only lists the products in the catalog, without
+showing prices nor allowing the end-users to place orders</li>
+</ul></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="social-links"></a><a href="#social-links" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Social Links</h2>
+<p>In this configuration section it’s possible to setup the URLs of the main social
+networks, plus 2 additional &quot;main menu items&quot;:</p>
+<ul>
+<li>Facebook, Twitter, YouTube, LinkedIn URLs: the social networks’ “company
+pages”. For each link, a specific icon will be printed on the marketplace
+footer</li>
+<li>Additional links: it’s possible to define the anchors and the URLs related to
+2 menu items to be added to the marketplace main menu</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="footer-links"></a><a href="#footer-links" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Footer Links</h2>
+<p>In this configuration section it’s possible to setup up to 4 groups of footer menu items.</p>
+<p>For each group it’s firstly possible to specify a name (eg. &quot;About&quot;, “Legal”, etc.).</p>
+<p>Secondly, for each group it’s possible to specify up to 3 links, and for each of
+them it’s possible to set the link anchor (“link name”) and its related URL
+(“link URL”).</p>
+<h2><a class="anchor" aria-hidden="true" id="partners-banner-configuration"></a><a href="#partners-banner-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Partners Banner Configuration</h2>
+<p>In this section it’s possible to upload a &quot;big banner image&quot; which will “fit”
+the entire width of the homepage (AKA “partners banner”).</p>
+<p>The suggested image size is 1200px wide.</p>
+<p>It’s strongly recommended to upload PNG with transparent background.</p>
+<p>The following input is a “color picker”; it allows to define the background color of the “horizontal section” of the interface hosting the banner.</p>
+<h2><a class="anchor" aria-hidden="true" id="banner-configuration"></a><a href="#banner-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Banner Configuration</h2>
+<p>In this section it’s possible to configure the &quot;main banner&quot; section of the
+marketplace.</p>
+<p>Compared to the “partners banner”, this section offers a higher level of
+configuration; in fact, it’s possible to:</p>
+<ul>
+<li>upload an image (the suggested size is 120px x 120px)</li>
+<li>define a title for the section</li>
+<li>define a description for the section</li>
+<li>define text and URL  for 2 additional buttons (call-to-actions)</li>
+<li>Please refer to Figure 2 to understand how the rendering of this section looks like.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="integrations-configuration"></a><a href="#integrations-configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Integrations configuration</h2>
+<p>In this section it’s possible to configure the integration with external
+tracking / analytics platforms.</p>
+<p>More specifically, it’s possible to define:</p>
+<ul>
+<li>Google TAG Manager code: to enable the tracking functionality via Google TAGs
+into the marketplace</li>
+<li>Google Analytics code: to enable the tracking functionality via &quot;classical&quot;
+Google Analytics code (when not using Analytics integration via Google TAG
+Manager)</li>
+<li>Re-Captcha public key: to Re-Captcha functionality  on the marketplace (where
+required). See <a href="https://www.google.com/recaptcha/intro/v3.html">recaptcha docs</a></li>
+<li>Custom CSS: it’s possible to define custom CSS rules which will be applied “on
+top” to the default marketplace stylesheets. This allows to easily and quickly
+apply small customizations to the platform interfaces</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/emails.html"><span class="arrow-prev">← </span><span>Previous</span></a><a class="docs-next button" href="/docs/opensource.html"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav docOnPageNav"><ul class="toc-headings"><li><a href="#general-information">General Information</a></li><li><a href="#social-links">Social Links</a></li><li><a href="#footer-links">Footer Links</a></li><li><a href="#partners-banner-configuration">Partners Banner Configuration</a></li><li><a href="#banner-configuration">Banner Configuration</a></li><li><a href="#integrations-configuration">Integrations configuration</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2018 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '06aaa65659156b0fd43caf8c5d9997e9',
+                indexName: 'cloudesire',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
