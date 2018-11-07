@@ -6,12 +6,6 @@ jobs:
 
     steps:
       - checkout
-      - run:
-          name: Configure GIT for pushing
-          command: |
-            git config --global user.email "cloudesire@users.noreply.github.com"
-            git config --global user.name "CircleCI"
-            echo "machine github.com login gionn password $GITHUB_TOKEN" > ~/.netrc
 
       - restore_cache:
           name: Restore cache
@@ -29,12 +23,73 @@ jobs:
             - website/node_modules/
 
       - run:
-          name: Build or deploy
+          name: Build
+          command: cd website && yarn build
+      
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - .
+
+  verify:
+    docker:
+      - image: circleci/ruby:2.3
+
+    steps:
+      - attach_workspace:
+          at: /home/circleci/project
+
+      - restore_cache:
+          name: Restore cache
+          keys:
+            - bundle-v2-{{ checksum "Gemfile.lock" }}
+
+      - run:
+          name: Fetch dependencies
+          command: bundle install --path vendor/bundle
+
+      - save_cache:
+          name: Save cache
+          key: bundle-v2-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
+
+      - run:
+          name: Test
+          command: bundle exec htmlproofer ./website/build --check-html --disable-external --empty-alt-ignore --allow-hash-href --assume-extension
+  
+  deploy:
+    docker:
+      - image: circleci/node:8
+
+    steps:
+      - attach_workspace:
+          at: /home/circleci/project
+
+      - run:
+          name: Configure GIT for pushing
+          command: |
+            git config --global user.email "cloudesire@users.noreply.github.com"
+            git config --global user.name "CircleCI"
+            echo "machine github.com login gionn password $GITHUB_TOKEN" > ~/.netrc
+
+      - run:
+          name: Deploy
           command: |
             cd website
-            if [ "$CIRCLE_BRANCH" == "source" ]; then
-              GIT_USER=gionn yarn run publish-gh-pages
-            else
-              yarn build
-            fi
+            GIT_USER=gionn yarn run publish-gh-pages
 
+workflows:
+  version: 2
+  docusaurus:
+    jobs:
+      - build
+      - verify:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - verify
+          filters:
+            branches:
+              only: source
