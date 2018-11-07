@@ -11,7 +11,7 @@ executed.
 An example API product is available on our [demo marketplace](https://demo.cloudesire.com/281/api/api-demo)
 
 The onboarding process starts after creating a new "Product" in the Marketplace
-Catalog, as described [here](onboarding.md#applications-catalogue).
+Catalog, as described [here](onboarding.md#applications-catalog-marketing-sales-onboarding).
 
 For extended integration purposes, it's possible to define a syndication
 endpoint like in [syndicated products](syndication.md) to receive events about

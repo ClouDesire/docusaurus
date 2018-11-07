@@ -36,13 +36,13 @@ Distribution and channel logics are available in the cloudesire platform.
 **Each actor down the chain (from ISV to Reseller) can also:**
 
 * Add **VAS** (Value Added Services, AKA
-  [extra-resources](glossary.md#extra-resources)) to empower its own offer (like
+  [extra-resources](glossary.md#extra-resource)) to empower its own offer (like
   setup, training, support, devices, etc.). All pricing models available in
   Cloudesire can be applied also to VAS (typically: one-off, subscription,
   consumption)
-* Build up its own [**coupons**](platform.md#coupons) (% discount, price
+* Build up its own [**coupons**](billing.md#coupons) (% discount, price
   override, trial extension | reusable or not | with/without time limit)
-* Build up its own [**bundles**](platform.md#bundles), hence configure the
+* Build up its own [**bundles**](billing.md#bundles), hence configure the
   (discounted) price of each bundled product
 
 ## Available Billing/Payment scenarios
@@ -171,7 +171,7 @@ the one-off costs and the subscription cost:
 ![distributor sell-in edit licenses](/img/docs/4-distributor-sell-in-config-edit-licenses.png)
 
 By clicking on the "Extra-Resources" tab, the Distributor can also set the
-sell-in markups also for the [extra-resources](glossary.md#extra-resources) to
+sell-in markups also for the [extra-resources](glossary.md#extra-resource) to
 be sold together with the product.
 
 ![distributor sell-in config edit extra resources](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)
@@ -206,7 +206,7 @@ components:
 ![](/img/docs/9-reseller-sell-out-config-edit-licenses.png)
 
 The "Extra Resources" tab will provide the possibility to set-up the sell-out
-prices for the [extra-resources](glossary.md#extra-resources) to be sold
+prices for the [extra-resources](glossary.md#extra-resource) to be sold
 together with the product.
 
 ![](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)

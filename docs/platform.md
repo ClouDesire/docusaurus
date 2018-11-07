@@ -32,7 +32,7 @@ Cloudesire Backend modules contains:
   application, to instantiate the required virtual resources and to monitor
   step-by-step the deployment status: if something goes wrong, it will retry
   until success. The deployment process is described
-  [here](platform.md#application-provisioning-module). Includes a *Cloud
+  [here](platform.md#understand-the-vm-deployment-process). Includes a *Cloud
   Abstraction Layer*, a set of connection drivers, used to interact with private
   or public cloud providers APIs. It provides both heterogeneous hypervisors
   support (KVM, Xen, vmware) and public cloud connectors (see the list
@@ -86,7 +86,7 @@ previously described workflow, but the URL provided to the customer refers to a
 
 ### How the snapshot backups works
 
-During the [deployment process](platform.md#application-provisioning-module),
+During the [deployment process](platform.md#understand-the-vm-deployment-process),
 Cloudesire attaches a _data-disk_ to the previously created VM in which
 application source code and data (i.e. databases and uploads) are stored.
 

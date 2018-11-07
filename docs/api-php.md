@@ -49,7 +49,7 @@ $subscription = json_decode($response->body(), true);
 ## Set subscription endpoints
 
 When the provisioning has been completed on your side, you need to provide the
-[end-user endpoints](syndication.md#providing-endpoints-end-user-links-to-access-application)
+[end-user endpoints](syndication.md#how-to-setup-the-syndication-endpoint)
 to access your application.
 
 ```php

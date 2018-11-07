@@ -240,8 +240,7 @@ For each _Plan_ the vendor has to specify the following information:
   customers for the specific Plan.
 * _Auto-renewal_ (yes/no): if "yes", the plan will auto-renew when the
   subscription is about to expire. For example, a monthly subscription could
-  renew automatically each month. More details
-  [here](platform.md#orders-renewal).
+  renew automatically each month.
 
 #### Pricing
 
@@ -460,7 +459,7 @@ _provisioning type_:
 * for **Syndicated Applications**,  the software vendor
   has to provide a "_syndication endpoint_" and proceed with the integrations
   via API, as described in [this
-  section](syndication.md#syndicated-applications)
+  section](syndication.md)
 * for **Deployed Applications** (where Cloudesire will provision on the cloud a
   new virtual-machine containing a running instance of the application for each
   customer) the software vendor should use [Docker Packaging](docker.md) (a
@@ -684,17 +683,6 @@ customer and enable automatic log-in into your application.
 
 If you follow this flow, you don't need to specify the user credentials into the
 _end-user instructions_ anymore.
-
-### In-Depth info
-
-* [How to provide _endpoints_ for Syndicated
-  Applications](syndication.md#providing-endpoints)
-* [How to provide _end-user instructions_ for Syndicated
-  Applications](syndication.md#providing-end-user-instructions)
-* [How to configure _endpoints_ for Deployed
-  Applications](docker.md#endpoints)
-* [How to configure _end-user instructions_ for Deployed
-  Applications](docker.md#end-user-instructions)
 
 ## Integration Facilities
 
