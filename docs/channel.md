@@ -176,7 +176,7 @@ be sold together with the product.
 
 ![distributor sell-in config edit extra resources](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)
 
-If the product to be sold is a [deployed application](deployed.md) then the
+If the product to be sold is a [Docker application](docker.md) then the
 "cloud-pricing" tab is also provided. In this section, the Distributor can set
 the sell-in markups for all the cloud resources unit prices, given a selected
 [cloud provider](clouds.md) (among the all supported
@@ -211,7 +211,7 @@ together with the product.
 
 ![](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)
 
-If the product to be sold is a [deployed application](deployed.md) then the
+If the product to be sold is a [Docker application](docker.md) then the
 "cloud-pricing" tab is also provided. In this section, the Reseller can set the
 sell-out prices for all the cloud resources units, given a selected [cloud
 provider](clouds.md) (among the all supported by the

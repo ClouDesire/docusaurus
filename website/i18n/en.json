@@ -15,15 +15,15 @@
       },
       "api-product": {
         "title": "API products onboarding",
-        "sidebar_label": "API products"
+        "sidebar_label": "API as a Service"
       },
       "api-reference": {
         "title": "Cloudesire REST API Reference",
         "sidebar_label": "API Reference"
       },
       "api": {
-        "title": "Cloudesire REST API Guide",
-        "sidebar_label": "REST API Guide"
+        "title": "Cloudesire REST API Introduction",
+        "sidebar_label": "REST API Introduction"
       },
       "billing": {
         "title": "Billing Features",
@@ -39,11 +39,7 @@
       },
       "csp-product": {
         "title": "CSP products onboarding",
-        "sidebar_label": "CSP products"
-      },
-      "deployed": {
-        "title": "Deployed applications onboarding",
-        "sidebar_label": "Deployed applications"
+        "sidebar_label": "Microsoft CSP"
       },
       "docker": {
         "title": "Docker applications onboarding",
@@ -99,7 +95,7 @@
       },
       "vm": {
         "title": "Bare Virtual-Machines products onboarding",
-        "sidebar_label": "VM products"
+        "sidebar_label": "Virtual-Machines"
       }
     },
     "links": {
@@ -110,8 +106,7 @@
       "Back to cloudesire.com": "Back to cloudesire.com"
     },
     "categories": {
-      "Onboarding": "Onboarding",
-      "Applications": "Applications",
+      "Catalog Onboarding": "Catalog Onboarding",
       "API": "API",
       "Platform": "Platform"
     }

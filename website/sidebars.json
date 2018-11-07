@@ -1,18 +1,15 @@
 {
   "docs": {
-    "Onboarding": [
+    "Catalog Onboarding": [
       "index",
       "onboarding",
       "syndication",
+      "docker",
       "service",
-      "api-product",
       "csp-product",
+      "api-product",
       "vm",
       "openstack"
-    ],
-    "Applications": [
-      "deployed",
-      "docker"
     ],
     "API": [
       "api",

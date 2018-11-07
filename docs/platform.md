@@ -44,7 +44,7 @@ Cloudesire Backend modules contains:
   by the _Deployer_. It push the IaaS metrics (i.e. CPU, Network, RAM, SSD
   usage) to the *Monitor* module.
 * **DNS**: provides the remote access of the applications and a custom
-  [application endpoint](deployed.md#endpoints) for each deployed instance.
+  [application endpoint](docker.md#endpoints) for each deployed instance.
 * **Hubspot-connector**: allow the integration of Cloudesire user-base to the
   Hubspot CRM
 * **Microsoft-connector**: allow the integration of Cloudesire with Microsoft

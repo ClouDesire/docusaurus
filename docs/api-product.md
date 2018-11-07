@@ -1,7 +1,7 @@
 ---
 id: api-product
 title: API products onboarding
-sidebar_label: API products
+sidebar_label: API as a Service
 ---
 
 This section describes how to onboard and start selling an API-based

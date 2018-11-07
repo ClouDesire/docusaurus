@@ -74,8 +74,8 @@ _trial_, _sandbox_, _upgrade_, _renewal_), total amount.
 
 ## Package
 
-Represent a software component that can be used in a [deployed](deployed.md)
-application (e.g.: a postgres:9.3 Docker container).
+Represent a software component that can be used in a [Docker
+application](docker.md) (e.g. a postgres:9.3 Docker container).
 
 ## Proceed
 
