@@ -65,6 +65,10 @@
         "title": "Cloudesire documentation",
         "sidebar_label": "Introduction"
       },
+      "marketplace": {
+        "title": "Marketplace customization",
+        "sidebar_label": "Marketplace customization"
+      },
       "onboarding": {
         "title": "Onboarding a new application",
         "sidebar_label": "Onboarding a new application"
