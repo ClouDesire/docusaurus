@@ -20,7 +20,7 @@ about the Cloudesire platform and its easy-onboarding functionality.
 * [Onboarding of Syndicated applications](syndication.md): do you want to
   integrate and sell your multi-tenant, already running on your cloud and
   SaaS-ready application?
-* [Onboarding of Services](service.md): sell your services (e.g. formation,
+* [Onboarding of Services](service.md): sell your services (for example formation,
   consultancy)
 * [Onboarding of API service](api-product.md): sell your REST API, with a
   prepaid or pay-per-use pricing model

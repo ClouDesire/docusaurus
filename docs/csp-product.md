@@ -44,11 +44,11 @@ The first step of the wizard involves the following things:
 The platform supports selling three different type of products:
 
 * **License** type is for license-based products on the [XLS price
-  list] published every month by Microsoft (e.g. [Office 365 Business]).
+  list] published every month by Microsoft (for example [Office 365 Business]).
 * **Azure marketplace** type is for VM-based products available on the [Azure
-  marketplace] by third-party vendors (e.g. [Cassandra]).
+  marketplace] by third-party vendors (for example [Cassandra]).
 * **ARM template** type is a deployment of one or more VM provisioned from a
-  [JSON descriptor] (e.g. [Wordpress]).
+  [JSON descriptor] (for example [Wordpress]).
 
 On the second step of the wizard, the selected CSP product offer id or azure
 metadata is showed to confirm that the selected product is correct, and it's

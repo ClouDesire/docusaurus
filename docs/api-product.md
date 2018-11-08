@@ -5,7 +5,7 @@ sidebar_label: API as a Service
 ---
 
 This section describes how to onboard and start selling an API-based
-product with metered billing based on the actual usage, i.e. HTTP calls
+product with metered billing based on the actual usage, that are HTTP calls
 executed.
 
 An example API product is available on our [demo marketplace](https://demo.cloudesire.com/281/api/api-demo)
@@ -52,12 +52,12 @@ access count to an HTTP endpoint.
 
 For every HTTP endpoint that needs to be billed, create a resource with:
 
-* `name`: a short name that describe the http endpoint
+* `name`: a short name that describe the HTTP endpoint
 * `description`: an extended description of what the HTTP endpoint will do
-* `identifier`: an unique, not-updatable identifier for this specific HTTP
+* `identifier`: an unique, unchangeable identifier for this specific HTTP
   endpoint
-* `method`: the HTTP method of the endpoint (e.g. POST)
-* `path`: the HTTP path of the endpoint (e.g. /invoice)
+* `method`: the HTTP method of the endpoint (for example POST)
+* `path`: the HTTP path of the endpoint (for example /invoice)
 
 ### Prepaid HTTP endpoints pricing (Rate limiter)
 

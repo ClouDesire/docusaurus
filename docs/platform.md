@@ -36,13 +36,11 @@ Cloudesire Backend modules contains:
   Abstraction Layer*, a set of connection drivers, used to interact with private
   or public cloud providers APIs. It provides both heterogeneous hypervisors
   support (KVM, Xen, vmware) and public cloud connectors (see the list
-  [here](clouds.md)).
-  It is capable of taking and restoring disk snapshot for backup purposes.
+  [here](clouds.md)). It is capable of taking and restoring disk snapshot for
+  backup purposes.
 * **Monitor**: it consists in a scalable repository of system and application
-  metrics that also provides aggregated real-time statistics and graphs.
-* **VM-Agent**: a tiny software component that is running inside every VM mnaged
-  by the _Deployer_. It push the IaaS metrics (i.e. CPU, Network, RAM, SSD
-  usage) to the *Monitor* module.
+  metrics that also provides aggregated real-time statistics and graphs
+  leveraging the Prometheus open source system.
 * **DNS**: provides the remote access of the applications and a custom
   [application endpoint](docker.md#endpoints) for each Docker application.
 * **Hubspot-connector**: allow the integration of Cloudesire user-base to the
@@ -57,38 +55,38 @@ Cloudesire Backend modules contains:
 
 The deployment process on a specific cloud provider follows this workflow:
 
-* Cloudesire calls a cloud provider chosen by the vendor asking for a **VM
-  instantiation** (through the cloud provider APIs), having a specific "size"
-  defined by the vendor (i.e. 2 cores, 1GB RAM)
-* Cloudesire attaches a **data disk** to the previously created VM, having the
+* The platform invokes via API the cloud provider chosen by the vendor asking
+  for a **VM instantiation** (through the cloud provider APIs), having a
+  specific "size" defined by the vendor (for example 2 cores, 1GB RAM)
+* The platform attaches a **data disk** to the previously created VM, having the
   size defined by the vendor
-* Cloudesire installs all the **application stack** (databases, application
+* The platform installs all the **application stack** (databases, application
   servers, interpreters, libraries, etc.) needed by the vendor's application for
   the correct execution (the application stack is declared by the vendor in the
   [onboarding process](onboarding.md))
-* Cloudesire installs the **vendor's application** and initializes the related
+* The platform installs the **vendor's application** and initializes the related
   databases into the VM instance during the steps above mentioned
-* Cloudesire creates a specific **DNS entry** in order to make the application
-  reachable by the customer (e.g.
-  https://application\_name-order\_id.apps.cloudesire.com)
-* the end user (customer of the given application) receives a notification (via
-  email and in its own control panel interface) with all the instructions needed
-  to access its own instance of the application he paid for (URL, default login
-  and password)
+* The platform creates a specific **DNS entry** to make the application
+  reachable by the customer
+* the end-user (that is the customer of the given application) receives a
+  notification (via email and in its own control panel interface) with all the
+  instructions needed to access its own instance of the application he paid for
+  (URL, default login and password)
 
-The deployment process of **legacy applications** (i.e. MS Windows desktop
-executables) that doesn't have an automatic and _unattended_ setup follows a
-different workflow: in this scenario, a pre-configured windows VM template is
-cloned by Cloudesire for each order. On the opposite, if the Windows desktop
-application provides an unattended setup, Cloudesire can follow all the
+The deployment process of **legacy applications** (for example MS Windows
+desktop executables) that doesn't have an automatic and _unattended_ setup
+follows a different workflow: in this scenario, a pre-configured windows VM
+template is cloned by Cloudesire for each order. On the opposite, if the Windows
+desktop application provides an unattended setup, Cloudesire can follow all the
 previously described workflow, but the URL provided to the customer refers to a
-**remote desktop connection** (i.e. VNC, rdesktop)
+**remote desktop connection**.
 
 ### How the snapshot backups works
 
-During the [deployment process](platform.md#understand-the-vm-deployment-process),
-Cloudesire attaches a _data-disk_ to the previously created VM in which
-application source code and data (i.e. databases and uploads) are stored.
+During the [deployment
+process](platform.md#understand-the-vm-deployment-process), Cloudesire attaches
+a _data-disk_ to the VM where application source code and data (database and
+file uploads) are stored.
 
 The backup process follows the following workflow:
 

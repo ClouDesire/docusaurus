@@ -8,7 +8,7 @@ In this section you will learn how to start the onboarding process of your
 application on the Cloudesire marketplace.
 
 Please note that the process is different depending on the chosen product type:
-you need to clearly understand the differences in order to onboard your product
+you need to clearly understand the differences to onboard your product
 successfully.
 
 > In order to see your product visible on the marketplace, it should at least
@@ -76,7 +76,7 @@ The following information are required for each product in the catalog:
 * _Product Logo_: high-resolution logo with fully transparent background.
 * _Product Name_: your application name. It's the name that will be associated
   with your product on the marketplace.
-* _Category_ (e.g. CMS, CRM): this will help customers to understand your
+* _Category_ (for example CMS, CRM): this will help customers to understand your
   product category and will be shown on your product page on the marketplace.
 * _Destination_ (B2B or B2C):  this will help customers to better understand
   your product and will be shown on your product page on the marketplace.
@@ -169,7 +169,7 @@ Plus, you will find some extra fields:
 
 ### Plans
 
-* plans show one or more available _product versions_ (e.g. silver, gold,
+* plans show one or more available _product versions_ (for example silver, gold,
   platinum, etc.): each version (or "plan") can have a specific **recurrent
   license** and/or a one-off **setup price** or can be offered for free. There
   are so many options that we wrote a section entirely dedicated to plans and
@@ -187,7 +187,7 @@ Plus, you will find some extra fields:
 ### What are plans
 
 For each application, vendors can define one or more **Plans **(or "Versions",
-e.g. _silver_, _gold_, _platinum_, etc.).
+for example _silver_, _gold_, _platinum_, etc.).
 
 In short, plans are the product versions that will be available for your
 product. In the following picture, you can see an example of the two product
@@ -403,7 +403,7 @@ The next step is to define the quantity ranges and their pricing. Go to the
   previous one)
 * _Max_: End quantity for the current interval (may be empty in the last range to avoid defining an upper bound)
 * _Step_: should be greater than 1. Decide which are the effective quantities
-  inside the specified interval that are selectable by customers (e.g. with an
+  inside the specified interval that are selectable by customers (for example with an
   interval from 0 to 100 and a step of 5, customer can buy a quantity of 0 or 5
   or 10 or 15 and so on)
 * _Unit Price_: cost per quantity
@@ -482,14 +482,14 @@ Application Metric (AKA _Custom Metrics_) represents _facts_ of a specific
 application offered in the Cloudesire Marketplace that are relevant to software
 vendors.
 
-For example, a software vendor could be interested to know how many _documents_
-a certain application instance produced in the last month, or how many _active
+For example, a software vendor could be interested in how many _documents_ a
+certain application instance produced in the last month, or how many _active
 users_ an application has at a given time.
 
-This kind of information are useful for **monitoring** purposes (i.e. to see a
-dynamic real-time graph in the Cloudesire Dashboard), but also allows software
-vendors to implement **pay-per-use** pricing models. In fact, specifying a
-**unit-price** for a custom metric (e.g. 10 USD per active user) allows
+This kind of information are useful for **monitoring** purposes (that can be
+seen as dynamic real-time graphs in the Cloudesire Dashboard), but also allows
+software vendors to offer **pay-per-use** pricing models. In fact, specifying a
+**unit-price** for a custom metric (for example 10 USD per active user) allows
 Cloudesire to calculate the related incomes in a certain period of time
 (_billing period_) and issue an invoice to the customer. For further details,
 take a look at the [Billing Module Section](billing.md).
@@ -535,7 +535,7 @@ Fields are:
 * _Measuring unit_: select the right measuring unit from the drop-down menu,
   according to the metric you want to monitor
 * _Custom Endpoint_: the URL you want the platform to poll your endpoint. It
-  must be defined in the form of a relative URL (e.g. `/metric/users`)
+  must be defined in the form of a relative URL (for example `/metric/users`)
 * _Unit Price_ (optional): the price charged for each application metric value
   received
 * _Type_: select Counter or Gauge from the drop-down menu. A _counter_ is a
@@ -587,7 +587,7 @@ chosen by customers before placing an order.
 
 Each parameter is created and bound to a specific Product, but can be linked or
 not to one or more _Plans_. Each parameter can be marked as required, and its
-value can be _validated_ by providing a regular expression. In order to support
+value can be _validated_ by providing a regular expression. To support
 customers to fully understand the meaning, each parameter has a _description_
 and a _hint_.
 
@@ -719,7 +719,7 @@ marketplace.
 
 #### How to test the customer experience on the Staging Marketplace
 
-In order to fully test your integration source code, once you have finished the
+To fully test your integration source code, once you have finished the
 application onboarding process we strongly suggest you to:
 
 * register to the staging marketplace as a new _customer_

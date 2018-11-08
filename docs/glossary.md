@@ -11,7 +11,7 @@ documentation.
 ## Application metric
 
 Is a measure exposed by an application that can be used for post-paid billing
-purposes (e.g. number of users, number of documents).
+purposes (for example number of users, number of documents).
 
 Go to [application metrics section](onboarding.md#application-metrics).
 
@@ -26,7 +26,7 @@ metrics_ revenues, minus the **ClouDesire fee**.
 ## Billing period
 
 How often a new invoice is issued for a particular plan bought by a customer
-(e.g. each two months)
+(for example each two months)
 
 ## Bundle
 
@@ -47,7 +47,7 @@ An user role can manage catalogs of products resold by resellers.
 ## Extra resource
 
 A configurable, usually optional characteristic of a product that has its own
-configurable pricing (e.g. a 10-days pack of Technical Support, some hardware
+configurable pricing (for example a 10-days pack of Technical Support, some hardware
 components, etc), that can be prepaid or postpaid if tied to an application
 metric.
 
@@ -56,7 +56,7 @@ Go to [extra resource section](onboarding.md#extra-resources)
 ## Invoice
 
 During the subscription lifetime, Cloudesire issues a certain number of invoices
-to the customers, depending on the Billing Period (e.g. every month, every 3
+to the customers, depending on the Billing Period (for example every month, every 3
 months, etc.). The Billing Period can be defined by the vendor for each
 application version.
 
@@ -68,14 +68,14 @@ provisioned for a particular Product Plan.
 ## Order
 
 When a customer buys an application, Cloudesire creates an _order_ that contains
-the following information: duration (e.g. 1 year, 6 months, etc.), nominee (the
+the following information: duration (for example 1 year, 6 months, etc.), nominee (the
 customer name), purchased application name, order type (can be _normal_,
 _trial_, _sandbox_, _upgrade_, _renewal_), total amount.
 
 ## Package
 
 Represent a software component that can be used in a [Docker
-application](docker.md) (e.g. a postgres:9.3 Docker container).
+application](docker.md) (for example a postgres:9.3 Docker container).
 
 ## Proceed
 
@@ -88,7 +88,7 @@ application, or a service which can be sold in the marketplace.
 
 ## Product plan
 
-For each product, the vendor can define one or more _plans_ (e.g. silver, gold,
+For each product, the vendor can define one or more _plans_ (for example silver, gold,
 platinum, etc.). Each plan can have a specific **recurrent license** and/or a
 one-off **setup price** or can be offered for free.
 

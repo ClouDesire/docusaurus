@@ -37,9 +37,9 @@ In the following screenshots, you can see some examples of invoices issued by Cl
 These are the main billing principles:
 
 * _application licensing costs_: at the beginning of each billing period (every
-  30 days) an invoice containing the application licensing costs and the IaaS
-  costs is issued in advance to the customer. The one-off cost is charged only
-  in the first billing period
+  30 days) the platform will automatically issue an invoice to the customer
+  containing the application licensing costs and the IaaS costs. The one-off
+  cost is present in the first billing period invoice.
 * _extra resources_: if prepaid extra resources are defined, they are added into
   the same invoice of the licensing costs. If pay-as-you-go, at the end of the
   billing period, an invoice containing the pay-per-use costs is issued to the
@@ -58,7 +58,7 @@ of the following choices:
 * **renewable every N months**: this is the most common choice and enables the
   selling of a product for one or more months, with a configurable billing
   frequency and a minimum order duration.
-* **short duration not renewable**: for short-living subscriptions (e.g. webinar
+* **short duration not renewable**: for short-living subscriptions (for example webinar
   service bought for two hours)
 * **everlasting**: a subscription has not an end-date and can't be renewed (e.g.
   perpetual licenses)
@@ -90,7 +90,7 @@ With tiered pricing, once you fill up a *tier* you move to the next tier and
 start charging a different price.
 
 Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit withing a range, while volume pricing defines a price for all
+price per unit within a range, while volume pricing defines a price for all
 units within a range.
 
 Example pricing:
@@ -124,8 +124,7 @@ Quantity bought 15 users, total amount: 15 units * € 3,00 = € 45,00
 Stairstep scheme means that the total cost is calculated based on price tier;
 charge is not per unit.
 
-Therefore, vendors will propose different unit prices for various quantities of
-an item.
+Vendors will propose different unit prices for different quantities of an item.
 
 Example:
 
@@ -151,17 +150,16 @@ invoice to the customer for the next billing period; if the customer previously
 decided to let the marketplace store his credit card data Cloudesire
 contextually charges the customer.
 
-If _automatic renewal_ is disabled:
+If _automatic renewal_ is not enabled:
 
-* a few days before the subscription expiration, Cloudesire notifies the
-  customer to remind the expiration and creates an invoice that the customer
+* a few days before the subscription expires, Cloudesire notifies the
+  customer to remind the imminent expiration and creates an invoice that the customer
   needs to pay to use the application after the subscription expiration
-* if the customer doesn't renew his subscription (i.e. doesn't pay the related
-  invoice), Cloudesire stops (or better _suspends_) the related application's
-  instance and waits some days (the precise number is configurable in the
-  platform) for the payment. If after this period the customer doesn't pay the
-  invoice, Cloudesire destroys the application instance and the customer will no
-  longer be able to access the application.
+* if customers doesn't renew his subscription (if they doesn't pay the related
+  pending invoices), the platform automatically suspend the subscription and
+  waits for the pending payments for another amount of days. If after this
+  period the customer doesn't pay the invoice, the platform will destroy the
+  user data associated to that subscriptions.
 
 ## Coupons
 
@@ -198,8 +196,8 @@ Coupons can be:
 Furthermore, Cloudesire supports an additional type of coupon:
 
 * **extended trials**: when the customer uses this kind of coupon, the default
-  _trial period length_ (e.g. 10 days) will be replaced with the one specified
-  in the coupon (e.g. 30 days). A coupon of this type remains valid for all the
+  _trial period length_ (for example 10 days) will be replaced with the one specified
+  in the coupon (for example 30 days). A coupon of this type remains valid for all the
   customers receiving this coupon code. This rule does not override the general
   rule "only one trial for each product for each customer". For each _extended
   trials_ coupon, the platform administrator can allocate a budget (or _plafond_)
@@ -214,7 +212,7 @@ composition of 2 or more products.
 A bundle has the same "marketing & legal" attributes of a _normal_ product
 (icon, descriptions, feature list, FAQ, screenshots, video, ToS, Privacy Policy,
 etc.). On top the platform allows to create several **plans** for the same
-bundle (e.g. _silver_, _gold_, _platinum_, etc.).
+bundle (for example _silver_, _gold_, _platinum_, etc.).
 
 Each _bundle plan_ is defined as a composition of _products plans. _Using a
 simple interface it's possible to specify for each of them a **discount

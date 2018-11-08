@@ -2,6 +2,8 @@
   "filters": {},
   "rules": {
     "write-good": true,
-    "common-misspellings": true
+    "stop-words": true,
+    "common-misspellings": true,
+    "no-dead-link": true
   }
 }

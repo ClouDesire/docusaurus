@@ -23,8 +23,9 @@ Software vendors can specify for each product:
 
 For example, an application can be described creating a _Module_ (with specific
 **cloud resources requirements**) which is a _composition_ of a _backend
-container_ (e.g. a Java module exposing REST API), a _database container_ (e.g.
-Postgres), and a _frontend container_ (e.g. AngularJS Single page application).
+container_ (for example a Java module exposing REST API), a _database container_
+(for example PostgreSQL) and a _frontend container_ (for example a AngularJS
+single page application).
 
 ### Packages
 
@@ -35,7 +36,7 @@ _Packages_ menu item on the left.
 
 For each Package, vendors must provide the following information:
 
-* **Name**: e.g. Backend
+* **Name**: a descriptive name for the package
 * **Docker Image**: the name of the image, as available on a repository
 * **Version**: whenever the vendor provides a new Package, Cloudesire assigns to
   it a new _version number_ and stores the previous one.
@@ -60,7 +61,7 @@ top-right of the page, software vendors can specify some parameters.
 ![Vendors Control Panel: Modules - VM Sizing](/img/docs/control_panel_modules_VM.png)
 
 * CPU Core(s) and RAM (in MB): a slider allows the vendor to choose the
-  preferred configuration (e.g. 1 core + 1GB, 2 cores + 4GB, etc.)
+  preferred configuration (for example 1 core + 1GB, 2 cores + 4GB, etc.)
 * Disk Space (in GB): a slider allows the vendor to select the quantity of space
   available for user data
 
@@ -79,7 +80,7 @@ buttons are shown on the top-right of the interface:
 The Advanced Settings pop-up provides the following sections:
 
 * **Endpoints Patterns**: one or more (custom) access URLs to the module of the
-  product (e.g. _/backend_, or _/stats_, etc.); more info at [this
+  product (for example _/backend_, or _/stats_, etc.); more info at [this
   section](docker.md#endpoints)
 * **Application Metrics**: specific application _aspects_ that the vendor
   intends to monitor or bill to the customer leveraging the **pay-per-use**
@@ -88,7 +89,7 @@ The Advanced Settings pop-up provides the following sections:
   accessed at runtime by the application. More info in [this
   section](docker.md#environment-variables).
 * **Stack Parameters**: some language-specific parameters to provide to the
-  [Deployer Module](platform.md#understand-the-vm-deployment-process) (e.g. fine
+  [Deployer Module](platform.md#understand-the-vm-deployment-process) (for example fine
   tuning of interpreters or application server). More info in [this
   section](docker.md#stack-parameters).
 
@@ -120,7 +121,7 @@ These parameters are automatically populated if you upload a `docker-compose.yml
 For each installed application, Cloudesire provides a default Endpoint to allow
 end-users ( customers) to access the application. Furthermore, vendors can
 specify one or more **custom** access URLs that will be linked to each specific
-[Module](docker.md#modules) of a given Product (e.g. _/backend_, or _/stats_,
+[Module](docker.md#modules) of a given Product (for example _/backend_, or _/stats_,
 etc.).
 
 To add a new Endpoint, you need to access to the _Modules_ section (more
@@ -269,7 +270,7 @@ patterns](docker.md#endpoints) and [application
 metrics](onboarding.md#application-metrics) for each defined service.
 
 The name of each object inside this section must be equal to a service defined
-below (i.e. `test`).
+below (referred as `test` in the next example).
 
 > To add the `x-cloudesire` in your *docker-compose.yml* you need to use at
 > least 3.4 format or Compose will throw an error.
@@ -353,7 +354,7 @@ To avoid data loss, Cloudesire needs to know where the application data are
 before performing these tasks.
 
 For this reason, vendors need to specify the file-system path containing the
-application data (e.g. _files/upload_) using the **common_directories** [Stack
+application data (for example _files/upload_) using the **common_directories** [Stack
 Parameter](docker.md#stack-parameters).
 
 ### Default environment variables

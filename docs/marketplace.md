@@ -17,7 +17,7 @@ The sidebar options are grouped in different sections:
 
 * **General information**: to configure logo, favicon, titles, descriptions...
 
-* **Social links**: to add social accounts (e.g. Facebook, Twitter, YouTube,
+* **Social links**: to add social accounts (for example Facebook, Twitter, YouTube,
   LinkedIn) URLs, plus 2 additional main menu items
 
 * **Footer links**: to configure up to 4 groups of footer menu items
@@ -89,7 +89,7 @@ networks, plus 2 additional "main menu items":
 
 In this configuration section it’s possible to setup up to 4 groups of footer menu items.
 
-For each group it’s firstly possible to specify a name (eg. "About", “Legal”, etc.).
+For each group it’s firstly possible to specify a name (for example "About", “Legal”, etc.).
 
 Secondly, for each group it’s possible to specify up to 3 links, and for each of
 them it’s possible to set the link anchor (“link name”) and its related URL

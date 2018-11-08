@@ -23,12 +23,11 @@ The basics follows:
   payload](syndication.md#anatomy-of-an-event-request)) to a your endpoint every
   time an interesting **event** occurs on the marketplace (new subscription
   created, invoice payment and so on).
-* your endpoint should handle these notifications, e.g. fetch the needed
-  information, provision a new user in its system and update the subscription
-  status via [Cloudesire API](api.md)
-* integration development should be done on our
-  [staging-marketplace](onboarding.md#staging-marketplace) and after everything
-  looks fine, move to the production marketplace.
+* your endpoint should handle these notifications, for example fetching the
+  needed information, provision a new user into the system and update the
+  subscription status via [Cloudesire API](api.md)
+* vendors should develop and test their integration on our [staging-marketplace](onboarding.md#staging-marketplace) and
+  after everything looks fine, move to the production marketplace.
 
 ### Prime approach to the provisioning workflow
 
@@ -236,7 +235,7 @@ true.
 > `WAITING_PAYMENT`).
 
 As you can see, the _Subscription_ resource contains references to other
-resources (e.g. _Orders_, _Invoice_, _User_, _Product_). You may want to fetch
+resources (for example _Orders_, _Invoice_, _User_, _Product_). You may want to fetch
 those object to retrieve additional information beside the data contained in the
 _Subscription_ resource.
 
@@ -418,7 +417,7 @@ signature for each payload will be in the `CMW-Event-Signature` HTTP header. The
 goal is to compute a hash using your secret token, and ensure that the hashes
 match.
 
-e.g. in Java, using **[Apache Commons Codec](https://commons.apache.org/proper/commons-codec/)**:
+In Java you can leverage the [Apache Commons Codec](https://commons.apache.org/proper/commons-codec/) library:
 
 ```java
 import org.apache.commons.codec.digest.HmacUtils;
@@ -453,7 +452,7 @@ Content-Type: application/json; charset=utf-8
 ```
 
 and then to provide the customer appropriate _end-user instructions_, in order
-to explain what happened (e.g. sorry, email address is already in use)
+to explain what happened (for example sorry, email address is already in use)
 
 ## Advanced Billing Features
 
@@ -533,8 +532,8 @@ months.
 
 Once renewed, a trial subscription becomes a proper paid subscription.
 
-Given a trial subscription you are a vendor for with ID `{id}`, you can order a
-renewal for e.g. 1 month with a `PATCH` request:
+Given a trial subscription you are a vendor with ID `{id}`, you can submit a
+renewal order with a `PATCH` request:
 
 ```http
 PATCH /subscription/{id} HTTP/1.1
@@ -675,10 +674,10 @@ Before publishing your application into the marketplace, please make sure that t
 
 * appropriate **translations** are provided for the
   [**end-user-instructions**](syndication.md#providing-end-user-instructions),
-  for each marketplace languages (e.g. English, Italian, etc.)
+  for each marketplace languages (for example English, Italian, etc.)
 * **no HTML links** are present into the end-user instructions text (if you need
   to provide the end-users a link, please create a specific _endpoint_ for it;
-  e.g. "reset password")
+  for example "reset password")
 * at least one [**application endpoint**](syndication.md#providing-endpoints-end-user-links-to-access-application) is
   provided
 * all the endpoints must have an appropriate **category**
@@ -691,7 +690,7 @@ provisioning of his _tenant_ in your application: Cloudesire will notify him for
 you.
 
 If you need to provide the customer some information after the provisioning
-(e.g. the credentials to access your application, or a short guide to start
+(for example the credentials to access your application, or a short guide to start
 using your application) you can provide specific [end-user
 instructions](syndication.md#providing-end-user-instructions).
 

@@ -16,7 +16,7 @@ To achieve this goal, we leveraged the [syndication
 workflow](https://docs.cloudesire.com/docs/syndication.html) by developing an
 integration with the OpenStack API layer. We are currently supporting the latest
 Queens release of the 2018 February 28th but we took care to avoid
-recently-introduced APIs in order to easily support older OpenStack versions.
+recently-introduced APIs to easily support older OpenStack versions.
 
 To easily install OpenStack on our test environment, we leveraged the
 [conjure-up](https://conjure-up.io/) tool maintained by Canonical, which allows
@@ -31,11 +31,11 @@ a new **Project** to him, and finally allocate specific **Resources Quotas**.
 
 In this way, for each **VDC product plan**, the marketplace administrator can
 set the minimum and maximum provisionable resources for each tenant, eventually
-specifying a *prepaid pricing model* (e.g. monthly payments plus one-off costs,
+specifying a *prepaid pricing model* (for example monthly payments plus one-off costs,
 plus professional services to be offered bundled with the VDC access).
 
 The next development wave will also support the **pay-per-use** scenario: we’ll
-integrate the OpenStack metering APIs in order to collect the actual cloud
+integrate the OpenStack metering APIs to collect the actual cloud
 resources usage; those metrics will be managed by our billing engine which will
 generate (for each customer, at the end of the billing period) the related
 invoices listing the consumption costs.

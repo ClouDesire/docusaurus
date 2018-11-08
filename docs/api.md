@@ -17,9 +17,9 @@ To interact with API resources, you need to use an URL with the format:
 
 Every marketplace has a different API `domain`, depending on its environment:
 
-* **demo.cloudesire.com**: _demo-backend.cloudesire.com_
-* **frontend-staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
-* **marketplace.italiastartup.it**: _prod-its.cloudesire.com_
+* **demo.cloudesire.com**: `demo-backend.cloudesire.com`
+* **frontend-staging-vendors.cloudesire.com**: `staging-vendors.cloudesire.com`
+* **marketplace.italiastartup.it**: `prod-its.cloudesire.com`
 
 As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
 
@@ -30,7 +30,7 @@ As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
 Client should set the request parameter `apiVersion` globally on every request
 to avoid failures while the API evolves.
 This value is a string representation in `yyyymmdd` format of the date when a
-breaking changes is introduced to support new features.
+breaking change got introduced to support new features.
 
     GET /api/productVersion?apiVersion=20180312 HTTP/1.1
 
@@ -44,8 +44,8 @@ your integration
 
 The API support two different authentication methods:
 
-* Via username/email and password supplied as standard [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication);
-* Via an authentication token, short-lived or permanent, that can also be requested via API.
+* Via username/email and password supplied as standard [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication);
+* Via an authentication token, short-lived or permanent.
 
 ### Permanent authentication token
 
@@ -53,10 +53,10 @@ You can request a permanent login token in the *profile* section once logged int
 the marketplace control panel, and this should be the preferred authentication
 method when developing an integration with the Cloudesire API.
 
-> **Security**: you can have only one permanent login token at time, requesting
+> **Security**: you can have one permanent login token at time, requesting
 a new one will invalidate the previous one.
 
-Once obtained the token, set on every HTTP request two additional headers:
+Once obtained the token, set on every HTTP request the following two headers:
 
 * `CMW-Auth-Token`: the token you got from your profile
 * `CMW-Auth-User`: your current username, as displayed in your profile
@@ -118,14 +118,14 @@ successfully authenticated and you can start developing the integration.
 | 404  | Not Found             | Resource was not found, or was deleted recently                                             |
 | 405  | Method Not Allowed    | Requested method is not supported for the specified resource                                |
 | 500  | Internal Server Error | You have just found a bug and we have been already alerted                                  |
-| 503  | Service Unavailable   | The service is temporary unavailable (e.g. server maintenance). Try again later             |
+| 503  | Service Unavailable   | The service is temporary unavailable (for example server maintenance). Try again later             |
 
 ## Error response
 
 Every time a non-successful response in generated, a JSON payload returns with a
 list of error messages in `errorHolders` field, with a human-readable message in
-the `error` field plus an error message in `key` field with
-`%placeholder%` that can be substitued in `extraFields` field:
+the `error` field plus an error message in `key` field with one ore more
+`%placeholder%` with a specific value in `extraFields` field:
 
 ```http
 HTTP/1.1 400 Bad Request
@@ -145,23 +145,24 @@ Content-Type: application/json
 
 ## Common Characteristics
 
-There a few common traits that needs to be know:
+There are some common traits that needs to be know:
 
-* there is always a `self` field that represent its unique URL (e.g.: `user/3`), use GET on it to fetch the resource;
-* referenced resources (e.g.: user.company), are referenced by an object containing an `url` field with the resource endpoint (e.g.: `company/123`)
-* Date field are in _ISO 8601_ format containing both time and timezone information (UTC as default).
+* there is always a `self` field that represent its unique URL (e.g.: `user/3`),
+  use GET on it to fetch the resource;
+* referenced resources (e.g.: user.company) are object containing an `url` field
+  with the resource endpoint (e.g.: `company/123`)
+* Date field are in _ISO 8601_ format containing both time and timezone
+  information (UTC as default).
 
 ## HTTP Methods
 
-Usually each resource support the basic CRUD operations mapped on five HTTP verbs:
+Most resources support the basic CRUD operations mapped on five HTTP verbs:
 
 * `GET` for retrieving
 * `POST` for creation
 * `PUT` for modification
 * `DELETE` for deletion
-* `PATCH` for partial updates
-
-Sometimes the method `PATCH` is used either for partial modification or for custom actions.
+* `PATCH` for action or partial fields update
 
 ## API Reference
 
