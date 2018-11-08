@@ -1,0 +1,7 @@
+{
+  "filters": {},
+  "rules": {
+    "write-good": true,
+    "common-misspellings": true
+  }
+}

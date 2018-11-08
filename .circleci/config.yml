@@ -16,6 +16,13 @@ jobs:
           name: Fetch dependencies
           command: cd website && yarn install
 
+      - run:
+          name: Proofread
+          command: mkdir /tmp/test-results && cd website && npx textlint ../docs blog -f junit > /tmp/test-results/textlint.xml || true
+
+      - store_test_results:
+          path: /tmp/test-results
+
       - save_cache:
           name: Save cache
           key: yarn-packages-v1-{{ checksum "website/yarn.lock" }}
@@ -55,7 +62,7 @@ jobs:
             - vendor/bundle
 
       - run:
-          name: Test
+          name: Test HTML
           command: bundle exec htmlproofer ./website/build/docusaurus --check-html --disable-external --empty-alt-ignore --allow-hash-href --assume-extension --url-ignore '/docs/en/index.html,/docs/en/api.html'
   
   deploy:

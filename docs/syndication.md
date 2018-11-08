@@ -519,7 +519,7 @@ Once requested, you will receive a Subscription MODIFIED event since the
 configuration attribute in the subscription resource will be modified
 accordingly to your request.
 
-The customer will receive a new invoice, that needs to be payed, with prices
+The customer will receive a new invoice, that needs to be paid, with prices
 scaled depending on how many days are remaining for the current billing period
 of the existing subscription.
 
