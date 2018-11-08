@@ -84,8 +84,8 @@ The Advanced Settings pop-up provides the following sections:
 * **Application Metrics**: specific application _aspects_ that the vendor
   intends to monitor or bill to the customer leveraging the **pay-per-use**
   paradigm; more info in [this section](onboarding.md#application-metrics)
-* **Environment Variables**:  environment variables to be injected in the
-  deployed VM and accessed at runtime by the application. More info in [this
+* **Environment Variables**:  environment variables to be injected in the VM and
+  accessed at runtime by the application. More info in [this
   section](docker.md#environment-variables).
 * **Stack Parameters**: some language-specific parameters to provide to the
   [Deployer Module](platform.md#understand-the-vm-deployment-process) (e.g. fine
@@ -185,8 +185,8 @@ Additional information is available into the [Docker section](docker.md).
 
 ### Sandbox
 
-Once finished the technical onboarding of your deployed app, it's time to test
-its self-provisioning on the cloud!
+Once finished the technical onboarding of your Docker application, it's time to
+test its self-provisioning on the cloud!
 
 Let's start by selecting a plan, and by clicking on the corresponding "Sandbox"
 button in the "Actions" column; then select one of the supported cloud providers
@@ -367,8 +367,8 @@ section.
 Cloudesire manages automatically a **reverse proxy** in front of your
 application, so you **don't need to include HTTPS support** in the container.
 
-A LetsEncrypt certificate is automatically configured for every deployed
-instance.
+A LetsEncrypt certificate is automatically configured for every Docker
+application instance.
 
 ### SSH Access
 

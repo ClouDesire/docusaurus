@@ -5,7 +5,7 @@ sidebar_label: Syndicated applications
 ---
 
 A **syndicated application** is an application that is directly managed by the
-software vendor, and not hosted on the Cloudesire managed cloud service.
+software vendor, and not hosted on the Cloudesire cloud services.
 
 This feature enables software vendors to sell applications that are already
 hosted somewhere and that has native support for **multi-tenancy**. The
@@ -512,9 +512,8 @@ Content-Type: application/json; charset=utf-8
 }
 ```
 
-The subscription should be an existing and deployed subscription of one of your
-customers, and the configuration should be the new product version you want to
-upgrade to.
+The subscription should be an active subscription of one of your customers, and
+the configuration should be the new product version you want to upgrade to.
 
 Once requested, you will receive a Subscription MODIFIED event since the
 configuration attribute in the subscription resource will be modified
@@ -552,8 +551,8 @@ HTTP/1.1 204 No Content
 
 ### Custom billing
 
-As a vendor, you can generate a custom invoice for a deployed, unexpired
-subscription. The generated invoice will be issued immediately.
+As a vendor, you can generate a custom invoice for an active subscription. The
+invoice will be issued immediately.
 
 Given a subscription you are a vendor for with ID `{id}` you can generate a
 custom invoice with a `POST /subscription/{id}/invoice` request:

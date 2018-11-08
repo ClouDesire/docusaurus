@@ -18,6 +18,6 @@ the provisioning of a service to the end-user after paying a certain amount
 A service can be marked as provisioned:
 
 * manually by the vendor in the subscription page
-* automatically via the 'Set the subscription state to deployed after the
+* automatically via the 'Set the subscription state to Deployed after the
   purchase' flag in the *Plans* section, *Configurations* tab.
 * via an API integration like a [syndicated product](syndication.md).

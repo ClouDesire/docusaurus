@@ -24,7 +24,7 @@ Each generated invoice contains the following elements:
   that vary depending on real usage of the application
 * [_extra-resources_](glossary.md#extra-resource): costs for prepaid resources
 * [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
-  cloud infrastructure used for managed products
+  cloud infrastructure used for Docker applications.
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
@@ -232,29 +232,29 @@ all the prices and the savings.
 
 ## Cloud resources pricing
 
-Pricing for the VM associated with managed products is automatically managed by
-the platform and vendors should not worry about it.
+Pricing for the VM associated with Docker applications is automatically managed
+by the platform and vendors should not worry about it.
 
 ### Prepaid Bandwidth
 
-* vendors can specify a certain amount of prepaid bandwidth for each application
-  they sell in the Cloudesire Marketplace
+* vendors can specify a certain amount of prepaid bandwidth for each Docker
+  application they sell in the Cloudesire Marketplace
 * Cloudesire manages the bandwidth price for each supported cloud provider
-* if the vendor doesn't set a specific prepaid bandwidth amount to his
+* if the vendor doesn't set a specific prepaid bandwidth amount to his Docker
   application, Cloudesire associates a default prepaid bandwidth package (eg.
   10GB)
-* during the deployed application lifetime, if the bandwidth usage exceeds the
-  90% of the established limit, Cloudesire sends an e-mail notification to the
+* during the Docker application lifetime, if the bandwidth usage exceeds the 90%
+  of the established limit, Cloudesire sends an e-mail notification to the
   customer, asking for a **bandwidth upgrade order**. If the customer doesn't
   execute the upgrade, Cloudesire prevents access to the application.
 
 ### Disk Space
 
-* vendors can specify a certain amount of disk space for each application they
-  sell in the Cloudesire Marketplace
+* vendors can specify a certain amount of disk space for each Docker application
+  they sell in the Cloudesire Marketplace
 * Cloudesire manages the disk space price for each supported cloud provider
-* during the deployed application lifetime, if disk space usage exceeds 90% of
-  the established limit, Cloudesire sends a notification email to the customer,
+* during the Docker application lifetime, if disk space usage exceeds 90% of the
+  established limit, Cloudesire sends a notification email to the customer,
   asking for a **disk upgrade order**.
 
 ### Backup

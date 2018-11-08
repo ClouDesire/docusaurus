@@ -112,5 +112,5 @@ A user that offers his applications in the Cloudesire Marketplace.
 
 ## Virtual Machine Configuration
 
-The minimum cloud resources required to operate a deployed application managed
-by the platform.
+The minimum cloud resources required to operate a Docker application managed by
+the platform.
