@@ -50,7 +50,7 @@ used in this section.</p>
 that vary depending on real usage of the application</li>
 <li><a href="/docs/glossary.html#extra-resource"><em>extra-resources</em></a>: costs for prepaid resources</li>
 <li><a href="/docs/billing.html#cloud-resources-pricing"><em>cloud resources costs</em></a>: costs for the
-cloud infrastructure used for managed products</li>
+cloud infrastructure used for Docker applications.</li>
 </ul>
 <p>In the following screenshots, you can see some examples of invoices issued by Cloudesire:</p>
 <p><img src="/img/docs/invoice_syndicated.png" alt="syndicated product invoice">]</p>
@@ -219,28 +219,28 @@ discounts, while in the ordering page the customer can have a detailed view of
 all the prices and the savings.</p>
 <p><img src="/img/docs/bundles-6.jpg" alt="bundle on the marketplace"></p>
 <h2><a class="anchor" aria-hidden="true" id="cloud-resources-pricing"></a><a href="#cloud-resources-pricing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cloud resources pricing</h2>
-<p>Pricing for the VM associated with managed products is automatically managed by
-the platform and vendors should not worry about it.</p>
+<p>Pricing for the VM associated with Docker applications is automatically managed
+by the platform and vendors should not worry about it.</p>
 <h3><a class="anchor" aria-hidden="true" id="prepaid-bandwidth"></a><a href="#prepaid-bandwidth" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Prepaid Bandwidth</h3>
 <ul>
-<li>vendors can specify a certain amount of prepaid bandwidth for each application
-they sell in the Cloudesire Marketplace</li>
+<li>vendors can specify a certain amount of prepaid bandwidth for each Docker
+application they sell in the Cloudesire Marketplace</li>
 <li>Cloudesire manages the bandwidth price for each supported cloud provider</li>
-<li>if the vendor doesn't set a specific prepaid bandwidth amount to his
+<li>if the vendor doesn't set a specific prepaid bandwidth amount to his Docker
 application, Cloudesire associates a default prepaid bandwidth package (eg.
 10GB)</li>
-<li>during the deployed application lifetime, if the bandwidth usage exceeds the
-90% of the established limit, Cloudesire sends an e-mail notification to the
+<li>during the Docker application lifetime, if the bandwidth usage exceeds the 90%
+of the established limit, Cloudesire sends an e-mail notification to the
 customer, asking for a <strong>bandwidth upgrade order</strong>. If the customer doesn't
 execute the upgrade, Cloudesire prevents access to the application.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="disk-space"></a><a href="#disk-space" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Disk Space</h3>
 <ul>
-<li>vendors can specify a certain amount of disk space for each application they
-sell in the Cloudesire Marketplace</li>
+<li>vendors can specify a certain amount of disk space for each Docker application
+they sell in the Cloudesire Marketplace</li>
 <li>Cloudesire manages the disk space price for each supported cloud provider</li>
-<li>during the deployed application lifetime, if disk space usage exceeds 90% of
-the established limit, Cloudesire sends a notification email to the customer,
+<li>during the Docker application lifetime, if disk space usage exceeds 90% of the
+established limit, Cloudesire sends a notification email to the customer,
 asking for a <strong>disk upgrade order</strong>.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="backup"></a><a href="#backup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Backup</h3>

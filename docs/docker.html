@@ -97,8 +97,8 @@ section</a></li>
 <li><strong>Application Metrics</strong>: specific application <em>aspects</em> that the vendor
 intends to monitor or bill to the customer leveraging the <strong>pay-per-use</strong>
 paradigm; more info in <a href="/docs/onboarding.html#application-metrics">this section</a></li>
-<li><strong>Environment Variables</strong>:  environment variables to be injected in the
-deployed VM and accessed at runtime by the application. More info in <a href="/docs/docker.html#environment-variables">this
+<li><strong>Environment Variables</strong>:  environment variables to be injected in the VM and
+accessed at runtime by the application. More info in <a href="/docs/docker.html#environment-variables">this
 section</a>.</li>
 <li><strong>Stack Parameters</strong>: some language-specific parameters to provide to the
 <a href="/docs/platform.html#understand-the-vm-deployment-process">Deployer Module</a> (e.g. fine
@@ -183,8 +183,8 @@ replaced with the VirtualHost at runtime.</p>
 <em><a href="http://example-123.apps.cloudesire.com/">http://example-123.apps.cloudesire.com/</a></em></p>
 <p>Additional information is available into the <a href="/docs/docker.html">Docker section</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="sandbox"></a><a href="#sandbox" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sandbox</h3>
-<p>Once finished the technical onboarding of your deployed app, it's time to test
-its self-provisioning on the cloud!</p>
+<p>Once finished the technical onboarding of your Docker application, it's time to
+test its self-provisioning on the cloud!</p>
 <p>Let's start by selecting a plan, and by clicking on the corresponding &quot;Sandbox&quot;
 button in the &quot;Actions&quot; column; then select one of the supported cloud providers
 on which you want to start the testing deploy of your app.</p>
@@ -323,8 +323,8 @@ section.</p>
 <h3><a class="anchor" aria-hidden="true" id="ssl-support"></a><a href="#ssl-support" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSL support</h3>
 <p>Cloudesire manages automatically a <strong>reverse proxy</strong> in front of your
 application, so you <strong>don't need to include HTTPS support</strong> in the container.</p>
-<p>A LetsEncrypt certificate is automatically configured for every deployed
-instance.</p>
+<p>A LetsEncrypt certificate is automatically configured for every Docker
+application instance.</p>
 <h3><a class="anchor" aria-hidden="true" id="ssh-access"></a><a href="#ssh-access" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SSH Access</h3>
 <p>Basic SSH access is <em>enabled by default</em> for all vendors, with the unique
 prerequisite that at least one <em>SSH public key</em> is provided within the vendor

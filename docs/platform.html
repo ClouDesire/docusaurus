@@ -72,7 +72,7 @@ metrics that also provides aggregated real-time statistics and graphs.</li>
 by the <em>Deployer</em>. It push the IaaS metrics (i.e. CPU, Network, RAM, SSD
 usage) to the <em>Monitor</em> module.</li>
 <li><strong>DNS</strong>: provides the remote access of the applications and a custom
-<a href="/docs/docker.html#endpoints">application endpoint</a> for each deployed instance.</li>
+<a href="/docs/docker.html#endpoints">application endpoint</a> for each Docker application.</li>
 <li><strong>Hubspot-connector</strong>: allow the integration of Cloudesire user-base to the
 Hubspot CRM</li>
 <li><strong>Microsoft-connector</strong>: allow the integration of Cloudesire with Microsoft
@@ -94,7 +94,7 @@ servers, interpreters, libraries, etc.) needed by the vendor's application for
 the correct execution (the application stack is declared by the vendor in the
 <a href="/docs/onboarding.html">onboarding process</a>)</li>
 <li>Cloudesire installs the <strong>vendor's application</strong> and initializes the related
-databases into the VM deployed during the steps above mentioned</li>
+databases into the VM instance during the steps above mentioned</li>
 <li>Cloudesire creates a specific <strong>DNS entry</strong> in order to make the application
 reachable by the customer (e.g.
 <a href="https://application_name-order_id.apps.cloudesire.com">https://application_name-order_id.apps.cloudesire.com</a>)</li>
@@ -127,7 +127,7 @@ application source code and data (i.e. databases and uploads) are stored.</p>
 (using the cloud provider APIs)</li>
 <li>VM restart</li>
 </ul>
-<p>During these processes, deployed applications are not accessible (the downtime
+<p>During these processes, Docker applications may not be accessible (the downtime
 duration depends on the cloud provider execution time for snapshots/restore
 operations).</p>
 <p>Before starting a backup, all the application data will be copied to this new
