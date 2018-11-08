@@ -27,7 +27,7 @@ between different onboarding options:
 
 * **Syndicated Product** to start onboarding a new product in
   [Syndication](syndication.md) mode;
-* **Deployed Product** to start onboarding a new product in [Self-Deployment
+* **Docker Application** to start onboarding a new product in [Self-Deployment
   mode using Docker packages](docker.md);
 * **Service Product** to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user;
@@ -103,7 +103,7 @@ Plus, you will find some extra fields:
 * _SKU_: your product ID. You cannot change it once the product has been
   created.
 * _Type_: this field will be different according to your previous choice. If you
-  chose "_Deployed Product_" the field will be "Managed" and you will have to
+  chose "_Docker Product_" the field will be "Managed" and you will have to
   upload Docker image in the following field. If you chose "Syndicated Product"
   you will need to enter the syndication endpoint in the following field.
 
@@ -177,7 +177,7 @@ Plus, you will find some extra fields:
   for your product. You can find more information about pricing models
   [here](billing.md).
 
-### SSL (only for "Deployed" Applications)
+### SSL (only for Docker Applications)
 
 * The vendor's SSL certificate and SSL certificate private key (to be used to
   access the virtual-machine containing the running instance of the application)
@@ -451,7 +451,7 @@ technical onboarding as smooth as possible, anyway we strongly recommend you to
 read this section before onboarding your product and during the onboarding
 process.
 
-### Onboarding for Syndicated and Deployed Applications
+### Onboarding for Syndicated and Docker applications
 
 The technical part of the onboarding process depends on the application
 _provisioning type_:
@@ -460,12 +460,12 @@ _provisioning type_:
   has to provide a "_syndication endpoint_" and proceed with the integrations
   via API, as described in [this
   section](syndication.md)
-* for **Deployed Applications** (where Cloudesire will provision on the cloud a
+* for **Docker Applications** (where Cloudesire will provision on the cloud a
   new virtual-machine containing a running instance of the application for each
   customer) the software vendor should use [Docker Packaging](docker.md) (a
   self-contained archive of your application meeting the
   [Docker](https://www.docker.com/) standards). More detailed instruction for
-  the onboarding of Deployed Applications can be found in [this
+  the onboarding of Docker applications can be found in [this
   section](docker.md).
 * for **Service**, the same rules of syndicated applications applies, but the
   integration is optional;
@@ -545,9 +545,9 @@ Fields are:
 
 ![Vendors Control Panel - Custom Metrics (Syndicated applications, insertion)](/img/docs/control_panel_custom_metrics_syndication_insertion.png)
 
-##### Adding Custom Metrics to a Deployed Application
+##### Adding Custom Metrics to Docker application
 
-For [Deployed Applications](docker.md), you need to access to the "_Modules_"
+For [Docker applications](docker.md), you need to access to the "_Modules_"
 section (more details [here](docker.md#modules).)
 
 To access the "Modules" section access your personal Control Panel. You will be
@@ -559,7 +559,7 @@ Advanced_" button on the top-right of the page. Furthermore, by accessing to the
 "_Application Metrics_" tab it's possible to fill all the required fields and
 click on the "_Add_" button to finish.
 
-![Vendors Control Panel - Custom Metrics (Deployed applications, insertion)](/img/docs/control_panel_custom_metrics_deployed.png "Vendors Control Panel - Custom Metrics (Deployed applications, insertion)")
+![Vendors Control Panel - Custom Metrics (Docker applications, insertion)](/img/docs/control_panel_custom_metrics_deployed.png)
 
 #### How to provide "actual values" for a Custom Metric
 
@@ -653,9 +653,9 @@ GET /api/configurationParameter/2095 HTTP/1.1
 }
 ```
 
-If your application provisioning type is [Deployed](docker.md), the
+If your application provisioning type is [Managed](docker.md), the
 Configuration Parameters are automatically injected in the virtual-machine for
-deployed applications as an environment variable with the same name of the
+Docker applications as an environment variable with the same name of the
 `code` parameter: in case you have created a Configuration Parameter with
 _COLOR_ as `code`, your application will have a `$COLOR` environment variable
 with the value chosen by the customer.

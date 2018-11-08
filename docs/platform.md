@@ -44,7 +44,7 @@ Cloudesire Backend modules contains:
   by the _Deployer_. It push the IaaS metrics (i.e. CPU, Network, RAM, SSD
   usage) to the *Monitor* module.
 * **DNS**: provides the remote access of the applications and a custom
-  [application endpoint](docker.md#endpoints) for each deployed instance.
+  [application endpoint](docker.md#endpoints) for each Docker application.
 * **Hubspot-connector**: allow the integration of Cloudesire user-base to the
   Hubspot CRM
 * **Microsoft-connector**: allow the integration of Cloudesire with Microsoft
@@ -67,7 +67,7 @@ The deployment process on a specific cloud provider follows this workflow:
   the correct execution (the application stack is declared by the vendor in the
   [onboarding process](onboarding.md))
 * Cloudesire installs the **vendor's application** and initializes the related
-  databases into the VM deployed during the steps above mentioned
+  databases into the VM instance during the steps above mentioned
 * Cloudesire creates a specific **DNS entry** in order to make the application
   reachable by the customer (e.g.
   https://application\_name-order\_id.apps.cloudesire.com)
@@ -103,7 +103,7 @@ The restore process follows the following workflow:
   (using the cloud provider APIs)
 * VM restart
 
-During these processes, deployed applications are not accessible (the downtime
+During these processes, Docker applications may not be accessible (the downtime
 duration depends on the cloud provider execution time for snapshots/restore
 operations).
 
