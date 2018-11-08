@@ -1,7 +1,7 @@
 ---
 id: api
-title: Cloudesire REST API Guide
-sidebar_label: REST API Guide
+title: Cloudesire REST API Introduction
+sidebar_label: REST API Introduction
 ---
 
 The Cloudesire platform exposes REST API and uses **JSON** as data exchange

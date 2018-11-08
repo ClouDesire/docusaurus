@@ -28,7 +28,7 @@ between different onboarding options:
 * **Syndicated Product** to start onboarding a new product in
   [Syndication](syndication.md) mode;
 * **Deployed Product** to start onboarding a new product in [Self-Deployment
-  mode](deployed.md) (using the [Docker Packaging](docker.md);
+  mode using Docker packages](docker.md);
 * **Service Product** to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user;
 * **API Product** to onboard a new [API-based service](api-product.md).
@@ -240,8 +240,7 @@ For each _Plan_ the vendor has to specify the following information:
   customers for the specific Plan.
 * _Auto-renewal_ (yes/no): if "yes", the plan will auto-renew when the
   subscription is about to expire. For example, a monthly subscription could
-  renew automatically each month. More details
-  [here](platform.md#orders-renewal).
+  renew automatically each month.
 
 #### Pricing
 
@@ -460,14 +459,14 @@ _provisioning type_:
 * for **Syndicated Applications**,  the software vendor
   has to provide a "_syndication endpoint_" and proceed with the integrations
   via API, as described in [this
-  section](syndication.md#syndicated-applications)
+  section](syndication.md)
 * for **Deployed Applications** (where Cloudesire will provision on the cloud a
   new virtual-machine containing a running instance of the application for each
   customer) the software vendor should use [Docker Packaging](docker.md) (a
   self-contained archive of your application meeting the
   [Docker](https://www.docker.com/) standards). More detailed instruction for
   the onboarding of Deployed Applications can be found in [this
-  section](deployed.md).
+  section](docker.md).
 * for **Service**, the same rules of syndicated applications applies, but the
   integration is optional;
 * for **API** products, please refer to the [API section](api-product.md).
@@ -548,14 +547,14 @@ Fields are:
 
 ##### Adding Custom Metrics to a Deployed Application
 
-For [Deployed Applications](deployed.md), you need to access to the "_Modules_"
-section (more details [here](deployed.md#modules).)
+For [Deployed Applications](docker.md), you need to access to the "_Modules_"
+section (more details [here](docker.md#modules).)
 
 To access the "Modules" section access your personal Control Panel. You will be
 able to access the "_Modules_" from the menu on the left.
 
 Once you are in the "_Modules_" section, , select a specific _Module_ and
-_Package_ (more details [here](deployed.md#packages)), click on the "_Show
+_Package_ (more details [here](docker.md#packages)), click on the "_Show
 Advanced_" button on the top-right of the page. Furthermore, by accessing to the
 "_Application Metrics_" tab it's possible to fill all the required fields and
 click on the "_Add_" button to finish.
@@ -583,7 +582,7 @@ application to work properly or to provide better initial customization.
 Examples are: zip code, company name, VAT number, street address, etc.
 
 Configuration Parameters are similar to
-[Environment variables](deployed.md#environment-variables), but their value is
+[Environment variables](docker.md#environment-variables), but their value is
 chosen by customers before placing an order.
 
 Each parameter is created and bound to a specific Product, but can be linked or
@@ -654,7 +653,7 @@ GET /api/configurationParameter/2095 HTTP/1.1
 }
 ```
 
-If your application provisioning type is [Deployed](deployed.md), the
+If your application provisioning type is [Deployed](docker.md), the
 Configuration Parameters are automatically injected in the virtual-machine for
 deployed applications as an environment variable with the same name of the
 `code` parameter: in case you have created a Configuration Parameter with
@@ -684,17 +683,6 @@ customer and enable automatic log-in into your application.
 
 If you follow this flow, you don't need to specify the user credentials into the
 _end-user instructions_ anymore.
-
-### In-Depth info
-
-* [How to provide _endpoints_ for Syndicated
-  Applications](syndication.md#providing-endpoints)
-* [How to provide _end-user instructions_ for Syndicated
-  Applications](syndication.md#providing-end-user-instructions)
-* [How to configure _endpoints_ for Deployed
-  Applications](deployed.md#endpoints)
-* [How to configure _end-user instructions_ for Deployed
-  Applications](deployed.md#end-user-instructions)
 
 ## Integration Facilities
 

@@ -1,7 +1,7 @@
 ---
 id: vm
 title: Bare Virtual-Machines products onboarding
-sidebar_label: VM products
+sidebar_label: Virtual-Machines
 ---
 
 This section describes how **Bare Virtual-Machines** marketplace products

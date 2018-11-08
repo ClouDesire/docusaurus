@@ -1,7 +1,7 @@
 ---
 id: csp-product
 title: CSP products onboarding
-sidebar_label: CSP products
+sidebar_label: Microsoft CSP
 ---
 
 This section describe how to onboard and start selling Microsoft product via its

@@ -67,9 +67,8 @@ where _fake payments_ are possible and where you can test the whole customer
 journey, end-to-end.
 
 Let's start things off: after having created a _Syndicated Product_ in your
-catalog (see [application onboarding](syndication.md#applications-onboarding)),
-configure the HTTP(S) URL of your **Syndication Endpoint** where the events will
-be delivered.
+catalog (see [application onboarding](onboarding.md)), configure the HTTP(S) URL
+of your **Syndication Endpoint** where the events will be delivered.
 
 ![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png)
 
@@ -681,7 +680,7 @@ Before publishing your application into the marketplace, please make sure that t
 * **no HTML links** are present into the end-user instructions text (if you need
   to provide the end-users a link, please create a specific _endpoint_ for it;
   e.g. "reset password")
-* at least one [**application endpoint**](syndication.md#providing-endpoints) is
+* at least one [**application endpoint**](syndication.md#providing-endpoints-end-user-links-to-access-application) is
   provided
 * all the endpoints must have an appropriate **category**
 * all the endpoints must be **accessible via HTTPS** due to the nature of data
