@@ -9,13 +9,13 @@ We use [Springfox](https://github.com/springfox/springfox) to autogenerate
 
 API are grouped into different areas:
 
-* [Billing API](/redoc/billing.html)
-* [Catalog API](/redoc/catalog.html)
-* [Cloud Apps API](/redoc/cloud-apps.html)
-* [Cloud providers API](/redoc/cloud-providers.html)
-* [Users API](/redoc/users.html)
-* [Admin API](/redoc/admin.html)
-* [Environment API](/redoc/environment.html)
+* [Billing API](../redoc/billing.html)
+* [Catalog API](../redoc/catalog.html)
+* [Cloud Apps API](../redoc/cloud-apps.html)
+* [Cloud providers API](../redoc/cloud-providers.html)
+* [Users API](../redoc/users.html)
+* [Admin API](../redoc/admin.html)
+* [Environment API](../redoc/environment.html)
 
 Swagger endpoints are reachable at (concatenate to [API
 domain](api.md#domains)):

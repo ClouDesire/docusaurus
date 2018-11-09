@@ -275,13 +275,13 @@ The Cloudesire platform has first-class support for **Stripe** payment gateway.
 
 ## Self-Billing
 
-In some particular business scenarios it is useful to let some vendors to
-issue invoices from themselves, without using the Cloudesire invoicing engine.
+In some particular business scenarios is useful to let some vendors to issue
+invoices by themselves, without using the Cloudesire invoicing engine.
 
 The platform allows the admins to mark a specific product plan as *self-billed*,
 or to enable/disable globally *self-billing* for all the products.
 
-In this case, when the user purchases a product, only a pro-forma invoice is
+In this case, when the user purchases a product, a pro-forma invoice is
 generated to help the vendor emit their own invoice, and the vendor is
 responsible to set the payment status for every invoice emitted as self-billed.
 
@@ -291,5 +291,5 @@ owner inside the *revenues* section.
 ### Self-Billing for resellers
 
 The *self-billing* functionality is also available for the resellers: a reseller
-can can mark a _sell-out price_ as *self-billed* for exposing the related
-product into his _reseller-marketplace_ overriding the invoice generation on it.
+can mark a _sell-out price_ as *self-billed* for exposing the related product
+into his _reseller-marketplace_ overriding the invoice generation on it.

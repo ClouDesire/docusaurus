@@ -2,8 +2,14 @@
   "filters": {},
   "rules": {
     "write-good": true,
-    "stop-words": true,
+    "stop-words": {
+      "exclude": [
+        "tenant"
+      ]
+    },
     "common-misspellings": true,
-    "no-dead-link": true
+    "no-dead-link": {
+      "checkRelative": false
+    }
   }
 }
