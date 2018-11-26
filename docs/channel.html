@@ -41,24 +41,23 @@ composition for Distributors together with Wholesale Prices</li>
 agents, etc.)</li>
 <li><strong>Resellers</strong> sell-out to End-Customers (applying a Recommended Retail Price
 imposed by the MSP, or building up their own price strategy)</li>
-<li>Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
-(useful for <strong>Agents</strong>/<strong>Dealers</strong>)</li>
 </ul>
+<p>Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
+(useful for <strong>Agents</strong>/<strong>Dealers</strong>).</p>
 <p><img src="/img/docs/parent-child-schema.png" alt="parent-child summary schema"></p>
 <h2><a class="anchor" aria-hidden="true" id="product-service-assignment-rules-and-pricing-logics-along-the-chain"></a><a href="#product-service-assignment-rules-and-pricing-logics-along-the-chain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product/service assignment rules and pricing logics, along the chain</h2>
 <p><strong>Main Product / Pricing logics:</strong></p>
 <ul>
-<li>The Parent (the Service Provider, usually) deals with Vendors, acquiring
-Services at the &quot;Vendor Price&quot; negotiated with the Vendor</li>
+<li>The Parent (the Service Provider) deals with Vendors, acquiring Services at
+the &quot;Vendor Price&quot; negotiated with the Vendor</li>
 <li>The Parent decides the catalog composition for each Distributor,as well as the
 &quot;Wholesale Price&quot; for each Service Plan</li>
-<li>Each Distributor decides the Service Plans that he wants to assign to each
-Reseller, together with the respective &quot;Sell-in Price&quot; applying a markup to
-the &quot;Wholesale Price&quot;</li>
-<li>Each Reseller decides the &quot;Sell-out Price&quot; to publish to its End-Customers for
-each Service Plan. Sell-out Prices can alternatively be imposed by each of the
-actors up the chain (typically, Vendors that impose a Recommended Retail
-Price)</li>
+<li>Each Distributor decides the Service Plans that he wants to assign in
+different catalogs, together with the respective &quot;Sell-in Price&quot; applying a
+markup to the &quot;Wholesale Price&quot;. Each catalog is assigned to one or more
+resellers.</li>
+<li>Each Reseller decides the &quot;Sell-out Price&quot; for each Service Plan in one or
+more catalogs, then associate an End-Customer to a catalog.</li>
 </ul>
 <p><strong>Each actor down the chain (from ISV to Reseller) can also:</strong></p>
 <ul>
