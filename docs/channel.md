@@ -12,8 +12,9 @@ Distribution and channel logics are available in the cloudesire platform.
   agents, etc.)
 * **Resellers** sell-out to End-Customers (applying a Recommended Retail Price
   imposed by the MSP, or building up their own price strategy)
-* Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
-  (useful for **Agents**/**Dealers**)
+
+Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
+  (useful for **Agents**/**Dealers**).
 
 ![parent-child summary schema](/img/docs/parent-child-schema.png)
 
@@ -21,17 +22,16 @@ Distribution and channel logics are available in the cloudesire platform.
 
 **Main Product / Pricing logics:**
 
-* The Parent (the Service Provider, usually) deals with Vendors, acquiring
-  Services at the "Vendor Price" negotiated with the Vendor
+* The Parent (the Service Provider) deals with Vendors, acquiring Services at
+  the "Vendor Price" negotiated with the Vendor
 * The Parent decides the catalog composition for each Distributor,as well as the
   "Wholesale Price" for each Service Plan
-* Each Distributor decides the Service Plans that he wants to assign to each
-  Reseller, together with the respective "Sell-in Price" applying a markup to
-  the "Wholesale Price"
-* Each Reseller decides the "Sell-out Price" to publish to its End-Customers for
-  each Service Plan. Sell-out Prices can alternatively be imposed by each of the
-  actors up the chain (typically, Vendors that impose a Recommended Retail
-  Price)
+* Each Distributor decides the Service Plans that he wants to assign in
+  different catalogs, together with the respective "Sell-in Price" applying a
+  markup to the "Wholesale Price". Each catalog is assigned to one or more
+  resellers.
+* Each Reseller decides the "Sell-out Price" for each Service Plan in one or
+  more catalogs, then associate an End-Customer to a catalog.
 
 **Each actor down the chain (from ISV to Reseller) can also:**
 
