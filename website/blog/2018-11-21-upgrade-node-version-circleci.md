@@ -12,7 +12,14 @@ The issue we have encountered at Cloudesire is that if you need a different vers
 What we have found to work is to load nvm from `/opt/circleci/.nvm` install the required version and set it as default.  
 For example to use node `v8.11.3`:
 
+```shell
+# load-nvm.sh
+export NVM_DIR="/opt/circleci/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+```
+
 ```yaml
+# config.yml
 version: 2
 
 jobs:
@@ -24,12 +31,13 @@ jobs:
       - run:
           name: Install node@v8.11.3
           command: |
-            export NVM_DIR="/opt/circleci/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+            ./load-nvm.sh
             nvm install v8.11.3 && nvm alias default v8.11.3
 
       # will print node: '8.11.3'
-      - run: npm version
+      - run: |
+          ./load-nvm.sh
+          npm version
 ```
 
 <!--truncate-->
