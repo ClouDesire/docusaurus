@@ -32,9 +32,9 @@ jobs:
           name: Install node@v8.11.3
           command: |
             ./load-nvm.sh
-            nvm install v8.11.3 && nvm alias default v8.11.3
+            nvm install v8.11.3
+            nvm alias default v8.11.3
 
-      # will print node: '8.11.3'
       - run: |
           ./load-nvm.sh
           npm version
