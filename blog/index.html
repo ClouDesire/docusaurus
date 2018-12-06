@@ -38,7 +38,12 @@
 The issue we have encountered at Cloudesire is that if you need a different version of node you can't just install it via apt because the workspace uses nvm to manage node versions. And you can't just use nvm because on every run CircleCI resets the nvm configuration.</p>
 <p>What we have found to work is to load nvm from <code>/opt/circleci/.nvm</code> install the required version and set it as default.<br>
 For example to use node <code>v8.11.3</code>:</p>
-<pre><code class="hljs css language-yaml"><span class="hljs-attr">version:</span> <span class="hljs-number">2</span>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">#</span><span class="bash"> load-nvm.sh</span>
+export NVM_DIR="/opt/circleci/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"
+</code></pre>
+<pre><code class="hljs css language-yaml"><span class="hljs-comment"># config.yml</span>
+<span class="hljs-attr">version:</span> <span class="hljs-number">2</span>
 
 <span class="hljs-attr">jobs:</span>
 <span class="hljs-attr">  build:</span>
@@ -49,13 +54,14 @@ For example to use node <code>v8.11.3</code>:</p>
 <span class="hljs-attr">      - run:</span>
 <span class="hljs-attr">          name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">node@v8.11.3</span>
 <span class="hljs-attr">          command:</span> <span class="hljs-string">|
-            export NVM_DIR="/opt/circleci/.nvm"
-            [ -s "$NVM_DIR/nvm.sh" ] &amp;&amp; \. "$NVM_DIR/nvm.sh"
-            nvm install v8.11.3 &amp;&amp; nvm alias default v8.11.3
+            ./load-nvm.sh
+            nvm install v8.11.3
+            nvm alias default v8.11.3
 
-      # will print node: '8.11.3'
-</span><span class="hljs-attr">      - run:</span> <span class="hljs-string">npm</span> <span class="hljs-string">version</span>
-</code></pre>
+</span><span class="hljs-attr">      - run:</span> <span class="hljs-string">|
+          ./load-nvm.sh
+          npm version
+</span></code></pre>
 </span></div><div class="read-more"><a class="button" href="/blog/2018/11/21/upgrade-node-version-circleci.html">Read More</a></div></article></div><div class="post"><header class="postHeader"><h1 class="postHeaderTitle"><a href="/blog/2018/10/29/introduction-traefik.html">Introduction to Traefik reverse proxy @ Container Day 2018, Verona</a></h1><p class="post-meta">October 29, 2018</p><div class="authorBlock"><p class="post-authorName"><a href="https://keybase.io/gionn" target="_blank" rel="noreferrer noopener">Giovanni Toraldo</a></p></div></header><article class="post-content"><div><span><p>I had the opportunity to speak at the Container Day 2018 in Verona, presenting
 the open source Traefik project, a load balancer that helps in exposing web
 services on container-based infrastructures.</p>
