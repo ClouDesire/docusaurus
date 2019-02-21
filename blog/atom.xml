@@ -7,7 +7,7 @@
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
-    <rights>Copyright © 2018 Cloudesire.com</rights>
+    <rights>Copyright © 2019 Cloudesire.com</rights>
     <entry>
         <title type="html"><![CDATA[How to upgrade node on CircleCI machine executor]]></title>
         <id>https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html</id>
