@@ -36,7 +36,7 @@ In the following screenshots, you can see some examples of invoices issued by Cl
 
 These are the main billing principles:
 
-* _application licensing costs_: at the beginning of each billing period (every
+* _product licensing costs_: at the beginning of each billing period (every
   30 days) an invoice containing the application licensing costs and the IaaS
   costs is issued in advance to the customer. The one-off cost is charged only
   in the first billing period
@@ -45,7 +45,7 @@ These are the main billing principles:
   billing period, an invoice containing the pay-per-use costs is issued to the
   customer
 * _trial and sandbox orders_: if an cloud application is offered in **trial
-  mode**, cloud costs will be debited to the vendor, in the same report where
+  mode**, cloud costs will be charged to the vendor, in the same report where
   earnings are calculated.
 
 ## Pricing models
@@ -143,30 +143,48 @@ Detailed instructions, explaining how to specify and manage Extra Resources
 during the onboarding process, are provided in [this
 section](glossary.md#extra-resource).
 
-## Orders Renewal
+## Subscription Renewal
 
-Cloudesire can manage orders with **automatic renewal** or not. In this case,
-when a subscription is about to expires, the platform automatically issues a new
-invoice to the customer for the next billing period; if the customer previously
-decided to let the marketplace store his credit card data Cloudesire
-contextually charges the customer.
+Cloudesire can manage subscriptions with **automatic renewal** (autorenew)
+enabled or not.
 
-If _automatic renewal_ is disabled:
+If **autorenew** is enabled:
+
+* when a subscription expires, the platform automatically issues a new invoice
+  to the customer for the next billing period
+* if the customer previously decided to let the marketplace store his credit
+  card data, Cloudesire automatically charges the invoice amount.
+
+If **autorenew** is disabled:
 
 * a few days before the subscription expiration, Cloudesire notifies the
   customer to remind the expiration and creates an invoice that the customer
   needs to pay to use the application after the subscription expiration
 * if the customer doesn't renew his subscription (i.e. doesn't pay the related
-  invoice), Cloudesire stops (or better _suspends_) the related application's
+  invoice), Cloudesire _suspends_ the subscription
   instance and waits some days (the precise number is configurable in the
   platform) for the payment. If after this period the customer doesn't pay the
   invoice, Cloudesire destroys the application instance and the customer will no
   longer be able to access the application.
 
+### Pricing application policies during a renew
+
+During the lifetime of an active subscription, prices may be modified by their
+owners.
+
+The platform will automatically **applies the up-to-date prices** during the renew
+process of a subscription, and they are persisted inside the order for future
+reference.
+
+If a new invoice is generated for a subscription with an order duration window
+that is greater than the billing period (e.g.: a product with a yearly
+commitment but monthly billing), the prices applied are consistent for the
+entire order duration window.
+
 ## Coupons
 
-Platform Administrators, Vendors and Resellers can generate a coupons for each
-product or product plan
+Platform Administrators, Vendors and Resellers can generate coupons for products
+or product plans.
 
 Each coupon will have a unique _code_ and a _period of validity_. The
 *code* is what customers need to enter in the coupon field to redeem the
