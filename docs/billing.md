@@ -143,7 +143,7 @@ Detailed instructions, explaining how to specify and manage Extra Resources
 during the onboarding process, are provided in [this
 section](glossary.md#extra-resource).
 
-## Subscriptions Renewal
+## Subscription Renewal
 
 Cloudesire can manage subscriptions with **automatic renewal** (autorenew)
 enabled or not.
@@ -161,7 +161,7 @@ If **autorenew** is disabled:
   customer to remind the expiration and creates an invoice that the customer
   needs to pay to use the application after the subscription expiration
 * if the customer doesn't renew his subscription (i.e. doesn't pay the related
-  invoice), Cloudesire stops (or better _suspends_) the subscription
+  invoice), Cloudesire _suspends_ the subscription
   instance and waits some days (the precise number is configurable in the
   platform) for the payment. If after this period the customer doesn't pay the
   invoice, Cloudesire destroys the application instance and the customer will no
