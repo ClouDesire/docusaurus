@@ -74,7 +74,6 @@ const PromoSection = props => (
 
 class HomeSplash extends React.Component {
   render() {
-    let language = this.props.language || '';
     return (
       <SplashContainer>
         <div className="inner">

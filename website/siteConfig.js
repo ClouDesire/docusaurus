@@ -6,28 +6,26 @@
  */
 
 const siteConfig = {
-  title: 'documentation' /* title for your website */,
-  tagline: 'knowledge base of the cloudesire platform maintained by the cloudesire development team',
-  url: 'https://docs.cloudesire.com' /* your website url */,
-  baseUrl: '/' /* base url for your project */,
+  title: 'cloudesire documentation',
+  tagline: 'the saas marketplace platform with advanced billing/invoicing engine and docker support',
+  url: 'https://docs.cloudesire.com',
+  baseUrl: '/',
   editUrl: 'https://github.com/ClouDesire/docusaurus/edit/source/docs/',
   cname: 'docs.cloudesire.com',
   gaTrackingId: 'UA-107718815-1',
   headerLinks: [
-    {doc: 'index', label: 'Docs'},
-    {doc: 'api', label: 'API'},
-    {doc: 'syndication', label: 'Syndication'},
-    {doc: 'glossary', label: 'Glossary'},
+    { doc: 'index', label: 'Docs' },
+    { doc: 'api', label: 'API' },
+    { doc: 'syndication', label: 'Syndication' },
+    { doc: 'glossary', label: 'Glossary' },
     {
       href: 'https://www.cloudesire.com',
       label: 'Back to cloudesire.com'
     },
   ],
-  /* path to images for header/footer */
   headerIcon: 'img/logo-cloudesire.png',
   footerIcon: 'img/logo-cloudesire.png',
   favicon: 'img/favicon/favicon.ico',
-  /* colors for website */
   colors: {
     primaryColor: '#1DACE2',
     secondaryColor: '#C1E8F7',
@@ -36,10 +34,9 @@ const siteConfig = {
     'Copyright © ' +
     new Date().getFullYear() +
     ' Cloudesire.com',
-  organizationName: 'cloudesire', // or set an env variable ORGANIZATION_NAME
-  projectName: 'docusaurus', // or set an env variable PROJECT_NAME
+  organizationName: 'cloudesire',
+  projectName: 'docusaurus',
   highlight: {
-    // Highlight.js theme to use for syntax highlighting in code blocks
     theme: 'default',
   },
   scripts: [
@@ -47,9 +44,7 @@ const siteConfig = {
     'https://cloudesire.github.io/feedback-widget/build/bundle.js',
     '/js/feedback.js',
   ],
-  // You may provide arbitrary config keys to be used as needed by your template.
   repoUrl: 'https://github.com/cloudesire/cloudesire.github.io',
-  /* On page navigation for the current documentation page */
   onPageNav: 'separate',
   algolia: {
     apiKey: "06aaa65659156b0fd43caf8c5d9997e9",
