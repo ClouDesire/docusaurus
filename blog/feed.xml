@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>documentation Blog</title>
+        <title>cloudesire documentation Blog</title>
         <link>https://docs.cloudesire.com/blog</link>
-        <description>The best place to stay up-to-date with the latest documentation news and events.</description>
+        <description>The best place to stay up-to-date with the latest cloudesire documentation news and events.</description>
         <lastBuildDate>Wed, 21 Nov 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
-            <title>documentation Blog</title>
+            <title>cloudesire documentation Blog</title>
             <url>https://docs.cloudesire.com/img/logo-cloudesire.png</url>
             <link>https://docs.cloudesire.com/blog</link>
         </image>

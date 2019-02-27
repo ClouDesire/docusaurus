@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
-    <title>documentation Blog</title>
+    <title>cloudesire documentation Blog</title>
     <updated>2018-11-21T06:00:00Z</updated>
     <generator>Feed for Node.js</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
-    <subtitle>The best place to stay up-to-date with the latest documentation news and events.</subtitle>
+    <subtitle>The best place to stay up-to-date with the latest cloudesire documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2019 Cloudesire.com</rights>
     <entry>
