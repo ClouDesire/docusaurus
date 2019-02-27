@@ -35,7 +35,7 @@ breaking changes is introduced to support new features.
     GET /api/productVersion?apiVersion=20180312 HTTP/1.1
 
 To discover the latest available version check the source of
-[ApiVersion.java](https://github.com/ClouDesire/java-api-client/blob/master/cmw-dto/src/main/java/com/liberologico/cloudesire/cmw/ApiVersion.java).
+[ApiVersion.java](https://github.com/ClouDesire/java-api-client/blob/master/cloudesire-api-client-dto/src/main/java/com/cloudesire/platform/apiclient/dto/ApiVersion.java).
 
 > Make sure to always set apiVersion query parameter to avoid future breakage of
 your integration
