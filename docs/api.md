@@ -23,7 +23,7 @@ Every marketplace has a different API `domain`, depending on its environment:
 
 As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
 
-```https://demo-backend.cloudesire.com/api/```
+`https://demo-backend.cloudesire.com/api/`
 
 ## Versioning
 
