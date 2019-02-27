@@ -56,7 +56,7 @@ jobs:
 
       - run:
           name: Test
-          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --disable-external --empty-alt-ignore --allow-hash-href --assume-extension --url-ignore '/docs/en/index.html,/docs/en/api.html'
+          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --url-ignore '/docs/en/index.html,/docs/en/api.html'
   
   deploy:
     docker:

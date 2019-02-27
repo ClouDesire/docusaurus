@@ -178,8 +178,8 @@ replaced with the VirtualHost at runtime.
 * `%VIRTUAL_HOST%` will be replaced with the virtual host (e.g.:
   _example-123.apps.cloudesire.com_)
 
-It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced in
-_http://example-123.apps.cloudesire.com/_
+It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced with the
+full FQDN.
 
 Additional information is available into the [Docker section](docker.md).
 
