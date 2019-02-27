@@ -60,7 +60,7 @@ const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
     <small>{siteConfig.tagline}</small>
-    <img src="/img/book.svg" alt="book" width="250"/>
+    <img src="/img/book.svg" alt="book" width="250" />
   </h2>
 );
 
@@ -80,8 +80,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('index.html', language)}>Read documentation</Button>
-            <Button href={docUrl('api.html', language)}>API Documentation</Button>
+            <Button href={docUrl('index.html')}>Read documentation</Button>
+            <Button href={docUrl('api.html')}>API Documentation</Button>
             <Button href="https://www.cloudesire.com">Back to cloudesire.com</Button>
           </PromoSection>
         </div>

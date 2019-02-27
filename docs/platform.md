@@ -69,8 +69,7 @@ The deployment process on a specific cloud provider follows this workflow:
 * Cloudesire installs the **vendor's application** and initializes the related
   databases into the VM instance during the steps above mentioned
 * Cloudesire creates a specific **DNS entry** in order to make the application
-  reachable by the customer (e.g.
-  https://application\_name-order\_id.apps.cloudesire.com)
+  reachable by the customer (e.g. application-123.apps.cloudesire.com)
 * the end user (customer of the given application) receives a notification (via
   email and in its own control panel interface) with all the instructions needed
   to access its own instance of the application he paid for (URL, default login
