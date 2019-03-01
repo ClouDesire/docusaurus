@@ -50,6 +50,7 @@ const siteConfig = {
     apiKey: "06aaa65659156b0fd43caf8c5d9997e9",
     indexName: "cloudesire"
   },
+  docsSideNavCollapsible: true,
 };
 
 module.exports = siteConfig;
