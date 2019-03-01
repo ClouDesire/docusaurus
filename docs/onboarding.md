@@ -305,7 +305,7 @@ understand which is the right hook.
 
 Examples of SaaS business using this model are Hootsuite and Dropbox.
 
-![Pricing Models: freemium](/img/docs/freemium-model.png)]
+![Pricing Models: freemium](/img/docs/freemium-model.png)
 
 #### Pay-as-you-go Model
 
