@@ -318,7 +318,7 @@ more items to save money.
 
 iStock is an example of Pay as you go pricing model
 
-![Pricing Models: pay as you go](/img/docs/pay-as-you-go-model.png)(/img/docs/pay-as-you-go-model.png)
+![Pricing Models: pay as you go](/img/docs/pay-as-you-go-model.png)
 
 #### Pay-per-user Model
 
