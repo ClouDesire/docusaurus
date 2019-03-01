@@ -3,7 +3,7 @@
   "localized-strings": {
     "next": "Next",
     "previous": "Previous",
-    "tagline": "official documentation of the saas marketplace platform with advanced billing and invoicing engine and docker support crafted with love by cloudesire",
+    "tagline": "the saas marketplace platform with advanced billing/invoicing engine and docker support",
     "docs": {
       "api-java": {
         "title": "Java Client for Cloudesire API",
