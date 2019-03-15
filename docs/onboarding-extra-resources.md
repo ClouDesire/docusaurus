@@ -79,7 +79,7 @@ specific [Product Plan.](glossary.md#product-plan)
 
 Detailed instructions, explaining how to specify and manage Extra Resources
 during the onboarding process, are provided in [this
-section](glossary.md#extra-resource).
+section](glossary.md#extra-resources).
 
 ## Create and add an Extra Resource to your Product Plans
 

@@ -22,7 +22,7 @@ Each generated invoice contains the following elements:
 * _license cost_: application recurrent licensing cost
 * [_pay-per-use application metrics_](onboarding.md#application-metrics): costs
   that vary depending on real usage of the application
-* [_extra-resources_](glossary.md#extra-resource): costs for prepaid resources
+* [_extra-resources_](glossary.md#extra-resources): costs for prepaid resources
 * [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
   cloud infrastructure used for Docker applications.
 
