@@ -89,6 +89,10 @@
         "title": "Platform modules",
         "sidebar_label": "Platform modules"
       },
+      "pricing-models": {
+        "title": "SaaS pricing models explained",
+        "sidebar_label": "Pricing Models"
+      },
       "service": {
         "title": "Service onboarding",
         "sidebar_label": "Services"
