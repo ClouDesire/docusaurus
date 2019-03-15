@@ -134,15 +134,15 @@ Furthermore, Cloudesire supports an additional type of coupon:
 Cloudesire allows Platform Administrators, and Resellers to create _bundles_ as a
 composition of 2 or more products.
 
-A bundle has the same "marketing & legal" attributes of a _normal_ product
+A bundle has the same "marketing & legal" attributes of a standard product
 (icon, descriptions, feature list, FAQ, screenshots, video, ToS, Privacy Policy,
-etc.). On top the platform allows to create several **plans** for the same
+etc.). On top the platform allows to create several _plans_ for the same
 bundle (e.g. _silver_, _gold_, _platinum_, etc.).
 
-Each _bundle plan_ is defined as a composition of _products plans. _Using a
+Each _bundle plan_ is defined as a composition of _product plans_. Using a
 simple interface it's possible to specify for each of them a **discount
 percentage**; in this way, the total price of a _bundle plan_ is calculated as
-the sum of all the discounted prices of all the _products plans attached to
+the sum of all the discounted prices of all the _products plans_ attached to
 it.
 
 ![bundle on the control panel](/img/docs/bundles-4.png)
