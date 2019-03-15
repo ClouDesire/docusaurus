@@ -27,7 +27,7 @@ The basics follows:
   information, provision a new user in its system and update the subscription
   status via [Cloudesire API](api.md)
 * integration development should be done on our
-  [staging-marketplace](onboarding.md#staging-marketplace) and after everything
+  [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after everything
   looks fine, move to the production marketplace.
 
 ### Prime approach to the provisioning workflow
@@ -62,7 +62,7 @@ provisioning:
 
 ### How to setup the syndication endpoint
 
-> Test your source code in our [staging marketplace](onboarding.md#staging-marketplace)
+> Test your source code in our [staging marketplace](onboarding.md#demo-marketplace-for-tests)
 where _fake payments_ are possible and where you can test the whole customer
 journey, end-to-end.
 
@@ -150,7 +150,7 @@ code.
 ### First order creation
 
 With your test customer account you created on the
-[staging-marketplace](onboarding.md#staging-marketplace), submit an order for
+[staging-marketplace](onboarding.md#demo-marketplace-for-tests), submit an order for
 your product (buy or try, depending on your plan configuration).
 
 The first event you will receive, is a `Subscription CREATED` event.

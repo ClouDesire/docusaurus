@@ -90,18 +90,17 @@ Extra Resources and select "_Extra Resources_" action.
 You will be required to add:
 
 * _Resource Name_: the name of the extra resource. It will be shown to the
-  customer in the marketplace.
+  customer in the marketplace
 * _Identifier_: please make sure this is a unique identifier for the extra
-  resource.
+  resource
 * _Measuring Unit_: the measuring unit of the extra resource, for example hours,
   credits etc. You can select the measuring unit from the drop-down menu
-* _Type_: *Tiered*, *Volume* and *Stairstep* pricing scheme. Learn more about
-  the difference in the [dedicated
-  section](billing.md#extra-resources-pricing-schemes).
+* _Type_: choose among *Tiered*, *Volume* and *Stairstep* pricing scheme, as
+  explained early
 * _Description_: a short description of the extra resource. Please try to be
-  clear and brief.
+  clear and brief
 * _Required_ (yes/no): if the customer has to buy this resource to complete the
-  product activation.
+  product activation
 
 Then, click on the "Add" button on the right.
 

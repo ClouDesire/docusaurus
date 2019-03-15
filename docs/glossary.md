@@ -44,14 +44,14 @@ A user that buys products in the Cloudesire Marketplace.
 
 An user role can manage catalogs of products resold by resellers.
 
-## Extra resource
+## Extra-Resources
 
 A configurable, usually optional characteristic of a product that has its own
 configurable pricing (e.g. a 10-days pack of Technical Support, some hardware
 components, etc), that can be prepaid or postpaid if tied to an application
 metric.
 
-Go to [extra resource section](onboarding.md#extra-resources)
+Go to [Extra-Resources](onboarding-extra-resources.md) section.
 
 ## Invoice
 
