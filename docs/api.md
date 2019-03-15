@@ -18,8 +18,7 @@ To interact with API resources, you need to use an URL with the format:
 Every marketplace has a different API `domain`, depending on its environment:
 
 * **demo.cloudesire.com**: _demo-backend.cloudesire.com_
-* **frontend-staging-vendors.cloudesire.com**: _staging-vendors.cloudesire.com_
-* **marketplace.italiastartup.it**: _prod-its.cloudesire.com_
+* **frontend-staging.cloudesire.com**: _staging.cloudesire.com_
 
 As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
 
@@ -108,7 +107,7 @@ successfully authenticated and you can start developing the integration.
 ## Response codes
 
 | Code | Status                | Description                                                                                 |
-|------|-----------------------|---------------------------------------------------------------------------------------------|
+| ---- | --------------------- | ------------------------------------------------------------------------------------------- |
 | 200  | OK                    | The request was successful                                                                  |
 | 201  | Created               | The request was successful and a resource was created                                       |
 | 204  | No Content            | The request was successful but there is no representation to return (the response is empty) |
@@ -125,7 +124,7 @@ successfully authenticated and you can start developing the integration.
 Every time a non-successful response in generated, a JSON payload returns with a
 list of error messages in `errorHolders` field, with a human-readable message in
 the `error` field plus an error message in `key` field with
-`%placeholder%` that can be substitued in `extraFields` field:
+`%placeholder%` that can be replaced in `extraFields` field:
 
 ```http
 HTTP/1.1 400 Bad Request

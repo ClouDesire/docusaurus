@@ -69,6 +69,14 @@
         "title": "Marketplace customization",
         "sidebar_label": "Marketplace customization"
       },
+      "onboarding-extra-resources": {
+        "title": "Extra-resources",
+        "sidebar_label": "Extra-resources"
+      },
+      "onboarding-plans": {
+        "title": "Define one or more plans for a product",
+        "sidebar_label": "Plans configuration"
+      },
       "onboarding": {
         "title": "Onboarding a new application",
         "sidebar_label": "Onboarding a new application"
