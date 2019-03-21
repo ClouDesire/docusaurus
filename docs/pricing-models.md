@@ -10,10 +10,10 @@ directly influences your product sales, it is important to understand which the
 most common pricing models available on the platform.
 
 You can deeply customize the pricing model for your product in Cloudesire (for
-example, you can add extra resources to your product LINK), but the choice of
-the right pricing model is not always easy. That's why in the following
-paragraphs you will find an introduction to the most used pricing models in SaaS
-businesses.
+example, you can add [extra resources](onboarding-extra-resources.md) to your
+product), but the choice of the right pricing model is not always easy. That's
+why in the following paragraphs you will find an introduction to the most used
+pricing models in SaaS businesses.
 
 ## Available pricing models
 
