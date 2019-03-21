@@ -60,7 +60,7 @@ possible to decide an **initial pricing**.
 
 Once the product is imported, it can be customized as with any other
 product present in the catalog (logo, description, and so on), and additional
-[Extra Resources](onboarding.md#extra-resources) can be added at your choice.
+[Extra Resources](onboarding-extra-resources.md) can be added at your choice.
 
 [Office 365 Business]: https://demo.cloudesire.com/1280/office-automation/office-365
 [Cassandra]: https://demo.cloudesire.com/1727/office-automation/cassandra-on-azure

@@ -11,7 +11,7 @@ executed.
 An example API product is available on our [demo marketplace](https://demo.cloudesire.com/281/api/api-demo)
 
 The onboarding process starts after creating a new "Product" in the Marketplace
-Catalog, as described [here](onboarding.md#applications-catalog-marketing-sales-onboarding).
+Catalog, as described in the [onboarding section](onboarding.md).
 
 For extended integration purposes, it's possible to define a syndication
 endpoint like in [syndicated products](syndication.md) to receive events about
@@ -43,10 +43,9 @@ contains such header with the correct secret.
 
 ## Pricing models
 
-In addition to the [standard pricing
-options](onboarding.md#available-pricing-models) available on every plan, it's
-possible to define a prepaid or pay-per-use pricing model based on the consumer
-access count to an HTTP endpoint.
+In addition to the usual [SaaS pricing models](pricing-models.md) available on
+every plan, it's possible to define a prepaid or pay-per-use pricing model based
+on the consumer access count to an HTTP endpoint.
 
 ### API endpoints definition
 

@@ -22,15 +22,15 @@ Each generated invoice contains the following elements:
 * _license cost_: application recurrent licensing cost
 * [_pay-per-use application metrics_](onboarding.md#application-metrics): costs
   that vary depending on real usage of the application
-* [_extra-resources_](glossary.md#extra-resource): costs for prepaid resources
+* [_extra-resources_](glossary.md#extra-resources): costs for prepaid resources
 * [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
   cloud infrastructure used for Docker applications.
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
-![syndicated product invoice](/img/docs/invoice_syndicated.png)]
+![syndicated product invoice](/img/docs/invoice_syndicated.png)
 
-![managed product invoice](/img/docs/invoice_cloud.png)]
+![managed product invoice](/img/docs/invoice_cloud.png)
 
 ## Billing principles
 
@@ -47,101 +47,6 @@ These are the main billing principles:
 * _trial and sandbox orders_: if an cloud application is offered in **trial
   mode**, cloud costs will be charged to the vendor, in the same report where
   earnings are calculated.
-
-## Pricing models
-
-When choosing a pricing model for a plan of a product, you start selecting one
-of the following choices:
-
-* **contact form-only**: selling features are disabled and customer can only
-  send you a contact request (no pricing is exposed)
-* **renewable every N months**: this is the most common choice and enables the
-  selling of a product for one or more months, with a configurable billing
-  frequency and a minimum order duration.
-* **short duration not renewable**: for short-living subscriptions (e.g. webinar
-  service bought for two hours)
-* **everlasting**: a subscription has not an end-date and can't be renewed (e.g.
-  perpetual licenses)
-
-### Pricing models parameters
-
-When selecting a pricing model, you can set the following parameters (depending
-on the pricing model chosen):
-
-* **billing frequency** (one or more months): the rate at which the invoices are
-  generated (the recurring and one-off costs refers to this period)
-* **minimum order duration** (one or more months): the time that the customer is
-  bound to order. It must be a multiple of the *billing frequency*
-* **recurring cost**: the amount to be paid on each billing cycle (tax excluded)
-* **one-off cost**: additional amount to be paid only at the first billing cycle
-* **duration**: in hours - only for *short duration not renewable* pricing
-
-## Extra Resources pricing schemes
-
-The platform supports 3 different pricing schemes for Extra Resources, based on
-quantity usages: *tiered*, *volume* and *stairstep*.
-
-### Tiered scheme
-
-Tiered scheme means that every unit charge is calculated with its own tier
-price.
-
-With tiered pricing, once you fill up a *tier* you move to the next tier and
-start charging a different price.
-
-Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit withing a range, while volume pricing defines a price for all
-units within a range.
-
-Example pricing:
-
-* From 1 to 9 users: €5/user
-* From 10 users: €3/user
-
-Quantity bought 15 users, total amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00
-
-### Volume scheme
-
-Volume scheme means that all units charge is calculated based on total count in
-the related tier.
-
-Therefore, as soon as you hit a particular number, all units will cost the lower
-price.
-
-Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit within a range, while volume pricing defines a price for all
-units within a range.
-
-Example:
-
-* From 1 to 9 users: €5/user
-* From 10 users: €3/user
-
-Quantity bought 15 users, total amount: 15 units * € 3,00 = € 45,00
-
-### Stairstep scheme
-
-Stairstep scheme means that the total cost is calculated based on price tier;
-charge is not per unit.
-
-Therefore, vendors will propose different unit prices for various quantities of
-an item.
-
-Example:
-
-* From 1 to 9 users: €30
-* From 10 users: €100
-
-Quantity bought 15 users, total amount: € 100,00
-
-The following screenshot shows an example of _Extra Resources_ linked to a
-specific [Product Plan.](glossary.md#product-plan)
-
-![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png)
-
-Detailed instructions, explaining how to specify and manage Extra Resources
-during the onboarding process, are provided in [this
-section](glossary.md#extra-resource).
 
 ## Subscription Renewal
 
@@ -229,15 +134,15 @@ Furthermore, Cloudesire supports an additional type of coupon:
 Cloudesire allows Platform Administrators, and Resellers to create _bundles_ as a
 composition of 2 or more products.
 
-A bundle has the same "marketing & legal" attributes of a _normal_ product
+A bundle has the same "marketing & legal" attributes of a standard product
 (icon, descriptions, feature list, FAQ, screenshots, video, ToS, Privacy Policy,
-etc.). On top the platform allows to create several **plans** for the same
+etc.). On top the platform allows to create several _plans_ for the same
 bundle (e.g. _silver_, _gold_, _platinum_, etc.).
 
-Each _bundle plan_ is defined as a composition of _products plans. _Using a
+Each _bundle plan_ is defined as a composition of _product plans_. Using a
 simple interface it's possible to specify for each of them a **discount
 percentage**; in this way, the total price of a _bundle plan_ is calculated as
-the sum of all the discounted prices of all the _products plans attached to
+the sum of all the discounted prices of all the _product plans_ attached to
 it.
 
 ![bundle on the control panel](/img/docs/bundles-4.png)
@@ -277,10 +182,12 @@ by the platform and vendors should not worry about it.
 
 ### Backup
 
-* Cloudesire allows the customers to buy **backup plans.**
-* every backup plan includes to a maximum number of backups executions (configurable in the platform) that can be manually performed by the customers or scheduled
-* a backup plan must be paid by the customer in advance
-* if the customer needs to perform a manual backup when the maximum limit in the backup plan is reached, a new **backup order** is created and a related invoice is issued. In this case, the backup starts only when the invoice is paid.
+* Cloudesire allows customers and vendors to request a **backup** to generate a
+  snapshot of the data disk of an active docker product subscription.
+* Customer receives an invoice with an amount that depends on the size and on the
+  number of backups taken.
+* A backup can be deleted and resources are freed.
+* Customers can request a backup restore on an active subscription.
 
 ## Payments
 

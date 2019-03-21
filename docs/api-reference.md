@@ -27,3 +27,7 @@ domain](api.md#domains)):
 * /v2/api-docs?group=cloudProviders
 * /v2/api-docs?group=users
 * /v2/api-docs?group=environment
+
+You can use those endpoints to generate swagger clients in a variety of
+programming language leveraging the
+[swagger-codegen](https://github.com/swagger-api/swagger-codegen) project.
