@@ -109,7 +109,7 @@ The *Configurations* tab contains additional settings like:
 ### Extra-Resources
 
 _Extra-resources_ are goods or services which can be sold together with the
-product. Examples are a 10-days pack of Technical Support, some hardware
+product. Examples are a 10-days pack of technical support, some hardware
 components.
 
 In this section it's possible to configure the price ranges for each

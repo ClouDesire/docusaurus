@@ -142,7 +142,7 @@ bundle (e.g. _silver_, _gold_, _platinum_, etc.).
 Each _bundle plan_ is defined as a composition of _product plans_. Using a
 simple interface it's possible to specify for each of them a **discount
 percentage**; in this way, the total price of a _bundle plan_ is calculated as
-the sum of all the discounted prices of all the _products plans_ attached to
+the sum of all the discounted prices of all the _product plans_ attached to
 it.
 
 ![bundle on the control panel](/img/docs/bundles-4.png)

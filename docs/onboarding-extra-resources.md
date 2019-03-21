@@ -10,7 +10,7 @@ to your product plans.
 ## What is an Extra Resource?
 
 Extra Resources refer to _goods_ or _services_ which can be sold together with
-the application (for example, a 10-days pack of Technical Support, hardware
+the application (for example, a 10-days pack of technical support, hardware
 components, extra credits, etc.) for which the customer will pay a recurring
 price on each billing period.
 
@@ -28,7 +28,7 @@ With tiered pricing, once you fill up a *tier* you move to the next tier and
 start charging a different price.
 
 Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit withing a range, while volume pricing defines a price for all
+price per unit within a range, while volume pricing defines a price for all
 units within a range.
 
 Example pricing:
@@ -114,7 +114,7 @@ The next step is to define the quantity ranges and their pricing. Go to the
 * _Min_: Start quantity for the current interval (should not overlap the
   previous one)
 * _Max_: End quantity for the current interval (may be empty in the last range to avoid defining an upper bound)
-* _Step_: should be greater than 1. Decide which are the effective quantities
+* _Step_: should be greater than or equal to 1. Decide which are the effective quantities
   inside the specified interval that are selectable by customers (e.g. with an
   interval from 0 to 100 and a step of 5, customer can buy a quantity of 0 or 5
   or 10 or 15 and so on)

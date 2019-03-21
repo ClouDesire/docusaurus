@@ -19,7 +19,7 @@ businesses.
 
 There are many different basic pricing models that you can implement in
 Cloudesire. To define a pricing model, you need at least one product into your
-catalog. Select the product, then "_Edit_" and go to the "_Plans_" tab.You can
+catalog. Select the product, then "_Edit_" and go to the "_Plans_" tab. You can
 edit or add new plans to your product.
 
 ### Freemium model
