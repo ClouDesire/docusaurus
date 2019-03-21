@@ -182,15 +182,12 @@ by the platform and vendors should not worry about it.
 
 ### Backup
 
-* Cloudesire allows the customers to buy **backup plans.**
-* every backup plan includes to a maximum number of backups executions
-  (configurable in the platform) that can be manually performed by the customers
-  or scheduled
-* a backup plan must be paid by the customer in advance
-* if the customer needs to perform a manual backup when the maximum limit in the
-  backup plan is reached, a new **backup order** is created and a related
-  invoice is issued. In this case, the backup starts only when the invoice is
-  paid.
+* Cloudesire allows customers and vendors to request a **backup** to generate a
+  snapshot of the data disk of an active docker product subscription.
+* Customer receive an invoice with an amount that depends on the size and on the
+  number of backups taken.
+* A backup can be deleted and resources are freed.
+* Customers can request a backup restore on an active subscription.
 
 ## Payments
 
