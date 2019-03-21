@@ -51,7 +51,8 @@ configurable pricing (e.g. a 10-days pack of Technical Support, some hardware
 components, etc), that can be prepaid or postpaid if tied to an application
 metric.
 
-Go to [Extra Resources section](onboarding-extra-resources.md).
+For additional information, proceed to the [Extra Resources
+section](onboarding-extra-resources.md).
 
 ## Invoice
 

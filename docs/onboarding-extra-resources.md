@@ -1,7 +1,7 @@
 ---
 id: onboarding-extra-resources
-title: Extra-resources
-sidebar_label: Extra-resources
+title: Extra Resources
+sidebar_label: Extra Resources
 ---
 
 In this section you will learn what extra resources are and how you can add them
