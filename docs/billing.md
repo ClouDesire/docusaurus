@@ -184,7 +184,7 @@ by the platform and vendors should not worry about it.
 
 * Cloudesire allows customers and vendors to request a **backup** to generate a
   snapshot of the data disk of an active docker product subscription.
-* Customer receive an invoice with an amount that depends on the size and on the
+* Customer receives an invoice with an amount that depends on the size and on the
   number of backups taken.
 * A backup can be deleted and resources are freed.
 * Customers can request a backup restore on an active subscription.
