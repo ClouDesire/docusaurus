@@ -3,8 +3,8 @@
     "Catalog Onboarding": [
       "index",
       "onboarding",
-      "pricing-models",
       "onboarding-plans",
+      "pricing-models",
       "onboarding-extra-resources",
       "syndication",
       "docker",

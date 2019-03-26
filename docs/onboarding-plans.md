@@ -1,14 +1,14 @@
 ---
 id: onboarding-plans
-title: Define one or more plans for a product
-sidebar_label: Plans configuration
+title: Define one or more pricing plans for a product
+sidebar_label: Pricing Plans
 ---
 
 For each application, vendors can define one or more **Plans** (e.g. _silver_,
 _gold_, _platinum_, etc.).
 
-In short, plans are the product versions that will be available for your
-product. In the following picture, you can see an example of the two product
+In short, plans are the product versions that will be available to your customer
+to choose. In the following picture, you can see an example of the two product
 versions created for a product: one is the monthly plan and one is the annual
 plan.
 

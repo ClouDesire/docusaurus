@@ -104,7 +104,7 @@ value for it.  When you're done, click on the _Add_ button to finish.
 When defining a Docker application, you can configure some parameters:
 
 | Name               | Cardinality | Type    | Example      | Description                                   |
-|--------------------|-------------|---------|--------------|-----------------------------------------------|
+| ------------------ | ----------- | ------- | ------------ | --------------------------------------------- |
 | expose             | N           | int     | 8080         | Generates env vars as if it is linked         |
 | privileged         | 1           | boolean | true         | If container requires high privileges         |
 | common_directories | N           | string  | files/upload | A path to a data directory, relative to /     |
@@ -231,7 +231,15 @@ launch a sandbox order.
 
 ![Vendors Control Panel: Syndication -Sandbox](/img/docs/control_panel_syndicated_sandbox.png)
 
-## Leverage Docker-Compose.yml
+### Custom SSL certificates
+
+A Software Vendor can upload an SSL certificate and its related private key to
+be used to access via HTTPS the Docker applications endpoints.
+
+## Docker Compose
+
+Cloudesire is integrated with [Docker Compose](https://docs.docker.com/compose/)
+to speed-up the technical configuration.
 
 To simultaneously create one or more Package, corresponding to services defined
 inside a docker-compose.yml file, click on the _New Docker Compose_ button.
