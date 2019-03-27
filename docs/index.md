@@ -29,7 +29,7 @@ are slightly different for each option:
   workflow (e.g. formation, consultancy)
 
 We supports additional kind of products that can't be published directly by
-software vendors but is good to know them:
+software vendors (but it's good to know them):
 
 * [Microsoft CSP](csp-product.md)
 * [Bare VM](vm.md)
