@@ -74,12 +74,12 @@
         "sidebar_label": "Extra Resources"
       },
       "onboarding-plans": {
-        "title": "Define one or more plans for a product",
-        "sidebar_label": "Plans configuration"
+        "title": "Define one or more pricing plans for a product",
+        "sidebar_label": "Pricing Plans"
       },
       "onboarding": {
-        "title": "Onboarding a new application",
-        "sidebar_label": "Onboarding a new application"
+        "title": "Onboarding a new product on the catalog",
+        "sidebar_label": "Onboarding a new product"
       },
       "opensource": {
         "title": "Open Source projects",

@@ -1,7 +1,7 @@
 ---
 id: onboarding
-title: Onboarding a new application
-sidebar_label: Onboarding a new application
+title: Onboarding a new product on the catalog
+sidebar_label: Onboarding a new product
 ---
 
 In this section you will learn how to start the onboarding process of your
@@ -174,7 +174,7 @@ _provisioning type_:
 * for **API** products, please refer to the [API section](api-product.md).
 
 The following sections refer to other additional functionalities, which can be
-used both in the Syndication and Self-Deploy scenarios.
+used both in the Syndicated and Docker applications.
 
 ### Application Metrics
 
@@ -358,12 +358,6 @@ Docker applications as an environment variable with the same name of the
 `code` parameter: in case you have created a Configuration Parameter with
 _COLOR_ as `code`, your application will have a `$COLOR` environment variable
 with the value chosen by the customer.
-
-### Custom SSL certificates
-
-A vendor can upload an SSL certificate and SSL certificate private key to be
-used to access the virtual-machine containing the running instance of the
-application.
 
 ## Demo marketplace for tests
 
