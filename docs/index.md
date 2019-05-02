@@ -21,8 +21,8 @@ are slightly different for each option:
   most common choice, and it's a perfect fit for multi-tenant,
   running on your infrastructure, SaaS-ready services
 * [Docker applications](docker.md): you package your application with Docker, we
-  self-provision it on a new Virtual Machine for each customer, on every supported cloud
-  provider
+  self-provision it on a new Virtual Machine for each customer, on every
+  supported cloud provider
 * [API](api-product.md): we support REST API with a prepaid or pay-per-use
   pricing models
 * [Generic Services](service.md): sell your services without an automatic

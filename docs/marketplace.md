@@ -41,10 +41,11 @@ In the first part of the configuration section it’s  possible to setup:
 * **available languages**: it’s possible to decide which language to be provided
   into the "language switcher" (top-right of each interface)
 * **marketplace name**: the label to be printed under the logo
-* **marketplace title (SEO)**: the HTML title TAG for the marketplace home page marketplace 
+* **marketplace title (SEO)**: the HTML title TAG for the marketplace home page
+  marketplace
 * **description (SEO)**: the HTML description TAG for the marketplace home page
-* **claim text**:  the text to be printed on the center of the page, under the main
-  slider, before the product category filter
+* **claim text**:  the text to be printed on the center of the page, under the
+  main slider, before the product category filter
 * **above claim text**: a smaller text to be printed before the“claim text”
 
 ![image alt text](assets/marketplace/image_1.png)

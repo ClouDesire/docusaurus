@@ -11,7 +11,9 @@ format.
 
 To interact with API resources, you need to use an URL with the format:
 
-    https://{domain}/api/{resource}/{resourceId}
+```http
+https://{domain}/api/{resource}/{resourceId}
+```
 
 ## Domains
 
@@ -31,7 +33,9 @@ to avoid failures while the API evolves.
 This value is a string representation in `yyyymmdd` format of the date when a
 breaking changes is introduced to support new features.
 
-    GET /api/productVersion?apiVersion=20180312 HTTP/1.1
+```http
+GET /api/productVersion?apiVersion=20180312 HTTP/1.1
+```
 
 To discover the latest available version check the source of
 [ApiVersion.java](https://github.com/ClouDesire/java-api-client/blob/master/cloudesire-api-client-dto/src/main/java/com/cloudesire/platform/apiclient/dto/ApiVersion.java).

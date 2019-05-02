@@ -111,9 +111,11 @@ When defining a Docker application, you can configure some parameters:
 | open_ports         | N           | int     | 9000         | A port that should be open on the firewall    |
 | web_port           | 1           | int     | 8000         | The port of the webapp that should be proxied |
 
-These parameters are automatically populated if you upload a `docker-compose.yml` file.
+These parameters are automatically populated if you upload a
+`docker-compose.yml` file.
 
-![Vendors Control Panel - Stack Parameters](/img/docs/control_panel_stack_parameters.png)
+![Vendors Control Panel - Stack
+Parameters](/img/docs/control_panel_stack_parameters.png)
 
 ### Endpoints
 
@@ -363,12 +365,6 @@ before performing these tasks.
 For this reason, vendors need to specify the file-system path containing the
 application data (e.g. _files/upload_) using the **common_directories** [Stack
 Parameter](docker.md#stack-parameters).
-
-### Default environment variables
-
-For a complete list of the default available environment variables take a look
-in the [available environment variables](docker.md#environment-variables)
-section.
 
 ### SSL support
 

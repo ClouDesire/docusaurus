@@ -134,7 +134,7 @@ and product name.
 
 The Distributor can access to his catalog by clicking on the namesake menu item.
 
-![distributor catalog](/img/docs/3.1-distributor-catalog.png)]
+![distributor catalog](/img/docs/3.1-distributor-catalog.png)
 
 By clicking on the "assign" button is possible to assign the specific product to
 a Reseller: a dialog is proposed, where the Distributor can search a Reseller
@@ -189,7 +189,7 @@ his Resellers' channels. This functionality is provided by the _Proceeds_ view,
 where is possible to filter by date-interval (also having the partial totals in
 the last records pagination) and by Reseller name.
 
-![distributor realtime proceeds](/img/docs/7-distributor-proceeds.png)]
+![distributor realtime proceeds](/img/docs/7-distributor-proceeds.png)
 
 ## Reseller functionalities
 
@@ -226,7 +226,7 @@ The Reseller can also easily access to a real-time **sales reports**. This
 functionality is provided by the _Proceeds_ view, where is possible to filter by
 date-interval (also having the partial totals in the last records pagination).
 
-![](/img/docs/12-reseller-proceeds.png)]
+![](/img/docs/12-reseller-proceeds.png)
 
 ### Automated distributor/reseller marketplace creation
 
@@ -235,8 +235,8 @@ distributor / reseller marketplace.
 
 By default, the platform creates URLs following this pattern:
 
-* reseller marketplaces: https://_reseller\_unique\_username_.**resellers**.parent\_domain\_name.com
-* distributor marketplaces: https://_distributor\_unique\_username_.**distributors**.parent\_domain\_name.com
+* reseller marketplaces: `https://username.resellers.parent.tld`
+* distributor marketplaces: `https://username.distributors.parent.tld`
 
 In order to be able to activate the above mechanism, the platform should be able
 to dynamically create DNS records for the _parent\_domain\_name_ (a wildcard SSL

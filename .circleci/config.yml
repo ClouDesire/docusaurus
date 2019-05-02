@@ -55,9 +55,14 @@ jobs:
             - vendor/bundle
 
       - run:
-          name: Test
-          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/'
+          name: Test markdown
+          command: bundle exec mdl -s mdl-rules.rb docs
+          when: always
 
+      - run:
+          name: Test html output
+          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/'
+          when: always
   
   deploy:
     docker:

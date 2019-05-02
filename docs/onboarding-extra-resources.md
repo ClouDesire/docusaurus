@@ -7,7 +7,7 @@ sidebar_label: Extra Resources
 In this section you will learn what extra resources are and how you can add them
 to your product plans.
 
-## What is an Extra Resource?
+## What is an Extra Resource
 
 Extra Resources refer to _goods_ or _services_ which can be sold together with
 the application (for example, a 10-days pack of technical support, hardware
@@ -137,21 +137,25 @@ To retrieve the _Extra Resources Values_ specified by the customer during the
 order placement, you can fetch the _Subscription_ resource using the [Cloudesire
 API](api.md):
 
-    GET /api/subscription/{id} HTTP/1.1
+```http
+GET /api/subscription/{id} HTTP/1.1
+```
 
 The response will contain the information explained in [this
 section](syndication.md#retrieve-the-subscription-resource-after-a-subscription-created),
 plus the `billingItems` property, which contains the chosen value for the extra
 resource.
 
-    HTTP/1.1 200 OK
-    Content-Type: application/json
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
 
-    {
-        ...
-        "billingItems": {
-            "billingItem/1": 100,
-            "billingItem/2": 50,
-        },
-        ...
-    }
+{
+    ...
+    "billingItems": {
+        "billingItem/1": 100,
+        "billingItem/2": 50,
+    },
+    ...
+}
+```
