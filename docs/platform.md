@@ -26,92 +26,62 @@ The main components of the Cloudesire platform can be summarized as follows:
 
 Cloudesire Backend modules contains:
 
-* **CMW**: it's the core of Cloudesire, handles most of the business logic
-  related to the catalog, customers, subscriptions, invoicing.
-* **Deployer**: it is used to create a new cloud instance for each purchased
-  application, to instantiate the required virtual resources and to monitor
-  step-by-step the deployment status: if something goes wrong, it will retry
-  until success. The deployment process is described
-  [here](platform.md#understand-the-vm-deployment-process). Includes a *Cloud
-  Abstraction Layer*, a set of connection drivers, used to interact with private
-  or public cloud providers APIs. It provides both heterogeneous hypervisors
-  support (KVM, Xen, vmware) and public cloud connectors (see the list
-  [here](clouds.md)).
-  It is capable of taking and restoring disk snapshot for backup purposes.
-* **Monitor**: it consists in a scalable repository of system and application
-  metrics that also provides aggregated real-time statistics and graphs.
-* **VM-Agent**: a tiny software component that is running inside every VM mnaged
-  by the _Deployer_. It push the IaaS metrics (i.e. CPU, Network, RAM, SSD
-  usage) to the *Monitor* module.
-* **DNS**: provides the remote access of the applications and a custom
-  [application endpoint](docker.md#endpoints) for each Docker application.
-* **Hubspot-connector**: allow the integration of Cloudesire user-base to the
+* **CMW**: the core of Cloudesire, handles most of the business logic related to
+  the catalog, customers, subscriptions and billing.
+* **Deployer**: manage cloud resources for each purchased Docker applications
+  and bare VMs. The deployment process is described [in the next
+  chapter](platform.md#understand-the-vm-deployment-process). It leverage
+  open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
+  [Public and Private cloud providers](clouds.md). It also handles [backup and
+  restore](backup.md) processes.
+* **Openstack-connector**: enables the provisioning of new openstack tenants
+  (users and project) upon customer order placement, for both prepaid and pay
+  per use billing.
+* **Monitor**: an API that exposes system and application for statistics and
+  real-time graphs. Data store is based on the open-source [Prometheus
+  monitoring](https://prometheus.io/) system. System metrics are collected via
+  the open-source [node-exporter](https://github.com/prometheus/node_exporter)
+* **Metrics-exporter**: hook bandwidth metrics gathered from public cloud
+  providers into the Monitor for pay-per-use bandwidth consumption.
+* **Logger**: an API that expose VM logs. Data store is based on the open-source
+  [graylog](https://www.graylog.org/) logging platform.
+* **Marketplace-api**: enables real-time customization of parent, distribution
+  and reseller marketplaces (logo, description, theme, etc.)
+* **Hubspot-connector**: allow the integration of Cloudesire user-base into the
   Hubspot CRM
 * **Microsoft-connector**: allow the integration of Cloudesire with Microsoft
   CSP to enable the selling of Microsoft licenses and Azure resources
 * **Kong-connector**: allow the integration of Cloudesire with Kong API
   management solution to enable selling of API products into the marketplace
+* **Feedback-api**: an API to collect user support requests and forward them to
+  ticket systems.
 * **Keycloak**: enables SSO capabilities for marketplace users
+* **cassetto**: manage catalog resources (logos, screenshots, etc.) on object
+  storage systems.
+* **Janine**: open-source PDF invoice generator
+* **Vivace**: API to calculate a background color from an image (used
+  for products logo into the marketplace)
 
-### Understand the VM deployment process
 
-The deployment process on a specific cloud provider follows this workflow:
+### Deployer workflow
 
-* Cloudesire calls a cloud provider chosen by the vendor asking for a **VM
-  instantiation** (through the cloud provider APIs), having a specific "size"
-  defined by the vendor (i.e. 2 cores, 1GB RAM)
-* Cloudesire attaches a **data disk** to the previously created VM, having the
-  size defined by the vendor
-* Cloudesire installs all the **application stack** (databases, application
-  servers, interpreters, libraries, etc.) needed by the vendor's application for
-  the correct execution (the application stack is declared by the vendor in the
-  [onboarding process](onboarding.md))
-* Cloudesire installs the **vendor's application** and initializes the related
-  databases into the VM instance during the steps above mentioned
-* Cloudesire creates a specific **DNS entry** in order to make the application
-  reachable by the customer (e.g. application-123.apps.cloudesire.com)
-* the end user (customer of the given application) receives a notification (via
-  email and in its own control panel interface) with all the instructions needed
-  to access its own instance of the application he paid for (URL, default login
-  and password)
+Deployer implements a state-machine to manage the deployment process on a
+specific cloud provider, following this workflow for Docker applications:
 
-The deployment process of **legacy applications** (i.e. MS Windows desktop
-executables) that doesn't have an automatic and _unattended_ setup follows a
-different workflow: in this scenario, a pre-configured windows VM template is
-cloned by Cloudesire for each order. On the opposite, if the Windows desktop
-application provides an unattended setup, Cloudesire can follow all the
-previously described workflow, but the URL provided to the customer refers to a
-**remote desktop connection** (i.e. VNC, rdesktop)
+* Check prerequisites, depending on the cloud provider, e.g. existence of a
+  particular network, management of ssh key, security groups and general
+  firewall rules
+* Creates a new **VM** (through the cloud provider APIs), having a specific
+  "size" defined by the vendor (i.e. 2 cores, 1GB RAM)
+* Creates and attaches a **data disk** to the VM, where application and user
+  data will be stored
+* Creates one or more **DNS entry** to make the application reachable by the
+  customer (e.g. application-123.apps.cloudesire.com)
+* Configures the base system and manage the necessary Docker containers as
+  declared by the software vendor during the [onboarding process](onboarding.md)
+* End-user receives a notification (via email and in its own control panel
+  interface) with all the instructions needed to access its own instance of the
+  application he paid for (URL, default login and password)
 
-### How the snapshot backups works
-
-During the [deployment process](platform.md#understand-the-vm-deployment-process),
-Cloudesire attaches a _data-disk_ to the previously created VM in which
-application source code and data (i.e. databases and uploads) are stored.
-
-The backup process follows the following workflow:
-
-* VM shutdown
-* data disk snapshot execution (using the cloud provider APIs)
-* VM restart
-
-The restore process follows the following workflow:
-
-* VM shutdown
-* data-disk detachment and replacement with the previously stored snapshot
-  (using the cloud provider APIs)
-* VM restart
-
-During these processes, Docker applications may not be accessible (the downtime
-duration depends on the cloud provider execution time for snapshots/restore
-operations).
-
-Before starting a backup, all the application data will be copied to this new
-disk, on which the snapshot will be subsequently executed. In this way, the
-application will be accessible during the snapshot creation and no shutdown of
-the VM will be required.
-
-In the same way, the snapshot restore operation will be executed on this new
-disk, and once it is ready the two disks will be switched. In this way, the
-application will be accessible during the snapshot restoring and no shutdown of
-the VM will be required.
+Deployer also manage the provisioning of bare VM products, but in this case no
+data disk will be attached and no configuration take place into the VM.
