@@ -134,7 +134,7 @@ and product name.
 
 The Distributor can access to his catalog by clicking on the namesake menu item.
 
-![distributor catalog](/img/docs/3.1-distributor-catalog.png)]
+![distributor catalog](/img/docs/3.1-distributor-catalog.png)
 
 By clicking on the "assign" button is possible to assign the specific product to
 a Reseller: a dialog is proposed, where the Distributor can search a Reseller
@@ -189,7 +189,7 @@ his Resellers' channels. This functionality is provided by the _Proceeds_ view,
 where is possible to filter by date-interval (also having the partial totals in
 the last records pagination) and by Reseller name.
 
-![distributor realtime proceeds](/img/docs/7-distributor-proceeds.png)]
+![distributor realtime proceeds](/img/docs/7-distributor-proceeds.png)
 
 ## Reseller functionalities
 
@@ -226,7 +226,7 @@ The Reseller can also easily access to a real-time **sales reports**. This
 functionality is provided by the _Proceeds_ view, where is possible to filter by
 date-interval (also having the partial totals in the last records pagination).
 
-![](/img/docs/12-reseller-proceeds.png)]
+![](/img/docs/12-reseller-proceeds.png)
 
 ### Automated distributor/reseller marketplace creation
 
