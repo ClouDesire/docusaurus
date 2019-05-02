@@ -235,8 +235,8 @@ distributor / reseller marketplace.
 
 By default, the platform creates URLs following this pattern:
 
-* reseller marketplaces: https://_reseller\_unique\_username_.**resellers**.parent\_domain\_name.com
-* distributor marketplaces: https://_distributor\_unique\_username_.**distributors**.parent\_domain\_name.com
+* reseller marketplaces: <https://_reseller\_unique\_username_.**resellers**.parent\_domain\_name.com>
+* distributor marketplaces: <https://_distributor\_unique\_username_.**distributors**.parent\_domain\_name.com>
 
 In order to be able to activate the above mechanism, the platform should be able
 to dynamically create DNS records for the _parent\_domain\_name_ (a wildcard SSL

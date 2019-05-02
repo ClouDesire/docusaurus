@@ -12,12 +12,13 @@ them.
 * Admin is the marketplace administrator
 * Supervisor is in charge of reviewing contents on the marketplace.
 * Vendor is who sell products on the marketplace
-* Distributor is who maintain catalogs of vendors products from where Resellers pick products
+* Distributor is who maintain catalogs of vendors products from where Resellers
+  pick products
 * Reseller is who resell products on their own marketplace
 * Customer is who buy products
 
 | Feature                   | Superadmin | Admin | Supervisor | Vendor | Distributor | Reseller | Customer |
-|---------------------------|------------|-------|------------|--------|-------------|----------|----------|
+| ------------------------- | ---------- | ----- | ---------- | ------ | ----------- | -------- | -------- |
 | Platform Configuration    | V          |       |            |        |             |          |          |
 | Platform Debug            | V          |       |            |        |             |          |          |
 | Marketplace Customization | V          | V     |            |        | V           | V        |          |

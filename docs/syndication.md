@@ -319,7 +319,7 @@ Content-Type: application/json; charset=utf-8
     "category": "VIDEO"
     },
 ]
-```    
+```
 
 Possible values for the _category_ field are: `APP`, `PASSWORD_RESET`,
 `DOCUMENTATION`, `VIDEO`. Please note that an endpoint with the category `APP`

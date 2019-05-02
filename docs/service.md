@@ -20,7 +20,6 @@ A service can be marked as provisioned:
 * manually by the vendor in the subscription page
 * via an API integration like a [syndicated product](syndication.md).
 
-
 ## FAQ
 
 * Why creating a specific product for something very similar to a syndicated product?

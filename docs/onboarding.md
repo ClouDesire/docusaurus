@@ -85,7 +85,7 @@ the top right at any time.
   descriptions that no-one is going to read entirely. Bullets can be very useful
   to avoid long paragraphs. This is the first thing customers will read about
   your product, so please make sure it's clear, catchy and always without typos.
-  
+
 > When localization support is enabled on the marketplace, you can see a flag
 > around each localized field to switch languages. **Remember to fill all
 > available languages**!
@@ -271,10 +271,12 @@ metric.
 
 The format of the metric data should be in JSON format:
 
-    {
-        "metricsName": "current_users",
-        "value": 3.0
-    }
+```json
+{
+    "metricsName": "current_users",
+    "value": 3.0
+}
+```
 
 ### Configuration Parameters
 
@@ -325,11 +327,10 @@ _Subscription_ object:
 ```http
 GET /api/subscription/2388 HTTP/1.1
 
-
 {
     "id": 123,
     "configurationParameters": {
-    "configurationParameter/2095": "param1 value", 
+    "configurationParameter/2095": "param1 value",
     "configurationParameter/2096": "param2 value"
     }
 }

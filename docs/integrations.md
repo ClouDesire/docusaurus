@@ -22,8 +22,4 @@ an order in US, Canada and EU.
 ### How
 
 Switch the platform configuration `vatService` to `TAXJAR` and provide a valid
-token as an environment variable
-
-    SECRET_TAXJAR_API_TOKEN
-
-
+token as an environment variable `SECRET_TAXJAR_API_TOKEN`.

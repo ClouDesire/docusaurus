@@ -30,4 +30,3 @@ We publish most of the non-core technologies of the Cloudesire platform.
   JVM client for Microsoft Partner Center REST API
 * [vivace](https://github.com/ClouDesire/vivace): expose node-vibrant image
   analysis results via JSON API
-  
