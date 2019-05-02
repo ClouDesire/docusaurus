@@ -78,19 +78,19 @@ up, similar to the one in the following picture:</p>
 <h3><a class="anchor" aria-hidden="true" id="descriptions"></a><a href="#descriptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Descriptions</h3>
 <p>The <em>General</em> tab contains the following fields:</p>
 <ul>
-<li><em>Name</em>: this is the name of the plan and will be shown to customers, keep it
+<li><strong>Name</strong>: this is the name of the plan and will be shown to customers, keep it
 short and easy to understand. For example good plans could be
 gold/silver/bronze, basic/pro/enterprise, monthly/yearly</li>
-<li><em>Tag</em>: colored ribbon that is useful to attract customer attention (e.g. 50%
+<li><strong>Tag</strong>: colored ribbon that is useful to attract customer attention (e.g. 50%
 off!)</li>
-<li><em>Description</em>: in this field you need to describe the peculiarities of this
+<li><strong>Description</strong>: in this field you need to describe the peculiarities of this
 specific plan</li>
-<li><em>Subheader</em>: a text that is shown on the order summary box on the marketplace</li>
-<li><em>Weight</em>: alter the ordering of plans when they are listed (lower weight will
+<li><strong>Subheader</strong>: a text that is shown on the order summary box on the marketplace</li>
+<li><strong>Weight</strong>: alter the ordering of plans when they are listed (lower weight will
 float to the top of lists, while heavier products will sink)</li>
-<li><em>Published</em> (yes/no): when active this plan is available for purchasing on the
+<li><strong>Published</strong> (yes/no): when active this plan is available for purchasing on the
 marketplace</li>
-<li><em>External ID</em>: your identifier for this particular plan (useful to recognise
+<li><strong>External ID</strong>: your identifier for this particular plan (useful to recognise
 it when consuming API)</li>
 </ul>
 <p>This is an example configuration of a plan in the <em>General</em> tab:</p>
@@ -105,49 +105,52 @@ previous example configuration:</p>
 <h3><a class="anchor" aria-hidden="true" id="pricing-model"></a><a href="#pricing-model" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pricing model</h3>
 <p>The <em>Pricing</em> tab contains the main setting to adjust the billing of a plan:</p>
 <ul>
-<li><em>Auto-renewal</em> (yes/no): when activated, the subscription of the user that
+<li><strong>Auto-renewal</strong> (yes/no): when activated, the subscription of the user that
 chose this plan will automatically renew at the expire date. The customer
 should request an unsubscribe before the renew take place in order to avoid
 renewal</li>
+<li><strong>IaaS billing</strong> (Prepaid/Pay as you go): if IaaS costs should be paid in
+advance by the customer (prorated for the entire billing period) or pay per
+use (pay for real usage at the end of billing period or upon user termination)</li>
 </ul>
-<p>The <em>Pricing model</em> (dropdown) enables to select from a variety of options:</p>
+<p>The <strong>Pricing model</strong> dropdown enables to select from a variety of options:</p>
 <ul>
-<li><em>Renewable every N months</em>: you can adjust billing frequency (how often an
+<li><strong>Renewable every N months</strong>: you can adjust billing frequency (how often an
 invoice is emitted) and <em>minimum order duration</em> (how long a customer is
 committed to pay). <em>Recurring price</em> is charged at billing frequency, while
 <em>One-off price</em> is charged only at the first purchase (for further
 information see <a href="/docs/billing.html">this section</a>)</li>
-<li><em>Short duration not renewable</em>: useful for services that are meant to be
+<li><strong>Short duration not renewable</strong>: useful for services that are meant to be
 used on-demand, e.g. a webinar session.</li>
-<li><em>Everlasting</em>: a subscription for this plan doesn't have an expiration date
+<li><strong>Everlasting</strong>: a subscription for this plan doesn't have an expiration date
 and can be terminated only by customer choice (e.g. a one-shot charge for
 buying a custom CMS theme)</li>
-<li><em>Contact form only</em>: a pricing for this plan is undefined and the customer
+<li><strong>Contact form only</strong>: a pricing for this plan is undefined and the customer
 cannot place an order for it but can ask for more information to you</li>
-<li><em>Free</em>: this plan is for products free to use (e.g. open-source)</li>
+<li><strong>Free</strong>: this plan is for products free to use (e.g. open-source)</li>
 </ul>
-<p>The <em>Configurations</em> tab contains additional settings like:</p>
+<p>The <strong>Configurations</strong> tab contains additional settings like:</p>
 <ul>
-<li><em>Trial mode</em>: if you want to provide a trial period for this plan to your
+<li><strong>Trial mode</strong>: if you want to provide a trial period for this plan to your
 prospect. For Managed products you are going to be charged for the required
 cloud resources needed to run the application
 <ul>
 <li>Credit card (not) required: you can ask or not the customer to provide a
 valid credit card (without charging anything) in order to request a trial</li>
 </ul></li>
-<li><em>Trial length</em>: when trial is enabled, how many days the trial can last. At
+<li><strong>Trial length</strong>: when trial is enabled, how many days the trial can last. At
 any time the customer can request to upgrade to a paid plan. Upgrade to paid
 can happen automatically at the end of trial period if <em>Auto-Renewal</em> is
 enabled (the customer can unsubscribe without any costs before the end of the
 trial)</li>
-<li><em>Coupon configuration</em>: whether using coupons is globally available for this
+<li><strong>Coupon configuration</strong>: whether using coupons is globally available for this
 plan or not. An option to require a coupon in order to buy a plan is also
 available</li>
-<li><em>Upgrades available</em>: wheter a subscription of this plan can be upgraded to
+<li><strong>Upgrades available</strong>: wheter a subscription of this plan can be upgraded to
 another one (e.g. upgrades are not feasible or are without meaning)</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="extra-resources"></a><a href="#extra-resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extra-Resources</h3>
-<p><em>Extra-resources</em> are goods or services which can be sold together with the
+<p>Extra-resources are goods or services which can be sold together with the
 product. Examples are a 10-days pack of technical support, some hardware
 components.</p>
 <p>In this section it's possible to configure the price ranges for each
@@ -155,13 +158,13 @@ Extra-Resource. For further information look at the
 <a href="/docs/onboarding-extra-resources.html">Extra-Resources</a> section.</p>
 <h3><a class="anchor" aria-hidden="true" id="advanced-settings"></a><a href="#advanced-settings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Settings</h3>
 <ul>
-<li><em>Configuration Parameters</em>: enable or disable configuration parameters that
+<li><strong>Configuration Parameters</strong>: enable or disable configuration parameters that
 should have been already defined at product level. More details on the
 <a href="/docs/onboarding.html#configuration-parameters">Configuration Parameters</a> section.</li>
-<li><em>Integration Metadata</em>: a key/value list where you can put custom data,
+<li><strong>Integration Metadata</strong>: a key/value list where you can put custom data,
 especially useful when developing integration for syndicated applications.</li>
 </ul>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-3-27 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding.html"><span class="arrow-prev">← </span><span>Onboarding a new product</span></a><a class="docs-next button" href="/docs/pricing-models.html"><span>Pricing Models</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#edit-a-product-plan">Edit a product plan</a><ul class="toc-headings"><li><a href="#descriptions">Descriptions</a></li><li><a href="#pricing-model">Pricing model</a></li><li><a href="#extra-resources">Extra-Resources</a></li><li><a href="#advanced-settings">Advanced Settings</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-2 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding.html"><span class="arrow-prev">← </span><span>Onboarding a new product</span></a><a class="docs-next button" href="/docs/pricing-models.html"><span>Pricing Models</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#edit-a-product-plan">Edit a product plan</a><ul class="toc-headings"><li><a href="#descriptions">Descriptions</a></li><li><a href="#pricing-model">Pricing model</a></li><li><a href="#extra-resources">Extra-Resources</a></li><li><a href="#advanced-settings">Advanced Settings</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
