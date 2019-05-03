@@ -30,7 +30,7 @@ Cloudesire Backend modules contains:
   the catalog, customers, subscriptions and billing.
 * **Deployer**: manage cloud resources for each purchased Docker applications
   and bare VMs. The deployment process is described [in the next
-  chapter](platform.md#understand-the-vm-deployment-process). It leverage
+  chapter](platform.md#deployer-workflow). It leverage
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
   [Public and Private cloud providers](clouds.md). It also handles [backup and
   restore](backup.md) processes.

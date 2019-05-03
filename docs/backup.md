@@ -5,7 +5,7 @@ sidebar_label: Backups
 ---
 
 Only for Docker applications, during the [deployment
-process](platform.md#understand-the-vm-deployment-process), the platform
+process](platform.md#deployer-workflow), the platform
 attaches a **data-disk** to the VM in which application source code and user
 data resides.
 
