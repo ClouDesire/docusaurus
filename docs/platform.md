@@ -28,9 +28,9 @@ Cloudesire Backend modules contains:
 
 * **CMW**: the core of Cloudesire, handles most of the business logic related to
   the catalog, customers, subscriptions and billing.
-* **Deployer**: manage cloud resources for each purchased Docker applications
+* **Deployer**: manages cloud resources for each purchased Docker application
   and bare VMs. The deployment process is described [in the next
-  chapter](platform.md#deployer-workflow). It leverage
+  chapter](platform.md#deployer-workflow). It leverages
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
   [Public and Private cloud providers](clouds.md). It also handles [backup and
   restore](backup.md) processes.
@@ -47,11 +47,11 @@ Cloudesire Backend modules contains:
   [graylog](https://www.graylog.org/) logging platform.
 * **Marketplace-api**: enables real-time customization of parent, distribution
   and reseller marketplaces (logo, description, theme, etc.)
-* **Hubspot-connector**: allow the integration of Cloudesire user-base into the
+* **Hubspot-connector**: allows the integration of Cloudesire user-base into the
   Hubspot CRM
-* **Microsoft-connector**: allow the integration of Cloudesire with Microsoft
+* **Microsoft-connector**: allows the integration of Cloudesire with Microsoft
   CSP to enable the selling of Microsoft licenses and Azure resources
-* **Kong-connector**: allow the integration of Cloudesire with Kong API
+* **Kong-connector**: allows the integration of Cloudesire with Kong API
   management solution to enable selling of API products into the marketplace
 * **Feedback-api**: an API to collect user support requests and forward them to
   ticket systems.
@@ -83,5 +83,5 @@ specific cloud provider, following this workflow for Docker applications:
   interface) with all the instructions needed to access its own instance of the
   application he paid for (URL, default login and password)
 
-Deployer also manage the provisioning of bare VM products, but in this case no
+Deployer also manages the provisioning of bare VM products, but in this case no
 data disk will be attached and no configuration take place into the VM.
