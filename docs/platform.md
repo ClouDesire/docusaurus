@@ -62,7 +62,6 @@ Cloudesire Backend modules contains:
 * **Vivace**: API to calculate a background color from an image (used
   for products logo into the marketplace)
 
-
 ### Deployer workflow
 
 Deployer implements a state-machine to manage the deployment process on a
