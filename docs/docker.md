@@ -88,7 +88,7 @@ The Advanced Settings pop-up provides the following sections:
   accessed at runtime by the application. More info in [this
   section](docker.md#environment-variables).
 * **Stack Parameters**: some language-specific parameters to provide to the
-  [Deployer Module](platform.md#understand-the-vm-deployment-process) (e.g. fine
+  [Deployer Module](platform.md#deployer-workflow) (e.g. fine
   tuning of interpreters or application server). More info in [this
   section](docker.md#stack-parameters).
 
@@ -222,7 +222,7 @@ The following elements are available:
 * **Application Endpoints:** the actual values of the [application
   endpoints](docker.md#endpoints) previously defined by the vendor
 * **Deployment Log:** shows the [deployment
-  steps](platform.md#understand-the-vm-deployment-process), updated in real-time
+  steps](platform.md#deployer-workflow), updated in real-time
 * **Debug:** provides the real-time application and/or system logs, collected
   from the virtual machines
 * **Charts:** a series of real-time monitoring charts, grouped into _Disk_ /

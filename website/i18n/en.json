@@ -25,6 +25,10 @@
         "title": "Cloudesire REST API Introduction",
         "sidebar_label": "REST API Introduction"
       },
+      "backup": {
+        "title": "VM backups",
+        "sidebar_label": "Backups"
+      },
       "billing": {
         "title": "Billing Features",
         "sidebar_label": "Billing"
