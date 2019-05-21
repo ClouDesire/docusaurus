@@ -10,7 +10,7 @@ setTimeout( function () {
     "feedbackEndpoint" :"https://demo-backend.cloudesire.com/feedback/ticket",
     "categories": [
       "Generic tech support", "API"
-    ]
+    ],
+    "tags": ["docs"]
   });
-  console.log(div);
 });
