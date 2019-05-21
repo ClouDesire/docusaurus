@@ -11,7 +11,7 @@ resources provisioning, billing and invoicing.
 
 ## New products onboarding
 
-This section is best suited for software vendors that wants to discover the
+This section is best suited for software vendors that want to discover the
 Cloudesire onboarding functionality.
 
 * [Onboarding overview](onboarding.md): the first steps to create a new product
@@ -32,7 +32,7 @@ are slightly different for each case:
   workflow (e.g. formation, consultancy)
 
 We supports additional product types that can't be directly published by
-software vendors (but assigned from platform administrators):
+software vendors, but can be assigned from platform administrators:
 
 * [Microsoft CSP](csp-product.md)
 * [Bare VM](vm.md)
@@ -40,6 +40,6 @@ software vendors (but assigned from platform administrators):
 
 ## Discover the platform
 
-The remaining sections of the documentation describes in detail the most
+The remaining sections of the documentation describe in detail the most
 interesting features of the platform and inner workings. Feel free to browse
 around the left menu on the page.
