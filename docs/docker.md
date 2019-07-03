@@ -172,16 +172,19 @@ that you could use:
 * `CD_USER_SURNAME` surname of the customer;
 * `CD_USER_USER_NAME` username of the customer;
 
-##### VirtualHost placeholder in environment variables
+##### Configurable placeholders in environment variables
 
 It is possible to declare a variable with a placeholder value that will be
-replaced with the VirtualHost at runtime.
+replaced with the chosen value at runtime.
 
 * `%VIRTUAL_HOST%` will be replaced with the virtual host (e.g.:
   _example-123.apps.cloudesire.com_)
 
 It is also accepted: `http://%VIRTUAL_HOST%/` that will be replaced with the
 full FQDN.
+
+* `%USER_EMAIL%` will be replaced with the subscription buyer email address
+  (e.g.: _buyer@addre.ss_)
 
 Additional information is available into the [Docker section](docker.md).
 
