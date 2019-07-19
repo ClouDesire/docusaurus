@@ -42,5 +42,3 @@ Obtain the credentials on the [Azure portal](https://portal.azure.com):
 * Go to the `Subscriptions` section and select your subscription. In the `Access
   control (IAM)` section, select ` Add a role assignment `. Create a new role
   assignment with role `Contributor` and as `Service principal` the app name
-
-
