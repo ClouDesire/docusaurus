@@ -62,6 +62,12 @@ Once the product is imported, it can be customized as with any other
 product present in the catalog (logo, description, and so on), and additional
 [Extra Resources](onboarding-extra-resources.md) can be added at your choice.
 
+### Trial support
+
+To enable trial support for a specific plan, an integration metadata entry should be
+configured with key `partnerCenterTrialOfferId` and as value the preferred `offer-id`
+of type TRIAL for the same product type.
+
 [Office 365 Business]: https://demo.cloudesire.com/1280/office-automation/office-365
 [Cassandra]: https://demo.cloudesire.com/1727/office-automation/cassandra-on-azure
 [Wordpress]: https://demo.cloudesire.com/1248/cms/wordpress-on-azure-arm-template
