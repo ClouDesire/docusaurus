@@ -39,6 +39,7 @@ Obtain the credentials on the [Azure portal](https://portal.azure.com):
 
 * Create a new `app` in `Azure Active Directory` - `App registrations` section
 * Create a new `Client secret` for the app
-* Go to the `Subscriptions` section and select your subscription. In the `Access
-  control (IAM)` section, select ` Add a role assignment `. Create a new role
-  assignment with role `Contributor` and as `Service principal` the app name
+* Go to the `Subscriptions` section and select your subscription. In the
+  `Access control (IAM)` section, select ` Add a role assignment `. Create a new
+  role assignment with role `Contributor` and as `Service principal` the app
+  name
