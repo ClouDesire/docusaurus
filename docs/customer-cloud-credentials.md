@@ -30,7 +30,7 @@ console](https://console.aws.amazon.com/iam/home), with permission
   the `Azure Active Directory` section
 * Credential: the `Client secret` into the `App registration` section
 * Endpoint: an URL in the form
-  `https://management.azure.com/subscriptions/<subscription id>`
+  `https://management.azure.com/subscriptions/<subscription-id>`
 * OAuth endpoint: an URL in the form,
   `https://login.microsoftonline.com/<tenant-id>/oauth2/token`. The `Tenant-id`,
   into the `App registration` section (also called `Directory id`)
