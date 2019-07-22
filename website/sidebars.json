@@ -12,7 +12,8 @@
       "csp-product",
       "api-product",
       "vm",
-      "openstack"
+      "vdc-openstack",
+      "vdc-vcloud-director"
     ],
     "API": [
       "api",

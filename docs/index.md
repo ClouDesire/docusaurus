@@ -36,7 +36,8 @@ software vendors, but can be assigned from platform administrators:
 
 * [Microsoft CSP](csp-product.md)
 * [Bare VM](vm.md)
-* [OpenStack tenants](openstack.md)
+* [OpenStack tenants](vdc-openstack.md)
+* [VMware vCloud Director tenants](vdc-vcloud-director.md)
 
 ## Discover the platform
 
