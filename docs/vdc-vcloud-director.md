@@ -8,7 +8,7 @@ Cloudesire platform enables selling of vCloud director tenants via a native API
 integration.
 
 A special product on the marketplace is available for purchase that
-automatically provision a VDC organization with admin access.
+automatically provisions a VDC organization with admin access.
 
 To achieve this, administrator credentials of a vCloud Director platform is
 necessary to be able to dynamically create new VDCs.
@@ -21,7 +21,7 @@ Both *prepaid* and *pay-as-you-go* pricing models are supported.
 ## Prepaid pricing model
 
 In *prepaid* plans, customer selects how many CPU cores, GB of memory, GB of
-disk space and IP addresses want to buy. In this case, project quotas are
+disk space and IP addresses he wants to buy. In this case, project quotas are
 automatically setup to ensure that the customer will not acquire too many
 resources.
 
