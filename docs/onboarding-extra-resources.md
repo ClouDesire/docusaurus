@@ -59,11 +59,10 @@ Quantity bought 15 users, total amount: 15 units * € 3,00 = € 45,00
 
 ### Stairstep scheme
 
-Stairstep scheme means that the total cost is calculated based on price tier;
-charge is not per unit.
+Stairstep scheme means that the total cost is calculated based on the price tier
+and not per unit.
 
-Therefore, vendors will propose different unit prices for various quantities of
-an item.
+Vendors will propose different unit prices for various quantities of an item.
 
 Example:
 
@@ -81,7 +80,17 @@ Detailed instructions, explaining how to specify and manage Extra Resources
 during the onboarding process, are provided in [this
 section](glossary.md#extra-resources).
 
-## Create and add an Extra Resource to your Product Plans
+#### Tagged stairstep ranges
+
+A stairstep range can optionally be tagged so that the customer will select the tag
+instead of the quantity for the Extra Resource on the marketplace.
+
+The following screenshot shows an example on how a tagged Extra Resource Value would
+appear on the marketplace product page:
+
+![Stairstep extra resource on marketplace](assets/extra-resources/stairstep-tagged.png)
+
+## Create an Extra Resource
 
 To define a new Extra Resource, you need to have already created a product in
 your catalog with at least one plan. Over to the plan where you want to define
@@ -131,7 +140,7 @@ specific Product Plan.
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
-## Retrieve Extra Resources quantities for an active subscription via API
+## Extra Resources quantities via API
 
 To retrieve the _Extra Resources Values_ specified by the customer during the
 order placement, you can fetch the _Subscription_ resource using the [Cloudesire
