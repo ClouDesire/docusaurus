@@ -45,6 +45,10 @@
         "title": "CSP products onboarding",
         "sidebar_label": "Microsoft CSP"
       },
+      "customer-cloud-credentials": {
+        "title": "Customer Cloud Credentials",
+        "sidebar_label": "Customer Cloud Credentials"
+      },
       "docker": {
         "title": "Docker applications onboarding",
         "sidebar_label": "Docker applications"
@@ -89,10 +93,6 @@
         "title": "Open Source projects",
         "sidebar_label": "Open Source"
       },
-      "openstack": {
-        "title": "Selling and provisioning of OpenStack tenants",
-        "sidebar_label": "OpenStack tenants"
-      },
       "platform-users": {
         "title": "Users, functionalities and permissions",
         "sidebar_label": "Users and permissions"
@@ -112,6 +112,14 @@
       "syndication": {
         "title": "Onboarding of syndicated applications",
         "sidebar_label": "Syndicated applications"
+      },
+      "vdc-openstack": {
+        "title": "Selling and provisioning of OpenStack tenants",
+        "sidebar_label": "OpenStack tenants"
+      },
+      "vdc-vcloud-director": {
+        "title": "Selling and provisioning of VMware vCloud Director tenants",
+        "sidebar_label": "vCloud tenants"
       },
       "vm": {
         "title": "Bare Virtual-Machines products onboarding",
