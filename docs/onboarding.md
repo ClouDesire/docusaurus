@@ -136,9 +136,8 @@ the top right at any time.
 Plans are used to fine one or more product versions (e.g. silver, gold,
 platinum, etc.): each plan have its billing configuration.
 
-You can find more information about pricing models [here](billing.md).
-
-[Creating a new plan](onboarding-plans.md)
+You can find more information about [pricing models](billing.md) and [how to
+create a new plan](onboarding-plans.md).
 
 ### Metrics
 
