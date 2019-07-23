@@ -85,7 +85,7 @@ section](glossary.md#extra-resources).
 Optionally a stairstep range can be tagged and the customer will select the tag
 instead of the quantity for the Extra Resource on the marketplace.
 
-The following screenshot shows an example on how a tagged Extra Resource Values would
+The following screenshot shows an example on how a tagged Extra Resource Value would
 appear on the marketplace product page:
 
 ![Stairstep extra resource on marketplace](assets/extra-resources/stairstep-tagged.png)
