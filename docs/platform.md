@@ -34,9 +34,12 @@ Cloudesire Backend modules contains:
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
   [Public and Private cloud providers](clouds.md). It also handles [backup and
   restore](backup.md) processes.
-* **Openstack-connector**: enables the provisioning of new openstack tenants
-  (users and project) upon customer order placement, for both prepaid and pay
-  per use billing.
+* **Openstack-connector**: enables the provisioning of new Openstack tenants
+  (users and project) upon customer order placement, in prepaid and
+  pay-as-you-go mode.
+* **vCloud-connector**: enables the provisioning of new VDC (organizations)
+  upon customer order placement on VMware vCloud Director 9.5 infrastructure,
+  in prepaid and pay-as-you-go mode.
 * **Monitor**: an API that exposes system and application for statistics and
   real-time graphs. Data store is based on the open-source [Prometheus
   monitoring](https://prometheus.io/) system. System metrics are collected via
