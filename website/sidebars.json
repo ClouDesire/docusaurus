@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Catalog Onboarding": [
+    "Products Onboarding": [
       "index",
       "onboarding",
       "onboarding-plans",
@@ -14,12 +14,6 @@
       "vm",
       "vdc-openstack",
       "vdc-vcloud-director"
-    ],
-    "API": [
-      "api",
-      "api-java",
-      "api-php",
-      "api-reference"
     ],
     "Platform": [
       "glossary",
@@ -35,6 +29,12 @@
       "integrations",
       "opensource",
       "gdpr"
+    ],
+    "API": [
+      "api",
+      "api-java",
+      "api-php",
+      "api-reference"
     ]
   }
 }
