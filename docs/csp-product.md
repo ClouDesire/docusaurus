@@ -11,10 +11,10 @@ This section describe how to onboard and start selling Microsoft product via its
 [Cloud Solution Provider](https://partner.microsoft.com/en-US/cloud-solution-provider/)
 (CSP) program on the marketplace.
 
-The platform supports one **CSP account** per marketplace, so a registered
-software vendor cannot import and use their own Partner Center credentials. The
-platform administrator configure the credentials, import **CSP products** into
-the marketplace catalog and assign them to a particular software vendor account.
+The platform supports one **CSP account** per marketplace (currently a vendor
+cannot use their own Partner Center credentials). The platform administrator
+configures the credentials, imports **CSP products** into the marketplace
+catalog and assigns them to a particular software vendor account.
 
 Reselling of a particular product by different entities is still possible via
 the [channel management](channel.md) feature.
