@@ -9,44 +9,42 @@ public or private cloud providers (IaaS):
 
 ## Amazon AWS (EC2)
 
-Homepage: https://aws.amazon.com
-
+* [Homepage](https://aws.amazon.com)
 * Support [customer credentials](customer-cloud-credentials.md)
 
 ## Azure
 
-Homepage: https://azure.microsoft.com
-
+* [Homepage](https://azure.microsoft.com)
 * Support for [customer credentials](customer-cloud-credentials.md)
 
 ## FASTcloud
 
-Homepage: https://portal.fastcloud.it
+* [Homepage](https://portal.fastcloud.it)
 
 ## DigitalOcean
 
-Homepage: https://www.digitalocean.com
+* [Homepage](https://www.digitalocean.com)
 
 ## Eng.it Openstack
 
-Homepage: https://dhub-osp.eng.it
+* [Homepage](https://dhub-osp.eng.it)
 
 ## Eng.it VHC
 
-Homepage: https://vcloud.cloudeng.it
+* [Homepage](https://vcloud.cloudeng.it)
 
 ## Enter the Cloud
 
-Homepage: https://www.entercloudsuite.com
+* [Homepage](https://www.entercloudsuite.com)
 
 ## Google Cloud
 
-Homepage: https://cloud.google.com
+* [Homepage](https://cloud.google.com)
 
 ## Openstack
 
-Private and public clouds.
+* Private and public clouds.
 
 ## VMware vCloud Director
 
-Private clouds.
+* Private clouds.
