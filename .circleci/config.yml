@@ -25,7 +25,7 @@ jobs:
       - run:
           name: Build
           command: cd website && yarn build
-      
+
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
@@ -61,9 +61,9 @@ jobs:
 
       - run:
           name: Test html output
-          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/'
+          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/,/dhub-osp.eng.it/'
           when: always
-  
+
   deploy:
     docker:
       - image: circleci/node:8
