@@ -134,9 +134,9 @@
       "Back to cloudesire.com": "Back to cloudesire.com"
     },
     "categories": {
-      "Catalog Onboarding": "Catalog Onboarding",
-      "API": "API",
-      "Platform": "Platform"
+      "Products Onboarding": "Products Onboarding",
+      "Platform": "Platform",
+      "API": "API"
     }
   },
   "pages-strings": {
