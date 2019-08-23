@@ -193,7 +193,7 @@ by the platform and vendors should not worry about it.
 
 The Cloudesire platform has first-class support for **Stripe** payment gateway.
 
-A platform administrator decide which methods of payments are globally available:
+Platform administrators decide which methods of payments are globally available:
 
 * Credit Cards (cards data is handled by Stripe)
 * SEPA direct debit (via Stripe)
