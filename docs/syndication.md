@@ -78,7 +78,7 @@ section](syndication.md#security).
 ### The "Test Events" feature
 
 If you are at the first step of developing an integration, you may find useful
-the "**Test Events"** functionality, available in the _General_ tab into Product
+the "**Test Events"** functionality, available in the hamburger menu into Product
 editing page.
 
 This button will send a test notification to your endpoint, without kicking
