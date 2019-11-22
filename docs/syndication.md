@@ -402,9 +402,14 @@ make sure that your subscription status is aligned with ours.
 
 For example:
 
-* for renewals: check the updated `endDate` field
-* for version upgrade: check the updated `productVersion` field
-* for trial-to-paid upgrade: check both updated `endDate` and `type` (`NORMAL`) fields
+* for renewals: check the updated `subscription.endDate` field, and the last
+  order in `subscription.orders` will have `order.orderType` with a value of
+  `RENEWAL`
+* for product plan upgrades: check the updated `subscription.productVersion`
+  field, and the last order in `subscription.orders` will have `order.orderType`
+  with a value of `SYNDICATED_UPGRADE`
+* for trial-to-paid upgrade: check both updated `endDate` and
+  `subscription.type` with value `NORMAL` instead of `TRIAL`
 
 ## Security
 
