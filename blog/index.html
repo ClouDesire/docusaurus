@@ -75,19 +75,19 @@ export NVM_DIR="/opt/circleci/.nvm"
 <span class="hljs-attr">version:</span> <span class="hljs-number">2</span>
 
 <span class="hljs-attr">jobs:</span>
-<span class="hljs-attr">  build:</span>
-<span class="hljs-attr">    machine:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-attr">build:</span>
+    <span class="hljs-attr">machine:</span> <span class="hljs-literal">true</span>
 
-<span class="hljs-attr">    steps:</span>
-<span class="hljs-bullet">      -</span> <span class="hljs-string">checkout</span>
-<span class="hljs-attr">      - run:</span>
-<span class="hljs-attr">          name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">node@v8.11.3</span>
-<span class="hljs-attr">          command:</span> <span class="hljs-string">|
+    <span class="hljs-attr">steps:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">checkout</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span>
+          <span class="hljs-attr">name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">node@v8.11.3</span>
+          <span class="hljs-attr">command:</span> <span class="hljs-string">|
             ./load-nvm.sh
             nvm install v8.11.3
             nvm alias default v8.11.3
-
-</span><span class="hljs-attr">      - run:</span> <span class="hljs-string">|
+</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">|
           ./load-nvm.sh
           npm version
 </span></code></pre>
@@ -228,7 +228,7 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 <pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger(
 </code></pre>
 <p>wait, where am I? Oh, <code>MyObject</code>, sure</p>
-<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject.class );
+<pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger log = LoggerFactory.getLogger( MyObject<span class="hljs-class">.<span class="hljs-keyword">class</span> )</span>;
 </code></pre>
 <p>done!</p>
 <p>I find it a bit slow, don't you? Let's speed it up:</p>
