@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>cloudesire documentation Blog</title>
-    <updated>2018-11-21T06:00:00Z</updated>
-    <generator>Feed for Node.js</generator>
+    <updated>2018-11-21T06:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest cloudesire documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
@@ -11,9 +11,8 @@
     <entry>
         <title type="html"><![CDATA[How to upgrade node on CircleCI machine executor]]></title>
         <id>https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html">
-        </link>
-        <updated>2018-11-21T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html"/>
+        <updated>2018-11-21T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>CircleCI offers 3 different <a href="https://circleci.com/docs/2.0/executor-types/">executor types</a>: machine, Docker and MacOS. On Linux the best choice would be the docker executor but if you need full control over the job environment you must opt for the machine executor.</p>
 <p>The default machine executor image includes Docker, docker-compose, along with common language tools like nvm for node.<br>
 The issue we have encountered at Cloudesire is that if you need a different version of node you can't just install it via apt because the workspace uses nvm to manage node versions. And you can't just use nvm because on every run CircleCI resets the nvm configuration.</p>
@@ -46,15 +45,15 @@ export NVM_DIR="/opt/circleci/.nvm"
 ]]></summary>
         <author>
             <name>Manuel Mazzuola</name>
+            <email/>
             <uri>https://keybase.io/originof</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Introduction to Traefik reverse proxy @ Container Day 2018, Verona]]></title>
         <id>https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html">
-        </link>
-        <updated>2018-10-29T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/10/29/introduction-traefik.html"/>
+        <updated>2018-10-29T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>I had the opportunity to speak at the Container Day 2018 in Verona, presenting
 the open source Traefik project, a load balancer that helps in exposing web
 services on container-based infrastructures.</p>
@@ -64,15 +63,15 @@ infrastructure to decrease burden of deploying new services.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>https://keybase.io/gionn</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Dependencies caching on local CircleCI builds]]></title>
         <id>https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html">
-        </link>
-        <updated>2018-09-26T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/09/26/circleci-ci-cache-proxy.html"/>
+        <updated>2018-09-26T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>At Cloudesire a couple of years ago we decided to switch from Jenkins to CircleCI. First of all, because we are lazy to self-maintain a server and secondly because it offers affordable prices.</p>
 <p>A great tool CircleCI provides is the <a href="https://circleci.com/docs/2.0/local-cli/">local CLI</a>.<br>
 The <code>circleci</code> commands enable you to reproduce the CircleCI environment locally and run jobs as if they were running on the hosted application for more efficient debugging and configuration in the initial setup phase.<br>
@@ -116,15 +115,15 @@ But wait, why was the file cached even if <code>Cache-Control:nocache</code> is 
 ]]></summary>
         <author>
             <name>Manuel Mazzuola</name>
+            <email/>
             <uri>https://keybase.io/originof</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Selling and provisioning OpenStack tenants]]></title>
         <id>https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html">
-        </link>
-        <updated>2018-08-29T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/08/29/openstack-integration.html"/>
+        <updated>2018-08-29T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>We're delighted to announce that we started the development of a new marketplace
 component to allow the selling of tenants of <a href="https://www.openstack.org/">OpenStack
 powered</a> datacenters.</p>
@@ -159,15 +158,15 @@ the module on our <a href="https://demo.cloudesire.com">demo marketplace</a>.</p
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Automatically remove unused Docker data with systemd]]></title>
         <id>https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html">
-        </link>
-        <updated>2018-08-27T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/08/27/docker-prune-systemd-timer.html"/>
+        <updated>2018-08-27T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>We use Docker <em>A LOT</em> at Cloudesire, and working intensely with it can leave some cruft in <code>/var/lib/docker</code>.</p>
 <p>Fortunately, the Docker CLI supports <a href="https://docs.docker.com/engine/reference/commandline/system_prune/">pruning</a>, which works as a garbage collector for unused objects such as images, containers, volumes, and networks.</p>
 <p>You can try it on a terminal with</p>
@@ -220,15 +219,15 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 ]]></summary>
         <author>
             <name>Matteo Giordano</name>
+            <email/>
             <uri>http://twitter.com/malteo</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Quickly get a logger with IntelliJ live templates]]></title>
         <id>https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html">
-        </link>
-        <updated>2018-04-18T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/04/18/intellij-logger-live-template.html"/>
+        <updated>2018-04-18T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>IntelliJ IDEA is every Java developer's favourite IDE here at Cloudesire, and amongst its powerful features there are <a href="https://www.jetbrains.com/help/idea/creating-and-editing-live-templates.html">Live templates</a>. Let me show you how they work with a simple example.</p>
 <p>Getting a <a href="https://www.slf4j.org/">SLF4J</a> instance for the current class is a matter of typing</p>
 <pre><code class="hljs css language-java"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> Logger
@@ -263,15 +262,15 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 ]]></summary>
         <author>
             <name>Matteo Giordano</name>
+            <email/>
             <uri>http://twitter.com/malteo</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Selling and automated provisioning of Microsoft/Azure products in a SaaS marketplace @ DevOps@Work 2018]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html">
-        </link>
-        <updated>2018-03-27T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/03/27/devops-at-work-2018.html"/>
+        <updated>2018-03-27T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>This is a presentation I held at the of <a href="https://www.eventbrite.it/e/biglietti-devopswork-2018-41708545382">DevOps@Work
 2018</a>
 conference.</p>
@@ -284,15 +283,15 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Continuous Delivery, 5 years later @ Incontro DevOps Italia 2018]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html">
-        </link>
-        <updated>2018-03-15T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/03/15/devops-2018.html"/>
+        <updated>2018-03-15T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>This is a <a href="http://archive.incontrodevops.it/sessions/continuous-delivery-5-anni-dopo/">presentation</a> I held at the six edition of &quot;<a href="http://www.incontrodevops.it/">Incontro DevOps Italia</a>&quot; conference.</p>
 <blockquote>
 <p>How it evolved, and how it continues to evolve the development of the Cloudesire platform, from code to continuous integration, static code analysis, code review processes, automated production provisioning.</p>
@@ -302,15 +301,15 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Managing GCP Projects with Terraform @ GDG DevFest Pisa 0.1]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/15/devfest-2018.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/03/15/devfest-2018.html">
-        </link>
-        <updated>2018-03-15T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/03/15/devfest-2018.html"/>
+        <updated>2018-03-15T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>This is a <a href="https://devfest.gdgpisa.it/schedule/day1?sessionId=158">presentation</a> I held at the first alpha edition of &quot;<a href="https://devfest.gdgpisa.it/">GDG DevFest Pisa</a>&quot; conference.</p>
 <blockquote>
 <p>Create and evolve simple and complex Google Cloud architectures with your text editor and Terraform.</p>
@@ -320,15 +319,15 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
     <entry>
         <title type="html"><![CDATA[Configure logback log level via environment variables]]></title>
         <id>https://docs.cloudesire.com/blog/2018/03/14/logback.html</id>
-        <link href="https://docs.cloudesire.com/blog/2018/03/14/logback.html">
-        </link>
-        <updated>2018-03-14T06:00:00Z</updated>
+        <link href="https://docs.cloudesire.com/blog/2018/03/14/logback.html"/>
+        <updated>2018-03-14T06:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>If you are running a java application with logback inside a docker container, it may be really useful to interact with logging levels via OS environment variables.</p>
 <p>It's simple as declaring a new variable inside your <code>logback.xml</code> file and provide a default value as in the Bash shell, using the &quot;:-&quot; operator.</p>
 <pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">variable</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"CLOUDESIRE_LOG_LEVEL"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"${CLOUDESIRE_LOG_LEVEL:-DEBUG}"</span> /&gt;</span>
@@ -338,6 +337,7 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
+            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
