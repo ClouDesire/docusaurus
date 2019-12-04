@@ -329,8 +329,8 @@ is required, while the others are optional.
 
 #### Providing End User Instructions
 
-Vendors can submit localized messages to customers, for example to provide login
-instructions.
+Vendors can submit localized messages to customers, for example to provide a
+welcome text.
 
 Languages depend on the marketplace, for example in a marketplace with English
 and Italian languages available:
@@ -340,9 +340,38 @@ POST /api/subscription/2388/instructions HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-    "en": "Use your email as login and the password jei9je9y to login",
-    "it": "Utilizza la tua email come login e come password: jei9je9y"
+    "en": "Welcome to your new $application instance! Start by...",
+    "it": "Benvenuto nella tua nuova $applicazione! Per iniziare..."
 }
+```
+
+#### Providing application credentials
+
+Vendors can add credentials for first-time access to the application.
+
+Credentials have a unique `key`, a `value` and a localized `description`. They
+are weighted so they can be returned to the customer in a specified order.
+
+Credentials values are not returned to the vendor after creation.
+
+```http
+POST /api/subscription/2388/credentials HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+[
+  {
+    "key": "username",
+    "value": "user@ma.il",
+    "description": "Login",
+    "weight" 1
+  },
+  {
+    "key": "password",
+    "value": "jei9je9y",
+    "description": "Password",
+    "weight" 2
+  }
+]
 ```
 
 > Consider using [auto-login](syndication.md#auto-login) to improve the customer
