@@ -349,13 +349,15 @@ Content-Type: application/json; charset=utf-8
 
 Vendors can add credentials for first-time access to the application.
 
-Credentials have a unique `key`, a `value` and a localized `description`. They
-are weighted so they can be returned to the customer in a specified order.
+Credentials have a unique `key`, a `value` and a localized (by the `language`
+parameter) `description`. They are weighted so they can be returned to the
+customer in a specified order.
 
-Credentials values are not returned to the vendor after creation.
+Credential values are not returned (they are `null`ed) to the vendor after
+creation.
 
 ```http
-POST /api/subscription/2388/credentials HTTP/1.1
+POST /api/subscription/2388/credentials?language=en HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 [
