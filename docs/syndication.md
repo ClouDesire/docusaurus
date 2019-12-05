@@ -340,14 +340,15 @@ POST /api/subscription/2388/instructions HTTP/1.1
 Content-Type: application/json; charset=utf-8
 
 {
-    "en": "Welcome to your new $application instance! Start by...",
-    "it": "Benvenuto nella tua nuova $applicazione! Per iniziare..."
+    "en": "Welcome to your new application instance! Start by...",
+    "it": "Benvenuto nella tua nuova applicazione! Per iniziare..."
 }
 ```
 
 #### Providing application credentials
 
-Vendors can add credentials for first-time access to the application.
+You can add credentials for the first access to the application, that will be
+shown to the customer after the provisioning is complete.
 
 Credentials have a unique `key`, a `value` and a localized `description`. They
 are weighted so they can be returned to the customer in a specified order.
