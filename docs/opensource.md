@@ -17,8 +17,6 @@ We publish most of the non-core technologies of the Cloudesire platform.
   cookbook to install and use Flyway in CLI mode
 * [docker-keystone](https://github.com/ClouDesire/docker-keystone): ready to use
   keystone Docker image for testing purposes
-* [docker-slapd](https://github.com/ClouDesire/docker-slapd): docker image for
-  OpenLDAP standalone server
 * [docker-webdav](https://github.com/ClouDesire/docker-webdav): docker image for
   Apache2 with webdav module enabled
 * [janine](https://github.com/ClouDesire/janine): generator and archiver of PDF
