@@ -336,17 +336,48 @@ is required, while the others are optional.</p>
 <p>Applications endpoints must be accessible via HTTPS.</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="providing-end-user-instructions"></a><a href="#providing-end-user-instructions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing End User Instructions</h4>
-<p>Vendors can submit localized messages to customers, for example to provide login
-instructions.</p>
+<p>Vendors can submit localized messages to customers, for example to provide a
+welcome text.</p>
 <p>Languages depend on the marketplace, for example in a marketplace with English
 and Italian languages available:</p>
 <pre><code class="hljs css language-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/subscription/2388/instructions</span> HTTP/1.1
 <span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
 <span class="json">{
-    <span class="hljs-attr">"en"</span>: <span class="hljs-string">"Use your email as login and the password jei9je9y to login"</span>,
-    <span class="hljs-attr">"it"</span>: <span class="hljs-string">"Utilizza la tua email come login e come password: jei9je9y"</span>
+    <span class="hljs-attr">"en"</span>: <span class="hljs-string">"Welcome to your new application instance! Start by..."</span>,
+    <span class="hljs-attr">"it"</span>: <span class="hljs-string">"Benvenuto nella tua nuova applicazione! Per iniziare..."</span>
 }
+</span></code></pre>
+<h4><a class="anchor" aria-hidden="true" id="providing-application-credentials"></a><a href="#providing-application-credentials" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Providing application credentials</h4>
+<p>You can add credentials for the first access to the application, that will be
+shown to the customer after the provisioning is complete.</p>
+<p>Credentials have a unique <code>key</code>, a <code>value</code> and a localized <code>description</code>. They
+are weighted so they can be returned to the customer in a specified order.</p>
+<p>Credential values are not returned (they are <code>null</code>ed) to the vendor after
+creation.</p>
+<pre><code class="hljs css language-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/api/subscription/2388/credentials</span> HTTP/1.1
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
+
+<span class="clojure">[
+  {
+    <span class="hljs-string">"key"</span>: <span class="hljs-string">"username"</span>,
+    <span class="hljs-string">"value"</span>: <span class="hljs-string">"user@ma.il"</span>,
+    <span class="hljs-string">"description"</span>: {
+      <span class="hljs-string">"en"</span>: <span class="hljs-string">"Login"</span>,
+      <span class="hljs-string">"it"</span>: <span class="hljs-string">"Nome utente"</span>
+    },
+    <span class="hljs-string">"weight"</span> <span class="hljs-number">1</span>
+  },
+  {
+    <span class="hljs-string">"key"</span>: <span class="hljs-string">"password"</span>,
+    <span class="hljs-string">"value"</span>: <span class="hljs-string">"jei9je9y"</span>,
+    <span class="hljs-string">"description"</span>: {
+      <span class="hljs-string">"en"</span>: <span class="hljs-string">"Password"</span>,
+      <span class="hljs-string">"it"</span>: <span class="hljs-string">"Parola chiave"</span>
+    },
+    <span class="hljs-string">"weight"</span> <span class="hljs-number">2</span>
+  }
+]
 </span></code></pre>
 <blockquote>
 <p>Consider using <a href="/docs/syndication.html#auto-login">auto-login</a> to improve the customer
@@ -644,7 +675,7 @@ the endpoint to access the application. In this way, you can recognize customers
 and enable automatic log-in to your application.</p>
 <p>If you follow this flow, you do not need to specify user credentials into
 end-user instructions.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-11-22 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/docker.html"><span>Docker applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#prime-approach-to-the-provisioning-workflow">Prime approach to the provisioning workflow</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#the-test-events-feature">The &quot;Test Events&quot; feature</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#first-order-creation">First order creation</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisioning-status-to-deployed">Set provisioning status to DEPLOYED</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint-via-hmac-signature-validation">Securing your endpoint via HMAC signature validation</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade">Plan Upgrade</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-before-publishing">Recap before publishing</a></li><li><a href="#auto-login">Auto-Login</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-12-19 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/docker.html"><span>Docker applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#prime-approach-to-the-provisioning-workflow">Prime approach to the provisioning workflow</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#the-test-events-feature">The &quot;Test Events&quot; feature</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#first-order-creation">First order creation</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisioning-status-to-deployed">Set provisioning status to DEPLOYED</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint-via-hmac-signature-validation">Securing your endpoint via HMAC signature validation</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade">Plan Upgrade</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-before-publishing">Recap before publishing</a></li><li><a href="#auto-login">Auto-Login</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2019 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
