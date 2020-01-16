@@ -368,7 +368,7 @@ Content-Type: application/json; charset=utf-8
       "en": "Login",
       "it": "Nome utente"
     },
-    "weight" 1
+    "weight": 1
   },
   {
     "key": "password",
@@ -377,7 +377,7 @@ Content-Type: application/json; charset=utf-8
       "en": "Password",
       "it": "Parola chiave"
     },
-    "weight" 2
+    "weight": 2
   }
 ]
 ```
