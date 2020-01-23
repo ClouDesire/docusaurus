@@ -539,8 +539,7 @@ is requested, so you can return the proper value.
 
 ### Plan Upgrade
 
-You can even upsell to your customers a new subscription plan. Please note that
-only upgrades and no downgrades are supported at this time.
+You can even upsell to your customers a new subscription plan.
 
 ```http
 PATCH /api/subscription/{id} HTTP/1.1
@@ -549,7 +548,7 @@ Content-Type: application/json; charset=utf-8
 {
     "action": "SYNDICATED_UPGRADE",
     "productVersion": {
-    "url": "productVersion/123"
+        "url": "productVersion/123"
     }
 }
 ```
@@ -557,13 +556,48 @@ Content-Type: application/json; charset=utf-8
 The subscription should be an active subscription of one of your customers, and
 the configuration should be the new product version you want to upgrade to.
 
-Once requested, you will receive a Subscription MODIFIED event since the
-configuration attribute in the subscription resource will be modified
-accordingly to your request.
+The response of this operation contains an `upgrade` field which can have three
+values:
+
+1) `DEFERRED`
+
+The upgrade order has been deferred to the next billing period, no events or
+invoices are generated and the subscription is not modified. At the end of the
+billing period, the subscription gets renewed to the new product version.
+
+```http
+{
+    "upgrade": "DEFERRED",
+    "order": "order/123"
+}
+```
+
+2) `FREE`
+
+The upgrade order was free of charge, no invoice is generated.
+
+```http
+{
+    "upgrade": "FREE"
+}
+```
+
+3) `PAID`
 
 The customer will receive a new invoice, that needs to be payed, with prices
 scaled depending on how many days are remaining for the current billing period
 of the existing subscription.
+
+Once requested, you will receive a Subscription MODIFIED event since the
+configuration attribute in the subscription resource will be modified
+accordingly to your request.
+
+```http
+{
+    "upgrade": "PAID",
+    "invoice": "invoice/123"
+}
+```
 
 ### Trial to paid subscription upgrade
 
