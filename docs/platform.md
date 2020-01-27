@@ -4,6 +4,8 @@ title: Platform modules
 sidebar_label: Platform modules
 ---
 
+![cloudesire architecture diagram](assets/platform/Cloudesire-Architecture-2108.png)
+
 The main components of the Cloudesire platform can be summarized as follows:
 
 * **Backend**: it represents the "core" of the platform and consists in a set of
