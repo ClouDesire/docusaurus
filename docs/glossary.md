@@ -40,6 +40,12 @@ A choice that is presented to the end-user during the checkout process.
 
 A user that buys products in the Cloudesire Marketplace.
 
+## Deferred upgrade
+
+A user requested subscription upgrade (product version and/or billing items)
+which results in a resource downgrade. It will be applied and billed at the
+next billing period.
+
 ## Distributor
 
 An user role can manage catalogs of products resold by resellers.
