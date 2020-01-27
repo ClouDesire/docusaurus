@@ -431,8 +431,12 @@ congratulations!
 
 ### Billing events notifications
 
-When the customer ask for a subscription renewal, version upgrade or
-trial-to-paid upgrade, the platform will send a `Subscription MODIFIED` event.
+When the customer asks for a subscription renewal, version upgrade or
+trial-to-paid upgrade which result in a new invoice, the platform will send a
+`Subscription MODIFIED` event.
+
+In case of a deferred upgrade, the event will be sent at the start of the new
+billing period.
 
 After receiving the event, you have to fetch the _Subscription_ resource, and
 make sure that your subscription status is aligned with ours.
@@ -537,7 +541,7 @@ is requested, so you can return the proper value.
 > values when customers pay for the first time otherwise they will be billed for
 > trial resources too.
 
-### Plan Upgrade
+### Plan Upgrade on behalf of a customer
 
 You can even upsell to your customers a new subscription plan.
 
