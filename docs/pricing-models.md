@@ -52,7 +52,7 @@ iStock is an example of Pay as you go pricing model
 
 ![Pricing Models: pay as you go](/img/docs/pay-as-you-go-model.png)
 
-### Pay-per-user model
+### Pay-per-use model
 
 Pay-per-user model means that your customers move up and down the tier
 automatically, so the cost scales according to how they use the product. For

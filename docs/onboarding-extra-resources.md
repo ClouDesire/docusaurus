@@ -108,6 +108,11 @@ You will be required to add:
   explained early
 * _Description_: a short description of the extra resource. Please try to be
   clear and brief
+* _Payment option_: when - and how much for - will the extra resource be billed:
+  * __Pre-paid__: in full at the start of the billing period
+  * __Post-paid__: at the end of the billing period, according to its effective
+    usage
+  * __Pay-as-you-go__: the resource cost is defined by an application metric
 * _Required_ (yes/no): if the customer has to buy this resource to complete the
   product activation
 
