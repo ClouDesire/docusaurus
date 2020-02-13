@@ -24,38 +24,30 @@ quantity usages: *tiered*, *volume* and *stairstep*.
 Tiered scheme means that every unit charge is calculated with its own tier
 price.
 
-With tiered pricing, once you fill up a *tier* you move to the next tier and
-start charging a different price.
-
-Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit within a range, while volume pricing defines a price for all
-units within a range.
-
-Example pricing:
-
-* From 1 to 9 users: €5/user
-* From 10 users: €3/user
-
-Quantity bought 15 users, total amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00
-
-### Volume scheme
-
-Volume scheme means that all units charge is calculated based on total count in
-the related tier.
-
-Therefore, as soon as you hit a particular number, all units will cost the lower
-price.
-
-Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit within a range, while volume pricing defines a price for all
-units within a range.
+With tiered scheme, once you fill up a *tier* you move to the next tier and
+units are charged at a different price (usually lower).
 
 Example:
 
 * From 1 to 9 users: €5/user
 * From 10 users: €3/user
 
-Quantity bought 15 users, total amount: 15 units * € 3,00 = € 45,00
+If customer chooses 15 users, the total amount will be:
+9 x € 5,00 + 6 x € 3,00 = € 63,00
+
+### Volume scheme
+
+Volume scheme means that all units charge is calculated based on total count in
+the related tier: as soon as you reach a specific quantity, all units will cost
+the lower price.
+
+Example:
+
+* From 1 to 9 users: €5/user
+* From 10 users: €3/user
+
+If customer chooses 15 users, the total amount will be:
+15 units * € 3,00 = € 45,00
 
 ### Stairstep scheme
 
@@ -69,7 +61,7 @@ Example:
 * From 1 to 9 users: €30
 * From 10 users: €100
 
-Quantity bought 15 users, total amount: € 100,00
+If customer chooses 15 users, the total amount will be: € 100,00
 
 The following screenshot shows an example of _Extra Resources_ linked to a
 specific [Product Plan.](glossary.md#product-plan)
