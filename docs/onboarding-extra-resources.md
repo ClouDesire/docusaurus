@@ -32,7 +32,7 @@ Example:
 * From 1 to 9 users: €5/user
 * From 10 users: €3/user
 
-If customer choose 15 users, the total amount would be:
+If customer chooses 15 users, the total amount will be:
 9 x € 5,00 + 6 x € 3,00 = € 63,00
 
 ### Volume scheme
@@ -46,7 +46,7 @@ Example:
 * From 1 to 9 users: €5/user
 * From 10 users: €3/user
 
-If customer choose 15 users, the total amount would be:
+If customer chooses 15 users, the total amount will be:
 15 units * € 3,00 = € 45,00
 
 ### Stairstep scheme
@@ -61,7 +61,7 @@ Example:
 * From 1 to 9 users: €30
 * From 10 users: €100
 
-If customer choose 15 users, the total amount would be: € 100,00
+If customer chooses 15 users, the total amount will be: € 100,00
 
 The following screenshot shows an example of _Extra Resources_ linked to a
 specific [Product Plan.](glossary.md#product-plan)
