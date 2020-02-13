@@ -75,31 +75,26 @@ quantity usages: <em>tiered</em>, <em>volume</em> and <em>stairstep</em>.</p>
 <h3><a class="anchor" aria-hidden="true" id="tiered-scheme"></a><a href="#tiered-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tiered scheme</h3>
 <p>Tiered scheme means that every unit charge is calculated with its own tier
 price.</p>
-<p>With tiered pricing, once you fill up a <em>tier</em> you move to the next tier and
-start charging a different price.</p>
-<p>Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit within a range, while volume pricing defines a price for all
-units within a range.</p>
-<p>Example pricing:</p>
-<ul>
-<li>From 1 to 9 users: €5/user</li>
-<li>From 10 users: €3/user</li>
-</ul>
-<p>Quantity bought 15 users, total amount: 9 x € 5,00 + 6 x € 3,00 = € 63,00</p>
-<h3><a class="anchor" aria-hidden="true" id="volume-scheme"></a><a href="#volume-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Volume scheme</h3>
-<p>Volume scheme means that all units charge is calculated based on total count in
-the related tier.</p>
-<p>Therefore, as soon as you hit a particular number, all units will cost the lower
-price.</p>
-<p>Tiered pricing is different from volume pricing because tiered pricing defines a
-price per unit within a range, while volume pricing defines a price for all
-units within a range.</p>
+<p>With tiered scheme, once you fill up a <em>tier</em> you move to the next tier and
+units are charged at a different price (usually lower).</p>
 <p>Example:</p>
 <ul>
 <li>From 1 to 9 users: €5/user</li>
 <li>From 10 users: €3/user</li>
 </ul>
-<p>Quantity bought 15 users, total amount: 15 units * € 3,00 = € 45,00</p>
+<p>If customer chooses 15 users, the total amount will be:
+9 x € 5,00 + 6 x € 3,00 = € 63,00</p>
+<h3><a class="anchor" aria-hidden="true" id="volume-scheme"></a><a href="#volume-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Volume scheme</h3>
+<p>Volume scheme means that all units charge is calculated based on total count in
+the related tier: as soon as you reach a specific quantity, all units will cost
+the lower price.</p>
+<p>Example:</p>
+<ul>
+<li>From 1 to 9 users: €5/user</li>
+<li>From 10 users: €3/user</li>
+</ul>
+<p>If customer chooses 15 users, the total amount will be:
+15 units * € 3,00 = € 45,00</p>
 <h3><a class="anchor" aria-hidden="true" id="stairstep-scheme"></a><a href="#stairstep-scheme" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stairstep scheme</h3>
 <p>Stairstep scheme means that the total cost is calculated based on the price tier
 and not per unit.</p>
@@ -109,7 +104,7 @@ and not per unit.</p>
 <li>From 1 to 9 users: €30</li>
 <li>From 10 users: €100</li>
 </ul>
-<p>Quantity bought 15 users, total amount: € 100,00</p>
+<p>If customer chooses 15 users, the total amount will be: € 100,00</p>
 <p>The following screenshot shows an example of <em>Extra Resources</em> linked to a
 specific <a href="/docs/glossary.html#product-plan">Product Plan.</a></p>
 <p><img src="/img/docs/control_panel_extra_resources.png" alt="Vendors Control Panel - Extra Resources"></p>
@@ -195,7 +190,7 @@ resource.</p>
     ...
 }
 </span></code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-2-12 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pricing-models.html"><span class="arrow-prev">← </span><span>Pricing Models</span></a><a class="docs-next button" href="/docs/syndication.html"><span>Syndicated applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-an-extra-resource">What is an Extra Resource</a></li><li><a href="#pricing-schemes">Pricing schemes</a><ul class="toc-headings"><li><a href="#tiered-scheme">Tiered scheme</a></li><li><a href="#volume-scheme">Volume scheme</a></li><li><a href="#stairstep-scheme">Stairstep scheme</a></li></ul></li><li><a href="#create-an-extra-resource">Create an Extra Resource</a></li><li><a href="#extra-resources-quantities-via-api">Extra Resources quantities via API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2020 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-2-13 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/pricing-models.html"><span class="arrow-prev">← </span><span>Pricing Models</span></a><a class="docs-next button" href="/docs/syndication.html"><span>Syndicated applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#what-is-an-extra-resource">What is an Extra Resource</a></li><li><a href="#pricing-schemes">Pricing schemes</a><ul class="toc-headings"><li><a href="#tiered-scheme">Tiered scheme</a></li><li><a href="#volume-scheme">Volume scheme</a></li><li><a href="#stairstep-scheme">Stairstep scheme</a></li></ul></li><li><a href="#create-an-extra-resource">Create an Extra Resource</a></li><li><a href="#extra-resources-quantities-via-api">Extra Resources quantities via API</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2020 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
