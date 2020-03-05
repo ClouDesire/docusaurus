@@ -77,16 +77,16 @@ If **autorenew** is disabled:
 During the lifetime of an active subscription, plans and extra resources of a product
 can be modified by the vendor.
 
-The platform will automatically **applies the up-to-date prices** only during the renew
+The platform will automatically **apply up-to-date prices** only during the renew
 process of a subscription (at the end of the minimum duration period), or if the customer
-request changing to a new plan.
+requests a change of plan.
 
 If a new invoice is generated for a subscription with an order duration window
 that is greater than the billing period (e.g.: a product with a yearly
 commitment but monthly billing), the prices applied are consistent for the
-entire order duration window (the year).
+entire order duration window (e.g.: the whole year).
 
-If the customer request an upgrade of one or more extra resources, the applied prices
+If the customer requests an upgrade of one or more extra resources, the applied prices
 are the same applied at the start of the duration window.
 
 ## Coupons
