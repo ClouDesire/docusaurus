@@ -22,10 +22,10 @@ The basics follows:
 * the platform will send notifications (HTTP POST requests with a [JSON
   payload](syndication.md#anatomy-of-an-event-request)) to a your endpoint every
   time an interesting **event** occurs on the marketplace (new subscription
-  created, invoice payment and so on).
-* your endpoint should handle these notifications, e.g. fetch the needed
-  information, provision a new user in its system and update the subscription
-  status via [Cloudesire API](api.md)
+  creation, renews, termination requests and so on).
+* your endpoint should handle these notifications and use them as triggers to
+  invoke the [Cloudesire API](api.md) to fetch the needed information, provision
+  a new user in its system and update the subscription status and so on.
 * integration development should be done on our
   [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after everything
   looks fine, move to the production marketplace.
@@ -66,9 +66,9 @@ provisioning:
 where _fake payments_ are possible and where you can test the whole customer
 journey, end-to-end.
 
-Let's start things off: after having created a _Syndicated Product_ in your
-catalog (see [application onboarding](onboarding.md)), configure the HTTP(S) URL
-of your **Syndication Endpoint** where the events will be delivered.
+Let's start: after having created a _Syndicated Product_ in your catalog (see
+[application onboarding](onboarding.md)), configure the HTTP/HTTPS URL of your
+**Syndication Endpoint** where the platform events will be delivered.
 
 ![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png)
 
@@ -87,7 +87,7 @@ some stubbed data that you can configure within the interface.
 
 > We recommend to use this feature immediately after having configured your
 endpoint for the first time, to be sure that is correctly reachable from
-Cloudesire platform, and SSL certificates are valid.
+Cloudesire platform.
 
 ### Anatomy of an event request
 
@@ -135,15 +135,15 @@ The **CMW-Event-Signature** is an HTTP header related to the optional
 
 ### Replying to events
 
-The platform expects that you reply with a `204  -  No content` response( with
+The platform expects that you reply with a `204 - No content` response (with
 an empty response body).
 
-If you return a `200  - OK` reply with body message, it will be accepted but the
-content will be discarded.
+If you reply with a `200 - OK` and a payload it's fine too, but the payload will
+be automatically discarded.
 
 If the response contains a non-2xx status code (4xx & 5xx), the notification
-will be retried at the next loop, until the endpoint will return a 2xx status
-code.
+will be retried with an exponential back-off, until the endpoint will return a
+`204` status code.
 
 ## Workflow of a Subscription
 
@@ -406,14 +406,15 @@ application, discover a strategy to [handle exceptions](syndication.md#managing-
 
 ### Update subscription information (when the subscription expires)
 
-When the subscription period expires, the platform will send another
-`Subscription MODIFIED` event. Fetch again the _Subscription_ and look at the
-**status** attribute that should be set to `UNDEPLOY_SENT` for the current
-subscription.
+When the subscription period expires, or a **Terminate** action is requested by
+an user, the platform will send another `Subscription MODIFIED` event. Fetch
+again the _Subscription_ and look at the **deploymentStatus** attribute that is
+set to `UNDEPLOY_SENT` for the current subscription.
 
-In this moment you must suspend tenant access to your
-application, and confirm the operation via a `PATCH` request on the
-`subscription/2388` endpoint to finally terminate the subscription:
+In this moment you must unprovision every resource allocated during the
+provision step (e.g.: disable access to your application), and confirm the
+operation via a `PATCH` request on the `subscription/2388` endpoint to finally
+mark the subscription as successfully terminated:
 
 ```http
 PATCH /api/subscription/2388 HTTP/1.1
@@ -423,6 +424,9 @@ Content-Type: application/json; charset=utf-8
     "deploymentStatus": "UNDEPLOYED"
 }
 ```
+
+Now you will receive a new `Subscription DELETED` event as a confirmation of the
+termination process.
 
 ![syndication unprovisioning](/img/docs/Syndication-Worklow-Unprovisioning.png)
 

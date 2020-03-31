@@ -6,7 +6,7 @@ authorURL: http://twitter.com/malteo
 
 IntelliJ IDEA is every Java developer's favourite IDE here at Cloudesire, and amongst its powerful features there are [Live templates](https://www.jetbrains.com/help/idea/creating-and-editing-live-templates.html). Let me show you how they work with a simple example.
 
-Getting a [SLF4J](https://www.slf4j.org/) instance for the current class is a matter of typing
+Getting a [SLF4J](http://www.slf4j.org/) instance for the current class is a matter of typing
 
 ```java
 private static final Logger
