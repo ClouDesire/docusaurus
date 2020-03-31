@@ -133,7 +133,6 @@ The **date** attribute contains when the event has been generated.
 The **CMW-Event-Signature** is an HTTP header related to the optional
 [validation for incoming event notifications](syndication.md#security).
 
-
 ### Replying to events
 
 The platform expects that you reply with a `204 - No content` response (with
