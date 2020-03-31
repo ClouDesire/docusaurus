@@ -134,18 +134,13 @@ The **CMW-Event-Signature** is an HTTP header related to the optional
 [validation for incoming event notifications](syndication.md#security).
 
 
-#### Test and live events
-
-Events generated throught the [Test Events] feature will have **entityUrl**
-attributes pointing to the [test API], that always return?
-
 ### Replying to events
 
 The platform expects that you reply with a `204 - No content` response (with
 an empty response body).
 
-If you reply with a `200 - OK` and a payload it's ok, but the payload will be
-discarded by the platform.
+If you reply with a `200 - OK` and a payload it's fine too, but the payload will
+be automatically discarded.
 
 If the response contains a non-2xx status code (4xx & 5xx), the notification
 will be retried with an exponential back-off, until the endpoint will return a
