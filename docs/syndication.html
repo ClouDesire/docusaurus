@@ -76,10 +76,10 @@ cloudesire platform.</p>
 <li>the platform will send notifications (HTTP POST requests with a <a href="/docs/syndication.html#anatomy-of-an-event-request">JSON
 payload</a>) to a your endpoint every
 time an interesting <strong>event</strong> occurs on the marketplace (new subscription
-created, invoice payment and so on).</li>
-<li>your endpoint should handle these notifications, e.g. fetch the needed
-information, provision a new user in its system and update the subscription
-status via <a href="/docs/api.html">Cloudesire API</a></li>
+creation, renews, termination requests and so on).</li>
+<li>your endpoint should handle these notifications and use them as triggers to
+invoke the <a href="/docs/api.html">Cloudesire API</a> to fetch the needed information, provision
+a new user in its system and update the subscription status and so on.</li>
 <li>integration development should be done on our
 <a href="/docs/onboarding.html#demo-marketplace-for-tests">staging-marketplace</a> and after everything
 looks fine, move to the production marketplace.</li>
@@ -118,9 +118,9 @@ sends a notification <code>Subscription MODIFIED</code>.</li>
 where <em>fake payments</em> are possible and where you can test the whole customer
 journey, end-to-end.</p>
 </blockquote>
-<p>Let's start things off: after having created a <em>Syndicated Product</em> in your
-catalog (see <a href="/docs/onboarding.html">application onboarding</a>), configure the HTTP(S) URL
-of your <strong>Syndication Endpoint</strong> where the events will be delivered.</p>
+<p>Let's start: after having created a <em>Syndicated Product</em> in your catalog (see
+<a href="/docs/onboarding.html">application onboarding</a>), configure the HTTP/HTTPS URL of your
+<strong>Syndication Endpoint</strong> where the platform events will be delivered.</p>
 <p><img src="/img/docs/control_panel_syndication.png" alt="Vendors Control Panel - Syndication"></p>
 <p>To increase the security of your endpoint, please read the <a href="/docs/syndication.html#security">security
 section</a>.</p>
@@ -134,7 +134,7 @@ some stubbed data that you can configure within the interface.</p>
 <blockquote>
 <p>We recommend to use this feature immediately after having configured your
 endpoint for the first time, to be sure that is correctly reachable from
-Cloudesire platform, and SSL certificates are valid.</p>
+Cloudesire platform.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="anatomy-of-an-event-request"></a><a href="#anatomy-of-an-event-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anatomy of an event request</h3>
 <p>Every request sent to your endpoint will be a POST request with a JSON payload:</p>
@@ -172,13 +172,13 @@ resource can be fetched.</p>
 <p>The <strong>CMW-Event-Signature</strong> is an HTTP header related to the optional
 <a href="/docs/syndication.html#security">validation for incoming event notifications</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="replying-to-events"></a><a href="#replying-to-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Replying to events</h3>
-<p>The platform expects that you reply with a <code>204 - No content</code> response( with
+<p>The platform expects that you reply with a <code>204 - No content</code> response (with
 an empty response body).</p>
-<p>If you return a <code>200 - OK</code> reply with body message, it will be accepted but the
-content will be discarded.</p>
+<p>If you reply with a <code>200 - OK</code> and a payload it's fine too, but the payload will
+be automatically discarded.</p>
 <p>If the response contains a non-2xx status code (4xx &amp; 5xx), the notification
-will be retried at the next loop, until the endpoint will return a 2xx status
-code.</p>
+will be retried with an exponential back-off, until the endpoint will return a
+<code>204</code> status code.</p>
 <h2><a class="anchor" aria-hidden="true" id="workflow-of-a-subscription"></a><a href="#workflow-of-a-subscription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Workflow of a Subscription</h2>
 <h3><a class="anchor" aria-hidden="true" id="first-order-creation"></a><a href="#first-order-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First order creation</h3>
 <p>With your test customer account you created on the
@@ -399,13 +399,14 @@ alter the subscription status:</p>
 application, discover a strategy to <a href="/docs/syndication.html#managing-provisioning-exceptions">handle exceptions</a>.</p>
 </blockquote>
 <h3><a class="anchor" aria-hidden="true" id="update-subscription-information-when-the-subscription-expires"></a><a href="#update-subscription-information-when-the-subscription-expires" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Update subscription information (when the subscription expires)</h3>
-<p>When the subscription period expires, the platform will send another
-<code>Subscription MODIFIED</code> event. Fetch again the <em>Subscription</em> and look at the
-<strong>status</strong> attribute that should be set to <code>UNDEPLOY_SENT</code> for the current
-subscription.</p>
-<p>In this moment you must suspend tenant access to your
-application, and confirm the operation via a <code>PATCH</code> request on the
-<code>subscription/2388</code> endpoint to finally terminate the subscription:</p>
+<p>When the subscription period expires, or a <strong>Terminate</strong> action is requested by
+an user, the platform will send another <code>Subscription MODIFIED</code> event. Fetch
+again the <em>Subscription</em> and look at the <strong>deploymentStatus</strong> attribute that is
+set to <code>UNDEPLOY_SENT</code> for the current subscription.</p>
+<p>In this moment you must unprovision every resource allocated during the
+provision step (e.g.: disable access to your application), and confirm the
+operation via a <code>PATCH</code> request on the <code>subscription/2388</code> endpoint to finally
+mark the subscription as successfully terminated:</p>
 <pre><code class="hljs css language-http"><span class="hljs-keyword">PATCH</span> <span class="hljs-string">/api/subscription/2388</span> HTTP/1.1
 <span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
 
@@ -413,6 +414,8 @@ application, and confirm the operation via a <code>PATCH</code> request on the
     <span class="hljs-attr">"deploymentStatus"</span>: <span class="hljs-string">"UNDEPLOYED"</span>
 }
 </span></code></pre>
+<p>Now you will receive a new <code>Subscription DELETED</code> event as a confirmation of the
+termination process.</p>
 <p><img src="/img/docs/Syndication-Worklow-Unprovisioning.png" alt="syndication unprovisioning"></p>
 <p>You have now completed the standard workflow for a syndicated application,
 congratulations!</p>
@@ -706,7 +709,7 @@ the endpoint to access the application. In this way, you can recognize customers
 and enable automatic log-in to your application.</p>
 <p>If you follow this flow, you do not need to specify user credentials into
 end-user instructions.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-1-27 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/docker.html"><span>Docker applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#prime-approach-to-the-provisioning-workflow">Prime approach to the provisioning workflow</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#the-test-events-feature">The &quot;Test Events&quot; feature</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#first-order-creation">First order creation</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisioning-status-to-deployed">Set provisioning status to DEPLOYED</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint-via-hmac-signature-validation">Securing your endpoint via HMAC signature validation</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade-on-behalf-of-a-customer">Plan Upgrade on behalf of a customer</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-before-publishing">Recap before publishing</a></li><li><a href="#auto-login">Auto-Login</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2020 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-3-31 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/docker.html"><span>Docker applications</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-syndication">Introduction to Syndication</a><ul class="toc-headings"><li><a href="#prime-approach-to-the-provisioning-workflow">Prime approach to the provisioning workflow</a></li><li><a href="#how-to-setup-the-syndication-endpoint">How to setup the syndication endpoint</a></li><li><a href="#the-test-events-feature">The &quot;Test Events&quot; feature</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a></li><li><a href="#replying-to-events">Replying to events</a></li></ul></li><li><a href="#workflow-of-a-subscription">Workflow of a Subscription</a><ul class="toc-headings"><li><a href="#first-order-creation">First order creation</a></li><li><a href="#retrieve-the-subscription-resource-after-a-subscription-created">Retrieve the subscription resource after a Subscription CREATED</a></li><li><a href="#retrieve-customer-information">Retrieve customer information</a></li><li><a href="#update-subscription-information-after-a-new-tenant-provisioning">Update subscription information (after a new tenant provisioning)</a></li><li><a href="#set-provisioning-status-to-deployed">Set provisioning status to DEPLOYED</a></li><li><a href="#update-subscription-information-when-the-subscription-expires">Update subscription information (when the subscription expires)</a></li><li><a href="#billing-events-notifications">Billing events notifications</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint-via-hmac-signature-validation">Securing your endpoint via HMAC signature validation</a></li></ul></li><li><a href="#managing-provisioning-exceptions">Managing Provisioning Exceptions</a></li><li><a href="#advanced-billing-features">Advanced Billing Features</a><ul class="toc-headings"><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#plan-upgrade-on-behalf-of-a-customer">Plan Upgrade on behalf of a customer</a></li><li><a href="#trial-to-paid-subscription-upgrade">Trial to paid subscription upgrade</a></li><li><a href="#custom-billing">Custom billing</a></li><li><a href="#recurring-costs">Recurring Costs</a></li><li><a href="#proceeds-declaration">Proceeds declaration</a></li></ul></li><li><a href="#recap-before-publishing">Recap before publishing</a></li><li><a href="#auto-login">Auto-Login</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2020 Cloudesire.com srl</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
