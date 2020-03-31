@@ -30,6 +30,9 @@ The basics follows:
   [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after everything
   looks fine, move to the production marketplace.
 
+> Are you using Java/Spring boot in your tech stack? We do and we released a
+> template for new project implementing the [syndication api](https://github.com/ClouDesire/syndication-api)
+
 ### Prime approach to the provisioning workflow
 
 A simple example follows, explaining the workflow of a new tenant order and
