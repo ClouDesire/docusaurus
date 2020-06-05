@@ -11,6 +11,7 @@ API are grouped into different areas:
 
 * [Billing API](/redoc/billing.html)
 * [Catalog API](/redoc/catalog.html)
+* [Channel API](/redoc/channel.html)
 * [Cloud Apps API](/redoc/cloud-apps.html)
 * [Cloud providers API](/redoc/cloud-providers.html)
 * [Users API](/redoc/users.html)
@@ -23,6 +24,7 @@ domain](api.md#domains)):
 * /v2/api-docs?group=admin
 * /v2/api-docs?group=billing
 * /v2/api-docs?group=catalog
+* /v2/api-docs?group=channel
 * /v2/api-docs?group=cloudApps
 * /v2/api-docs?group=cloudProviders
 * /v2/api-docs?group=users
