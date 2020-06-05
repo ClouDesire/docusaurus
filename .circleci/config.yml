@@ -33,7 +33,7 @@ jobs:
 
   verify:
     docker:
-      - image: circleci/ruby:2.3
+      - image: cimg/ruby:2.7.1
 
     steps:
       - attach_workspace:
