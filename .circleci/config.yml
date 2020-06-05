@@ -45,6 +45,10 @@ jobs:
             - bundle-v2-{{ checksum "Gemfile.lock" }}
 
       - run:
+          name: Install bundler
+          command: gem install bundler -v 2.1.4
+
+      - run:
           name: Fetch dependencies
           command: bundle install --path vendor/bundle
 
