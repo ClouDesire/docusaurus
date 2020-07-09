@@ -17,6 +17,8 @@ documentation:
 * [Install with Composer](https://github.com/sendgrid/php-http-client#install-with-composer)
 * [Install without Composer](https://github.com/sendgrid/php-http-client#install-without-composer)
 
+A full example is available [here](https://github.com/ClouDesire/examples/tree/master/php-syndication)
+
 ## Instantiate the client
 
 To obtain an authenticated client you need to provide the URL of the [Cloudesire
