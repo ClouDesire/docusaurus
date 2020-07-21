@@ -30,12 +30,12 @@ const siteConfig = {
   favicon: 'img/favicon/favicon.ico',
   colors: {
     primaryColor: '#D9004F',
-    secondaryColor: '#0e2c54',
+    secondaryColor: '#AC0041',
   },
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Engineering D.HUB',
+    ' Cloudesire.com by Engineering D.HUB',
   organizationName: 'cloudesire',
   projectName: 'docusaurus',
   highlight: {
