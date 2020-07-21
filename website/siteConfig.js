@@ -1,9 +1,9 @@
 /**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+* Copyright (c) 2017-present, Facebook, Inc.
+*
+* This source code is licensed under the MIT license found in the
+* LICENSE file in the root directory of this source tree.
+*/
 
 const siteConfig = {
   title: 'cloudesire documentation',
@@ -29,13 +29,13 @@ const siteConfig = {
   footerIcon: 'img/logo-cloudesire.png',
   favicon: 'img/favicon/favicon.ico',
   colors: {
-    primaryColor: '#1DACE2',
-    secondaryColor: '#C1E8F7',
+    primaryColor: '#D9004F',
+    secondaryColor: '#0e2c54',
   },
   copyright:
     'Copyright © ' +
     new Date().getFullYear() +
-    ' Cloudesire.com',
+    ' Engineering D.HUB',
   organizationName: 'cloudesire',
   projectName: 'docusaurus',
   highlight: {
