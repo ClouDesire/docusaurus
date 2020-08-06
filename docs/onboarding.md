@@ -359,6 +359,13 @@ Docker applications as an environment variable with the same name of the
 _COLOR_ as `code`, your application will have a `$COLOR` environment variable
 with the value chosen by the customer.
 
+### Order validation
+
+It's possible to configure an external endpoint to process further validation
+while ordering an onboarded product.
+
+Follow the instructions on [order validation](order-validation.md) to do so.
+
 ## Demo marketplace for tests
 
 In this section you will find an overview of the integration facilities provided
