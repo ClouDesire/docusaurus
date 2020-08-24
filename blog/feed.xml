@@ -12,7 +12,7 @@
             <url>https://docs.cloudesire.com/img/logo-cloudesire.png</url>
             <link>https://docs.cloudesire.com/blog</link>
         </image>
-        <copyright>Copyright © 2020 Engineering D.HUB</copyright>
+        <copyright>Copyright © 2020 Cloudesire.com by Engineering D.HUB</copyright>
         <item>
             <title><![CDATA[How to upgrade node on CircleCI machine executor]]></title>
             <link>https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html</link>
