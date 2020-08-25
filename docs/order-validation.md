@@ -8,8 +8,8 @@ An order can be validated by calling an external service of yours.
 
 The service will be called:
 
-1) optionally, when requesting a budget estimate;
-2) mandatorily, when placing an order.
+1) when requesting a budget estimate;
+2) when placing an order.
 
 # Configuration
 
