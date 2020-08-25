@@ -6,11 +6,16 @@ sidebar_label: Order validation
 
 An order can be validated by calling an external service of yours.
 
-### Configuration
+The service will be called:
+
+1) optionally, when requesting a budget estimate;
+2) mandatorily, when placing an order.
+
+# Configuration
 
 Add the full URL of your validation service on the product configuration.
 
-### Request
+# Request
 
 Your service will receive a POST request with a JSON body content like this:
 
@@ -32,7 +37,7 @@ Your service will receive a POST request with a JSON body content like this:
 }
 ```
 
-### Response
+# Response
 
 An HTTP response of 204 means validation has been successful.
 
@@ -53,3 +58,9 @@ To return a validation error, send an HTTP response of 200 with a content type
   ]
 }
 ```
+
+Any other response code is invalid and validation will fail.
+
+## Localization
+
+Use the `language` field in the request to localize the error messages.
