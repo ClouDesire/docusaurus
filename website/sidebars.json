@@ -13,7 +13,8 @@
       "api-product",
       "vm",
       "vdc-openstack",
-      "vdc-vcloud-director"
+      "vdc-vcloud-director",
+      "order-validation"
     ],
     "Platform": [
       "glossary",
