@@ -14,8 +14,8 @@ The service will be called by the platform:
 
 ## First Configuration
 
-Add the full URL of your endpoints the implements the following specs on the
-product configuration.
+Add on the product configuration page the full URL of your endpoint that
+implements the spec described here.
 
 ## Request
 
