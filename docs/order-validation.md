@@ -21,13 +21,13 @@ Your service will receive a POST request with a JSON body content like this:
 
 ```json
 {
-  "productId": 3196,
-  "productIdentifier": "dbsite",
-  "productVersionId": 3197,
-  "productVersionIdentifier": "identifier4",
+  "productId": 123,
+  "productIdentifier": "your-product",
+  "productVersionId": 456,
+  "productVersionIdentifier": "your-product-plan",
   "billingItems":
   {
-    "DENTISTS": 10
+    "USERS": 10
   },
   "configurationParameters":
   {
