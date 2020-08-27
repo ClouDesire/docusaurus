@@ -93,6 +93,10 @@
         "title": "Open Source projects",
         "sidebar_label": "Open Source"
       },
+      "order-validation": {
+        "title": "Order validation",
+        "sidebar_label": "Order validation"
+      },
       "platform-users": {
         "title": "Users, functionalities and permissions",
         "sidebar_label": "Users and permissions"
