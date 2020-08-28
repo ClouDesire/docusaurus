@@ -4,36 +4,46 @@ title: Distribution and Channel Management
 sidebar_label: Channel management
 ---
 
-Distribution and channel logics are available in the cloudesire platform.
+Distribution and channel management are available in the cloudesire platform.
 
-* **Parent** (the MSP usually) deals with Vendors, and decides the catalog
-  composition for Distributors together with Wholesale Prices
-* **Distributors** sell-in to Resellers (VAS, VAR, business partners, dealers,
-  agents, etc.)
-* **Resellers** sell-out to End-Customers (applying a Recommended Retail Price
-  imposed by the MSP, or building up their own price strategy)
+When the channel management feature is enabled, new user roles became available:
+
+* **Parent** (the marketplace owner) manage the catalog of products offered by
+  ISVs and assign them to Distributors
+* **Distributors** sell-in their products to their Resellers (business partners,
+  dealers, agents)
+* **Resellers** sell-out to End Customers
 
 Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
-  (useful for **Agents**/**Dealers**).
+(useful for **Agents**/**Dealers**).
 
 ![parent-child summary schema](/img/docs/parent-child-schema.png)
 
-## Product/service assignment rules and pricing logics, along the chain
+## Logic along the chain
 
-**Main Product / Pricing logics:**
+Channel management has a steep learning curve, let's begin to clarify some of
+the most important behaviors.
 
-* The Parent (the Service Provider) deals with Vendors, acquiring Services at
-  the "Vendor Price" negotiated with the Vendor
-* The Parent decides the catalog composition for each Distributor,as well as the
-  "Wholesale Price" for each Service Plan
-* Each Distributor decides the Service Plans that he wants to assign in
-  different catalogs, together with the respective "Sell-in Price" applying a
-  markup to the "Wholesale Price". Each catalog is assigned to one or more
-  resellers.
-* Each Reseller decides the "Sell-out Price" for each Service Plan in one or
-  more catalogs, then associate an End-Customer to a catalog.
+### Product management and pricing
 
-**Each actor down the chain (from ISV to Reseller) can also:**
+A product can be sold with the interaction of each user down the chain, from ISV
+to the Reseller:
+
+* The Parent manage ISVs, acquiring Products at the *Vendor Price* negotiated
+  with the ISV
+* The Parent decides the catalog composition for each Distributor, as well as
+  the *Wholesale Price* for each Product Plan
+* Each Distributor decides the Product Plans that he wants to assign in
+  different catalogs, together with the respective *Sell-in Price* applying a
+  markup to the *Wholesale Price*. Each Distributor catalog is assigned to one
+  or more Resellers.
+* Each Reseller decides the *Sell-out Price* for each Product Plan in one or
+  more catalogs, then can associate an End Customer to a catalog. Each Reseller
+  can manage its own public marketplace with an associated default catalog.
+
+### Reseller features
+
+A Reseller has access to a unique set of features:
 
 * Add **VAS** (Value Added Services, AKA
   [extra-resources](glossary.md#extra-resources) to empower its own offer (like
@@ -46,6 +56,9 @@ Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
   (discounted) price of each bundled product
 
 ## Available Billing/Payment scenarios
+
+The platform supports multiple ways in which a Reseller can sell products to End
+Users.
 
 ### Scenario 1: Self-Billing
 
@@ -74,11 +87,13 @@ More info on [Self-billing section](billing.md#self-billing).
   payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud
   Providers
 
-For each Scenario, the Reseller has both the "**push**" and "**pull**" selling
-modalities available:
+### Order placement
 
-* push: the Reseller insert the order on behalf of its Customer
-* pull: the Customer buys directly from the Reseller store
+For each of the previous billing scenarios, the Reseller has both the "**push**"
+and "**pull**" selling modalities available:
+
+* push: the Reseller insert the order on behalf of its End Customer
+* pull: the End Customer buys directly from the Reseller marketplace
 
 ### Other relevant features
 
@@ -87,8 +102,7 @@ modalities available:
 * actors down the chain cannot visualize any data that relies to an actor up the
   chain (example: reseller cannot see the price at which its distributor is
   buying a given product)
-* prices can be decided by each actor relating to its adjacent down the chain,
-  or RRP can be forced by Parent
+* prices can be decided by each actor relating to its adjacent down the chain
 * prices for each service can be set different between peers by the actor up the
   chain
 * Parent can deactivate one or more distribution tiers (up to Parent selling
