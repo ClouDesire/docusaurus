@@ -114,10 +114,6 @@ Each Marketplace can be configured as:
 * _listing_: products and prices are visible, but transactions are disabled
 * _showcase_: products are visible, prices are masked and transactions disabled
 
-Each Marketplace can be **customized**:
-
-![reseller auto-generated marketplace](/img/docs/reseller-marketplace-custom.jpg)
-
 ## Parent functionalities
 
 In order to start enabling the parent-child support into the Cloudesire
