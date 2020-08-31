@@ -22,7 +22,7 @@ implements the spec described here.
 
 Your endpoint will receive a POST request with a JSON body content like this:
 
-### Budget/order
+### Budget estimate and order placement
 
 ```json
 {
