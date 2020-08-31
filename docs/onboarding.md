@@ -362,7 +362,7 @@ with the value chosen by the customer.
 ### Order validation
 
 It's possible to configure an external endpoint to process further validation
-while ordering an onboarded product.
+while ordering an onboarded product or terminating a subscription.
 
 Follow the instructions on [order validation](order-validation.md) to do so.
 

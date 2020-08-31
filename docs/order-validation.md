@@ -10,7 +10,8 @@ the customer can place it.
 The service will be called by the platform:
 
 1) when requesting a budget estimate;
-2) when placing an order.
+2) when placing an order;
+3) when terminating a subscription.
 
 ## First Configuration
 
@@ -20,6 +21,8 @@ implements the spec described here.
 ## Request
 
 Your endpoint will receive a POST request with a JSON body content like this:
+
+### Budget/order
 
 ```json
 {
@@ -35,6 +38,29 @@ Your endpoint will receive a POST request with a JSON body content like this:
   {
     "CUSTOM_DOMAIN": "http://custom.doma.in"
   },
+  "orderType": "NORMAL",
+  "language": "en"
+}
+```
+
+### Termination
+
+```json
+{
+  "productId": 123,
+  "productIdentifier": "your-product",
+  "productVersionId": 456,
+  "productVersionIdentifier": "your-product-plan",
+  "billingItems":
+  {
+    "USERS": 10
+  },
+  "configurationParameters":
+  {
+    "CUSTOM_DOMAIN": "http://custom.doma.in"
+  },
+  "subscriptionId": 999,
+  "orderType": "TERMINATION",
   "language": "en"
 }
 ```
