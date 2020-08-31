@@ -25,11 +25,19 @@ jobs:
       - run:
           name: Build
           command: cd website && yarn build
-      
+
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
             - .
+
+  verify_english:
+    docker:
+      - image: circleci/node:8
+
+    steps:
+      - checkout
+      - run: npx write-good docs/*.md
 
   verify:
     docker:
@@ -94,12 +102,14 @@ workflows:
   docusaurus:
     jobs:
       - build
+      - verify_english
       - verify:
           requires:
             - build
       - deploy:
           requires:
             - verify
+            - verify_english
           filters:
             branches:
               only: source
