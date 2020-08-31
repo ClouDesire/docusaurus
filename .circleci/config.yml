@@ -37,7 +37,7 @@ jobs:
 
     steps:
       - checkout
-      - run: npx write-good docs/*.md
+      - run: npx write-good docs/*.md --parse
 
   verify:
     docker:
