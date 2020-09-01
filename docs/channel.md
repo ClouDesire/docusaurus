@@ -43,9 +43,9 @@ to the Reseller:
 
 ### Reseller features
 
-A Reseller has access to a unique set of features:
+Resellers has access to a unique set of features:
 
-* Add **VAS** (Value Added Services, AKA
+* Add **VAS** (Value Added Services,
   [extra-resources](glossary.md#extra-resources) to empower its own offer (like
   setup, training, support, devices, etc.). All pricing models available in
   Cloudesire can be applied also to VAS (typically: one-off, subscription,
@@ -54,6 +54,7 @@ A Reseller has access to a unique set of features:
   override, trial extension | reusable or not | with/without time limit)
 * Build up its own [**bundles**](billing.md#bundles), hence configure the
   (discounted) price of each bundled product
+* Define a new category for each of the resold products on their marketplaces.
 
 ## Available Billing/Payment scenarios
 
@@ -116,141 +117,129 @@ Each Marketplace can be configured as:
 
 ## Parent functionalities
 
-In order to start enabling the parent-child support into the Cloudesire
-platform, the Parent needs to assign one or more products to each Distributor.
+To start enabling the parent-child support into the Cloudesire platform, the
+Parent needs to assign one or more products to a Distributor.
 
-To do this, once logged as Parent, click on the _Catalog_ menu item and then on
-the _Distributor-Products_ menu item. On this view, you can search by
-Distributor name and/or by product name for filtering the list, otherwise you
-can select a single Distributor and then click on the "add product" button on
-the top-right to select a product to be assigned to him.
+To do this, once logged as Parent:
 
-Each Distributor-product assignment can be deleted (but only if no subscription
-was activated before for the corresponding product, through that specific
-Distributor channel).
+* Click on the **Channel Catalog -> Distributor Products** menu item.
+* Click **Add product** to begin assign a new product
+* Search by Distributor name and by product name and click on **Add**.
 
-![admin distributor products](/img/docs/2-admin-distributor-products.png)
+Now the distributor can add the product in one or more **Price List**.
 
-The _Distributor-Catalogs_ view provides a list of all the associations created
-with the previous tool, together with all the product assignments made by each
-Distributors to his Resellers.
-
-It's possible to filer the list by searching for Distributor name, Reseller name
-and product name.
-
-![admin distributor catalogs](/img/docs/1-admin-distributor-catalogs.png)
+A Parent can also manage on behalf of the respective owners:
+* Distributor Price Lists
+* Distributor Sell-in
+* Reseller Price Lists
+* Reseller Sell-out
 
 ## Distributor functionalities
 
-The Distributor can access to his catalog by clicking on the namesake menu item.
+Once Distributors has one or more products associated from the Parent, they can
+start to insert those products into their Price Lists.
 
-![distributor catalog](/img/docs/3.1-distributor-catalog.png)
+To create a new Price List, logged as a Distributor:
 
-By clicking on the "assign" button is possible to assign the specific product to
-a Reseller: a dialog is proposed, where the Distributor can search a Reseller
-(by filtering for his name) and then set the **sell-in markups** for the one-off
-/ subscription / extra resources / cloud resources costs.
+* Click on the **Channel Catalog -> Price Lists** menu item
+* Click on **Add** button.
+* Insert a **Price List name** and assign existing resellers to this Price List.
+* Click on **Save** to create the Price List.
 
-![sell-in selection](/img/docs/3.2-distributor-sell-in-config-product-preselected.png)
+To define a new Sell-in for a product, logged as Distributor:
 
-All the already created sell-in configurations are listed in the _Sell-In
-Config_ view:
+* Click on the **Channel Catalog -> Products** menu item
+* Select a product plan from the list that you want to add to a Price List
+* Click on **Add Sell-in** button.
+* On the new **Sell-in Configuration** section, select a **Price List** and
+  define the **Sell-in one-off price** and the **Sell-in unit subscription
+  price**, either as a Percentage or Currency.
+* If the product has one or more Extra Resources, click on the **Resources** tab
+  to configure the **Sell-in one-off price** and the **Sell-in unit subscription
+  price**, either as a Percentage or Currency, for every available Extra
+  Resource.
+* Click on **Save** to insert the product in the selected Price List.
 
-![distributor sell-in config list](/img/docs/3-distributor-sell-in-config-list.png)
+Each defined Sell-in inside a Price List, can be modified from Sell-in section:
 
-By clicking on each row in the list, 3 new buttons should be proposed on the
-top-right: "assign", "edit" and "delete".
+* Click on the **Channel Catalog -> Sell-in** menu item
+* Select a **Price List**
+* Select any remaining filter and then click on **Search**
+* Select the row that you wish to modify and click on **Edit** button
+* Once done with the **Sell-in configuration**, click on **Save** button.
 
-The "assign" button can be used if no sell-in prices was assigned for the
-specific product; if pressed the previously described dialog will be proposed to
-create the configuration.
+You can use the **Delete** button to remove the selected Plan from the current
+Price List.
 
-The "delete" button will unset the sell-in prices for the selected
-product-Reseller assignment: this is obviously possible only if no subscriptions
-was created on that specific channel.
+You can use the **Assign** button in this page to add a new product to the
+current Price List, when no row is currently selected.
 
-The"edit" button can be used to change the current sell-in price configurations
-for the selected product-Reseller assignment: of course the new sell-in prices
-will become effective only for the successive subscriptions.
+If the product sold is a [Docker application](docker.md) then the
+**cloud-pricing** tab is also shown when editing the Sell-in.
 
-If no row is selected the "assign" button is shown on the top-right: by clicking
-on it, the Distributor can create a new sell-in configuration from the scratch
-on this interface, where is possible to configure the sell-in markups both for
-the one-off costs and the subscription cost:
+The Distributor can also access to a real-time sales reports:
 
-![distributor sell-in edit licenses](/img/docs/4-distributor-sell-in-config-edit-licenses.png)
-
-By clicking on the "Extra-Resources" tab, the Distributor can also set the
-sell-in markups also for the [extra-resources](glossary.md#extra-resources) to
-be sold together with the product.
-
-![distributor sell-in config edit extra resources](/img/docs/5-distributor-sell-in-config-edit-extra-resources.png)
-
-If the product to be sold is a [Docker application](docker.md) then the
-"cloud-pricing" tab is also provided. In this section, the Distributor can set
-the sell-in markups for all the cloud resources unit prices, given a selected
-[cloud provider](clouds.md) (among the all supported
-by the platform).
-
-![distributor sell-in edit cloud resources](/img/docs/6-distributor-sell-in-config-edit-cloud-resources.png)
-
-The Distributor can also easily access to a real-time **sales reports** through
-his Resellers' channels. This functionality is provided by the _Proceeds_ view,
-where is possible to filter by date-interval (also having the partial totals in
-the last records pagination) and by Reseller name.
-
-![distributor realtime proceeds](/img/docs/7-distributor-proceeds.png)
+* Click on the **Proceeds** menu item
+* Optionally filter by **Reseller**, **Vendor**, **Product** or time range
 
 ## Reseller functionalities
 
-The Reseller can access the _Sell-Out Config_ section to browse the **sell-out
-prices** related to all the products listed in his catalog. This view is
-filterable by product name.
+Once Resellers has been assigned to a Distributor Price List, they can start to
+price those products into their own Price Lists.
 
-![reseller sell-out config list](/img/docs/8-reseller-sell-out-config-list.png)
+To create a new Price List, logged as a Reseller:
 
-By clicking on a specific row, a dialog will be provided, where the Reseller can
-configure the sell-out prices both for the on-off and the subscription pricing
-components:
+* Click on the **Channel Catalog -> Price Lists** menu item
+* Click on **Add** button.
+* Insert a **Price List name** and assign existing resellers to this Price List.
+* Click on **Save** to create the Price List.
 
-![](/img/docs/9-reseller-sell-out-config-edit-licenses.png)
+To define a new Sell-out for a product, logged as Reseller:
 
-The "Extra Resources" tab will provide the possibility to set-up the sell-out
-prices for the [extra-resources](glossary.md#extra-resources) to be sold
-together with the product.
+* Click on the **Channel Catalog -> Products** menu item
+* Select a product plan from the list that you want to add to a Price List
+* Click on **Add Sell-out** button.
+* On the new **Sell-out Configuration** section, select a **Price List** and
+  define the **Sell-out one-off price** and the **Sell-out unit subscription
+  price**, either as a Percentage or Currency.
+* If the product has one or more Extra Resources, click on the **Resources** tab
+  to configure the **Sell-out one-off price** and the **Sell-out unit
+  subscription price**, either as a Percentage or Currency, for every available
+  Extra Resource.
+* Click on **Save** to insert the product in the selected Price List.
 
-![](/img/docs/10-reseller-sell-out-config-edit-extra-resources.png)
+Each defined Sell-out inside a Price List, can be modified from Sell-out section:
 
-If the product to be sold is a [Docker application](docker.md) then the
-"cloud-pricing" tab is also provided. In this section, the Reseller can set the
-sell-out prices for all the cloud resources units, given a selected [cloud
-provider](clouds.md) (among the all supported by the
-platform).
+* Click on the **Channel Catalog -> Sell-out** menu item
+* Select a **Price List**
+* Select any remaining filter and then click on **Search**
+* Select the row that you wish to modify and click on **Edit** button
+* Once done with the **Sell-out configuration**, click on **Save** button.
 
-The Reseller can change the sell-out configurations for a product anytime: of
-course the new prices will be applied only for the future subscriptions.
+You can use the **Delete** button to remove the selected Plan from the current
+Price List.
 
-![](/img/docs/11-reseller-sell-out-config-edit-cloud-resources.png)
+If the product sold is a [Docker application](docker.md) then the
+**cloud-pricing** tab is also shown when editing the Sell-out.
 
-The Reseller can also easily access to a real-time **sales reports**. This
-functionality is provided by the _Proceeds_ view, where is possible to filter by
-date-interval (also having the partial totals in the last records pagination).
+The Reseller can also access to a real-time sales reports:
 
-![](/img/docs/12-reseller-proceeds.png)
+* Click on the **Proceeds** menu item
+* Optionally filter by **Vendor**, **Product** or time range
 
-### Automated distributor/reseller marketplace creation
+## Automated distributors and resellers marketplace creation
 
-The platform automatically creates **dedicated** **domain names** for each
-distributor / reseller marketplace.
+The platform enables the management of independent marketplaces managed by
+distributors and reseller.
 
-By default, the platform creates URLs following this pattern:
+The platform supports *Google DNS* and *Cloudflare* providers and can
+automatically create new DNS records when creating a marketplace, for example:
 
-* reseller marketplaces: `https://username.resellers.parent.tld`
-* distributor marketplaces: `https://username.distributors.parent.tld`
+* for a reseller: `https://username.resellers.parent.tld`
+* for a distributor: `https://username.distributors.parent.tld`
 
-In order to be able to activate the above mechanism, the platform should be able
-to dynamically create DNS records for the _parent\_domain\_name_ (a wildcard SSL
-certificate is required).
+A wildcard SSL certificate is required on Google DNS, while on Cloudflare the
+native SSL is available by default.
 
-It's also possible to manually configure **custom domain names** for distributor
-/ reseller marketplaces.
+When using a third-party DNS provider, it's possible to manually configure DNS
+records required for new distributors and resellers marketplaces.
