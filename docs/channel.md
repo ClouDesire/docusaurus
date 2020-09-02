@@ -129,6 +129,7 @@ To do this, once logged as Parent:
 Now the distributor can add the product in one or more **Price List**.
 
 A Parent can also manage on behalf of the respective owners:
+
 * Distributor Price Lists
 * Distributor Sell-in
 * Reseller Price Lists
