@@ -38,12 +38,13 @@ to the Reseller:
   markup to the *Wholesale Price*. Each Distributor catalog is assigned to one
   or more Resellers.
 * Each Reseller decides the *Sell-out Price* for each Product Plan in one or
-  more catalogs, then can associate an End Customer to a catalog. Each Reseller
-  can manage its own public marketplace with an associated default catalog.
+  more catalogs. Each Reseller can manage its own public marketplace with an
+  associated default catalog, and can associate an End Customer to a specific
+  catalog.
 
 ### Reseller features
 
-Resellers has access to a unique set of features:
+Resellers have access to a unique set of features:
 
 * Add **VAS** (Value Added Services,
   [extra-resources](glossary.md#extra-resources) to empower its own offer (like
