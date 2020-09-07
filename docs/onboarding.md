@@ -112,7 +112,7 @@ the top right at any time.
   tutorials or walk-through.
 * _Cover_: this picture is used only on the the marketplace homepage slider, if
   the product has been promoted to *featured* by the marketplace owner. Please
-  use a captivating high-quality image of 819x465 px in resolution.
+  use a captivating high-quality image of 820x465 px in resolution.
 * _Screen-shots_ (list of images): these images will be shown to customers in
   the dedicated section, choose wisely which ones to show. Remember that is the
   first time that a potential customer will see your application in action:
