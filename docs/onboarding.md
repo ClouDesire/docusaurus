@@ -66,19 +66,19 @@ the top right at any time.
 
 ### General Information
 
-* _Logo_: high-resolution logo with fully transparent background.
-* _Product Name_: your application name. It's the name that will be associated
+* **Logo**: a logo with transparent background and 350x300 px in resolution.
+* **Product Name**: your application name. It's the name that will be associated
   with your product on the marketplace.
-* _SKU_: your product ID. You cannot change it once the product has been
+* **SKU**: your product ID. You cannot change it once the product has been
   created, it's good to identify a particular product when using API.
-* _Category_ (e.g. CMS, CRM): this will help customers to understand your
+* **Category** (e.g. CMS, CRM): this will help customers to understand your
   product category and will be shown on your product page on the marketplace.
-* _Destination_ (B2B or B2C):  this will prevent private customers to buy the
+* **Destination** (B2B or B2C):  this will prevent private customers to buy the
   product if it's meant to be sold only to businesses.
-* _Tags_ (keyword list): these tags will help customers to quickly understand
+* **Tags** (keyword list): these tags will help customers to quickly understand
   your product. Please, try to add only relevant tags to avoid too many tags on
   the product page.
-* _Long and Short Description_ (text): describe your product to customers. Try
+* **Long and Short Description** (text): describe your product to customers. Try
   to focus on your product distinctive points for your ideal customers. You will
   have later dedicated sections to add benefits, features, details of each
   available plan, terms and conditions and privacy policy. Avoid too long
