@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Distribution and Channel Management · cloudesire documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Distribution and channel logics are available in the cloudesire platform."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Distribution and Channel Management · cloudesire documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="Distribution and channel logics are available in the cloudesire platform."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Distribution and Channel Management · cloudesire documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Distribution and channel management are available in the cloudesire platform."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Distribution and Channel Management · cloudesire documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="Distribution and channel management are available in the cloudesire platform."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,35 +62,42 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/channel.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Distribution and Channel Management</h1></header><article><div><span><p>Distribution and channel logics are available in the cloudesire platform.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/channel.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Distribution and Channel Management</h1></header><article><div><span><p>Distribution and channel management are available in the cloudesire platform.</p>
+<p>When the channel management feature is enabled, new user roles became available:</p>
 <ul>
-<li><strong>Parent</strong> (the MSP usually) deals with Vendors, and decides the catalog
-composition for Distributors together with Wholesale Prices</li>
-<li><strong>Distributors</strong> sell-in to Resellers (VAS, VAR, business partners, dealers,
-agents, etc.)</li>
-<li><strong>Resellers</strong> sell-out to End-Customers (applying a Recommended Retail Price
-imposed by the MSP, or building up their own price strategy)</li>
+<li><strong>Parent</strong> (the marketplace owner) manage the catalog of products offered by
+ISVs and assign them to Distributors</li>
+<li><strong>Distributors</strong> sell-in their products to their Resellers (business partners,
+dealers, agents)</li>
+<li><strong>Resellers</strong> sell-out to End Customers</li>
 </ul>
 <p>Each Reseller can bill/invoice autonomously, or on behalf of the Distributors
 (useful for <strong>Agents</strong>/<strong>Dealers</strong>).</p>
 <p><img src="/img/docs/parent-child-schema.png" alt="parent-child summary schema"></p>
-<h2><a class="anchor" aria-hidden="true" id="productservice-assignment-rules-and-pricing-logics-along-the-chain"></a><a href="#productservice-assignment-rules-and-pricing-logics-along-the-chain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product/service assignment rules and pricing logics, along the chain</h2>
-<p><strong>Main Product / Pricing logics:</strong></p>
+<h2><a class="anchor" aria-hidden="true" id="logic-along-the-chain"></a><a href="#logic-along-the-chain" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logic along the chain</h2>
+<p>Channel management has a steep learning curve, let's begin to clarify some of
+the most important behaviors.</p>
+<h3><a class="anchor" aria-hidden="true" id="product-management-and-pricing"></a><a href="#product-management-and-pricing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product management and pricing</h3>
+<p>A product can be sold with the interaction of each user down the chain, from ISV
+to the Reseller:</p>
 <ul>
-<li>The Parent (the Service Provider) deals with Vendors, acquiring Services at
-the &quot;Vendor Price&quot; negotiated with the Vendor</li>
-<li>The Parent decides the catalog composition for each Distributor,as well as the
-&quot;Wholesale Price&quot; for each Service Plan</li>
-<li>Each Distributor decides the Service Plans that he wants to assign in
-different catalogs, together with the respective &quot;Sell-in Price&quot; applying a
-markup to the &quot;Wholesale Price&quot;. Each catalog is assigned to one or more
-resellers.</li>
-<li>Each Reseller decides the &quot;Sell-out Price&quot; for each Service Plan in one or
-more catalogs, then associate an End-Customer to a catalog.</li>
+<li>The Parent manage ISVs, acquiring Products at the <em>Vendor Price</em> negotiated
+with the ISV</li>
+<li>The Parent decides the catalog composition for each Distributor, as well as
+the <em>Wholesale Price</em> for each Product Plan</li>
+<li>Each Distributor decides the Product Plans that he wants to assign in
+different catalogs, together with the respective <em>Sell-in Price</em> applying a
+markup to the <em>Wholesale Price</em>. Each Distributor catalog is assigned to one
+or more Resellers.</li>
+<li>Each Reseller decides the <em>Sell-out Price</em> for each Product Plan in one or
+more catalogs. Each Reseller can manage its own public marketplace with an
+associated default catalog, and can associate an End Customer to a specific
+catalog.</li>
 </ul>
-<p><strong>Each actor down the chain (from ISV to Reseller) can also:</strong></p>
+<h3><a class="anchor" aria-hidden="true" id="reseller-features"></a><a href="#reseller-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reseller features</h3>
+<p>Resellers have access to a unique set of features:</p>
 <ul>
-<li>Add <strong>VAS</strong> (Value Added Services, AKA
+<li>Add <strong>VAS</strong> (Value Added Services,
 <a href="/docs/glossary.html#extra-resources">extra-resources</a> to empower its own offer (like
 setup, training, support, devices, etc.). All pricing models available in
 Cloudesire can be applied also to VAS (typically: one-off, subscription,
@@ -99,8 +106,11 @@ consumption)</li>
 override, trial extension | reusable or not | with/without time limit)</li>
 <li>Build up its own <a href="/docs/billing.html#bundles"><strong>bundles</strong></a>, hence configure the
 (discounted) price of each bundled product</li>
+<li>Define a new category for each of the resold products on their marketplaces.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="available-billingpayment-scenarios"></a><a href="#available-billingpayment-scenarios" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Available Billing/Payment scenarios</h2>
+<p>The platform supports multiple ways in which a Reseller can sell products to End
+Users.</p>
 <h3><a class="anchor" aria-hidden="true" id="scenario-1-self-billing"></a><a href="#scenario-1-self-billing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario 1: Self-Billing</h3>
 <ul>
 <li>Cloudesire provides to the Reseller the <em>billing instructions</em> (namely: who is
@@ -127,11 +137,12 @@ Reseller</li>
 payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud
 Providers</li>
 </ul>
-<p>For each Scenario, the Reseller has both the &quot;<strong>push</strong>&quot; and &quot;<strong>pull</strong>&quot; selling
-modalities available:</p>
+<h3><a class="anchor" aria-hidden="true" id="order-placement"></a><a href="#order-placement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order placement</h3>
+<p>For each of the previous billing scenarios, the Reseller has both the &quot;<strong>push</strong>&quot;
+and &quot;<strong>pull</strong>&quot; selling modalities available:</p>
 <ul>
-<li>push: the Reseller insert the order on behalf of its Customer</li>
-<li>pull: the Customer buys directly from the Reseller store</li>
+<li>push: the Reseller insert the order on behalf of its End Customer</li>
+<li>pull: the End Customer buys directly from the Reseller marketplace</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="other-relevant-features"></a><a href="#other-relevant-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Other relevant features</h3>
 <ul>
@@ -140,8 +151,7 @@ cannot see the sell-in prices applied by its distributor to another reseller)</l
 <li>actors down the chain cannot visualize any data that relies to an actor up the
 chain (example: reseller cannot see the price at which its distributor is
 buying a given product)</li>
-<li>prices can be decided by each actor relating to its adjacent down the chain,
-or RRP can be forced by Parent</li>
+<li>prices can be decided by each actor relating to its adjacent down the chain</li>
 <li>prices for each service can be set different between peers by the actor up the
 chain</li>
 <li>Parent can deactivate one or more distribution tiers (up to Parent selling
@@ -153,107 +163,121 @@ directly to End Customers)</li>
 <li><em>listing</em>: products and prices are visible, but transactions are disabled</li>
 <li><em>showcase</em>: products are visible, prices are masked and transactions disabled</li>
 </ul>
-<p>Each Marketplace can be <strong>customized</strong>:</p>
-<p><img src="/img/docs/reseller-marketplace-custom.jpg" alt="reseller auto-generated marketplace"></p>
 <h2><a class="anchor" aria-hidden="true" id="parent-functionalities"></a><a href="#parent-functionalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parent functionalities</h2>
-<p>In order to start enabling the parent-child support into the Cloudesire
-platform, the Parent needs to assign one or more products to each Distributor.</p>
-<p>To do this, once logged as Parent, click on the <em>Catalog</em> menu item and then on
-the <em>Distributor-Products</em> menu item. On this view, you can search by
-Distributor name and/or by product name for filtering the list, otherwise you
-can select a single Distributor and then click on the &quot;add product&quot; button on
-the top-right to select a product to be assigned to him.</p>
-<p>Each Distributor-product assignment can be deleted (but only if no subscription
-was activated before for the corresponding product, through that specific
-Distributor channel).</p>
-<p><img src="/img/docs/2-admin-distributor-products.png" alt="admin distributor products"></p>
-<p>The <em>Distributor-Catalogs</em> view provides a list of all the associations created
-with the previous tool, together with all the product assignments made by each
-Distributors to his Resellers.</p>
-<p>It's possible to filer the list by searching for Distributor name, Reseller name
-and product name.</p>
-<p><img src="/img/docs/1-admin-distributor-catalogs.png" alt="admin distributor catalogs"></p>
-<h2><a class="anchor" aria-hidden="true" id="distributor-functionalities"></a><a href="#distributor-functionalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Distributor functionalities</h2>
-<p>The Distributor can access to his catalog by clicking on the namesake menu item.</p>
-<p><img src="/img/docs/3.1-distributor-catalog.png" alt="distributor catalog"></p>
-<p>By clicking on the &quot;assign&quot; button is possible to assign the specific product to
-a Reseller: a dialog is proposed, where the Distributor can search a Reseller
-(by filtering for his name) and then set the <strong>sell-in markups</strong> for the one-off
-/ subscription / extra resources / cloud resources costs.</p>
-<p><img src="/img/docs/3.2-distributor-sell-in-config-product-preselected.png" alt="sell-in selection"></p>
-<p>All the already created sell-in configurations are listed in the <em>Sell-In
-Config</em> view:</p>
-<p><img src="/img/docs/3-distributor-sell-in-config-list.png" alt="distributor sell-in config list"></p>
-<p>By clicking on each row in the list, 3 new buttons should be proposed on the
-top-right: &quot;assign&quot;, &quot;edit&quot; and &quot;delete&quot;.</p>
-<p>The &quot;assign&quot; button can be used if no sell-in prices was assigned for the
-specific product; if pressed the previously described dialog will be proposed to
-create the configuration.</p>
-<p>The &quot;delete&quot; button will unset the sell-in prices for the selected
-product-Reseller assignment: this is obviously possible only if no subscriptions
-was created on that specific channel.</p>
-<p>The&quot;edit&quot; button can be used to change the current sell-in price configurations
-for the selected product-Reseller assignment: of course the new sell-in prices
-will become effective only for the successive subscriptions.</p>
-<p>If no row is selected the &quot;assign&quot; button is shown on the top-right: by clicking
-on it, the Distributor can create a new sell-in configuration from the scratch
-on this interface, where is possible to configure the sell-in markups both for
-the one-off costs and the subscription cost:</p>
-<p><img src="/img/docs/4-distributor-sell-in-config-edit-licenses.png" alt="distributor sell-in edit licenses"></p>
-<p>By clicking on the &quot;Extra-Resources&quot; tab, the Distributor can also set the
-sell-in markups also for the <a href="/docs/glossary.html#extra-resources">extra-resources</a> to
-be sold together with the product.</p>
-<p><img src="/img/docs/5-distributor-sell-in-config-edit-extra-resources.png" alt="distributor sell-in config edit extra resources"></p>
-<p>If the product to be sold is a <a href="/docs/docker.html">Docker application</a> then the
-&quot;cloud-pricing&quot; tab is also provided. In this section, the Distributor can set
-the sell-in markups for all the cloud resources unit prices, given a selected
-<a href="/docs/clouds.html">cloud provider</a> (among the all supported
-by the platform).</p>
-<p><img src="/img/docs/6-distributor-sell-in-config-edit-cloud-resources.png" alt="distributor sell-in edit cloud resources"></p>
-<p>The Distributor can also easily access to a real-time <strong>sales reports</strong> through
-his Resellers' channels. This functionality is provided by the <em>Proceeds</em> view,
-where is possible to filter by date-interval (also having the partial totals in
-the last records pagination) and by Reseller name.</p>
-<p><img src="/img/docs/7-distributor-proceeds.png" alt="distributor realtime proceeds"></p>
-<h2><a class="anchor" aria-hidden="true" id="reseller-functionalities"></a><a href="#reseller-functionalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reseller functionalities</h2>
-<p>The Reseller can access the <em>Sell-Out Config</em> section to browse the <strong>sell-out
-prices</strong> related to all the products listed in his catalog. This view is
-filterable by product name.</p>
-<p><img src="/img/docs/8-reseller-sell-out-config-list.png" alt="reseller sell-out config list"></p>
-<p>By clicking on a specific row, a dialog will be provided, where the Reseller can
-configure the sell-out prices both for the on-off and the subscription pricing
-components:</p>
-<p><img src="/img/docs/9-reseller-sell-out-config-edit-licenses.png" alt=""></p>
-<p>The &quot;Extra Resources&quot; tab will provide the possibility to set-up the sell-out
-prices for the <a href="/docs/glossary.html#extra-resources">extra-resources</a> to be sold
-together with the product.</p>
-<p><img src="/img/docs/10-reseller-sell-out-config-edit-extra-resources.png" alt=""></p>
-<p>If the product to be sold is a <a href="/docs/docker.html">Docker application</a> then the
-&quot;cloud-pricing&quot; tab is also provided. In this section, the Reseller can set the
-sell-out prices for all the cloud resources units, given a selected <a href="/docs/clouds.html">cloud
-provider</a> (among the all supported by the
-platform).</p>
-<p>The Reseller can change the sell-out configurations for a product anytime: of
-course the new prices will be applied only for the future subscriptions.</p>
-<p><img src="/img/docs/11-reseller-sell-out-config-edit-cloud-resources.png" alt=""></p>
-<p>The Reseller can also easily access to a real-time <strong>sales reports</strong>. This
-functionality is provided by the <em>Proceeds</em> view, where is possible to filter by
-date-interval (also having the partial totals in the last records pagination).</p>
-<p><img src="/img/docs/12-reseller-proceeds.png" alt=""></p>
-<h3><a class="anchor" aria-hidden="true" id="automated-distributorreseller-marketplace-creation"></a><a href="#automated-distributorreseller-marketplace-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automated distributor/reseller marketplace creation</h3>
-<p>The platform automatically creates <strong>dedicated</strong> <strong>domain names</strong> for each
-distributor / reseller marketplace.</p>
-<p>By default, the platform creates URLs following this pattern:</p>
+<p>To start enabling the parent-child support into the Cloudesire platform, the
+Parent needs to assign one or more products to a Distributor.</p>
+<p>To do this, once logged as Parent:</p>
 <ul>
-<li>reseller marketplaces: <code>https://username.resellers.parent.tld</code></li>
-<li>distributor marketplaces: <code>https://username.distributors.parent.tld</code></li>
+<li>Click on the <strong>Channel Catalog -&gt; Distributor Products</strong> menu item.</li>
+<li>Click <strong>Add product</strong> to begin assign a new product</li>
+<li>Search by Distributor name and by product name and click on <strong>Add</strong>.</li>
 </ul>
-<p>In order to be able to activate the above mechanism, the platform should be able
-to dynamically create DNS records for the <em>parent_domain_name</em> (a wildcard SSL
-certificate is required).</p>
-<p>It's also possible to manually configure <strong>custom domain names</strong> for distributor
-/ reseller marketplaces.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2019-5-2 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/billing.html"><span class="arrow-prev">← </span><span>Billing</span></a><a class="docs-next button" href="/docs/customer-cloud-credentials.html"><span>Customer Cloud Credentials</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#productservice-assignment-rules-and-pricing-logics-along-the-chain">Product/service assignment rules and pricing logics, along the chain</a></li><li><a href="#available-billingpayment-scenarios">Available Billing/Payment scenarios</a><ul class="toc-headings"><li><a href="#scenario-1-self-billing">Scenario 1: Self-Billing</a></li><li><a href="#scenario-2-billing-on-behalf">Scenario 2: Billing on behalf</a></li><li><a href="#scenario-3-billing">Scenario 3: Billing</a></li><li><a href="#other-relevant-features">Other relevant features</a></li></ul></li><li><a href="#parent-functionalities">Parent functionalities</a></li><li><a href="#distributor-functionalities">Distributor functionalities</a></li><li><a href="#reseller-functionalities">Reseller functionalities</a><ul class="toc-headings"><li><a href="#automated-distributorreseller-marketplace-creation">Automated distributor/reseller marketplace creation</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2020 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p>Now the distributor can add the product in one or more <strong>Price List</strong>.</p>
+<p>A Parent can also manage on behalf of the respective owners:</p>
+<ul>
+<li>Distributor Price Lists</li>
+<li>Distributor Sell-in</li>
+<li>Reseller Price Lists</li>
+<li>Reseller Sell-out</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="distributor-functionalities"></a><a href="#distributor-functionalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Distributor functionalities</h2>
+<p>Once Distributors has one or more products associated from the Parent, they can
+start to insert those products into their Price Lists.</p>
+<p>To create a new Price List, logged as a Distributor:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Price Lists</strong> menu item</li>
+<li>Click on <strong>Add</strong> button.</li>
+<li>Insert a <strong>Price List name</strong> and assign existing resellers to this Price List.</li>
+<li>Click on <strong>Save</strong> to create the Price List.</li>
+</ul>
+<p>To define a new Sell-in for a product, logged as Distributor:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Products</strong> menu item</li>
+<li>Select a product plan from the list that you want to add to a Price List</li>
+<li>Click on <strong>Add Sell-in</strong> button.</li>
+<li>On the new <strong>Sell-in Configuration</strong> section, select a <strong>Price List</strong> and
+define the <strong>Sell-in one-off price</strong> and the <strong>Sell-in unit subscription
+price</strong>, either as a Percentage or Currency.</li>
+<li>If the product has one or more Extra Resources, click on the <strong>Resources</strong> tab
+to configure the <strong>Sell-in one-off price</strong> and the <strong>Sell-in unit subscription
+price</strong>, either as a Percentage or Currency, for every available Extra
+Resource.</li>
+<li>Click on <strong>Save</strong> to insert the product in the selected Price List.</li>
+</ul>
+<p>Each defined Sell-in inside a Price List, can be modified from Sell-in section:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Sell-in</strong> menu item</li>
+<li>Select a <strong>Price List</strong></li>
+<li>Select any remaining filter and then click on <strong>Search</strong></li>
+<li>Select the row that you wish to modify and click on <strong>Edit</strong> button</li>
+<li>Once done with the <strong>Sell-in configuration</strong>, click on <strong>Save</strong> button.</li>
+</ul>
+<p>You can use the <strong>Delete</strong> button to remove the selected Plan from the current
+Price List.</p>
+<p>You can use the <strong>Assign</strong> button in this page to add a new product to the
+current Price List, when no row is currently selected.</p>
+<p>If the product sold is a <a href="/docs/docker.html">Docker application</a> then the
+<strong>cloud-pricing</strong> tab is also shown when editing the Sell-in.</p>
+<p>The Distributor can also access to a real-time sales reports:</p>
+<ul>
+<li>Click on the <strong>Proceeds</strong> menu item</li>
+<li>Optionally filter by <strong>Reseller</strong>, <strong>Vendor</strong>, <strong>Product</strong> or time range</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="reseller-functionalities"></a><a href="#reseller-functionalities" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reseller functionalities</h2>
+<p>Once Resellers has been assigned to a Distributor Price List, they can start to
+price those products into their own Price Lists.</p>
+<p>To create a new Price List, logged as a Reseller:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Price Lists</strong> menu item</li>
+<li>Click on <strong>Add</strong> button.</li>
+<li>Insert a <strong>Price List name</strong> and assign existing resellers to this Price List.</li>
+<li>Click on <strong>Save</strong> to create the Price List.</li>
+</ul>
+<p>To define a new Sell-out for a product, logged as Reseller:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Products</strong> menu item</li>
+<li>Select a product plan from the list that you want to add to a Price List</li>
+<li>Click on <strong>Add Sell-out</strong> button.</li>
+<li>On the new <strong>Sell-out Configuration</strong> section, select a <strong>Price List</strong> and
+define the <strong>Sell-out one-off price</strong> and the <strong>Sell-out unit subscription
+price</strong>, either as a Percentage or Currency.</li>
+<li>If the product has one or more Extra Resources, click on the <strong>Resources</strong> tab
+to configure the <strong>Sell-out one-off price</strong> and the <strong>Sell-out unit
+subscription price</strong>, either as a Percentage or Currency, for every available
+Extra Resource.</li>
+<li>Click on <strong>Save</strong> to insert the product in the selected Price List.</li>
+</ul>
+<p>Each defined Sell-out inside a Price List, can be modified from Sell-out section:</p>
+<ul>
+<li>Click on the <strong>Channel Catalog -&gt; Sell-out</strong> menu item</li>
+<li>Select a <strong>Price List</strong></li>
+<li>Select any remaining filter and then click on <strong>Search</strong></li>
+<li>Select the row that you wish to modify and click on <strong>Edit</strong> button</li>
+<li>Once done with the <strong>Sell-out configuration</strong>, click on <strong>Save</strong> button.</li>
+</ul>
+<p>You can use the <strong>Delete</strong> button to remove the selected Plan from the current
+Price List.</p>
+<p>If the product sold is a <a href="/docs/docker.html">Docker application</a> then the
+<strong>cloud-pricing</strong> tab is also shown when editing the Sell-out.</p>
+<p>The Reseller can also access to a real-time sales reports:</p>
+<ul>
+<li>Click on the <strong>Proceeds</strong> menu item</li>
+<li>Optionally filter by <strong>Vendor</strong>, <strong>Product</strong> or time range</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="automated-distributors-and-resellers-marketplace-creation"></a><a href="#automated-distributors-and-resellers-marketplace-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Automated distributors and resellers marketplace creation</h2>
+<p>The platform enables the management of independent marketplaces managed by
+distributors and reseller.</p>
+<p>The platform supports <em>Google DNS</em> and <em>Cloudflare</em> providers and can
+automatically create new DNS records when creating a marketplace, for example:</p>
+<ul>
+<li>for a reseller: <code>https://username.resellers.parent.tld</code></li>
+<li>for a distributor: <code>https://username.distributors.parent.tld</code></li>
+</ul>
+<p>A wildcard SSL certificate is required on Google DNS, while on Cloudflare the
+native SSL is available by default.</p>
+<p>When using a third-party DNS provider, it's possible to manually configure DNS
+records required for new distributors and resellers marketplaces.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2020-9-8 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/billing.html"><span class="arrow-prev">← </span><span>Billing</span></a><a class="docs-next button" href="/docs/customer-cloud-credentials.html"><span>Customer Cloud Credentials</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#logic-along-the-chain">Logic along the chain</a><ul class="toc-headings"><li><a href="#product-management-and-pricing">Product management and pricing</a></li><li><a href="#reseller-features">Reseller features</a></li></ul></li><li><a href="#available-billingpayment-scenarios">Available Billing/Payment scenarios</a><ul class="toc-headings"><li><a href="#scenario-1-self-billing">Scenario 1: Self-Billing</a></li><li><a href="#scenario-2-billing-on-behalf">Scenario 2: Billing on behalf</a></li><li><a href="#scenario-3-billing">Scenario 3: Billing</a></li><li><a href="#order-placement">Order placement</a></li><li><a href="#other-relevant-features">Other relevant features</a></li></ul></li><li><a href="#parent-functionalities">Parent functionalities</a></li><li><a href="#distributor-functionalities">Distributor functionalities</a></li><li><a href="#reseller-functionalities">Reseller functionalities</a></li><li><a href="#automated-distributors-and-resellers-marketplace-creation">Automated distributors and resellers marketplace creation</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2020 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
