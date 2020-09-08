@@ -66,7 +66,7 @@ the top right at any time.
 
 ### General Information
 
-* _Logo_: high-resolution logo with fully transparent background.
+* _Logo_: a logo with transparent background (350x300 px)
 * _Product Name_: your application name. It's the name that will be associated
   with your product on the marketplace.
 * _SKU_: your product ID. You cannot change it once the product has been
