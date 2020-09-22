@@ -1,16 +1,23 @@
-# docusaurus
+# docs.cloudesire.com
 
-Cloudesire documentation website and engineering blog, based on [facebook/docusaurus](https://docusaurus.io/).
+Cloudesire documentation website and engineering blog, based on
+[facebook/docusaurus](https://docusaurus.io/).
 
-## Run local copy
+## Requirements
+
+For improved English prose, please use a **Write Good** extension in a supported
+text editor.
+
+## Local development
 
 ```
 $ cd website
 $ yarn install && yarn start
 ```
 
-Browse `http://localhost:3000`
+It will automatically open your browser to `http://localhost:3000`
 
 ## Update feedback widget version
 
-To update the feedback widget push the new code to https://github.com/ClouDesire/feedback-widget/tree/gh-pages
+To update the feedback widget push the new code to
+https://github.com/ClouDesire/feedback-widget/tree/gh-pages
