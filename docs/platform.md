@@ -59,15 +59,15 @@ Cloudesire Backend is made by the following modules:
 
 ### Syndication modules
 
-* [**Openstack-connector**](modules-openstack.md): enables the provisioning of new Openstack tenants
-  (users and project) upon customer order placement, in prepaid and
-  pay-as-you-go mode.
-* [**vCloud-connector**](modules-vcloud.md): enables the provisioning of new VDC (organizations)
-  upon customer order placement on VMware vCloud Director 9.5 infrastructure,
-  in prepaid and pay-as-you-go mode.
-* [**OKD-connector**](modules-okd.md): enables the provisioning of OKD projects upon customer
-  order placement on OKD 3.11 dedicated infrastructure, in prepaid and
-  pay-as-you-go mode.
+* [**Openstack-connector**](modules-openstack.md): enables the provisioning of
+  new Openstack tenants (users and project) upon customer order placement, in
+  prepaid and pay-as-you-go mode.
+* [**vCloud-connector**](modules-vcloud.md): enables the provisioning of new VDC
+  (organizations) upon customer order placement on VMware vCloud Director 9.5
+  infrastructure, in prepaid and pay-as-you-go mode.
+* [**OKD-connector**](modules-okd.md): enables the provisioning of OKD projects
+  upon customer order placement on OKD 3.11 dedicated infrastructure, in prepaid
+  and pay-as-you-go mode.
 * **Microsoft-connector**: allows the integration of Cloudesire with Microsoft
   CSP to enable the selling of Microsoft licenses and Azure resources
 * **Kong-connector**: allows the integration of Cloudesire with Kong API
