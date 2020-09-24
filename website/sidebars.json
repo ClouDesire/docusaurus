@@ -19,7 +19,7 @@
       "platform",
       {
         "type": "subcategory",
-        "label": "Syndication Modules",
+        "label": "Easycloud Modules",
         "ids": [
           "modules-vcloud",
           "modules-openstack",
