@@ -19,7 +19,7 @@
       "platform",
       {
         "type": "subcategory",
-        "label": "Easycloud Modules",
+        "label": "Easycloud IaaS modules",
         "ids": [
           "modules-vcloud",
           "modules-openstack",
