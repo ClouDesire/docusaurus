@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:8
+    resource_class: small
 
     steps:
       - checkout
@@ -25,7 +26,7 @@ jobs:
       - run:
           name: Build
           command: cd website && yarn build
-      
+
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
@@ -34,6 +35,7 @@ jobs:
   verify:
     docker:
       - image: cimg/ruby:2.7.1
+    resource_class: small
 
     steps:
       - attach_workspace:
@@ -67,10 +69,11 @@ jobs:
           name: Test html output
           command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/'
           when: always
-  
+
   deploy:
     docker:
       - image: circleci/node:8
+    resource_class: small
 
     steps:
       - attach_workspace:
