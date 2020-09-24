@@ -26,7 +26,7 @@ The main components of the Cloudesire platform can be summarized as follows:
 
 ## Backend
 
-Cloudesire Backend modules contains:
+Cloudesire Backend is made by the following modules:
 
 * **CMW**: the core of Cloudesire, handles most of the business logic related to
   the catalog, customers, subscriptions and billing.
@@ -36,12 +36,6 @@ Cloudesire Backend modules contains:
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
   [Public and Private cloud providers](clouds.md). It also handles [backup and
   restore](backup.md) processes.
-* **Openstack-connector**: enables the provisioning of new Openstack tenants
-  (users and project) upon customer order placement, in prepaid and
-  pay-as-you-go mode.
-* **vCloud-connector**: enables the provisioning of new VDC (organizations)
-  upon customer order placement on VMware vCloud Director 9.5 infrastructure,
-  in prepaid and pay-as-you-go mode.
 * **Monitor**: an API that exposes system and application for statistics and
   real-time graphs. Data store is based on the open-source [Prometheus
   monitoring](https://prometheus.io/) system. System metrics are collected via
@@ -54,10 +48,6 @@ Cloudesire Backend modules contains:
   and reseller marketplaces (logo, description, theme, etc.)
 * **Hubspot-connector**: allows the integration of Cloudesire user-base into the
   Hubspot CRM
-* **Microsoft-connector**: allows the integration of Cloudesire with Microsoft
-  CSP to enable the selling of Microsoft licenses and Azure resources
-* **Kong-connector**: allows the integration of Cloudesire with Kong API
-  management solution to enable selling of API products into the marketplace
 * **Feedback-api**: an API to collect user support requests and forward them to
   ticket systems.
 * **Keycloak**: enables SSO capabilities for marketplace users
@@ -66,6 +56,22 @@ Cloudesire Backend modules contains:
 * **Janine**: open-source PDF invoice generator
 * **Vivace**: API to calculate a background color from an image (used
   for products logo into the marketplace)
+
+### Syndication modules
+
+* [**Openstack-connector**](modules-openstack.md): enables the provisioning of new Openstack tenants
+  (users and project) upon customer order placement, in prepaid and
+  pay-as-you-go mode.
+* [**vCloud-connector**](modules-vcloud.md): enables the provisioning of new VDC (organizations)
+  upon customer order placement on VMware vCloud Director 9.5 infrastructure,
+  in prepaid and pay-as-you-go mode.
+* [**OKD-connector**](modules-okd.md): enables the provisioning of OKD projects upon customer
+  order placement on OKD 3.11 dedicated infrastructure, in prepaid and
+  pay-as-you-go mode.
+* **Microsoft-connector**: allows the integration of Cloudesire with Microsoft
+  CSP to enable the selling of Microsoft licenses and Azure resources
+* **Kong-connector**: allows the integration of Cloudesire with Kong API
+  management solution to enable selling of API products into the marketplace
 
 ### Deployer workflow
 

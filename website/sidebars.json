@@ -12,13 +12,20 @@
       "csp-product",
       "api-product",
       "vm",
-      "vdc-openstack",
-      "vdc-vcloud-director",
       "order-validation"
     ],
     "Platform": [
       "glossary",
       "platform",
+      {
+        "type": "subcategory",
+        "label": "Syndication Modules",
+        "ids": [
+          "modules-vcloud",
+          "modules-openstack",
+          "modules-okd"
+        ]
+      },
       "platform-users",
       "backup",
       "billing",

@@ -77,6 +77,18 @@
         "title": "Marketplace customization",
         "sidebar_label": "Marketplace customization"
       },
+      "modules-okd": {
+        "title": "Selling and provisioning of OKD projects",
+        "sidebar_label": "OKD projects itnegration"
+      },
+      "modules-openstack": {
+        "title": "Selling and provisioning of OpenStack tenants",
+        "sidebar_label": "OpenStack VDC integration"
+      },
+      "modules-vcloud": {
+        "title": "Selling and provisioning of VMware vCloud Director tenants",
+        "sidebar_label": "vCloud VDC integration"
+      },
       "onboarding-extra-resources": {
         "title": "Extra Resources",
         "sidebar_label": "Extra Resources"
@@ -116,14 +128,6 @@
       "syndication": {
         "title": "Onboarding of syndicated applications",
         "sidebar_label": "Syndicated applications"
-      },
-      "vdc-openstack": {
-        "title": "Selling and provisioning of OpenStack tenants",
-        "sidebar_label": "OpenStack tenants"
-      },
-      "vdc-vcloud-director": {
-        "title": "Selling and provisioning of VMware vCloud Director tenants",
-        "sidebar_label": "vCloud tenants"
       },
       "vm": {
         "title": "Bare Virtual-Machines products onboarding",

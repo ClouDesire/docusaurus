@@ -1,7 +1,7 @@
 ---
-id: vdc-openstack
+id: modules-openstack
 title: Selling and provisioning of OpenStack tenants
-sidebar_label: OpenStack tenants
+sidebar_label: OpenStack VDC integration
 ---
 
 Cloudesire platform enables selling of OpenStack tenants via a native API
@@ -33,4 +33,5 @@ by using the automatically gathered metrics for each of the billed resources
 
 ## Example
 
-An example OpenStack VDC product is available on our [demo marketplace](https://demo.cloudesire.com/2410/iaas/openstack-vdc).
+An example OpenStack VDC product is available on our [demo
+marketplace](https://demo-mcp.cloudeng.it/161743/compute/virtual-data-center-openstack).
