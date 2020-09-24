@@ -79,7 +79,7 @@
       },
       "modules-okd": {
         "title": "Selling and provisioning of OKD projects",
-        "sidebar_label": "OKD projects itnegration"
+        "sidebar_label": "OKD projects integration"
       },
       "modules-openstack": {
         "title": "Selling and provisioning of OpenStack tenants",

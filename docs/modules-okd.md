@@ -1,17 +1,17 @@
 ---
 id: modules-okd
 title: Selling and provisioning of OKD projects
-sidebar_label: OKD projects itnegration
+sidebar_label: OKD projects integration
 ---
 
 Cloudesire platform enables selling of OKD projects via a native API
 integration.
 
 A special product on the marketplace is available for purchase that
-automatically provision on OKD a new user with a dedicated project.
+automatically provisions a new user with a dedicated project on OKD.
 
-To achieve this, administrator credentials of an OKD platform is necessary to
-be able to dynamically create new users and projects.
+To achieve this, it is necessary to provide administrator credentials of an
+OKD platform in order to dynamically create new users and projects.
 
 Both *prepaid* and *pay-as-you-go* pricing models are supported.
 
