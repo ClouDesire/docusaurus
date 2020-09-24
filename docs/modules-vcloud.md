@@ -1,7 +1,7 @@
 ---
-id: vdc-vcloud-director
+id: modules-vcloud
 title: Selling and provisioning of VMware vCloud Director tenants
-sidebar_label: vCloud tenants
+sidebar_label: vCloud VDC integration
 ---
 
 Cloudesire platform enables selling of vCloud director tenants via a native API
@@ -32,3 +32,7 @@ using the automatically gathered metrics for each of the billed resources (CPU
 cores, GB of memory, GB of disk space). IP address needs to be bought as a
 prepaid extra resources to be available inside the VDC network.
 
+## Example
+
+An example VMWare vCloud VDC product is available on our [demo
+marketplace](https://demo-mcp.cloudeng.it/161973/compute/virtual-data-center-vmware).
