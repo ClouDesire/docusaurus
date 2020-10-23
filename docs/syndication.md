@@ -653,7 +653,8 @@ Content-Type: application/json
     {
         "description": "First row",
         "price": {
-            "price": "100.0000"
+            "price": "100.0000",
+            "currency": "EUR"
         },
         "quantity": 2.0,
         "unit": "un"
@@ -661,7 +662,8 @@ Content-Type: application/json
     {
         "description": "Second row",
         "price": {
-            "price": "23.4567"
+            "price": "23.4567",
+            "currency": "EUR"
         },
         "quantity": 1.0,
         "unit": "un"
@@ -671,6 +673,17 @@ Content-Type: application/json
 
 HTTP/1.1 201 Created
 Location: https://backend.cloudesire.com/api/invoice/10000
+```
+
+#### Currency conversion
+
+The platform converts foreign currencies into EUR (via the
+`price.price.currency` field) according to a fixed conversion table.
+
+Currently accepted currencies:
+
+```text
+USD (= 0.93 EUR)
 ```
 
 ### Recurring Costs
