@@ -186,14 +186,14 @@ Total reclaimed space: 3.145GB
 <span class="hljs-attr">Description</span>=Prune unused Docker images weekly
 <span class="hljs-attr">RefuseManualStart</span>=<span class="hljs-literal">no</span>
 <span class="hljs-attr">RefuseManualStop</span>=<span class="hljs-literal">no</span>
-<span class="hljs-section">
-[Timer]</span>
+
+<span class="hljs-section">[Timer]</span>
 <span class="hljs-attr">Persistent</span>=<span class="hljs-literal">false</span>
 <span class="hljs-attr">OnBootSec</span>=<span class="hljs-number">80</span>
 <span class="hljs-attr">OnCalendar</span>=weekly
 <span class="hljs-attr">Unit</span>=docker-prune.service
-<span class="hljs-section">
-[Install]</span>
+
+<span class="hljs-section">[Install]</span>
 <span class="hljs-attr">WantedBy</span>=timers.target
 </code></pre>
 <p>start and enable our new timer</p>
