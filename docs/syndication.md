@@ -144,9 +144,13 @@ an empty response body).
 If you reply with a `200 - OK` and a payload it's fine too, but the payload will
 be automatically discarded.
 
-If the response contains a non-2xx status code (4xx & 5xx), the notification
-will be retried with an exponential back-off, until the endpoint will return a
-`204` status code.
+You can reply with a `429 - Too Many Requests` with an appropriate `Retry-After`
+[header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) to delay
+the subsequent retries.
+
+If the response contains another status code, the notification will be retried
+with an exponential back-off, until the endpoint will return a `204` status
+code.
 
 ## Workflow of a Subscription
 
