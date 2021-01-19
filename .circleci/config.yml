@@ -67,7 +67,7 @@ jobs:
 
       - run:
           name: Test html output
-          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/' --url-ignore 'twitt3r.com'
+          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/' --url-ignore '/twitter.com/'
           when: always
 
   deploy:
