@@ -45,7 +45,6 @@ export NVM_DIR="/opt/circleci/.nvm"
 ]]></summary>
         <author>
             <name>Manuel Mazzuola</name>
-            <email/>
             <uri>https://keybase.io/originof</uri>
         </author>
     </entry>
@@ -63,7 +62,6 @@ infrastructure to decrease burden of deploying new services.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>https://keybase.io/gionn</uri>
         </author>
     </entry>
@@ -115,7 +113,6 @@ But wait, why was the file cached even if <code>Cache-Control:nocache</code> is 
 ]]></summary>
         <author>
             <name>Manuel Mazzuola</name>
-            <email/>
             <uri>https://keybase.io/originof</uri>
         </author>
     </entry>
@@ -158,7 +155,6 @@ the module on our <a href="https://demo.cloudesire.com">demo marketplace</a>.</p
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
@@ -219,7 +215,6 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 ]]></summary>
         <author>
             <name>Matteo Giordano</name>
-            <email/>
             <uri>http://twitter.com/malteo</uri>
         </author>
     </entry>
@@ -262,7 +257,6 @@ systemctl --<span class="hljs-keyword">user</span> <span class="hljs-title">enab
 ]]></summary>
         <author>
             <name>Matteo Giordano</name>
-            <email/>
             <uri>http://twitter.com/malteo</uri>
         </author>
     </entry>
@@ -283,7 +277,6 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
@@ -301,7 +294,6 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
@@ -319,7 +311,6 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
@@ -337,7 +328,6 @@ a SaaS marketplace.</p>
 ]]></summary>
         <author>
             <name>Giovanni Toraldo</name>
-            <email/>
             <uri>http://twitter.com/gionn</uri>
         </author>
     </entry>
