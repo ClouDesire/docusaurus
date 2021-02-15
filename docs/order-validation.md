@@ -13,10 +13,14 @@ The service will be called by the platform:
 2) when placing an order;
 3) when terminating a subscription.
 
+It's possible to configure multiple endpoints, in which case **every**
+configured endpoint must pass validation for the order to be successfully
+placed.
+
 ## First Configuration
 
-Add on the product configuration page the full URL of your endpoint that
-implements the spec described here.
+Add on the product configuration page the full URLs of your endpoints that
+implement the spec described here.
 
 ## Request
 
