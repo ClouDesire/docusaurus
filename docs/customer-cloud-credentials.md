@@ -24,22 +24,34 @@ console](https://console.aws.amazon.com/iam/home), with permission
 
 ## Azure
 
-* Identifier: an unique description useful for recognizing this credentials among
-  the others
-* Identity: the application-id (or client-id) of a new `App registration` inside
-  the `Azure Active Directory` section
-* Credential: the `Client secret` into the `App registration` section
-* Endpoint: an URL in the form
-  `https://management.azure.com/subscriptions/<subscription-id>`
-* OAuth endpoint: an URL in the form,
-  `https://login.microsoftonline.com/<tenant-id>/oauth2/token`. The `Tenant-id`,
-  into the `App registration` section (also called `Directory id`)
+You can obtain Azure credentials on the [Azure portal](https://portal.azure.com)
+with the following steps:
 
-Obtain the credentials on the [Azure portal](https://portal.azure.com):
+* Access `Azure Active Directory` service from the dashboard
+* Go in `App registrations` section under `Manage`
+* Create a new app with the `New registration` button, note it because it's required later.
+* Choose a name of your preference (eg: `cloudesire integration app`), leave defaults for remaining settings
+* Copy `Application (client) ID` and paste it on the Cloudesire `Identity` field
+* Copy `Directory (tenant) ID` and paste it on the Cloudesire `OAuth endpoint`
+  in the form `https://login.microsoftonline.com/<directory-id>/oauth2/token`
+* Go in `Certificates & secrets` section under `Manage`
+* Create a new scret with the `New client secret` button,
+  selecting your preferred expiration for this credential
+* Copy secret `Value` and paste it on the Cloudesire `Credential` field
 
-* Create a new `app` in `Azure Active Directory` - `App registrations` section
-* Create a new `Client secret` for the app
-* Go to the `Subscriptions` section and select your subscription. In the
-  `Access control (IAM)` section, select `Add a role assignment`. Create a new
-  role assignment with role `Contributor` and as `Service principal` the app
-  name
+* Go back to the dashboard and access the `Subscriptions` section, select your subscription
+* Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field
+  in the form of `https://management.azure.com/subscriptions/<subscription-id>`
+* Go in `Access control (IAM)` section and select `Add a role assignments`.
+* Create a role assignment with role `Contributor` and assign access to the App
+  providing the name you chosen early.
+
+Now you are ready to create a new Cloud Credential on the Cloudesire panel.
+
+An example configuration would be:
+
+* Identifier: `my-azure-credential`
+* Identity: `f752ce48-618a-44f8-b5ef-47b5ab9b25b2`
+* Credential: `51wYIN41AC.UU29tzeT9l_xx89~1Pw~MDK`
+* Endpoint: `https://management.azure.com/subscriptions/d7759627-d2df-4caa-8f02-6fa88b694b4f`
+* OAuth endpoint: `https://login.microsoftonline.com/96fabb56-8782-4f37-b6f2-ae41118a6b43/oauth2/token`
