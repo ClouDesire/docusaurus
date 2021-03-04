@@ -29,22 +29,23 @@ with the following steps:
 
 * Access `Azure Active Directory` service from the dashboard
 * Go in `App registrations` section under `Manage`
-* Create a new app with the `New registration` button, note it because it's required later.
-* Choose a name of your preference (eg: `cloudesire integration app`), leave defaults for remaining settings
+* Create a new app with the `New registration` button
+* Choose a name of your preference (e.g. `cloudesire integration app`), note it
+  because it's required later. Leave defaults for remaining settings
 * Copy `Application (client) ID` and paste it on the Cloudesire `Identity` field
 * Copy `Directory (tenant) ID` and paste it on the Cloudesire `OAuth endpoint`
   in the form `https://login.microsoftonline.com/<directory-id>/oauth2/token`
 * Go in `Certificates & secrets` section under `Manage`
-* Create a new scret with the `New client secret` button,
-  selecting your preferred expiration for this credential
+* Create a new secret with the `New client secret` button, selecting your
+  preferred expiration for this credential
 * Copy secret `Value` and paste it on the Cloudesire `Credential` field
-
-* Go back to the dashboard and access the `Subscriptions` section, select your subscription
-* Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field
-  in the form of `https://management.azure.com/subscriptions/<subscription-id>`
-* Go in `Access control (IAM)` section and select `Add a role assignments`.
+* Go back to the dashboard and access the `Subscriptions` section, select your
+  subscription
+* Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field in the
+  form of `https://management.azure.com/subscriptions/<subscription-id>`
+* Go in `Access control (IAM)` section and select `Add a role assignments`
 * Create a role assignment with role `Contributor` and assign access to the App
-  providing the name you chosen early.
+  providing the name you chosen early
 
 Now you are ready to create a new Cloud Credential on the Cloudesire panel.
 
