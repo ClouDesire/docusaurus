@@ -360,6 +360,9 @@ shown to the customer after the provisioning is complete.
 Credentials have a unique `key`, a `value` and a localized `description`. They
 are weighted so they can be returned to the customer in a specified order.
 
+A special key `CredentialsFile` can be used to render the value in a
+pre-formatted text area.
+
 Credential values are not returned (they are `null`ed) to the vendor after
 creation.
 
