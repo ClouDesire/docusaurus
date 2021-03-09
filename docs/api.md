@@ -62,14 +62,12 @@ a new one will invalidate the previous one.
 Once obtained the token, set on every HTTP request two additional headers:
 
 * `CMW-Auth-Token`: the token you got from your profile
-* `CMW-Auth-User`: your current username, as displayed in your profile
 
 A good test would be to retrieve your user profile:
 
 ```http
 GET /api/user/me HTTP/1.1
 CMW-Auth-Token: my_token
-CMW-Auth-User: my_username
 
 
 HTTP/1.1 200 OK
