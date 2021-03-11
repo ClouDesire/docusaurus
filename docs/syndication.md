@@ -693,15 +693,18 @@ Currently accepted currencies:
 USD (= 0.93 EUR)
 ```
 
-### Recurring Costs
+### One-shot Costs
 
-You can add recurring costs to a syndicated subscription.
+You can add **one-shot** costs to a subscription.
 
-Given a subscription you are a vendor for with ID `{id}` you can add recurring
-costs to it with a `POST /subscription/{id}/invoice/recurring` request:
+Only the next invoice generated for a subscription with one-shot costs will
+contain these lines.
+
+Given a subscription you are a vendor for with ID `{id}` you can add one-shot
+costs to it with a `POST /subscription/{id}/invoice/oneshot` request:
 
 ```http
-POST /subscription/{id}/invoice/recurring HTTP/1.1
+POST /subscription/{id}/invoice/oneshot HTTP/1.1
 Accept: application/json
 Content-Type: application/json
 
@@ -729,16 +732,23 @@ HTTP/1.1 200 OK
 {}
 ```
 
-Every invoice generated for a subscription with recurring costs will contain
-these lines.
-
-To remove recurring costs from a subscription just post an empty list:
+To remove one-shot costs from a subscription just post an empty list:
 
 ```http
-POST /subscription/{id}/invoice/recurring HTTP/1.1
+POST /subscription/{id}/invoice/oneshot HTTP/1.1
 
 []
 ```
+
+### Recurring Costs
+
+You can also add **recurring** costs to a syndicated subscription.
+
+Every invoice generated for a subscription with recurring costs will contain
+these lines.
+
+API is the same of the one-shot costs, with endpoint
+`POST /subscription/{id}/invoice/recurring`.
 
 ### Proceeds declaration
 
