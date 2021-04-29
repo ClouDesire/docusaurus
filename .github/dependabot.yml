@@ -1,0 +1,22 @@
+version: 2
+registries:
+  npm-registry-npm-cloudesire-com:
+    type: npm-registry
+    url: https://npm.cloudesire.com
+    username: "${{secrets.NPM_REGISTRY_NPM_CLOUDESIRE_COM_USERNAME}}"
+    password: "${{secrets.NPM_REGISTRY_NPM_CLOUDESIRE_COM_PASSWORD}}"
+
+updates:
+- package-ecosystem: npm
+  directory: "/website"
+  schedule:
+    interval: weekly
+    day: saturday
+    time: "01:00"
+    timezone: Europe/Rome
+  open-pull-requests-limit: 10
+  reviewers:
+  - gionn
+  rebase-strategy: disabled
+  registries:
+  - npm-registry-npm-cloudesire-com
