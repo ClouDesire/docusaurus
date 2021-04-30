@@ -648,6 +648,9 @@ HTTP/1.1 204 No Content
 As a vendor, you can generate a custom invoice for an active subscription. The
 invoice will be issued immediately.
 
+When the amount is positive an **instant one-off upsell** order will be created,
+otherwise a **one-off discount** order is created.
+
 Given a subscription you are a vendor for with ID `{id}` you can generate a
 custom invoice with a `POST /subscription/{id}/invoice` request:
 
@@ -693,12 +696,12 @@ Currently accepted currencies:
 USD (= 0.93 EUR)
 ```
 
-### One-shot Costs
+### Postponed one-off upsell
 
-You can add **one-shot** costs to a subscription.
+You can add **postponed one-off upsell** costs to a subscription.
 
-Only the next invoice generated for a subscription with one-shot costs will
-contain these lines.
+Only the next invoice generated for a subscription with postponed one-off upsell
+costs will contain these lines.
 
 Given a subscription you are a vendor for with ID `{id}` you can add one-shot
 costs to it with a `POST /subscription/{id}/invoice/oneshot` request:
@@ -740,12 +743,12 @@ POST /subscription/{id}/invoice/oneshot HTTP/1.1
 []
 ```
 
-### Recurring Costs
+### Recurring upsells Costs
 
-You can also add **recurring** costs to a syndicated subscription.
+You can also add **recurring upsells** costs to a syndicated subscription.
 
-Every invoice generated for a subscription with recurring costs will contain
-these lines.
+Every invoice generated for a subscription with recurring upsells costs will
+contain these lines.
 
 API is the same of the one-shot costs, with endpoint
 `POST /subscription/{id}/invoice/recurring`.
