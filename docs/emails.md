@@ -148,9 +148,13 @@ day(s) before the expiration.
 ```
 
 
-## Invoice emission
+## Invoice issuing
 
-As soon an invoice is emitted, the end-user will receive the following email:
+As soon an invoice is issued, the end-user will receive the following email.
+
+**Template name:** *customerInvoice*
+
+**English version:**
 
 ```twig
   Hi {{ fullName }},
@@ -163,6 +167,41 @@ As soon an invoice is emitted, the end-user will receive the following email:
 {% else %}
   You can <a href="{{ invoiceUrl }}">review it here</a> and pay with your
   credit card.
+{% endif %}
+```
+
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+
+  {% if (generatesInvoice) %}
+     La tua fattura per {{ product }} è stata appena emessa.
+  {% elseif (invoiceDelayed) %}
+     la consuntivazione spese per {{ product }} è stata elaborata ed è consultabile attraverso la tua dashboard.
+     A breve riceverai la relativa fattura dal nostro reparto amministrativo.
+  {% else %}
+      Il riepilogo consumi per {{ product }} è pronto.
+  {% endif %}
+
+  {% if (generatesInvoice) %}
+    {% if (invoicePaid) %}
+      È già stata automaticamente pagata e puoi visionarla <a href="{{ invoiceUrl }}">qui</a>
+    {% else %}
+      Puoi visionarla e procedere al pagamento con uno dei metodi di pagamento abilitati.
+      <a href="{{ invoiceUrl }}">Paga ora</a>
+    {% endif %}
+  
+  {% else %}
+    {% if (invoicePaid) -%}
+      Il pagamento è già stato effettuato.
+      Puoi visionarlo <a href="{{ invoiceUrl }}">qui</a>.
+    {% elseif (invoiceDelayed) -%}
+      Ti ricordiamo di procedere al pagamento entro i termini contrattuali concordati.
+    {% else %}
+      Puoi visionarlo e procedere al pagamento con uno dei metodi di pagamento abilitati.
+      <a href="{{ invoiceUrl }}">Paga ora</a>
+    {% endif %}
 {% endif %}
 ```
 
