@@ -5,8 +5,10 @@ updates:
   directory: "/website"
   schedule:
     interval: weekly
-    day: monday
-    time: "01:00"
-    timezone: Europe/Rome
   reviewers:
   - gionn
+
+- package-ecosystem: "bundler"
+  directory: "/"
+  schedule:
+    interval: "weekly"
