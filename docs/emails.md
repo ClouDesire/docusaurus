@@ -10,40 +10,76 @@ circumstances to the end-user.
 ## Deployment complete
 
 After the end-user ordered a product (either trial or paid), an email is sent
-as soon as the application is ready to be used:
+as soon as the application is ready to be used.
+
+**Template name:** *deployCompleteForCustomer*
+
+**English version:**
 
 ```twig
   Hi {{ fullName }},
 
   your order #{{ orderId }} for {{ product }} has been successfully completed.
 
-{% if (instructionsInEmail) %}
+  {% if (instructionsInEmail) %}
 
     Please follow these instruction to access {{ product }}:
-  {{ vendorNotes }}
+    {{ vendorNotes }}
 
-  {% if (empty(endpoints)) %}
-    You can check your subscription status <a href="{{ subscriptionUrl }}">here</a>
+    {% if (empty(endpoints)) %}
+      You can check your subscription status <a href="{{ subscriptionUrl }}">here</a>
+    {% else %}
+      To access the application, click on the following link:
+      {{ endpoints }}
+    {% endif %}
+
+    {% if (endUserInstructions) %}
+      {{ endUserInstructions }}
+    {% endif %}
+
   {% else %}
-    To access the application, click on the following link:
-    {{ endpoints }}
+    You can now access your application from our <a href="{{ dashboardUrl }}">dashboard</a>.
   {% endif %}
-
-  {% if (endUserInstructions) %}
-    {{ endUserInstructions }}
-  {% endif %}
-
-{% else %}
-  You can now access your application from our <a href="{{ dashboardUrl }}">dashboard</a>.
-{% endif %}
 
   If you have any question on the application you can contact {{ vendor }} at
-  <a href="mailto:{{ vendorMail }}">this e-mail address</a>.<br/>
+  <a href="mailto:{{ vendorMail }}">this e-mail address</a>.
 
   You can contact our Success Team for issues with the service
   (e.g. subscriptions, payments and issues with the platform {{ storeName }}):
   contact us at <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> and we
   will answer as soon as possibile.
+```
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+  
+  il tuo ordine #{{ orderId }} per {{ product }} è stato completato con successo.
+
+  {% if (instructionsInEmail) %}
+
+    Queste sono le istruzioni per accedere a {{ product }}:
+    {{ vendorNotes }}
+  
+    Puoi controllare lo stato del tuo abbonamento <a href="{{ subscriptionUrl }}">qui</a>
+  
+    {% if (endUserInstructions) %}
+      {{ endUserInstructions }}
+    {% endif %}
+  
+  {% else %}
+    D’ora in poi potrai utilizzare il tuo prodotto accedendo al nostro pannello di controllo.
+  
+    <a href="{{ dashboardUrl }}">Vai al pannello di controllo</a>
+
+  {% endif %}
+
+  Per domande relative al prodotto potrai contattare {{ vendor }} a <a href="mailto:{{ vendorMail }}">questo indirizzo e-mail</a>.
+
+  Il {{ teamName }} sarà invece a tua disposizione per questioni relative all’erogazione del servizio
+  (ad es. abbonamento, pagamenti e problemi con la piattaforma {{ storeName }}): 
+  contattaci a <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> e ti risponderemo il più velocemente possibile.
+  
 ```
 
 ## Expiring subscription
