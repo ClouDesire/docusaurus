@@ -25,45 +25,45 @@ as soon as the application is ready to be used.
     Please follow these instruction to access {{ product }}:
     {{ vendorNotes }}
     You can check your subscription status <a href="{{ subscriptionUrl }}">here</a>
-    
+
     {% if (endUserInstructions) %}
       {{ endUserInstructions }}
     {% endif %}
-    
+
   {% else %}
   You can now access your product from our dashboard.
-  
+
   <a href="{{ dashboardUrl }}">Go to dashboard</a>
-  
+
   {% endif %}
 
   If you have any question on the product you can contact {{ vendor }} at <a href="mailto:{{ vendorMail }}">this e-mail address</a>.
 
-  You can contact our {{ teamName }} for issues with the service (e.g. subscriptions, payments and issues with the platform {{ storeName }}): 
+  You can contact our {{ teamName }} for issues with the service (e.g. subscriptions, payments and issues with the platform {{ storeName }}):
   contact us at <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> and we will answer as soon as possible.
-
 ```
+
 **Italian version:**
 
 ```twig
   Ciao {{ fullName }},
-  
+
   il tuo ordine #{{ orderId }} per {{ product }} è stato completato con successo.
 
   {% if (instructionsInEmail) %}
 
     Queste sono le istruzioni per accedere a {{ product }}:
     {{ vendorNotes }}
-  
+
     Puoi controllare lo stato del tuo abbonamento <a href="{{ subscriptionUrl }}">qui</a>
-  
+
     {% if (endUserInstructions) %}
       {{ endUserInstructions }}
     {% endif %}
-  
+
   {% else %}
     D’ora in poi potrai utilizzare il tuo prodotto accedendo al nostro pannello di controllo.
-  
+
     <a href="{{ dashboardUrl }}">Vai al pannello di controllo</a>
 
   {% endif %}
@@ -71,9 +71,8 @@ as soon as the application is ready to be used.
   Per domande relative al prodotto potrai contattare {{ vendor }} a <a href="mailto:{{ vendorMail }}">questo indirizzo e-mail</a>.
 
   Il {{ teamName }} sarà invece a tua disposizione per questioni relative all’erogazione del servizio
-  (ad es. abbonamento, pagamenti e problemi con la piattaforma {{ storeName }}): 
+  (ad es. abbonamento, pagamenti e problemi con la piattaforma {{ storeName }}):
   contattaci a <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> e ti risponderemo il più velocemente possibile.
-  
 ```
 
 ## Expiring subscription
@@ -122,7 +121,7 @@ day(s) before the expiration.
     {{ daysLeft }} giorni(o).
 
     Per continuare ad usare il prodotto, passa ad un piano a pagamento prima della data di scadenza.
-    
+
   {% else %}
     ti ricordiamo che il tuo abbonamento per {{ product }} scadrà tra
     {{ daysLeft }} giorni(o).
@@ -140,7 +139,6 @@ day(s) before the expiration.
   Ti ricordiamo che per non subire interruzioni nel servizio e non ricevere più queste e-mail,
   puoi impostare il rinnovo automatico dei tuoi abbonamenti.
 ```
-
 
 ## Invoice issuing
 
@@ -193,7 +191,7 @@ As soon an invoice is issued, the end-user will receive the following email.
       Puoi visionarla e procedere al pagamento con uno dei metodi di pagamento abilitati.
       <a href="{{ invoiceUrl }}">Paga ora</a>
     {% endif %}
-  
+
   {% else %}
     {% if (invoicePaid) -%}
       Il pagamento è già stato effettuato.
