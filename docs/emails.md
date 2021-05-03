@@ -159,15 +159,23 @@ As soon an invoice is issued, the end-user will receive the following email.
 ```twig
   Hi {{ fullName }},
 
-  Your invoice for {{ product }} has just been issued.
+  {% if (generatesInvoice) %}
+    Your invoice for {{ product }} has just been issued.
+  {% elseif (invoiceDelayed) %}
+    the consumption summary for {{ product }} has been processed and is available through your dashboard.
+    You will shortly receive the relevant invoice from our administrative department.
+  {% else%}
+    Your consumption summary for {{ product }} is ready.
+  {% endif %}
 
-{% if (invoicePaid) %}
-  It has already been automatically paid and you can
-  <a href="{{ invoiceUrl }}">review it here</a>.
-{% else %}
-  You can <a href="{{ invoiceUrl }}">review it here</a> and pay with your
-  credit card.
-{% endif %}
+  {% if (invoicePaid) %}
+    It has already been automatically paid and you can <a href="{{ invoiceUrl }}">review it here</a>
+  {% elseif (invoiceDelayed) %}
+    Please proceed with the payment according to the agreed contractual terms.
+  {% else %}
+    Please review it and proceed with the payment.
+    <a href="{{ invoiceUrl }}">Pay now</a>
+  {% endif %}
 ```
 
 **Italian version:**
