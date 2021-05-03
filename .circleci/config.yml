@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: cimg/node:16.0
     resource_class: small
 
     steps:
@@ -34,7 +34,7 @@ jobs:
 
   verify:
     docker:
-      - image: cimg/ruby:2.7.1
+      - image: cimg/ruby:2.7
     resource_class: small
 
     steps:
@@ -48,7 +48,7 @@ jobs:
 
       - run:
           name: Install bundler
-          command: gem install bundler -v 2.1.4
+          command: gem install bundler
 
       - run:
           name: Fetch dependencies
@@ -72,7 +72,7 @@ jobs:
 
   deploy:
     docker:
-      - image: circleci/node:8
+      - image: cimg/node:16.0
     resource_class: small
 
     steps:
