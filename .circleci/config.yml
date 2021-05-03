@@ -52,7 +52,7 @@ jobs:
 
       - run:
           name: Fetch dependencies
-          command: bundle install --path vendor/bundle
+          command: bundle install
 
       - save_cache:
           name: Save cache
