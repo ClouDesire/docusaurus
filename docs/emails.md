@@ -41,8 +41,8 @@ as soon as the application is ready to be used.
 
   You can contact our {{ teamName }} for issues with the service (e.g. subscriptions, payments and issues with the platform {{ storeName }}):
   contact us at <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> and we will answer as soon as possible.
-
 ```
+
 **Italian version:**
 
 ```twig
@@ -73,7 +73,6 @@ as soon as the application is ready to be used.
   Il {{ teamName }} sarà invece a tua disposizione per questioni relative all’erogazione del servizio
   (ad es. abbonamento, pagamenti e problemi con la piattaforma {{ storeName }}):
   contattaci a <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> e ti risponderemo il più velocemente possibile.
-
 ```
 
 ## Expiring subscription
@@ -140,7 +139,6 @@ day(s) before the expiration.
   Ti ricordiamo che per non subire interruzioni nel servizio e non ricevere più queste e-mail,
   puoi impostare il rinnovo automatico dei tuoi abbonamenti.
 ```
-
 
 ## Invoice issuing
 
