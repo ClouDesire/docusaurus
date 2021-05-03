@@ -22,32 +22,26 @@ as soon as the application is ready to be used.
   your order #{{ orderId }} for {{ product }} has been successfully completed.
 
   {% if (instructionsInEmail) %}
-
     Please follow these instruction to access {{ product }}:
     {{ vendorNotes }}
-
-    {% if (empty(endpoints)) %}
-      You can check your subscription status <a href="{{ subscriptionUrl }}">here</a>
-    {% else %}
-      To access the application, click on the following link:
-      {{ endpoints }}
-    {% endif %}
-
+    You can check your subscription status <a href="{{ subscriptionUrl }}">here</a>
+    
     {% if (endUserInstructions) %}
       {{ endUserInstructions }}
     {% endif %}
-
+    
   {% else %}
-    You can now access your application from our <a href="{{ dashboardUrl }}">dashboard</a>.
+  You can now access your product from our dashboard.
+  
+  <a href="{{ dashboardUrl }}">Go to dashboard</a>
+  
   {% endif %}
 
-  If you have any question on the application you can contact {{ vendor }} at
-  <a href="mailto:{{ vendorMail }}">this e-mail address</a>.
+  If you have any question on the product you can contact {{ vendor }} at <a href="mailto:{{ vendorMail }}">this e-mail address</a>.
 
-  You can contact our Success Team for issues with the service
-  (e.g. subscriptions, payments and issues with the platform {{ storeName }}):
-  contact us at <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> and we
-  will answer as soon as possibile.
+  You can contact our {{ teamName }} for issues with the service (e.g. subscriptions, payments and issues with the platform {{ storeName }}): 
+  contact us at <a href="mailto:{{ supportMail }}">{{ supportMail }}</a> and we will answer as soon as possible.
+
 ```
 **Italian version:**
 
