@@ -88,7 +88,9 @@ When there is an active subscription without the auto-renew that is going to
 expire, the platform will send an expiration reminder at 14, 10, 7, 4, 3, 2, 1
 day(s) before the expiration.
 
-The content of the email will be:
+**Template name:** *subscriptionTermAlert*
+
+**English version:**
 
 ```twig
   Hi {{ fullName }},
@@ -115,6 +117,36 @@ The content of the email will be:
   any interruption in service.
   Also, you will no longer receive these e-mails.
 ```
+
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+
+  {% if (isTrial) %}
+    ti ricordiamo che la tua prova gratuita per {{ product }} scadrà tra
+    {{ daysLeft }} giorni(o).
+
+    Per continuare ad usare il prodotto, passa ad un piano a pagamento prima della data di scadenza.
+    
+  {% else %}
+    ti ricordiamo che il tuo abbonamento per {{ product }} scadrà tra
+    {{ daysLeft }} giorni(o).
+
+    Per continuare ad usare il prodotto, rinnova il tuo abbonamento prima della data di scadenza.
+  {% endif %}
+
+  {% if (terminationMessage) %}
+    {{ terminationMessage }}
+  {% endif %}
+
+  Puoi vedere il tuo abbonamento qui: <a href="{{ subscriptionUrl }}">#{{ subscriptionId }}</a>
+  e procedere al pagamento tramite carta di credito.
+
+  Ti ricordiamo che per non subire interruzioni nel servizio e non ricevere più queste e-mail,
+  puoi impostare il rinnovo automatico dei tuoi abbonamenti.
+```
+
 
 ## Invoice emission
 
