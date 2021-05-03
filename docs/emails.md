@@ -265,7 +265,11 @@ When an invoice is still pending, an alert is sent to the end-user once a day.
 When the payment period expires, the subscription is put into a sleeping state:
 the end-user cannot use the application but data is still preserved.
 
-The email sent when the subscription is put to sleeping state is:
+The email sent when the subscription is put to sleeping state is the following.
+
+**Template name:** *invoiceSleepingToPay*
+
+**English version:**
 
 ```twig
   Hi {{ fullName }},
@@ -282,4 +286,19 @@ The email sent when the subscription is put to sleeping state is:
   You can review your subscription here:
   <a href="{{ subscriptionUrl }}">{{ subscriptionId }}</a> and pay with your
   credit card.
+```
+
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+
+  il tuo abbonamento per {{ product }} è attualmente sospeso, in attesa del pagamento di
+  <a href="{{ invoiceUrl }}">#{{ invoiceId }}</a>.
+
+  Hai ancora {{ daysLeft }} giorni(o) prima che il tuo abbonamento venga disattivato e i dati inseriti vengano cancellati definitivamente.
+  Ti ricordiamo che per continuare a usare il prodotto è necessario procedere con il pagamento.
+
+  Puoi vedere il tuo abbonamento qui: <a href="{{ subscriptionUrl }}">{{ subscriptionId }}</a>
+  e procedere al pagamento tramite carta di credito.
 ```
