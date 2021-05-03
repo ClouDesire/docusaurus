@@ -207,7 +207,11 @@ As soon an invoice is issued, the end-user will receive the following email.
 
 ## Invoice to pay
 
-When an invoice is still pending, an alert is sent to the end-user once a day:
+When an invoice is still pending, an alert is sent to the end-user once a day.
+
+**Template name:** *invoiceToPay*
+
+**English version:**
 
 ```twig
   Hi {{ fullName }},
@@ -231,6 +235,29 @@ When an invoice is still pending, an alert is sent to the end-user once a day:
 {% else %}
   You can pay with your credit card <a href="{{ invoiceUrl }}">here</a>.
 {% endif %}
+```
+
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+
+  secondo i dati a nostra disposizione, il pagamento di <a href="{{ invoiceUrl }}">#{{ invoiceId }}</a>
+  per {{ product }} risulta non saldato.
+
+  Hai ancora {{ daysLeft }} giorni(o) per procedere al pagamento.
+  Trascorsi questi giorni, il tuo abbonamento sarà sospeso e non potrai più utilizzare {{ product }}.
+
+  {% if (cardIsSaved) %}
+    Abbiamo provato ad addebitare automaticamente l'importo dovuto per l’abbonamento a {{ product }}, ma la carta è stata
+    rifiutata. Se il credito della tua carta ricaricabile è insufficiente, effettua una ricarica. Altrimenti, contatta il
+    tuo istituto bancario per capire perché la carta è stata rifiutata. Se desideri modificare la carta associata al tuo
+    account, scrivici rispondendo a questa email.
+
+    Effettueremo un nuovo tentativo di addebito tra 24 ore.
+  {% else %}
+    <a href="{{ invoiceUrl }}">Paga ora</a>
+  {% endif %}
 ```
 
 ## Invoice payment overdue
