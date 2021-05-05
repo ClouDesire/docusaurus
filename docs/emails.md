@@ -7,6 +7,37 @@ sidebar_label: Email Automation
 The Cloudesire platform automatically delivers email notifications under certain
 circumstances to the end-user.
 
+## Order creation
+
+Once the end-user ordered a product the following email is sent.
+
+**Template name:** *orderCreationCustomer*
+
+**English version:**
+
+```twig
+  Hi {{ fullName }},
+
+  thank you for choosing {{ product }}.
+  You will receive an e-mail notification as soon as {{ product }} will be ready to use with your log in instructions.
+
+  The order ID of your product is {{ orderId }}.
+  To review your order please click here: <a href="{{ orderUrl }}">{{ orderUrl }}</a>
+```
+
+**Italian version:**
+
+```twig
+  Ciao {{ fullName }},
+
+  grazie per aver scelto {{ product }}.
+  A breve riceverai una notifica via e-mail con le istruzioni per accedere al prodotto.
+
+  L'ID del tuo ordine è {{ orderId }}.
+  Per vedere il tuo ordine, clicca qui: <a href="{{ orderUrl }}">{{ orderUrl }}</a>
+```
+
+
 ## Deployment complete
 
 After the end-user ordered a product (either trial or paid), an email is sent
