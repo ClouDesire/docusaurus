@@ -37,7 +37,6 @@ Once the end-user ordered a product the following email is sent.
   Per vedere il tuo ordine, clicca qui: <a href="{{ orderUrl }}">{{ orderUrl }}</a>
 ```
 
-
 ## Deployment complete
 
 After the end-user ordered a product (either trial or paid), an email is sent
