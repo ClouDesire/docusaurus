@@ -414,6 +414,22 @@ Starting from now, the customer can use your application!
 > If something could go wrong during the provisioning of a new tenant in your
 application, discover a strategy to [handle exceptions](syndication.md#managing-provisioning-exceptions).
 
+### Subscription naming
+
+You can customize the initial `name` of a subscription with:
+
+```http
+PATCH /api/subscription/2388 HTTP/1.1
+
+{
+    "action": "SET_NAME",
+    "name": "Nickname of this subscription"
+}
+```
+
+**Note** that if a customer names their subscription, the customer name takes
+precedence.
+
 ### Update subscription information (when the subscription expires)
 
 When the subscription period expires, or a **Terminate** action is requested by
@@ -442,22 +458,6 @@ termination process.
 
 You have now completed the standard workflow for a syndicated application,
 congratulations!
-
-### Subscription naming
-
-You can customize the `name` of a subscription by calling
-
-```http
-PATCH /api/subscription/2388 HTTP/1.1
-
-{
-    "action": "SET_NAME",
-    "name": "Nickname of this subscription"
-}
-```
-
-**Note** that if a customer names their subscription, the customer name takes
-precedence.
 
 ### Billing events notifications
 
