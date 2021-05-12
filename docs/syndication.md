@@ -443,6 +443,22 @@ termination process.
 You have now completed the standard workflow for a syndicated application,
 congratulations!
 
+### Subscription naming
+
+You can customize the `name` of a subscription by calling
+
+```http
+PATCH /api/subscription/2388 HTTP/1.1
+
+{
+    "action": "SET_NAME",
+    "name": "Nickname of this subscription"
+}
+```
+
+**Note** that if a customer names their subscription, the customer name takes
+precedence.
+
 ### Billing events notifications
 
 When the customer asks for a subscription renewal, version upgrade or
