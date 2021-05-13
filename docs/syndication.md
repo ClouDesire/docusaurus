@@ -416,7 +416,7 @@ application, discover a strategy to [handle exceptions](syndication.md#managing-
 
 ### Subscription naming
 
-You can customize the initial `name` of a subscription with:
+You can customize the initial `name` of a subscription that customers will find on their dashboard with:
 
 ```http
 PATCH /api/subscription/2388 HTTP/1.1
