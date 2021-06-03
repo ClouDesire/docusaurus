@@ -19,8 +19,6 @@ We publish most of the non-core technologies of the Cloudesire platform.
   keystone Docker image for testing purposes
 * [docker-webdav](https://github.com/ClouDesire/docker-webdav): docker image for
   Apache2 with webdav module enabled
-* [janine](https://github.com/ClouDesire/janine): generator and archiver of PDF
-  invoices
 * [node-exporter-installer](https://github.com/ClouDesire/node-exporter-installer):
   automatically install and run Prometheus node_exporter via shell script on
   major GNU/Linux distributions
