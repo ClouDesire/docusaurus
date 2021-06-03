@@ -17,6 +17,7 @@ You can use your AWS account on the platform by providing:
 * Access key: the access key ID (for example, AKIAIOSFODNN7EXAMPLE)
 * Secret key: the secret access key (for example,
   wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY)
+* Resource name: the ARN identifying your amazon account in the form `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`. Replace `<account-id>` with your account numeric ID (e.g: 012345678901)
 
 Obtain the credentials by creating a new user on [IAM
 console](https://console.aws.amazon.com/iam/home), with permission
