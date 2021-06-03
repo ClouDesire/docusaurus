@@ -1,4 +1,8 @@
-version: 2
+version: 2.1
+
+orbs:
+  cloudesire: cloudesire/common@0
+
 jobs:
   build:
     docker:
@@ -7,6 +11,8 @@ jobs:
 
     steps:
       - checkout
+
+      - cloudesire/git_merge_default
 
       - restore_cache:
           name: Restore cache
