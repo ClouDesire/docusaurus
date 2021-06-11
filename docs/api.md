@@ -19,12 +19,11 @@ https://{domain}/api/{resource}/{resourceId}
 
 Every marketplace has a different API `domain`, depending on its environment:
 
-* **demo.cloudesire.com**: _demo-backend.cloudesire.com_
-* **frontend-staging.cloudesire.com**: _staging.cloudesire.com_
+* **demo-eng.cloudesire.com**: _backend-demo-eng.cloudesire.com_
 
-As example, the full URL endpoint of *marketplace.cloudesire.com* would be:
+As example, the full URL endpoint of *demo-eng.cloudesire.com* would be:
 
-`https://demo-backend.cloudesire.com/api/`
+`https://backend-demo-eng.cloudesire.com/api/`
 
 ## Versioning
 
