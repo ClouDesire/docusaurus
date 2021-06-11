@@ -1,7 +1,7 @@
 version: 2.1
 
 orbs:
-  cloudesire: cloudesire/common@dev:5a689ff
+  cloudesire: cloudesire/common@dev:2ceaf93
 
 jobs:
   build:
