@@ -384,8 +384,7 @@ end-to-end.
 
 #### Staging Marketplace URL and API endpoint
 
-A [Staging Marketplace](https://frontend-staging.cloudesire.com/) is freely
-available.
+A Staging Marketplace is freely available upon request.
 
 The API endpoint can be found in the [API documentation](api.md#domains) section.
 
@@ -394,26 +393,19 @@ vendor and customers, and you can use the [fake credit
 cards](https://stripe.com/docs/testing) numbers to simulate payments.
 
 > Manage API endpoints as configuration parameters in your source code since
-they need to be changed when publishing your application in a different
-marketplace.
+> they need to be changed when publishing your application in a different
+> marketplace.
 
 #### How to test the customer experience on the Staging Marketplace
 
 To fully test your integration source code, once you have finished the
 application onboarding process we strongly suggest you to:
 
-* register to the staging marketplace as a new _customer_
-* go to [registration
-  page](https://frontend-staging.cloudesire.com/cp/register), and
-  create your own customer account following the instructions on the screen.
+* Request a new customer account on the staging marketplace
 * login to the marketplace with the previously created customer credentials
-* go to [homepage](https://frontend-staging.cloudesire.com/),  select
-  "log-in" at the top right corner of the screen, enter username and password
-  and click login
-* go to your application page
 * you can browse applications or look for your application using your
   application name
-* buy your application (providing a testing credit card number)
+* buy your application
 * use a [test credit card](https://stripe.com/docs/testing)
 * wait while the provisioning process ends
 
