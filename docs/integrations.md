@@ -6,6 +6,6 @@ sidebar_label: Integrations
 
 The Cloudesire platform integrates with various third-party services.
 
-* Sendgrid: email delivery
-* Slack: real-time chat notifications
-* Stripe: payments
+* [Sendgrid](https://sendgrid.com/): email delivery
+* [Slack](https://slack.com/): real-time chat notifications
+* [Stripe](https://stripe.com/): payments
