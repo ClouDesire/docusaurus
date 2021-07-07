@@ -82,6 +82,22 @@ appear on the marketplace product page:
 
 ![Stairstep extra resource on marketplace](assets/extra-resources/stairstep-tagged.png)
 
+In order to correctly configure such kind of extra-resources it's required to specify 
+**contiguous** and **non-overlapping** quantities, having **min=max**.
+
+For example, regarding the example on the screenshot above:
+- BASIC PACKAGE: 
+  - tag: "pack-bas"
+  - min=max=1
+- ADVANCED PACKAGE:
+  - tag: "pack-adv"
+  - min=max=2
+- ENTERPRISE PACKAGE:
+  - tag: "pack-ent"
+  - min=max=3
+
+(quantities are *irrelevant*, but they're still required to be specified)
+
 ## Create an Extra Resource
 
 To define a new Extra Resource, you need to have already created a product in
