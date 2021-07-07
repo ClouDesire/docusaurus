@@ -29,7 +29,11 @@ The main components of the Cloudesire platform can be summarized as follows:
 Cloudesire Backend is made by the following modules:
 
 * **CMW**: the core of Cloudesire, handles most of the business logic related to
-  the catalog, customers, subscriptions and billing.
+  the catalog, customers, subscriptions and billing. CMW also includes the 
+  **Persistence Layer**: a *PostgreSQL* database managing all the relational entities 
+  of the platform (as regards the additional resources, such logos, screenshots, etc. 
+  the platform typically leverages a dedicated *Object Storage*, like for example 
+  a platform owner's AWS S3 tenant).   
 * **Deployer**: manages cloud resources for each purchased Docker application
   and bare VMs. The deployment process is described [in the next
   chapter](platform.md#deployer-workflow). It leverages
