@@ -82,8 +82,6 @@ appear on the marketplace product page:
 
 ![Stairstep extra resource on marketplace](assets/extra-resources/stairstep-tagged.png)
 
-More information about how to configure such kind of extra-resources are availble below.
-
 ## Create an Extra Resource
 
 To define a new Extra Resource, you need to have already created a product in
