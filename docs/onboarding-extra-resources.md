@@ -141,13 +141,14 @@ specific Product Plan.
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
 
-### Tagged Stairstep Extra Resources configuration
+### Tagged Stairstep configuration
 
-In order to correctly configure "tagged" extra-resources it's required to specify 
+To configure a new Tagged Stairstep Extra Resources, you need to specify
 **contiguous** and **non-overlapping** quantities, having **min=max**.
 
-For example, regarding the example on the screenshot above:
-- BASIC PACKAGE: 
+For example:
+
+- BASIC PACKAGE:
   - tag: "pack-bas"
   - min=max=1
 - ADVANCED PACKAGE:
@@ -157,7 +158,7 @@ For example, regarding the example on the screenshot above:
   - tag: "pack-ent"
   - min=max=3
 
-(quantities are *irrelevant*, but they're still required to be specified)
+Such quantities are *irrelevant* for billing purposes.
 
 ## Extra Resources quantities via API
 
