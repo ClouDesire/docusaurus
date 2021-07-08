@@ -82,21 +82,7 @@ appear on the marketplace product page:
 
 ![Stairstep extra resource on marketplace](assets/extra-resources/stairstep-tagged.png)
 
-In order to correctly configure such kind of extra-resources it's required to specify 
-**contiguous** and **non-overlapping** quantities, having **min=max**.
-
-For example, regarding the example on the screenshot above:
-- BASIC PACKAGE: 
-  - tag: "pack-bas"
-  - min=max=1
-- ADVANCED PACKAGE:
-  - tag: "pack-adv"
-  - min=max=2
-- ENTERPRISE PACKAGE:
-  - tag: "pack-ent"
-  - min=max=3
-
-(quantities are *irrelevant*, but they're still required to be specified)
+More information about how to configure such kind of extra-resources are availble below.
 
 ## Create an Extra Resource
 
@@ -154,6 +140,24 @@ The following screenshot shows an example of Extra Resources linked to a
 specific Product Plan.
 
 ![Vendors Control Panel - Extra Resources](/img/docs/control_panel_extra_resources.png "Vendors Control Panel - Extra Resources")
+
+### Tagged Stairstep Extra Resources configuration
+
+In order to correctly configure "tagged" extra-resources it's required to specify 
+**contiguous** and **non-overlapping** quantities, having **min=max**.
+
+For example, regarding the example on the screenshot above:
+- BASIC PACKAGE: 
+  - tag: "pack-bas"
+  - min=max=1
+- ADVANCED PACKAGE:
+  - tag: "pack-adv"
+  - min=max=2
+- ENTERPRISE PACKAGE:
+  - tag: "pack-ent"
+  - min=max=3
+
+(quantities are *irrelevant*, but they're still required to be specified)
 
 ## Extra Resources quantities via API
 
