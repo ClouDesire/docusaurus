@@ -42,7 +42,7 @@ with the following steps:
   subscription
 * Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field in the
   form of `https://management.azure.com/subscriptions/<subscription-id>`
-* Go in `Access control (IAM)` section of your subscription and select `Add a role assignments`
+* Go in the `Access control (IAM)` section of your subscription and select `Add a role assignments`
 * Create a role assignment with role `Contributor` and assign access to the App
   providing the name you chosen early
 
