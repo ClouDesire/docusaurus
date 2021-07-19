@@ -25,7 +25,8 @@ Obtain the credentials on the [IAM](https://console.aws.amazon.com/iam/home) sec
 
 To configure a Cloud Credential for azure, you need to provide:
 
-* Identifier: `my-azure-credential`
+* Identifier: an unique description useful for recognizing this credentials among
+  the others
 * Identity: `f752ce48-618a-44f8-b5ef-47b5ab9b25b2` (Application ID)
 * Credential: `51wYIN41AC.UU29tzeT9l_xx89~1Pw~MDK` (Application secret)
 * Endpoint: `https://management.azure.com/subscriptions/d7759627-d2df-4caa-8f02-6fa88b694b4f` (Subscription id)
