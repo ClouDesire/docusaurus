@@ -38,11 +38,11 @@ with the following steps:
 * Create a new secret with the `New client secret` button, selecting your
   preferred expiration for this credential
 * Copy secret `Value` and paste it on the Cloudesire `Credential` field
-* Go back to the dashboard and access the `Subscriptions` section, select your
+* Go back to the dashboard and access the `Subscriptions` section, then enter your
   subscription
 * Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field in the
   form of `https://management.azure.com/subscriptions/<subscription-id>`
-* Go in `Access control (IAM)` section and select `Add a role assignments`
+* Go in the `Access control (IAM)` section of your subscription and select `Add a role assignments`
 * Create a role assignment with role `Contributor` and assign access to the App
   providing the name you chosen early
 
