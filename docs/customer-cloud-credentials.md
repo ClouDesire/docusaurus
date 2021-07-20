@@ -25,7 +25,7 @@ Obtain the credentials on the [IAM](https://console.aws.amazon.com/iam/home) sec
 
 To configure a Cloud Credential for azure, you need to provide:
 
-* Identifier: an unique description useful for recognizing this credentials among
+* Identifier: a unique description useful for recognizing this credentials among
   the others
 * Identity: `f752ce48-618a-44f8-b5ef-47b5ab9b25b2` (Application ID)
 * Credential: `51wYIN41AC.UU29tzeT9l_xx89~1Pw~MDK` (Application secret)
@@ -38,7 +38,7 @@ with the following steps:
 ### Configure Application (one per tenant)
 
 * Go to the Azure dashboard
-* Access `Azure Active Directory` service
+* Access the `Azure Active Directory` service
 * Go in `App registrations` section under `Manage`
 * Create a new app with the `New registration` button
 * Choose a name of your preference (e.g. `cloudesire integration app`), note it
