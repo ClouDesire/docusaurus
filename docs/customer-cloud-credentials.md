@@ -12,7 +12,7 @@ account](clouds.md).
 
 You can use your AWS account on the platform by providing:
 
-* Identifier: an unique description useful for recognizing this credentials among
+* Identifier: a unique description useful for recognizing this credentials among
   the others
 * Access key: the access key ID (for example, AKIAIOSFODNN7EXAMPLE)
 * Secret key: the secret access key (for example,
