@@ -12,7 +12,7 @@ account](clouds.md).
 
 You can use your AWS account on the platform by providing:
 
-* Identifier: an unique description useful for recognizing this credentials among
+* Identifier: a unique description useful for recognizing this credentials among
   the others
 * Access key: the access key ID (for example, AKIAIOSFODNN7EXAMPLE)
 * Secret key: the secret access key (for example,
@@ -23,10 +23,22 @@ Obtain the credentials on the [IAM](https://console.aws.amazon.com/iam/home) sec
 
 ## Azure
 
+To configure a Cloud Credential for azure, you need to provide:
+
+* Identifier: a unique description useful for recognizing this credentials among
+  the others
+* Identity: `f752ce48-618a-44f8-b5ef-47b5ab9b25b2` (Application ID)
+* Credential: `51wYIN41AC.UU29tzeT9l_xx89~1Pw~MDK` (Application secret)
+* Endpoint: `https://management.azure.com/subscriptions/d7759627-d2df-4caa-8f02-6fa88b694b4f` (Subscription id)
+* OAuth endpoint: `https://login.microsoftonline.com/96fabb56-8782-4f37-b6f2-ae41118a6b43/oauth2/token` (Tenant id)
+
 You can obtain Azure credentials on the [Azure portal](https://portal.azure.com)
 with the following steps:
 
-* Access `Azure Active Directory` service from the dashboard
+### Configure Application (one per tenant)
+
+* Go to the Azure dashboard
+* Access the `Azure Active Directory` service
 * Go in `App registrations` section under `Manage`
 * Create a new app with the `New registration` button
 * Choose a name of your preference (e.g. `cloudesire integration app`), note it
@@ -38,8 +50,11 @@ with the following steps:
 * Create a new secret with the `New client secret` button, selecting your
   preferred expiration for this credential
 * Copy secret `Value` and paste it on the Cloudesire `Credential` field
-* Go back to the dashboard and access the `Subscriptions` section, then enter your
-  subscription
+
+### Grant access to Subscription (one per subscription)
+
+* Go to the Azure dashboard
+* Access the `Subscriptions` section, then enter your subscription
 * Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field in the
   form of `https://management.azure.com/subscriptions/<subscription-id>`
 * Go in the `Access control (IAM)` section of your subscription and select `Add a role assignments`
@@ -47,11 +62,3 @@ with the following steps:
   providing the name you chosen early
 
 Now you are ready to create a new Cloud Credential on the Cloudesire panel.
-
-An example configuration would be:
-
-* Identifier: `my-azure-credential`
-* Identity: `f752ce48-618a-44f8-b5ef-47b5ab9b25b2`
-* Credential: `51wYIN41AC.UU29tzeT9l_xx89~1Pw~MDK`
-* Endpoint: `https://management.azure.com/subscriptions/d7759627-d2df-4caa-8f02-6fa88b694b4f`
-* OAuth endpoint: `https://login.microsoftonline.com/96fabb56-8782-4f37-b6f2-ae41118a6b43/oauth2/token`
