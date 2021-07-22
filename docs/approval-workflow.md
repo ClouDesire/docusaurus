@@ -25,7 +25,7 @@ The specific functioning slightly changes depending on the presence of the
 
 Once a new order is placed by the Customer on a (reseller/parent) marketplace:
 
-- the order is marked as "to be approved" (by a *Auditor*)
+- the order is marked as "to be approved" (by an *Auditor*)
 - the Customer:
   - receives a notification informing that "the order will be shortly reviewed
     by a manager"
