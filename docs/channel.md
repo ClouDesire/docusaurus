@@ -229,6 +229,19 @@ The Reseller can also access to a real-time sales reports:
 * Click on the **Proceeds** menu item
 * Optionally filter by **Vendor**, **Product** or time range
 
+### Sell-out visibility options
+
+On the sell-out configuration section a reseller can choose among the 3
+following “visibility options”:
+
+* priced: the item is visible on the marketplace, its price is provided, and
+  the customers can purchase it (default behaviour)
+* included: the item is visible on the marketplace without any price, and the
+  customers cannot purchase it (a “contact us” button is provided instead of
+  the typical “buy now”)
+* excluded: the item is not visibile on the marketplace, but the reseller can
+  still sell it to a customer via [order placement](#order-placement)
+
 ## Automated distributors and resellers marketplace creation
 
 The platform enables the management of independent marketplaces managed by
