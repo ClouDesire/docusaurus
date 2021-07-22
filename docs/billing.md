@@ -108,7 +108,7 @@ Cloudesire allows to generate 2 types of coupons:
 
 * **discount**: when the customer uses this kind of coupon, a discount is
   applied to the application price;
-* **fixed price**: when the customer uses this kind of coupon, a fixed price
+* **price override**: when the customer uses this kind of coupon, a price override
   (usually lower) overrides the original one for the given application version
   (plan). A typical use case is: the vendor doesn't want to publish a public
   price for the application and wants to choose a different price for each
