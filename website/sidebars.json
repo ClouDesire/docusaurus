@@ -30,6 +30,7 @@
       "backup",
       "billing",
       "channel",
+      "approval-workflow",
       "customer-cloud-credentials",
       "clouds",
       "emails",
