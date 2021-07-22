@@ -9,7 +9,7 @@ could be required.
 
 Each product/service can be specially configured to enable the *approval
 workflow*: in this case, each order (new purchases, change requests) needs to be
-approved by a *responsible person* (**Auditor**) before it becomes effective.
+approved by a *privileged user* (**Auditor**) before it becomes effective.
 
 The specific functioning slightly changes depending on the presence of the
 [Channel-Management](channel.md) (*parent-child*) module:
@@ -28,7 +28,7 @@ Once a new order is placed by the Customer on a (reseller/parent) marketplace:
 - the order is marked as "to be approved" (by a *Auditor*)
 - the Customer:
   - receives a notification informing that "the order will be shortly reviewed
-    by a responsible person"
+    by a manager"
   - sees on his Dashboard a list of "to be approved" orders
 - The *Auditor*:
   - receives a notification informing that "a new order needs to be reviewed and
