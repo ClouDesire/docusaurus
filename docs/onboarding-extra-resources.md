@@ -146,15 +146,15 @@ To configure a new Tagged Stairstep Extra Resources, you need to specify
 
 For example:
 
-- BASIC PACKAGE:
-  - tag: "pack-bas"
-  - min=max=1
-- ADVANCED PACKAGE:
-  - tag: "pack-adv"
-  - min=max=2
-- ENTERPRISE PACKAGE:
-  - tag: "pack-ent"
-  - min=max=3
+* BASIC PACKAGE:
+  * tag: "pack-bas"
+  * min=max=1
+* ADVANCED PACKAGE:
+  * tag: "pack-adv"
+  * min=max=2
+* ENTERPRISE PACKAGE:
+  * tag: "pack-ent"
+  * min=max=3
 
 Such quantities are *irrelevant* for billing purposes.
 
