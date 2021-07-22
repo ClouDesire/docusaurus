@@ -1,5 +1,5 @@
 ---
-id: workflow
+id: approval-workflow
 title: Orders Approval Workflow
 sidebar_label: Approval Workflow
 ---
