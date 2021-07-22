@@ -240,7 +240,7 @@ following “visibility options”:
   customers cannot purchase it (a “contact us” button is provided instead of
   the typical “buy now”)
 * excluded: the item is not visibile on the marketplace, but the reseller can
-  still sell it to a customer (by using the Reseller Control Panel UI)
+  still sell it to a customer via [order placement](#order-placement)
 
 ## Automated distributors and resellers marketplace creation
 
