@@ -4,7 +4,7 @@ author:    Pietro Paolo Ferrari
 authorURL: https://twitter.com/PP_Ferrari
 ---
 
-We recently upgraded our Graylog instance to Graylog 4. In the process, we enabled the SSO functionality (called `Trusted Header Authentication`) in order to enable all members of our team to login and use Graylog. We choose to use `oauth2-proxy` as the reverse proxy to authenticate with Github.
+We recently upgraded our Graylog instance to Graylog 4. In the process, we enabled the SSO functionality (called `Trusted Header Authentication`) in order to enable all members of our team to login and use Graylog. We decided to use [oauth2-proxy](https://github.com/oauth2-proxy/oauth2-proxy) as the reverse proxy to authenticate with Github.
 In our experience, it wasn't straightforward as we thought it would be.
 
 To activate SSO on Graylog 4 using `oauth2-proxy`:
