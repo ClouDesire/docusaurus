@@ -4,7 +4,7 @@ author:    Pietro Paolo Ferrari
 authorURL: https://twitter.com/PP_Ferrari
 ---
 
-We recently upgraded our Graylog instance to Graylog 4. We also enabled SSO with Github in order to enable all members of our team to login and use Graylog. But, in our experience, it wasn't straigforward as we thought it will be.
+We recently upgraded our Graylog instance to Graylog 4. We also enabled SSO with Github in order to enable all members of our team to login and use Graylog. But, in our experience, it wasn't straightforward as we thought it would be.
 We choose to use `oauth2-proxy` as the SSO provider.
 
 To activate SSO on Graylog 4 using `oauth2-proxy`, you have to:
