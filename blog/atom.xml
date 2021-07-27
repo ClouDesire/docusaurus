@@ -2,12 +2,51 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://docs.cloudesire.com/blog</id>
     <title>cloudesire documentation Blog</title>
-    <updated>2018-11-21T06:00:00.000Z</updated>
+    <updated>2021-07-26T06:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://docs.cloudesire.com/blog"/>
     <subtitle>The best place to stay up-to-date with the latest cloudesire documentation news and events.</subtitle>
     <logo>https://docs.cloudesire.com/img/logo-cloudesire.png</logo>
     <rights>Copyright © 2021 Cloudesire.com by Engineering D.HUB</rights>
+    <entry>
+        <title type="html"><![CDATA[How to setup SSO on Graylog 4 with oauth2-proxy]]></title>
+        <id>https://docs.cloudesire.com/blog/2021/07/26/sso-graylog4-oauth2-proxy.html</id>
+        <link href="https://docs.cloudesire.com/blog/2021/07/26/sso-graylog4-oauth2-proxy.html"/>
+        <updated>2021-07-26T06:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>We recently upgraded our Graylog instance to Graylog 4. In the process, we
+enabled the SSO functionality (called <code>Trusted Header Authentication</code>) in order
+to enable all members of our team to login and use Graylog. We decided to use
+<a href="https://github.com/oauth2-proxy/oauth2-proxy">oauth2-proxy</a> as the reverse
+proxy to authenticate with Github.
+In our experience, it wasn't straightforward as we thought it would be.</p>
+<p>To activate SSO on Graylog 4 using <code>oauth2-proxy</code>:</p>
+<ul>
+<li>Enable the <code>Trusted Header Authentication</code>. In <code>Graylog 4</code> the SSO
+functionality has been integrated directly into the product and you don't need
+to rely on an external plugin anymore. To configure SSO, go to System -&gt;
+Authentication -&gt; Authenticators -&gt; Edit Authenticators. In the <code>Username header</code> box insert the name of the header that you're going to authenticate
+the user with and <code>enable</code> the Authenticator. We decided to use the
+<code>X-Forwarded-User</code> header that is automatically added to the request by the
+oauth2-proxy.</li>
+<li>set the <code>--trusted-proxies</code> option launching graylog, passing to it the IP
+address of the <code>oauth2-proxy</code> instance. If you're using <code>docker</code> (like us),
+you can use the <code>GRAYLOG_TRUSTED_PROXIES</code> environment variable to the
+container;</li>
+<li>In <code>oauth2-proxy</code>, you have to set the <code>--pass-basic-auth</code> option to <code>false</code>
+(<code>true</code> by default). If you don't do that, Graylog will always try to
+login the user with basic authentication and it will not use the header
+configured in the Authenticators settings (<code>X-Forwarded-User</code> in our case);</li>
+<li>create a graylog user for each member of your team and use the username they
+use on the platform you choose to login them from. That is needed because, at
+the time of writing, Graylog 4.0.6 does not automatically create an internal
+user for each user that logins with SSO functionality.</li>
+</ul>
+]]></summary>
+        <author>
+            <name>Pietro Paolo Ferrari</name>
+            <uri>https://twitter.com/PP_Ferrari</uri>
+        </author>
+    </entry>
     <entry>
         <title type="html"><![CDATA[How to upgrade node on CircleCI machine executor]]></title>
         <id>https://docs.cloudesire.com/blog/2018/11/21/upgrade-node-version-circleci.html</id>
