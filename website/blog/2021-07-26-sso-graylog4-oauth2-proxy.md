@@ -30,8 +30,8 @@ To activate SSO on Graylog 4 using `oauth2-proxy`:
   login the user with basic authentication and it will not use the header
   configured in the Authenticators settings (`X-Forwarded-User` in our case);
 - create a graylog user for each member of your team and use the username they
-  use on the platform you choose to login them from. That is needed because, as
-  time of writing, Graylog 4.0.6 does not automatically create an internal user
-  for each user that logins with SSO functionality.
+  use on the platform you choose to login them from. That is needed because, at
+  the time of writing, Graylog 4.0.6 does not automatically create an internal
+  user for each user that logins with SSO functionality.
 
 <!--truncate-->
