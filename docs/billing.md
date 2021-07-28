@@ -132,6 +132,16 @@ Furthermore, Cloudesire supports an additional type of coupon:
   which will be decreased by a certain amount every time it will be used by
   a customer.
 
+### Discount coupon destination
+
+A **discount** coupon can be configured to be applied to:
+
+* **License only**: the license cost and the setup fee (if present)
+* **License and extra resources**: as above, plus every extra resource
+* **Total price**: every cost line
+
+*Price override coupons are only applied to the license cost.*
+
 ## Bundles
 
 Cloudesire allows Platform Administrators, and Resellers to create _bundles_ as a
