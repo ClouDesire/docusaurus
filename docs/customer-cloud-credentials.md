@@ -32,33 +32,80 @@ To configure a Cloud Credential for azure, you need to provide:
 * Endpoint: `https://management.azure.com/subscriptions/d7759627-d2df-4caa-8f02-6fa88b694b4f` (Subscription id)
 * OAuth endpoint: `https://login.microsoftonline.com/96fabb56-8782-4f37-b6f2-ae41118a6b43/oauth2/token` (Tenant id)
 
-You can obtain Azure credentials on the [Azure portal](https://portal.azure.com)
-with the following steps:
+You can obtain Azure credentials on the [Azure portal](https://portal.azure.com) by configuring the following objects:
 
-### Configure Application (one per tenant)
+* an **Azure Application Registration**, one per Azure Tenant
+* an **Azure Subscription**, one per Sustained Tenant Subscription
 
-* Go to the Azure dashboard
-* Access the `Azure Active Directory` service
-* Go in `App registrations` section under `Manage`
-* Create a new app with the `New registration` button
-* Choose a name of your preference (e.g. `cloudesire integration app`), note it
-  because it's required later. Leave defaults for remaining settings
-* Copy `Application (client) ID` and paste it on the Cloudesire `Identity` field
-* Copy `Directory (tenant) ID` and paste it on the Cloudesire `OAuth endpoint`
-  in the form `https://login.microsoftonline.com/<directory-id>/oauth2/token`
-* Go in `Certificates & secrets` section under `Manage`
-* Create a new secret with the `New client secret` button, selecting your
-  preferred expiration for this credential
-* Copy secret `Value` and paste it on the Cloudesire `Credential` field
+Before going throught the istructons below, you need to use Notepad, or equivalent text editor, to keep track on the produced information needed for the final step.
 
-### Grant access to Subscription (one per subscription)
+### Configure Azure Application Registration
 
-* Go to the Azure dashboard
-* Access the `Subscriptions` section, then enter your subscription
-* Copy `Subscription ID` and paste it on the Cloudesire `Endpoint` field in the
-  form of `https://management.azure.com/subscriptions/<subscription-id>`
-* Go in the `Access control (IAM)` section of your subscription and select `Add a role assignments`
-* Create a role assignment with role `Contributor` and assign access to the App
-  providing the name you chosen early
+* Go to the [Azure portal](https://portal.azure.com) dashboard
+* Access the **Azure Active Directory** [service](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
+* Under **Manage** menu section, click on **App registrations** [menu](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
+* Create a new app with the **New registration** button
+  * Choose a name of your preference and fill the **Name** field, and also paste
+    it in notepad as key value pair<br>
+    `App Reg Name=...your app reg name...`
+  * Leave defaults for remaining settings
+  * Press **Register** button
+* Now you are inside the just created App Registration object and you can see all the related details.
+  If not, click and go inside the object.
+* Look for the **Essentials** Section
+  * Copy **Application (client) ID** field value and paste it in notepad<br>
+    `Application (client) ID= xxxxxx`
+  * Copy **Directory (tenant) ID** field value and paste it notepad<br>
+    `Directory (tenant) ID= yyyyyyy`
+* Under **Manage** menu section, go in **Certificates & secrets** menu
+  * Under the **Client secret** section, create a new secret by pressing the **New client secret** button
+    * Open the **Expire** listbox and select your preferred expiration time for this credential
+    * Press the **Add** button
+  * Copy from the secret **Value** column the value and paste it in notepad<br>
+    `secret= zzzz`
+
+### Grant access to Azure Subscription
+
+* Go to the [Azure portal](https://portal.azure.com) dashboard
+* Access the Subscriptions [service](https://portal.azure.com/#blade/Microsoft_Azure_Billing/SubscriptionsBlade)
+* Click and enter in your **Azure subscription** (the name is equal to Azure Sustained Tenant Subscription you have already created)
+  * Copy **Subscription ID** and paste it on notepad<br>
+    `Subscription ID= wwwwww`
+* Go in the **Access control (IAM)** menu of your subscription
+* Click on **Add role assignments (Preview)** Button inside the **Grant access to this resource** box
+  * Select **Contributor** as Role
+  * Press **Next**
+  * Click on **+ Select members**
+    * On lateral side, Select field, digit the **App Reg Name** you have in your notepad
+    * Click on the appeared icon
+    * The App Registration Name goes to the **Selected members** section
+    * Click on **Select** Button
+  * Click on **Next** Button
+  * Click on **Review + assign** Button
 
 Now you are ready to create a new Cloud Credential on the Cloudesire panel.
+In the notepad you should have:
+
+```
+App Reg Name=...your app reg name...
+Application (client) ID= xxxxxx
+Directory (tenant) ID= yyyyyyy
+secret= zzzz
+Subscription ID= wwwwww
+```
+
+### Create Cloud Credential for Azure
+
+* Open Cloudesire Dashboard
+* Open Menu **Cloud Credentials**
+* Press the **Add** button
+  * In Cloud Providers, select **Azure: Global**
+  * Give your preferred name on **Identifier**. You will refer to it when Cloud Credential is required.
+  * Identity field value=Application (client) ID
+  * Credential field value=secret value
+  * In notepad create the following String URL using the Subscription ID value you have already:
+  * Endpoint field value= `https://management.azure.com/subscriptions/Subscription id`
+  * In notepad create the following String URL using the Directory (tenant) ID value you have already:
+  * Oauth endpoint field value= `https://login.microsoftonline.com/Directory (tenant) ID/oauth2/token`
+  * Save
+
