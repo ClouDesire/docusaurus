@@ -25,6 +25,10 @@
         "title": "Cloudesire REST API Introduction",
         "sidebar_label": "REST API Introduction"
       },
+      "approval-workflow": {
+        "title": "Orders Approval Workflow",
+        "sidebar_label": "Approval Workflow"
+      },
       "backup": {
         "title": "VM backups",
         "sidebar_label": "Backups"
