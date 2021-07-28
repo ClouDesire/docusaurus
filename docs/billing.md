@@ -121,6 +121,10 @@ Coupons can be:
 * "**reusable**", meaning that each coupon can be used more times (until its
   expiration date)
 
+When a coupon is used to buy a subscription, its effect is applied to every
+subsequent renewal, until its eventual expiration date or until a request
+to upgrade the product plan.
+
 Furthermore, Cloudesire supports an additional type of coupon:
 
 * **extended trials**: when the customer uses this kind of coupon, the default
