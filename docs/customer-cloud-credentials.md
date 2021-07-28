@@ -45,7 +45,8 @@ Before going throught the istructons below, you need to use Notepad, or equivale
 * Access the **Azure Active Directory** [service](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/Overview)
 * Under **Manage** menu section, click on **App registrations** [menu](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps)
 * Create a new app with the **New registration** button
-  * Choose a name of your preference and fill the **Name** field, and also paste it in notepad as key value pair<br>
+  * Choose a name of your preference and fill the **Name** field, and also paste
+    it in notepad as key value pair<br>
     `App Reg Name=...your app reg name...`
   * Leave defaults for remaining settings
   * Press **Register** button
@@ -54,8 +55,8 @@ Before going throught the istructons below, you need to use Notepad, or equivale
 * Look for the **Essentials** Section
   * Copy **Application (client) ID** field value and paste it in notepad<br>
     `Application (client) ID= xxxxxx`
-  * Copy **Directory (tenant) ID** field value and paste it notepad  
-  `Directory (tenant) ID= yyyyyyy`
+  * Copy **Directory (tenant) ID** field value and paste it notepad<br>
+    `Directory (tenant) ID= yyyyyyy`
 * Under **Manage** menu section, go in **Certificates & secrets** menu
   * Under the **Client secret** section, create a new secret by pressing the **New client secret** button
     * Open the **Expire** listbox and select your preferred expiration time for this credential
@@ -85,11 +86,13 @@ Before going throught the istructons below, you need to use Notepad, or equivale
 Now you are ready to create a new Cloud Credential on the Cloudesire panel.
 In the notepad you should have:
 
-    App Reg Name=...your app reg name...
-    Application (client) ID= xxxxxx
-    Directory (tenant) ID= yyyyyyy
-    secret= zzzz
-    Subscription ID= wwwwww
+```
+App Reg Name=...your app reg name...
+Application (client) ID= xxxxxx
+Directory (tenant) ID= yyyyyyy
+secret= zzzz
+Subscription ID= wwwwww
+```
 
 ### Create Cloud Credential for Azure
 
