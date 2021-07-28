@@ -121,6 +121,10 @@ Coupons can be:
 * "**reusable**", meaning that each coupon can be used more times (until its
   expiration date)
 
+When a coupon is used to buy a subscription, its effect is applied to every
+subsequent renewal, until its eventual expiration date or until a request
+to upgrade the product plan.
+
 Furthermore, Cloudesire supports an additional type of coupon:
 
 * **extended trials**: when the customer uses this kind of coupon, the default
@@ -131,6 +135,16 @@ Furthermore, Cloudesire supports an additional type of coupon:
   trials_ coupon, the platform administrator can allocate a budget (or _plafond_)
   which will be decreased by a certain amount every time it will be used by
   a customer.
+
+### Discount coupon destination
+
+A **discount** coupon can be configured to be applied to:
+
+* **License only**: the license cost and the setup fee (if present)
+* **License and extra resources**: as above, plus every extra resource
+* **Total price**: every cost line
+
+*Price override coupons are only applied to the license cost.*
 
 ## Bundles
 
