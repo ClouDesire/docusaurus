@@ -78,6 +78,7 @@ dealers, agents)</li>
 <p>Channel management has a steep learning curve, let's begin to clarify some of
 the most important behaviors.</p>
 <h3><a class="anchor" aria-hidden="true" id="product-management-and-pricing"></a><a href="#product-management-and-pricing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product management and pricing</h3>
+<p><img src="/img/docs/parent-child-with-pricelists.jpg" alt="parent-child with price lists"></p>
 <p>A product can be sold with the interaction of each user down the chain, from ISV
 to the Reseller:</p>
 <ul>
@@ -86,18 +87,19 @@ with the ISV</li>
 <li>The Parent decides the catalog composition for each Distributor, as well as
 the <em>Wholesale Price</em> for each Product Plan</li>
 <li>Each Distributor decides the Product Plans that he wants to assign in
-different <em>Distributor Pricelists</em>, together with the respective <em>Sell-in Price</em> applying a
-markup to the <em>Wholesale Price</em>. Each Distributor pricelist is assigned to one
-or more Resellers.</li>
+different <em>Distributor Price List</em>, together with the respective <em>Sell-in
+Price</em> applying a markup to the <em>Wholesale Price</em>. Each Distributor Price List
+is assigned to one or more Resellers.</li>
 <li>Each Reseller decides the <em>Sell-out Price</em> for each Product Plan in one or
-more <em>Reseller Pricelists</em>. Each Reseller can manage its own public marketplace with an
-associated <em>default pricelist</em>, and can associate an End Customer to a specific
-pricelist.</li>
+more <em>Reseller Price List</em>. Each Reseller can manage its own public
+marketplace with an associated <em>default Price List</em>, and can associate an End
+Customer to a specific Price List.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="reseller-features"></a><a href="#reseller-features" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reseller features</h3>
 <p>Resellers have access to a unique set of features:</p>
 <ul>
-<li>Add <strong>VAS</strong> (Value Added Services,
+<li>Place direct orders to End Customers via Control Panel</li>
+<li>Add <strong>VAS</strong> (Value Added Services),
 <a href="/docs/glossary.html#extra-resources">extra-resources</a> to empower its own offer (like
 setup, training, support, devices, etc.). All pricing models available in
 Cloudesire can be applied also to VAS (typically: one-off, subscription,
@@ -113,29 +115,22 @@ override, trial extension | reusable or not | with/without time limit)</li>
 Users.</p>
 <h3><a class="anchor" aria-hidden="true" id="scenario-1-self-billing"></a><a href="#scenario-1-self-billing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario 1: Self-Billing</h3>
 <ul>
-<li>Cloudesire provides to the Reseller the <em>billing instructions</em> (namely: who is
-consuming what, and respective duration)</li>
-<li>The Reseller invoices to its End-Customer, and collects the payment through
+<li>Cloudesire invoicing engine is not used</li>
+<li>Cloudesire provides the Reseller with the <em>billing instructions</em> (namely: who is
+consuming what, and respective duration) via <a href="/docs/api.html">API Layer</a></li>
+<li>The Reseller invoices to its End-Customers, and collects the payment through
 its own properties (online or offline).</li>
 </ul>
 <p>More info on <a href="/docs/billing.html#self-billing">Self-billing section</a>.</p>
-<h3><a class="anchor" aria-hidden="true" id="scenario-2-billing-on-behalf"></a><a href="#scenario-2-billing-on-behalf" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario 2: Billing on behalf</h3>
+<h3><a class="anchor" aria-hidden="true" id="scenario-2-default-billing"></a><a href="#scenario-2-default-billing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario 2: Default Billing</h3>
 <ul>
-<li>Cloudesire invoices the End Customer with Parent or Distributor or Reseller
-administrative data (VAT, etc.) – can be set for each Reseller</li>
-<li>Cloudesire collects payments through its own payment gateways</li>
-<li>Cloudesire pays back each due amount up the chain to ISVs, Parent,
-Distributors, Resellers, Cloud Providers</li>
-</ul>
-<h3><a class="anchor" aria-hidden="true" id="scenario-3-billing"></a><a href="#scenario-3-billing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scenario 3: Billing</h3>
-<ul>
-<li>Cloudesire invoices the End Customer with Parent or Distributor or Reseller
-administrative data (VAT, etc.) – can be set for each Reseller</li>
-<li>Cloudesire collects payments, through the payment gateways of the Parent or
-Reseller</li>
-<li>Cloudesire calculates each due amount, to be paid by who has collected the
-payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud
-Providers</li>
+<li>Cloudesire invoices the End Customer with Parent (by default) or Distributor
+or Reseller administrative data (VAT, etc.)</li>
+<li>Cloudesire collects payments through the Parent Payment Gateway</li>
+<li>Cloudesire provides the Parent with specific <strong>reports</strong> listing the due
+amounts for each actor of the chain (Distributors, Resellers, Cloud Providers,
+ISV)</li>
+<li>The Parent pays back each due amount up the chain.</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="order-placement"></a><a href="#order-placement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order placement</h3>
 <p>For each of the previous billing scenarios, the Reseller has both the &quot;<strong>push</strong>&quot;
@@ -289,7 +284,7 @@ automatically create new DNS records when creating a marketplace, for example:</
 native SSL is available by default.</p>
 <p>When using a third-party DNS provider, it's possible to manually configure DNS
 records required for new distributors and resellers marketplaces.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/30/2021 by Andrea Vecchi</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/billing.html"><span class="arrow-prev">← </span><span>Billing</span></a><a class="docs-next button" href="/docs/approval-workflow.html"><span>Approval Workflow</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#logic-along-the-chain">Logic along the chain</a><ul class="toc-headings"><li><a href="#product-management-and-pricing">Product management and pricing</a></li><li><a href="#reseller-features">Reseller features</a></li></ul></li><li><a href="#available-billingpayment-scenarios">Available Billing/Payment scenarios</a><ul class="toc-headings"><li><a href="#scenario-1-self-billing">Scenario 1: Self-Billing</a></li><li><a href="#scenario-2-billing-on-behalf">Scenario 2: Billing on behalf</a></li><li><a href="#scenario-3-billing">Scenario 3: Billing</a></li><li><a href="#order-placement">Order placement</a></li><li><a href="#other-relevant-features">Other relevant features</a></li></ul></li><li><a href="#parent-functionalities">Parent functionalities</a></li><li><a href="#distributor-functionalities">Distributor functionalities</a></li><li><a href="#reseller-functionalities">Reseller functionalities</a><ul class="toc-headings"><li><a href="#sell-out-visibility-options">Sell-out visibility options</a></li></ul></li><li><a href="#automated-distributors-and-resellers-marketplace-creation">Automated distributors and resellers marketplace creation</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/30/2021 by Andrea Vecchi</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/billing.html"><span class="arrow-prev">← </span><span>Billing</span></a><a class="docs-next button" href="/docs/approval-workflow.html"><span>Approval Workflow</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#logic-along-the-chain">Logic along the chain</a><ul class="toc-headings"><li><a href="#product-management-and-pricing">Product management and pricing</a></li><li><a href="#reseller-features">Reseller features</a></li></ul></li><li><a href="#available-billingpayment-scenarios">Available Billing/Payment scenarios</a><ul class="toc-headings"><li><a href="#scenario-1-self-billing">Scenario 1: Self-Billing</a></li><li><a href="#scenario-2-default-billing">Scenario 2: Default Billing</a></li><li><a href="#order-placement">Order placement</a></li><li><a href="#other-relevant-features">Other relevant features</a></li></ul></li><li><a href="#parent-functionalities">Parent functionalities</a></li><li><a href="#distributor-functionalities">Distributor functionalities</a></li><li><a href="#reseller-functionalities">Reseller functionalities</a><ul class="toc-headings"><li><a href="#sell-out-visibility-options">Sell-out visibility options</a></li></ul></li><li><a href="#automated-distributors-and-resellers-marketplace-creation">Automated distributors and resellers marketplace creation</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
