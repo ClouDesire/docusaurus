@@ -26,6 +26,8 @@ the most important behaviors.
 
 ### Product management and pricing
 
+![parent-child with price lists](/img/docs/parent-child-with-pricelists.jpg)
+
 A product can be sold with the interaction of each user down the chain, from ISV
 to the Reseller:
 
@@ -35,7 +37,7 @@ to the Reseller:
   the *Wholesale Price* for each Product Plan
 * Each Distributor decides the Product Plans that he wants to assign in
   different *Distributor Pricelists*, together with the respective *Sell-in Price* applying a
-  markup to the *Wholesale Price*. Each Distributor pricelist is assigned to one
+  markup to the *Wholesale Price*. Each Distributor Pricelist is assigned to one
   or more Resellers.
 * Each Reseller decides the *Sell-out Price* for each Product Plan in one or
   more *Reseller Pricelists*. Each Reseller can manage its own public marketplace with an
@@ -46,7 +48,8 @@ to the Reseller:
 
 Resellers have access to a unique set of features:
 
-* Add **VAS** (Value Added Services,
+* Place direct orders to End Customers via Control Panel
+* Add **VAS** (Value Added Services),
   [extra-resources](glossary.md#extra-resources) to empower its own offer (like
   setup, training, support, devices, etc.). All pricing models available in
   Cloudesire can be applied also to VAS (typically: one-off, subscription,
@@ -64,9 +67,10 @@ Users.
 
 ### Scenario 1: Self-Billing
 
-* Cloudesire provides to the Reseller the _billing instructions_ (namely: who is
-  consuming what, and respective duration)
-* The Reseller invoices to its End-Customer, and collects the payment through
+* Cloudesire invoicing engine is not used  
+* Cloudesire provides the Reseller with the _billing instructions_ (namely: who is
+  consuming what, and respective duration) via [API Layer](api.md)
+* The Reseller invoices to its End-Customers, and collects the payment through
   its own properties (online or offline).
 
 More info on [Self-billing section](billing.md#self-billing).
@@ -75,19 +79,12 @@ More info on [Self-billing section](billing.md#self-billing).
 
 * Cloudesire invoices the End Customer with Parent or Distributor or Reseller
   administrative data (VAT, etc.) – can be set for each Reseller
-* Cloudesire collects payments through its own payment gateways
-* Cloudesire pays back each due amount up the chain to ISVs, Parent,
-  Distributors, Resellers, Cloud Providers
-
-### Scenario 3: Billing
-
-* Cloudesire invoices the End Customer with Parent or Distributor or Reseller
-  administrative data (VAT, etc.) – can be set for each Reseller
-* Cloudesire collects payments, through the payment gateways of the Parent or
-  Reseller
-* Cloudesire calculates each due amount, to be paid by who has collected the
-  payment along the chain to ISVs, Parent, Distributors, Resellers, Cloud
-  Providers
+* Cloudesire collects payments through its Payment Gateway (typically associated to
+  the Platform Owner, presumably the Parent)
+* Cloudesire provides the Platform Owner with specific **reports** listing
+  the due amounts for each actor of the chain (Distributors, Resellers, Cloud 
+  Providers, ISV)  
+* The Platform Owner pays back each due amount up the chain.
 
 ### Order placement
 
