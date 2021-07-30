@@ -34,13 +34,13 @@ to the Reseller:
 * The Parent decides the catalog composition for each Distributor, as well as
   the *Wholesale Price* for each Product Plan
 * Each Distributor decides the Product Plans that he wants to assign in
-  different catalogs, together with the respective *Sell-in Price* applying a
-  markup to the *Wholesale Price*. Each Distributor catalog is assigned to one
+  different *Distributor Pricelists*, together with the respective *Sell-in Price* applying a
+  markup to the *Wholesale Price*. Each Distributor pricelist is assigned to one
   or more Resellers.
 * Each Reseller decides the *Sell-out Price* for each Product Plan in one or
-  more catalogs. Each Reseller can manage its own public marketplace with an
-  associated default catalog, and can associate an End Customer to a specific
-  catalog.
+  more *Reseller Pricelists*. Each Reseller can manage its own public marketplace with an
+  associated *default pricelist*, and can associate an End Customer to a specific
+  pricelist.
 
 ### Reseller features
 
