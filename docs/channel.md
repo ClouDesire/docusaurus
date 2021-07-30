@@ -67,7 +67,7 @@ Users.
 
 ### Scenario 1: Self-Billing
 
-* Cloudesire invoicing engine is not used  
+* Cloudesire invoicing engine is not used
 * Cloudesire provides the Reseller with the _billing instructions_ (namely: who is
   consuming what, and respective duration) via [API Layer](api.md)
 * The Reseller invoices to its End-Customers, and collects the payment through
@@ -75,16 +75,15 @@ Users.
 
 More info on [Self-billing section](billing.md#self-billing).
 
-### Scenario 2: Billing on behalf
+### Scenario 2: Default Billing
 
-* Cloudesire invoices the End Customer with Parent or Distributor or Reseller
-  administrative data (VAT, etc.) – can be set for each Reseller
-* Cloudesire collects payments through its Payment Gateway (typically associated to
-  the Platform Owner, presumably the Parent)
-* Cloudesire provides the Platform Owner with specific **reports** listing
-  the due amounts for each actor of the chain (Distributors, Resellers, Cloud 
-  Providers, ISV)  
-* The Platform Owner pays back each due amount up the chain.
+* Cloudesire invoices the End Customer with Parent (by default) or Distributor
+  or Reseller administrative data (VAT, etc.)
+* Cloudesire collects payments through the Parent Payment Gateway
+* Cloudesire provides the Parent with specific **reports** listing the due
+  amounts for each actor of the chain (Distributors, Resellers, Cloud Providers,
+  ISV)
+* The Parent pays back each due amount up the chain.
 
 ### Order placement
 
