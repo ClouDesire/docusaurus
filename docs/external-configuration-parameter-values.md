@@ -27,18 +27,26 @@ Your endpoint will receive a POST request with a JSON body content like this:
 ## Response
 
 Send an HTTP response of `200` with a content-type `application/json` with a
-`values` field containing the key-value pairs for the configuration parameter
-identifier and value:
+`values` field containing a list of the configuration parameters `value` and
+`description`:
 
 ```json
 {
   "values":
-  {
-    "value1": "Value one description",
-    "value2": "Value two description"
-  }
+  [
+    {
+      "value": "first",
+      "description": "Value two description"
+    },
+    {
+      "value": "second",
+      "description": "Value two description"
+    }
+  ]
 }
 ```
+
+Ordering will be kept for display to the customer.
 
 An _empty response_ means **no values** are allowed for the input parameters:
 
