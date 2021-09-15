@@ -12,7 +12,8 @@
       "csp-product",
       "api-product",
       "vm",
-      "order-validation"
+      "order-validation",
+      "external-configuration-parameter-values"
     ],
     "Platform": [
       "glossary",
