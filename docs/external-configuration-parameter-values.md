@@ -40,6 +40,22 @@ identifier and value:
 }
 ```
 
+An _empty response_ means **no values** are allowed for the input parameters:
+
+```json
+{
+  "values": {}
+}
+```
+
+A _null response_ means **every value** is allowed:
+
+```json
+{
+  "values": null
+}
+```
+
 ### Localization
 
 Use the `language` field in the request to localize the values' description.
