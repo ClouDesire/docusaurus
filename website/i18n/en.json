@@ -61,6 +61,10 @@
         "title": "Automatic emails sent by the platform",
         "sidebar_label": "Email Automation"
       },
+      "external-configuration-parameter-values": {
+        "title": "External configuration parameter values",
+        "sidebar_label": "External configuration parameter values"
+      },
       "gdpr": {
         "title": "GDPR Marketplace Compliance",
         "sidebar_label": "GDPR Compliance"

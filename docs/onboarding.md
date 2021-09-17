@@ -306,6 +306,10 @@ For each parameter you need to specify:
 * _Description_: a short explanation provided to the end-users
 * _Validation_ (optional): a regular expression to validate the text provided by
   end-users
+* _Accepted values_ (optional): a list of possible values for the parameter
+* _External values URL_ (optional): the URL of an external endpoint used to
+  obtain the possible values for the parameter
+  ([more information](external-configuration-parameter-values.md))
 * _Hint_: text inside the placeholder that helps end-users to complete the field
 * _Required_ (yes/no): sets if the customer needs to specify a value for the
   parameter before purchasing the product
