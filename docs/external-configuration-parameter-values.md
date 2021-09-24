@@ -52,7 +52,7 @@ An _empty response_ means **no values** are allowed for the input parameters:
 
 ```json
 {
-  "values": {}
+  "values": []
 }
 ```
 
