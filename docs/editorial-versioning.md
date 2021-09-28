@@ -10,7 +10,7 @@ descriptions of a product / plan, the platform creates a **draft** that needs to
 approved by the **Admin** in order to become effective (really published on a marketplace).
 
 The Vendor can request the Admin to review (and possibly approve) his draft by clicking 
-on a "request review" button.
+on a "request review" button. Once done, the Admin will receive an **email notification**.
 
 The platform provides the Admin with a view listing all the "pending drafts". By clicking on
 one of them, a *comparison view* is provided, to emphatize the differences between the previous 
@@ -20,7 +20,7 @@ While a draft is under approval by the Admin, the Vendor can still *update* his 
 modifications will substitute the previous ones on the "current draft".
 
 When the Admin approves a draft:
-- the vendor receives a notification ("your draft is now approved")
+- the vendor receives an **email notification** ("your draft is now approved")
 - if the draft refers to an unpublished plan, the platform automatically publish it
 - if the draft refers to _main product descriptions_ (not directly related to plans), 
   the changes are published on the marketplaces only if the prodct was already visible
