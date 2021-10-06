@@ -57,13 +57,16 @@
         "title": "Docker applications onboarding",
         "sidebar_label": "Docker applications"
       },
+      "editorial-versioning": {
+        "title": "Editorial Contents Versioning & Approval Workflow",
+        "sidebar_label": "Editorial Versioning & Workflow"
+      },
       "emails": {
         "title": "Automatic emails sent by the platform",
         "sidebar_label": "Email Automation"
       },
       "external-configuration-parameter-values": {
-        "title": "External configuration parameter values",
-        "sidebar_label": "External configuration parameter values"
+        "title": "External configuration parameter values"
       },
       "gdpr": {
         "title": "GDPR Marketplace Compliance",
