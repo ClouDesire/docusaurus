@@ -48,4 +48,4 @@ If the *Auditor*:
 
 In the *Channel Management* scenario, if a Reseller places an order on behalf of
 a Customer by using the specific functionality available on his Control Panel, 
-the platform can be configured in order to make the order automatically approved.
+the platform can be configured to make the order automatically approved or not.
