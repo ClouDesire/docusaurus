@@ -17,8 +17,8 @@ The default functioning of Cloudesire is to _staticize_ incomes related to:
 - [Syndicated Products](syndication.md)
 - [Docker Applications](socker.md)
 - [VM products](vm.md)
-- AWS/GCE/Azure Tenants
-- etc
+- Public Tenants (AWS/GCE/Azure)
+- Cloud Services
 
 on a dedicated data-structure, named **proceeds**, which contains:
 - _pre-paid_ incomes, that will be staticized at the **beginning** of each 
@@ -62,7 +62,7 @@ In those scenarios, the platform can be specially configured in order to:
 - historicize, on a **live-proceeds** data-structure, the raw data
 - allows a 3rd-party to retrieve the collected values via API
 
-As a consequence, a typical approach to reach the fulfit the above mentioned
+As a consequence, a typical approach to fulfit the above mentioned
 requirement would be to implementat an API integration between the external 
 Invoicing Platform and Cloudesire in order to retrieve the *live-proceeds* 
 collected in a certain timeframe (e.g. the previous month).
@@ -78,3 +78,51 @@ for different actors:
   their private Dashboards (of course, in this case, the default invoices 
   list fuctionality would be disabled)
  
+## Special Behaviours for Public Tenants and Cloud Services
+
+Public Tenants (AWS, GCE, Azure) and Cloud Services require special handlings 
+in the live-reporting approach.
+
+It's good to remember that those kind of products don't require to pre-configure
+the *classical* pricing model based on license-prices plus pre-paid and/or 
+pay-per-use [extra-resources](onboarding-extra-resources.md).
+
+In fact, once a public tenant is provisioned for an end-customer, the platform 
+periodically collects all the costs related to his subscription by invoking the
+hyperscaler's billing/methering engine.
+
+Therefore, for a certain tenant, the platform will collect **several types of 
+costs**, related to disparate kinds of services which was actually used by the 
+end-customers during the last billing period (e.g. compute instances, storage, 
+network resources, PaaS services, etc.).
+
+As described before, by leveraging the [Channel Management](channel.md) 
+capabilities, the platform owner (Parent), the Distibutors, and the Resellers
+can apply their respective *markups* (on-top the collected costs) along the 
+chain.
+
+The setup procedure of the *wholesale/sell-in/out markups* for Public Tenants 
+and Cloud Services is quite simple: a **generic cost-placeholder** can be 
+configured on the product-plans, and all the following markups configurations 
+can be done on it.
+
+During the periodical **cost-collection** task, Cloudesire invokes the 
+hyperscalers APIs and retrieves:
+
+- the resource/service **hourly unit-cost** -> this will be mapped as "vendor 
+  cost" in the Cloudesire data-model
+- the resource/service **hourly unit-street-price** -> this will be mapped as 
+  "wholesale price" in the Cloudesire data-model
+- the resource/service **usage time** -> this will be stored, multiplied
+  by its related street-price, in a "proceeds row" 
+  
+Another (optional) platform configuration can be used to apply a 
+**flat discount** (e.g. 2%) on all the retrieved unit-street-prices.
+This allows to model special commercial agreements that a CSP could 
+have been signed with the platform owner.
+
+As a consequence, all the following markups, which are configured on
+the above mentioned *generic cost-placeholder*, will be applied starting 
+from the wholesale price (namely the **optionally discounted** street 
+prices) down to the chain, in order to calculate the final sell-out 
+prices to be applied to the end-customers.
