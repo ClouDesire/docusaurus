@@ -23,7 +23,7 @@ Sent on request for approval of a product.
 
 ### Order creation
 
-Once the customer order a product the following email is sent.
+Once the customer orders a product the following email is sent.
 
 **Template name:** `orderCreationCustomer`
 
