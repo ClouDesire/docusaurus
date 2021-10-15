@@ -9,9 +9,9 @@ circumstances to the platform actors.
 
 Templates are [here](https://github.com/ClouDesire/backend/tree/master/cloudesire-root/mailsender-client/src/main/resources/templates) (requires developer access).
 
-# Product onboarding
+## Product onboarding
 
-## Approval request
+### Approval request
 
 Sent on request for approval of a product.
 
@@ -19,9 +19,9 @@ Sent on request for approval of a product.
 
 **Actors:** *configurable*
 
-# Subscription placement, deployment and lifecycle
+## Subscription placement, deployment and lifecycle
 
-## Order creation
+### Order creation
 
 Once the end-user ordered a product the following email is sent.
 
@@ -29,7 +29,7 @@ Once the end-user ordered a product the following email is sent.
 
 **Actors:** *Customer / Vendor / Reseller / Distributor*
 
-## Order approval
+### Order approval
 
 If orders are subject to approval, the following email is sent on order request.
 
@@ -37,7 +37,7 @@ If orders are subject to approval, the following email is sent on order request.
 
 **Actors:** *Customer*
 
-## Order rejection
+### Order rejection
 
 If orders are subject to approval, the following email is sent to the customer
 on rejection.
@@ -46,7 +46,7 @@ on rejection.
 
 **Actors:** *Customer*
 
-## Order deployment
+### Order deployment
 
 This email is sent to the customer while the order is processing for
 deployment.
@@ -55,7 +55,7 @@ deployment.
 
 **Actors:** *Customer*
 
-## Order undeploy
+### Order undeploy
 
 Sent on undeployment of an expired subscription.
 
@@ -65,7 +65,7 @@ Sent on undeployment of an expired subscription.
 
 To vendor only if order is normal, upgrade or renewal
 
-## Deploy failed
+### Deploy failed
 
 Sent on failure from deployer.
 
@@ -73,7 +73,7 @@ Sent on failure from deployer.
 
 **Actors:** *Customer / Vendor*
 
-## Deployment complete
+### Deployment complete
 
 After the end-user ordered a product (either trial or paid), an email is sent
 as soon as the application is ready to be used.
@@ -82,7 +82,7 @@ as soon as the application is ready to be used.
 
 **Actors:** *Customer / Vendor*
 
-## Subscription amendment
+### Subscription amendment
 
 When upgrade orders are subject to approval, the following email is sent to
 the vendor (or reseller, if the subscription is resold) as a notification.
@@ -91,7 +91,7 @@ the vendor (or reseller, if the subscription is resold) as a notification.
 
 **Actors:** *Vendor / Reseller*
 
-## Subscription killed
+### Subscription killed
 
 Sent on subscription kill after payment deadline.
 
@@ -99,7 +99,7 @@ Sent on subscription kill after payment deadline.
 
 **Actors:** *Customer*
 
-## Expiring subscription
+### Expiring subscription
 
 When there is an active subscription without the auto-renew that is going to
 expire, the platform will send an expiration reminder at 14, 10, 7, 4, 3, 2, 1
@@ -109,7 +109,7 @@ day(s) before the expiration.
 
 **Actors:** *Customer*
 
-## Invoice issuing
+### Invoice issuing
 
 As soon an invoice is issued, the end-user will receive the following email.
 
@@ -117,7 +117,7 @@ As soon an invoice is issued, the end-user will receive the following email.
 
 **Actors:** *Customer*
 
-## Invoice to pay
+### Invoice to pay
 
 When an invoice is still pending, an alert is sent to the end-user once a day.
 
@@ -125,7 +125,7 @@ When an invoice is still pending, an alert is sent to the end-user once a day.
 
 **Actors:** *Customer*
 
-## Invoice payment overdue
+### Invoice payment overdue
 
 When the payment period expires, the subscription is put into a sleeping state:
 the end-user cannot use the application but data is still preserved.
@@ -136,7 +136,7 @@ The email sent when the subscription is put to sleeping state is the following.
 
 **Actors:** *Customer*
 
-## Invoice paid
+### Invoice paid
 
 Sent on invoice payment.
 
@@ -146,9 +146,9 @@ Sent on invoice payment.
 
 Reseller does not receive this if invoice is self-billed
 
-# User registration, password recovery and approval
+## User registration, password recovery and approval
 
-## Registration confirmation
+### Registration confirmation
 
 Sent on user registration to verify the account.
 
@@ -156,7 +156,7 @@ Sent on user registration to verify the account.
 
 **Actors:** *User*
 
-## Vendor registration
+### Vendor registration
 
 Sent on vendor registration.
 
@@ -164,7 +164,7 @@ Sent on vendor registration.
 
 **Actors:** *Vendor / configurable*
 
-## Vendor approval
+### Vendor approval
 
 When vendor approval is enabled, the following email is sent on successful
 approval.
@@ -173,7 +173,7 @@ approval.
 
 **Actors:** *Vendor / configurable*
 
-## Customer registration
+### Customer registration
 
 Sent on customer registration.
 
@@ -181,7 +181,7 @@ Sent on customer registration.
 
 **Actors:** *configurable*
 
-## Customer update
+### Customer update
 
 Sent on customer profile update.
 
@@ -189,7 +189,7 @@ Sent on customer profile update.
 
 **Actors:** *configurable*
 
-## Password recovery request
+### Password recovery request
 
 Sent on password recovery request.
 
@@ -197,7 +197,7 @@ Sent on password recovery request.
 
 **Actors:** *User*
 
-## Password recovery succeeded
+### Password recovery succeeded
 
 Sent on password recovery completed successfully.
 
@@ -205,7 +205,7 @@ Sent on password recovery completed successfully.
 
 **Actors:** *User*
 
-## Payment method save
+### Payment method save
 
 Sent on customer payment method save.
 
@@ -213,7 +213,7 @@ Sent on customer payment method save.
 
 **Actors:** *configurable*
 
-## Delayed payment request
+### Delayed payment request
 
 Sent on request for approval of delayed payment for a customer.
 
