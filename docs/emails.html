@@ -63,279 +63,119 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/emails.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Automatic emails sent by the platform</h1></header><article><div><span><p>The Cloudesire platform automatically delivers email notifications under certain
-circumstances to the end-user.</p>
-<h2><a class="anchor" aria-hidden="true" id="order-creation"></a><a href="#order-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order creation</h2>
-<p>Once the end-user ordered a product the following email is sent.</p>
-<p><strong>Template name:</strong> <em>orderCreationCustomer</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  thank you for choosing </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">.
-  You will receive an e-mail notification as soon as </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> will be ready to use with your log in instructions.
-
-  The order ID of your product is </span><span class="hljs-template-variable">{{ orderId }}</span><span class="xml">.
-  To review your order please click here: <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ orderUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ orderUrl }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  grazie per aver scelto </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">.
-  A breve riceverai una notifica via e-mail con le istruzioni per accedere al prodotto.
-
-  L'ID del tuo ordine è </span><span class="hljs-template-variable">{{ orderId }}</span><span class="xml">.
-  Per vedere il tuo ordine, clicca qui: <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ orderUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ orderUrl }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-</span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="deployment-complete"></a><a href="#deployment-complete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment complete</h2>
-<p>After the end-user ordered a product (either trial or paid), an email is sent
+circumstances to the platform users.</p>
+<p>Templates are <a href="https://github.com/ClouDesire/backend/tree/master/cloudesire-root/mailsender-client/src/main/resources/templates">here</a> (requires developer access).</p>
+<h2><a class="anchor" aria-hidden="true" id="product-onboarding"></a><a href="#product-onboarding" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Product onboarding</h2>
+<h3><a class="anchor" aria-hidden="true" id="approval-request"></a><a href="#approval-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Approval request</h3>
+<p>Sent on request for approval of a product.</p>
+<p><strong>Template name:</strong> <code>approvalRequest</code></p>
+<p><strong>Recipients:</strong> <em>configurable</em></p>
+<h2><a class="anchor" aria-hidden="true" id="subscription-placement-deployment-and-lifecycle"></a><a href="#subscription-placement-deployment-and-lifecycle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Subscription placement, deployment and lifecycle</h2>
+<h3><a class="anchor" aria-hidden="true" id="order-creation"></a><a href="#order-creation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order creation</h3>
+<p>Once the customer orders a product the following email is sent.</p>
+<p><strong>Template name:</strong> <code>orderCreationCustomer</code></p>
+<p><strong>Recipients:</strong> <em>Customer / Vendor / Reseller / Distributor</em></p>
+<h3><a class="anchor" aria-hidden="true" id="order-approval"></a><a href="#order-approval" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order approval</h3>
+<p>If orders are subject to approval, the following email is sent on order request.</p>
+<p><strong>Template name:</strong> <code>orderRequest</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="order-rejection"></a><a href="#order-rejection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order rejection</h3>
+<p>If orders are subject to approval, the following email is sent to the customer
+on rejection.</p>
+<p><strong>Template name:</strong> <code>orderReject</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="order-deployment"></a><a href="#order-deployment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order deployment</h3>
+<p>This email is sent to the customer while the order is processing for
+deployment.</p>
+<p><strong>Template name:</strong> <code>orderDeployment</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="order-undeploy"></a><a href="#order-undeploy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Order undeploy</h3>
+<p>Sent on undeployment of an expired subscription.</p>
+<p><strong>Template name:</strong> <code>orderUndeployForCustomer</code>/<code>orderUndeployForVendor</code></p>
+<p><strong>Recipients:</strong> <em>Customer / Vendor</em></p>
+<p>To vendor only if order is normal, upgrade or renewal</p>
+<h3><a class="anchor" aria-hidden="true" id="deploy-failed"></a><a href="#deploy-failed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy failed</h3>
+<p>Sent on failure from deployer.</p>
+<p><strong>Template name:</strong> <code>deploymentFailure</code></p>
+<p><strong>Recipients:</strong> <em>Customer / Vendor</em></p>
+<h3><a class="anchor" aria-hidden="true" id="deployment-complete"></a><a href="#deployment-complete" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deployment complete</h3>
+<p>After the customer ordered a product (either trial or paid), an email is sent
 as soon as the application is ready to be used.</p>
-<p><strong>Template name:</strong> <em>deployCompleteForCustomer</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  your order #</span><span class="hljs-template-variable">{{ orderId }}</span><span class="xml"> for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> has been successfully completed.
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (instructionsInEmail) %}</span><span class="xml">
-    Please follow these instruction to access </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">:
-    </span><span class="hljs-template-variable">{{ vendorNotes }}</span><span class="xml">
-    You can check your subscription status <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (endUserInstructions) %}</span><span class="xml">
-      </span><span class="hljs-template-variable">{{ endUserInstructions }}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-  You can now access your product from our dashboard.
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ dashboardUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Go to dashboard<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  If you have any question on the product you can contact </span><span class="hljs-template-variable">{{ vendor }}</span><span class="xml"> at <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:</span></span></span><span class="hljs-template-variable">{{ vendorMail }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>this e-mail address<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-
-  You can contact our </span><span class="hljs-template-variable">{{ teamName }}</span><span class="xml"> for issues with the service (e.g. subscriptions, payments and issues with the platform </span><span class="hljs-template-variable">{{ storeName }}</span><span class="xml">):
-  contact us at <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:</span></span></span><span class="hljs-template-variable">{{ supportMail }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ supportMail }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> and we will answer as soon as possible.
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  il tuo ordine #</span><span class="hljs-template-variable">{{ orderId }}</span><span class="xml"> per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> è stato completato con successo.
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (instructionsInEmail) %}</span><span class="xml">
-
-    Queste sono le istruzioni per accedere a </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">:
-    </span><span class="hljs-template-variable">{{ vendorNotes }}</span><span class="xml">
-
-    Puoi controllare lo stato del tuo abbonamento <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>qui<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (endUserInstructions) %}</span><span class="xml">
-      </span><span class="hljs-template-variable">{{ endUserInstructions }}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-    D’ora in poi potrai utilizzare il tuo prodotto accedendo al nostro pannello di controllo.
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ dashboardUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Vai al pannello di controllo<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  Per domande relative al prodotto potrai contattare </span><span class="hljs-template-variable">{{ vendor }}</span><span class="xml"> a <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:</span></span></span><span class="hljs-template-variable">{{ vendorMail }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>questo indirizzo e-mail<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-
-  Il </span><span class="hljs-template-variable">{{ teamName }}</span><span class="xml"> sarà invece a tua disposizione per questioni relative all’erogazione del servizio
-  (ad es. abbonamento, pagamenti e problemi con la piattaforma </span><span class="hljs-template-variable">{{ storeName }}</span><span class="xml">):
-  contattaci a <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"mailto:</span></span></span><span class="hljs-template-variable">{{ supportMail }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ supportMail }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> e ti risponderemo il più velocemente possibile.
-</span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="expiring-subscription"></a><a href="#expiring-subscription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expiring subscription</h2>
+<p><strong>Template name:</strong> <code>deployCompleteForCustomer</code>/<code>deployCompleteForVendor</code></p>
+<p><strong>Recipients:</strong> <em>Customer / Vendor</em></p>
+<h3><a class="anchor" aria-hidden="true" id="subscription-amendment"></a><a href="#subscription-amendment" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Subscription amendment</h3>
+<p>When upgrade orders are subject to approval, the following email is sent to
+the vendor (or reseller, if the subscription is resold) as a notification.</p>
+<p><strong>Template name:</strong> <code>subscriptionAmendment</code></p>
+<p><strong>Recipients:</strong> <em>Vendor / Reseller</em></p>
+<h3><a class="anchor" aria-hidden="true" id="subscription-killed"></a><a href="#subscription-killed" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Subscription killed</h3>
+<p>Sent on subscription kill after payment deadline.</p>
+<p><strong>Template name:</strong> <code>invoiceKilledToPay</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="expiring-subscription"></a><a href="#expiring-subscription" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Expiring subscription</h3>
 <p>When there is an active subscription without the auto-renew that is going to
 expire, the platform will send an expiration reminder at 14, 10, 7, 4, 3, 2, 1
 day(s) before the expiration.</p>
-<p><strong>Template name:</strong> <em>subscriptionTermAlert</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (isTrial) %}</span><span class="xml">
-  this is a reminder for your trial subscription for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> that will
-  expire in </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> day(s).
-
-  Please make sure you upgrade to a paid plan before the expiration date in
-  order to continue using the application.
-</span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-  this is a reminder for your subscription for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> that will expire
-  in </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> day(s).
-
-  Please make sure you renew your subscription before the expiration date in
-  order to continue using the application.
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  You can review your subscription here:
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ subscriptionId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  and pay with your credit card.
-
-  You can set subscriptions to auto-renew to make sure you don't experience
-  any interruption in service.
-  Also, you will no longer receive these e-mails.
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (isTrial) %}</span><span class="xml">
-    ti ricordiamo che la tua prova gratuita per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> scadrà tra
-    </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> giorni(o).
-
-    Per continuare ad usare il prodotto, passa ad un piano a pagamento prima della data di scadenza.
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-    ti ricordiamo che il tuo abbonamento per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> scadrà tra
-    </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> giorni(o).
-
-    Per continuare ad usare il prodotto, rinnova il tuo abbonamento prima della data di scadenza.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (terminationMessage) %}</span><span class="xml">
-    </span><span class="hljs-template-variable">{{ terminationMessage }}</span><span class="xml">
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  Puoi vedere il tuo abbonamento qui: <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ subscriptionId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  e procedere al pagamento tramite carta di credito.
-
-  Ti ricordiamo che per non subire interruzioni nel servizio e non ricevere più queste e-mail,
-  puoi impostare il rinnovo automatico dei tuoi abbonamenti.
-</span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="invoice-issuing"></a><a href="#invoice-issuing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice issuing</h2>
-<p>As soon an invoice is issued, the end-user will receive the following email.</p>
-<p><strong>Template name:</strong> <em>customerInvoice</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (generatesInvoice) %}</span><span class="xml">
-    Your invoice for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> has just been issued.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> (invoiceDelayed) %}</span><span class="xml">
-    the consumption summary for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> has been processed and is available through your dashboard.
-    You will shortly receive the relevant invoice from our administrative department.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span>%}</span><span class="xml">
-    Your consumption summary for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> is ready.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (invoicePaid) %}</span><span class="xml">
-    It has already been automatically paid and you can <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>review it here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> (invoiceDelayed) %}</span><span class="xml">
-    Please proceed with the payment according to the agreed contractual terms.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-    Please review it and proceed with the payment.
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Pay now<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (generatesInvoice) %}</span><span class="xml">
-     La tua fattura per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> è stata appena emessa.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> (invoiceDelayed) %}</span><span class="xml">
-     la consuntivazione spese per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> è stata elaborata ed è consultabile attraverso la tua dashboard.
-     A breve riceverai la relativa fattura dal nostro reparto amministrativo.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-      Il riepilogo consumi per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> è pronto.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (generatesInvoice) %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (invoicePaid) %}</span><span class="xml">
-      È già stata automaticamente pagata e puoi visionarla <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>qui<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-      Puoi visionarla e procedere al pagamento con uno dei metodi di pagamento abilitati.
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Paga ora<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (invoicePaid) -%}</span><span class="xml">
-      Il pagamento è già stato effettuato.
-      Puoi visionarlo <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>qui<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-    </span><span class="hljs-template-tag">{% <span class="hljs-name">elseif</span> (invoiceDelayed) -%}</span><span class="xml">
-      Ti ricordiamo di procedere al pagamento entro i termini contrattuali concordati.
-    </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-      Puoi visionarlo e procedere al pagamento con uno dei metodi di pagamento abilitati.
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Paga ora<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-    </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-</span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="invoice-to-pay"></a><a href="#invoice-to-pay" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice to pay</h2>
-<p>When an invoice is still pending, an alert is sent to the end-user once a day.</p>
-<p><strong>Template name:</strong> <em>invoiceToPay</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  this is a gently reminder for your pro forma invoice
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ invoiceId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">
-  basing on our files this invoice is still to be paid.
-
-  You have </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> days left to pay the invoice.
-  After that time, your subscription will be suspended and you will no longer
-  be able to use </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">.
-
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (cardIsSaved) %}</span><span class="xml">
-  We attempted to charge your credit card, but it was declined so we couldn't
-  renew your subscription to </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">. If you have insufficient funds on
-  your card, please recharge it. Otherwise, please contact your Credit Card
-  Company or bank. If you want to change the card that is associated with your
-  account, please reply to this email to contact the support.
-
-  We will automatically attempt to charge your card again within 24 hours.
-</span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-  You can pay with your credit card <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-</span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  secondo i dati a nostra disposizione, il pagamento di <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ invoiceId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> risulta non saldato.
-
-  Hai ancora </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> giorni(o) per procedere al pagamento.
-  Trascorsi questi giorni, il tuo abbonamento sarà sospeso e non potrai più utilizzare </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">.
-
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">if</span></span> (cardIsSaved) %}</span><span class="xml">
-    Abbiamo provato ad addebitare automaticamente l'importo dovuto per l’abbonamento a </span><span class="hljs-template-variable">{{ product }}</span><span class="xml">, ma la carta è stata
-    rifiutata. Se il credito della tua carta ricaricabile è insufficiente, effettua una ricarica. Altrimenti, contatta il
-    tuo istituto bancario per capire perché la carta è stata rifiutata. Se desideri modificare la carta associata al tuo
-    account, scrivici rispondendo a questa email.
-
-    Effettueremo un nuovo tentativo di addebito tra 24 ore.
-  </span><span class="hljs-template-tag">{% <span class="hljs-name">else</span> %}</span><span class="xml">
-    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>Paga ora<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  </span><span class="hljs-template-tag">{% <span class="hljs-name"><span class="hljs-keyword">endif</span></span> %}</span><span class="xml">
-</span></code></pre>
-<h2><a class="anchor" aria-hidden="true" id="invoice-payment-overdue"></a><a href="#invoice-payment-overdue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice payment overdue</h2>
+<p><strong>Template name:</strong> <code>subscriptionTermAlert</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="invoice-issuing"></a><a href="#invoice-issuing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice issuing</h3>
+<p>As soon an invoice is issued, the customer will receive the following email.</p>
+<p><strong>Template name:</strong> <code>customerInvoice</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="invoice-to-pay"></a><a href="#invoice-to-pay" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice to pay</h3>
+<p>When an invoice is still pending, an alert is sent to the customer once a day.</p>
+<p><strong>Template name:</strong> <code>invoiceToPay</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="invoice-payment-overdue"></a><a href="#invoice-payment-overdue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice payment overdue</h3>
 <p>When the payment period expires, the subscription is put into a sleeping state:
-the end-user cannot use the application but data is still preserved.</p>
+the customer cannot use the application but data is still preserved.</p>
 <p>The email sent when the subscription is put to sleeping state is the following.</p>
-<p><strong>Template name:</strong> <em>invoiceSleepingToPay</em></p>
-<p><strong>English version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Hi </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  your subscription for </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> is currently suspended,
-  waiting for your payment of invoice
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ invoiceId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-
-  You have </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> days left before your subscription will be cancelled
-  and your application and business data definitely erased.
-
-  Please make sure you pay the invoice to continue using the application.
-
-  You can review your subscription here:
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ subscriptionId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> and pay with your
-  credit card.
-</span></code></pre>
-<p><strong>Italian version:</strong></p>
-<pre><code class="hljs css language-twig"><span class="xml">  Ciao </span><span class="hljs-template-variable">{{ fullName }}</span><span class="xml">,
-
-  il tuo abbonamento per </span><span class="hljs-template-variable">{{ product }}</span><span class="xml"> è attualmente sospeso, in attesa del pagamento di
-  <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ invoiceUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span>#</span><span class="hljs-template-variable">{{ invoiceId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>.
-
-  Hai ancora </span><span class="hljs-template-variable">{{ daysLeft }}</span><span class="xml"> giorni(o) prima che il tuo abbonamento venga disattivato e i dati inseriti vengano cancellati definitivamente.
-  Ti ricordiamo che per continuare a usare il prodotto è necessario procedere con il pagamento.
-
-  Puoi vedere il tuo abbonamento qui: <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"</span></span></span><span class="hljs-template-variable">{{ subscriptionUrl }}</span><span class="xml"><span class="hljs-tag"><span class="hljs-string">"</span>&gt;</span></span><span class="hljs-template-variable">{{ subscriptionId }}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-  e procedere al pagamento tramite carta di credito.
-</span></code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/11/2021 by Andrea Vecchi</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/clouds.html"><span class="arrow-prev">← </span><span>Cloud providers</span></a><a class="docs-next button" href="/docs/marketplace.html"><span>Marketplace customization</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#order-creation">Order creation</a></li><li><a href="#deployment-complete">Deployment complete</a></li><li><a href="#expiring-subscription">Expiring subscription</a></li><li><a href="#invoice-issuing">Invoice issuing</a></li><li><a href="#invoice-to-pay">Invoice to pay</a></li><li><a href="#invoice-payment-overdue">Invoice payment overdue</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p><strong>Template name:</strong> <code>invoiceSleepingToPay</code></p>
+<p><strong>Recipients:</strong> <em>Customer</em></p>
+<h3><a class="anchor" aria-hidden="true" id="invoice-paid"></a><a href="#invoice-paid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Invoice paid</h3>
+<p>Sent on invoice payment.</p>
+<p><strong>Template name:</strong> <code>invoicePaidParentChild</code></p>
+<p><strong>Recipients:</strong> <em>Reseller / Distributor</em></p>
+<p>Reseller does not receive this if invoice is self-billed</p>
+<h2><a class="anchor" aria-hidden="true" id="user-registration-password-recovery-and-approval"></a><a href="#user-registration-password-recovery-and-approval" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User registration, password recovery and approval</h2>
+<h3><a class="anchor" aria-hidden="true" id="registration-confirmation"></a><a href="#registration-confirmation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Registration confirmation</h3>
+<p>Sent on user registration to verify the account.</p>
+<p><strong>Template name:</strong> <code>userRegistration</code></p>
+<p><strong>Recipients:</strong> <em>User</em></p>
+<h3><a class="anchor" aria-hidden="true" id="vendor-registration"></a><a href="#vendor-registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vendor registration</h3>
+<p>Sent on vendor registration.</p>
+<p><strong>Template name:</strong> <code>vendorRegistration</code></p>
+<p><strong>Recipients:</strong> <em>Vendor / configurable</em></p>
+<h3><a class="anchor" aria-hidden="true" id="vendor-approval"></a><a href="#vendor-approval" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vendor approval</h3>
+<p>When vendor approval is enabled, the following email is sent on successful
+approval.</p>
+<p><strong>Template name:</strong> <code>vendorApproval</code></p>
+<p><strong>Recipients:</strong> <em>Vendor / configurable</em></p>
+<h3><a class="anchor" aria-hidden="true" id="customer-registration"></a><a href="#customer-registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customer registration</h3>
+<p>Sent on customer registration.</p>
+<p><strong>Template name:</strong> <code>customerRegistration</code></p>
+<p><strong>Recipients:</strong> <em>configurable</em></p>
+<h3><a class="anchor" aria-hidden="true" id="customer-update"></a><a href="#customer-update" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Customer update</h3>
+<p>Sent on customer profile update.</p>
+<p><strong>Template name:</strong> <code>customerUpdate</code></p>
+<p><strong>Recipients:</strong> <em>configurable</em></p>
+<h3><a class="anchor" aria-hidden="true" id="password-recovery-request"></a><a href="#password-recovery-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Password recovery request</h3>
+<p>Sent on password recovery request.</p>
+<p><strong>Template name:</strong> <code>userPasswordRecovery</code></p>
+<p><strong>Recipients:</strong> <em>User</em></p>
+<h3><a class="anchor" aria-hidden="true" id="password-recovery-succeeded"></a><a href="#password-recovery-succeeded" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Password recovery succeeded</h3>
+<p>Sent on password recovery completed successfully.</p>
+<p><strong>Template name:</strong> <code>userPasswordRecoveryDone</code></p>
+<p><strong>Recipients:</strong> <em>User</em></p>
+<h3><a class="anchor" aria-hidden="true" id="payment-method-save"></a><a href="#payment-method-save" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Payment method save</h3>
+<p>Sent on customer payment method save.</p>
+<p><strong>Template name:</strong> <code>customerPaymentMethodSave</code></p>
+<p><strong>Recipients:</strong> <em>configurable</em></p>
+<h3><a class="anchor" aria-hidden="true" id="delayed-payment-request"></a><a href="#delayed-payment-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delayed payment request</h3>
+<p>Sent on request for approval of delayed payment for a customer.</p>
+<p><strong>Template name:</strong> <code>customerPendingOrder</code></p>
+<p><strong>Recipients:</strong> <em>configurable</em></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/18/2021 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/clouds.html"><span class="arrow-prev">← </span><span>Cloud providers</span></a><a class="docs-next button" href="/docs/marketplace.html"><span>Marketplace customization</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#product-onboarding">Product onboarding</a><ul class="toc-headings"><li><a href="#approval-request">Approval request</a></li></ul></li><li><a href="#subscription-placement-deployment-and-lifecycle">Subscription placement, deployment and lifecycle</a><ul class="toc-headings"><li><a href="#order-creation">Order creation</a></li><li><a href="#order-approval">Order approval</a></li><li><a href="#order-rejection">Order rejection</a></li><li><a href="#order-deployment">Order deployment</a></li><li><a href="#order-undeploy">Order undeploy</a></li><li><a href="#deploy-failed">Deploy failed</a></li><li><a href="#deployment-complete">Deployment complete</a></li><li><a href="#subscription-amendment">Subscription amendment</a></li><li><a href="#subscription-killed">Subscription killed</a></li><li><a href="#expiring-subscription">Expiring subscription</a></li><li><a href="#invoice-issuing">Invoice issuing</a></li><li><a href="#invoice-to-pay">Invoice to pay</a></li><li><a href="#invoice-payment-overdue">Invoice payment overdue</a></li><li><a href="#invoice-paid">Invoice paid</a></li></ul></li><li><a href="#user-registration-password-recovery-and-approval">User registration, password recovery and approval</a><ul class="toc-headings"><li><a href="#registration-confirmation">Registration confirmation</a></li><li><a href="#vendor-registration">Vendor registration</a></li><li><a href="#vendor-approval">Vendor approval</a></li><li><a href="#customer-registration">Customer registration</a></li><li><a href="#customer-update">Customer update</a></li><li><a href="#password-recovery-request">Password recovery request</a></li><li><a href="#password-recovery-succeeded">Password recovery succeeded</a></li><li><a href="#payment-method-save">Payment method save</a></li><li><a href="#delayed-payment-request">Delayed payment request</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
