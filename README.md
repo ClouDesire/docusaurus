@@ -26,10 +26,10 @@ https://github.com/ClouDesire/feedback-widget/tree/gh-pages
 
 Documentation
 
-- HTML: https://docs.cloudesire.com/docs
-- RSS: https://docs.cloudesire.com/docs/feed.xml
+- HTML: https://docs.cloudesire.com/docs/
+- Sitemap: https://docs.cloudesire.com/docs/sitemap.xml
 
 Blog
 
-- HTML: https://docs.cloudesire.com/blog
+- HTML: https://docs.cloudesire.com/blog/
 - RSS: https://docs.cloudesire.com/blog/feed.xml
