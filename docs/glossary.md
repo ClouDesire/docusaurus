@@ -105,7 +105,7 @@ An user that can resell product on its own marketplace.
 
 ## Sandbox
 
-A particular order type used to test the provisioning process of a product.
+A particular order type used to test the provisioning process of VM or Docker product.
 
 ## Subscription
 
