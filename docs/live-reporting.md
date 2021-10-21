@@ -15,7 +15,7 @@ but rather must provide 3rd-party systems (ERP) with "billing instructions".
 
 The default functioning of Cloudesire is to _staticize_ incomes related to:
 - [Syndicated Products](syndication.md)
-- [Docker Applications](socker.md)
+- [Docker Applications](docker.md)
 - [VM products](vm.md)
 - Public Tenants (AWS/GCE/Azure)
 - Cloud Services

@@ -84,6 +84,10 @@
         "title": "Platform integrations",
         "sidebar_label": "Integrations"
       },
+      "live-reporting": {
+        "title": "Live Reporting",
+        "sidebar_label": "Live Reporting"
+      },
       "marketplace": {
         "title": "Marketplace customization",
         "sidebar_label": "Marketplace customization"
