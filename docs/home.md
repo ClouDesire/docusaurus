@@ -5,14 +5,14 @@ sidebar_label: Home
 ---
 # Platform Architecture
 
-Cloudesire is an Enterprice XaaS Marketplace Platform that allows to sell 
+Cloudesire is an Enterprise XaaS Marketplace Platform that allows to sell 
 **subscriptions** on digital products/services provided by 3rd-parties.
 
 ![cloudesire architecture](assets/platform/Cloudesire-schema-simplified.png)
 
 The platform provides:
 - customizable and brandable **Marketplace** interfaces for publishing 
-  searchable and firterable products/services catalogs
+  searchable and filterable products/services catalogs
 - a **Control Panel** to easily configure flexible **pricing models**, 
   supporting pre-paid and pay-per-use billing plans and volume discounts
 - an integrated **Monitoring Engine** for collecting, and billing, custom
@@ -25,7 +25,7 @@ The platform provides:
 - a **Customer Dashboard** to allow end-users to directly accces their 
   purchased services, submit *change-orders* on running subscriptions 
   (e.g. plan-switching, upgrades, downgrades), perform payments, browse 
-  the list orders and invoices
+  list of orders and invoices
 - a documented **REST API Layer**, fully-covering the whole platform
   business logic
   
@@ -62,7 +62,7 @@ topics:
 
 - [Platform Modules](pletform.md): a more detailed platform architecture
   diagram, with a brief description of the various modules, along with an 
-  explaination of the main concepts and a glossary. 
+  explanation of the main concepts and a glossary. 
   This could be a good starting point for your reading!
 - [Onboarding Workflow](onboarding.md): how to onboard a new product/service 
   on the Cloudesire marketplace
@@ -73,11 +73,11 @@ topics:
 - [Orders Approval Workflow](approval-workflow.md): to enable use-cases where
   each order (new purchases, change requests) needs to be approved by a 
   privileged user before it becomes effective
-- [Live Reporting](live-reportin.md): a functionality that collectis, with 
+- [Live Reporting](live-reportin.md): a functionality that collects, with 
   a configurable granularity (e.g. daily), the costs/revenues relating 
   to all the pre-paid and pay-per-use services sold through the marketplace
 - [Email Automation](emails.md): all the emails sent by the platform according to
   the supported use-cases
 - [Cloud Providers](clouds.md): list of supported public cloud providers
-- [REST API Guide](api.md): a complete guite to interact with the platform
+- [REST API Guide](api.md): a complete guide to interact with the platform
   API Layer, along with examples and useful resources
