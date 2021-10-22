@@ -7,9 +7,14 @@ A specific platform module is in charge of collecting, with a configurable
 granularity (e.g. daily), the costs/revenues relating to all the pre-paid and
 pay-per-use services sold through the marketplace.
 
-This allows a **Live Reporting** functionality, which is essential in contexts
-where the Cloudesire platform is not directly used to bill end customers,
-but rather must provide 3rd-party systems (ERP) with "billing instructions".
+This provides **benefits** for different actors:
+
+- the platform owner can invoice all the end-customers at the same time,
+  regardless their subscriptions lifecycle, by using an external Invoicing
+  Platform
+- the end-customers can leverage a **live costs previews** functionality on
+  their private Dashboards (of course, in this case, the default invoices list
+  functionality would be disabled)
 
 ## Contextualization
 
@@ -45,7 +50,7 @@ on a dedicated data-structure, named **proceeds**, which contains:
 
 as a consequence, the invoices' rows will include the sell-out prices.
 
-## Goals
+## Functioning
 
 Normally, Cloudesire directly invoices the end-customers, accordingly to their
 running subscriptions' billing-cycles. This implies that "every day" a certain
@@ -70,18 +75,6 @@ As a consequence, a typical approach to fulfill the previous use-case, it would
 be to implement an API integration between the external Invoicing Platform and
 Cloudesire in order to retrieve the *live-proceeds* collected in a certain
 timeframe (e.g. the previous month).
-
-## Functioning
-
-The previously described **live reporting** functionality provides benefits for
-different actors:
-
-- the platform owner can invoice all the end-customers at the same time,
-  regardless their subscriptions lifecycle, by using an external Invoicing
-  Platform
-- the end-customers can leverage a **live costs previews** functionality on
-  their private Dashboards (of course, in this case, the default invoices list
-  functionality would be disabled)
 
 ## Special behavior for Public Tenants and Cloud Services
 
