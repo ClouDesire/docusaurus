@@ -73,7 +73,11 @@ In the second part of the configuration section it’s possible to setup:
   * *Price list*: the marketplace shows prices but the end-users are not allowed
     to place orders
   * *Showcase*: the marketplace only lists the products in the catalog, without
-    showing prices nor allowing the end-users to place orders
+    showing prices nor allowing the end-users to place orders. Two options are
+    available:
+     * *for anonymous*: prices are hidden for not-logged users; after the 
+       log-in, prices are provided again
+     * *for all*: prices are always hidden (also for logged users)
 
 ## Social Links
 
