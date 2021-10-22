@@ -1,34 +1,38 @@
 {
   "docs": {
+    "Intro":[
+      "index"
+    ], 
     "Products Onboarding": [
-      "index",
       "onboarding",
       "onboarding-plans",
       "pricing-models",
       "onboarding-extra-resources",
       "syndication",
-      "docker",
-      "service",
-      "csp-product",
-      "api-product",
-      "vm",
       "order-validation",
-      "external-configuration-parameter-values"
+      "external-configuration-parameter-values",
+      {
+        "type": "subcategory",
+        "label": "Cloud products",
+        "ids": [
+          "docker",
+          "vm",
+          "backup"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Other products",
+        "ids": [
+          "service",
+          "csp-product",
+          "api-product"
+        ]
+      }    
     ],
     "Platform": [
       "glossary",
-      "platform",
-      {
-        "type": "subcategory",
-        "label": "Easycloud IaaS modules",
-        "ids": [
-          "modules-vcloud",
-          "modules-openstack",
-          "modules-okd"
-        ]
-      },
       "platform-users",
-      "backup",
       "billing",
       "channel",
       "live-reporting",
@@ -41,6 +45,11 @@
       "integrations",
       "opensource",
       "gdpr"
+    ],
+    "Available Integrations" : [
+      "modules-vcloud",
+      "modules-openstack",
+      "modules-okd"
     ],
     "API": [
       "api",
