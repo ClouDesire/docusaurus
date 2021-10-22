@@ -2,6 +2,7 @@
   "docs": {
     "Platform": [
       "index",
+      "platform",
       "glossary",
       "platform-users",
       "billing",
