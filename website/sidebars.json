@@ -1,6 +1,8 @@
 {
   "docs": {
-    "index",
+    "Intro":[
+      "home"
+    ], 
     "Products Onboarding": [
       "onboarding",
       "onboarding-plans",
@@ -50,7 +52,7 @@
       "modules-vcloud",
       "modules-openstack",
       "modules-okd"
-    ]
+    ],
     "API": [
       "api",
       "api-java",
