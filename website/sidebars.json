@@ -1,8 +1,23 @@
 {
   "docs": {
-    "Intro":[
-      "index"
-    ], 
+    "Platform": [
+      "index",
+      "platform",
+      "glossary",
+      "platform-users",
+      "billing",
+      "channel",
+      "live-reporting",
+      "approval-workflow",
+      "editorial-versioning",
+      "customer-cloud-credentials",
+      "clouds",
+      "emails",
+      "marketplace",
+      "integrations",
+      "opensource",
+      "gdpr"
+    ],
     "Products Onboarding": [
       "onboarding",
       "onboarding-plans",
@@ -29,22 +44,6 @@
           "api-product"
         ]
       }    
-    ],
-    "Platform": [
-      "glossary",
-      "platform-users",
-      "billing",
-      "channel",
-      "live-reporting",
-      "approval-workflow",
-      "editorial-versioning",
-      "customer-cloud-credentials",
-      "clouds",
-      "emails",
-      "marketplace",
-      "integrations",
-      "opensource",
-      "gdpr"
     ],
     "Available Integrations" : [
       "modules-vcloud",
