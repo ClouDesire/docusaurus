@@ -195,17 +195,34 @@ Cloudesire to calculate the related incomes in a certain period of time
 (_billing period_) and issue an invoice to the customer. For further details,
 take a look at the [Billing Module Section](billing.md).
 
-For each metric you can define from the application metric editing section, the
+For each metric you can define from the "metrics" editing section, the
 following information:
 
-* _Name_: a metric unique identifier;
-* _Endpoint_: must be defined in the form of a relative URL (e.g.:
+* _Extra resource name_: the name of the
+  [extra resource](onboarding-extra-resources.md) that will be **linked**, which
+  needs to be:
+  * previously created
+  * configured with *Payment Option* set as "pay as you go"
+  * configured with its specific
+    [pricing schema](onboarding-extra-resources.md#pricing-schemes)
+* _Type_: can be:
+  * *External*: when the actual values must be provided by a 3rd-party system,
+  such as the vendor's platform
+  * *Native*: when the actual values are automatically retrieved by Cloudesire
+  itself; this is valid only for special cases, like [Docker Apps](docker.md)
+  or [BareVM](vm.md) products
+* _Polling frequency_: the platform will poll your endpoint with this frequency;
+* _Custom Metric Endpoint_: must be defined in the form of a relative URL (e.g.:
   `/metric/users`);
 * _Polling frequency_: the platform will poll your endpoint with this frequency;
-* _Measuring unit_: the drop-down menu includes units like _Item, Users, Hours,
-  MB, GB, Invoice, etc;
-* _Unit-price_ (optional): price charged for each application metric value
-  received.
+* _Value type_: can be:
+  * _Gauge_: value can arbitrarily go up and down
+  * _Counter_: value always increments
+* _Function to appy_: can be:
+  * Average value over time
+  * Peak value over time
+
+Additional *custom Funtions* can be specified by the platform administrators.
 
 #### How to add Custom Metrics
 
@@ -215,52 +232,33 @@ slightly different depending on your application _provisioning type_:
 ##### Adding Custom Metrics to a Syndicated Application
 
 For [Syndicated Applications](syndication.md), you need to access to the product
-editing page and go to the "_Metric_" tab.
+editing page and go to the "_Metrics_" tab.
 
 To find the "_Metric_" tab go to your personal Control Panel. You will be able
 to access the "_Catalog_" from the menu on the left. Then you need to select the
 product you want to add custom metrics to, click on it, select "Edit" and go to
 the "_Metrics_" section.
 
-In the following picture you can see an example of a "_Metrics_" section.
-
-![Vendors Control Panel - Custom Metrics (Syndicated applications, list)](/img/docs/control_panel_custom_metrics_syndication_list.png "Vendors Control Panel - Custom Metrics (Syndicated applications, list)")
+![metrics list](assets/extra-resources/metrics-list-syndicated-new.jpg)
 
 By clicking on "_Add New Metric_", you will see a pop-up where you can set up a
 new metric.
 
-Fields are:
-
-* _Name_: the name of the metric you want to monitor
-* _Polling frequency_: the frequency you want the platform to poll your endpoint
-* _Measuring unit_: select the right measuring unit from the drop-down menu,
-  according to the metric you want to monitor
-* _Custom Endpoint_: the URL you want the platform to poll your endpoint. It
-  must be defined in the form of a relative URL (e.g. `/metric/users`)
-* _Unit Price_ (optional): the price charged for each application metric value
-  received
-* _Type_: select Counter or Gauge from the drop-down menu. A _counter_ is a
-  cumulative metric that represents a single numerical value that only ever goes
-  up, while a _gauge_ is a metric that represents a single numerical value that
-  can arbitrarily go up and down.
-
-![Vendors Control Panel - Custom Metrics (Syndicated applications, insertion)](/img/docs/control_panel_custom_metrics_syndication_insertion.png)
+![metric editing](assets/extra-resources/metrics-syndication-new.jpg)
 
 ##### Adding Custom Metrics to Docker application
 
 For [Docker applications](docker.md), you need to access to the "_Modules_"
-section (more details [here](docker.md#modules).)
+section (more details [here](docker.md#modules).) which is available on the
+left menu of your personal Control Panel.
 
-To access the "Modules" section access your personal Control Panel. You will be
-able to access the "_Modules_" from the menu on the left.
-
-Once you are in the "_Modules_" section, , select a specific _Module_ and
+Once you are in the "_Modules_" section, select a specific _Module_ and
 _Package_ (more details [here](docker.md#packages)), click on the "_Show
 Advanced_" button on the top-right of the page. Furthermore, by accessing to the
 "_Application Metrics_" tab it's possible to fill all the required fields and
 click on the "_Add_" button to finish.
 
-![Vendors Control Panel - Custom Metrics (Docker applications, insertion)](/img/docs/control_panel_custom_metrics_deployed.png)
+![metric editing - docker](assets/extra-resources/metrics-docker-new.jpg)
 
 #### How to provide "actual values" for a Custom Metric
 
