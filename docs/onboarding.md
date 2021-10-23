@@ -239,8 +239,12 @@ to access the "_Catalog_" from the menu on the left. Then you need to select the
 product you want to add custom metrics to, click on it, select "Edit" and go to
 the "_Metrics_" section.
 
+![metrics list](assets/extra-resources/metrics-list-syndicated-new.jpg)
+
 By clicking on "_Add New Metric_", you will see a pop-up where you can set up a
 new metric.
+
+![metric editing](assets/extra-resources/metrics-syndication-new.jpg)
 
 ##### Adding Custom Metrics to Docker application
 
@@ -253,6 +257,8 @@ _Package_ (more details [here](docker.md#packages)), click on the "_Show
 Advanced_" button on the top-right of the page. Furthermore, by accessing to the
 "_Application Metrics_" tab it's possible to fill all the required fields and
 click on the "_Add_" button to finish.
+
+![metric editing - docker](assets/extra-resources/metrics-docker-new.jpg)
 
 #### How to provide "actual values" for a Custom Metric
 
