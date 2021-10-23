@@ -44,13 +44,13 @@ A list of integrations are available off the shelf for supporting
 the self-provisioning and orchestration of different kind of
 IAAS/PAAS/SAAS services:
 
-- [VMware vCloud](modules-vcloud.md)
-- [OpenStack](modules-openstack.md)
-- [OpenShift OKD](modules-okd.md)
-- [Microsoft CSP](csp-product.md)
-- GCP/Azure/AWS
-- Google Workspace
-- Commvault
+- [VMware vCloud VDCs](modules-vcloud.md)
+- [OpenStack VDCs](modules-openstack.md)
+- [OpenShift OKD projects](modules-okd.md)
+- [Microsoft CSP products](csp-product.md)
+- GCP/Azure/AWS tenants
+- Google Workspace tenants
+- Commvault tenants
 - Kubernetes clusters on Hyperscalers (EKS, GKE, AKS)
 - [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
   - shared/dedicate Hyperscalers tenants
