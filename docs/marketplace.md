@@ -78,6 +78,18 @@ In the second part of the configuration section it’s possible to setup:
     * *for anonymous*: prices are hidden for non-logged users; after the
        login, prices are provided again
     * *for all*: prices are always hidden (also for logged-in users)
+* **marketplace type**: this option is only available to
+  [super-admins](platform-users.md) and mandatory to configure in
+  [parent-child](channel.md) user-cases:
+  * *Parent*: this forces the *Showcase* mode in a Parent's marketplace
+  * *Child-Distributor*: this forces the *Showcase* mode in a Distributor's
+    marketplace
+  * *Child-Reseller*: this must be set for each Reseller's marketplace
+  * *Regular*: the default behaviour of a marketplace **without** parent-child
+
+Please note that for *Child-Distributor* and *Child-Reseller* modes it's also
+required to configure their **owner**, by specifying the Company's *slug* of
+the corresponding Distributor/Reseller.
 
 ## Social Links
 
