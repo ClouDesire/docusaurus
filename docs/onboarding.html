@@ -229,59 +229,66 @@ vendors to implement <strong>pay-per-use</strong> pricing models. In fact, speci
 Cloudesire to calculate the related incomes in a certain period of time
 (<em>billing period</em>) and issue an invoice to the customer. For further details,
 take a look at the <a href="/docs/billing.html">Billing Module Section</a>.</p>
-<p>For each metric you can define from the application metric editing section, the
+<p>For each metric you can define from the &quot;metrics&quot; editing section, the
 following information:</p>
 <ul>
-<li><em>Name</em>: a metric unique identifier;</li>
-<li><em>Endpoint</em>: must be defined in the form of a relative URL (e.g.:
+<li><em>Extra resource name</em>: the name of the
+<a href="/docs/onboarding-extra-resources.html">extra resource</a> that will be <strong>linked</strong>, which
+needs to be:
+<ul>
+<li>previously created</li>
+<li>configured with <em>Payment Option</em> set as &quot;pay as you go&quot;</li>
+<li>configured with its specific
+<a href="/docs/onboarding-extra-resources.html#pricing-schemes">pricing schema</a></li>
+</ul></li>
+<li><em>Type</em>: can be:
+<ul>
+<li><em>External</em>: when the actual values must be provided by a 3rd-party system,
+such as the vendor's platform</li>
+<li><em>Native</em>: when the actual values are automatically retrieved by Cloudesire
+itself; this is valid only for special cases, like <a href="/docs/docker.html">Docker Apps</a>
+or <a href="/docs/vm.html">BareVM</a> products</li>
+</ul></li>
+<li><em>Polling frequency</em>: the platform will poll your endpoint with this frequency;</li>
+<li><em>Custom Metric Endpoint</em>: must be defined in the form of a relative URL (e.g.:
 <code>/metric/users</code>);</li>
 <li><em>Polling frequency</em>: the platform will poll your endpoint with this frequency;</li>
-<li><em>Measuring unit</em>: the drop-down menu includes units like _Item, Users, Hours,
-MB, GB, Invoice, etc;</li>
-<li><em>Unit-price</em> (optional): price charged for each application metric value
-received.</li>
+<li><em>Value type</em>: can be:
+<ul>
+<li><em>Gauge</em>: value can arbitrarily go up and down</li>
+<li><em>Counter</em>: value always increments</li>
+</ul></li>
+<li><em>Function to appy</em>: can be:
+<ul>
+<li>Average value over time</li>
+<li>Peak value over time</li>
+</ul></li>
 </ul>
+<p>Additional <em>custom Funtions</em> can be specified by the platform administrators.</p>
 <h4><a class="anchor" aria-hidden="true" id="how-to-add-custom-metrics"></a><a href="#how-to-add-custom-metrics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to add Custom Metrics</h4>
 <p>The steps to follow to a add one (or more) Custom Metric to a Product are
 slightly different depending on your application <em>provisioning type</em>:</p>
 <h5><a class="anchor" aria-hidden="true" id="adding-custom-metrics-to-a-syndicated-application"></a><a href="#adding-custom-metrics-to-a-syndicated-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding Custom Metrics to a Syndicated Application</h5>
 <p>For <a href="/docs/syndication.html">Syndicated Applications</a>, you need to access to the product
-editing page and go to the &quot;<em>Metric</em>&quot; tab.</p>
+editing page and go to the &quot;<em>Metrics</em>&quot; tab.</p>
 <p>To find the &quot;<em>Metric</em>&quot; tab go to your personal Control Panel. You will be able
 to access the &quot;<em>Catalog</em>&quot; from the menu on the left. Then you need to select the
 product you want to add custom metrics to, click on it, select &quot;Edit&quot; and go to
 the &quot;<em>Metrics</em>&quot; section.</p>
-<p>In the following picture you can see an example of a &quot;<em>Metrics</em>&quot; section.</p>
-<p><img src="/img/docs/control_panel_custom_metrics_syndication_list.png" alt="Vendors Control Panel - Custom Metrics (Syndicated applications, list)" title="Vendors Control Panel - Custom Metrics (Syndicated applications, list)"></p>
+<p><img src="/docs/assets/extra-resources/metrics-list-syndicated-new.jpg" alt="metrics list"></p>
 <p>By clicking on &quot;<em>Add New Metric</em>&quot;, you will see a pop-up where you can set up a
 new metric.</p>
-<p>Fields are:</p>
-<ul>
-<li><em>Name</em>: the name of the metric you want to monitor</li>
-<li><em>Polling frequency</em>: the frequency you want the platform to poll your endpoint</li>
-<li><em>Measuring unit</em>: select the right measuring unit from the drop-down menu,
-according to the metric you want to monitor</li>
-<li><em>Custom Endpoint</em>: the URL you want the platform to poll your endpoint. It
-must be defined in the form of a relative URL (e.g. <code>/metric/users</code>)</li>
-<li><em>Unit Price</em> (optional): the price charged for each application metric value
-received</li>
-<li><em>Type</em>: select Counter or Gauge from the drop-down menu. A <em>counter</em> is a
-cumulative metric that represents a single numerical value that only ever goes
-up, while a <em>gauge</em> is a metric that represents a single numerical value that
-can arbitrarily go up and down.</li>
-</ul>
-<p><img src="/img/docs/control_panel_custom_metrics_syndication_insertion.png" alt="Vendors Control Panel - Custom Metrics (Syndicated applications, insertion)"></p>
+<p><img src="/docs/assets/extra-resources/metrics-syndication-new.jpg" alt="metric editing"></p>
 <h5><a class="anchor" aria-hidden="true" id="adding-custom-metrics-to-docker-application"></a><a href="#adding-custom-metrics-to-docker-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Adding Custom Metrics to Docker application</h5>
 <p>For <a href="/docs/docker.html">Docker applications</a>, you need to access to the &quot;<em>Modules</em>&quot;
-section (more details <a href="/docs/docker.html#modules">here</a>.)</p>
-<p>To access the &quot;Modules&quot; section access your personal Control Panel. You will be
-able to access the &quot;<em>Modules</em>&quot; from the menu on the left.</p>
-<p>Once you are in the &quot;<em>Modules</em>&quot; section, , select a specific <em>Module</em> and
+section (more details <a href="/docs/docker.html#modules">here</a>.) which is available on the
+left menu of your personal Control Panel.</p>
+<p>Once you are in the &quot;<em>Modules</em>&quot; section, select a specific <em>Module</em> and
 <em>Package</em> (more details <a href="/docs/docker.html#packages">here</a>), click on the &quot;<em>Show
 Advanced</em>&quot; button on the top-right of the page. Furthermore, by accessing to the
 &quot;<em>Application Metrics</em>&quot; tab it's possible to fill all the required fields and
 click on the &quot;<em>Add</em>&quot; button to finish.</p>
-<p><img src="/img/docs/control_panel_custom_metrics_deployed.png" alt="Vendors Control Panel - Custom Metrics (Docker applications, insertion)"></p>
+<p><img src="/docs/assets/extra-resources/metrics-docker-new.jpg" alt="metric editing - docker"></p>
 <h4><a class="anchor" aria-hidden="true" id="how-to-provide-actual-values-for-a-custom-metric"></a><a href="#how-to-provide-actual-values-for-a-custom-metric" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>How to provide &quot;actual values&quot; for a Custom Metric</h4>
 <p>To be able to successfully use application metrics, your application should
 expose an unique URL for each application metric, reporting the value for that
@@ -420,7 +427,7 @@ to send direct messages both to the platform administrators and vendors).
 Those messages will be managed by an integrated <strong>trouble-ticketing system</strong></li>
 </ul>
 <p><img src="/img/docs/customer_dashboard_app_ifra.jpg" alt="Customer Dashboard - running application" title="Customer Dashboard - running application"></p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/17/2021 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/gdpr.html"><span class="arrow-prev">← </span><span>GDPR Compliance</span></a><a class="docs-next button" href="/docs/onboarding-plans.html"><span>Pricing Plans</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#start-the-onboarding-process">Start the onboarding process</a></li><li><a href="#marketing--sales-onboarding">Marketing &amp; Sales Onboarding</a><ul class="toc-headings"><li><a href="#product-descriptions">Product descriptions</a></li><li><a href="#general-information">General Information</a></li><li><a href="#end-user-information">End-User Information</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#terms-and-conditions-tc">Terms and conditions (T&amp;C)</a></li><li><a href="#plans">Plans</a></li><li><a href="#metrics">Metrics</a></li></ul></li><li><a href="#technical-onboarding">Technical Onboarding</a><ul class="toc-headings"><li><a href="#onboarding-for-syndicated-and-docker-applications">Onboarding for Syndicated and Docker applications</a></li><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#configuration-parameters">Configuration Parameters</a></li><li><a href="#order-validation">Order validation</a></li></ul></li><li><a href="#demo-marketplace-for-tests">Demo marketplace for tests</a><ul class="toc-headings"><li><a href="#using-the-staging-marketplace">Using the Staging Marketplace</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/23/2021 by Andrea Vecchi</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/gdpr.html"><span class="arrow-prev">← </span><span>GDPR Compliance</span></a><a class="docs-next button" href="/docs/onboarding-plans.html"><span>Pricing Plans</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#start-the-onboarding-process">Start the onboarding process</a></li><li><a href="#marketing--sales-onboarding">Marketing &amp; Sales Onboarding</a><ul class="toc-headings"><li><a href="#product-descriptions">Product descriptions</a></li><li><a href="#general-information">General Information</a></li><li><a href="#end-user-information">End-User Information</a></li><li><a href="#visuals">Visuals</a></li><li><a href="#terms-and-conditions-tc">Terms and conditions (T&amp;C)</a></li><li><a href="#plans">Plans</a></li><li><a href="#metrics">Metrics</a></li></ul></li><li><a href="#technical-onboarding">Technical Onboarding</a><ul class="toc-headings"><li><a href="#onboarding-for-syndicated-and-docker-applications">Onboarding for Syndicated and Docker applications</a></li><li><a href="#application-metrics">Application Metrics</a></li><li><a href="#configuration-parameters">Configuration Parameters</a></li><li><a href="#order-validation">Order validation</a></li></ul></li><li><a href="#demo-marketplace-for-tests">Demo marketplace for tests</a><ul class="toc-headings"><li><a href="#using-the-staging-marketplace">Using the Staging Marketplace</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
