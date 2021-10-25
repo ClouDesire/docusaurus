@@ -246,7 +246,7 @@ new metric.
 
 ![metric editing](assets/extra-resources/metrics-syndication-new.jpg)
 
-##### Adding Custom Metrics to Docker application
+##### Adding Custom Metrics to a Docker Application
 
 For [Docker applications](docker.md), you need to access to the "_Modules_"
 section (more details [here](docker.md#modules).) which is available on the
@@ -262,9 +262,11 @@ click on the "_Add_" button to finish.
 
 #### How to provide "actual values" for a Custom Metric
 
-To be able to successfully use application metrics, your application should
-expose an unique URL for each application metric, reporting the value for that
-metric.
+In case of **Docker applications**, to be able to successfully use
+application metrics, your application should expose an unique URL
+for each application metric, reporting the *actual value* for that
+metric, which will be accordingly related to a specific Docker
+app's running **instance**.
 
 The format of the metric data should be in JSON format:
 
@@ -274,6 +276,14 @@ The format of the metric data should be in JSON format:
     "value": 3.0
 }
 ```
+
+In case of **Syndicated applications**, the functioning is quite
+similar: it's required to expose an URL returning the same JSON result,
+by taking care of retrieving the **subscription ID** from the HTTP
+header of the Cloudesire's request.
+In this way, the URL will return the right *actual value* of the
+metric for each specific **tenant**.
+More details are available [here](syndication.md#application-metrics).
 
 ### Configuration Parameters
 
