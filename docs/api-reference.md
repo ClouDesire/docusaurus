@@ -5,7 +5,7 @@ sidebar_label: API Reference
 ---
 
 We use [Springfox](https://github.com/springfox/springfox) to autogenerate
-[Swagger](https://swagger.io/) definitions for the Cloudesire API.
+[Swagger](https://docs.cloudesire.com/redoc/billing.html) definitions for the Cloudesire API.
 
 API are grouped into different areas:
 
