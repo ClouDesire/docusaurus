@@ -78,13 +78,13 @@ the top right at any time.
 * **Tags** (keyword list): tags will help customers to quickly understand
   your product. Please, add only relevant tags, in order to avoid too many tags on
   the product page.
-* **Long and Short Description** (text): describe your product to customers. 
-  Focus on product distinctive points for your ideal customers. You will
-  have later dedicated sections to add benefits, features, details of each
-  available plan, terms and conditions and privacy policy. Avoid too long
-  descriptions (that no-one is going to read entirely). Bullets can be very useful
-  to avoid long paragraphs. This is the first thing customers will read about
-  your product, so please make sure it's clear, catchy and always without typos.
+* **Long and Short Description** (text): describe your product to customers.
+  Focus on product distinctive points for your ideal customers. You will have
+  later dedicated sections to add benefits, features, details of each available
+  plan, terms and conditions and privacy policy. Avoid too long descriptions
+  (that no-one is going to read entirely). Bullets can be very useful to avoid
+  long paragraphs. This is the first thing customers will read about your
+  product, so please make sure it's clear, catchy and always without typos.
 
 > When localization support is enabled on the marketplace, you can see a flag
 > around each localized field to switch languages. **Remember to fill all
@@ -225,7 +225,7 @@ Additional *custom Funtions* can be specified by the platform administrators.
 
 #### How to add Custom Metrics
 
-Follow the step below to a add one (or more) Custom Metric to a Product. 
+Follow the step below to a add one (or more) Custom Metric to a Product.
 Could be slightly different belong your application _provisioning type_:
 
 ##### Adding Custom Metrics to a Syndicated Application
