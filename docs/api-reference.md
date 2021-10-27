@@ -11,9 +11,9 @@ API are grouped into different areas:
 
 * [Billing API](/redoc/billing.html): Subscription, Invoice, Order and many resources useful when developing a Syndicated application
 * [Catalog API](/redoc/catalog.html): Product, ProductVersion, ExtraResource... Useful when mass import of products into the catalog
-* [Channel API](/redoc/channel.html): Distributor and Reseller price lists, Useful for mass import if price lists
+* [Channel API](/redoc/channel.html): Distributor and Reseller price lists, Useful for mass import of price lists
 * [Cloud Apps API](/redoc/cloud-apps.html): for Docker and BareVM products
-* [Cloud providers API](/redoc/cloud-providers.html): to manage the available Cloud Providers, Instance Types, and their pricing.
+* [Cloud providers API](/redoc/cloud-providers.html): to manage the available Cloud Providers, Instance Types, and their pricing
 * [Users API](/redoc/users.html): users and companies
 * [Admin API](/redoc/admin.html): administrative API, mainly for maintenance purposes
 * [Environment API](/redoc/environment.html): the configuration of the entire platform
