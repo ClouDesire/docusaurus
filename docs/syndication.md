@@ -678,6 +678,7 @@ Content-Type: application/json
 [
     {
         "description": "First row",
+        "identifier": "first",
         "price": {
             "price": "100.0000",
             "currency": "EUR"
@@ -687,10 +688,12 @@ Content-Type: application/json
     },
     {
         "description": "Second row",
+        "identifier": "second",
         "price": {
             "price": "23.4567",
             "currency": "EUR"
         },
+        "purchased": "2021-11-19T00:00:00Z",
         "quantity": 1.0,
         "unit": "un"
     }
@@ -700,6 +703,12 @@ Content-Type: application/json
 HTTP/1.1 201 Created
 Location: https://backend.cloudesire.com/api/invoice/10000
 ```
+
+When the custom billing is used to
+[storicize live reports](live-reporting.html#functioning), the `purchased`
+field marks the right limit of the storicization for that `identifier`.
+
+When missing, the `purchased` field defaults to "now".
 
 #### Currency conversion
 
