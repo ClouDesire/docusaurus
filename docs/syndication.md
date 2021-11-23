@@ -535,6 +535,27 @@ to explain what happened (e.g. sorry, email address is already in use)
 
 There a few features that can be used alongside the basic integration.
 
+### Configuration Parameters
+
+If you specified some [configuration parameters](onboarding.md#configuration-parameters)
+for your application, then you can retrieve the values entered by the
+end-customer by invoking the Subscription's API.
+
+```http
+GET /api/subscription/{id} HTTP/1.1
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    ...
+    "configurationParameters": {
+        "configurationParameter/123": "custom_value"
+    },
+    ...
+}
+```
+
 ### Application Metrics
 
 Even for syndicated applications, you can define and bills
