@@ -49,6 +49,8 @@ IAAS/PAAS/SAAS services:
 - [OpenShift OKD projects](modules-okd.md)
 - [Microsoft CSP products](csp-product.md)
 - [AWS, Azure, Google Cloud tenants](modules-public-tenants.md)
+- [API products](api-product.md)
+- [Generic Services](service.md)
 - Google Workspace tenants
 - Commvault tenants
 - Kubernetes clusters on Hyperscalers (EKS, GKE, AKS)
