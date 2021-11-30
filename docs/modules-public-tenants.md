@@ -14,7 +14,7 @@ Google Cloud.
 
 ## How it works
 
-For each supported cloud provider, there is a platform module that manages the
+For each supported cloud provider, a specific platform module manages the
 life-cycle of the public cloud tenants tied with the Cloudesire subscriptions.
 
 When a customer orders a public tenant, a new account on the specific Cloud
