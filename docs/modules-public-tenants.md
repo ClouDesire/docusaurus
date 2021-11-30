@@ -5,7 +5,7 @@ sidebar_label: Public Cloud Tenants
 ---
 
 The Cloudesire platform enables AWS, Azure or Google Cloud partners to
-automatically provision and bills public cloud services to their customers.
+automatically provision and bill public cloud services to their customers.
 
 ## Prerequisites
 
@@ -14,14 +14,14 @@ Google Cloud.
 
 ## How it works
 
-For each supported cloud providers, there is a platform module that manage the
+For each supported cloud provider, there is a platform module that manages the
 life-cycle of the public cloud tenants tied with the Cloudesire subscriptions.
 
 When a customer orders a public tenant, a new account on the specific Cloud
-Provider get provisioned, and the admin credentials, necessary for the
+Provider gets provisioned, and the admin credentials, necessary for the
 first setup of the account, are provided to the customer.
 
-The Cloudesire platform automatically create `Cloud Credentials` associated to
+The Cloudesire platform automatically creates `Cloud Credentials` associated to
 the newly created account, enabling the future provisioning of BareVM or
 Kubernetes cluster.
 
@@ -29,14 +29,14 @@ Credentials are securely stored on a [Vault by
 HashiCorp](https://www.vaultproject.io/) instance integrated into the Cloudesire
 platform.
 
-Overnight, the `costs-collector` module harvest from the cloud providers billing
+Overnight, the `costs-collector` module harvests from the cloud providers billing
 API the latest costs associated for each active tenant. Since the costs on
 billing API are made available without a timing guarantee, the daily harvesting
 is actually performed on a moving window of multiple days, refreshing existing
-billing data with the most updated one.
+billing data with the most updated ones.
 
-The harvested costs are immediately pushed as live proceeds and made available
+The harvested costs are immediately pushed as *live proceeds* and made available
 to the customers in their *Cost Analysis* section.
 
-Each month, invoices are emitted automatically covering all the costs spent by
+Each month, invoices are issued automatically, covering all the costs incurredfixes by
 the customer in the current billing period.
