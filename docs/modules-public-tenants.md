@@ -30,7 +30,10 @@ HashiCorp](https://www.vaultproject.io/) instance integrated into the Cloudesire
 platform.
 
 Overnight, the `costs-collector` module harvest from the cloud providers billing
-API the costs associated for each active tenant.
+API the latest costs associated for each active tenant. Since the costs on
+billing API are made available without a timing guarantee, the daily harvesting
+is actually performed on a moving window of multiple days, refreshing existing
+billing data with the most updated one.
 
 The harvested costs are immediately pushed as live proceeds and made available
 to the customers in their *Cost Analysis* section.
