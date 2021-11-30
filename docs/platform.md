@@ -26,7 +26,7 @@ The main components of the Cloudesire platform can be summarized as follows:
 
 ## Backend
 
-Cloudesire Backend is made by the following modules:
+Cloudesire backend is composed by the following modules:
 
 * **CMW**: the core of Cloudesire, handles most of the business logic related to
   the catalog, customers, subscriptions and billing. CMW also includes the
@@ -61,21 +61,9 @@ Cloudesire Backend is made by the following modules:
 * **Vivace**: API to calculate a background color from an image (used
   for products logo into the marketplace)
 
-### Syndication modules
+### Available integrations
 
-* [**Openstack-connector**](modules-openstack.md): enables the provisioning of
-  new Openstack tenants (users and project) upon customer order placement, in
-  prepaid and pay-as-you-go mode.
-* [**vCloud-connector**](modules-vcloud.md): enables the provisioning of new VDC
-  (organizations) upon customer order placement on VMware vCloud Director 9.5
-  infrastructure, in prepaid and pay-as-you-go mode.
-* [**OKD-connector**](modules-okd.md): enables the provisioning of OKD projects
-  upon customer order placement on OKD 3.11 dedicated infrastructure, in prepaid
-  and pay-as-you-go mode.
-* **Microsoft-connector**: allows the integration of Cloudesire with Microsoft
-  CSP to enable the selling of Microsoft licenses and Azure resources
-* **Kong-connector**: allows the integration of Cloudesire with Kong API
-  management solution to enable selling of API products into the marketplace
+ There is a list of [available integrations](index.md#available-integrations).
 
 ### Deployer workflow
 

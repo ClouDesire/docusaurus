@@ -43,12 +43,13 @@
           "csp-product",
           "api-product"
         ]
-      }    
+      }
     ],
-    "Available Integrations" : [
+    "Available Integrations": [
       "modules-vcloud",
       "modules-openstack",
-      "modules-okd"
+      "modules-okd",
+      "modules-public-tenants"
     ],
     "API": [
       "api",

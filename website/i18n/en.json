@@ -100,6 +100,10 @@
         "title": "Selling and provisioning of OpenStack tenants",
         "sidebar_label": "OpenStack VDC integration"
       },
+      "modules-public-tenants": {
+        "title": "Tenants on Public Cloud providers",
+        "sidebar_label": "Public Cloud Tenants"
+      },
       "modules-vcloud": {
         "title": "Selling and provisioning of VMware vCloud Director tenants",
         "sidebar_label": "vCloud VDC integration"
@@ -157,8 +161,9 @@
       "Back to cloudesire.com": "Back to cloudesire.com"
     },
     "categories": {
-      "Products Onboarding": "Products Onboarding",
       "Platform": "Platform",
+      "Products Onboarding": "Products Onboarding",
+      "Available Integrations": "Available Integrations",
       "API": "API"
     }
   },
