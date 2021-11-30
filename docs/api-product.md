@@ -5,7 +5,7 @@ sidebar_label: API as a Service
 ---
 
 API calls reselling is available via [Kong API Management Solution](https://konghq.com/kong/).
-  
+
 This section describes how to onboard and start selling an API-based
 product with metered billing based on the actual usage, i.e. HTTP calls
 executed.
