@@ -23,13 +23,13 @@
       "onboarding-plans",
       "pricing-models",
       "onboarding-extra-resources",
-      "syndication",
       "order-validation",
       "external-configuration-parameter-values",
       {
         "type": "subcategory",
-        "label": "Native product types",
+        "label": "Product types",
         "ids": [
+          "syndication",
           "docker",
           "vm",
           "service"
