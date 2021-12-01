@@ -36,10 +36,6 @@ between different product types.
   is disabled by default, and can be enabled for specific environments.
 * **API Product** to onboard a new [API-based service](api-product.md).
 
-Other kind of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
-Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
-**syndicated integrations**.
-
 Additional product types can be enabled, but they can be created and assigned
 to a vendor only by an administrator:
 
@@ -48,9 +44,13 @@ to a vendor only by an administrator:
 * **Bare VM** to onboard a new bare Virtual-Machine with SSH access for
   customers, see the [VM product page](vm.md).
 
+Other kinds of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
+Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
+**syndicated integrations**.
+
 Please note that except for Syndicated Products, all other product types are
 typically disabled by default, but they can be activated on your Cloudesire
-instance, via environment-configuration.
+instance by configuring its environment accordingly.
 
 A complete list of available integrations is provided
 [here](index.md#available-integrations).
