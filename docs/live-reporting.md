@@ -87,7 +87,7 @@ pay-per-use [extra-resources](onboarding-extra-resources.md).
 
 In fact, once a public tenant is provisioned for an end-customer, the platform
 periodically collects all the costs related to his subscription by invoking the
-hyperscaler billing/metering engine.
+Public Cloud Provider billing/metering engine.
 
 Therefore, for a certain tenant, the platform will collect **several types of
 costs**, related to disparate kinds of services which was actually used by the
@@ -104,8 +104,8 @@ and Cloud Services is quite simple: a **generic cost-placeholder** can be
 configured on the product-plans, and all the following markups configurations
 can be done on it.
 
-During the periodical **cost-collection** task, Cloudesire invokes the
-hyperscalers APIs and retrieves:
+During the periodical **cost-collection** task, Cloudesire invokes the Public
+Cloud Provider APIs and retrieves:
 
 - the resource/service **hourly unit-cost** -> this will be mapped as "vendor
   cost" in the Cloudesire data-model
