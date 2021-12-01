@@ -45,11 +45,11 @@ The first step of the wizard involves the following things:
 The platform supports selling three different type of products:
 
 * **License** type is for license-based products on the [XLS price
-  list] published every month by Microsoft (e.g. [Office 365 Business]).
+  list] published every month by Microsoft (e.g. Office 365).
 * **Azure marketplace** type is for VM-based products available on the [Azure
-  marketplace] by third-party vendors (e.g. [Cassandra]).
+  marketplace] by third-party vendors.
 * **ARM template** type is a deployment of one or more VM provisioned from a
-  [JSON descriptor] (e.g. [Wordpress]).
+  [JSON descriptor].
 
 On the second step of the wizard, the selected CSP product offer id or azure
 metadata is showed to confirm that the selected product is correct, and it's
@@ -69,9 +69,6 @@ To enable trial support for a specific plan, an integration metadata entry shoul
 configured with key `partnerCenterTrialOfferId` and as value the preferred `offer-id`
 of type TRIAL for the same product type.
 
-[Office 365 Business]: https://demo.cloudesire.com/1280/office-automation/office-365
-[Cassandra]: https://demo.cloudesire.com/1727/office-automation/cassandra-on-azure
-[Wordpress]: https://demo.cloudesire.com/1248/cms/wordpress-on-azure-arm-template
 [XLS price list]: https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing
 [Azure marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps
 [JSON descriptor]: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates
