@@ -23,9 +23,7 @@
       "onboarding-plans",
       "pricing-models",
       "onboarding-extra-resources",
-      "order-validation",
-      "external-configuration-parameter-values",
-      {
+       {
         "type": "subcategory",
         "label": "Product types",
         "ids": [
@@ -34,7 +32,9 @@
           "vm",
           "service"
         ]
-      }
+      },
+      "order-validation",
+      "external-configuration-parameter-values"
     ],
     "Available Integrations": [
       "modules-vcloud",
