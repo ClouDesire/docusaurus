@@ -33,7 +33,9 @@ between different product types:
   [Docker image](docker.md)
 * **Service Product** to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user
-* **API Product** to onboard a new [API-based service](api-product.md)
+* **API Product** to onboard a new [API-based service](api-product.md). This
+  option is available only on environments where the *API calls reselling*
+  capability via Kong is enabeld
 
 Additional product types exists, but it can be created and assigned to a vendor
 only by an administrator:
