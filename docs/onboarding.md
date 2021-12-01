@@ -25,7 +25,7 @@ Select _"Catalog"_ from the left menu, then select _"Products"_ and click on the
 **Create New Product** button in the upper right hand corner.
 
 You will see a pop-up in which you can insert your product name and choose
-between different product types. 
+between different product types.
 
 * **Syndicated Product** to start onboarding a new product in
   [Syndication](syndication.md) mode.
