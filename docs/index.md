@@ -55,8 +55,8 @@ IAAS/PAAS/SAAS services:
 - Google Workspace tenants
 - Commvault tenants
 - [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
-  - shared/dedicate Hyperscalers tenants
-  - shared/dedicate private VMWare/OpenStack tenants
+  - customers Public Cloud tenants
+  - customers Private Cloud (VMware/OpenStack) tenants
 
 ## Main Topics
 
