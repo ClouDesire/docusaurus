@@ -20,10 +20,7 @@
     ],
     "Products Onboarding": [
       "onboarding",
-      "onboarding-plans",
-      "pricing-models",
-      "onboarding-extra-resources",
-       {
+      {
         "type": "subcategory",
         "label": "Product types",
         "ids": [
@@ -33,6 +30,9 @@
           "service"
         ]
       },
+      "onboarding-plans",
+      "pricing-models",
+      "onboarding-extra-resources",
       "order-validation",
       "external-configuration-parameter-values"
     ],
