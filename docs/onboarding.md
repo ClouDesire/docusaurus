@@ -28,22 +28,34 @@ You will see a pop-up in which you can insert your product name and choose
 between different product types:
 
 * **Syndicated Product** to start onboarding a new product in
-  [Syndication](syndication.md) mode
+  [Syndication](syndication.md) mode. This option is typically enabled by default
+  on any environment.
 * **Docker Application** to start onboarding a new product using one or more
-  [Docker image](docker.md)
+  [Docker image](docker.md). This option is disabled by default, and can be
+  enabled on specific environments.
 * **Service Product** to start [onboarding a new service](service.md), that is
-  not tied to the distribution of an application to the end-user
+  not tied to the distribution of an application to the end-user. This option
+  is disabled by default, and can be enabled for specific environments.
 * **API Product** to onboard a new [API-based service](api-product.md). This
-  option is available only on environments where the *API calls reselling*
-  capability via Kong is enabeld
+  option is disabled by default, and can be enabled by activating the
+  [Kong API Management](https://konghq.com/) connector.
+  
+Other kind of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
+Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
+**syndicated integrations**. The availability of those products can be defined
+on the platform's environment configuration level.
 
-Additional product types exists, but it can be created and assigned to a vendor
-only by an administrator:
+Depending on the specific Cloudesire environment configuratuon, additional product
+types can be enabled, but they can be created and assigned to a vendor only by an
+administrator:
 
 * **CSP Product** to onboard a new Microsoft/Azure product, see the [CSP
   Product](csp-product.md) section;
 * **Bare VM** to onboard a new bare Virtual-Machine with SSH access for
   customers, see the [VM product page](vm.md).
+  
+A complete list of available integrations is provided
+[here](index.md#available-integrations).
 
 ## Marketing & Sales Onboarding
 
