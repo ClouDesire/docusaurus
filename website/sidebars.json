@@ -48,7 +48,8 @@
       "modules-vcloud",
       "modules-openstack",
       "modules-okd",
-      "modules-public-tenants"
+      "modules-public-tenants",
+      "modules-kubernetes"
     ],
     "API": [
       "api",
