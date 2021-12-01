@@ -31,8 +31,7 @@
         "label": "Cloud products",
         "ids": [
           "docker",
-          "vm",
-          "backup"
+          "vm"
         ]
       },
       {
