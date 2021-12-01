@@ -21,9 +21,10 @@ When a customer orders a public tenant, a new account on the specific Cloud
 Provider gets provisioned, and the admin credentials, necessary for the
 first setup of the account, are provided to the customer.
 
-The Cloudesire platform automatically creates `Cloud Credentials` associated to
-the newly created account, enabling the future provisioning of BareVM or
-Kubernetes cluster.
+The Cloudesire platform automatically creates [Cloud
+Credentials](customer-cloud-credentials.md) associated to the newly created
+account, enabling the future provisioning of [BareVM](vm.md) or Kubernetes
+cluster.
 
 Credentials are securely stored on a [Vault by
 HashiCorp](https://www.vaultproject.io/) instance integrated into the Cloudesire

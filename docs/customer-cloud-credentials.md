@@ -4,9 +4,13 @@ title: Customer Cloud Credentials
 sidebar_label: Customer Cloud Credentials
 ---
 
-Customers can provide credentials to provision [bare vm](vm.md) and [docker
-applications](docker.md) on their own public [cloud provider
-account](clouds.md).
+Customers can provide their own credentials to provision [Bare VM](vm.md) and
+[Docker applications](docker.md) on the [supported](clouds.md) Public Cloud
+providers.
+
+For [Public](modules-public-tenants.md) and Private Cloud Tenants ([VCloud],
+[Openstack]) managed by the platform, the Cloud Credentials
+are automatically provisioned upon tenant activation.
 
 ## AWS
 
@@ -109,3 +113,5 @@ Subscription ID= wwwwww
   * Oauth endpoint field value= `https://login.microsoftonline.com/Directory (tenant) ID/oauth2/token`
   * Save
 
+[VCloud]: modules-vcloud.md
+[Openstack]: modules-openstack.md
