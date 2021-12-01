@@ -11,7 +11,7 @@ A *bare VM* is a Virtual-Machine running on any of the supported cloud
 providers, inside a [Public Cloud tenant] or a Private Cloud ([VCloud],
 [Openstack]) previously activated by the customer, with an operating system
 chosen during the order phase, without any particular software installed on it
-(bare VM).
+(a bare system).
 
 End-users get **administrative access** to the VM (SSH for Linux, RDP for
 Windows) and they are responsible for the management and maintenance of it. For
