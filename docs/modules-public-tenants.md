@@ -24,7 +24,7 @@ first setup of the account, are provided to the customer.
 The Cloudesire platform automatically creates [Cloud
 Credentials](customer-cloud-credentials.md) associated to the newly created
 account, enabling the future provisioning of [BareVM](vm.md) or
-[Kubernetes](modules-kubernetes.md).
+[Kubernetes clusters](modules-kubernetes.md).
 
 Credentials are securely stored on a [Vault by
 HashiCorp](https://www.vaultproject.io/) instance integrated into the Cloudesire
