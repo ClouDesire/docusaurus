@@ -50,6 +50,7 @@ IAAS/PAAS/SAAS services:
 - [Microsoft CSP products](csp-product.md)
 - [AWS, Azure, Google Cloud tenants](modules-public-tenants.md)
 - [Kubernetes clusters](modules-kubernetes.md) on Public Cloud providers
+- [Helm charts](modules-helm.md) on Kubernetes clusters
 - [API products](api-product.md)
 - [Generic Services](service.md)
 - Google Workspace tenants
