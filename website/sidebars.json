@@ -43,6 +43,7 @@
       "modules-okd",
       "modules-public-tenants",
       "modules-kubernetes",
+      "modules-helm",
       "csp-product",
       "api-product"
     ],
