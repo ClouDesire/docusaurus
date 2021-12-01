@@ -31,7 +31,7 @@ Before supporting Public Cloud tenants, the platform supported the provisioning
 of Bare VM inside a shared tenant managed by the platform owner.
 
 Now this feature has been deprecated in favor of the more secure and flexible
-tenants approach describe before.
+tenants approach described before.
 
 ### Example
 
