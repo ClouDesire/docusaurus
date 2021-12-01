@@ -11,5 +11,5 @@ credential](customer-cloud-credentials.md) requirement.
 In this scenario, the customers must have a cloud credential already associated
 with their account, compatible with the cloud service they want to acquire.
 
-As an example, the Kubernetes clusters is an implementation of a Cloud Service.
-
+As an example, the [Kubernetes clusters](modules-kubernetes) is an
+implementation of a Cloud Service.

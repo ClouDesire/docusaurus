@@ -29,6 +29,9 @@ between different product types.
 
 * **Syndicated Product** to start onboarding a new product in
   [Syndication](syndication.md) mode.
+* [Cloud Service](type-cloud-service.md) to start onboarding a new product in
+  Syndication mode that requires existing credentials to operate (e.g. Cloud
+  Provider, Kubernetes cluster)
 * **Docker Application** to start onboarding a new product using one or more
   [Docker image](docker.md).
 * **Service Product** to start [onboarding a new service](service.md), that is
