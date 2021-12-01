@@ -38,6 +38,6 @@ tenants approach describe before.
 An example Bare VM product is available on the [demo marketplace].
 
 [demo marketplace]: https://demo-mcp.cloudeng.it/223918/compute/private-bare-vm
-[Public Cloud tenant]: (modules-public-tenants.md)
-[VCloud]: (modules-vcloud.md)
-[Openstack]: (modules-openstack.md)
+[Public Cloud tenant]: modules-public-tenants.md
+[VCloud]: modules-vcloud.md
+[Openstack]: modules-openstack.md
