@@ -39,7 +39,7 @@ between different product types:
 * **API Product** to onboard a new [API-based service](api-product.md). This
   option is disabled by default, and can be enabled by activating the
   [Kong API Management](https://konghq.com/) connector.
-  
+
 Other kind of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
 Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
 **syndicated integrations**. The availability of those products can be defined
@@ -53,7 +53,7 @@ administrator:
   Product](csp-product.md) section;
 * **Bare VM** to onboard a new bare Virtual-Machine with SSH access for
   customers, see the [VM product page](vm.md).
-  
+
 A complete list of available integrations is provided
 [here](index.md#available-integrations).
 
