@@ -25,23 +25,35 @@ Select _"Catalog"_ from the left menu, then select _"Products"_ and click on the
 **Create New Product** button in the upper right hand corner.
 
 You will see a pop-up in which you can insert your product name and choose
-between different product types:
+between different product types.
 
 * **Syndicated Product** to start onboarding a new product in
-  [Syndication](syndication.md) mode
+  [Syndication](syndication.md) mode.
 * **Docker Application** to start onboarding a new product using one or more
-  [Docker image](docker.md)
+  [Docker image](docker.md).
 * **Service Product** to start [onboarding a new service](service.md), that is
-  not tied to the distribution of an application to the end-user
-* **API Product** to onboard a new [API-based service](api-product.md)
+  not tied to the distribution of an application to the end-user. This option
+  is disabled by default, and can be enabled for specific environments.
+* **API Product** to onboard a new [API-based service](api-product.md).
 
-Additional product types exists, but it can be created and assigned to a vendor
-only by an administrator:
+Additional product types can be enabled, but they can be created and assigned
+to a vendor only by an administrator:
 
 * **CSP Product** to onboard a new Microsoft/Azure product, see the [CSP
   Product](csp-product.md) section;
 * **Bare VM** to onboard a new bare Virtual-Machine with SSH access for
   customers, see the [VM product page](vm.md).
+
+Other kinds of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
+Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
+**syndicated integrations**.
+
+Please note that except for Syndicated Products, all other product types are
+typically disabled by default, but they can be activated on your Cloudesire
+instance by configuring its environment accordingly.
+
+A complete list of available integrations is provided
+[here](index.md#available-integrations).
 
 ## Marketing & Sales Onboarding
 
