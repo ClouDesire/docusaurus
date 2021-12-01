@@ -136,7 +136,7 @@ the <em>classical</em> pricing model based on license-prices plus pre-paid and/o
 pay-per-use <a href="/docs/onboarding-extra-resources.html">extra-resources</a>.</p>
 <p>In fact, once a public tenant is provisioned for an end-customer, the platform
 periodically collects all the costs related to his subscription by invoking the
-hyperscaler billing/metering engine.</p>
+Public Cloud Provider billing/metering engine.</p>
 <p>Therefore, for a certain tenant, the platform will collect <strong>several types of
 costs</strong>, related to disparate kinds of services which was actually used by the
 end-customers during the last billing period (e.g. compute instances, storage,
@@ -149,8 +149,8 @@ chain.</p>
 and Cloud Services is quite simple: a <strong>generic cost-placeholder</strong> can be
 configured on the product-plans, and all the following markups configurations
 can be done on it.</p>
-<p>During the periodical <strong>cost-collection</strong> task, Cloudesire invokes the
-hyperscalers APIs and retrieves:</p>
+<p>During the periodical <strong>cost-collection</strong> task, Cloudesire invokes the Public
+Cloud Provider APIs and retrieves:</p>
 <ul>
 <li>the resource/service <strong>hourly unit-cost</strong> -&gt; this will be mapped as &quot;vendor
 cost&quot; in the Cloudesire data-model</li>
@@ -168,7 +168,7 @@ the above mentioned <em>generic cost-placeholder</em>, will be applied starting
 from the wholesale price (namely the <strong>optionally discounted</strong> street
 prices) down to the chain, in order to calculate the final sell-out
 prices to be applied to the end-customers.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/22/2021 by Andrea Vecchi</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/channel.html"><span class="arrow-prev">← </span><span>Channel management</span></a><a class="docs-next button" href="/docs/approval-workflow.html"><span>Approval Workflow</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contextualization">Contextualization</a></li><li><a href="#functioning">Functioning</a></li><li><a href="#special-behavior-for-public-tenants-and-cloud-services">Special behavior for Public Tenants and Cloud Services</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/1/2021 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/channel.html"><span class="arrow-prev">← </span><span>Channel management</span></a><a class="docs-next button" href="/docs/approval-workflow.html"><span>Approval Workflow</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#contextualization">Contextualization</a></li><li><a href="#functioning">Functioning</a></li><li><a href="#special-behavior-for-public-tenants-and-cloud-services">Special behavior for Public Tenants and Cloud Services</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
