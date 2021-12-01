@@ -20,36 +20,30 @@
     ],
     "Products Onboarding": [
       "onboarding",
+      {
+        "type": "subcategory",
+        "label": "Product types",
+        "ids": [
+          "syndication",
+          "docker",
+          "vm",
+          "service"
+        ]
+      },
       "onboarding-plans",
       "pricing-models",
       "onboarding-extra-resources",
-      "syndication",
       "order-validation",
-      "external-configuration-parameter-values",
-      {
-        "type": "subcategory",
-        "label": "Cloud products",
-        "ids": [
-          "docker",
-          "vm"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Other products",
-        "ids": [
-          "service",
-          "csp-product",
-          "api-product"
-        ]
-      }
+      "external-configuration-parameter-values"
     ],
     "Available Integrations": [
       "modules-vcloud",
       "modules-openstack",
       "modules-okd",
       "modules-public-tenants",
-      "modules-kubernetes"
+      "modules-kubernetes",
+      "csp-product",
+      "api-product"
     ],
     "API": [
       "api",
