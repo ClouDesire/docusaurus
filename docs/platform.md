@@ -38,8 +38,7 @@ Cloudesire backend is composed by the following modules:
   and bare VMs. The deployment process is described [in the next
   chapter](platform.md#deployer-workflow). It leverages
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
-  [Public and Private cloud providers](clouds.md). It also handles [backup and
-  restore](backup.md) processes.
+  [Public and Private cloud providers](clouds.md).
 * **Monitor**: an API that exposes system and application for statistics and
   real-time graphs. Data store is based on the open-source [Prometheus
   monitoring](https://prometheus.io/) system. System metrics are collected via
