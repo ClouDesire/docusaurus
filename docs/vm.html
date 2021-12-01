@@ -65,21 +65,29 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/vm.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Bare Virtual-Machines products onboarding</h1></header><article><div><span><p>This section describes how <strong>Bare Virtual-Machines</strong> marketplace products
 works.</p>
 <p>A <em>bare VM</em> is a Virtual-Machine running on any of the supported cloud
-providers, with an operating system selected by the end-user during the order
-phase, without any software installed on it.</p>
-<p>End-users get <strong>SSH root access</strong> to the VM and they are responsible for the
-management and maintenance of it. For the SSH connection,  <strong>public key
-authentication</strong> is mandatory and end-users need to provide their own public key
-before buying a VM product.</p>
+providers, inside a <a href="/docs/modules-public-tenants.html">Public Cloud tenant</a> or a Private Cloud (<a href="/docs/modules-vcloud.html">VCloud</a>,
+<a href="/docs/modules-openstack.html">Openstack</a>) previously activated by the customer, with an operating system
+chosen during the order phase, without any particular software installed on it
+(a bare system).</p>
+<p>End-users get <strong>administrative access</strong> to the VM (SSH for Linux, RDP for
+Windows) and they are responsible for the management and maintenance of it. For
+Linux VM,  <strong>public key authentication</strong> is mandatory and customers need to
+provide their own public key before ordering a new Bare VM.</p>
+<p>A new SSH keypair can be automatically generated during the marketplace
+checkout process.</p>
 <blockquote>
-<p>A new SSH keypair can be automatically generated during the marketplace checkout process.</p>
-</blockquote>
 <p>ISVs cannot create a new VM product by themselves: an administrator must
 create a new product and assign it in order to be manageable by a particular
 ISV.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="classic-bare-vm"></a><a href="#classic-bare-vm" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Classic Bare VM</h2>
+<p>Before supporting Public Cloud tenants, the platform supported the provisioning
+of Bare VM inside a shared tenant managed by the platform owner.</p>
+<p>Now this feature has been deprecated in favor of the more secure and flexible
+tenants approach described before.</p>
 <h3><a class="anchor" aria-hidden="true" id="example"></a><a href="#example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Example</h3>
-<p>An example Bare VM product is available on the <a href="https://demo.cloudesire.com/2102/iaas/bare-vm">demo marketplace</a>.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/8/2018 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docker.html"><span class="arrow-prev">← </span><span>Docker applications</span></a><a class="docs-next button" href="/docs/service.html"><span>Services</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+<p>An example Bare VM product is available on the <a href="https://demo-mcp.cloudeng.it/223918/compute/private-bare-vm">demo marketplace</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/1/2021 by Giovanni Toraldo</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/docker.html"><span class="arrow-prev">← </span><span>Docker applications</span></a><a class="docs-next button" href="/docs/service.html"><span>Services</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#classic-bare-vm">Classic Bare VM</a><ul class="toc-headings"><li><a href="#example">Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2021 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
