@@ -28,19 +28,11 @@
       "external-configuration-parameter-values",
       {
         "type": "subcategory",
-        "label": "Cloud products",
+        "label": "Native product types",
         "ids": [
           "docker",
-          "vm"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Other products",
-        "ids": [
-          "service",
-          "csp-product",
-          "api-product"
+          "vm",
+          "service"
         ]
       }
     ],
@@ -49,7 +41,9 @@
       "modules-openstack",
       "modules-okd",
       "modules-public-tenants",
-      "modules-kubernetes"
+      "modules-kubernetes",
+      "csp-product",
+      "api-product"
     ],
     "API": [
       "api",
