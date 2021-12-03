@@ -1,7 +1,7 @@
 ---
 id: modules-google-workspace
 title: Selling and provisioning of Google Workspace licenses
-sidebar_label: Google Workspace integration
+sidebar_label: Google Workspace
 ---
 
 Cloudesire platform enables the selling of [Google Workspace] licenses for
