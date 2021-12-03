@@ -33,16 +33,12 @@ The mandatory integration metadata are:
 ### Customize individual chart values
 
 Any values that need to be passed to the chart, can be provided with a `helm-`
-prefix and a json payload, e.g.:
+prefix and a [SpEL] payload, e.g.:
 
-Key:
-
-```
-helm-apprepository
-```
-
-Value:
+Key: `helm-apprepository` Value:
 
 ```json
 {"initialRepos": {"name": "custom-repo", "url": "https://chartmuseum.mycompany.com/"}}
 ```
+
+[SpEl]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions-language-ref
