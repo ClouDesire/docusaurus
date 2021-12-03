@@ -1,7 +1,7 @@
 ---
 id: modules-helm
 title: Selling and provisioning of Helm applications on Kubernetes clusters
-sidebar_label: Helm apps integration
+sidebar_label: Helm charts
 ---
 
 > This feature is ALPHA and is subject to changes
