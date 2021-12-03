@@ -24,11 +24,15 @@ The product must be also configured to require `Cloud Credentials` and
 The information of which chart needs to be installed on the cluster, should be
 set as an `Integration Metadata` on the Product Plans (one or more).
 
-The mandatory integration metadata are:
+The available integration metadatas are:
 
 * `helm-chart`: the name of the chart, e.g. `bitnami/kubeapps`
 * `helm-load-balancer-setup`: if set to any value, a load balancer is
   automatically enabled after the chart is successfully installed
+* `helm-service-account-setup`: iIf the application supports the authentication
+  through a service account token, you can force the creation of the service
+  account that will be automatically provided to the customer in the end-user
+  instructions
 
 ### Customize individual chart values
 
