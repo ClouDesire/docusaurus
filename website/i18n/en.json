@@ -29,10 +29,6 @@
         "title": "Orders Approval Workflow",
         "sidebar_label": "Approval Workflow"
       },
-      "backup": {
-        "title": "VM backups",
-        "sidebar_label": "Backups"
-      },
       "billing": {
         "title": "Billing Features",
         "sidebar_label": "Billing"
@@ -92,6 +88,14 @@
         "title": "Marketplace customization",
         "sidebar_label": "Marketplace customization"
       },
+      "modules-helm": {
+        "title": "Selling and provisioning of applications distributed as Helm Charts on Kubernetes clusters",
+        "sidebar_label": "Helm charts"
+      },
+      "modules-kubernetes": {
+        "title": "Selling and provisioning of managed Kubernetes clusters on Public Cloud providers",
+        "sidebar_label": "Kubernetes as a service"
+      },
       "modules-okd": {
         "title": "Selling and provisioning of OKD projects",
         "sidebar_label": "OKD projects integration"
@@ -147,6 +151,10 @@
       "syndication": {
         "title": "Onboarding of syndicated applications",
         "sidebar_label": "Syndicated applications"
+      },
+      "type-cloud-service": {
+        "title": "Onboarding of Cloud Services",
+        "sidebar_label": "Cloud Services"
       },
       "vm": {
         "title": "Bare Virtual-Machines products onboarding",

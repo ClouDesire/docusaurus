@@ -1,6 +1,6 @@
 ---
 id: modules-helm
-title: Selling and provisioning of Helm applications on Kubernetes clusters
+title: Selling and provisioning of applications distributed as Helm Charts on Kubernetes clusters
 sidebar_label: Helm charts
 ---
 
@@ -10,6 +10,8 @@ Cloudesire platform enables the selling of applications packaged as
 [Helm charts](https://helm.sh/) on top of [Kubernetes clusters](modules-kubernetes.md),
 managed by the platform or not, leveraging the customer [Cloud Credentials](customer-cloud-credentials.md)
 and the Cloud Service capabilities of the platform.
+
+## Product configuration
 
 ISVs can onboard a new Helm chart as a new Product using [Cloud Service](type-cloud-service.md)
 as a product type and providing as a syndication endpoint, the endpoint to the
@@ -22,23 +24,25 @@ The product must be also configured to require `Cloud Credentials` and
 The information of which chart needs to be installed on the cluster, should be
 set as an `Integration Metadata` on the Product Plans (one or more).
 
-The mandatory integration metadata are:
+The available integration metadatas are:
 
 * `helm-chart`: the name of the chart, e.g. `bitnami/kubeapps`
 * `helm-load-balancer-setup`: if set to any value, a load balancer is
   automatically enabled after the chart is successfully installed
+* `helm-service-account-setup`: if the application supports the authentication
+  through a service account token, you can force the creation of the service
+  account that will be automatically provided to the customer in the end-user
+  instructions
+
+### Customize individual chart values
 
 Any values that need to be passed to the chart, can be provided with a `helm-`
-prefix and a json payload, e.g.:
+prefix and a [SpEL] payload, e.g.:
 
-Key:
-
-```
-helm-apprepository
-```
-
-Value:
+Key: `helm-apprepository` Value:
 
 ```json
 {"initialRepos": {"name": "custom-repo", "url": "https://chartmuseum.mycompany.com/"}}
 ```
+
+[SpEl]: https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#expressions-language-ref
