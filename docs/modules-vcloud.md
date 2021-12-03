@@ -1,7 +1,7 @@
 ---
 id: modules-vcloud
 title: Selling and provisioning of VMware vCloud Director tenants
-sidebar_label: vCloud VDC integration
+sidebar_label: vCloud VDC
 ---
 
 Cloudesire platform enables selling of vCloud director tenants via a native API
