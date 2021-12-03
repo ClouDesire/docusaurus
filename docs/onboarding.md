@@ -25,7 +25,7 @@ Select _"Catalog"_ from the left menu, then select _"Products"_ and click on the
 **Create New Product** button in the upper right hand corner.
 
 You will see a pop-up in which you can insert your product name and choose
-between different product types.
+between different **product types**.
 
 * **Syndicated Product** to start onboarding a new product in
   [Syndication](syndication.md) mode.
@@ -39,7 +39,7 @@ between different product types.
   is disabled by default, and can be enabled for specific environments.
 * **API Product** to onboard a new [API-based service](api-product.md).
 
-Additional product types can be enabled, but they can be created and assigned
+Additional *product types* can be enabled, but they can be created and assigned
 to a vendor only by an administrator:
 
 * **CSP Product** to onboard a new Microsoft/Azure product, see the [CSP
@@ -47,13 +47,21 @@ to a vendor only by an administrator:
 * **Bare VM** to onboard a new bare Virtual-Machine with SSH access for
   customers, see the [VM product page](vm.md).
 
-Other kinds of products (e.g. VMware vCloud / OpenStack VDCs, AWS, Azure, Google
-Cloud tenants, Commvault tenants, etc.) can be provisioned via already-existing
-**syndicated integrations**.
+Other kinds of products can be provisioned via already-existing
+**syndicated integrations** (by specifying the related *syndication
+endpoint* to be asked to the platform administrator):
 
-Please note that except for Syndicated Products, all other product types are
-typically disabled by default, but they can be activated on your Cloudesire
-instance by configuring its environment accordingly.
+* [VMware vCloud VDC](modules-vcloud.md)
+* [OpenStack VDC](modules-openstack.md)
+* [OKD Projects](modules-okd.md)
+* [Public Cloud Tenants](modules-public-tenants.md)
+* [Kubernetes as a Service](modules-kubernetes.md)
+* [Helm Charts](modules-helm.md)
+* [Google Workspace](modules-google-workspace.md)
+
+> Please note that except for Syndicated Products, all other product types are
+> typically _disabled by default_ but they can be activated on your Cloudesire
+> instance by configuring its environment accordingly.
 
 A complete list of available integrations is provided
 [here](index.md#available-integrations).
