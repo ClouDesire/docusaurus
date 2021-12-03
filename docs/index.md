@@ -53,7 +53,7 @@ IAAS/PAAS/SAAS services:
 - [Helm charts](modules-helm.md) on Kubernetes clusters
 - [API products](api-product.md)
 - [Generic Services](service.md)
-- Google Workspace tenants
+- [Google Workspace tenants](modules-google-workspace.md)
 - Commvault tenants
 - [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
   - customers Public Cloud tenants
