@@ -8,7 +8,7 @@ Cloudesire platform enables the selling of [Google Workspace] licenses for
 platform owners that are Google Partners.
 
 Product plans are prepaid and are mapped to the actual standard Workspace
-products available from Google, each one with a different configurabile billing
+products available from Google, each one with a different configurable billing
 plan.
 
 ## Product configuration
@@ -18,13 +18,21 @@ ISVs can onboard a new Google Workspace as a new Product using
 endpoint, the endpoint to the `gsuite-connector` module installed on the platform
 (ask to the platform administrators).
 
-For each configured plan, ISVs should provide the following `Integration
-Metadata`:
+For each configured plan, ISVs should provide:
 
-* [gsuite_sku_id]: the numerical id of the product to provision
-* [gsuite_plan_name]: the reseller billing terms with Google
-* [gsuite_renewal_type]: to specify what happens to the subscription at the
-  subscription expiring
+* Extra resources:
+  * *Number of licences (seats)* with identifier `gsuitenumberofseats`, prepaid.
+
+* Configuration parameters:
+  * *User email* with code `gsuite_customer_email_code`: the administrator
+    account that will be activated. The domain must be owned by the customer.
+    Must be configured via regex validation equal to `^(.+)@(\S+)$`
+
+* Integration Metadata:
+  * [gsuite_sku_id]: the numerical id of the product to provision
+  * [gsuite_plan_name]: the reseller billing terms with Google
+  * [gsuite_renewal_type]: to specify what happens to the subscription at the
+    subscription expiring
 
 ## Customer experience
 
