@@ -54,7 +54,7 @@ endpoint* to be asked to the platform administrator):
 * [VMware vCloud VDC](modules-vcloud.md)
 * [OpenStack VDC](modules-openstack.md)
 * [OKD Projects](modules-okd.md)
-* Public Cloud Tenants](modules-public-tenants.md)
+* [Public Cloud Tenants](modules-public-tenants.md)
 * [Kubernetes as a Service](modules-kubernetes.md)
 * [Helm Charts](modules-helm.md)
 * [Google Workspace](modules-google-workspace.md)
