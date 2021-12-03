@@ -11,6 +11,8 @@ Cloudesire platform enables the selling of applications packaged as
 managed by the platform or not, leveraging the customer [Cloud Credentials](customer-cloud-credentials.md)
 and the Cloud Service capabilities of the platform.
 
+## Product configuration
+
 ISVs can onboard a new Helm chart as a new Product using [Cloud Service](type-cloud-service.md)
 as a product type and providing as a syndication endpoint, the endpoint to the
 `helm-connector` module installed on the platform (ask to the platform
@@ -27,6 +29,8 @@ The mandatory integration metadata are:
 * `helm-chart`: the name of the chart, e.g. `bitnami/kubeapps`
 * `helm-load-balancer-setup`: if set to any value, a load balancer is
   automatically enabled after the chart is successfully installed
+
+### Customize individual chart values
 
 Any values that need to be passed to the chart, can be provided with a `helm-`
 prefix and a json payload, e.g.:
