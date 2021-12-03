@@ -1,7 +1,7 @@
 ---
 id: modules-openstack
 title: Selling and provisioning of OpenStack tenants
-sidebar_label: OpenStack VDC integration
+sidebar_label: OpenStack VDC
 ---
 
 Cloudesire platform enables selling of OpenStack tenants via a native API

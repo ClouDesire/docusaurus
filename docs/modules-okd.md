@@ -1,7 +1,7 @@
 ---
 id: modules-okd
 title: Selling and provisioning of OKD projects
-sidebar_label: OKD projects integration
+sidebar_label: OKD projects
 ---
 
 Cloudesire platform enables selling of OKD projects via a native API
