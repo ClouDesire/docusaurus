@@ -44,6 +44,7 @@
       "modules-public-tenants",
       "modules-kubernetes",
       "modules-helm",
+      "modules-google-workspace",
       "csp-product",
       "api-product"
     ],
