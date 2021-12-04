@@ -49,22 +49,13 @@ to a vendor only by an administrator:
 
 Other kinds of products can be provisioned via already-existing
 **syndicated integrations** (by specifying the related *syndication
-endpoint* to be asked to the platform administrator):
-
-* [VMware vCloud VDC](modules-vcloud.md)
-* [OpenStack VDC](modules-openstack.md)
-* [OKD Projects](modules-okd.md)
-* [Public Cloud Tenants](modules-public-tenants.md)
-* [Kubernetes as a Service](modules-kubernetes.md)
-* [Helm Charts](modules-helm.md)
-* [Google Workspace](modules-google-workspace.md)
+endpoint* to be asked to the platform administrators). The complete
+list of those kind of integrations is avaliabe
+[here](index.md#products-available-via-syndicated-connectors).
 
 > Please note that except for Syndicated Products, all other product types are
 > typically _disabled by default_ but they can be activated on your Cloudesire
 > instance by configuring its environment accordingly.
-
-A complete list of available integrations is provided
-[here](index.md#available-integrations).
 
 ## Marketing & Sales Onboarding
 
