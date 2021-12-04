@@ -40,24 +40,37 @@ subscriptions.
 
 ## Available Integrations
 
-A list of integrations are available off the shelf for supporting
-the self-provisioning and orchestration of different kind of
-IAAS/PAAS/SAAS services:
+Below follows a list of integrations available _off the shelf_ for
+supporting the self-provisioning and orchestration of different kinds
+of IAAS/PAAS/SAAS services.
+
+### Native "product types"
+
+The [onboarding interfaces](onboarding.md) provide specific "produt types"
+(and dedicated configuration workflows) for each of the following options:
+
+- [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
+  - customers Public Cloud tenants
+  - customers Private Cloud (VMware/OpenStack) tenants
+- [API products](api-product.md)
+- [Cloud Services](type-cloud-service.md)
+- [Generic Services](service.md)
+- [Microsoft CSP products](csp-product.md)
+
+### Products available via "Syndicated Connectors"
+
+On the [onboarding interfaces](onboarding.md) it's required to select
+_"Syndicated"_ as _product type_ and then to specify the related
+"connector syndication endpoint" (to be asked to the platform administrators):
 
 - [VMware vCloud VDCs](modules-vcloud.md)
 - [OpenStack VDCs](modules-openstack.md)
 - [OpenShift OKD projects](modules-okd.md)
-- [Microsoft CSP products](csp-product.md)
 - [AWS, Azure, Google Cloud tenants](modules-public-tenants.md)
 - [Kubernetes clusters](modules-kubernetes.md) on Public Cloud providers
 - [Helm charts](modules-helm.md) on Kubernetes clusters
-- [API products](api-product.md)
-- [Generic Services](service.md)
 - [Google Workspace tenants](modules-google-workspace.md)
 - Commvault tenants
-- [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
-  - customers Public Cloud tenants
-  - customers Private Cloud (VMware/OpenStack) tenants
 
 ## Main Topics
 
