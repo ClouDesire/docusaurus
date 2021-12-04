@@ -42,7 +42,7 @@ subscriptions.
 
 A list of integrations are available off the shelf for supporting
 the self-provisioning and orchestration of different kind of
-IAAS/PAAS/SAAS services:
+IAAS/PAAS/SAAS services.
 
 ### Native "product types"
 
@@ -61,7 +61,7 @@ The [onboarding interfaces](onboarding.md) provide specific "produt types"
 
 On the [onboarding interfaces](onboarding.md) it's required to select
 _"Syndicated"_ as _product type_ and then to specify the related
-"connector syndication endpoint" (to be asked to the platform administrators).
+"connector syndication endpoint" (to be asked to the platform administrators):
 
 - [VMware vCloud VDCs](modules-vcloud.md)
 - [OpenStack VDCs](modules-openstack.md)
