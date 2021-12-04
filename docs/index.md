@@ -40,9 +40,9 @@ subscriptions.
 
 ## Available Integrations
 
-A list of integrations are available off the shelf for supporting
-the self-provisioning and orchestration of different kind of
-IAAS/PAAS/SAAS services.
+Below follows a list of integrations available _off the shelf_ for
+supporting the self-provisioning and orchestration of different kinds
+of IAAS/PAAS/SAAS services.
 
 ### Native "product types"
 
