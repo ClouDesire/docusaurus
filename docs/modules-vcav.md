@@ -31,5 +31,5 @@ following identifiers:
 An example VMware vCloud Availability product is available on our [demo
 marketplace].
 
-[VMware vCloud Availability]: https://www.vmware.com/products/cloud-director-availability.html
+[VMware vCloud Availability]: https://docs.vmware.com/en/VMware-Cloud-Director-Availability/index.html
 [demo marketplace]: https://demo-mcp.cloudeng.it/192805/data/availability-protect
