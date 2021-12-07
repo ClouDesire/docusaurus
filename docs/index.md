@@ -67,6 +67,7 @@ _"Syndicated"_ as _product type_ and then to specify the related
 - [OpenStack VDCs](modules-openstack.md)
 - [OpenShift OKD projects](modules-okd.md)
 - [Commvault tenants](modules-commvault.md)
+- [vCloud Availability tenants](modules-vcav.md)
 - [AWS, Azure, Google Cloud tenants](modules-public-tenants.md)
 - [Kubernetes clusters](modules-kubernetes.md) on Public Cloud providers
 - [Helm charts](modules-helm.md) on Kubernetes clusters

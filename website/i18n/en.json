@@ -116,6 +116,10 @@
         "title": "Tenants on Public Cloud providers",
         "sidebar_label": "Public Cloud Tenants"
       },
+      "modules-vcav": {
+        "title": "Selling and provisioning of VMware vCloud Availability tenants",
+        "sidebar_label": "vCloud Availability tenants"
+      },
       "modules-vcloud": {
         "title": "Selling and provisioning of VMware vCloud Director tenants",
         "sidebar_label": "vCloud VDC"
