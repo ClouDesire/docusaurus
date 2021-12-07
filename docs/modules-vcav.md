@@ -4,7 +4,7 @@ title: Selling and provisioning of VMware vCloud Availability tenants
 sidebar_label: vCloud Availability tenants
 ---
 
-Cloudesire platform enables selling of [VMware vCloud Availability] tenants via a
+Cloudesire platform enables selling of VMware vCloud Availability tenants via a
 native API integration.
 
 The customer would have access to the native vCloud Availability UI to configure
@@ -31,5 +31,4 @@ following identifiers:
 An example VMware vCloud Availability product is available on our [demo
 marketplace].
 
-[VMware vCloud Availability]: https://docs.vmware.com/en/VMware-Cloud-Director-Availability/index.html
 [demo marketplace]: https://demo-mcp.cloudeng.it/192805/data/availability-protect
