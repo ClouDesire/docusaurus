@@ -41,6 +41,7 @@
       "modules-vcloud",
       "modules-openstack",
       "modules-okd",
+      "modules-commvault",
       "modules-public-tenants",
       "modules-kubernetes",
       "modules-helm",

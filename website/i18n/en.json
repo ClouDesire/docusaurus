@@ -88,6 +88,14 @@
         "title": "Marketplace customization",
         "sidebar_label": "Marketplace customization"
       },
+      "modules-commvault": {
+        "title": "Selling and provisioning of tenants on Commvault",
+        "sidebar_label": "Commvault tenants"
+      },
+      "modules-google-workspace": {
+        "title": "Selling and provisioning of Google Workspace licenses",
+        "sidebar_label": "Google Workspace"
+      },
       "modules-helm": {
         "title": "Selling and provisioning of applications distributed as Helm Charts on Kubernetes clusters",
         "sidebar_label": "Helm charts"
@@ -98,11 +106,11 @@
       },
       "modules-okd": {
         "title": "Selling and provisioning of OKD projects",
-        "sidebar_label": "OKD projects integration"
+        "sidebar_label": "OKD projects"
       },
       "modules-openstack": {
         "title": "Selling and provisioning of OpenStack tenants",
-        "sidebar_label": "OpenStack VDC integration"
+        "sidebar_label": "OpenStack VDC"
       },
       "modules-public-tenants": {
         "title": "Tenants on Public Cloud providers",
@@ -110,7 +118,7 @@
       },
       "modules-vcloud": {
         "title": "Selling and provisioning of VMware vCloud Director tenants",
-        "sidebar_label": "vCloud VDC integration"
+        "sidebar_label": "vCloud VDC"
       },
       "onboarding-extra-resources": {
         "title": "Extra Resources",
