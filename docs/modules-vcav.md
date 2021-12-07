@@ -17,7 +17,7 @@ product type and providing as a syndication endpoint, the endpoint to the
 `vcav-connector` module installed on the platform (ask to the platform
 administrators).
 
-vThe plan should includes 2 _pay as you go_ billing items, each one with the
+The plan should include 2 _pay as you go_ billing items, each one with the
 following identifiers:
 
 * `cdprometheusmetricreplications`: the number of protected VM (with an active
@@ -31,4 +31,5 @@ following identifiers:
 An example VMware vCloud Availability product is available on our [demo
 marketplace].
 
+[Syndicated]: syndication.md
 [demo marketplace]: https://demo-mcp.cloudeng.it/192805/data/availability-protect
