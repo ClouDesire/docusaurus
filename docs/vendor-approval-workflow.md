@@ -14,13 +14,13 @@ vendors account and products.
 
 ## Account approval workflow
 
-For every new vendor account creation on the marketplace, the Admin received an
+For every new vendor account creation on the marketplace, the Admin receives an
 email with a summary of all the account details that the vendor provided.
 
-Until an Admin approve the account, the vendor cannot login to the control
+Until an Admin approves the account, the vendor cannot login to the control
 panel.
 
-Once an Admin approve the account, the vendor will receive an email notification
+Once an Admin approved the account, the vendor will receive an email notification
 and can login to the control panel to start onboarding new products.
 
 ## Product approval workflow
