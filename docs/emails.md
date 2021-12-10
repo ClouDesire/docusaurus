@@ -1,7 +1,7 @@
 ---
 id: emails
 title: Automatic emails sent by the platform
-sidebar_label: Email Automation
+sidebar_label: Email automation
 ---
 
 The Cloudesire platform automatically delivers email notifications under certain

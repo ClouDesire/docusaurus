@@ -1,7 +1,7 @@
 ---
 id: live-reporting
 title: Live Reporting
-sidebar_label: Live Reporting
+sidebar_label: Live reporting
 ---
 A specific platform module is in charge of collecting, with a configurable
 granularity (e.g. daily), the costs/revenues relating to all the pre-paid and

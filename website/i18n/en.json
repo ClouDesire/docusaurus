@@ -25,10 +25,6 @@
         "title": "Cloudesire REST API Introduction",
         "sidebar_label": "REST API Introduction"
       },
-      "approval-workflow": {
-        "title": "Orders Approval Workflow",
-        "sidebar_label": "Approval Workflow"
-      },
       "billing": {
         "title": "Billing Features",
         "sidebar_label": "Billing"
@@ -52,10 +48,6 @@
       "docker": {
         "title": "Docker applications onboarding",
         "sidebar_label": "Docker applications"
-      },
-      "editorial-versioning": {
-        "title": "Editorial Contents Versioning & Approval Workflow",
-        "sidebar_label": "Editorial Versioning & Workflow"
       },
       "emails": {
         "title": "Automatic emails sent by the platform",
@@ -140,6 +132,10 @@
         "title": "Open Source projects",
         "sidebar_label": "Open Source"
       },
+      "order-approval-workflow": {
+        "title": "Orders Approval Workflow",
+        "sidebar_label": "Orders approval workflow"
+      },
       "order-validation": {
         "title": "Order validation",
         "sidebar_label": "Order validation"
@@ -167,6 +163,10 @@
       "type-cloud-service": {
         "title": "Onboarding of Cloud Services",
         "sidebar_label": "Cloud Services"
+      },
+      "vendor-approval-workflow": {
+        "title": "Vendor accounts and Products Approval Workflow",
+        "sidebar_label": "Vendor approval workflow"
       },
       "vm": {
         "title": "Bare Virtual-Machines products onboarding",
