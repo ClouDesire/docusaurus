@@ -1,7 +1,7 @@
 ---
-id: approval-workflow
+id: order-approval-workflow
 title: Orders Approval Workflow
-sidebar_label: Approval Workflow
+sidebar_label: Orders approval workflow
 ---
 In some specific use-cases, for example for products/services not supporting
 self-provisioning (e.g. "server management") an **order approval workflow**
@@ -21,7 +21,7 @@ The specific functioning slightly changes depending on the presence of the
   - the Customer places orders on a **Parent Marketplace**
   - the Auditor is the **Vendor**
 
-## Functioning Details
+## How it works
 
 Once a new order is placed by the Customer on a (reseller/parent) marketplace:
 

@@ -88,7 +88,7 @@ topics:
   the marketplace, in order to make it compliant with your brand-identity
 - [Channel Management](channel.md): how to configure a *Parent-Child Commerce
   Chain*, enabling multiple Distributors and Resellers
-- [Orders Approval Workflow](approval-workflow.md): to enable use-cases where
+- [Orders Approval Workflow](order-approval-workflow.md): to enable use-cases where
   each order (new purchases, change requests) needs to be approved by a
   privileged user before it becomes effective
 - [Live Reporting](live-reporting.md): a functionality that collects, with
