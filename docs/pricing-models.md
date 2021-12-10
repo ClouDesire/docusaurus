@@ -1,7 +1,7 @@
 ---
 id: pricing-models
 title: SaaS pricing models explained
-sidebar_label: Pricing Models
+sidebar_label: Pricing models
 ---
 
 In this section we will focus on pricing models. The Pricing Model configuration
