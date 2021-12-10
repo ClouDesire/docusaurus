@@ -1,7 +1,7 @@
 ---
 id: vendor-approval-workflow
 title: Vendor accounts and Products Approval Workflow
-sidebar_label: Vendor approval workflow
+sidebar_label: Vendors approval workflow
 ---
 
 In some specific use-cases, for example when a platform owner would like to open
