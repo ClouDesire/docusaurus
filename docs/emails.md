@@ -29,7 +29,7 @@ Once the customer orders a product the following email is sent.
 
 **Recipients:** *Customer / Vendor / Reseller / Distributor*
 
-### Order approval
+### Order request
 
 If orders are subject to approval, the following email is sent on order request.
 
