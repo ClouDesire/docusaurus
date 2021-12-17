@@ -23,8 +23,8 @@ The default functioning of Cloudesire is to _staticize_ incomes related to:
 - [Syndicated Products](syndication.md)
 - [Docker Applications](docker.md)
 - [VM products](vm.md)
-- Public Tenants (AWS/GCE/Azure)
-- Cloud Services
+- [Public Cloud Tenants (AWS/GCE/Azure)](modules-public-tenants.md)
+- [Cloud Services](type-cloud-service.md)
 
 on a dedicated data-structure, named **proceeds**, which contains:
 
