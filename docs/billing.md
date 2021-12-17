@@ -24,7 +24,7 @@ Each generated invoice contains the following elements:
   that vary depending on real usage of the application
 * [_extra-resources_](glossary.md#extra-resources): costs for prepaid resources
 * [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
-  cloud infrastructure used for Docker applications.
+  cloud infrastructure used in BareVM products.
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
@@ -170,37 +170,32 @@ all the prices and the savings.
 
 ![bundle on the marketplace](/img/docs/bundles-6.jpg)
 
-## Cloud resources pricing
-
-Pricing for the VM associated with Docker applications is automatically managed
-by the platform and vendors should not worry about it.
-
 ### Prepaid Bandwidth
 
-* vendors can specify a certain amount of prepaid bandwidth for each Docker
+* vendors can specify a certain amount of prepaid bandwidth for each BareVM
   application they sell in the Cloudesire Marketplace
 * Cloudesire manages the bandwidth price for each supported cloud provider
-* if the vendor doesn't set a specific prepaid bandwidth amount to his Docker
+* if the vendor doesn't set a specific prepaid bandwidth amount to his BareVM
   application, Cloudesire associates a default prepaid bandwidth package (eg.
   10GB)
-* during the Docker application lifetime, if the bandwidth usage exceeds the 90%
+* during the BareVM application lifetime, if the bandwidth usage exceeds the 90%
   of the established limit, Cloudesire sends an e-mail notification to the
   customer, asking for a **bandwidth upgrade order**. If the customer doesn't
   execute the upgrade, Cloudesire prevents access to the application.
 
 ### Disk Space
 
-* vendors can specify a certain amount of disk space for each Docker application
+* vendors can specify a certain amount of disk space for each BareVM product
   they sell in the Cloudesire Marketplace
 * Cloudesire manages the disk space price for each supported cloud provider
-* during the Docker application lifetime, if disk space usage exceeds 90% of the
-  established limit, Cloudesire sends a notification email to the customer,
+* during the BareVM subscription lifetime, if disk space usage exceeds 90% of
+  the established limit, Cloudesire sends a notification email to the customer,
   asking for a **disk upgrade order**.
 
 ### Backup
 
 * Cloudesire allows customers and vendors to request a **backup** to generate a
-  snapshot of the data disk of an active docker product subscription.
+  snapshot of the data disk of an active BareVM subscription.
 * Customer receives an invoice with an amount that depends on the size and on the
   number of backups taken.
 * A backup can be deleted and resources are freed.

@@ -172,8 +172,8 @@ Price List.
 You can use the **Assign** button in this page to add a new product to the
 current Price List, when no row is currently selected.
 
-If the product sold is a [Docker application](docker.md) then the
-**cloud-pricing** tab is also shown when editing the Sell-in.
+If the product sold is a Bare VM then the **cloud-pricing** tab is also shown
+when editing the Sell-in.
 
 The Distributor can also access to a real-time sales reports:
 
@@ -217,8 +217,8 @@ Each defined Sell-out inside a Price List, can be modified from Sell-out section
 You can use the **Delete** button to remove the selected Plan from the current
 Price List.
 
-If the product sold is a [Docker application](docker.md) then the
-**cloud-pricing** tab is also shown when editing the Sell-out.
+If the product sold is a Bare VM then the **cloud-pricing** tab is also shown
+when editing the Sell-out.
 
 The Reseller can also access to a real-time sales reports:
 

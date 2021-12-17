@@ -79,11 +79,6 @@ the following information: duration (e.g. 1 year, 6 months, etc.), nominee (the
 customer name), purchased application name, order type (can be _normal_,
 _trial_, _sandbox_, _upgrade_, _renewal_), total amount.
 
-## Package
-
-Represent a software component that can be used in a [Docker
-application](docker.md) (e.g. a postgres:9.3 Docker container).
-
 ## Proceed
 
 The statistical report of the vendor, distributor, reseller incomes.
@@ -103,10 +98,6 @@ one-off **setup price** or can be offered for free.
 
 An user that can resell product on its own marketplace.
 
-## Sandbox
-
-A particular order type used to test the provisioning process of VM or Docker product.
-
 ## Subscription
 
 Each order, Cloudesire creates a _subscription_ that has a specific lifetime,
@@ -119,5 +110,5 @@ A user that offers his applications in the Cloudesire Marketplace.
 
 ## Virtual Machine Configuration
 
-The minimum cloud resources required to operate a Docker application managed by
-the platform.
+The minimum cloud resources required to operate a BareVM product managed by the
+platform.

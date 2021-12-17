@@ -74,7 +74,7 @@ The *Pricing* tab contains the main setting to adjust the billing of a plan:
 * **IaaS billing** (Prepaid/Pay as you go): if IaaS costs should be paid in
   advance by the customer (prorated for the entire billing period) or
   pay-as-you-go (pay at the end of billing period or upon user termination).
-  Available only for Bare-VM and Docker products
+  Available only for Bare-VM products.
 
 The **Pricing model** dropdown enables to select from a variety of options:
 

@@ -4,9 +4,8 @@ title: Customer Cloud Credentials
 sidebar_label: Customer Cloud Credentials
 ---
 
-Customers can provide their own credentials to provision [Bare VM](vm.md) and
-[Docker applications](docker.md) on the [supported](clouds.md) Public Cloud
-providers.
+Customers can provide their own credentials to provision [Bare VM](vm.md) on
+the [supported](clouds.md) Public Cloud providers.
 
 For [Public](modules-public-tenants.md) and Private Cloud Tenants ([VCloud],
 [Openstack]) managed by the platform, the Cloud Credentials

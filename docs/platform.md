@@ -34,9 +34,8 @@ Cloudesire backend is composed by the following modules:
   of the platform (as regards the additional resources, such logos, screenshots, etc.
   the platform typically leverages a dedicated *Object Storage*, like for example
   a platform owner's AWS S3 tenant).
-* **Deployer**: manages cloud resources for each purchased Docker application
-  and bare VMs. The deployment process is described [in the next
-  chapter](platform.md#deployer-workflow). It leverages
+* **Deployer**: manages cloud resources for BareVMs. The deployment process is
+  described [in the next chapter](platform.md#deployer-workflow). It leverages
   open-source libraries (e.g. jclouds) and cloud SDKs to connect via API to
   [Public and Private cloud providers](clouds.md).
 * **Monitor**: an API that exposes system and application for statistics and
@@ -67,19 +66,16 @@ Cloudesire backend is composed by the following modules:
 ### Deployer workflow
 
 Deployer implements a state-machine to manage the deployment process on a
-specific cloud provider, following this workflow for Docker applications:
+specific cloud provider, following this workflow for BareVM products:
 
 * Check prerequisites, depending on the cloud provider, e.g. existence of a
   particular network, management of ssh key, security groups and general
   firewall rules
 * Creates a new **VM** (through the cloud provider APIs), having a specific
   "size" defined by the vendor (i.e. 2 cores, 1GB RAM)
+* Customer SSH public key login is configured
 * Creates and attaches a **data disk** to the VM, where application and user
-  data will be stored
-* Creates one or more **DNS entry** to make the application reachable by the
-  customer (e.g. application-123.apps.cloudesire.com)
-* Configures the base system and manage the necessary Docker containers as
-  declared by the software vendor during the [onboarding process](onboarding.md)
+  data can be stored
 * End-user receives a notification (via email and in its own control panel
   interface) with all the instructions needed to access its own instance of the
   application he paid for (URL, default login and password)
