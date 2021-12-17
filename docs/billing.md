@@ -170,6 +170,11 @@ all the prices and the savings.
 
 ![bundle on the marketplace](/img/docs/bundles-6.jpg)
 
+## Cloud resources pricing
+
+Pricing for the BareVM is automatically managed by the platform and vendors
+should not worry about it.
+
 ### Prepaid Bandwidth
 
 * vendors can specify a certain amount of prepaid bandwidth for each BareVM
