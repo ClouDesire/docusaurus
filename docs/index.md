@@ -49,7 +49,7 @@ of IAAS/PAAS/SAAS services.
 The [onboarding interfaces](onboarding.md) provide specific "produt types"
 (and dedicated configuration workflows) for each of the following options:
 
-- [Bare VM](vm.md) and [Docker applications](docker.md) provisioned on:
+- [Bare VM](vm.md) provisioned on:
   - customers Public Cloud tenants
   - customers Private Cloud (VMware/OpenStack) tenants
 - [API products](api-product.md)

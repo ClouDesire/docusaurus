@@ -32,8 +32,6 @@ between different **product types**.
 * [Cloud Service](type-cloud-service.md) to start onboarding a new product in
   Syndication mode that requires existing credentials to operate (e.g. Cloud
   Provider, Kubernetes cluster)
-* **Docker Application** to start onboarding a new product using one or more
-  [Docker image](docker.md).
 * **Service Product** to start [onboarding a new service](service.md), that is
   not tied to the distribution of an application to the end-user. This option
   is disabled by default, and can be enabled for specific environments.
@@ -166,7 +164,7 @@ technical onboarding as smooth as possible, anyway we strongly recommend you to
 read this section before onboarding your product and during the onboarding
 process.
 
-### Onboarding for Syndicated and Docker applications
+### Onboarding of products
 
 The technical part of the onboarding process depends on the application
 _provisioning type_:
@@ -175,19 +173,12 @@ _provisioning type_:
   has to provide a "_syndication endpoint_" and proceed with the integrations
   via API, as described in [this
   section](syndication.md)
-* for **Docker Applications** (where Cloudesire will provision on the cloud a
-  new virtual-machine containing a running instance of the application for each
-  customer) the software vendor should use [Docker Packaging](docker.md) (a
-  self-contained archive of your application meeting the
-  [Docker](https://www.docker.com/) standards). More detailed instruction for
-  the onboarding of Docker applications can be found in [this
-  section](docker.md)
 * for **Service**, the same rules of syndicated applications applies, but the
   integration is optional
 * for **API** products, please refer to the [API section](api-product.md).
 
-The following sections refer to other additional functionalities, which can be
-used both in the Syndicated and Docker applications.
+The following sections refer to other additional functionalities that can be
+used for Syndicated products.
 
 ### Application Metrics
 
@@ -222,8 +213,8 @@ Each metric could be detailed in the editing section, with this fields:
   * *External*: when the actual values must be provided by a 3rd-party system,
   such as the vendor's platform
   * *Native*: when the actual values are automatically retrieved by Cloudesire
-  itself; this is valid only for special cases, like [Docker Apps](docker.md)
-  or [BareVM](vm.md) products
+    itself; this is valid only for special cases, [BareVM](vm.md) products and
+    native integrations
 * _Polling frequency_: the platform will poll your endpoint with this frequency;
 * _Custom Metric Endpoint_: must be defined in the form of a relative URL (e.g.:
   `/metric/users`)
@@ -259,36 +250,7 @@ new metric.
 
 ![metric editing](assets/extra-resources/metrics-syndication-new.jpg)
 
-##### Adding Custom Metrics to a Docker Application
-
-For [Docker applications](docker.md), you need to access to the "_Modules_"
-section (more details [here](docker.md#modules).) which is available on the
-left menu of your personal Control Panel.
-
-Once you are in the "_Modules_" section, select a specific _Module_ and
-_Package_ (more details [here](docker.md#packages)), click on the "_Show
-Advanced_" button on the top-right of the page. Furthermore, by accessing to the
-"_Application Metrics_" tab it's possible to fill all the required fields and
-click on the "_Add_" button to finish.
-
-![metric editing - docker](assets/extra-resources/metrics-docker-new.jpg)
-
-#### How to provide "actual values" for a Custom Metric
-
-In case of **Docker applications**, to be able to successfully use
-application metrics, your application should expose an unique URL
-for each application metric, reporting the *actual value* for that
-metric, which will be accordingly related to a specific Docker
-app's running **instance**.
-
-The format of the metric data should be in JSON format:
-
-```json
-{
-    "metricsName": "current_users",
-    "value": 3.0
-}
-```
+#### How to provide a value for a Custom Metric
 
 In case of **Syndicated applications**, the functioning is quite
 similar: it's required to expose an URL returning the same JSON result,
@@ -304,12 +266,8 @@ Applications may require a list of parameters that needs to be provided by
 customers before using the application for the first time, either for the
 application to work properly or to provide better initial customization.
 
-Configuration Parameters are injected in Docker containers like
-[Environment variables](docker.md#environment-variables), but their value is
-chosen by customers before placing an order.
-
-Any other product type, are exposed via API (continue reading this
-section).
+Configuration parameters filled by the customers are exposed via API (continue
+reading this section).
 
 Each parameter is created and bound to a specific Product, but must be activated
 on one or more _Plans_. Each parameter can required or not, and its value can be
@@ -376,13 +334,6 @@ GET /api/configurationParameter/2095 HTTP/1.1
     "validation": "^(?:[-A-Za-z0-9]+.)+[A-Za-z]{2,6}$"
 }
 ```
-
-If your application provisioning type is [Managed](docker.md), the
-Configuration Parameters are automatically injected in the virtual-machine for
-Docker applications as an environment variable, with the same name of the
-`code` parameter. For instance, if you have created a Configuration Parameter with
-_COLOR_ as `code`, your application will have a `$COLOR` environment variable
-with the value chosen by the customer.
 
 ### Order validation
 

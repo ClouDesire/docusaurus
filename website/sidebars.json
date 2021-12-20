@@ -26,7 +26,6 @@
         "ids": [
           "syndication",
           "type-cloud-service",
-          "docker",
           "vm",
           "service"
         ]
