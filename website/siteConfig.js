@@ -15,6 +15,7 @@ const siteConfig = {
   enableUpdateTime: true,
   cname: 'docs.cloudesire.com',
   gaTrackingId: 'G-Y0QZTE1YQV',
+  gaGtag: true,
   headerLinks: [
     { doc: 'index', label: 'Docs' },
     { doc: 'api', label: 'API' },
