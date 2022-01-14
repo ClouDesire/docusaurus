@@ -20,7 +20,12 @@ Your endpoint will receive a POST request with a JSON body content like this:
   "productVersionId": 456,
   "productVersionIdentifier": "your-product-plan",
   "configurationParameter": "CUSTOM_DOMAIN",
-  "language": "en"
+  "configurationParameters": {
+    "OTHER_PARAM": "value1",
+    "ANOTHER_ONE": "value2"
+  },
+  "language": "en",
+  "buyerId": 789
 }
 ```
 
