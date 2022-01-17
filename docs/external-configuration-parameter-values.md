@@ -20,9 +20,21 @@ Your endpoint will receive a POST request with a JSON body content like this:
   "productVersionId": 456,
   "productVersionIdentifier": "your-product-plan",
   "configurationParameter": "CUSTOM_DOMAIN",
-  "language": "en"
+  "configurationParameters": {
+    "OTHER_PARAM": "value1",
+    "ANOTHER_ONE": "value2"
+  },
+  "language": "en",
+  "buyerId": 789
 }
 ```
+
+* `configurationParameter` is the identifier of the configuration parameter
+  for which to return the values
+* `configurationParameters` are the identifier-value pairs for the other
+  configuration parameters being chosen by the user
+* `buyerId` is the ID of the user requesting the configuration parameter
+  values
 
 ## Response
 
