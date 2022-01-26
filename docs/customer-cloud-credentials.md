@@ -20,6 +20,7 @@ To configure a Cloud Credential for AWS, you need to provide:
 * Access key: the access key ID (for example, AKIAIOSFODNN7EXAMPLE)
 * Secret key: the secret access key (for example, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY)
 * Resource name: the ARN identifying your amazon account in the form `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`.
+
 The steps are as follow.
 
 ### Create your Secret in AWS
@@ -33,7 +34,7 @@ The steps are as follow.
   * `Secret access key`, by clicking on "Show"
 * Copy at the top the `User ARN`, in form of `arn:aws:iam::<account-id>:user/<your user name>`
 * Using Notepad, create the `Resource name` string in the form of `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`
-  by replacing the `user/<your user name>` with `role/OrganizationAccountAccessRole`. 
+  by replacing the `user/<your user name>` with `role/OrganizationAccountAccessRole`.
   An string example would be "arn:aws:iam::12312311231:role/OrganizationAccountAccessRole"
 
 ### Create Cloud Credential for AWS
