@@ -4,7 +4,7 @@ title: Customer Cloud Credentials
 sidebar_label: Customer Cloud Credentials
 ---
 
-Customers can provide their own credentials to provision [Bare VM](vm.md) on
+Customers can provide their own credentials to provision [Bare VM](vm.md) and [Kubernetes Cluster](modules-kubernetes.md) on
 the [supported](clouds.md) Public Cloud providers.
 
 For [Public](modules-public-tenants.md) and Private Cloud Tenants ([VCloud],
@@ -13,16 +13,43 @@ are automatically provisioned upon tenant activation.
 
 ## AWS
 
-You can use your AWS account on the platform by providing:
+To configure a Cloud Credential for AWS, you need to provide:
 
 * Identifier: a unique description useful for recognizing this credentials among
   the others
 * Access key: the access key ID (for example, AKIAIOSFODNN7EXAMPLE)
-* Secret key: the secret access key (for example,
-  wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY)
-* Resource name: the ARN identifying your amazon account in the form `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`. Replace `<account-id>` with your account numeric ID (e.g: 012345678901)
+* Secret key: the secret access key (for example, wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY)
+* Resource name: the ARN identifying your amazon account in the form `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`.
 
-Obtain the credentials on the [IAM](https://console.aws.amazon.com/iam/home) section of the AWS console.
+The steps are as follow.
+
+### Create your Secret in AWS
+
+* Go to [IAM/Users](https://console.aws.amazon.com/iamv2/home?#/users) section of the AWS console.
+* In the shown table, click on your Tenant User and enter in the relative section.
+* Click on "Security Credentials" tab
+* Click on "Create access key" button
+* Copy on Notepad the following values and close the dialog:
+  * `Access key ID`
+  * `Secret access key`, by clicking on "Show"
+* Copy at the top the `User ARN`, in form of `arn:aws:iam::<account-id>:user/<your user name>`
+* Using Notepad, create the `Resource name` string in the form of `arn:aws:iam::<account-id>:role/OrganizationAccountAccessRole`
+  by replacing the `user/<your user name>` with `role/OrganizationAccountAccessRole`.
+  An string example would be "arn:aws:iam::12312311231:role/OrganizationAccountAccessRole"
+
+### Create Cloud Credential for AWS
+
+* Open Cloudesire Dashboard
+* Open Menu **Cloud Credentials**
+* Press the **Add** button
+  * In Cloud Providers, select **AWS: Global**
+  * Give your preferred name on **Identifier**. You will refer to it when Cloud Credential is required.
+  * Fill the `Access Key` from Notepad
+  * Fill the `Secret Key` from Notepad
+  * Fill the `Resource name` from Notepad
+  * Save
+* The Cloud Credential table should be updated with your Credentials as a new row.
+* Check that the Status is Ok. In negative case, control your data and redo the steps above.
 
 ## Azure
 
