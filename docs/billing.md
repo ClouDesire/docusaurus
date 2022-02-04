@@ -72,6 +72,37 @@ If **autorenew** is disabled:
   invoice, Cloudesire destroys the application instance and the customer will no
   longer be able to access the application.
 
+### Extra-Resources Upgrades / Downgrades policies
+
+Customers can request upgrades/downgrades of previously purchased **pre-paid**
+extra-resources, by using the Clouidesire Dashboard.
+
+* upgrades are applied immediately
+* downgrades are post-poned to the first day of the next billing period
+
+During the upgrade process, the platform calculates the *scaled unit-price* of
+the extra-resource(s) of interest, by applying the following rule:
+
+` scaled unit price = original price * (remaining hours until the end of the
+billing period / total hours in the billing period)`
+
+Please note that the billing engine *granularity* is 1 hour (the remaining hours
+will be rounded-up).
+
+Then the platworm will:
+
+* subtract from the next customer's invoice the amount: `scaled_unit_price * previous
+  extra-resources number`
+* sum to the next customer's invoice the amount: `scaled_unit_price * new extra-resources
+  number`
+
+In this way, the customer will be:
+
+* proportionally "refunded" for the (future, but already paid) *non-use time* of the
+  previous number of extra-resources
+* charged in advance (but at a proportional/scaled price) for the future usage of the
+  new number of extra-resources
+
 ### Pricing change policies for active subscriptions
 
 During the lifetime of an active subscription, plans and extra resources of a product
