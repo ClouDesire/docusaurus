@@ -103,6 +103,50 @@ In this way, the customer will be:
 * charged in advance (but at a proportional/scaled price) for the future usage of the
   new number of extra-resources
 
+### Consumptions calculations for pay-per-use Extra-Resources
+
+**Post-paid** extra-resources (AKA [pay-per-use metrics](onboarding.md#application-metrics))
+consumpions are calculated at the end of the billing period.
+
+Depending on the specific use-case, a pay-per-use metric can be configured by specifying
+its:
+
+* **type**: *Gauge* (value can arbitrarily go up and down) or *Counter* (value always increments)
+* **calculation function**: *Average* value over time, or *Peak* value over time
+
+More details are available in [this section](onboarding.md#understanding-application-metrics).
+
+*Gauge + Average* is the more complex combination to handle during the end-of-billing-period
+calculations.
+
+A typical example could be an "active-users" pay-per-use metric.
+Let's consider an hypotetical 30-days billing period, and the
+following scenario:
+
+* the customer activated 10 users for the first 10 days
+* the customer activated 10 additional users on day-11 and kept
+  that number for the following 10 days
+* the customer deactivated 5 users on day-21 and
+  kept that number for the last 10 days
+
+In this case, the platform will register:
+* the "consumption" of 10 users for the 10 days
+* the "consumption" of 20 users for the following 10 days
+* the "consumption" of 15 users for the last 10 days
+
+Given an hypotetical unit-price of 1 EUR per active user,
+the final price that will be charged to the customer will be:
+
+`(10 * 10) + (20 * 10) + (15 * 10) = 450`
+
+Of course, for the sake of clarity, in this example we're assuming a
+(very unlikely) granularity of 1 day.
+In reality, the platflorm will use a **1-hour granularity**.
+
+Please note that the calculations can be much more articulated if a
+[complex pricing schema](onboarding-extra-resources.md#pricing-schemes) is
+configured on the extra-resource (e.g. for applying volume discounts).
+
 ### Pricing change policies for active subscriptions
 
 During the lifetime of an active subscription, plans and extra resources of a product
