@@ -124,21 +124,21 @@ Let's consider an hypotetical 30-days billing period, and the
 following scenario:
 
 * the customer activated 10 users for the first 10 days
-* the customer activated 10 additional users on day-11 and kept
-  that number for the following 10 days
-* the customer deactivated 5 users on day-21 and
-  kept that number for the last 10 days
+* the customer activated 10 additional users on day-10 and kept
+  that number for the following 15 days
+* the customer deactivated 5 users on day-25 and
+  kept that number for the last 5 days
 
 In this case, the platform will register:
 
 * the "consumption" of 10 users for the 10 days
-* the "consumption" of 20 users for the following 10 days
-* the "consumption" of 15 users for the last 10 days
+* the "consumption" of 20 users for the following 15 days
+* the "consumption" of 15 users for the last 5 days
 
-Given an hypotetical unit-price of 2 EUR per active user,
+Given an hypotetical unit-price of 2 EUR per active-user,
 the final price that will be charged to the customer will be:
 
-`(10 users * 2 EUR * (10 / 30 days))  + (20 users * 2 EUR * (10 / 30 days)) + (15 users * 2 EUR * (10 / 30 days)) = 30 EUR`
+`(10 users * 2 EUR * (10 / 30 days))  + (20 users * 2 EUR * (15 / 30 days)) + (15 users * 2 EUR * (10 / 5 days)) = 31,66 EUR`
 
 Of course, for the sake of clarity, in this example we're assuming a
 (very unlikely) granularity of 1 day.
