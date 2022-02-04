@@ -135,10 +135,10 @@ In this case, the platform will register:
 * the "consumption" of 20 users for the following 10 days
 * the "consumption" of 15 users for the last 10 days
 
-Given an hypotetical unit-price of 1 EUR per active user,
+Given an hypotetical unit-price of 2 EUR per active user,
 the final price that will be charged to the customer will be:
 
-`(10 * 10) + (20 * 10) + (15 * 10) = 450`
+`(10 users * 2 EUR * (10 / 30 days))  + (20 users * 2 EUR * (10 / 30 days)) + (15 users * 2 EUR * (10 / 30 days)) = 30 EUR`
 
 Of course, for the sake of clarity, in this example we're assuming a
 (very unlikely) granularity of 1 day.
