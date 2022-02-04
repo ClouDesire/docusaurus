@@ -130,6 +130,7 @@ following scenario:
   kept that number for the last 10 days
 
 In this case, the platform will register:
+
 * the "consumption" of 10 users for the 10 days
 * the "consumption" of 20 users for the following 10 days
 * the "consumption" of 15 users for the last 10 days
