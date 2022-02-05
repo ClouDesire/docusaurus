@@ -75,7 +75,7 @@ If **autorenew** is disabled:
 ### Extra-Resources Upgrades / Downgrades policies
 
 Customers can request upgrades/downgrades of previously purchased **pre-paid**
-extra-resources, by using the Clouidesire Dashboard.
+extra-resources, by using the Cloudesire Dashboard.
 
 * upgrades are applied immediately
 * downgrades are post-poned to the first day of the next billing period
