@@ -72,7 +72,26 @@ If **autorenew** is disabled:
   invoice, Cloudesire destroys the application instance and the customer will no
   longer be able to access the application.
 
-### Extra-Resources Upgrades / Downgrades policies
+### Pricing change policies for active subscriptions
+
+During the lifetime of an active subscription, plans and extra resources of a product
+can be modified by the vendor.
+
+The platform will automatically **apply up-to-date prices** only during the renew
+process of a subscription (at the end of the minimum duration period), or if the customer
+requests a change of plan.
+
+If a new invoice is generated for a subscription with an order duration window
+that is greater than the billing period (e.g.: a product with a yearly
+commitment but monthly billing), the prices applied are consistent for the
+entire order duration window (e.g.: the whole year).
+
+If the customer requests an upgrade of one or more extra resources, the applied prices
+are the same applied at the start of the duration window.
+
+## Extra resources
+
+### Upgrades / Downgrades policies
 
 Customers can request upgrades/downgrades of previously purchased **pre-paid**
 extra-resources, by using the Cloudesire Dashboard.
@@ -106,7 +125,7 @@ In this way, the customer will be:
 ### Consumptions calculations for pay-per-use Extra-Resources
 
 **Post-paid** extra-resources (AKA [pay-per-use metrics](onboarding.md#application-metrics))
-consumpions are calculated at the end of the billing period.
+consumptions are calculated at the end of the billing period.
 
 Depending on the specific use-case, a pay-per-use metric can be configured by specifying
 its:
@@ -147,23 +166,6 @@ In reality, the platflorm will use a **1-hour granularity**.
 Please note that the calculations can be much more articulated if a
 [complex pricing schema](onboarding-extra-resources.md#pricing-schemes) is
 configured on the extra-resource (e.g. for applying volume discounts).
-
-### Pricing change policies for active subscriptions
-
-During the lifetime of an active subscription, plans and extra resources of a product
-can be modified by the vendor.
-
-The platform will automatically **apply up-to-date prices** only during the renew
-process of a subscription (at the end of the minimum duration period), or if the customer
-requests a change of plan.
-
-If a new invoice is generated for a subscription with an order duration window
-that is greater than the billing period (e.g.: a product with a yearly
-commitment but monthly billing), the prices applied are consistent for the
-entire order duration window (e.g.: the whole year).
-
-If the customer requests an upgrade of one or more extra resources, the applied prices
-are the same applied at the start of the duration window.
 
 ## Coupons
 
