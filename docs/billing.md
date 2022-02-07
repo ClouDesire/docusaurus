@@ -89,6 +89,84 @@ entire order duration window (e.g.: the whole year).
 If the customer requests an upgrade of one or more extra resources, the applied prices
 are the same applied at the start of the duration window.
 
+## Extra resources
+
+### Upgrades / Downgrades policies
+
+Customers can request upgrades/downgrades of previously purchased **pre-paid**
+extra-resources, by using the Cloudesire Dashboard.
+
+* upgrades are applied immediately
+* downgrades are post-poned to the first day of the next billing period
+
+During the upgrade process, the platform calculates the *scaled unit-price* of
+the extra-resource(s) of interest, by applying the following rule:
+
+` scaled unit price = original price * (remaining hours until the end of the
+billing period / total hours in the billing period)`
+
+Please note that the billing engine *granularity* is 1 hour (the remaining hours
+will be rounded-up).
+
+Then the platworm will:
+
+* subtract from the next customer's invoice the amount: `scaled_unit_price * previous
+  extra-resources number`
+* sum to the next customer's invoice the amount: `scaled_unit_price * new extra-resources
+  number`
+
+In this way, the customer will be:
+
+* proportionally "refunded" for the (future, but already paid) *non-use time* of the
+  previous number of extra-resources
+* charged in advance (but at a proportional/scaled price) for the future usage of the
+  new number of extra-resources
+
+### Consumptions calculations for pay-per-use Extra-Resources
+
+**Post-paid** extra-resources (AKA [pay-per-use metrics](onboarding.md#application-metrics))
+consumptions are calculated at the end of the billing period.
+
+Depending on the specific use-case, a pay-per-use metric can be configured by specifying
+its:
+
+* **type**: *Gauge* (value can arbitrarily go up and down) or *Counter* (value always increments)
+* **calculation function**: *Average* value over time, or *Peak* value over time
+
+More details are available in [this section](onboarding.md#understanding-application-metrics).
+
+*Gauge + Average* is the more complex combination to handle during the end-of-billing-period
+calculations.
+
+A typical example could be an "active-users" pay-per-use metric.
+Let's consider an hypotetical 30-days billing period, and the
+following scenario:
+
+* the customer activated 10 users for the first 10 days
+* the customer activated 10 additional users on day-10 and kept
+  that number for the following 15 days
+* the customer deactivated 5 users on day-25 and
+  kept that number for the last 5 days
+
+In this case, the platform will register:
+
+* the "consumption" of 10 users for the 10 days
+* the "consumption" of 20 users for the following 15 days
+* the "consumption" of 15 users for the last 5 days
+
+Given an hypotetical unit-price of 2 EUR per active-user,
+the final price that will be charged to the customer will be:
+
+`(10 users * 2 EUR * (10 / 30 days))  + (20 users * 2 EUR * (15 / 30 days)) + (15 users * 2 EUR * (10 / 5 days)) = 31,66 EUR`
+
+Of course, for the sake of clarity, in this example we're assuming a
+(very unlikely) granularity of 1 day.
+In reality, the platflorm will use a **1-hour granularity**.
+
+Please note that the calculations can be much more articulated if a
+[complex pricing schema](onboarding-extra-resources.md#pricing-schemes) is
+configured on the extra-resource (e.g. for applying volume discounts).
+
 ## Coupons
 
 Platform Administrators, Vendors and Resellers can generate coupons for products
