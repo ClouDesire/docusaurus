@@ -51,9 +51,12 @@ on rejection.
 This email is sent to the customer while the order is processing for
 deployment.
 
+The platform can be configured to send the same email to the reseller of the
+order, if necessary.
+
 **Template name:** `orderDeployment`
 
-**Recipients:** *Customer*
+**Recipients:** *Customer / Reseller (configurable)*
 
 ### Order undeploy
 
