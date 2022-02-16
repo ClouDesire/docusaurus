@@ -11,7 +11,8 @@ The service will be called by the platform:
 
 1) when requesting a budget estimate;
 2) when placing an order;
-3) when terminating a subscription.
+3) when requesting a change of plan;
+4) when terminating a subscription.
 
 It's possible to configure multiple endpoints, in which case **every**
 configured endpoint must pass validation for the order to be successfully
@@ -42,7 +43,30 @@ Your endpoint will receive a POST request with a JSON body content like this:
   {
     "CUSTOM_DOMAIN": "http://custom.doma.in"
   },
+  "buyerId": 111,
   "orderType": "NORMAL",
+  "language": "en"
+}
+```
+
+### Change plan
+
+```json
+{
+  "productId": 123,
+  "productIdentifier": "your-product",
+  "productVersionId": 789,
+  "productVersionIdentifier": "your-new-product-plan",
+  "billingItems":
+  {
+    "USERS": 10
+  },
+  "configurationParameters":
+  {
+    "CUSTOM_DOMAIN": "http://custom.doma.in"
+  },
+  "subscriptionId": 999,
+  "orderType": "SYNDICATED_UPGRADE",
   "language": "en"
 }
 ```
