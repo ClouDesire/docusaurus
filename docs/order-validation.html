@@ -65,6 +65,7 @@ the customer can place it.</p>
 <ol>
 <li>when requesting a budget estimate;</li>
 <li>when placing an order;</li>
+<li>when requesting a change of plan;</li>
 <li>when terminating a subscription.</li>
 </ol>
 <p>It's possible to configure multiple endpoints, in which case <strong>every</strong>
@@ -89,7 +90,27 @@ implement the spec described here.</p>
   {
     <span class="hljs-attr">"CUSTOM_DOMAIN"</span>: <span class="hljs-string">"http://custom.doma.in"</span>
   },
+  <span class="hljs-attr">"buyerId"</span>: <span class="hljs-number">111</span>,
   <span class="hljs-attr">"orderType"</span>: <span class="hljs-string">"NORMAL"</span>,
+  <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="change-plan"></a><a href="#change-plan" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Change plan</h3>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"productId"</span>: <span class="hljs-number">123</span>,
+  <span class="hljs-attr">"productIdentifier"</span>: <span class="hljs-string">"your-product"</span>,
+  <span class="hljs-attr">"productVersionId"</span>: <span class="hljs-number">789</span>,
+  <span class="hljs-attr">"productVersionIdentifier"</span>: <span class="hljs-string">"your-new-product-plan"</span>,
+  <span class="hljs-attr">"billingItems"</span>:
+  {
+    <span class="hljs-attr">"USERS"</span>: <span class="hljs-number">10</span>
+  },
+  <span class="hljs-attr">"configurationParameters"</span>:
+  {
+    <span class="hljs-attr">"CUSTOM_DOMAIN"</span>: <span class="hljs-string">"http://custom.doma.in"</span>
+  },
+  <span class="hljs-attr">"subscriptionId"</span>: <span class="hljs-number">999</span>,
+  <span class="hljs-attr">"orderType"</span>: <span class="hljs-string">"SYNDICATED_UPGRADE"</span>,
   <span class="hljs-attr">"language"</span>: <span class="hljs-string">"en"</span>
 }
 </code></pre>
@@ -133,7 +154,7 @@ implement the spec described here.</p>
 server error, inviting the customer to retry later.</p>
 <h3><a class="anchor" aria-hidden="true" id="localization"></a><a href="#localization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Localization</h3>
 <p>Use the <code>language</code> field in the request to localize the error messages.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/15/2021 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/external-configuration-parameter-values.html"><span>External configuration parameter values</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-configuration">First Configuration</a></li><li><a href="#request">Request</a><ul class="toc-headings"><li><a href="#budget-estimate-and-order-placement">Budget estimate and order placement</a></li><li><a href="#termination">Termination</a></li></ul></li><li><a href="#response">Response</a><ul class="toc-headings"><li><a href="#localization">Localization</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2022 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/21/2022 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/onboarding-extra-resources.html"><span class="arrow-prev">← </span><span>Extra Resources</span></a><a class="docs-next button" href="/docs/external-configuration-parameter-values.html"><span>External configuration parameter values</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-configuration">First Configuration</a></li><li><a href="#request">Request</a><ul class="toc-headings"><li><a href="#budget-estimate-and-order-placement">Budget estimate and order placement</a></li><li><a href="#change-plan">Change plan</a></li><li><a href="#termination">Termination</a></li></ul></li><li><a href="#response">Response</a><ul class="toc-headings"><li><a href="#localization">Localization</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2022 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
