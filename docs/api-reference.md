@@ -40,7 +40,7 @@ You can use those endpoints to generate swagger clients in a variety of
 programming language leveraging the
 [swagger-codegen](https://github.com/swagger-api/swagger-codegen) project.
 
-You can also easily generate a Postman collection, as
+You can also easily generate a **Postman collection**, as
 [detailed here][swagger2postman] ([archived version][webarchive])
 
 [swagger2postman]: https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14
