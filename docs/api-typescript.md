@@ -4,7 +4,7 @@ title: TypeScript Client for Cloudesire API
 sidebar_label: TypeScript Client
 ---
 
-You can find a TypeScript client on our [Nexus Repository](https://nexus.cloudesire.com/#browse/browse:cloudesire-npm-public).
+You can find a TypeScript client on our [NPM Repository](https://nexus.cloudesire.com/#browse/browse:cloudesire-npm-public).
 
 > Requires [axios HTTP client](https://github.com/axios/axios)
 
