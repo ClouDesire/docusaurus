@@ -10,7 +10,7 @@ You can find a TypeScript client on our [Nexus Repository](https://nexus.cloudes
 
 ## Installation
 
-Install required packages, for example
+Install the required packages, for example:
 
 ```sh
 npm install @cloudesire/backend-users-api @cloudesire/backend-billing-api
