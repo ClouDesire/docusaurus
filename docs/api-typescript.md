@@ -6,16 +6,18 @@ sidebar_label: TypeScript Client
 
 You can find a TypeScript client on our [Nexus Repository](https://nexus.cloudesire.com/#browse/browse:cloudesire-npm-public).
 
-> Requires [axios http client ](https://github.com/axios/axios)
+> Requires [axios http client](https://github.com/axios/axios)
 
 ## Installation
 
 Install required packages, as example
+
 ```
 npm install @cloudesire/backend-users-api @cloudesire/backend-billing-api
 ```
 
 ## Usage
+
 ```typescript
 import axios, { AxiosResponse } from 'axios';
 import { Configuration, LoginApi } from '@cloudesire/backend-users-api';
