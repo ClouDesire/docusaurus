@@ -23,7 +23,7 @@ import axios, { AxiosResponse } from 'axios';
 import { Configuration, LoginApi } from '@cloudesire/backend-users-api';
 import { SubscriptionApi, SubscriptionDTO } from '@cloudesire/backend-billing-api';
 
-const url = '<cmw_api_url>';
+const url = '<cloudesire_api_url>';
 const username = '<customer_username>';
 const password = '<customer_password>';
 
