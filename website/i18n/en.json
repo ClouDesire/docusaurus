@@ -21,6 +21,10 @@
         "title": "Cloudesire REST API Reference",
         "sidebar_label": "API Reference"
       },
+      "api-typescript": {
+        "title": "TypeScript Client for Cloudesire API",
+        "sidebar_label": "TypeScript Client"
+      },
       "api": {
         "title": "Cloudesire REST API Introduction",
         "sidebar_label": "REST API Introduction"

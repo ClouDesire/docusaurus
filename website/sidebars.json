@@ -52,6 +52,7 @@
     "API": [
       "api",
       "api-java",
+      "api-typescript",
       "api-php",
       "api-reference"
     ]
