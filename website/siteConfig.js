@@ -44,8 +44,6 @@ const siteConfig = {
   },
   scripts: [
     'https://buttons.github.io/buttons.js',
-    'https://cloudesire.github.io/feedback-widget/build/bundle.js',
-    '/js/feedback.js',
   ],
   repoUrl: 'https://github.com/cloudesire/cloudesire.github.io',
   onPageNav: 'separate',
