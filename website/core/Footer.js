@@ -37,7 +37,7 @@ class Footer extends React.Component {
                         <a href={this.docUrl('opensource.html', false)}>
                             Open Source
                         </a>
-                        <a href="https://www.cloudesire.com">
+                        <a href="https://cloudesire.com">
                             Corporate website
                         </a>
                     </div>
