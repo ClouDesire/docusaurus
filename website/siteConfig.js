@@ -22,7 +22,7 @@ const siteConfig = {
     { doc: 'syndication', label: 'Syndication' },
     { doc: 'glossary', label: 'Glossary' },
     {
-      href: 'https://cloudesire.com',
+      href: 'https://www.cloudesire.com',
       label: 'Back to cloudesire.com'
     },
   ],
