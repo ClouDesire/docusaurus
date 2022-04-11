@@ -6,11 +6,11 @@ updates:
   schedule:
     interval: weekly
   reviewers:
-  - gionn
+  - malteo
 
 - package-ecosystem: "bundler"
   directory: "/"
   schedule:
     interval: "weekly"
   reviewers:
-  - gionn
+  - malteo
