@@ -1,16 +1,16 @@
 version: 2
-
 updates:
-- package-ecosystem: npm
-  directory: "/website"
-  schedule:
-    interval: weekly
-  reviewers:
-  - malteo
-
-- package-ecosystem: "bundler"
-  directory: "/"
-  schedule:
-    interval: "weekly"
-  reviewers:
-  - malteo
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: sunday
+    assignees:
+      - malteo
+  - package-ecosystem: bundler
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: sunday
+    assignees:
+      - malteo
