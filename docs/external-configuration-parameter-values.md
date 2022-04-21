@@ -48,11 +48,11 @@ Send an HTTP response of `200` with a content-type `application/json` with a
   [
     {
       "value": "first",
-      "description": "Value two description"
+      "description": "First value description"
     },
     {
       "value": "second",
-      "description": "Value two description"
+      "description": "Second value description"
     }
   ]
 }
