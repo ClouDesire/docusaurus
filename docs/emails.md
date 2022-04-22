@@ -97,6 +97,14 @@ the vendor (or reseller, if the subscription is resold) as a notification.
 
 **Recipients:** *Vendor / Reseller*
 
+### Subscription change summary
+
+The following email is sent to the customer as a summary for upgrade orders.
+
+**Template name:** `subscriptionAmendmentCustomer`
+
+**Recipients:** *Customer*
+
 ### Subscription killed
 
 Sent on subscription kill after payment deadline.
