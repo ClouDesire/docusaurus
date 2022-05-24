@@ -57,6 +57,10 @@
         "title": "Automatic emails sent by the platform",
         "sidebar_label": "Email Automation"
       },
+      "event-notification": {
+        "title": "Event notification",
+        "sidebar_label": "Event notification"
+      },
       "external-configuration-parameter-values": {
         "title": "External configuration parameter values"
       },

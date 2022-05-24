@@ -4,25 +4,33 @@ title: Event notification
 sidebar_label: Event notification
 ---
 
-DESCRIBE EVENTS
+The platform is able to notify a configured endpoint on some meaningful events.
 
-DESCRIBE PLATFORM/VENDOR EVENT
+The endpoints can be:
+
+* platform-wide: a configurable list of endpoints, which they will all receive
+  all the platform's events
+* vendor-specific: endpoints configured in a vendor's profile
+* product-specific: an endpoint configured on a catalogued product
+
+At the time of writing, vendor and product specific endpoints only receive
+subscription related events.
 
 ## Introduction to event notification
 
 The basics follows:
 
 * the platform will send notifications (HTTP POST requests with a [JSON
-  payload](event-notification.md#anatomy-of-an-event-request)) to a your endpoint every
-  time an interesting **event** occurs on the marketplace (new subscription
-  creation, renews, termination requests, user creation, product plan
-  publishing and so on).
+  payload](event-notification.md#anatomy-of-an-event-request)) to a endpoint
+  every time an interesting **event** occurs on the marketplace (new
+  subscription creation, renews, termination requests, user creation, product
+  plan publishing and so on).
 * your endpoint should handle these notifications and use them as triggers to
   invoke the [Cloudesire API](api.md) to fetch the needed information, provision
   a new user in its system and update the subscription status and so on.
 * integration development should be done on our
-  [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after everything
-  looks fine, move to the production marketplace.
+  [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after
+  everything looks fine, move to the production marketplace.
 
 ## Anatomy of an event request
 
@@ -67,6 +75,9 @@ resource can be fetched.
 
 The **date** attribute contains when the event has been generated.
 
+The **metadata** attribute contains a map of data specific to a particular
+**entity** (e.g. `approved=true` or `published=true` for `ProductVersion`s).
+
 The **CMW-Event-Signature** is an HTTP header related to the optional
 [validation for incoming event notifications](event-notification.md#security).
 
@@ -98,7 +109,8 @@ signature for each payload will be in the `CMW-Event-Signature` HTTP header. The
 goal is to compute a hash using your secret token, and ensure that the hashes
 match.
 
-e.g. in Java, using **[Apache Commons Codec](https://commons.apache.org/proper/commons-codec/)**:
+e.g. in Java, using
+**[Apache Commons Codec](https://commons.apache.org/proper/commons-codec/)**:
 
 ```java
 import org.apache.commons.codec.digest.HmacUtils;
@@ -115,4 +127,5 @@ if ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
 }
 ```
 
-> the hash signature starts with `sha1=`, no matter which implementation you use.
+> the hash signature starts with `sha1=`, no matter which implementation you
+> use.
