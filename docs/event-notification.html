@@ -1,0 +1,182 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Event notification · cloudesire documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The platform is able to notify a configured endpoint on some meaningful events."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Event notification · cloudesire documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="The platform is able to notify a configured endpoint on some meaningful events."/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y0QZTE1YQV"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments); }
+              gtag('js', new Date());
+              gtag('config', 'G-Y0QZTE1YQV');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo-cloudesire.png" alt="cloudesire documentation"/><h2 class="headerTitleWithLogo">cloudesire documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/docs/index.html" target="_self">Docs</a></li><li class="siteNavGroupActive"><a href="/docs/api.html" target="_self">API</a></li><li class="siteNavGroupActive"><a href="/docs/syndication.html" target="_self">Syndication</a></li><li class="siteNavGroupActive"><a href="/docs/glossary.html" target="_self">Glossary</a></li><li class=""><a href="https://www.cloudesire.com" target="_self">Back to cloudesire.com</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Platform</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Platform<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/index.html">Home</a></li><li class="navListItem"><a class="navItem" href="/docs/platform.html">Platform modules</a></li><li class="navListItem"><a class="navItem" href="/docs/glossary.html">Glossary</a></li><li class="navListItem"><a class="navItem" href="/docs/platform-users.html">Users and permissions</a></li><li class="navListItem"><a class="navItem" href="/docs/billing.html">Billing</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/event-notification.html">Event notification</a></li><li class="navListItem"><a class="navItem" href="/docs/channel.html">Channel management</a></li><li class="navListItem"><a class="navItem" href="/docs/live-reporting.html">Live reporting</a></li><li class="navListItem"><a class="navItem" href="/docs/order-approval-workflow.html">Orders approval workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/vendor-approval-workflow.html">Vendors approval workflow</a></li><li class="navListItem"><a class="navItem" href="/docs/customer-cloud-credentials.html">Customer Cloud Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/clouds.html">Cloud providers</a></li><li class="navListItem"><a class="navItem" href="/docs/emails.html">Email automation</a></li><li class="navListItem"><a class="navItem" href="/docs/marketplace.html">Marketplace customization</a></li><li class="navListItem"><a class="navItem" href="/docs/integrations.html">Integrations</a></li><li class="navListItem"><a class="navItem" href="/docs/opensource.html">Open Source</a></li><li class="navListItem"><a class="navItem" href="/docs/gdpr.html">GDPR Compliance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Products Onboarding<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/onboarding.html">Onboarding a new product</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Product types</h4><ul><li class="navListItem"><a class="navItem" href="/docs/syndication.html">Syndicated applications</a></li><li class="navListItem"><a class="navItem" href="/docs/type-cloud-service.html">Cloud Services</a></li><li class="navListItem"><a class="navItem" href="/docs/vm.html">Virtual-Machines</a></li><li class="navListItem"><a class="navItem" href="/docs/service.html">Services</a></li></ul></div><li class="navListItem"><a class="navItem" href="/docs/onboarding-plans.html">Pricing Plans</a></li><li class="navListItem"><a class="navItem" href="/docs/pricing-models.html">Pricing models</a></li><li class="navListItem"><a class="navItem" href="/docs/onboarding-extra-resources.html">Extra Resources</a></li><li class="navListItem"><a class="navItem" href="/docs/order-validation.html">Order validation</a></li><li class="navListItem"><a class="navItem" href="/docs/external-configuration-parameter-values.html">External configuration parameter values</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Available Integrations<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/modules-vcloud.html">vCloud VDC</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-openstack.html">OpenStack VDC</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-okd.html">OKD projects</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-commvault.html">Commvault tenants</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-vcav.html">vCloud Availability tenants</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-public-tenants.html">Public Cloud Tenants</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-kubernetes.html">Kubernetes as a service</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-helm.html">Helm charts</a></li><li class="navListItem"><a class="navItem" href="/docs/modules-google-workspace.html">Google Workspace</a></li><li class="navListItem"><a class="navItem" href="/docs/csp-product.html">Microsoft CSP</a></li><li class="navListItem"><a class="navItem" href="/docs/api-product.html">API as a Service</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/api.html">REST API Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/api-java.html">Java Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-typescript.html">TypeScript Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-php.html">PHP Client</a></li><li class="navListItem"><a class="navItem" href="/docs/api-reference.html">API Reference</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/event-notification.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Event notification</h1></header><article><div><span><p>The platform is able to notify a configured endpoint on some meaningful events.</p>
+<p>The endpoints can be:</p>
+<ul>
+<li>platform-wide: a configurable list of endpoints, which they will all receive
+all the platform's events</li>
+<li>vendor-specific: endpoints configured in a vendor's profile</li>
+<li>product-specific: an endpoint configured on a catalogued product</li>
+</ul>
+<p>At the time of writing, vendor and product specific endpoints only receive
+subscription related events.</p>
+<h2><a class="anchor" aria-hidden="true" id="introduction-to-event-notification"></a><a href="#introduction-to-event-notification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Introduction to event notification</h2>
+<p>The basics follows:</p>
+<ul>
+<li>the platform will send notifications (HTTP POST requests with a <a href="/docs/event-notification.html#anatomy-of-an-event-request">JSON
+payload</a>) to a endpoint
+every time an interesting <strong>event</strong> occurs on the marketplace (new
+subscription creation, renews, termination requests, user creation, product
+plan publishing and so on).</li>
+<li>your endpoint should handle these notifications and use them as triggers to
+invoke the <a href="/docs/api.html">Cloudesire API</a> to fetch the needed information, provision
+a new user in its system and update the subscription status and so on.</li>
+<li>integration development should be done on our
+<a href="/docs/onboarding.html#demo-marketplace-for-tests">staging-marketplace</a> and after
+everything looks fine, move to the production marketplace.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="anatomy-of-an-event-request"></a><a href="#anatomy-of-an-event-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Anatomy of an event request</h2>
+<p>Every request sent to your endpoint will be a POST request with a JSON payload:</p>
+<pre><code class="hljs css language-http"><span class="hljs-keyword">POST</span> <span class="hljs-string">/endpoint</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+<span class="hljs-attribute">Content-Type</span>: application/json; charset=utf-8
+<span class="hljs-attribute">Host</span>: vendor.example.org
+<span class="hljs-attribute">CMW-Event-Signature</span>: sha1=bd637c3b084f7c5039aaf2808c3bc6bd7b6c283d
+
+<span class="json">{
+    <span class="hljs-attr">"date"</span>: <span class="hljs-string">"2015-01-12T11:19:30Z"</span>,
+    <span class="hljs-attr">"entity"</span>: <span class="hljs-string">"Subscription"</span>,
+    <span class="hljs-attr">"entityUrl"</span>: <span class="hljs-string">"subscription/2388"</span>,
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"2388"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"CREATED"</span>
+}
+</span></code></pre>
+<p>Where:</p>
+<p>The <strong>type</strong> attribute can be:</p>
+<ul>
+<li><code>CREATED</code></li>
+<li><code>MODIFIED</code></li>
+<li><code>DELETED</code></li>
+</ul>
+<p>The <strong>entity</strong> attribute can be:</p>
+<ul>
+<li><code>Invoice</code></li>
+<li><code>ProductVersion</code></li>
+<li><code>Subscription</code></li>
+<li><code>User</code></li>
+</ul>
+<p>The <strong>id</strong> attribute is an unique identifier for the current <strong>entity</strong>, it will
+never change.</p>
+<p>The <strong>entityUrl</strong> attribute contains the relative URL from which the involved
+resource can be fetched.</p>
+<p>The <strong>date</strong> attribute contains when the event has been generated.</p>
+<p>The <strong>metadata</strong> attribute contains a map of data specific to a particular
+<strong>entity</strong> (e.g. <code>approved=true</code> or <code>published=true</code> for <code>ProductVersion</code>s).</p>
+<p>The <strong>CMW-Event-Signature</strong> is an HTTP header related to the optional
+<a href="/docs/event-notification.html#security">validation for incoming event notifications</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="replying-to-events"></a><a href="#replying-to-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Replying to events</h3>
+<p>The platform expects that you reply with a <code>204 - No content</code> response (with
+an empty response body).</p>
+<p>If you reply with a <code>200 - OK</code> and a payload it's fine too, but the payload will
+be automatically discarded.</p>
+<p>You can reply with a <code>429 - Too Many Requests</code> with an appropriate <code>Retry-After</code>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429">header</a> to delay
+the subsequent retries.</p>
+<p>If the response contains another status code, the notification will be retried
+with an exponential back-off, until the endpoint will return a <code>204</code> status
+code.</p>
+<h2><a class="anchor" aria-hidden="true" id="security"></a><a href="#security" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Security</h2>
+<h3><a class="anchor" aria-hidden="true" id="securing-your-endpoint-via-hmac-signature-validation"></a><a href="#securing-your-endpoint-via-hmac-signature-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Securing your endpoint via HMAC signature validation</h3>
+<p>For security reasons, you probably want to limit requests on the specified
+endpoint(s) to those coming from us.</p>
+<p>Once you have configured a secret token in your product edit page, a hash
+signature for each payload will be in the <code>CMW-Event-Signature</code> HTTP header. The
+goal is to compute a hash using your secret token, and ensure that the hashes
+match.</p>
+<p>e.g. in Java, using
+<strong><a href="https://commons.apache.org/proper/commons-codec/">Apache Commons Codec</a></strong>:</p>
+<pre><code class="hljs css language-java"><span class="hljs-keyword">import</span> org.apache.commons.codec.digest.HmacUtils;
+
+<span class="hljs-comment">// do whatever to get the request</span>
+RecordedRequest request = server.takeRequest();
+
+String expected = <span class="hljs-string">"sha1="</span> + HmacUtils.hmacSha1Hex( <span class="hljs-string">"MY_SECRET_TOKEN"</span>, request.getBody().readUtf8() );
+String actual = request.getHeader( <span class="hljs-string">"CMW-Event-Signature"</span> );
+
+<span class="hljs-keyword">if</span> ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
+{
+    <span class="hljs-comment">// continue evaluating request...</span>
+}
+</code></pre>
+<blockquote>
+<p>the hash signature starts with <code>sha1=</code>, no matter which implementation you
+use.</p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/24/2022 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/billing.html"><span class="arrow-prev">← </span><span>Billing</span></a><a class="docs-next button" href="/docs/channel.html"><span>Channel management</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#introduction-to-event-notification">Introduction to event notification</a></li><li><a href="#anatomy-of-an-event-request">Anatomy of an event request</a><ul class="toc-headings"><li><a href="#replying-to-events">Replying to events</a></li></ul></li><li><a href="#security">Security</a><ul class="toc-headings"><li><a href="#securing-your-endpoint-via-hmac-signature-validation">Securing your endpoint via HMAC signature validation</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2022 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '06aaa65659156b0fd43caf8c5d9997e9',
+                indexName: 'cloudesire',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
