@@ -15,25 +15,13 @@ has to be done directly via [Cloudesire API](api.md).
 This documentation is a must for a vendor looking to integrate with the
 cloudesire platform.
 
-## Introduction to Syndication
-
-The basics follows:
-
-* the platform will send notifications (HTTP POST requests with a [JSON
-  payload](syndication.md#anatomy-of-an-event-request)) to a your endpoint every
-  time an interesting **event** occurs on the marketplace (new subscription
-  creation, renews, termination requests and so on).
-* your endpoint should handle these notifications and use them as triggers to
-  invoke the [Cloudesire API](api.md) to fetch the needed information, provision
-  a new user in its system and update the subscription status and so on.
-* integration development should be done on our
-  [staging-marketplace](onboarding.md#demo-marketplace-for-tests) and after everything
-  looks fine, move to the production marketplace.
+Please start by reading the [event notification](event-notification.md) section
+to have an overview of the platform notifications.
 
 > Are you using Java/Spring boot in your tech stack? We do and we released a
 > template for new project implementing the [syndication api](https://github.com/ClouDesire/syndication-api)
 
-### Prime approach to the provisioning workflow
+## Prime approach to the provisioning workflow
 
 A simple example follows, explaining the workflow of a new tenant order and
 provisioning:
@@ -76,7 +64,7 @@ Let's start: after having created a _Syndicated Product_ in your catalog (see
 ![Vendors Control Panel - Syndication](/img/docs/control_panel_syndication.png)
 
 To increase the security of your endpoint, please read the [security
-section](syndication.md#security).
+section](event-notification.md#security).
 
 ### The "Test Events" feature
 
@@ -91,66 +79,6 @@ some stubbed data that you can configure within the interface.
 > We recommend to use this feature immediately after having configured your
 endpoint for the first time, to be sure that is correctly reachable from
 Cloudesire platform.
-
-### Anatomy of an event request
-
-Every request sent to your endpoint will be a POST request with a JSON payload:
-
-```http
-POST /endpoint HTTP/1.1
-Accept: application/json
-Content-Type: application/json; charset=utf-8
-Host: vendor.example.org
-CMW-Event-Signature: sha1=bd637c3b084f7c5039aaf2808c3bc6bd7b6c283d
-
-{
-    "date": "2015-01-12T11:19:30Z",
-    "entity": "Subscription",
-    "entityUrl": "subscription/2388",
-    "id": "2388",
-    "type": "CREATED"
-}
-```
-
-Where:
-
-The **type** attribute can be:
-
-* `CREATED`
-* `MODIFIED`
-* `DELETED`
-
-The **entity** attribute can be:
-
-* `Subscription`
-* `Invoice`
-
-The **id** attribute is an unique identifier for the current **entity**, it will
-never change.
-
-The **entityUrl** attribute contains the relative URL from which the involved
-resource can be fetched.
-
-The **date** attribute contains when the event has been generated.
-
-The **CMW-Event-Signature** is an HTTP header related to the optional
-[validation for incoming event notifications](syndication.md#security).
-
-### Replying to events
-
-The platform expects that you reply with a `204 - No content` response (with
-an empty response body).
-
-If you reply with a `200 - OK` and a payload it's fine too, but the payload will
-be automatically discarded.
-
-You can reply with a `429 - Too Many Requests` with an appropriate `Retry-After`
-[header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429) to delay
-the subsequent retries.
-
-If the response contains another status code, the notification will be retried
-with an exponential back-off, until the endpoint will return a `204` status
-code.
 
 ## Workflow of a Subscription
 
@@ -481,37 +409,6 @@ For example:
   with a value of `SYNDICATED_UPGRADE`
 * for trial-to-paid upgrade: check both updated `endDate` and
   `subscription.type` with value `NORMAL` instead of `TRIAL`
-
-## Security
-
-### Securing your endpoint via HMAC signature validation
-
-For security reasons, you probably want to limit requests on the specified
-endpoint(s) to those coming from us.
-
-Once you have configured a secret token in your product edit page, a hash
-signature for each payload will be in the `CMW-Event-Signature` HTTP header. The
-goal is to compute a hash using your secret token, and ensure that the hashes
-match.
-
-e.g. in Java, using **[Apache Commons Codec](https://commons.apache.org/proper/commons-codec/)**:
-
-```java
-import org.apache.commons.codec.digest.HmacUtils;
-
-// do whatever to get the request
-RecordedRequest request = server.takeRequest();
-
-String expected = "sha1=" + HmacUtils.hmacSha1Hex( "MY_SECRET_TOKEN", request.getBody().readUtf8() );
-String actual = request.getHeader( "CMW-Event-Signature" );
-
-if ( MessageDigest.isEqual( actual.getBytes(), expected.getBytes() ) )
-{
-    // continue evaluating request...
-}
-```
-
-> the hash signature starts with `sha1=`, no matter which implementation you use.
 
 ## Managing Provisioning Exceptions
 
