@@ -21,17 +21,17 @@ are still managed by Cloudesire.
 
 When the Keycloak module is active:
 
-* the *native* marketplace login forms are replaced by the Keycloak login page
-* on the Cloudesire database, each user entity has an *attached* "Keycloak ID"
+- the *native* marketplace login forms are replaced by the Keycloak login page
+- on the Cloudesire database, each user entity has an *attached* "Keycloak ID"
   (without storing any credentials)
-* Keycloak validates the users credentials; when a user is authenticated by Keycloak,
+- Keycloak validates the users credentials; when a user is authenticated by Keycloak,
   his "Keycloak ID" is forwarded to the Cloudesire backend, that automatically
   can autheticate the corresponding user.
 
 From the user-experience perspective, customers can:
 
-* login to the marketplace/dashboard interfaces by using the Keycloak login form
-* self-register to the marketplace, and behind the scenes a corresponding Cloudesire
+- login to the marketplace/dashboard interfaces by using the Keycloak login form
+- self-register to the marketplace, and behind the scenes a corresponding Cloudesire
   account will be created if not already existing (the matches are made by considering
   the users' emails)
 
