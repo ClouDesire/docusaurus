@@ -6,6 +6,7 @@ sidebar_label: Keycloak
 
 Cloudesire supports [Keycloak](https://www.keycloak.org/) for providing additional
 capabilities:
+
 - Single-Sign On
 - Identity Brokering and Social Login
 - User Federation (to connect to existing LDAP or Active Directory servers)
