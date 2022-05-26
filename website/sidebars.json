@@ -49,7 +49,7 @@
       "modules-google-workspace",
       "csp-product",
       "api-product",
-      "modules-keycloack"
+      "modules-keycloak"
     ],
     "API": [
       "api",
