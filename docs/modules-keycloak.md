@@ -26,7 +26,7 @@ When the Keycloak module is active:
   (without storing any credentials)
 - Keycloak validates the users credentials; when a user is authenticated by Keycloak,
   his "Keycloak ID" is forwarded to the Cloudesire backend, that automatically
-  can autheticate the corresponding user.
+  can authenticate the corresponding user.
 
 From the user-experience perspective, customers can:
 
@@ -35,6 +35,6 @@ From the user-experience perspective, customers can:
   account will be created if not already existing (the matches are made by considering
   the users' emails)
 
-Other kind of users (vendors, resellers, etc) must be previously registered both
-in Cloudesire and KeyCloak, then at the first login the platform matches the 2
+Other kind of users (vendors, resellers, etc) must be previously registered
+in Cloudesire, then at the first login on Keycloak, the platform matches the 2
 entries by using the users emails.
