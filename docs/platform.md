@@ -52,7 +52,7 @@ Cloudesire backend is composed by the following modules:
   Hubspot CRM
 * **Feedback-api**: an API to collect user support requests and forward them to
   ticket systems.
-* **Keycloak**: enables [SSO capabilities](modules-keycloack.md) for marketplace users
+* **Keycloak**: enables [SSO capabilities](modules-keycloak.md) for marketplace users
 * **cassetto**: manage catalog resources (logos, screenshots, etc.) on object
   storage systems.
 * **Janine**: open-source PDF invoice generator
