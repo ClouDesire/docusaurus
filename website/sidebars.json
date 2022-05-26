@@ -48,7 +48,8 @@
       "modules-helm",
       "modules-google-workspace",
       "csp-product",
-      "api-product"
+      "api-product",
+      "modules-keycloack"
     ],
     "API": [
       "api",
