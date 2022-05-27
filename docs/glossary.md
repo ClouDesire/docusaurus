@@ -36,6 +36,9 @@ A composition of two or more products that can be sold as a single product.
 
 A choice that is presented to the end-user during the checkout process.
 
+More information about how to setup configuration parameters for a product can be
+found [here](onboarding.md#configuration-parameters).
+
 ## Customer
 
 A user that buys products in the Cloudesire Marketplace.
