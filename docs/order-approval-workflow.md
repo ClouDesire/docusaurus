@@ -3,11 +3,10 @@ id: order-approval-workflow
 title: Orders Approval Workflow
 sidebar_label: Orders approval workflow
 ---
-In some specific use-cases, for example for products/services not supporting
-self-provisioning (e.g. "server management") an **order approval workflow**
-could be required.
+**order approval workflow** could be required in some  use-cases, for example for products/services not supporting
+self-provisioning (e.g. "server management").
 
-Each product/service can be specially configured to enable the *approval
+Each product/service could be specially configured to enable the *approval
 workflow*: in this case, each order (new purchases, change requests) needs to be
 approved by a *privileged user* (**Auditor**) before it becomes effective.
 
@@ -25,7 +24,7 @@ The specific functioning slightly changes depending on the presence of the
 
 Once a new order is placed by the Customer on a (reseller/parent) marketplace:
 
-- the order is marked as "to be approved" (by an *Auditor*)
+- order is marked as "to be approved" (by an *Auditor*)
 - the Customer:
   - receives a notification informing that "the order will be shortly reviewed
     by a manager"
@@ -37,7 +36,7 @@ Once a new order is placed by the Customer on a (reseller/parent) marketplace:
 
 If the *Auditor*:
 
-- **rejects** the order, then:
+- **rejects** the order:
   - the order is marked as "rejected"
   - the Customer will be notified with a specific email
 - **approves** the order, then the order is marked as "pending" and the normal
