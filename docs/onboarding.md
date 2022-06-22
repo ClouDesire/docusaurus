@@ -248,7 +248,7 @@ new metric.
 #### How to provide a value for a Custom Metric
 
 In case of **Syndicated applications**, it's required to expose an URL
-returning the same JSON result, by taking care of retrieving
+returning a JSON response, by taking care of retrieving
 the **subscription ID** from the HTTP
 header of the Cloudesire's request.
 In this way, the URL will return the right *actual value* of the
