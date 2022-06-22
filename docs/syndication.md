@@ -455,7 +455,7 @@ Content-Type: application/json
 
 ### Application Metrics
 
-Even for syndicated applications, you can define and bills
+Even for syndicated applications, you can define and bill
 [application metrics](onboarding.md#application-metrics).
 
 Besides the general usage and information provided, you should only take care of
