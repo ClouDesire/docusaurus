@@ -231,12 +231,7 @@ Additional *custom Funtions* can be specified by the platform administrators.
 #### How to add Custom Metrics
 
 Follow the step below to a add one (or more) Custom Metric to a Product.
-Could be slightly different belong your application _provisioning type_:
-
-##### Adding Custom Metrics to a Syndicated Application
-
-For [Syndicated Applications](syndication.md), you need to access to the product
-editing page, "_Metrics_" tab.
+Firstly, you need to access to the product editing page, "_Metrics_" tab.
 
 To find the "_Metric_" tab go to your personal Control Panel. You will be able
 to access the "_Catalog_" from the left menu. Then select the
@@ -252,9 +247,9 @@ new metric.
 
 #### How to provide a value for a Custom Metric
 
-In case of **Syndicated applications**, the functioning is quite
-similar: it's required to expose an URL returning the same JSON result,
-by taking care of retrieving the **subscription ID** from the HTTP
+In case of **Syndicated applications**, it's required to expose an URL
+returning the same JSON result, by taking care of retrieving
+the **subscription ID** from the HTTP
 header of the Cloudesire's request.
 In this way, the URL will return the right *actual value* of the
 metric for each specific **tenant**.
