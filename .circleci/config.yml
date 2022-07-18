@@ -73,7 +73,12 @@ jobs:
 
       - run:
           name: Test html output
-          command: bundle exec htmlproofer ./website/build/docusaurus --check-html --empty-alt-ignore --allow-hash-href --assume-extension --check-img-http --url-ignore '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/twitter.com/'
+          command: |
+            bundle exec htmlproofer ./website/build/docusaurus \
+                --allow-missing-href \
+                --enforce-https false \
+                --ignore-urls '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/twitter.com/' \
+                --only-4xx
           when: always
 
   deploy:
