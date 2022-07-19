@@ -108,7 +108,7 @@ billing period / total hours in the billing period)`
 Please note that the billing engine *granularity* is 1 hour (the remaining hours
 will be rounded-up).
 
-Then the platworm will:
+Then the platform will:
 
 * subtract from the next customer's invoice the amount: `scaled_unit_price * previous
   extra-resources number`
