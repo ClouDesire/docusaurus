@@ -46,7 +46,7 @@ your integration
 
 The API support two different authentication methods:
 
-* Via username/email and password supplied as standard [Basic Authentication](http://en.wikipedia.org/wiki/Basic_access_authentication);
+* Via username/email and password supplied as standard [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication);
 * Via an authentication token, short-lived or permanent, that can also be requested via API.
 
 ### Permanent authentication token
