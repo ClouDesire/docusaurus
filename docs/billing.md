@@ -139,7 +139,7 @@ More details are available in [this section](onboarding.md#understanding-applica
 calculations.
 
 A typical example could be an "active-users" pay-per-use metric.
-Let's consider an hypotetical 30-days billing period, and the
+Let's consider a hypothetical 30-days billing period, and the
 following scenario:
 
 * the customer activated 10 users for the first 10 days
@@ -315,5 +315,5 @@ owner inside the *revenues* section.
 ### Self-Billing for resellers
 
 The *self-billing* functionality is also available for the resellers: a reseller
-can can mark a _sell-out price_ as *self-billed* for exposing the related
+can mark a _sell-out price_ as *self-billed* for exposing the related
 product into his _reseller-marketplace_ overriding the invoice generation on it.
