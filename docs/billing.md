@@ -161,7 +161,7 @@ the final price that will be charged to the customer will be:
 
 Of course, for the sake of clarity, in this example we're assuming a
 (very unlikely) granularity of 1 day.
-In reality, the platflorm will use a **1-hour granularity**.
+In reality, the platform will use a **1-hour granularity**.
 
 Please note that the calculations can be much more articulated if a
 [complex pricing schema](onboarding-extra-resources.md#pricing-schemes) is
