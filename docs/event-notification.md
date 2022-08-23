@@ -18,7 +18,7 @@ subscription related events.
 
 ## Introduction to event notification
 
-The basics follows:
+The basics follow:
 
 * the platform will send notifications (HTTP POST requests with a [JSON
   payload](event-notification.md#anatomy-of-an-event-request)) to a endpoint
