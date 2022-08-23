@@ -62,7 +62,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/event-notification.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Event notification</h1></header><article><div><span><p>The platform is able to notify a configured endpoint on some meaningful events.</p>
 <p>The endpoints can be:</p>
 <ul>
-<li>platform-wide: a configurable list of endpoints, which they will all receive
+<li>platform-wide: a configurable list of endpoints, which they will receive
 all the platform's events</li>
 <li>vendor-specific: endpoints configured in a vendor's profile</li>
 <li>product-specific: an endpoint configured on a catalogued product</li>
@@ -73,7 +73,7 @@ subscription related events.</p>
 <p>The basics follow:</p>
 <ul>
 <li>the platform will send notifications (HTTP POST requests with a <a href="/docs/event-notification.html#anatomy-of-an-event-request">JSON
-payload</a>) to a endpoint
+payload</a>) to an endpoint
 every time an interesting <strong>event</strong> occurs on the marketplace (new
 subscription creation, renews, termination requests, user creation, product
 plan publishing and so on).</li>
