@@ -8,7 +8,7 @@ The platform is able to notify a configured endpoint on some meaningful events.
 
 The endpoints can be:
 
-* platform-wide: a configurable list of endpoints, which they will all receive
+* platform-wide: a configurable list of endpoints, which they will receive
   all the platform's events
 * vendor-specific: endpoints configured in a vendor's profile
 * product-specific: an endpoint configured on a catalogued product
@@ -21,7 +21,7 @@ subscription related events.
 The basics follow:
 
 * the platform will send notifications (HTTP POST requests with a [JSON
-  payload](event-notification.md#anatomy-of-an-event-request)) to a endpoint
+  payload](event-notification.md#anatomy-of-an-event-request)) to an endpoint
   every time an interesting **event** occurs on the marketplace (new
   subscription creation, renews, termination requests, user creation, product
   plan publishing and so on).
