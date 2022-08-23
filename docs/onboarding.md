@@ -200,7 +200,7 @@ Cloudesire to calculate the related incomes in a certain period of time
 (_billing period_) and issue an invoice to the customer. Details are provided
 in the [Billing Module Section](billing.md).
 
-Each metric could be detailed in the editing section, with this fields:
+Each metric could be detailed in the editing section, with these fields:
 
 * _Extra resource name_: the name of the
   [extra resource](onboarding-extra-resources.md) that will be **linked**, which
@@ -222,11 +222,11 @@ Each metric could be detailed in the editing section, with this fields:
 * _Value type_: can be:
   * _Gauge_: value can arbitrarily go up and down
   * _Counter_: value always increments
-* _Function to appy_: can be:
+* _Function to apply_: can be:
   * Average value over time
   * Peak value over time
 
-Additional *custom Funtions* can be specified by the platform administrators.
+Additional *custom Functions* can be specified by the platform administrators.
 
 #### How to add Custom Metrics
 
