@@ -13,7 +13,6 @@ const siteConfig = {
   editUrl: 'https://github.com/ClouDesire/docusaurus/edit/source/docs/',
   enableUpdateBy: true,
   enableUpdateTime: true,
-  cname: 'docs.cloudesire.com',
   gaTrackingId: 'G-Y0QZTE1YQV',
   gaGtag: true,
   headerLinks: [
