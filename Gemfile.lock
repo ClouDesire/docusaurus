@@ -1,15 +1,15 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
     chef-utils (17.0.242)
       concurrent-ruby
     concurrent-ruby (1.1.8)
     ethon (0.15.0)
       ffi (>= 1.15.0)
     ffi (1.15.5)
-    html-proofer (4.3.1)
+    html-proofer (4.4.1)
       addressable (~> 2.3)
       mercenary (~> 0.3)
       nokogiri (~> 1.13)
@@ -39,7 +39,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.22.1)
-    public_suffix (4.0.7)
+    public_suffix (5.0.0)
     racc (1.6.0)
     rainbow (3.1.1)
     rexml (3.2.5)
