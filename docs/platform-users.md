@@ -40,4 +40,3 @@ them.
 | Financial Reports         | ☑️          | ☑️     |            | ☑️      | ☑️      | ☑️        |          |
 | Messaging System          | ☑️          | ☑️     | ☑️          | ☑️      | ☑️      | ☑️        | ☑️        |
 | Order Placement           |            |       |            |        |        | ☑️        | ☑️        |
-
