@@ -1,23 +1,34 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    addressable (2.8.0)
-      public_suffix (>= 2.0.2, < 5.0)
+    Ascii85 (1.1.0)
+    addressable (2.8.1)
+      public_suffix (>= 2.0.2, < 6.0)
+    afm (0.2.2)
+    async (2.3.1)
+      console (~> 1.10)
+      io-event (~> 1.1)
+      timers (~> 4.1)
     chef-utils (18.0.161)
       concurrent-ruby
     concurrent-ruby (1.1.10)
-    ethon (0.15.0)
+    console (1.16.2)
+      fiber-local
+    ethon (0.16.0)
       ffi (>= 1.15.0)
     ffi (1.15.5)
-    html-proofer (4.3.1)
+    fiber-local (1.0.0)
+    hashery (2.1.2)
+    html-proofer (5.0.4)
       addressable (~> 2.3)
-      mercenary (~> 0.3)
+      async (~> 2.1)
       nokogiri (~> 1.13)
-      parallel (~> 1.10)
+      pdf-reader (~> 2.11)
       rainbow (~> 3.0)
       typhoeus (~> 1.3)
       yell (~> 2.0)
       zeitwerk (~> 2.5)
+    io-event (1.1.6)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -28,26 +39,33 @@ GEM
       mixlib-cli (~> 2.1, >= 2.1.1)
       mixlib-config (>= 2.2.1, < 4)
       mixlib-shellout
-    mercenary (0.4.0)
-    mini_portile2 (2.8.0)
+    mini_portile2 (2.8.1)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    nokogiri (1.13.10)
+    nokogiri (1.14.0)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    parallel (1.22.1)
-    public_suffix (4.0.7)
-    racc (1.6.1)
+    pdf-reader (2.11.0)
+      Ascii85 (~> 1.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
+    public_suffix (5.0.1)
+    racc (1.6.2)
     rainbow (3.1.1)
     rexml (3.2.5)
+    ruby-rc4 (0.1.5)
+    timers (4.3.5)
     tomlrb (2.0.3)
+    ttfunk (1.7.0)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
     yell (2.2.2)
-    zeitwerk (2.6.0)
+    zeitwerk (2.6.6)
 
 PLATFORMS
   ruby
