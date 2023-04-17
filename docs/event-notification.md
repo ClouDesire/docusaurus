@@ -62,6 +62,7 @@ The **type** attribute can be:
 
 The **entity** attribute can be:
 
+* `Cart`
 * `Invoice`
 * `ProductVersion`
 * `Subscription`
