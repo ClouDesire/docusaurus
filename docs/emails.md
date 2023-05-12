@@ -81,12 +81,12 @@ Sent on failure from deployer.
 After the customer ordered a product (either trial or paid), an email is sent
 as soon as the application is ready to be used.
 
-The platform can be configured to send the same email sent to the vendor to
-the reseller of the order, if necessary.
+The platform can be configured to send the same email to the reseller of the
+order, or to an external address.
 
-**Template name:** `deployCompleteForCustomer`/`deployCompleteForVendor`
+**Template name:** `deployCompleteForCustomer`/`deployCompleteForVendor`/`deployCompleteForExternal`
 
-**Recipients:** *Customer / Vendor / Reseller (configurable)*
+**Recipients:** *Customer / Vendor / Reseller (configurable) / External (configurable)*
 
 ### Subscription amendment
 
