@@ -12,7 +12,8 @@ The service will be called by the platform:
 1) when requesting a budget estimate;
 2) when placing an order;
 3) when requesting a change of plan;
-4) when terminating a subscription.
+4) when unsubscribing (disabling subscription auto-renewal);
+5) when terminating a subscription.
 
 It's possible to configure multiple endpoints, in which case **every**
 configured endpoint must pass validation for the order to be successfully
@@ -89,6 +90,28 @@ Your endpoint will receive a POST request with a JSON body content like this:
   },
   "subscriptionId": 999,
   "orderType": "TERMINATION",
+  "language": "en"
+}
+```
+
+### Unsubscribe
+
+```json
+{
+  "productId": 123,
+  "productIdentifier": "your-product",
+  "productVersionId": 456,
+  "productVersionIdentifier": "your-product-plan",
+  "billingItems":
+  {
+    "USERS": 10
+  },
+  "configurationParameters":
+  {
+    "CUSTOM_DOMAIN": "http://custom.doma.in"
+  },
+  "subscriptionId": 999,
+  "orderType": "UNSUBSCRIBE",
   "language": "en"
 }
 ```
