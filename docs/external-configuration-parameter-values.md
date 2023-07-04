@@ -24,6 +24,7 @@ Your endpoint will receive a POST request with a JSON body content like this:
     "OTHER_PARAM": "value1",
     "ANOTHER_ONE": "value2"
   },
+  "cloudCredentialId": 1011,
   "language": "en",
   "buyerId": 789
 }
@@ -35,6 +36,8 @@ Your endpoint will receive a POST request with a JSON body content like this:
   configuration parameters being chosen by the user
 * `buyerId` is the ID of the user requesting the configuration parameter
   values
+* `cloudCredentialId` is the (optional) ID of the
+  [customer cloud credential](customer-cloud-credentials.md)
 
 ## Response
 
