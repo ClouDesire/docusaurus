@@ -51,9 +51,11 @@ The API support two different authentication methods:
 
 ### Permanent authentication token
 
-You can request a permanent login token in the *profile* section once logged into
-the marketplace control panel, and this should be the preferred authentication
-method when developing an integration with the Cloudesire API.
+> This should be the preferred authentication method when developing an
+integration with the Cloudesire API.
+
+You can request a permanent login token in the *profile* section once logged
+into the "classic" marketplace control panel.
 
 > **Security**: you can have only one permanent login token at time, requesting
 a new one will invalidate the previous one.
