@@ -10,7 +10,7 @@ You can find the TypeScript clients on our [NPM Repository](https://nexus.cloude
 https://nexus.cloudesire.com/repository/cloudesire-npm-public/
 ```
 
-> Requires [axios HTTP client](https://github.com/axios/axios) (version `0.26.1`)
+> Requires [axios HTTP client](https://github.com/axios/axios) (version `0.27.2`)
 
 ## Installation
 
