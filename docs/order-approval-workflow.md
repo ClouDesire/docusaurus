@@ -3,26 +3,26 @@ id: order-approval-workflow
 title: Orders Approval Workflow
 sidebar_label: Orders approval workflow
 ---
-**order approval workflow** could be required in some  use-cases, for example for products/services not supporting
+**Order approval workflow** could be required in some use-cases, for example for products/services that not supporting
 self-provisioning (e.g. "server management").
 
-Each product/service could be specially configured to enable the *approval
-workflow*: in this case, each order (new purchases, change requests) needs to be
+Each products/services could be specially configured to enable the *approval
+workflow*: if activated, each order (new purchases and/or product modifications) needs to be
 approved by a *privileged user* (**Auditor**) before it becomes effective.
 
 The specific functioning slightly changes depending on the presence of the
 [Channel-Management](channel.md) (*parent-child*) module:
 
-- in the *Channel Management* scenario:
-  - the Customer places orders on a **Reseller Marketplace**
-  - the Auditor is the **Reseller**
-- in the *normal* scenario:
+- 1) *Channel Management* scenario:
+  - Customer places orders on a **Reseller Marketplace**
+  - Auditor is the **Reseller**
+- 2) *normal* scenario:
   - the Customer places orders on a **Parent Marketplace**
   - the Auditor is the **Vendor**
 
 ## How it works
 
-Once a new order is placed by the Customer on a (reseller/parent) marketplace:
+Once a new order is placed by Customer on a (reseller/parent) marketplace:
 
 - order is marked as "to be approved" (by an *Auditor*)
 - the Customer:
