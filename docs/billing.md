@@ -23,8 +23,6 @@ Each generated invoice contains the following elements:
 * [_pay-per-use application metrics_](onboarding.md#application-metrics): costs
   that vary depending on real usage of the application
 * [_extra-resources_](glossary.md#extra-resources): costs for prepaid resources
-* [_cloud resources costs_](billing.md#cloud-resources-pricing): costs for the
-  cloud infrastructure used in BareVM products.
 
 In the following screenshots, you can see some examples of invoices issued by Cloudesire:
 
