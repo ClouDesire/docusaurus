@@ -44,10 +44,11 @@ your integration
 
 ## Authentication
 
-The API support two different authentication methods:
+The API support different authentication methods:
 
 * Via username/email and password supplied as standard [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication);
 * Via an authentication token, short-lived or permanent, that can also be requested via API.
+* [optional] If your installation is configured with an OAuth server, via a valid JWT token passed in the standard `Authorization: Bearer` header.
 
 ### Permanent authentication token
 
