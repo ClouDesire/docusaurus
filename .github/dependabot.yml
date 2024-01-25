@@ -2,6 +2,8 @@ version: 2
 updates:
   - package-ecosystem: npm
     directory: "/"
+    commit-message:
+      prefix: "chore(npm)"
     schedule:
       interval: weekly
       day: sunday
@@ -9,6 +11,8 @@ updates:
       - malteo
   - package-ecosystem: bundler
     directory: "/"
+    commit-message:
+      prefix: "chore(bundler)"
     schedule:
       interval: weekly
       day: sunday
