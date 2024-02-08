@@ -168,6 +168,10 @@
         "title": "Onboarding of syndicated applications",
         "sidebar_label": "Syndicated applications"
       },
+      "tech-radar": {
+        "title": "Our technology choices",
+        "sidebar_label": "Tech Radar"
+      },
       "type-cloud-service": {
         "title": "Onboarding of Cloud Services",
         "sidebar_label": "Cloud Services"
