@@ -477,13 +477,15 @@ HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 
 {
-    "metricsName": "custom_metric",
     "value": 3.0
 }
 ```
 
 This HTTP header will let you to identify the subscription from which a metric
 is requested, so you can return the proper value.
+
+It is also possible to define custom headers which will be sent with the
+request.
 
 > When **Try before Buy** is offered to customers, make sure to reset metric
 > values when customers pay for the first time otherwise they will be billed for
