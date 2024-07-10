@@ -30,8 +30,3 @@ allocate too many resources beyond their limits.
 In *pay-as-you-go* plans, customer is billed at the end of the billing period by
 using the automatically gathered metrics for each of the billed resources (vCPU
 cores, GB of memory, GB of disk space).
-
-## Example product
-
-An example OKD product is available on our [demo
-marketplace](https://demo-mcp.cloudeng.it/37618/devops/container-app-platform).

@@ -31,8 +31,3 @@ In *pay-as-you-go* plans, customer is billed at the end of the billing period by
 using the automatically gathered metrics for each of the billed resources (CPU
 cores, GB of memory, GB of disk space). IP address needs to be bought as a
 prepaid extra resources to be available inside the VDC network.
-
-## Example
-
-An example VMWare vCloud VDC product is available on our [demo
-marketplace](https://demo-mcp.cloudeng.it/161973/compute/virtual-data-center-vmware).

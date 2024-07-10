@@ -45,12 +45,7 @@ After the provisioning, the customer can access the Google Workspace dashboard
 to finish configuring email delivery for their own domain and to create user
 accounts.
 
-## Example
-
-An example Google Workspace product can be found on our [demo marketplace].
-
 [Google Workspace]: https://workspace.google.com/
 [gsuite_sku_id]: https://developers.google.com/admin-sdk/reseller/v1/how-tos/products#google-workspace
 [gsuite_plan_name]: https://developers.google.com/admin-sdk/reseller/v1/how-tos/concepts#plans
 [gsuite_renewal_type]: https://developers.google.com/admin-sdk/reseller/v1/how-tos/manage_subscriptions#update_a_subscriptions_renewal_settings
-[demo marketplace]: https://demo-mcp.cloudeng.it/192422/workplace/google-workspace
