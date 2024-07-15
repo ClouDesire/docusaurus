@@ -29,9 +29,3 @@ file that can be directly used with `kubectl`.
 
 All the necessary fine tuning of the cluster can happen on the native Cloud
 Provider interfaces or API after the initial creation.
-
-## Example
-
-Check [Private K8s
-Cluster](https://demo-mcp.cloudeng.it/228128/compute/private-k8s-cluster) on the
-demo marketplace.

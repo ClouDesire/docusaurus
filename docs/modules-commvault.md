@@ -30,11 +30,6 @@ following identifiers:
 * `cvPrimaryBackupStorage`: the space in GB used for primary copies
 * `cvSecondaryBackupStorage`: the space in GB used for geo-replicated copies
 
-## Example
-
-An example Commvault product is available on our [demo marketplace].
-
 [Commvault]: https://www.commvault.com/
 [vcloud integration]: modules-vcloud.md
 [syndicated]: syndication.md
-[demo marketplace]: https://demo-mcp.cloudeng.it/170871/data/backupprotect

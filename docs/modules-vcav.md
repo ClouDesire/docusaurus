@@ -26,10 +26,4 @@ following identifiers:
   network by the replication jobs, `counter` type with `Increase value over
   time` function
 
-## Example
-
-An example VMware vCloud Availability product is available on our [demo
-marketplace].
-
 [Syndicated]: syndication.md
-[demo marketplace]: https://demo-mcp.cloudeng.it/192805/data/availability-protect

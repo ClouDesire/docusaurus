@@ -30,8 +30,3 @@ resources.
 In *pay-as-you-go* plans, customer is billed at the end of the billing period
 by using the automatically gathered metrics for each of the billed resources
 (CPU cores, GB of memory, GB of disk space, IP addresses).
-
-## Example
-
-An example OpenStack VDC product is available on our [demo
-marketplace](https://demo-mcp.cloudeng.it/161743/compute/virtual-data-center-openstack).

@@ -3,8 +3,12 @@
   <head>
     <title>Cloudesire Admin API</title>
     <!-- needed for adaptive design -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700"
+      rel="stylesheet"
+    />
 
     <!--
     ReDoc doesn't change outer page styles
@@ -17,7 +21,13 @@
     </style>
   </head>
   <body>
-    <redoc suppress-warnings='true' spec-url='https://backend-prod-eng.cloudesire.com/api/v2/api-docs?group=admin'></redoc>
-    <script src="https://cdn.jsdelivr.net/npm/redoc@2.0.0-rc.40/bundles/redoc.standalone.js"> </script>
+    <redoc
+      expand-responses='200'
+      only-required-in-samples='true'
+      required-props-first='true'
+      sort-tags-alphabetically='true'
+      spec-url='https://backend-prod-eng.cloudesire.com/api/v2/api-docs?group=admin'
+    />
+    <script src="https://cdn.redoc.ly/redoc/latest/bundles/redoc.standalone.js"></script>
   </body>
 </html>

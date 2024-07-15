@@ -33,11 +33,6 @@ of Bare VM inside a shared tenant managed by the platform owner.
 Now this feature has been deprecated in favor of the more secure and flexible
 tenants approach described before.
 
-### Example
-
-An example Bare VM product is available on the [demo marketplace].
-
-[demo marketplace]: https://demo-mcp.cloudeng.it/223918/compute/private-bare-vm
 [Public Cloud tenant]: modules-public-tenants.md
 [VCloud]: modules-vcloud.md
 [Openstack]: modules-openstack.md
