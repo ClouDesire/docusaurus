@@ -44,4 +44,4 @@ You can also easily generate a **Postman collection**, as
 [detailed here][swagger2postman] ([archived version][webarchive])
 
 [swagger2postman]: https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14
-[archived version]: https://archive.ph/cVuoQ
+[webarchive]: https://archive.ph/cVuoQ
