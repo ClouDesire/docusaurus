@@ -73,7 +73,7 @@ jobs:
             bundle exec htmlproofer ./website/build/docusaurus \
                 --allow-missing-href \
                 --enforce-https false \
-                --ignore-urls '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/twitter.com/,/medium.com/' \
+                --ignore-urls '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/twitter.com/,/medium.com/,/archive.ph/' \
                 --only-4xx
           when: always
 
