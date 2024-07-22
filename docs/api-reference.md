@@ -4,8 +4,8 @@ title: Cloudesire REST API Reference
 sidebar_label: API Reference
 ---
 
-We use [Springfox](https://github.com/springfox/springfox) to autogenerate
-[Swagger](https://swagger.io/) definitions for the Cloudesire API.
+We use [Springdoc][springdoc] to autogenerate [OpenAPI 3.0][openapi]
+definitions for the Cloudesire API.
 
 API are grouped into different areas:
 
@@ -15,9 +15,6 @@ API are grouped into different areas:
   Useful when mass import of products into the catalog
 * [Channel API](/redoc/channel.html): Distributor and Reseller price lists,
   useful for mass import of price lists
-* [Cloud Apps API](/redoc/cloud-apps.html): for BareVM products
-* [Cloud providers API](/redoc/cloud-providers.html): to manage the available
-  Cloud Providers, Instance Types, and their pricing
 * [Users API](/redoc/users.html): users and companies
 * [Admin API](/redoc/admin.html): administrative API, mainly for maintenance
   purposes
@@ -27,14 +24,12 @@ API are grouped into different areas:
 Swagger endpoints are reachable at (concatenate to [API
 domain](api.md#domains)):
 
-* /v2/api-docs?group=admin
-* /v2/api-docs?group=billing
-* /v2/api-docs?group=catalog
-* /v2/api-docs?group=channel
-* /v2/api-docs?group=cloudApps
-* /v2/api-docs?group=cloudProviders
-* /v2/api-docs?group=users
-* /v2/api-docs?group=environment
+* /v3/api-docs/admin
+* /v3/api-docs/billing
+* /v3/api-docs/catalog
+* /v3/api-docs/channel
+* /v3/api-docs/users
+* /v3/api-docs/environment
 
 You can use those endpoints to generate swagger clients in a variety of
 programming language leveraging the
@@ -43,5 +38,7 @@ programming language leveraging the
 You can also easily generate a **Postman collection**, as
 [detailed here][swagger2postman] ([archived version][webarchive])
 
+[springdoc]: https://springdoc.org/v1/
+[openapi]: https://swagger.io/specification/v3/
 [swagger2postman]: https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14
 [webarchive]: https://archive.ph/cVuoQ
