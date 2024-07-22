@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cloudesire REST API Reference · cloudesire documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="We use [Springfox](https://github.com/springfox/springfox) to autogenerate"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Cloudesire REST API Reference · cloudesire documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="We use [Springfox](https://github.com/springfox/springfox) to autogenerate"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y0QZTE1YQV"></script><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Cloudesire REST API Reference · cloudesire documentation</title><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="generator" content="Docusaurus"/><meta name="description" content="We use [Springdoc][springdoc] to autogenerate [OpenAPI 3.0][openapi]"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Cloudesire REST API Reference · cloudesire documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://docs.cloudesire.com/index.html"/><meta property="og:description" content="We use [Springdoc][springdoc] to autogenerate [OpenAPI 3.0][openapi]"/><meta name="twitter:card" content="summary"/><link rel="shortcut icon" href="/img/favicon/favicon.ico"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-Y0QZTE1YQV"></script><script>
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments); }
               gtag('js', new Date());
@@ -59,8 +59,8 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/api-reference.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Cloudesire REST API Reference</h1></header><article><div><span><p>We use <a href="https://github.com/springfox/springfox">Springfox</a> to autogenerate
-<a href="https://swagger.io/">Swagger</a> definitions for the Cloudesire API.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ClouDesire/docusaurus/edit/source/docs/api-reference.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Cloudesire REST API Reference</h1></header><article><div><span><p>We use <a href="https://springdoc.org/v1/">Springdoc</a> to autogenerate <a href="https://swagger.io/specification/v3/">OpenAPI 3.0</a>
+definitions for the Cloudesire API.</p>
 <p>API are grouped into different areas:</p>
 <ul>
 <li><a href="/redoc/billing.html">Billing API</a>: Subscription, Invoice, Order and many
@@ -69,9 +69,6 @@ resources useful when developing a Syndicated application</li>
 Useful when mass import of products into the catalog</li>
 <li><a href="/redoc/channel.html">Channel API</a>: Distributor and Reseller price lists,
 useful for mass import of price lists</li>
-<li><a href="/redoc/cloud-apps.html">Cloud Apps API</a>: for BareVM products</li>
-<li><a href="/redoc/cloud-providers.html">Cloud providers API</a>: to manage the available
-Cloud Providers, Instance Types, and their pricing</li>
 <li><a href="/redoc/users.html">Users API</a>: users and companies</li>
 <li><a href="/redoc/admin.html">Admin API</a>: administrative API, mainly for maintenance
 purposes</li>
@@ -81,21 +78,19 @@ platform</li>
 <p>Swagger endpoints are reachable at (concatenate to <a href="/docs/api.html#domains">API
 domain</a>):</p>
 <ul>
-<li>/v2/api-docs?group=admin</li>
-<li>/v2/api-docs?group=billing</li>
-<li>/v2/api-docs?group=catalog</li>
-<li>/v2/api-docs?group=channel</li>
-<li>/v2/api-docs?group=cloudApps</li>
-<li>/v2/api-docs?group=cloudProviders</li>
-<li>/v2/api-docs?group=users</li>
-<li>/v2/api-docs?group=environment</li>
+<li>/v3/api-docs/admin</li>
+<li>/v3/api-docs/billing</li>
+<li>/v3/api-docs/catalog</li>
+<li>/v3/api-docs/channel</li>
+<li>/v3/api-docs/users</li>
+<li>/v3/api-docs/environment</li>
 </ul>
 <p>You can use those endpoints to generate swagger clients in a variety of
 programming language leveraging the
 <a href="https://github.com/swagger-api/swagger-codegen">swagger-codegen</a> project.</p>
 <p>You can also easily generate a <strong>Postman collection</strong>, as
 <a href="https://medium.com/c-sharp-progarmming/convert-swagger-documentation-to-postman-collection-d67fc95c7b14">detailed here</a> (<a href="https://archive.ph/cVuoQ">archived version</a>)</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/15/2024 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-php.html"><span class="arrow-prev">← </span><span>PHP Client</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2024 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 7/22/2024 by Matteo Giordano</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/api-php.html"><span class="arrow-prev">← </span><span>PHP Client</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><div><h5>Pages</h5><a href="/docs/index.html">Documentation Index</a><a href="/docs/api-reference.html">API Reference</a><a href="/docs/platform.html">Platform modules</a><a href="/docs/opensource.html">Open Source</a><a href="https://www.cloudesire.com">Corporate website</a></div><div><h5>Social</h5><a href="https://twitter.com/cloudesire" target="_blank">Twitter</a><a href="https://fb.com/cloudesire" target="_blank">Facebook</a><a href="https://github.com/cloudesire" target="_blank">GitHub</a></div></section><section class="copyright"><span>Copyright © 2024 Cloudesire.com by Engineering D.HUB</span> </section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
