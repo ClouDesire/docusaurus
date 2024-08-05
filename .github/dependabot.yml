@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: npm
     directory: "/"
     commit-message:
-      prefix: "chore(npm)"
+      prefix: "deps(npm)"
     schedule:
       interval: weekly
       day: sunday
@@ -12,7 +12,7 @@ updates:
   - package-ecosystem: bundler
     directory: "/"
     commit-message:
-      prefix: "chore(bundler)"
+      prefix: "deps(bundler)"
     schedule:
       interval: weekly
       day: sunday
