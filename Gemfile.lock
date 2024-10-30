@@ -42,9 +42,7 @@ GEM
     public_suffix (4.0.7)
     racc (1.7.3)
     rainbow (3.1.1)
-    rexml (3.3.6)
-      strscan
-    strscan (3.1.0)
+    rexml (3.3.9)
     tomlrb (2.0.3)
     typhoeus (1.4.0)
       ethon (>= 0.9.0)
