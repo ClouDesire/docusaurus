@@ -6,7 +6,7 @@ sidebar_label: Tech Radar
 
 ## Languages
 
-* Java 17
+* Java 21
 * JavaScript
 * Kotlin
 * OpenAPI (Swagger)
@@ -16,7 +16,7 @@ sidebar_label: Tech Radar
 ## Frameworks
 
 * AngularJS 1.8
-* Spring Boot 3.2
+* Spring Boot 3.4
 * Spring Framework 5.3
 * Tailwind CSS 3.4
 * Vue 3.4
@@ -27,7 +27,7 @@ sidebar_label: Tech Radar
 * Flyway
 * Hazelcast
 * HashiCorp Vault
-* PostgreSQL 14
+* PostgreSQL 16
 * Prometheus
 
 ## Infrastructure
