@@ -10,7 +10,6 @@ sidebar_label: Tech Radar
 * JavaScript
 * Kotlin
 * OpenAPI (Swagger)
-* PHP
 * Typescript 4.9
 
 ## Frameworks
@@ -34,7 +33,9 @@ sidebar_label: Tech Radar
 
 * Docker
 * Grafana
+* Helm
 * Kubernetes
+* Kustomize
 * Loki
 * Sendgrid
 * Sentry
