@@ -29,13 +29,13 @@ GEM
       mixlib-config (>= 2.2.1, < 4)
       mixlib-shellout
     mercenary (0.4.0)
-    mini_portile2 (2.8.8)
+    mini_portile2 (2.8.9)
     mixlib-cli (2.1.8)
     mixlib-config (3.0.27)
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    nokogiri (1.18.8)
+    nokogiri (1.18.9)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     parallel (1.22.1)
