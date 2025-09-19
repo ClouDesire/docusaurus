@@ -74,7 +74,7 @@ jobs:
                 --allow-missing-href \
                 --enforce-https false \
                 --ignore-files '/blog/' \
-                --ignore-urls '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/medium.com/,/archive.ph/' \
+                --ignore-urls '/github.com/ClouDesire/docusaurus/edit/source/,/github.com/ClouDesire/backend/tree/,/medium.com/,/archive.ph/,/developer.hashicorp.com/' \
                 --only-4xx
           when: always
 
