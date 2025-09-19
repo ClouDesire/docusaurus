@@ -27,8 +27,8 @@ account, enabling the future provisioning of [BareVM](vm.md) or
 [Kubernetes clusters](modules-kubernetes.md).
 
 Credentials are securely stored on a [Vault by
-HashiCorp](https://www.vaultproject.io/) instance integrated into the Cloudesire
-platform.
+HashiCorp](https://developer.hashicorp.com/vault) instance integrated into the
+Cloudesire platform.
 
 Overnight, the `costs-collector` module harvests from the cloud providers billing
 API the latest costs associated for each active tenant. Since the costs on
