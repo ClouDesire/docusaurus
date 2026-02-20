@@ -70,5 +70,5 @@ configured with key `partnerCenterTrialOfferId` and as value the preferred `offe
 of type TRIAL for the same product type.
 
 [XLS price list]: https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing
-[Azure marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps
+[Azure marketplace]: https://marketplace.microsoft.com/en-us/marketplace/apps
 [JSON descriptor]: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates
