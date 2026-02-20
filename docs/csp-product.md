@@ -46,8 +46,8 @@ The platform supports selling three different type of products:
 
 * **License** type is for license-based products on the [XLS price
   list] published every month by Microsoft (e.g. Office 365).
-* **Azure marketplace** type is for VM-based products available on the [Azure
-  marketplace] by third-party vendors.
+* **Azure marketplace** type is for VM-based products available on the Azure
+  marketplace by third-party vendors.
 * **ARM template** type is a deployment of one or more VM provisioned from a
   [JSON descriptor].
 
@@ -70,5 +70,4 @@ configured with key `partnerCenterTrialOfferId` and as value the preferred `offe
 of type TRIAL for the same product type.
 
 [XLS price list]: https://docs.microsoft.com/en-us/partner-center/csp-documents-and-learning-resources#pricing
-[Azure marketplace]: https://azuremarketplace.microsoft.com/en-us/marketplace/apps
 [JSON descriptor]: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates
