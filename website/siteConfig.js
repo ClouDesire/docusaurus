@@ -21,10 +21,6 @@ const siteConfig = {
 		{ doc: "api", label: "API" },
 		{ doc: "syndication", label: "Syndication" },
 		{ doc: "glossary", label: "Glossary" },
-		{
-			href: "https://cloudesire.com",
-			label: "Back to cloudesire.com",
-		},
 	],
 	headerIcon: "img/logo-cloudesire.png",
 	footerIcon: "img/logo-cloudesire.png",
