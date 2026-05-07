@@ -8,7 +8,6 @@ updates:
       interval: weekly
       day: sunday
     assignees:
-      - malteo
   - package-ecosystem: bundler
     directory: "/"
     commit-message:
@@ -17,4 +16,3 @@ updates:
       interval: weekly
       day: sunday
     assignees:
-      - malteo
